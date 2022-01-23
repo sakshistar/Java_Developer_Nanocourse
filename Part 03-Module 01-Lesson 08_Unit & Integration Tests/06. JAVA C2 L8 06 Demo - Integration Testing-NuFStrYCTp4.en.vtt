@@ -1,0 +1,148 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.170 --> 00:00:03.015
+Let's see this in action.
+
+00:00:03.015 --> 00:00:05.610
+Let's talk about integration testing.
+
+00:00:05.610 --> 00:00:09.789
+Navigate to the LocationControllerintegrationTest.java file,
+
+00:00:09.789 --> 00:00:11.714
+and let's take a look at it.
+
+00:00:11.714 --> 00:00:13.109
+Here on line 20,
+
+00:00:13.109 --> 00:00:16.140
+you've seen the @RunWith annotation before.
+
+00:00:16.140 --> 00:00:19.664
+What's new with an integration test is line 21.
+
+00:00:19.664 --> 00:00:22.289
+The @SpringBootTest annotation.
+
+00:00:22.289 --> 00:00:25.649
+So this is mainly used for integration testing.
+
+00:00:25.649 --> 00:00:29.849
+Notice the use of this web environment random port here.
+
+00:00:29.850 --> 00:00:33.450
+This starts the server with a random port and this is very
+
+00:00:33.450 --> 00:00:37.304
+useful to avoid conflicts in a test environment.
+
+00:00:37.304 --> 00:00:39.314
+Here on line 22,
+
+00:00:39.314 --> 00:00:45.859
+I'm injecting springs Mock MVC by using the AutoConfigureMockMVC annotation.
+
+00:00:45.859 --> 00:00:51.379
+This annotation simulates calling the code from the client exactly the same way as if we
+
+00:00:51.380 --> 00:00:57.380
+were processing a real HTTP request, let's scroll down.
+
+00:00:57.380 --> 00:01:01.625
+Notice here we're using the TestRestTemplate.
+
+00:01:01.625 --> 00:01:04.819
+So Spring Boot provides this automatically,
+
+00:01:04.819 --> 00:01:08.944
+all I have to do is autowire it using this annotation.
+
+00:01:08.944 --> 00:01:13.819
+Now the TestRestTemplate is suitable for integration tests and allows us
+
+00:01:13.819 --> 00:01:18.574
+to consume REST APIs in a testing scenario programmatically.
+
+00:01:18.575 --> 00:01:20.359
+So let's take a look at that.
+
+00:01:20.359 --> 00:01:22.260
+Here on line 31,
+
+00:01:22.260 --> 00:01:23.805
+we have our first test.
+
+00:01:23.805 --> 00:01:25.975
+It's called getAllLocations.
+
+00:01:25.974 --> 00:01:29.479
+Notice I've annotated it with the @Test annotation.
+
+00:01:29.480 --> 00:01:31.400
+We've seen this before.
+
+00:01:31.400 --> 00:01:37.980
+Now, here notice I'm using the getForEntity of the restTemplate,
+
+00:01:37.980 --> 00:01:42.420
+and this is going to make a get call on this URL here.
+
+00:01:42.420 --> 00:01:44.109
+So to this API,
+
+00:01:44.109 --> 00:01:49.314
+and the response is going to be returned and stored in this response object.
+
+00:01:49.314 --> 00:01:52.015
+Notice here on line 35,
+
+00:01:52.015 --> 00:01:57.420
+I'm asserting that the response code equals to a response of okay.
+
+00:01:57.420 --> 00:01:59.644
+So that means there were no errors.
+
+00:01:59.644 --> 00:02:01.700
+So let's see this in action.
+
+00:02:01.700 --> 00:02:05.924
+Click the green button, click run getAllLocations.
+
+00:02:05.924 --> 00:02:09.240
+We should see the output in a moment,
+
+00:02:09.240 --> 00:02:11.270
+and we have one test here.
+
+00:02:11.270 --> 00:02:14.435
+We see the green check mark saying the test passed.
+
+00:02:14.435 --> 00:02:18.155
+So let's look at this getLocation test.
+
+00:02:18.155 --> 00:02:21.319
+It follows the same model, but in this case,
+
+00:02:21.319 --> 00:02:24.439
+we're calling out to the API to retrieve
+
+00:02:24.439 --> 00:02:28.444
+one single location and we're passing in this one here.
+
+00:02:28.444 --> 00:02:30.844
+We're taking the response entity.
+
+00:02:30.844 --> 00:02:36.439
+We're testing the status code to make sure it equals to HTTP status of okay.
+
+00:02:36.439 --> 00:02:39.270
+So let's see this in action.
+
+00:02:39.550 --> 00:02:43.700
+Here we have a test pass with a green check mark.
+
+00:02:43.699 --> 00:02:46.949
+So that's a look at integration testing.
+

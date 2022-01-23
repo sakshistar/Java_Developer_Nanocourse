@@ -1,0 +1,320 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DB Testing</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>MongoDB for Java</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Java Driver.html">01. Java Driver</a>
+    </li>
+    <li class="">
+      <a href="02. Working with documents.html">02. Working with documents</a>
+    </li>
+    <li class="">
+      <a href="03. Spring Data MongoDB.html">03. Spring Data MongoDB</a>
+    </li>
+    <li class="">
+      <a href="04. DB Testing.html">04. DB Testing</a>
+    </li>
+    <li class="">
+      <a href="05. Recap.html">05. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. DB Testing</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Testing MongoDB Code</p></h3>
+  <div>
+  <p>Let’s see how we can write tests for Spring Data MongoDB application. Just like we had used H2 for testing JPA repositories, we will be leveraging an <a href="https://github.com/flapdoodle-oss/de.flapdoodle.embed.mongo" target="_blank">unofficial embedded MongoDB implementation</a>.</p>
+<h4 id="test-using-embedded-mongodb">Test Using Embedded MongoDB</h4>
+<p>This section covers two scenarios</p>
+<ol>
+<li>Autoconfigured Spring Boot Test.</li>
+<li>Test with custom manual configuration.</li>
+</ol>
+<p>For both scenarios, the embedded MongoDB dependency should be added,</p>
+<pre><code class="xml language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;de.flapdoodle.embed&lt;/groupId&gt;
+    &lt;artifactId&gt;de.flapdoodle.embed.mongo&lt;/artifactId&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre>
+<p>It’s scoped to <em>test</em> as we only need it for our tests.</p>
+<h5 id="autoconfigured-spring-boot-test">Autoconfigured Spring Boot Test</h5>
+<p>After adding de.flapdoodle.embed.mongo dependency Spring Boot will automatically try to download and start the embedded MongoDB when running tests.</p>
+<p>The package will be downloaded only once for each version so that subsequent tests run much faster.<br />
+At this stage we should be able to start and pass the sample JUnit 5 integration test:</p>
+<pre><code class="java language-java">@DataMongoTest
+@ExtendWith(SpringExtension.class)
+public class MongoDbSpringIntegrationTest {
+    @DisplayName("given object to save"
+        + " when save object using MongoDB template"
+        + " then object is saved")
+    @Test
+    public void test(@Autowired MongoTemplate mongoTemplate) {
+        // given
+        DBObject objectToSave = BasicDBObjectBuilder.start()
+            .add("key", "value")
+            .get();
+
+        // when
+        mongoTemplate.save(objectToSave, "collection");
+
+        // then
+        assertThat(mongoTemplate.findAll(DBObject.class, "collection")).extracting("key")
+            .containsOnly("value");
+    }
+}</code></pre>
+<p>When this test is run, something similar to this will be seen in the logs,</p>
+<pre><code>...Starting MongoDbSpringIntegrationTest on arroyo with PID 100...</code></pre>
+<h5 id="manual-configuration-test">Manual Configuration Test</h5>
+<p>Spring Boot will automatically start and configure the embedded database and then inject MongoTemplateinstance for us. However, sometimes we might need to configure embedded Mongo database manually(e.g., when testing a specific DB version).</p>
+<p>The following snippet shows how we can configure the embedded MongoDB instance manually. This is roughly the equivalent of the previous Spring test:</p>
+<pre><code class="java language-java">class ManualEmbeddedMongoDbIntegrationTest {
+    private MongodExecutable mongodExecutable;
+    private MongoTemplate mongoTemplate;
+
+    @AfterEach
+    void clean() {
+        mongodExecutable.stop();
+    }
+
+    @BeforeEach
+    void setup() throws Exception {
+        String ip = "localhost";
+        int port = 27017;
+
+        IMongodConfig mongodConfig = new MongodConfigBuilder().version(Version.Main.PRODUCTION)
+            .net(new Net(ip, port, Network.localhostIsIPv6()))
+            .build();
+
+        MongodStarter starter = MongodStarter.getDefaultInstance();
+        mongodExecutable = starter.prepare(mongodConfig);
+        mongodExecutable.start();
+        mongoTemplate = new MongoTemplate(new MongoClient(ip, port), "test");
+    }
+
+    @DisplayName("given object to save"
+        + " when save object using MongoDB template"
+        + " then object is saved")
+    @Test
+    void test() throws Exception {
+        // given
+        DBObject objectToSave = BasicDBObjectBuilder.start()
+            .add("key", "value")
+            .get();
+
+        // when
+        mongoTemplate.save(objectToSave, "collection");
+
+        // then
+        assertThat(mongoTemplate.findAll(DBObject.class, "collection")).extracting("key")
+            .containsOnly("value");
+    }
+}</code></pre>
+<p>Note, that we can quickly create MongoTemplate bean configured to use our manually configured embedded database and register it inside the Spring container by merely creating, e.g., a <code>@TestConfiguration</code> with <code>@Bean</code> method that will return </p>
+<pre><code class="java language-java">new MongoTemplate(new MongoClient(bindIp, port), “test”).</code></pre>
+<p>More examples can be found on the official <a href="https://github.com/flapdoodle-oss/de.flapdoodle.embed.mongo" target="_blank">Flapdoodle’s GitHub repository</a>.</p>
+<h5 id="logs">Logs</h5>
+<p>We can configure logging messages for MongoDB when running integration tests by adding these two properties to src/test/resources/application.properties file:</p>
+<pre><code>logging.level.org.springframework.boot.autoconfigure.mongo.embedded
+logging.level.org.mongodb</code></pre>
+<p>For example, to disable logging, we simply set the values to off,</p>
+<pre><code>logging.level.org.springframework.boot.autoconfigure.mongo.embedded=off
+logging.level.org.mongodb=off</code></pre>
+<h5 id="disclaimer">Disclaimer</h5>
+<p>Using embedded database might look like a great idea at the beginning. Indeed, it’s a good approach when we want to test if our application behaves correctly in areas such as:<br />
+Object<->Document mapping configuration<br />
+Custom persistence lifecycle event listeners (refer to AbstractMongoEventListener)<br />
+The logic of any code working directly with the persistence layer</p>
+<p><strong>Unfortunately, using an embedded server cannot be considered as “full integration testing”</strong>. Flapdoodle’s embedded MongoDB isn’t an official MongoDB product. Therefore, we cannot be sure that it behaves exactly as in the production environment.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Checkout the ** <a href="https://github.com/udacity/JDND/tree/master/exercises/c3/c3_l4_exercise13" target="_blank">starter code</a>** for the Exercise below.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exercise</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <h5 id="environment-setup">Environment Setup</h5>
+<p>MongoDB server is started.<br />
+Use mongo shell to connect to your local MongoDB server.<br />
+Select the database <code>jdnd-c3</code>.<br />
+Checkout the starter code from <<URL goes here>&gt;<br />
+Import the starter code into the IDE like IntelliJ IDEA CE (Optional).<br />
+Modify the <code>PatientRepositoryTest.java</code> class to complete the exercise.</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="54c22c3d-8449-485e-adcb-bef4f7ac6579--0">
+        <label for="54c22c3d-8449-485e-adcb-bef4f7ac6579--0"><p>Write a test for the PatientRepository <code>save</code> method in PatientRepositoryTest class.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Nice job on writing a test.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Recap.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. DB Testing')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

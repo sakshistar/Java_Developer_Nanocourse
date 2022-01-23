@@ -1,0 +1,246 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MySQL</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>RDBMS &amp; JDBC</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Welcome.html">01. Welcome</a>
+    </li>
+    <li class="">
+      <a href="02. RDBMS.html">02. RDBMS</a>
+    </li>
+    <li class="">
+      <a href="03. MySQL.html">03. MySQL</a>
+    </li>
+    <li class="">
+      <a href="04. MySQL Datatypes.html">04. MySQL Datatypes</a>
+    </li>
+    <li class="">
+      <a href="05. Working with tables.html">05. Working with tables</a>
+    </li>
+    <li class="">
+      <a href="06. Working with Foreign Keys.html">06. Working with Foreign Keys</a>
+    </li>
+    <li class="">
+      <a href="07. Working with rows.html">07. Working with rows</a>
+    </li>
+    <li class="">
+      <a href="08. JDBC.html">08. JDBC</a>
+    </li>
+    <li class="">
+      <a href="09. Database Migration.html">09. Database Migration</a>
+    </li>
+    <li class="">
+      <a href="10. Recap.html">10. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. MySQL</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>JavaND#305 C03 L01 A03 MySQL</p></h3>
+  <video controls>
+  <source src="03. JavaND#305 C03 L01 A03 MySQL-781l1aOKBro.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. JavaND#305 C03 L01 A03 MySQL-781l1aOKBro.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>MySQL is an open-source relational database management system (RDBMS) commonly used by startups and enterprises alike.</p>
+<p>This course uses <a href="https://dev.mysql.com/doc/refman/5.7/en/" target="_blank">MySQL v5.7</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exercise</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <h4 id="installation-instructions">Installation Instructions</h4>
+<p>Download <a href="https://dev.mysql.com/downloads/mysql/5.7.html#downloads" target="_blank">MySQL</a>.<br />
+Install MySQL<br />
+<a href="https://dev.mysql.com/doc/refman/5.7/en/windows-installation.html" target="_blank">Windows Installation</a>.<br />
+<a href="https://dev.mysql.com/doc/refman/5.7/en/osx-installation.html" target="_blank">MacOS Installation</a>.<br />
+Create Database<br />
+<code>CREATE DATABASE JDND-C3</code></p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="96c1963d-caa4-47cb-b0e1-a99939a8d917--0">
+        <label for="96c1963d-caa4-47cb-b0e1-a99939a8d917--0"><p>MySQL is installed and can be started.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="96c1963d-caa4-47cb-b0e1-a99939a8d917--1">
+        <label for="96c1963d-caa4-47cb-b0e1-a99939a8d917--1"><p>Connect to MySQL using the MySQL Command line client.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="96c1963d-caa4-47cb-b0e1-a99939a8d917--2">
+        <label for="96c1963d-caa4-47cb-b0e1-a99939a8d917--2"><p>Create a database named <code>JDND-C3</code> using MySQL Client.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Congratulations! Now you have a working MySQL installation in your workstation.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. MySQL Datatypes.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. MySQL')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

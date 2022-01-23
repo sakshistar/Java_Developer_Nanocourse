@@ -1,0 +1,359 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Build the Backend System for a Car Website</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Project: Build the Backend System for a Car Website</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Location Service Code.html">02. Location Service Code</a>
+    </li>
+    <li class="">
+      <a href="03. Pricing Service Code.html">03. Pricing Service Code</a>
+    </li>
+    <li class="">
+      <a href="04. Vehicles API Code.html">04. Vehicles API Code</a>
+    </li>
+    <li class="">
+      <a href="05. Instructions.html">05. Instructions</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Build the Backend System for a Car Website.html">Project Description - Build the Backend System for a Car Website</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Build the Backend System for a Car Website.html">Project Rubric - Build the Backend System for a Car Website</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">Build the Backend System for a Car Website</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            
+      <div>
+        <h2><p>Convert the Pricing Service</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>The Pricing Service is converted to a microservice.</p>
+        </td>
+        <td>
+          <p>The Pricing Service API is converted to a microservice with Spring Data REST, without the need to explicitly include code for the Controller or Service.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>A Eureka server is used and the Pricing Service is registered with that server.</p>
+        </td>
+        <td>
+          <p>A Eureka server is implemented and running on port 8761. The Pricing Service is registered on that server and is named <code>pricing-service</code>. </p>
+<p>The Vehicles API should be able to use the Eureka server to call the pricing service.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>At least one additional test is added for the Pricing Service.</p>
+        </td>
+        <td>
+          <p>Within the <code>test</code> folder, at least one additional test has been implemented outside of <code>contextLoads()</code>  for the overall Pricing Service Application. </p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Implement the Vehicles API</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>The Vehicles API can perform CREATE operations.</p>
+        </td>
+        <td>
+          <p>The Vehicles API is able to create a new vehicle based on input from the user with a POST request.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>The Vehicles API can perform READ operations.</p>
+        </td>
+        <td>
+          <p>The Vehicles API can receive GET requests from a user, and read back either a list of all existing vehicles, or the data for a single vehicle.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>The Vehicles API can perform UPDATE operations.</p>
+        </td>
+        <td>
+          <p>The Vehicles API can update an existing vehicle through input from the user.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>The Vehicles API can perform DELETE operations.</p>
+        </td>
+        <td>
+          <p>The Vehicles API can delete an existing vehicle when requested by the user.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>The Vehicles API can request location data from Boogle Maps, and pricing data from the Pricing Service.</p>
+        </td>
+        <td>
+          <p>The Vehicles API is able to consume information from the separate Boogle Maps and Pricing Service APIs, and return that information as part of the vehicle information for a single vehicle.</p>
+<p><em>Note:</em> Boogle Maps will assign a new random address each time a query is called, so don't fret if it changes between queries. </p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Testing the Vehicles API</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Tests are implemented for the Vehicles API <code>CarController</code> that cover the CRUD (Create, Read, Update, Delete) operations.</p>
+        </td>
+        <td>
+          <p>Within the <code>CarControllerTest.java</code> file, the <code>TODO</code>s for tests  of CRUD operations have been implemented.</p>
+<p>You are welcome to add additional tests beyond these as desired!</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>All necessary dependencies are included in each Application's POM files, and the code runs successfully.</p>
+        </td>
+        <td>
+          <p>All necessary dependencies have been added to the relevant POM files, and the code is able to run both from tests and in launching the actual applications.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>API Documentation</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>API documentation for the Vehicles API is implemented using Swagger.</p>
+        </td>
+        <td>
+          <p>API documentation for the Vehicles API is implemented using Swagger, and all related API queries are able to be run from there. The documentation is available at <a href="http://localhost:8080/swagger-ui.html" target="_blank">http://localhost:8080/swagger-ui.html</a> when the application is running.</p>
+<p><em>Note:</em> You are welcome to add Swagger API documentation for the other APIs, but it is not required.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div class="jumbotron">
+        <h3>Tips to make your project standout:</h3>
+        <p><ul>
+<li>The Boogle Maps application does not actually store the address assigned to a given vehicle based on latitude and longitude, and instead randomly assigns a new one each time it is called. How could you update this to track which address is assigned to which vehicle? What happens if the vehicle latitude and longitude is updated in the Vehicles API?</li>
+<li>The Pricing Service stores prices based on ID, but that ID is not truly assigned to a specific vehicle - if the vehicle is deleted and a new vehicle uses the old ID, the same price is used. How can you update the Pricing Service (and perhaps the Vehicles API) to assign a new (random) price when a vehicle is removed from the Vehicles API?</li>
+<li>An additional helpful service after the Vehicles API would be to have an Orders/Sales service when a customer wants to order a vehicle. How would you implement this Orders/Sales API and integrate it with the Vehicles API?</li>
+</ul></p>
+      </div>
+    
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('Build the Backend System for a Car Website')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

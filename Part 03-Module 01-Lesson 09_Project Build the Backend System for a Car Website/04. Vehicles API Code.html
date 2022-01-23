@@ -1,0 +1,251 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vehicles API Code</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Project: Build the Backend System for a Car Website</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Location Service Code.html">02. Location Service Code</a>
+    </li>
+    <li class="">
+      <a href="03. Pricing Service Code.html">03. Pricing Service Code</a>
+    </li>
+    <li class="">
+      <a href="04. Vehicles API Code.html">04. Vehicles API Code</a>
+    </li>
+    <li class="">
+      <a href="05. Instructions.html">05. Instructions</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Build the Backend System for a Car Website.html">Project Description - Build the Backend System for a Car Website</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Build the Backend System for a Car Website.html">Project Rubric - Build the Backend System for a Car Website</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Vehicles API Code</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="vehicles-api">Vehicles API</h1>
+<p>You'll find the code related to our Vehicles API in the <code>vehicles-api</code> folder. It serves as a REST API to maintain vehicle data and to provide a complete view of vehicle details including price and address (obtained from the location and pricing services).</p>
+<p>Let's take a quick look through the included files - and don't worry, you won't need to implement every single one of these! Note that every package is within <code>com.udacity</code>, so we won't include that part of the package name below.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/architecture-automobile-cars-63294.jpg" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="vehicles"><code>vehicles</code></h2>
+<h4 id="vehiclesapiapplication">VehiclesApiApplication</h4>
+<p>This launches the Vehicles API as a Spring Boot application. Additionally, it initializes a few car manufacturers to place in the <code>ManufacturerRepository</code>, as well as creating the web clients to connect to the Maps and Pricing services.</p>
+<h2 id="vehiclesapi"><code>vehicles.api</code></h2>
+<h4 id="api-error">API Error</h4>
+<p>Declares a few quick methods to return errors and other messages from the Vehicles API.</p>
+<h4 id="carcontroller">CarController</h4>
+<p>This is our actual REST controller for the application. This implements what happens when GET, POST, PUT and DELETE requests are received (using methods in the <code>CarService</code>), and how they are responded to (including formatting with <code>CarResourceAssembler</code>). You will implement these methods in your code.</p>
+<h4 id="carresourceassembler">CarResourceAssembler</h4>
+<p>This helps mapping the <code>CarController</code> to the <code>Car</code> class to help return the API response.</p>
+<h4 id="errorcontroller">ErrorController</h4>
+<p>This helps to handle any invalid arguments fed to the API.</p>
+<h2 id="vehiclesclientmaps"><code>vehicles.client.maps</code></h2>
+<h4 id="address">Address</h4>
+<p>Very similar to the <code>Address</code> file for <code>boogle-maps</code>, this declares a class for use with the <code>MapsClient</code>.</p>
+<h4 id="mapsclient">MapsClient</h4>
+<p>Handles the format of a GET request to the <code>boogle-maps</code> WebClient to get location data.</p>
+<h2 id="vehiclesclientprices"><code>vehicles.client.prices</code></h2>
+<h4 id="price">Price</h4>
+<p>Very similar to the <code>Price</code> file for <code>pricing-service</code>, this declares a class for use with the <code>PriceClient</code>.</p>
+<h4 id="priceclient">PriceClient</h4>
+<p>Handles the format of a GET request to the <code>pricing-service</code> WebClient to get pricing data.</p>
+<h2 id="vehiclesdomain"><code>vehicles.domain</code></h2>
+<h4 id="condition">Condition</h4>
+<p>This enumerates the available values for the condition of a car (New or Used).</p>
+<h4 id="location">Location</h4>
+<p>This declares information about the location of a vehicle. This is <strong>not</strong> the exact same as the <code>Address</code> class used by <code>boogle-maps</code> - it's primary use is related to the storage of latitude and longitude values. Because the data, such as <code>address</code>, gathered from <code>boogle-maps</code> is annotated as <code>@Transient</code>, this data is not stored until the next time <code>boogle-maps</code> is called.</p>
+<h2 id="vehiclesdomaincar"><code>vehicles.domain.car</code></h2>
+<h4 id="car">Car</h4>
+<p>This declares <em>certain</em> information about a given vehicle, mostly that more about the car entry itself (such as <code>CreatedAt</code>). Note that a separate class, <code>Details</code>, also stores additional details about the car that is more specific to things like make, color and model. Note that similar to <code>Location</code> with data like <code>address</code>, this uses a <code>@Transient</code> tag with <code>price</code>, meaning the Pricing Service must be called each time a price is desired.</p>
+<h4 id="carrepository">CarRepository</h4>
+<p>This repository provide a type of data persistence while the web service runs, primarily related to vehicle information received in the <code>CarService</code>.</p>
+<h4 id="details">Details</h4>
+<p>Declares additional vehicle details, primarily about the car build itself, such as <code>fuelType</code> and <code>mileage</code>.</p>
+<h2 id="vehiclesdomainmanufacturer"><code>vehicles.domain.manufacturer</code></h2>
+<h4 id="manufacturer">Manufacturer</h4>
+<p>This declares the Manufacturer class, primarily just made of a ID code and name of manufacturer.</p>
+<h4 id="manufacturerrepository">ManufacturerRepository</h4>
+<p>This repository provide a type of data persistence while the web service runs, primarily to store manufacturer information like that initialized in <code>VehiclesApiApplication</code>.</p>
+<h2 id="vehiclesdomain-1"><code>vehicles.domain</code></h2>
+<h4 id="carnotfoundexception">CarNotFoundException</h4>
+<p>This creates a <code>CarNotFoundException</code> that can be thrown when an issue arises in the <code>CarService</code>.</p>
+<h4 id="carservice">CarService</h4>
+<p>The Car Service does a lot of the legwork of the code. It can gather either the entire list of vehicles or just a single vehicle by ID (including calls to the maps and pricing web clients). It can also save updated vehicle information. Lastly, it can delete an existing car. All of these are called by the <code>CarController</code> based on queries to the REST API. You will implement most of these methods yourself.</p>
+<h2 id="testvehiclesapi"><code>test/../vehicles.api</code></h2>
+<h4 id="carcontrollertest">CarControllerTest</h4>
+<p>Here, the various methods performed by the CarController are performed by creating mock calls to the Vehicles API. You will implement some of these methods yourself for great practice in building your own tests.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Instructions.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Vehicles API Code')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.860 --> 00:00:06.100
+In order to generate Java classes from a WSDL file,
+
+00:00:06.099 --> 00:00:09.625
+there's some setup that needs to happen in your Maven palm file.
+
+00:00:09.625 --> 00:00:11.734
+So let's navigate there.
+
+00:00:11.734 --> 00:00:13.594
+At the very bottom,
+
+00:00:13.595 --> 00:00:16.344
+there is a plugin section.
+
+00:00:16.344 --> 00:00:22.849
+So specifically, this plugin here found on line 75 through 92.
+
+00:00:22.850 --> 00:00:25.050
+So this plugin uses
+
+00:00:25.050 --> 00:00:28.300
+JAXB which generates the Java classes and
+
+00:00:28.300 --> 00:00:32.289
+handles the mapping of XML to Java and vice versa.
+
+00:00:32.289 --> 00:00:36.189
+The line on 87 is very important because it points to
+
+00:00:36.189 --> 00:00:40.044
+the WSDL file that the plugin will use to generate the Java code.
+
+00:00:40.045 --> 00:00:41.829
+Let's scroll back up.
+
+00:00:41.829 --> 00:00:45.109
+There are additional dependencies that I've
+
+00:00:45.109 --> 00:00:48.755
+added here this marshaling and unmarshaling section.
+
+00:00:48.755 --> 00:00:54.170
+That's lines 40 all the way down through 63.
+
+00:00:54.170 --> 00:00:57.230
+So these are additional dependencies that also
+
+00:00:57.229 --> 00:01:00.814
+help with mapping XML to Java and vice versa.
+
+00:01:00.814 --> 00:01:02.710
+So those are necessary.
+
+00:01:02.710 --> 00:01:05.644
+Now, in order to generate the Java classes,
+
+00:01:05.644 --> 00:01:09.079
+you'll have to run the Maven generate-sources command.
+
+00:01:09.079 --> 00:01:13.459
+Now, this can be easily done via the command line or through IntelliJ.
+
+00:01:13.459 --> 00:01:15.769
+I'm going to use it through IntellJ.
+
+00:01:15.769 --> 00:01:18.694
+My project is set up as a Maven project.
+
+00:01:18.694 --> 00:01:22.625
+If you notice here on this far right-hand side,
+
+00:01:22.625 --> 00:01:24.594
+this option says Maven,
+
+00:01:24.594 --> 00:01:26.159
+and if you click on it,
+
+00:01:26.159 --> 00:01:30.034
+it opens the Maven configurations for your project.
+
+00:01:30.034 --> 00:01:33.170
+So I want to run the Maven generate-sources command.
+
+00:01:33.170 --> 00:01:39.525
+So I will click on this that says "Execute Maven Goal" and a window will pop up.
+
+00:01:39.525 --> 00:01:42.975
+Then, here, you can enter generate-sources.
+
+00:01:42.974 --> 00:01:44.819
+Let's click Execute.
+
+00:01:44.819 --> 00:01:49.189
+I'll expand this window down here so you can see what's happening.
+
+00:01:49.189 --> 00:01:53.329
+So we have build success. So that's it.
+
+00:01:53.329 --> 00:01:57.049
+So this results in a number of generated Java classes.
+
+00:01:57.049 --> 00:01:59.375
+Let me show you where those are.
+
+00:01:59.375 --> 00:02:02.209
+Those are under this target folder.
+
+00:02:02.209 --> 00:02:06.924
+Go to generate-sources and look for XJC.
+
+00:02:06.924 --> 00:02:10.550
+Underneath this, you'll see all of the classes that you need,
+
+00:02:10.550 --> 00:02:14.405
+so com, data access, web services server.
+
+00:02:14.405 --> 00:02:19.655
+In here, we have the requests files and the response files.
+
+00:02:19.655 --> 00:02:23.150
+So we'll use these classes when we implement
+
+00:02:23.150 --> 00:02:27.275
+the client that actually calls out to the soap service.
+
+00:02:27.275 --> 00:02:30.650
+The next step is to create a client for
+
+00:02:30.650 --> 00:02:34.115
+the number service to create a web service client.
+
+00:02:34.115 --> 00:02:37.594
+You simply extend the WebServiceGatewaySupport class,
+
+00:02:37.594 --> 00:02:40.500
+and code your operations.
+

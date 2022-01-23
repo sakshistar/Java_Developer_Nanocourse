@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.065
+Let's see how to use the Mongo driver to query documents.
+
+00:00:04.065 --> 00:00:06.060
+I've inserted a few documents into
+
+00:00:06.059 --> 00:00:10.364
+the patient's collection to help me demonstrate the querying capabilities.
+
+00:00:10.365 --> 00:00:14.609
+We have the usual steps of creating a Mongo client,
+
+00:00:14.609 --> 00:00:19.829
+getting the database, and getting a collection.
+
+00:00:19.829 --> 00:00:24.989
+Then I have the various ways of using the Find method.
+
+00:00:24.989 --> 00:00:27.329
+Find with an argument,
+
+00:00:27.329 --> 00:00:30.464
+find with a logical operator,
+
+00:00:30.464 --> 00:00:33.524
+and find with an array field,
+
+00:00:33.524 --> 00:00:40.449
+and also a sub-document then I have the sort or here,
+
+00:00:40.909 --> 00:00:46.579
+I've count and also the limit.
+
+00:00:46.579 --> 00:00:53.060
+And finally a combination of find, sort and limit.
+
+00:00:53.060 --> 00:00:59.490
+Let's run this class to see if all these operations complete successfully.
+
+00:01:05.930 --> 00:01:12.840
+In the logs, we see the messages for each of the commands that we executed.
+
+00:01:14.950 --> 00:01:20.945
+You can see the array find over here and the sub document find over here,
+
+00:01:20.944 --> 00:01:23.179
+the sorted set of documents are here,
+
+00:01:23.180 --> 00:01:28.160
+he count, the limit and finally the combination.
+
+00:01:28.159 --> 00:01:34.629
+There you go. You just learned how to query documents using the Mongo driver.
+

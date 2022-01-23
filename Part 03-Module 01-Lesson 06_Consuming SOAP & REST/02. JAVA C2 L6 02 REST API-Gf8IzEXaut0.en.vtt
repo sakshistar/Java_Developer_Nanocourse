@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.879 --> 00:00:05.535
+There are times when you want to consume or call
+
+00:00:05.535 --> 00:00:09.734
+a publicly accessible web service or API in your application.
+
+00:00:09.734 --> 00:00:14.449
+If there's a web service or API available that provides the data you need,
+
+00:00:14.449 --> 00:00:17.594
+it doesn't make sense for you to build one from scratch.
+
+00:00:17.594 --> 00:00:22.829
+This allows you to deliver your products and services faster to your end users.
+
+00:00:22.829 --> 00:00:26.984
+Let's say you have an application that you'd like to display fun jokes.
+
+00:00:26.984 --> 00:00:29.984
+Let's look at the process of creating an application
+
+00:00:29.984 --> 00:00:33.269
+that consumes an existing RESTful web service.
+
+00:00:33.270 --> 00:00:36.765
+The publicly accessible API is found here.
+
+00:00:36.765 --> 00:00:39.429
+It randomly fetches jokes.
+
+00:00:39.429 --> 00:00:43.638
+If you request the URL through your web browser, or a postman,
+
+00:00:43.639 --> 00:00:48.170
+or call, you'll receive a JSON document that looks something like this.
+
+00:00:48.170 --> 00:00:50.195
+Here's an example response.
+
+00:00:50.195 --> 00:00:53.965
+The setup is, what's the best thing about elevator jokes?
+
+00:00:53.965 --> 00:00:58.130
+The punchline is, they work on so many levels.
+
+00:00:58.130 --> 00:01:00.740
+Their response isn't JSON.
+
+00:01:00.740 --> 00:01:05.780
+This format is not that useful when fetched through a browser or through curl.
+
+00:01:05.780 --> 00:01:10.189
+A more useful way to consume a REST web service is programmatically.
+
+00:01:10.189 --> 00:01:11.704
+To help you with that task,
+
+00:01:11.704 --> 00:01:16.079
+Spring provides a convenient template called REST template.
+

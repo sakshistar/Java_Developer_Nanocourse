@@ -1,0 +1,229 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.040
+Early on, in this lesson,
+
+00:00:02.040 --> 00:00:07.605
+we learned that a relational database requires a predefined structure for its tables.
+
+00:00:07.605 --> 00:00:09.269
+In a real-world application,
+
+00:00:09.269 --> 00:00:12.884
+there will be continuous updates to the applications feature set.
+
+00:00:12.884 --> 00:00:16.410
+These updates might require updates to the schema.
+
+00:00:16.410 --> 00:00:21.600
+In a large organization where the database server is shared by multiple applications,
+
+00:00:21.600 --> 00:00:24.915
+schema updates are controlled through a release process.
+
+00:00:24.914 --> 00:00:28.905
+This process is called a Database migration.
+
+00:00:28.905 --> 00:00:31.345
+With the rise of micro-services,
+
+00:00:31.344 --> 00:00:33.814
+applications have become more nimble,
+
+00:00:33.814 --> 00:00:37.429
+and application development processes more agile.
+
+00:00:37.429 --> 00:00:41.149
+Applications are updated and deployed continuously.
+
+00:00:41.149 --> 00:00:48.060
+A strict schema update process severely limits an application's release cadence.
+
+00:00:48.219 --> 00:00:54.170
+Wouldn't it be nice to run database migrations when an application is updated?
+
+00:00:54.170 --> 00:01:00.545
+Meet Flyway, a library that runs database migrations on the application's behalf.
+
+00:01:00.545 --> 00:01:04.594
+Flyway uses a simple algorithm to manage migrations.
+
+00:01:04.594 --> 00:01:09.280
+Each migration that needs to be applied is incrementally versioned.
+
+00:01:09.280 --> 00:01:12.980
+Flyway keeps track of versions applied by storing
+
+00:01:12.980 --> 00:01:16.924
+them in the database and applies new ones if there are any.
+
+00:01:16.924 --> 00:01:24.060
+Please read the next section to understand how to set up and run migrations using Flyway.
+
+00:01:24.060 --> 00:01:29.000
+Let's see how we can use driver manager to connect to the database.
+
+00:01:29.000 --> 00:01:32.584
+This is a simple class with a main method.
+
+00:01:32.584 --> 00:01:35.479
+The get-connection method establishes
+
+00:01:35.480 --> 00:01:39.575
+a database connection and it requires a database URL.
+
+00:01:39.575 --> 00:01:41.659
+The database URL contains
+
+00:01:41.659 --> 00:01:46.519
+all the relevant information necessary to establish a connection.
+
+00:01:46.519 --> 00:01:53.159
+First, it specifies what type of database that we're connecting to, MySQL.
+
+00:01:53.159 --> 00:01:57.599
+Where the database servers is located, localhost.
+
+00:01:57.599 --> 00:02:01.609
+If the server is running on a port other than the default port,
+
+00:02:01.609 --> 00:02:04.310
+you would specify the port number here.
+
+00:02:04.310 --> 00:02:07.905
+The database we are connecting to, course 3.
+
+00:02:07.905 --> 00:02:12.050
+It also specifies the username and the password.
+
+00:02:12.050 --> 00:02:14.450
+Using the database type,
+
+00:02:14.449 --> 00:02:15.859
+the driver manager selects
+
+00:02:15.860 --> 00:02:20.340
+the appropriate driver from the class path and obtains a connection.
+
+00:02:20.629 --> 00:02:23.379
+An important thing to note,
+
+00:02:23.379 --> 00:02:27.724
+connection is wrapped in a try with resources block.
+
+00:02:27.724 --> 00:02:31.254
+So it's closed once the block exits.
+
+00:02:31.254 --> 00:02:35.354
+Connections must be closed after use.
+
+00:02:35.354 --> 00:02:39.340
+Let's run this class to connect to MySQL.
+
+00:02:41.300 --> 00:02:44.535
+Connected to MySQL, nice.
+
+00:02:44.534 --> 00:02:47.104
+We now have a connection to the MySQL database.
+
+00:02:47.104 --> 00:02:48.724
+Using the connection object,
+
+00:02:48.724 --> 00:02:53.284
+let's create a statement to send SQL queries to the database.
+
+00:02:53.284 --> 00:02:56.599
+The create statement creates a statement object.
+
+00:02:56.599 --> 00:03:00.549
+The execute query sends the SQL query to the database,
+
+00:03:00.550 --> 00:03:02.240
+and returns the results.
+
+00:03:02.240 --> 00:03:07.580
+Note that the statement object is also wrapped in a try-with-resources block,
+
+00:03:07.580 --> 00:03:10.715
+since it must be closed after use.
+
+00:03:10.715 --> 00:03:15.150
+Let's run this class to see if the query is executed.
+
+00:03:18.969 --> 00:03:23.604
+It does, but we're not using the results of the query.
+
+00:03:23.604 --> 00:03:26.169
+Let's do that in the next video.
+
+00:03:26.169 --> 00:03:29.169
+Now we have a connection to the database,
+
+00:03:29.169 --> 00:03:31.014
+we executed a SQL query,
+
+00:03:31.014 --> 00:03:33.639
+and it's time to process the results.
+
+00:03:33.639 --> 00:03:37.194
+The results are held in a result set object.
+
+00:03:37.194 --> 00:03:42.314
+A result set object maintains a cursor pointing to its current row of data.
+
+00:03:42.314 --> 00:03:47.109
+Initially, the cursor is positioned just before the first row.
+
+00:03:47.110 --> 00:03:50.890
+The next method, moves the cursor to the next row and
+
+00:03:50.889 --> 00:03:55.719
+because it returns false when there are no more rows in the results set object,
+
+00:03:55.719 --> 00:04:00.655
+it can be used inside a While-loop to iterate through the results set.
+
+00:04:00.655 --> 00:04:06.890
+Needless to say, the result set object should also be wrapped in a try block.
+
+00:04:06.889 --> 00:04:09.379
+Inside the While-loop we can use
+
+00:04:09.379 --> 00:04:14.734
+the corresponding get method for the column type to read its value.
+
+00:04:14.735 --> 00:04:17.290
+We know that orderId is an integer,
+
+00:04:17.290 --> 00:04:19.215
+so we use getInt.
+
+00:04:19.214 --> 00:04:24.634
+CustomerName is a wildcard which translates to a string in Java,
+
+00:04:24.634 --> 00:04:26.464
+so we use getString.
+
+00:04:26.464 --> 00:04:32.310
+You can also read column values by their index in the query.
+
+00:04:32.810 --> 00:04:37.689
+Let's see if it prints the ID and the name.
+
+00:04:42.319 --> 00:04:45.149
+Viola! It did.
+
+00:04:45.149 --> 00:04:47.264
+We connected to MySQL,
+
+00:04:47.264 --> 00:04:49.125
+executed the SQL query,
+
+00:04:49.125 --> 00:04:51.355
+and process the results.
+
+00:04:51.355 --> 00:04:57.240
+We have now completed the three basic steps of database interactions.
+

@@ -1,0 +1,298 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JPA Querying Entities</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Java Persistence API</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Object Relational Mapping (ORM).html">01. Object Relational Mapping (ORM)</a>
+    </li>
+    <li class="">
+      <a href="02. Java Persistence API (JPA).html">02. Java Persistence API (JPA)</a>
+    </li>
+    <li class="">
+      <a href="03. JPA Querying Entities.html">03. JPA Querying Entities</a>
+    </li>
+    <li class="">
+      <a href="04. Spring Data JPA.html">04. Spring Data JPA</a>
+    </li>
+    <li class="">
+      <a href="05. DB Testing.html">05. DB Testing</a>
+    </li>
+    <li class="">
+      <a href="06. Recap.html">06. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. JPA Querying Entities</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Javand305-C03-L02-A05-Java-Persistence-Query-Language-Jpql 1</p></h3>
+  <video controls>
+  <source src="03. Javand305-C03-L02-A05-Java-Persistence-Query-Language-Jpql 1-N731xYU0HuA.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Javand305-C03-L02-A05-Java-Persistence-Query-Language-Jpql 1-N731xYU0HuA.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Query Syntax</p></h3>
+  <div>
+  <p>JPQL is a powerful query language that allows you to define database queries based on your entity model. Its structure and syntax are very similar to SQL. But there is an important difference that I want to point out before I walk you through the different parts of a JPQL query.</p>
+<p>JPQL uses the entity object model instead of database tables to define a query. That makes it very comfortable for us Java developers, but you have to keep in mind that the database still uses SQL. Hibernate, or any other JPA implementation, has to transform the JPQL query into SQL.</p>
+<h4 id="the-from-clause">The FROM clause</h4>
+<p>The FROM clause defines from which entities the data gets selected. Hibernate, or any other JPA implementation, maps the entities to the according database tables. The syntax of a JPQL FROM clause is similar to SQL but uses the entity model instead of table or column names. </p>
+<p>The following code snippet shows a simple JPQL query in which I select all Author entities.</p>
+<pre><code>SELECT a FROM Author a</code></pre>
+<p>As you can see, I reference the Author entity instead of the author table and assign the identification variable a to it. The identification variable is often called alias and is similar to a variable in your Java code. It is used in all other parts of the query to reference this entity.</p>
+<h4 id="the-where-clause">The WHERE clause</h4>
+<p>The next important part of a JPQL query is the WHERE clause which you can use to restrict the selected entities to the ones you need for your use case. The syntax is very similar to SQL, but JPQL supports only a small subset of the SQL features. If you need more sophisticated features for your query, you can use a native SQL query.</p>
+<p>JPQL supports a set of basic operators to define comparison expressions. Most of them are identical to the comparison operators supported by SQL, and you can combine them with the logical operators AND, OR and NOT into more complex expressions.</p>
+<p>Operators for single-valued expressions:<br />
+Equal: author.id = 10<br />
+Not equal: author.id &lt;&gt; 10<br />
+Greater than: author.id &gt; 10<br />
+Greater or equal then: author.id =&gt; 10<br />
+Smaller than: author.id &lt; 10<br />
+Smaller or equal then: author.id &lt;= 10<br />
+Between: author.id BETWEEN 5 and 10<br />
+Like: author.firstName LIKE ‘%and%’<br />
+The % character represents any character sequence. This example restricts the query result to all Authors with a firstName that contains the String ‘and’, like Alexander or Sandra. You can use an _ instead of % as a single character wildcard. You can also negate the operator with NOT to exclude all Authors with a matching firstName.<br />
+Is null: author.firstName IS NULL <br />
+You can negate the operator with NOT to restrict the query result to all Authors who’s firstName IS NOT NULL.<br />
+In: author.firstName IN (‘John’, ‘Jane’)<br />
+Restricts the query result to all Authors with the first name John or Jane.</p>
+<p>Operators for collection expressions:<br />
+<strong>Is empty:</strong> author.books IS EMPTY<br />
+Restricts the query result to all Authors that don’t have any associated Book entities. You can negate the operator (IS NOT EMPTY) to restrict the query result to all Authors with associated Book entities.<br />
+<strong>Size:</strong> size(author.books) &gt; 2<br />
+Restricts the query result to all Authors who are associated with more than 2 Book entities.<br />
+Member of: :myBook member of author.books<br />
+Restricts the query result to all Authors who are associated with a specific Book entity.<br />
+You can use one or more of the operators to restrict your query result. The following query returns all Author entities with a firstName attribute that contains the String “and” and an id attribute greater or equal 20 and who have written at least 5 books.</p>
+<pre><code>SELECT a FROM Author a WHERE a.firstName like ‘%and%’ and a.id &gt;= 20 and size(author.books) &gt;= 5</code></pre>
+<h4 id="the-select-clause">The SELECT clause</h4>
+<p>The projection of your query defines which information you want to retrieve from the database. This part of the query is very different from SQL. In SQL, you specify a set of database columns and functions as your projection. You can do the same in JPQL by selecting a set of entity attributes or functions as scalar values, but you can also define entities or constructor calls as your projection. Hibernate, or any other JPA implementation, maps this information to a set of database columns and function calls to define the projection of the generated SQL statement.</p>
+<p>Let’s have a look at the different options. You can use any combination of them in your queries. <br />
+Entities<br />
+Entities are the most common projection in JPQL queries. Hibernate uses the mapping information of the selected entities to determine the database columns it has to retrieve from the database. It then maps each row of the result set to the selected entities.</p>
+<pre><code>SELECT a FROM Author a</code></pre>
+<p>It’s comfortable to use entities as your projection. But you should always keep in mind that all entities are managed by the persistence context which creates overhead for read-only use cases. In these situations, it’s better to use scalar values or a constructor reference as a projection.</p>
+<h5 id="scalar-values">Scalar values</h5>
+<p>Scalar value projections are very similar to the projections you know from SQL. Instead of database columns, you select one or more entity attributes or the return value of a function call with your query.</p>
+<pre><code>SELECT a.firstName, a.lastName FROM Author a</code></pre>
+<h5 id="constructor-references">Constructor references</h5>
+<p>Constructor references are a good projection for read-only use cases. They’re more comfortable to use than scalar value projections and avoid the overhead of managed entities.</p>
+<p>JPQL allows you to define a constructor call in the SELECT clause. You can see an example of it in the following code snippet. You just need to provide the fully qualified class name and specify the constructor parameters of an existing constructor. Similar to the entity projection, Hibernate generates a SQL query which returns the required database columns and uses the constructor reference to instantiate a new object for each record in the result set.</p>
+<pre><code>SELECT new org.thoughts.on.java.model.AuthorValue(a.id, a.firstName, a.lastName) FROM Author a</code></pre>
+<p>##### Distinct query results<br />
+You probably know SQL’s DISTINCT operator which removes duplicates from a projection. JPQL supports this operator as well.</p>
+<pre><code>SELECT DISTINCT a.lastName FROM Author a</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Using Queries in JPA</p></h3>
+  <div>
+  <p>Query q = em.createQuery(‘SELECT Order o from Order’);</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Relationships in JPQL</p></h3>
+  <div>
+  <h4 id="navigating-relationships-in-jpql">Navigating Relationships in JPQL</h4>
+<h5 id="inner-joins">Inner Joins</h5>
+<p>If you want to select data from more than one entity, e.g., all authors and the books they’ve written, you have to join the entities in the FROM clause. The easiest way to do that is to use the defined associations of an entity like in the following code snippet.</p>
+<pre><code>SELECT a, b FROM Author a JOIN a.books b</code></pre>
+<p>The definition of the Author entity provides all information Hibernate needs to join it to the Book entity, and you don’t have to provide an additional ON statement. In this example, Hibernate uses the primary keys of the Author and Book entity to join them via the association table of the many-to-many association.</p>
+<p><strong>JOINs of unrelated entities are not supported by the JPA specification</strong>, but you can use a theta join which creates a cartesian product and restricts it in the WHERE clause to the records with matching foreign and primary keys.</p>
+<pre><code class="sql language-sql">SELECT b, p FROM Book b, Publisher p WHERE b.fk_publisher = p.id</code></pre>
+<h5 id="left-outer-joins">Left Outer Joins</h5>
+<p>INNER JOINs, like the one in the previous example, require that the selected entities fulfill the join condition. The query returned only the Author entities with associated Book entities but not the ones for which the database doesn’t contain a Book entity. If you want to include the authors without published books, you have to use a LEFT JOIN, like in the following code snippet.</p>
+<pre><code>SELECT a, b FROM Author a LEFT JOIN a.books b</code></pre>
+<h5 id="additional-join-conditions">Additional Join Conditions</h5>
+<p>The previous examples use the defined association to join the entities. But sometimes you only want to join the related entities which fulfill additional conditions. Since JPA 2.1, you can do this for INNER JOINs, and LEFT JOINs with an additional ON statement.</p>
+<pre><code>SELECT a, p FROM Author a JOIN a.publications p ON p.publishingDate &gt; ?1</code></pre>
+<h5 id="path-expressions-or-implicit-joins">Path expressions or implicit joins</h5>
+<p>Path expressions create implicit joins and are one of the benefits provided by the entity model. You can use the ‘.’ operator to navigate to related entities as I do in the following code snippet.</p>
+<pre><code>SELECT b FROM Book b WHERE b.publisher.name LIKE ‘%es%</code></pre>
+<p>As you can see, I use the ‘.’ operator to navigate via the publisher attribute of the Book entity b to the related Publisher entities. That creates an implicit join between the Book and Publisher entity which will be translated into an additional join statement in the SQL query.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exercise</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Improve on the previous exercise to include queries</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="5bad988c-5554-4433-ac41-56578ee044e6--0">
+        <label for="5bad988c-5554-4433-ac41-56578ee044e6--0"><p>Queries are executed and no errors in the log.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Well done. You now know how to write JPQL queries using EntityManager.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Spring Data JPA.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. JPA Querying Entities')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

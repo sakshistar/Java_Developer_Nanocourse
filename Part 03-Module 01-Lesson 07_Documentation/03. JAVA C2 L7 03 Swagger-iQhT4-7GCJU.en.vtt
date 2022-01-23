@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.070 --> 00:00:08.039
+One of the most popular API documentation specifications is OpenAPI,
+
+00:00:08.039 --> 00:00:11.474
+formerly known as the swagger specification.
+
+00:00:11.474 --> 00:00:16.890
+OpenAPI allows you to describe your API using JSON or YAML.
+
+00:00:16.890 --> 00:00:21.480
+YAML is a markup language commonly used for configuration files.
+
+00:00:21.480 --> 00:00:26.144
+With OpenAPI, you can describe available endpoints,
+
+00:00:26.144 --> 00:00:30.975
+operations with parameters, authentication methods,
+
+00:00:30.975 --> 00:00:34.050
+and contact information about your API.
+
+00:00:34.049 --> 00:00:38.239
+Swagger is the name associated with some of the most well-known and
+
+00:00:38.240 --> 00:00:42.664
+widely used tools for implementing the open API specification.
+
+00:00:42.664 --> 00:00:45.335
+Swagger helps you design, build,
+
+00:00:45.335 --> 00:00:48.429
+document, and consume REST APIs.
+
+00:00:48.429 --> 00:00:52.774
+SpringFox is a swagger integration for the Spring framework.
+
+00:00:52.774 --> 00:00:55.549
+There are several parts to swagger.
+
+00:00:55.549 --> 00:01:01.189
+The Swagger Editor; it's a browser-based editor where you can write OpenAPI specs.
+
+00:01:01.189 --> 00:01:07.939
+Swagger UI, this renders OpenAPI specs as interactive API documentation.
+
+00:01:07.939 --> 00:01:15.539
+Swagger Codegen; it generate server steps in client libraries from an OpenAPI spec.
+

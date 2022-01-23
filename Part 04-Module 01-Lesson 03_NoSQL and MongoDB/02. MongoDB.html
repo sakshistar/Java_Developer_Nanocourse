@@ -1,0 +1,241 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MongoDB</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>NoSQL and MongoDB</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. NoSQL Databases.html">01. NoSQL Databases</a>
+    </li>
+    <li class="">
+      <a href="02. MongoDB.html">02. MongoDB</a>
+    </li>
+    <li class="">
+      <a href="03. Working with documents.html">03. Working with documents</a>
+    </li>
+    <li class="">
+      <a href="04. Data Modeling.html">04. Data Modeling</a>
+    </li>
+    <li class="">
+      <a href="05. Recap.html">05. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. MongoDB</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>JavaND#305 C03 L03 A02 Mongo DB</p></h3>
+  <video controls>
+  <source src="02. JavaND#305 C03 L03 A02 Mongo DB-5YPoe0LrL_U.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. JavaND#305 C03 L03 A02 Mongo DB-5YPoe0LrL_U.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Summary</p></h3>
+  <div>
+  <p>In MongoDB, data is organized into documents. Documents are a collection of key and value pairs. The values can be scalar types like numbers, dates and strings. The values can also be arrays, other documents or arrays of documents.</p>
+<p>Documents are organized into collections. A set of collections is organized into a database.</p>
+<h4 id="documents">Documents</h4>
+<p>A record in MongoDB is a document, which is a data structure composed of field and value pairs. MongoDB documents are similar to JSON objects. The values of fields may include other documents, arrays, and arrays of documents.</p>
+<p>The advantages of using documents are:<br />
+Documents (i.e. objects) correspond to native data types in many programming languages.<br />
+Embedded documents and arrays reduce need for expensive joins.</p>
+<h5 id="additional-resources">Additional Resources:</h5>
+<p><a href="https://www.mongodb.com/what-is-mongodb" target="_blank">MongoDB</a><br />
+<a href="https://www.json.org/" target="_blank">JSON Spec</a><br />
+<a href="https://docs.mongodb.com/manual/reference/glossary/#term-bson" target="_blank">BSON</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exercise</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <h4 id="mongodb-installation">MongoDB Installation</h4>
+<p><a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/" target="_blank">Installing MongoDB Server on Windows</a><br />
+<a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/" target="_blank">Installing MongoDB Server on MacOS</a></p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="127f16da-3131-483f-9bb3-0222990f0231--0">
+        <label for="127f16da-3131-483f-9bb3-0222990f0231--0"><p>Start the MongoDB server using the instructions provided in the above links.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="127f16da-3131-483f-9bb3-0222990f0231--1">
+        <label for="127f16da-3131-483f-9bb3-0222990f0231--1"><p>Connect to the server using <a href="https://docs.mongodb.com/manual/reference/program/mongo/#bin.mongo" target="_blank">mongo</a> shell.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="127f16da-3131-483f-9bb3-0222990f0231--2">
+        <label for="127f16da-3131-483f-9bb3-0222990f0231--2"><p>Create a user with read/write and admin permission. We will use this user to connect to the database moving forward.</p>
+<pre><code>db.createUser({"user": "course3", "pwd": "course3", "roles": ["readWrite", "dbAdmin"]});</code></pre></label>
+      </div>
+      <div>
+        <input type="checkbox" id="127f16da-3131-483f-9bb3-0222990f0231--3">
+        <label for="127f16da-3131-483f-9bb3-0222990f0231--3"><p>Run the command <code>use jdnd-c3</code> that creates a database of that name.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Congratulations! You have a working installation of MongoDB server on your local workstation.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Working with documents.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. MongoDB')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

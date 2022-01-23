@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.129
+Let's see how we can modify the structure of a table after it has been created.
+
+00:00:05.129 --> 00:00:07.719
+In the Orders Table,
+
+00:00:08.839 --> 00:00:13.125
+one important piece of information is missing.
+
+00:00:13.125 --> 00:00:16.035
+We do not know who placed this order.
+
+00:00:16.035 --> 00:00:18.960
+Let's add the customer information to the order table.
+
+00:00:18.960 --> 00:00:20.730
+We need to add two columns;
+
+00:00:20.730 --> 00:00:24.969
+one for the name and one for the address of the customer.
+
+00:00:29.059 --> 00:00:31.254
+To modify a table,
+
+00:00:31.254 --> 00:00:33.500
+we'll use the alter table statement.
+
+00:00:33.500 --> 00:00:37.159
+The alter table is followed by the table name that we want to
+
+00:00:37.159 --> 00:00:41.369
+modify and the modification that we want to do,
+
+00:00:41.369 --> 00:00:46.384
+which is, we want to add a column in this case followed by the column name.
+
+00:00:46.384 --> 00:00:49.189
+I'm going to add the name column first.
+
+00:00:49.189 --> 00:00:50.960
+I'm going to call it customer name.
+
+00:00:50.960 --> 00:00:56.950
+Then, we need to specify the data type and if there are any constraints.
+
+00:00:57.229 --> 00:01:01.559
+I want to specify the length as 255 characters and
+
+00:01:01.560 --> 00:01:06.159
+the constraint I'm just going to set it as null.
+
+00:01:08.390 --> 00:01:11.430
+All right. Now that column got added.
+
+00:01:11.430 --> 00:01:15.360
+Let's go ahead and add the address column as well.
+
+00:01:15.579 --> 00:01:17.914
+Instead of customer name,
+
+00:01:17.915 --> 00:01:20.365
+I'm going to call it as customer address,
+
+00:01:20.364 --> 00:01:22.545
+and since address could be longer.
+
+00:01:22.545 --> 00:01:26.359
+I'm just going to double the size to 510 characters.
+
+00:01:26.359 --> 00:01:29.105
+I'm keeping the constraints the same.
+
+00:01:29.105 --> 00:01:31.160
+Let's add this column.
+
+00:01:31.159 --> 00:01:36.539
+Now let's see whether the Orders Table has been modified.
+
+00:01:36.540 --> 00:01:44.650
+It is. You can see the newly added customer name and customer address columns here.
+
+00:01:44.650 --> 00:01:51.000
+That's how you alter the definition of a table after it has been created.
+

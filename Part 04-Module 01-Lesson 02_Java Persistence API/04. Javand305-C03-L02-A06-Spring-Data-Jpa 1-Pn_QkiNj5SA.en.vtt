@@ -1,0 +1,151 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.170 --> 00:00:03.480
+JPA is very sophisticated.
+
+00:00:03.480 --> 00:00:07.320
+It provides a higher level of abstraction than JDBC,
+
+00:00:07.320 --> 00:00:10.634
+and lets you work with Java objects directly.
+
+00:00:10.634 --> 00:00:14.400
+You could certainly pick a JPA implementation like hibernate,
+
+00:00:14.400 --> 00:00:17.835
+and use it in your application as is.
+
+00:00:17.835 --> 00:00:23.115
+Spring data JPA adds a layer on top of JPA.
+
+00:00:23.114 --> 00:00:28.034
+It provides seamless integration of JPA into the spring stack.
+
+00:00:28.035 --> 00:00:34.125
+It reduces a lot of boilerplate code that you would otherwise have to write yourself.
+
+00:00:34.125 --> 00:00:39.204
+The basic abstraction that spring data provides is a repository.
+
+00:00:39.204 --> 00:00:43.920
+A repository contains methods to perform, basic,
+
+00:00:43.920 --> 00:00:48.995
+create, read, update, and delete operations on an entity.
+
+00:00:48.994 --> 00:00:52.489
+You could also add your own methods to the repository.
+
+00:00:52.490 --> 00:00:55.429
+If you follow the standard naming conventions,
+
+00:00:55.429 --> 00:01:00.530
+then Spring data generates the JPQL query from the method name.
+
+00:01:00.530 --> 00:01:04.385
+Let's see how to create a repository for an entity.
+
+00:01:04.385 --> 00:01:08.075
+This is the repository for the order entity.
+
+00:01:08.075 --> 00:01:11.980
+Spring data provides different repository implementation.
+
+00:01:11.980 --> 00:01:16.704
+CrudRepository provides basic crud operations on the entity.
+
+00:01:16.704 --> 00:01:18.825
+There are two other different types of
+
+00:01:18.825 --> 00:01:23.945
+repository implementations that will be discussed in the next section.
+
+00:01:23.944 --> 00:01:29.109
+Notice that this repository is an interface and not a class,
+
+00:01:29.109 --> 00:01:32.829
+and that's because spring data will provide
+
+00:01:32.829 --> 00:01:37.370
+an implementation of this interface during runtime.
+
+00:01:37.370 --> 00:01:40.515
+You can also see there is a method,
+
+00:01:40.515 --> 00:01:42.704
+find by customer name,
+
+00:01:42.704 --> 00:01:45.064
+which does not have any implementation,
+
+00:01:45.064 --> 00:01:51.284
+but spring data using the method name will find out which field it queries against,
+
+00:01:51.284 --> 00:01:56.179
+and then it will write the query for that field during runtime.
+
+00:01:58.469 --> 00:02:01.480
+Let's take a look at the sample code.
+
+00:02:01.480 --> 00:02:07.075
+I have a Spring Boot application here with a command line runner.
+
+00:02:07.075 --> 00:02:13.365
+All the runner does is that it creates an order with a couple of order items,
+
+00:02:13.365 --> 00:02:18.550
+and then it calls the save method on the repository.
+
+00:02:18.550 --> 00:02:23.350
+Notice that the order does not include the primary key,
+
+00:02:23.349 --> 00:02:26.590
+which means after the order is saved,
+
+00:02:26.590 --> 00:02:31.254
+the database will generate the primary key and return it back.
+
+00:02:31.254 --> 00:02:34.314
+That primary key will be printed here,
+
+00:02:34.314 --> 00:02:39.969
+and I'm also using the find by customer name method here,
+
+00:02:39.969 --> 00:02:43.538
+and passing in the name as John Doe,
+
+00:02:43.538 --> 00:02:47.104
+which is the same name that we have set here.
+
+00:02:47.104 --> 00:02:49.484
+When I run this method,
+
+00:02:49.485 --> 00:02:53.059
+you will see that spring data actually generates
+
+00:02:53.058 --> 00:02:59.039
+the SQL query for finding an order by customer name.
+
+00:03:01.330 --> 00:03:05.250
+Let's run this class.
+
+00:03:11.240 --> 00:03:16.290
+Nice. It created the order with ID1.
+
+00:03:16.289 --> 00:03:21.275
+It also read the order back by name.
+
+00:03:21.275 --> 00:03:26.750
+You can see that it is querying the order using
+
+00:03:26.750 --> 00:03:35.090
+name right here in the very class where it specifies order0_.customer_name.
+
+00:03:35.090 --> 00:03:38.120
+Notice how simple that was,
+
+00:03:38.120 --> 00:03:40.740
+this is the value.
+

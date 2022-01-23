@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.110 --> 00:00:03.884
+MySQL uses a client-server model.
+
+00:00:03.884 --> 00:00:05.790
+In a real-world application,
+
+00:00:05.790 --> 00:00:10.065
+MySQL will be running on a different machine than the application.
+
+00:00:10.064 --> 00:00:13.844
+The application uses a client to interact with the server.
+
+00:00:13.845 --> 00:00:16.019
+For the purpose of this course,
+
+00:00:16.019 --> 00:00:20.504
+MySQL will be running as a separate process on your local workstation.
+
+00:00:20.504 --> 00:00:24.794
+Your application will access the data in the server through the network.
+
+00:00:24.795 --> 00:00:27.660
+Please take some time to complete the exercise
+
+00:00:27.660 --> 00:00:30.600
+of installing MySQL in your local workstation.
+
+00:00:30.600 --> 00:00:35.109
+You need a working installation to finish the rest of this course.
+

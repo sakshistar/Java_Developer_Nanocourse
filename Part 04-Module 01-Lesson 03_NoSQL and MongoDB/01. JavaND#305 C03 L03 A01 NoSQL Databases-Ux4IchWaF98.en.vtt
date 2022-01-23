@@ -1,0 +1,130 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.919
+Welcome to Lesson 3, NoSQL and MongoDB.
+
+00:00:04.919 --> 00:00:07.290
+In this lesson, we'll be talking about
+
+00:00:07.290 --> 00:00:11.910
+non-relational databases also known as NoSQL databases.
+
+00:00:11.910 --> 00:00:15.615
+We already looked at relational databases where data is
+
+00:00:15.615 --> 00:00:20.009
+organized into tables containing rows and columns.
+
+00:00:20.010 --> 00:00:22.260
+The tables adhere to a schema,
+
+00:00:22.260 --> 00:00:24.660
+a database consists of a set of tables,
+
+00:00:24.660 --> 00:00:26.940
+and these tables can be related.
+
+00:00:26.940 --> 00:00:30.330
+The power of relational database lies in the fact that
+
+00:00:30.329 --> 00:00:33.659
+data can be distributed across multiple tables,
+
+00:00:33.659 --> 00:00:37.639
+but can be merged together using joints.
+
+00:00:37.640 --> 00:00:41.134
+Non-relational databases on the other hand,
+
+00:00:41.134 --> 00:00:45.155
+do not generally organize data as rows and columns.
+
+00:00:45.155 --> 00:00:47.329
+Depending on the database you choose,
+
+00:00:47.329 --> 00:00:50.299
+relations might not be possible either.
+
+00:00:50.299 --> 00:00:52.144
+As the name signifies,
+
+00:00:52.145 --> 00:00:55.550
+SQL is not the interface to these databases.
+
+00:00:55.549 --> 00:01:00.829
+NoSQL databases also did not enforce a strict schema definition.
+
+00:01:00.829 --> 00:01:05.884
+NoSQL databases can be broadly classified into four categories.
+
+00:01:05.885 --> 00:01:08.615
+First, key-value stores.
+
+00:01:08.614 --> 00:01:12.574
+This is a hash table with keys and values.
+
+00:01:12.575 --> 00:01:18.109
+Every item in the database is stored as an attribute name together with its value.
+
+00:01:18.109 --> 00:01:21.769
+Riak and Redis are good examples of this type.
+
+00:01:21.769 --> 00:01:24.554
+Next, is document stores.
+
+00:01:24.555 --> 00:01:30.485
+These databases pair each key with a complex data structure known as a document.
+
+00:01:30.484 --> 00:01:34.114
+Document can contain many different key value pairs
+
+00:01:34.114 --> 00:01:38.114
+or key RA pairs or even nested documents.
+
+00:01:38.114 --> 00:01:42.140
+MongoDB is the most popular of these databases.
+
+00:01:42.140 --> 00:01:45.125
+Next, column-based stores.
+
+00:01:45.125 --> 00:01:49.670
+These stores store data together as columns instead of
+
+00:01:49.670 --> 00:01:54.454
+rows and are optimized for queries over large datasets.
+
+00:01:54.454 --> 00:01:58.894
+The most popular are Cassandra and HBase.
+
+00:01:58.894 --> 00:02:01.909
+Finally, graph-based.
+
+00:02:01.909 --> 00:02:08.465
+A network database that uses edges and nodes to represent and store data.
+
+00:02:08.465 --> 00:02:12.500
+Neo4J is a good example of this type.
+
+00:02:12.500 --> 00:02:16.699
+In this lesson, we'll be focusing on MongoDB,
+
+00:02:16.699 --> 00:02:22.534
+a popular and widely used document-oriented distributed database.
+
+00:02:22.534 --> 00:02:26.914
+First, you will install and set up MongoDB.
+
+00:02:26.914 --> 00:02:34.259
+Next, you'll do basic operations on MongoDB documents using the interactive Mongo shell.
+
+00:02:34.259 --> 00:02:39.454
+Finally, you will learn how to model your data as documents.
+
+00:02:39.455 --> 00:02:41.360
+This lesson's going to be great.
+
+00:02:41.360 --> 00:02:44.000
+Good luck and have fun.
+

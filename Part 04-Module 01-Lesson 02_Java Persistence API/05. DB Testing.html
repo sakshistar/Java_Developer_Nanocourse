@@ -1,0 +1,269 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DB Testing</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Java Persistence API</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Object Relational Mapping (ORM).html">01. Object Relational Mapping (ORM)</a>
+    </li>
+    <li class="">
+      <a href="02. Java Persistence API (JPA).html">02. Java Persistence API (JPA)</a>
+    </li>
+    <li class="">
+      <a href="03. JPA Querying Entities.html">03. JPA Querying Entities</a>
+    </li>
+    <li class="">
+      <a href="04. Spring Data JPA.html">04. Spring Data JPA</a>
+    </li>
+    <li class="">
+      <a href="05. DB Testing.html">05. DB Testing</a>
+    </li>
+    <li class="">
+      <a href="06. Recap.html">06. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. DB Testing</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>JavaND#305 C03 L02 A05 DB Testing</p></h3>
+  <video controls>
+  <source src="05. JavaND#305 C03 L02 A05 DB Testing-ftmpdM-EdeY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. JavaND#305 C03 L02 A05 DB Testing-ftmpdM-EdeY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="spring-data-jpa-tests">Spring Data JPA Tests</h4>
+<p>To test Spring Data JPA repositories, or any other JPA-related components for that matter, Spring Boot provides the <a href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/autoconfigure/orm/jpa/DataJpaTest.html" target="_blank">@DataJpaTest</a> annotation. We can just add it to our JUnit tests and it will set up a Spring application context.</p>
+<p>Let’s see how to write a JUnit 4 test for our <code>OrderRepository</code>,</p>
+<pre><code class="java language-java">@RunWith(SpringRunner.class)
+@DataJpaTest
+public class OrderRepositoryTest {
+
+  @Autowired private DataSource dataSource;
+  @Autowired private JdbcTemplate jdbcTemplate;
+  @Autowired private EntityManager entityManager;
+  @Autowired private TestEntityManager testEntityManager;
+  @Autowired private OrderRepository orderRepository;
+
+  @Test
+  public void injectedComponentsAreNotNull(){
+    assertThat(dataSource).isNotNull();
+    assertThat(jdbcTemplate).isNotNull();
+    assertThat(entityManager).isNotNull();
+    assertThat(testEntityManager).isNotNull();
+    assertThat(orderRepository).isNotNull();
+  }
+
+  @Test
+  public void testFindByCustomerName(){
+     // create Order
+     Order order = new Order();
+     // set fields
+    order.setCustomerName(“John Doe”);
+    …
+
+    entityManager.persist(order);
+
+    Order actual = orderRepository.findByCustomerName(“John Doe”)
+    assertThat(actual).isNotNull();
+    assertEquals(order.getId(), actual.getId());
+  }
+}</code></pre>
+<p>The so created application context will not contain the whole context needed for our Spring Boot application, but instead only a “slice” of it containing the components needed to initialize any JPA-related components like our Spring Data repository.</p>
+<p>We can, for instance, inject a <em>DataSource</em>, <em>JdbcTemplate</em>, <em>EntityManager</em> or a specialized wrapper <a href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/autoconfigure/orm/jpa/TestEntityManager.html" target="_blank">TestEntityManager</a> with helper methods for testing, into our test class if we need them. Also, we can inject any of the Spring Data repositories from our application. All of the above components will be automatically configured to point to an embedded, in-memory database instead of the “real” database we might have configured in <em>application.properties</em> files.</p>
+<p>Note that by default the application context containing all these components, including the in-memory database, is shared between all test methods within all <a href="https://github.com/DataJpaTest-annotated" target="_blank">@DataJpaTest-annotated</a> test classes.<br />
+This is why, by default, <strong>each test method runs in its own transaction, which is rolled back after the method has executed</strong>. This way, the database state stays pristine between tests and the tests stay independent of each other.</p>
+<h5 id="resources">Resources</h5>
+<ul>
+<li><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html" target="_blank">Spring Boot Testing</a></li>
+<li><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/junit4/SpringRunner.html" target="_blank">SpringRunner</a></li>
+<li><a href="http://junit.sourceforge.net/javadoc/org/junit/runner/RunWith.html" target="_blank">RunWith</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exercise</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Students will write tests for some of the operations done in the previous exercises.</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="e114a07c-da76-4303-8d31-bdf522104155--0">
+        <label for="e114a07c-da76-4303-8d31-bdf522104155--0"><p>Tests written pass without failures.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="e114a07c-da76-4303-8d31-bdf522104155--1">
+        <label for="e114a07c-da76-4303-8d31-bdf522104155--1"><p>Tests run against an in-memory H2 instance.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Nice job on writing tests.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Recap.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. DB Testing')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

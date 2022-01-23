@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.950 --> 00:00:04.035
+There may be times when you want to consume
+
+00:00:04.035 --> 00:00:07.500
+a SOAP-based service as opposed to a REST-based service.
+
+00:00:07.500 --> 00:00:11.849
+The process is different from what we saw with consuming a REST API,
+
+00:00:11.849 --> 00:00:13.769
+and it's a bit more complicated.
+
+00:00:13.769 --> 00:00:17.370
+The public API that we are going to consume is a fun one,
+
+00:00:17.370 --> 00:00:21.585
+that takes a number and converts it to the word form of that number.
+
+00:00:21.585 --> 00:00:26.085
+For example, if you enter 2,9,3,1,
+
+00:00:26.085 --> 00:00:29.700
+the service will return a response like this.
+
+00:00:29.699 --> 00:00:33.909
+This response is an XML format.
+

@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.784
+Hello, I'm Kisho Williams.
+
+00:00:01.784 --> 00:00:02.969
+Welcome to my course,
+
+00:00:02.970 --> 00:00:05.085
+web services and APIs.
+
+00:00:05.084 --> 00:00:07.049
+Today, I'm going to teach you about using
+
+00:00:07.049 --> 00:00:12.675
+a third-party RESTful API or SOAP-based web service in your existing applications.
+
+00:00:12.675 --> 00:00:17.820
+Third parties simply means it was developed by another developer or organization.
+
+00:00:17.820 --> 00:00:21.074
+If there's a third party service already on the market,
+
+00:00:21.074 --> 00:00:23.550
+it will jumpstart your development process.
+
+00:00:23.550 --> 00:00:26.179
+I will teach you about REST template which Spring
+
+00:00:26.179 --> 00:00:29.519
+provides for programmatically calling REST APIs.
+
+00:00:29.519 --> 00:00:30.864
+We will look at Jackson,
+
+00:00:30.864 --> 00:00:36.835
+which is a library that serializes or maps Java objects to JSON and vice versa.
+
+00:00:36.835 --> 00:00:41.075
+Next, I will teach you about consuming a SOAP-base API.
+
+00:00:41.075 --> 00:00:45.440
+We will discuss Spring web services which provides functionality to
+
+00:00:45.439 --> 00:00:50.570
+automatically generate the files you need in order to consume a SOAP web service.
+
+00:00:50.570 --> 00:00:53.689
+We will look at the code generation process and create
+
+00:00:53.689 --> 00:00:57.530
+a client to invoke the web service using the generated code.
+
+00:00:57.530 --> 00:00:59.969
+So let's get started.
+

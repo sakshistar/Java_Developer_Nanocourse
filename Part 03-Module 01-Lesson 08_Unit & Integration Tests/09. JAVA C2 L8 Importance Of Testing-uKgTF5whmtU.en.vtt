@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.089
+I just wanted to take the time to reiterate the importance of
+
+00:00:03.089 --> 00:00:07.660
+documentation and testing based on my years of experience in IT.
+
+00:00:07.660 --> 00:00:09.390
+I know in the world of
+
+00:00:09.390 --> 00:00:13.370
+software development documentation and testing can be afterthoughts,
+
+00:00:13.369 --> 00:00:15.994
+but I can express how important testing is,
+
+00:00:15.994 --> 00:00:19.964
+especially when you're working in an agile environment with CI/CD,
+
+00:00:19.964 --> 00:00:22.934
+continuous integration and continuous deployment.
+
+00:00:22.934 --> 00:00:26.324
+You really want to be sure that your one little change will not break
+
+00:00:26.324 --> 00:00:30.030
+other functionality that is working just fine in production.
+
+00:00:30.030 --> 00:00:34.820
+I currently serve as a software engineering manager with junior developers.
+
+00:00:34.820 --> 00:00:39.289
+I always encourage them to think about the person coming behind them that will be
+
+00:00:39.289 --> 00:00:43.774
+maintaining their code or clients that will be using the systems they create.
+
+00:00:43.774 --> 00:00:47.119
+Documentation and testing may often be overlooked,
+
+00:00:47.119 --> 00:00:51.659
+but they are necessities to help ease the maintenance process.
+

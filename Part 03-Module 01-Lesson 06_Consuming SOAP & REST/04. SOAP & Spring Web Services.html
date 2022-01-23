@@ -1,0 +1,306 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SOAP &amp; Spring Web Services</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Consuming SOAP &amp; REST</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Consuming REST.html">02. Consuming REST</a>
+    </li>
+    <li class="">
+      <a href="03. Case Study Consume REST.html">03. Case Study: Consume REST</a>
+    </li>
+    <li class="">
+      <a href="04. SOAP &amp; Spring Web Services.html">04. SOAP &amp; Spring Web Services</a>
+    </li>
+    <li class="">
+      <a href="05. Case Study WSDL.html">05. Case Study: WSDL</a>
+    </li>
+    <li class="">
+      <a href="06. Case Study Code Generation.html">06. Case Study: Code Generation</a>
+    </li>
+    <li class="">
+      <a href="07. Case Study Client.html">07. Case Study: Client</a>
+    </li>
+    <li class="">
+      <a href="08. Lab Consume an API.html">08. Lab: Consume an API</a>
+    </li>
+    <li class="">
+      <a href="09. Recap.html">09. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. SOAP & Spring Web Services</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="consuming-soap">Consuming SOAP</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>JAVA C2 L6 04 SOAP Web Service</p></h3>
+  <video controls>
+  <source src="04. JAVA C2 L6 04 SOAP Web Service-zL6rOA0c1Ak.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. JAVA C2 L6 04 SOAP Web Service-zL6rOA0c1Ak.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="spring-web-services">Spring Web Services</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>JAVA C2 L6 05 Spring Web Service</p></h3>
+  <video controls>
+  <source src="04. JAVA C2 L6 05 Spring Web Service-762L27E_mUo.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. JAVA C2 L6 05 Spring Web Service-762L27E_mUo.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>There may be times when you want to consume a SOAP-based web service in your applications. Spring Web Services makes this process easy by automatically generating the files you need in order to consume a SOAP-based web service.  In order to generate the files, the WSDL for the SOAP service in question is needed. WSDL stands for Web Services Description Language and simply describes the web service: its location and the operations allowed.  Spring Web Services is contract-first only. This means that you need to start from a contract definition (XSD or WSDL) to generate the files.</p>
+<h5>Dependencies</h5>
+<p>The <code>spring-boot-starter-web-services</code> dependency includes the needed dependencies for using Spring Web Services.</p>
+<h5>Generate Java Files</h5>
+<p>To generate Java classes from the WSDL in maven, you need the following plugin setup:</p>
+<pre>
+&lt;plugin&gt;
+   &lt;groupId&gt;org.jvnet.jaxb2.maven2&lt;/groupId&gt;
+  &lt;artifactId&gt;maven-jaxb2-plugin&lt;/artifactId&gt;
+  &lt;version&gt;0.14.0&lt;/version&gt;
+    &lt;executions&gt;
+        &lt;execution&gt;
+            &lt;goals&gt;
+                &lt;goal&gt;generate&lt;/goal&gt;
+            &lt;/goals&gt;
+        &lt;/execution&gt;
+    &lt;/executions&gt;
+       &lt;configuration&gt;
+        &lt;schemaDirectory&gt;${project.basedir}/src/main/resources/wsdl&lt;/schemaDirectory&gt;
+         &lt;schemaIncludes&gt;
+            &lt;include&gt;*.wsdl&lt;/include&gt;
+        &lt;/schemaIncludes&gt;
+    &lt;/configuration&gt;
+&lt;/plugin&gt;
+</pre>
+<p>This plugin uses JAXB, which generates the Java classes and handles the mapping of XML to Java and vice versa. In order to generate the Java files, run the <code> mvn generate-sources</code> Maven command. This can easily be done via the command line or through IntelliJ. This results in a number of generated Java classes under <code>/target/generated-sources/xjc</code>.  Once you have the generated code, you can create a web service client by simply extending the <code>WebServiceGatewaySupport</code> class and coding your operations.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What handles the mapping of XML to Java and vice versa?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1562415051531" name="898250" id="a1562415051531">
+        <label for="a1562415051531"><p>Jackson</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1562415074357" name="898250" id="a1562415074357">
+        <label for="a1562415074357"><p>XSD</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1562415075029" name="898250" id="a1562415075029">
+        <label for="a1562415075029"><p>WSDL</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1562415075653" name="898250" id="a1562415075653">
+        <label for="a1562415075653"><p>JAXB</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    JAXB
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Consuming SOAP</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>A REST API cannot consume data coming from a SOAP API.</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1562865453543" name="899858" id="a1562865453543">
+        <label for="a1562865453543"><p>True</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1562865480877" name="899858" id="a1562865480877">
+        <label for="a1562865480877"><p>False</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    False
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Case Study WSDL.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. SOAP &amp; Spring Web Services')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

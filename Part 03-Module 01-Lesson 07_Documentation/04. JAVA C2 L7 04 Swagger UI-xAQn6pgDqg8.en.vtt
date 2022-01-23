@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.879 --> 00:00:04.740
+Let's review swagger UI.
+
+00:00:04.740 --> 00:00:07.740
+Dynamically generated documentation from a swagger
+
+00:00:07.740 --> 00:00:11.160
+compliant API is displayed in the swagger UI.
+
+00:00:11.160 --> 00:00:13.214
+Which consists of HTML,
+
+00:00:13.214 --> 00:00:15.750
+JavaScript, and CSS files.
+
+00:00:15.750 --> 00:00:21.990
+The documentation files are bundled by swagger UI to display the API in a web browser.
+
+00:00:21.989 --> 00:00:27.839
+Besides rendering documentation, swagger UI allows other API developers or
+
+00:00:27.839 --> 00:00:29.550
+consumers to interact with
+
+00:00:29.550 --> 00:00:34.980
+the API resources without having any of the implementation logic in place.
+
+00:00:34.979 --> 00:00:38.859
+So it's a great way to test APIs.
+

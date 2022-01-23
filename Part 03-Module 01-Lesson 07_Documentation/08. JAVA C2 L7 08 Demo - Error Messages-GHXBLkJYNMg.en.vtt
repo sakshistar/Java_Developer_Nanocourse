@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.089 --> 00:00:08.324
+Swagger allows globally overriding response messages of HTTP methods.
+
+00:00:08.324 --> 00:00:12.719
+So springfox will provide default messages for certain error codes.
+
+00:00:12.720 --> 00:00:15.240
+For example, 201 created,
+
+00:00:15.240 --> 00:00:21.449
+204 no content as well as several 400 responses like 404 not found.
+
+00:00:21.449 --> 00:00:23.280
+But there may be cases when
+
+00:00:23.280 --> 00:00:27.225
+the default response messages don't really apply for your API.
+
+00:00:27.225 --> 00:00:30.929
+So you can turn off default response messages and define
+
+00:00:30.929 --> 00:00:34.634
+your own using the add API responses annotation.
+
+00:00:34.634 --> 00:00:37.189
+So let's look at this configuration file.
+
+00:00:37.189 --> 00:00:42.530
+The first step is to turn off the default responses here on line 27.
+
+00:00:42.530 --> 00:00:46.969
+So I'm saying use default response messages and I'm passing and false.
+
+00:00:46.969 --> 00:00:49.699
+So that turns off the default responses.
+
+00:00:49.700 --> 00:00:53.395
+Now, I have to navigate to the location controller that's
+
+00:00:53.395 --> 00:00:59.540
+LocationController.Java and this is where I add my own custom response messages.
+
+00:00:59.539 --> 00:01:04.504
+So notice here at the controller level on line 17 through 21,
+
+00:01:04.504 --> 00:01:06.859
+I'm adding in custom messages.
+
+00:01:06.859 --> 00:01:10.010
+So for 400 error message,
+
+00:01:10.010 --> 00:01:12.030
+I'm saying this is a bad request,
+
+00:01:12.030 --> 00:01:16.165
+please follow the API documentation for the proper request format.
+
+00:01:16.165 --> 00:01:18.470
+I'm doing the same thing for 401.
+
+00:01:18.469 --> 00:01:21.859
+I'm providing a custom error message and for 500,
+
+00:01:21.859 --> 00:01:24.290
+I'm providing a custom error message.
+
+00:01:24.290 --> 00:01:27.245
+So now let's navigate to the swagger UI.
+
+00:01:27.245 --> 00:01:30.605
+I've already deployed the application and it's up and running.
+
+00:01:30.605 --> 00:01:32.750
+So here's the swagger UI.
+
+00:01:32.750 --> 00:01:38.435
+Let's look at our location controller and let's click on this operation.
+
+00:01:38.435 --> 00:01:41.629
+Now notice along with the 200 code,
+
+00:01:41.629 --> 00:01:48.379
+we have the three custom responses that I've provided for 400, 401, and 500.
+
+00:01:48.379 --> 00:01:54.329
+So this is a look at how you can customize error messages coming from your APIs.
+

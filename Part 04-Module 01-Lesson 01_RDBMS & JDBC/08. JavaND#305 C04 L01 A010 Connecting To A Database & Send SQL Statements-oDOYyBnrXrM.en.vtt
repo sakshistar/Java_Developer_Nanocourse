@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.960
+Let's see how we can use Driver Manager to connect to the database.
+
+00:00:04.960 --> 00:00:08.515
+This is a simple class with a main method.
+
+00:00:08.515 --> 00:00:11.440
+The get connection method establishes
+
+00:00:11.439 --> 00:00:15.535
+a database connection and it requires a database URL.
+
+00:00:15.535 --> 00:00:17.589
+The database URL contains
+
+00:00:17.589 --> 00:00:22.464
+all the relevant information necessary to establish a connection.
+
+00:00:22.464 --> 00:00:27.515
+First, it specifies what type of database that we're connecting to.
+
+00:00:27.515 --> 00:00:32.145
+MySQL, where the database server is located.
+
+00:00:32.145 --> 00:00:37.330
+Localhost, if the server is running on a port other than the default port,
+
+00:00:37.329 --> 00:00:40.254
+you would specify the port number here.
+
+00:00:40.255 --> 00:00:43.770
+The database we are connecting to Course 3.
+
+00:00:43.770 --> 00:00:47.990
+It also specifies the username and the password.
+
+00:00:47.990 --> 00:00:51.800
+Using the database type the driver manager selects
+
+00:00:51.799 --> 00:00:56.309
+the appropriate driver from the class bath and obtains a connection.
+
+00:00:56.570 --> 00:00:59.340
+An important thing to note,
+
+00:00:59.340 --> 00:01:03.665
+connection is wrapped in a try with resources block.
+
+00:01:03.664 --> 00:01:07.189
+So it's closed once the block exists.
+
+00:01:07.189 --> 00:01:11.319
+Connections must be closed after use.
+
+00:01:11.319 --> 00:01:15.279
+Let's run this class to connect to MySQL.
+
+00:01:17.239 --> 00:01:19.530
+Connected to MySQL.
+
+00:01:19.530 --> 00:01:23.570
+Nice. We now have a connection to the MySQL database using
+
+00:01:23.569 --> 00:01:29.239
+the connection object let's create a statement to send SQL queries to the database.
+
+00:01:29.239 --> 00:01:32.554
+The create statement creates a statement object.
+
+00:01:32.555 --> 00:01:38.210
+The execute query sends the SQL query to the database and returns the results.
+
+00:01:38.209 --> 00:01:41.599
+Note that the statement object is also wrapped in
+
+00:01:41.599 --> 00:01:46.669
+a try-with-resources block since it must be closed after use.
+
+00:01:46.670 --> 00:01:51.150
+Let's run this class to see if the query is executed.
+
+00:01:54.939 --> 00:01:59.554
+It does but we're not using the results of the query.
+
+00:01:59.555 --> 00:02:02.370
+Let's do that in the next video.
+

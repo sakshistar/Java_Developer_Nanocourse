@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.110 --> 00:00:06.495
+As a developer, it is essential that you'd write automated tests for your code.
+
+00:00:06.495 --> 00:00:09.345
+Persistence code is no exception.
+
+00:00:09.345 --> 00:00:13.230
+However, writing tests for persistence layer is more
+
+00:00:13.230 --> 00:00:17.760
+cumbersome since the database needs to be managed as well.
+
+00:00:17.760 --> 00:00:21.600
+Thus need to run in isolation from other test.
+
+00:00:21.600 --> 00:00:26.040
+It also needs to manipulate data without affecting other tests.
+
+00:00:26.039 --> 00:00:32.344
+The database needs to be left at the same state before and after the test.
+
+00:00:32.344 --> 00:00:35.089
+If the test is running in a database server,
+
+00:00:35.090 --> 00:00:38.345
+it is harder to clean up after the test.
+
+00:00:38.344 --> 00:00:44.734
+The developer needs to be meticulous in rolling back every action that tests did.
+
+00:00:44.734 --> 00:00:47.000
+That sounds complicated.
+
+00:00:47.000 --> 00:00:53.469
+What if you have a database that you can create and destroy at will?
+
+00:00:53.469 --> 00:01:02.344
+Enter H2, an in-memory relational database that runs in the same process as your test.
+
+00:01:02.344 --> 00:01:07.099
+It is very typical for a test to create a H2 database,
+
+00:01:07.099 --> 00:01:09.814
+add some tables, run its fixtures,
+
+00:01:09.814 --> 00:01:13.399
+do some assertions, and destroyed at the end.
+
+00:01:13.400 --> 00:01:16.670
+That's a lot of code for one test.
+
+00:01:16.670 --> 00:01:18.379
+Fear not.
+
+00:01:18.379 --> 00:01:22.640
+The spring test framework makes it easy to write persistent tests
+
+00:01:22.640 --> 00:01:27.710
+by eliminating all the boilerplate necessary to manage the database.
+
+00:01:27.709 --> 00:01:35.349
+Do read the next section to learn how to set up and run a springboard persistence test.
+

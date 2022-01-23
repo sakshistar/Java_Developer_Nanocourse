@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.080 --> 00:00:04.575
+Welcome to Lesson 2, Java Persistence API.
+
+00:00:04.575 --> 00:00:09.060
+In the last lesson, we learned about JDBC. It's simple.
+
+00:00:09.060 --> 00:00:11.115
+You obtain a connection,
+
+00:00:11.115 --> 00:00:15.105
+send some SQL statements and process the results.
+
+00:00:15.105 --> 00:00:17.609
+The last step, process the results,
+
+00:00:17.609 --> 00:00:21.015
+its complexity varies depending on the application.
+
+00:00:21.015 --> 00:00:24.690
+Some applications just show the data from the DB in
+
+00:00:24.690 --> 00:00:28.890
+a UI but some do complex processing on the retrieved data.
+
+00:00:28.890 --> 00:00:31.935
+You might be wondering why you need to learn
+
+00:00:31.934 --> 00:00:35.115
+another API to work with the relational database.
+
+00:00:35.115 --> 00:00:36.885
+Before I answer that question,
+
+00:00:36.884 --> 00:00:40.125
+let's look at the orders example from the last lesson.
+
+00:00:40.125 --> 00:00:45.494
+We have two tables, Orders and Order_Item.
+
+00:00:45.494 --> 00:00:49.789
+Order_Item is related to others using a foreign key.
+
+00:00:49.789 --> 00:00:54.685
+Let's say the list of orders need to be shown in a UI.
+
+00:00:54.685 --> 00:00:59.135
+These tables would be represented in Java like this,
+
+00:00:59.134 --> 00:01:04.789
+a class for Order and a class for OrderItem.
+
+00:01:04.790 --> 00:01:08.870
+The fields of the class mapped to the columns of the table.
+
+00:01:08.870 --> 00:01:11.900
+Java being an object oriented language,
+
+00:01:11.900 --> 00:01:16.609
+the fundamental way to organize data is through objects.
+
+00:01:16.609 --> 00:01:19.629
+In order to populate the list of orders,
+
+00:01:19.629 --> 00:01:23.134
+you need to write a select query to get the list of orders,
+
+00:01:23.135 --> 00:01:27.859
+and another select to get the list of order items for all the orders.
+
+00:01:27.859 --> 00:01:34.129
+Not only that, the results of those queries need to be iterated to create Order,
+
+00:01:34.129 --> 00:01:36.819
+Order_Item and then link them.
+
+00:01:36.819 --> 00:01:39.044
+if the customer places an order,
+
+00:01:39.045 --> 00:01:44.105
+then Order and Order_Items need to be translated to insert queries.
+
+00:01:44.105 --> 00:01:50.195
+That's a lot of code for something as basic as creating and listing orders.
+
+00:01:50.194 --> 00:01:52.939
+Instead of translating objects to SQL,
+
+00:01:52.939 --> 00:01:57.274
+wouldn't it be nice just to read and save objects?
+
+00:01:57.275 --> 00:02:02.000
+Now, I'll answer the question of why GPA.
+
+00:02:02.000 --> 00:02:06.079
+Java persistence API allows you to work directly
+
+00:02:06.079 --> 00:02:10.039
+with Java objects and translates them to relational data model.
+
+00:02:10.039 --> 00:02:16.959
+This concept of mapping objects to relational tables is called Object Relational Mapping.
+
+00:02:16.960 --> 00:02:23.235
+In this lesson, you will learn how to use JPA to present and load objects.
+
+00:02:23.235 --> 00:02:29.090
+Then, you'll create relationships between objects and manage them using JPA.
+
+00:02:29.090 --> 00:02:33.840
+Next, you will write queries using the JPA Query Language.
+
+00:02:33.840 --> 00:02:36.930
+Then, you'll use Spring Data to reduce
+
+00:02:36.930 --> 00:02:42.330
+boiler plate code and seamlessly integrate your persistence layer into the Spring Stack.
+
+00:02:42.330 --> 00:02:47.765
+Finally, you will test your JPA code using Spring Test framework.
+
+00:02:47.764 --> 00:02:50.429
+Let's get on with the lesson.
+

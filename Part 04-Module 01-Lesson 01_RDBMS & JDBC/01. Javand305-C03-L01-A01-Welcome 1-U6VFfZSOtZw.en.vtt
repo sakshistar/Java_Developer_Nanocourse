@@ -1,0 +1,157 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.764
+Hi. Welcome to course three, Datastores and persistence.
+
+00:00:04.764 --> 00:00:08.455
+My name is [inaudible] , I am a software engineer at Netflix.
+
+00:00:08.455 --> 00:00:10.120
+For the past 15 years,
+
+00:00:10.119 --> 00:00:14.064
+I've built many different kinds of applications using Java.
+
+00:00:14.064 --> 00:00:17.394
+It is my pleasure to be your instructor for this course.
+
+00:00:17.394 --> 00:00:21.219
+Today, I'm going to be teaching you how to choose a Datastore
+
+00:00:21.219 --> 00:00:26.059
+and use it to build the persistence layer for your Java applications.
+
+00:00:26.879 --> 00:00:32.109
+Data persistence is an essential component of every application.
+
+00:00:32.109 --> 00:00:36.954
+Some applications are built just to manage certain types of data.
+
+00:00:36.954 --> 00:00:40.420
+Choosing the right Datastore for your applications is one of
+
+00:00:40.420 --> 00:00:44.545
+the most important decisions that you will make as a developer.
+
+00:00:44.545 --> 00:00:49.655
+For some applications, the Datastore drives the design and architecture.
+
+00:00:49.655 --> 00:00:55.804
+In this course, you're going to learn about both relational and non-relational databases.
+
+00:00:55.804 --> 00:01:01.015
+Non-relational databases are commonly known as NoSQL databases,
+
+00:01:01.015 --> 00:01:05.060
+relational databases best-fit applications where the structure
+
+00:01:05.060 --> 00:01:09.245
+of data is known beforehand and doesn't change often.
+
+00:01:09.245 --> 00:01:12.500
+Non-relational databases on the other hand are suited for
+
+00:01:12.500 --> 00:01:15.489
+applications that deal with unstructured data.
+
+00:01:15.489 --> 00:01:19.129
+There are various other differences between these databases,
+
+00:01:19.129 --> 00:01:24.379
+but this is one of the primary reasons developers choose one or the other.
+
+00:01:24.379 --> 00:01:28.054
+This lesson focuses on relational databases.
+
+00:01:28.055 --> 00:01:31.140
+There are many relational databases in the market.
+
+00:01:31.140 --> 00:01:34.200
+For this course, we will be using MySQL,
+
+00:01:34.200 --> 00:01:38.870
+one of the most popular and widely used relational database.
+
+00:01:38.870 --> 00:01:41.255
+Like most other relational databases,
+
+00:01:41.254 --> 00:01:46.993
+MySQL uses the structured query language or SQL to define,
+
+00:01:46.993 --> 00:01:50.219
+update, and query the database.
+
+00:01:50.219 --> 00:01:53.944
+You will install MySQL in your local workstation
+
+00:01:53.944 --> 00:01:57.589
+and set up a database that will be used throughout this course.
+
+00:01:57.590 --> 00:02:01.829
+You will also learn basic SQL statements to perform,
+
+00:02:01.829 --> 00:02:06.599
+create, read, update, and delete operations.
+
+00:02:06.599 --> 00:02:12.794
+Note that teaching all the features of MySQL is beyond the boundaries of this course.
+
+00:02:12.794 --> 00:02:15.789
+You will learn just enough features to use
+
+00:02:15.789 --> 00:02:18.819
+MySQL for your application's persistence layer.
+
+00:02:18.819 --> 00:02:22.569
+Next, you will write Java programs that interact with
+
+00:02:22.569 --> 00:02:27.414
+MySQL using an API called Java database connectivity,
+
+00:02:27.414 --> 00:02:30.429
+more commonly referred as JDBC.
+
+00:02:30.430 --> 00:02:34.000
+You will use JDBC to connect to MySQL,
+
+00:02:34.000 --> 00:02:36.205
+send SQL statements to it,
+
+00:02:36.205 --> 00:02:39.250
+and processes the results of those statements.
+
+00:02:39.250 --> 00:02:41.169
+Later in the lesson,
+
+00:02:41.169 --> 00:02:45.479
+you will learn how JDBC makes it easy to switch to a different database.
+
+00:02:45.479 --> 00:02:49.049
+A lot of the code that you will write can be used as
+
+00:02:49.050 --> 00:02:53.700
+is to interact with the different database like Postgres.
+
+00:02:53.830 --> 00:03:00.844
+Next, you will get introduced to database migrations and why they are important.
+
+00:03:00.844 --> 00:03:07.175
+You will use a library called flyway to set up and run migrations.
+
+00:03:07.175 --> 00:03:09.469
+Last but not least,
+
+00:03:09.469 --> 00:03:12.770
+we'll be using Spring Boot as our application framework.
+
+00:03:12.770 --> 00:03:17.510
+All of the glucode necessary for a Spring Boot application will be provided,
+
+00:03:17.509 --> 00:03:21.949
+and you will only write the database interaction portion of the application.
+
+00:03:21.949 --> 00:03:27.250
+We'll also use Maven to assist us in compiling.
+

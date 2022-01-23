@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.160
+Congratulations, you finish the last lesson of this course.
+
+00:00:05.160 --> 00:00:08.175
+Let's recap what we have learned in this lesson.
+
+00:00:08.175 --> 00:00:09.915
+You use the Mongo driver,
+
+00:00:09.914 --> 00:00:13.125
+to do basic, read, and update operations.
+
+00:00:13.125 --> 00:00:16.050
+You created spring data repositories and
+
+00:00:16.050 --> 00:00:19.900
+road test for them using the Spring Test Framework.
+
+00:00:19.899 --> 00:00:24.079
+Throughout this course, you have learned many abstractions.
+
+00:00:24.079 --> 00:00:27.250
+For relational databases, you use JDBC,
+
+00:00:27.250 --> 00:00:30.120
+the GPA, and Spring Data GPA.
+
+00:00:30.120 --> 00:00:35.570
+For MongoDB, you use the MongoDB Driver and Spring Data MongoDB.
+
+00:00:35.570 --> 00:00:40.340
+As a developer, these abstractions make your life easier but
+
+00:00:40.340 --> 00:00:46.100
+that is no reason to skip the underlying concepts that support these abstractions.
+
+00:00:46.100 --> 00:00:50.000
+Understanding the fundamentals makes you a better developer
+
+00:00:50.000 --> 00:00:54.200
+and allows you to learn newer abstractions faster.
+
+00:00:54.200 --> 00:00:59.980
+Congratulations again on completing the course, and happy learning.
+

@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.770 --> 00:00:03.480
+Let's talk about testing.
+
+00:00:03.480 --> 00:00:08.220
+Testing gives you confidence that your application is working when you make changes.
+
+00:00:08.220 --> 00:00:11.610
+So you'll want to introduce automated testing.
+
+00:00:11.609 --> 00:00:16.875
+First, add Spring tests as a dependency to your palm file in the test scope.
+
+00:00:16.875 --> 00:00:22.934
+Spring Boot starter tests imports both Spring Boot test modules as well as JUnit,
+
+00:00:22.934 --> 00:00:28.570
+AssertJ, Hamcrest, and another of other useful libraries.
+

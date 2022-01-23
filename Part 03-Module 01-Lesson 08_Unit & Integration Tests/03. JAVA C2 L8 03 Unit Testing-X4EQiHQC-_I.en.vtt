@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.920 --> 00:00:05.778
+We will first look at unit testing REST APIs using JUnit,
+
+00:00:05.778 --> 00:00:07.790
+Mockito, and spring tests,
+
+00:00:07.790 --> 00:00:10.330
+which is also known as MackMVC.
+
+00:00:10.330 --> 00:00:15.900
+Writing unit tests using JUnit allows you to test individual units of source code.
+
+00:00:15.900 --> 00:00:20.070
+JUnit is by far the most popular Unit Testing Framework.
+
+00:00:20.070 --> 00:00:26.219
+Mockito is a great mocking framework which we'll use to provide data for our JUnit tests.
+
+00:00:26.219 --> 00:00:30.000
+Spring also has the @MockBean annotation,
+
+00:00:30.000 --> 00:00:33.149
+which works well with the Mockito Library by allowing
+
+00:00:33.149 --> 00:00:37.390
+you to mock the dependent beings like the service layer being.
+
+00:00:37.520 --> 00:00:41.970
+@WebMVCTtest is an annotation used for controller layer unit testing,
+
+00:00:41.969 --> 00:00:45.530
+and is often used to test one controller class at a time,
+
+00:00:45.530 --> 00:00:50.109
+and works in combination with Mockito to mock the dependencies.
+
+00:00:50.109 --> 00:00:53.789
+@WebMVCTest scans only the controllers.
+
+00:00:53.789 --> 00:00:59.825
+So @controllers, @RestControllers, and we'll not load the full application contexts.
+
+00:00:59.825 --> 00:01:01.280
+In our case study,
+
+00:01:01.280 --> 00:01:04.174
+only the location controller will be scanned.
+
+00:01:04.174 --> 00:01:06.424
+If your controller has dependency on
+
+00:01:06.424 --> 00:01:09.664
+other beans for example a bean from the service layer,
+
+00:01:09.665 --> 00:01:15.020
+the test will not run until either you load the bin yourself or provide a mock for it.
+
+00:01:15.019 --> 00:01:18.700
+This is where the @MockBean annotation comes into play.
+
+00:01:18.700 --> 00:01:24.439
+Typically, you will need to provide the beans manually by mocking those objects.
+
+00:01:24.439 --> 00:01:28.039
+@WebMVCTest speeds up testing by only
+
+00:01:28.040 --> 00:01:31.460
+loading a small portion of your app for unit testing,
+
+00:01:31.459 --> 00:01:33.929
+just the controller layer.
+

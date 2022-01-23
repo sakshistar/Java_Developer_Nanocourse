@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.535
+We've seen the fine method in entity manager that loads an entity from the database.
+
+00:00:05.535 --> 00:00:12.179
+The method is very limited since it can only load an entity using its primary key.
+
+00:00:12.179 --> 00:00:18.884
+JPQL is a query language that operates on entities stored in a relation database.
+
+00:00:18.885 --> 00:00:21.490
+It is very similar to SQL,
+
+00:00:21.489 --> 00:00:27.754
+but the important point to remember is that it operates on entities, not on tables.
+
+00:00:27.754 --> 00:00:30.614
+The database still uses SQL,
+
+00:00:30.614 --> 00:00:38.045
+Hibernate or any other JPA implementation needs to transform JPQL to SQL.
+
+00:00:38.045 --> 00:00:43.075
+Here's a simple query to load orders by customer name.
+
+00:00:43.075 --> 00:00:46.125
+This is very similar to SQL,
+
+00:00:46.125 --> 00:00:51.600
+but notice that it queries JPA managed entities not the tables.
+
+00:00:51.600 --> 00:00:56.645
+Using JPQL also gives you database portability.
+
+00:00:56.645 --> 00:01:01.080
+Since the queries are translated to SQL by the JPA implementation,
+
+00:01:01.079 --> 00:01:03.949
+it is the implementations responsibility to
+
+00:01:03.950 --> 00:01:07.534
+generate the right SQL dialect for the database.
+
+00:01:07.534 --> 00:01:13.459
+But practically speaking, this portability is rarely considered an advantage.
+
+00:01:13.459 --> 00:01:18.259
+Switching data stores is expensive in both time and money,
+
+00:01:18.260 --> 00:01:20.965
+and doesn't happen very often.
+
+00:01:20.965 --> 00:01:25.730
+JPQL does not support all the features of SQL.
+
+00:01:25.730 --> 00:01:29.255
+For those cases when you really want to use SQL,
+
+00:01:29.254 --> 00:01:31.729
+JPA lets you do so.
+
+00:01:31.730 --> 00:01:37.150
+An extensive coverage of JPQL is done in the following section.
+

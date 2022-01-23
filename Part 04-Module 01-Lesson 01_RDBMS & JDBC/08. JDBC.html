@@ -1,0 +1,488 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JDBC</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>RDBMS &amp; JDBC</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Welcome.html">01. Welcome</a>
+    </li>
+    <li class="">
+      <a href="02. RDBMS.html">02. RDBMS</a>
+    </li>
+    <li class="">
+      <a href="03. MySQL.html">03. MySQL</a>
+    </li>
+    <li class="">
+      <a href="04. MySQL Datatypes.html">04. MySQL Datatypes</a>
+    </li>
+    <li class="">
+      <a href="05. Working with tables.html">05. Working with tables</a>
+    </li>
+    <li class="">
+      <a href="06. Working with Foreign Keys.html">06. Working with Foreign Keys</a>
+    </li>
+    <li class="">
+      <a href="07. Working with rows.html">07. Working with rows</a>
+    </li>
+    <li class="">
+      <a href="08. JDBC.html">08. JDBC</a>
+    </li>
+    <li class="">
+      <a href="09. Database Migration.html">09. Database Migration</a>
+    </li>
+    <li class="">
+      <a href="10. Recap.html">10. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">08. JDBC</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>JavaND#305 C04 L01 A08 JDBC</p></h3>
+  <video controls>
+  <source src="08. JavaND#305 C04 L01 A08 JDBC-fa6_DKg-1-0.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. JavaND#305 C04 L01 A08 JDBC-fa6_DKg-1-0.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>JavaND#305 C04 L01 A010 Connecting To A Database &amp; Send SQL Statements</p></h3>
+  <video controls>
+  <source src="08. JavaND#305 C04 L01 A010 Connecting To A Database &amp; Send SQL Statements-oDOYyBnrXrM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. JavaND#305 C04 L01 A010 Connecting To A Database &amp; Send SQL Statements-oDOYyBnrXrM.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is the DriverManager class used for?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk1" name="864385" id="rbk1">
+      <label for="rbk1"><p>It is used for sending SQL statements to the database</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk2" name="864385" id="rbk2">
+      <label for="rbk2"><p>It locates a driver based on the JDBC URI and creates a connection.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk3" name="864385" id="rbk3">
+      <label for="rbk3"><p>DriverManager is an implementation detail of JDBC and it should not be used by the application code.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>It locates a driver based on the JDBC URI and creates a connection.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>JDBC API provides 3 different interfaces to execute the different types of SQL queries. They are,<br />
+<a href="https://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html" target="_blank">Statement</a> –  Used to execute normal SQL queries.<br />
+<a href="https://docs.oracle.com/javase/8/docs/api/java/sql/PreparedStatement.html" target="_blank">PreparedStatement</a> –  Used to execute parameterized SQL queries.<br />
+<a href="https://docs.oracle.com/javase/8/docs/api/java/sql/CallableStatement.html" target="_blank">CallableStatement</a> –  Used to execute stored procedures.</p>
+<h4 id="statement">Statement</h4>
+<p>Statement is used to send non parameterized  SQL statements to the database. Statement interface is preferred for executing DDL statements, since they are typically executed only once. This does not mean one should not use Statement for other SQL queries. If the statement is executed only once or very sparingly during the lifetime of an application, Statement is a good choice.  </p>
+<p>Here’s an example</p>
+<pre><code class="java language-java">//Statement is created from the JDBC Connection object 
+Statement stmt = con.createStatement();
+
+//A sample DDL statement execution 
+stmt.executeUpdate("CREATE TABLE EMPLOYEE (EMP_ID  NUMBER NOT NULL, EMP_NAME VARCHAR)");</code></pre>
+<h4 id="preparedstatement">PreparedStatement</h4>
+<p>PreparedStatement can be used to send parameterized SQL statements to the database, although parameters are not mandatory.  Since a PreparedStatement is a pre-compiled by the database, it saves the database from regenerating the query plan for each execution of the PreparedStatement. PreparedStatement is the most common and preferred way of executing SQL statements in JDBC. Statement is typically frowned upon. PreparedStatement is used to execute dynamic or parameterized SQL queries. PreparedStatement extends Statement interface. You can pass the parameters to SQL query at run time using this interface. It is recommended to use PreparedStatement if you are executing a particular SQL query multiple times. </p>
+<pre><code class="java language-java">// Use the prepareStatement method to create a PreparedStatement 
+PreparedStatement pstmt = con.prepareStatement("update EMPLOYEE set EMP_NAME = ? where EMP_ID = ?");
+
+//Setting values to place holders using setter methods of PreparedStatement object
+pstmt.setString(1, "JaneDoe");   //Assigns "JaneDoe" to first place holder
+pstmt.setInt(2, 111);     //Assigns "111" to second place holder
+
+//Execute PreparedStatement
+pstmt.executeUpdate();</code></pre>
+<p>Instead of indexed placeholders, named placeholders or more commonly <strong>named parameters</strong> can be used. Here’s an example,</p>
+<pre><code class="java language-java">// Use the prepareStatement method to create a PreparedStatement
+PreparedStatement pstmt = con.prepareStatement("update EMPLOYEE set EMP_NAME = :name where EMP_ID = :id");
+
+//Setting values to place holders using setter methods of PreparedStatement object
+pstmt.setString(“name”, "JaneDoe");   //Assigns "JaneDoe" to the name parameter
+pstmt.setInt(“id”, 111);     //Assigns "111" to the id parameter
+
+//Execute PreparedStatement
+pstmt.executeUpdate();</code></pre>
+<h4 id="callablestatement">CallableStatement</h4>
+<p>CallableStatement is used to execute stored procedures. A stored procedure is a group of one or more  SQL statements stored in the database as a procedure or function. In SQL, stored procedures are invoked using the <code>CALL</code> statement, hence the name CallableStatement.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Check all that is true for PreparedStatement.</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="864390" id="rbk1">
+        <label for="rbk1"><p>It can not execute parameterized SQL queries.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="864390" id="rbk2">
+        <label for="rbk2"><p>It is preferred for executing the same SQL query multiple times.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="864390" id="rbk3">
+        <label for="rbk3"><p>PreparedStatement extends from Statement</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="864390" id="rbk4">
+        <label for="rbk4"><p>PreparedStatement can not be used for executing for DDL statements</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    PreparedStatement extends from Statement
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about CallableStatement?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="864393" id="rbk1">
+        <label for="rbk1"><p>It is used for executing DDL statements.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="864393" id="rbk2">
+        <label for="rbk2"><p>It is used to call stored procedures in the database.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="864393" id="rbk3">
+        <label for="rbk3"><p>CallableStatement is not a sub-interface of Statement.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="864393" id="rbk4">
+        <label for="rbk4"><p>All of the above</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    It is used to call stored procedures in the database.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>JavaND#305 C04 L01 A011 Processing Results</p></h3>
+  <video controls>
+  <source src="08. JavaND#305 C04 L01 A011 Processing Results-RS193aij3GA.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. JavaND#305 C04 L01 A011 Processing Results-RS193aij3GA.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of these statements is true about ResultSet?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="864395" id="rbk1">
+        <label for="rbk1"><p>ResultSet contains the results of a SQL query and results can be iterated as many times as needed.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="864395" id="rbk2">
+        <label for="rbk2"><p>ResultSet maintains a cursor pointing to the results of the SQL query.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="864395" id="rbk3">
+        <label for="rbk3"><p>ResultSet is used to send SQL statements to the database.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="864395" id="rbk4">
+        <label for="rbk4"><p>All of the above</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    ResultSet maintains a cursor pointing to the results of the SQL query.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>JDBC Transaction let you control how and when a transaction should commit into database.</p>
+<pre><code>//transaction block start
+
+//SQL insert statement
+//SQL update statement 
+//SQL delete statement
+
+//transaction block end</code></pre>
+<p>See below two examples to understand how JDBC transaction works.</p>
+<h4 id="without-transaction">Without Transaction</h4>
+<p>By default, data will be committed into database when executeUpdate() is called.</p>
+<pre><code class="java language-java">String insertTableSQL = "INSERT INTO DBUSER"
+            + "(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) VALUES"
+            + "(?,?,?,?)";
+
+String updateTableSQL = "UPDATE DBUSER SET USERNAME =? "
+            + "WHERE USER_ID = ?";
+
+ps = getConnection().prepareStatement(insertTableSQL);
+ps.setInt(1, 100);
+ps.setString(2, "jdoe");
+ps.setString(3, "app");
+ps.setTimestamp(4, getCurrentTimeStamp());
+ps.executeUpdate(); // data is committed once this method returns.
+
+psu = getConnection().prepareStatement(updateTableSQL);
+psu.setString(1, "A very very long string that will cause an error"); 
+psu.setInt(2, 999);
+
+psu.executeUpdate(); //Error, value too big</code></pre>
+<pre><code>                                  </code></pre>
+<p>When this code is executed, the USER_ID = 100 is inserted but the username is not updated.</p>
+<h4 id="transaction">Transaction</h4>
+<p>To put this in a transaction, you can use<br />
+<code>connection.setAutoCommit(false)</code> to start a transaction block.<br />
+<code>connection.commit()</code> to successfully commit or end a transaction block.<br />
+<code>connection.rollback()</code> to rollback the transaction.</p>
+<pre><code class="sql language-sql">dbConnection.setAutoCommit(false); //transaction block start
+
+String insertTableSQL = "INSERT INTO DBUSER"
+            + "(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) VALUES"
+            + "(?,?,?,?)";
+
+String updateTableSQL = "UPDATE DBUSER SET USERNAME =? "
+            + "WHERE USER_ID = ?";
+
+ps = getConnection().prepareStatement(insertTableSQL);
+ps.setInt(1, 100);
+ps.setString(2, "jdoe");
+ps.setString(3, "app");
+ps.setTimestamp(4, getCurrentTimeStamp());
+ps.executeUpdate(); // this UPDATE is not committed
+
+psu = dbConnection.prepareStatement(updateTableSQL);
+psu.setString(1, "A very very long string that will cause an error"); 
+psu.setInt(2, 999);
+psu.executeUpdate(); //Error, rollback, including the first insert statement.
+
+dbConnection.commit(); //transaction block end</code></pre>
+<p>When <code>executeUpdate()</code> errors both the INSERT and UPDATE are rolled back.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Check all that is true for PreparedStatement.</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk1" name="900345" id="rbk1">
+      <label for="rbk1"><p>It can not execute parameterized SQL queries.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk2" name="900345" id="rbk2">
+      <label for="rbk2"><p>It is preferred for executing the same SQL query multiple times.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk3" name="900345" id="rbk3">
+      <label for="rbk3"><p>PreparedStatement extends from Statement</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk4" name="900345" id="rbk4">
+      <label for="rbk4"><p>PreparedStatement can not be used for executing for DDL statements</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>It is preferred for executing the same SQL query multiple times.</li>
+      <li>PreparedStatement extends from Statement</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="09. Database Migration.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. JDBC')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

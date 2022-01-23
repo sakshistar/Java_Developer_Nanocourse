@@ -1,0 +1,208 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.610 --> 00:00:04.575
+Let's see this in action.
+
+00:00:04.575 --> 00:00:07.380
+At this point, color on the code found in
+
+00:00:07.379 --> 00:00:10.800
+the course notes section so that you can follow along with me.
+
+00:00:10.800 --> 00:00:14.550
+I've opened the code and I've navigated to the location controller.
+
+00:00:14.550 --> 00:00:19.830
+This code is for the airport locations API that we've seen in previous lessons.
+
+00:00:19.829 --> 00:00:21.989
+There is a location entity,
+
+00:00:21.989 --> 00:00:26.599
+a location repository that communicates with our H2 in memory database,
+
+00:00:26.600 --> 00:00:28.240
+there is a service layer,
+
+00:00:28.239 --> 00:00:30.934
+and lastly this location controller.
+
+00:00:30.934 --> 00:00:33.109
+Let's look at the location controller.
+
+00:00:33.109 --> 00:00:35.534
+If you remember, there are two methods.
+
+00:00:35.534 --> 00:00:38.719
+The first method, getAllLocations is mapped to
+
+00:00:38.719 --> 00:00:44.344
+the location path and returned the list of locations from the H2 in-memory database.
+
+00:00:44.344 --> 00:00:47.600
+The second method is the getLocation method.
+
+00:00:47.600 --> 00:00:51.079
+Notice we parse in an ID for a specific location
+
+00:00:51.079 --> 00:00:54.695
+that we want information on and it's mapped to this path.
+
+00:00:54.695 --> 00:00:59.784
+So let's look at creating a unit test for our location controller.
+
+00:00:59.784 --> 00:01:05.780
+So you can navigate to LocationControllerUnitTest and let's take a look at it.
+
+00:01:05.780 --> 00:01:07.750
+Here on line 19,
+
+00:01:07.750 --> 00:01:11.150
+I'm using the @RunWith annotation and this
+
+00:01:11.150 --> 00:01:14.990
+defines the runner class to be used to run test cases.
+
+00:01:14.989 --> 00:01:17.809
+In this case, I'm using SpringRunner and that's
+
+00:01:17.810 --> 00:01:21.394
+a great choice since I'm using Spring to build this application.
+
+00:01:21.394 --> 00:01:28.414
+Here on line 20 I'm using the web MBC tests and this uses the LocationController,
+
+00:01:28.415 --> 00:01:31.475
+so it's the specific controller that you're trying to test,
+
+00:01:31.474 --> 00:01:32.854
+that's what you parse in.
+
+00:01:32.855 --> 00:01:35.695
+So that's why we're using LocationController here.
+
+00:01:35.694 --> 00:01:39.134
+On line 23 I'm using MockMVC.
+
+00:01:39.135 --> 00:01:43.010
+MockMVC offers a powerful way to quickly test
+
+00:01:43.010 --> 00:01:47.630
+MVC controllers without needing to start a full HTTP server.
+
+00:01:47.629 --> 00:01:53.804
+Now WebMVC tests, auto configures MockMVC for us, that's very helpful.
+
+00:01:53.805 --> 00:01:56.230
+Here on line 26,
+
+00:01:56.230 --> 00:02:01.159
+I'm mocking the location service bean using the @MockBean annotation.
+
+00:02:01.159 --> 00:02:04.549
+Now the @MachBean creates a Mockito Mock of
+
+00:02:04.549 --> 00:02:08.164
+the services which are dependencies for the location controller.
+
+00:02:08.164 --> 00:02:12.125
+Now let's look at the getAllLocations test method.
+
+00:02:12.125 --> 00:02:17.710
+So this method is going to test the getAllLocations method from our controller.
+
+00:02:17.710 --> 00:02:20.055
+Notice here on line 28,
+
+00:02:20.055 --> 00:02:25.115
+I'm using the @Test annotation just to indicate it's a Unit Test.
+
+00:02:25.115 --> 00:02:28.920
+On line 30, I'm using the perform method for
+
+00:02:28.919 --> 00:02:34.684
+MockMVC and this simply simulates an HTTP request to erase controller.
+
+00:02:34.685 --> 00:02:41.659
+If you notice, we're making a get request to this location path for our rest controller.
+
+00:02:41.659 --> 00:02:45.919
+What comes next are what's called Expectations.
+
+00:02:45.919 --> 00:02:52.114
+You can set Expectations on HTTP responses received from the controller class.
+
+00:02:52.115 --> 00:02:53.320
+So in this case,
+
+00:02:53.319 --> 00:02:56.530
+we are expecting the status returned to be okay,
+
+00:02:56.530 --> 00:03:01.199
+we are expecting the content type to be of type APPLICATION_JSON_UTF8,
+
+00:03:01.240 --> 00:03:04.865
+and we are expecting JSON back.
+
+00:03:04.865 --> 00:03:07.010
+Here on line 35,
+
+00:03:07.009 --> 00:03:09.125
+I'm using the verify method.
+
+00:03:09.125 --> 00:03:13.655
+It's simply used to verify the number of times a mock method has been called.
+
+00:03:13.655 --> 00:03:16.819
+Here since I'm mocking the location service,
+
+00:03:16.819 --> 00:03:19.729
+I'm saying I only want it called once and I
+
+00:03:19.729 --> 00:03:23.419
+want the retrieveLocations method to be called.
+
+00:03:23.419 --> 00:03:26.584
+So that's our unit tests. Let's test it.
+
+00:03:26.585 --> 00:03:31.070
+Click this green arrow and do run getAllLocations.
+
+00:03:31.069 --> 00:03:35.729
+Let me expand this so that you can see what's happening,
+
+00:03:35.979 --> 00:03:40.340
+and we have a green check mark saying the test passed.
+
+00:03:40.340 --> 00:03:45.789
+Now let's look at the second test case for our getLocation method,
+
+00:03:45.789 --> 00:03:48.354
+we've annotated it with @Test,
+
+00:03:48.354 --> 00:03:53.000
+we're using the MockMVC perform method to simulate the call,
+
+00:03:53.000 --> 00:03:55.474
+and we're parsing in a location of one.
+
+00:03:55.474 --> 00:03:59.479
+We are verifying that it's called only once and we're
+
+00:03:59.479 --> 00:04:03.530
+calling the retrieve location parsing in the ID of one.
+
+00:04:03.530 --> 00:04:05.944
+So let's execute this test.
+
+00:04:05.944 --> 00:04:09.620
+Here we have another green check saying this test passed.
+
+00:04:09.620 --> 00:04:11.730
+So that's a look at Unit Testing.
+
+00:04:11.729 --> 00:04:14.889
+Now let's talk about Integration Testing.
+

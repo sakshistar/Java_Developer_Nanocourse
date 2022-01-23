@@ -1,0 +1,582 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Java Persistence API (JPA)</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Java Persistence API</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Object Relational Mapping (ORM).html">01. Object Relational Mapping (ORM)</a>
+    </li>
+    <li class="">
+      <a href="02. Java Persistence API (JPA).html">02. Java Persistence API (JPA)</a>
+    </li>
+    <li class="">
+      <a href="03. JPA Querying Entities.html">03. JPA Querying Entities</a>
+    </li>
+    <li class="">
+      <a href="04. Spring Data JPA.html">04. Spring Data JPA</a>
+    </li>
+    <li class="">
+      <a href="05. DB Testing.html">05. DB Testing</a>
+    </li>
+    <li class="">
+      <a href="06. Recap.html">06. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Java Persistence API (JPA)</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>JavaND#305 C03 L02 A02 JPA Introduction</p></h3>
+  <video controls>
+  <source src="02. JavaND#305 C03 L02 A02 JPA Introduction-uExqq5otEVQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. JavaND#305 C03 L02 A02 JPA Introduction-uExqq5otEVQ.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>JPA Entities</p></h3>
+  <div>
+  <h4 id="entities">Entities</h4>
+<p>An entity is a lightweight persistence domain object. Typically, an entity represents a table in a relational database, and each entity instance corresponds to a row in that table. The primary programming artifact of an entity is the entity class, although entities can use helper classes.</p>
+<p>The persistent state of an entity is represented through either persistent fields or persistent properties. These fields or properties use object/relational mapping annotations to map the entities and entity relationships to the relational data in the underlying data store.</p>
+<h4 id="requirements-for-entity-classes">Requirements for Entity Classes</h4>
+<p>An entity class must follow these requirements.</p>
+<p>The class must be annotated with the <em>javax.persistence.Entity</em> annotation.<br />
+The class must have a public or protected, no-argument constructor. The class may have other constructors.<br />
+The class must not be declared final. No methods or persistent instance variables must be declared final.<br />
+Entities may extend both entity and non-entity classes, and non-entity classes may extend entity classes.<br />
+Persistent instance variables must be declared private, protected, or package-private and can be accessed directly only by the entity class’s methods. Clients must access the entity’s state through accessor or business methods.</p>
+<h4 id="persistent-fields">Persistent Fields</h4>
+<p>If the entity class uses persistent fields, the Persistence runtime accesses entity-class instance variables directly. All fields not annotated <em>javax.persistence.Transient</em> or not marked as Java <em>transient</em> will be persisted to the data store. The object/relational mapping annotations must be applied to the instance variables.</p>
+<h4 id="primary-keys-in-entities">Primary Keys in Entities</h4>
+<p>Each entity has a unique object identifier. A customer entity, for example, might be identified by a customer number. The unique identifier, or primary key, enables clients to locate a particular entity instance. Every entity must have a primary key. An entity may have either a simple or a composite primary key.<br />
+Simple primary keys use the <em>javax.persistence.Id</em> annotation to denote the primary key property or field.</p>
+<p>The primary key, or the property or field of a composite primary key, must be one of the following Java language types:<br />
+Java primitive types<br />
+Java primitive wrapper types<br />
+java.lang.String<br />
+java.util.Date<br />
+java.sql.Date<br />
+java.math.BigDecimal<br />
+java.math.BigInteger</p>
+<p>Floating-point types should never be used in primary keys. </p>
+<h4 id="generated-identifiers">Generated Identifiers</h4>
+<p>Primary key values can be automatically generated using the  <a href="https://docs.oracle.com/javaee/7/api/javax/persistence/GeneratedValue.html" target="_blank">@GeneratedValue</a> annotation.</p>
+<p>It supports four generation strategies, <br />
+AUTO<br />
+IDENTITY<br />
+SEQUENCE<br />
+TABLE</p>
+<p>If a value is not specified for the <em>strategy</em> field of the annotation, the default is AUTO.</p>
+<h5 id="auto-generation">AUTO Generation</h5>
+<p>For the default generation type, the persistence provider will determine values based on the type of the primary key attribute. For numeric values, the generation is based on a sequence or table generator.</p>
+<p>Let’s see an example of mapping an entity primary key using AUTO generation strategy:</p>
+<pre><code class="java language-java">@Entity
+public class Order {
+
+    @Id
+    @GeneratedValue
+    private Long orderId;
+
+}</code></pre>
+<p>In this case, the primary key values will be unique at the database level.</p>
+<h5 id="identity-generation">IDENTITY Generation</h5>
+<p>This type of generation relies on the IdentityGenerator which expects values generated by an identity column in the database, meaning they are auto-incremented. If a primary column is set as AUTO_INCREMENT in the table, this strategy can be used.</p>
+<p>To use this generation type, we only need to set the <em>strategy</em> parameter:</p>
+<pre><code class="java language-java">@Entity
+public class Order {
+
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private long orderId;
+
+}</code></pre>
+<h5 id="sequence-generation">SEQUENCE Generation</h5>
+<p>This generator uses sequences if supported by the database or switches to table generation if it doesn’t.</p>
+<p>To customize the sequence name, we can use the <a href="https://github.com/GenericGenerator" target="_blank">@GenericGenerator</a> annotation with<br />
+SequenceStyleGenerator strategy:</p>
+<pre><code class="java language-java">@Entity
+public class Order {
+    @Id
+    @GeneratedValue(generator = "sequence-generator")
+    @GenericGenerator(
+      name = "sequence-generator",
+      strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
+      parameters = {
+        @Parameter(name = "sequence_name", value = "user_sequence"),
+        @Parameter(name = "initial_value", value = "4"),
+        @Parameter(name = "increment_size", value = "1")
+        }
+    )
+    private Long orderId;
+
+
+}</code></pre>
+<p>In this example, an initial value is set for the sequence, which means the primary key generation will start at 4. <strong>The generated values are unique per sequence.</strong> If a sequence name is not specified, Hibernate will re-use the same <em>hibernate_sequence</em> for different types.</p>
+<h5 id="table-generation">TABLE Generation</h5>
+<p>The <em>TableGenerator</em> uses an underlying database table that holds segments of identifier generation values.<br />
+Let’s customize the table name using the <em>@TableGenerator</em> annotation,</p>
+<pre><code class="java language-java">@Entity
+public class Order {
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE,
+      generator = "table-generator")
+    @TableGenerator(name = "table-generator",
+      table = "dep_ids",
+      pkColumnName = "seq_id",
+      valueColumnName = "seq_value")
+    private Long orderId;
+
+}</code></pre>
+<p>In this example, we can see that other attributes such as the <em>pkColumnName</em> and <em>valueColumnName</em> can also be customized.</p>
+<p><strong>All of the four generation types will generate similar values but use different database mechanisms to do so.</strong></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>JPA Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What are the requirements for a class to become an entity? Check all that apply.</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk1" name="899992" id="rbk1">
+      <label for="rbk1"><p>The class must be annotated with the <em>javax.persistence.Entity</em> annotation.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk2" name="899992" id="rbk2">
+      <label for="rbk2"><p>The class must be marked final.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk3" name="899992" id="rbk3">
+      <label for="rbk3"><p>Entities must not extend from other entity or non-entity classes.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk4" name="899992" id="rbk4">
+      <label for="rbk4"><p>The class must have a public or protected, no-argument constructor.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>The class must be annotated with the _javax.persistence.Entity_ annotation.</li>
+      <li>The class must have a public or protected, no-argument constructor.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>JPA Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>How to exclude a field in the entity class from persistence?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899987" id="rbk1">
+        <label for="rbk1"><p>The field should not be annotated.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899987" id="rbk2">
+        <label for="rbk2"><p>The field should be annotated with <a href="https://github.com/Id" target="_blank">@Id</a>.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899987" id="rbk3">
+        <label for="rbk3"><p>The field should be annotated with <a href="https://github.com/Transient" target="_blank">@Transient</a>.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="899987" id="rbk4">
+        <label for="rbk4"><p>The field should not have a getter  &amp; setter.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    The field should be annotated with @Transient.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>JPA Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is the generation strategy to be used when the primary key is set to <em>AUTO_INCREMENT</em>?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899985" id="rbk1">
+        <label for="rbk1"><p>IDENTITY</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899985" id="rbk2">
+        <label for="rbk2"><p>SEQUENCE</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899985" id="rbk3">
+        <label for="rbk3"><p>AUTO_INC</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="899985" id="rbk4">
+        <label for="rbk4"><p>TABLE</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    IDENTITY
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Javand305-C03-L02-A03-Entity-Relationships</p></h3>
+  <video controls>
+  <source src="02. Javand305-C03-L02-A03-Entity-Relationships-l2S1JwcX8s4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. Javand305-C03-L02-A03-Entity-Relationships-l2S1JwcX8s4.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="entity-relationships">Entity Relationships</h4>
+<p>Relationships are of the following types: one-to-one, one-to-many, many-to-one, and many-to-many:</p>
+<p><strong>One-to-one:</strong> Each entity instance is related to a single instance of another entity. For example, to model a sales order, <em>Order</em> and <em>Address</em> would have a one-to-one relationship. One-to-one relationships use the <a href="https://docs.oracle.com/javaee/7/api/javax/persistence/OneToOne.html" target="_blank">javax.persistence.OneToOne</a> annotation on the corresponding persistent property or field.</p>
+<p><strong>One-to-many:</strong> An entity instance can be related to multiple instances of the other entities. A sales order, for example, can have multiple order items. In the order application, <em>Order</em> would have a one-to-many relationship with <em>OrderItem</em>. One-to-many relationships use the <a href="https://docs.oracle.com/javaee/7/api/javax/persistence/OneToMany.html" target="_blank">javax.persistence.OneToMany</a> annotation on the corresponding persistent property or field.</p>
+<p><strong>Many-to-one:</strong> Multiple instances of an entity can be related to a single instance of the other entity. This multiplicity is the opposite of a one-to-many relationship. In the example just mentioned, the relationship to <em>Order</em> from the perspective of <em>OrderItem</em> is many-to-one. Many-to-one relationships use the <a href="https://docs.oracle.com/javaee/7/api/javax/persistence/ManyToOne.html" target="_blank">javax.persistence.ManyToOne</a> annotation on the corresponding persistent property or field.</p>
+<p><strong>Many-to-many:</strong> The entity instances can be related to multiple instances of each other. For example, each college course has many students, and every student may take several courses. Therefore, in an enrollment application, Course and Student would have a many-to-many relationship. Many-to-many relationships use the <a href="https://docs.oracle.com/javaee/7/api/javax/persistence/ManyToMany.html" target="_blank">javax.persistence.ManyToMany</a> annotation on the corresponding persistent property or field.</p>
+<h4 id="direction-in-entity-relationships">Direction in Entity Relationships</h4>
+<p>The direction of a relationship can be either bidirectional or unidirectional. A bidirectional relationship has both an owning side and an inverse side. A unidirectional relationship has only an owning side. The owning side of a relationship determines how the Persistence runtime makes updates to the relationship in the database.</p>
+<h5 id="bidirectional-relationships">Bidirectional Relationships</h5>
+<p>In a bidirectional relationship, each entity has a relationship field or property that refers to the other entity. Through the relationship field or property, an entity class’s code can access its related object. If an entity has a related field, the entity is said to “know” about its related object. For example, if <em>Order</em> knows what <em>OrderItem</em> instances it has and if <em>OrderItem</em> knows what <em>Order</em> it belongs to, they have a bidirectional relationship.<br />
+Bidirectional relationships must follow these rules.<br />
+The inverse side of a bidirectional relationship must refer to its owning side by using the <em>mappedBy</em> element of the <a href="https://github.com/OneToOne" target="_blank">@OneToOne</a>, <a href="https://github.com/OneToMany" target="_blank">@OneToMany</a>, or <a href="https://github.com/ManyToMany" target="_blank">@ManyToMany</a> annotation. The <em>mappedBy</em> element designates the property or field in the entity that is the owner of the relationship.<br />
+The many side of many-to-one bidirectional relationships must not define the <em>mappedBy</em> element. The many side is always the owning side of the relationship.<br />
+For one-to-one bidirectional relationships, the owning side corresponds to the side that contains the corresponding foreign key.<br />
+For many-to-many bidirectional relationships, either side may be the owning side.</p>
+<h5 id="unidirectional-relationships">Unidirectional Relationships</h5>
+<p>In a unidirectional relationship, only one entity has a relationship field or property that refers to the other. For example, <em>OrderItem</em> would have a relationship field that identifies <em>Product</em>, but <em>Product</em> would not have a relationship field or property for <em>OrderItem</em>. In other words, <em>OrderItem</em> knows about <em>Product</em>, but <em>Product</em> doesn’t know which <em>OrderItem</em> instances refer to it.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>How to map a bi-directional One-to-Many relationship?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899990" id="rbk1">
+        <label for="rbk1"><p>One-to-Many and Many-to-one on both sides of the relationship with both of them including the foreign key marking the relationship.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899990" id="rbk2">
+        <label for="rbk2"><p>One-to-Many relationship can not be bidirectional.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899990" id="rbk3">
+        <label for="rbk3"><p>One-to-Many and Many-to-one on both sides of the relationship. Owning side includes the foreign key and the inverse side includes the mappedBy field of the owning entity.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    One-to-Many and Many-to-one on both sides of the relationship. Owning side includes the foreign key and the inverse side includes the mappedBy field of the owning entity.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of these statements is true for a Many-to-Many relationship?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899991" id="rbk1">
+        <label for="rbk1"><p>Many-to-Many can’t be a bidirectional relationship.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899991" id="rbk2">
+        <label for="rbk2"><p>Many-to-Many requires a mapping table.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899991" id="rbk3">
+        <label for="rbk3"><p>The inverse side of a Many-to-Many relationship is marked using <em>mappedBy</em></p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="899991" id="rbk4">
+        <label for="rbk4"><p>All of the above</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Many-to-Many requires a mapping table.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exercise</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Students will be provided starter code that connects to a MySQL database.<br />
+Students will write code using simple <a href="https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html" target="_blank">EntityManager</a> methods persist() and find().</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="97d19345-dec6-440c-a599-f8b82a0c6fee--0">
+        <label for="97d19345-dec6-440c-a599-f8b82a0c6fee--0"><p>persist() persists rows in the table.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="97d19345-dec6-440c-a599-f8b82a0c6fee--1">
+        <label for="97d19345-dec6-440c-a599-f8b82a0c6fee--1"><p><em>find()</em> reads rows from the table.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Nicely done.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>JavaND#305 C03 L02 A04 Cascade &amp; Fetch</p></h3>
+  <video controls>
+  <source src="02. JavaND#305 C03 L02 A04 Cascade &amp; Fetch-nl0BGMBtJ8E.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. JavaND#305 C03 L02 A04 Cascade &amp; Fetch-nl0BGMBtJ8E.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Cascade Details</p></h3>
+  <div>
+  <h4 id="cascade-operations-and-relationships">Cascade Operations and Relationships</h4>
+<p>Entities that use relationships often have dependencies on the existence of the other entity in the relationship. For example, a line item is part of an order; if the order is deleted, the order item also should be deleted. This is called a cascade delete relationship.</p>
+<p>The <a href="https://docs.oracle.com/javaee/7/api/javax/persistence/CascadeType.html" target="_blank">javax.persistence.CascadeType</a> enumerated type defines the cascade operations that are applied in the cascade element of the relationship annotations. </p>
+<p>ALL:  All cascade operations will be applied to the parent entity’s related entity. All is equivalent to specifying cascade={DETACH, MERGE, PERSIST, REFRESH, REMOVE}.<br />
+<strong>DETACH:</strong> If the parent entity is detached from the persistence context, the related entity will also be detached.<br />
+<strong>MERGE:</strong> If the parent entity is merged into the persistence context, the related entity will also be merged.<br />
+<strong>PERSIST:</strong> If the parent entity is persisted into the persistence context, the related entity will also be persisted.<br />
+<strong>REFRESH:</strong> If the parent entity is refreshed in the current persistence context, the related entity will also be refreshed.<br />
+<strong>REMOVE:</strong> If the parent entity is removed from the current persistence context, the related entity will also be removed.</p>
+<p>Cascade delete relationships are specified using the cascade=REMOVE element specification for<br />
+<a href="https://github.com/OneToOne" target="_blank">@OneToOne</a> and <a href="https://github.com/OneToMany" target="_blank">@OneToMany</a> relationships. </p>
+<p>For example:</p>
+<pre><code class="java language-java">@OneToMany(cascade=REMOVE, mappedBy="customer")
+public Set&lt;Order&gt; getOrders() { return orders; }</code></pre>
+<h4 id="orphan-removal-in-relationships">Orphan Removal in Relationships</h4>
+<p>When a target entity in one-to-one or one-to-many relationship is removed from the relationship, it is often desirable to cascade the remove operation to the target entity. Such target entities are considered “orphans,” and the <em>orphanRemoval</em> attribute can be used to specify that orphaned entities should be removed. For example, if an order has many order items and one of them is removed from the order, the removed order item is considered an orphan. If <em>orphanRemoval</em> is set to true, the order item entity will be deleted when the order item is removed from the order.<br />
+The <em>orphanRemoval</em> attribute in <em>@OneToMany</em> and <em>@OneToOne</em> takes a Boolean value and is by default false.</p>
+<p>The following example will cascade the remove operation to the orphaned order entity when the customer entity is deleted:</p>
+<pre><code class="java language-java">@OneToMany(mappedBy="customer", orphanRemoval="true")
+public List&lt;Order&gt; getOrders() { ... }</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Fetch Details</p></h3>
+  <div>
+  <p>The <em>FetchType</em> defines when Hibernate gets the related entities from the database, and it is one of the crucial elements for a fast persistence tier. In general, you want to fetch the entities you use in your business tier as efficiently as possible. But that’s not that easy. You either get all relationships with one query or you fetch only the root entity and initialize the relationships as soon as you need them.</p>
+<h4 id="fetchtypelazy">FetchType.LAZY</h4>
+<p>When you started with Hibernate, you most likely either didn’t know about FetchTypes or you were told to always use FetchType.LAZY. In general, that’s a good recommendation. But what does it exactly mean? And what is the default if you don’t define the FetchType?</p>
+<p>The default depends on the cardinality of the relationship. All to-one relationships use <em>FetchType.EAGER</em> and all to-many relationships <em>FetchType.LAZY</em>.</p>
+<p>Even the best default doesn’t fit for all use cases, and you sometimes want to change it. You can do this by providing your preferred FetchType to the relationship annotation as you can see in the following code snippet.</p>
+<pre><code class="java language-java">@Entity
+@Table(name = "orders")
+public class Order implements Serializable {
+
+  @OneToMany(mappedBy = "order", fetch = FetchType.EAGER)
+  private Set&lt;OrderItem&gt; items = new HashSet&lt;OrderItem&gt;();
+
+
+}</code></pre>
+<h4 id="fetchtypeeager">FetchType.EAGER</h4>
+<p>The FetchType.EAGER tells Hibernate to get all elements of a relationship when selecting the root entity. As  explained earlier, this is the default for to-one relationships, and you can see it in the following code snippets.</p>
+<p>I use the default FetchType (EAGER) for the many-to-one relationship between the OrderItem and Product entity.</p>
+<pre><code class="java language-java">@Entity
+public class OrderItem implements Serializable
+{
+   @ManyToOne
+   private Product product;  
+}</code></pre>
+<p>When an OrderItem entity is fetched from the database, Hibernate will also get the related Product entity.</p>
+<p>This seems to be very useful in the beginning. Joining the required entities and getting all of them in one query is very efficient.</p>
+<p>But keep in mind, that Hibernate will ALWAYS fetch the Product entity for your OrderItem, even if you don’t use it in your business code. If the related entity isn’t too big, this is not an issue for to-one relationships. But it will most likely slow down your application if you use it for a to-many relationship that you don’t need for your use case. Hibernate then has to fetch tens or even hundreds of additional entities which creates a significant overhead.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. JPA Querying Entities.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Java Persistence API (JPA)')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.790
+Now we have a connection to the database.
+
+00:00:02.790 --> 00:00:04.640
+We executed a SQL query,
+
+00:00:04.639 --> 00:00:07.259
+and it's time to process the results.
+
+00:00:07.259 --> 00:00:10.844
+The results are held in a result set object.
+
+00:00:10.845 --> 00:00:15.945
+A result set object maintains a cursor pointing to its current row of data.
+
+00:00:15.945 --> 00:00:20.460
+Initially, the cursor is positioned just before the first row.
+
+00:00:20.460 --> 00:00:24.315
+The next method moves the cursor to the next row.
+
+00:00:24.315 --> 00:00:29.370
+Because it returns false when there are no more rows in the result set object,
+
+00:00:29.370 --> 00:00:34.289
+it can be used inside a while loop to iterate through the results set.
+
+00:00:34.289 --> 00:00:40.515
+Needless to say, the result set object should also be wrapped in a try-block.
+
+00:00:40.515 --> 00:00:42.200
+Inside the while loop,
+
+00:00:42.200 --> 00:00:48.365
+we can use the corresponding get method for the column type to read its value.
+
+00:00:48.365 --> 00:00:50.900
+We know that orderID is an integer.
+
+00:00:50.899 --> 00:00:52.850
+So we use getInt.
+
+00:00:52.850 --> 00:00:55.399
+Customer Name is a wildcard,
+
+00:00:55.399 --> 00:00:58.250
+which translates to a string in Java.
+
+00:00:58.250 --> 00:01:00.094
+So we use getString.
+
+00:01:00.094 --> 00:01:05.784
+You can also read column values by their index in the query.
+
+00:01:05.784 --> 00:01:10.509
+Let's see if it prints the ID and the name.
+
+00:01:16.010 --> 00:01:20.100
+It did. We can exit to MySQL,
+
+00:01:20.099 --> 00:01:24.179
+executed the SQL query and, process the results.
+
+00:01:24.180 --> 00:01:30.060
+We have now completed the three basic steps of database interactions.
+

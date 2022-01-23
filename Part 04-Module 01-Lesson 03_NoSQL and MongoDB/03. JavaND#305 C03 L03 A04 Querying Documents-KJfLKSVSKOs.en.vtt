@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.049
+Let's see what MongoDB provides for querying documents.
+
+00:00:04.049 --> 00:00:06.269
+I've inserted a few documents into
+
+00:00:06.269 --> 00:00:11.890
+the patient's collection to help me demonstrate the querying capabilities.
+
+00:00:14.539 --> 00:00:18.669
+These are the documents that I've inserted.
+
+00:00:18.829 --> 00:00:23.984
+So far we only used Find without any argument.
+
+00:00:23.984 --> 00:00:26.679
+Let's add an argument.
+
+00:00:34.789 --> 00:00:40.714
+Here, I've added a query just like the update method has.
+
+00:00:40.715 --> 00:00:46.230
+So we are finding documents with last name that matches 'Khan'.
+
+00:00:46.359 --> 00:00:52.799
+Find also supports logical operators like OR and AND.
+
+00:01:00.159 --> 00:01:04.609
+Here's an example of how to use the dollar or
+
+00:01:04.609 --> 00:01:09.269
+operator to perform a logical OR during querying.
+
+00:01:12.379 --> 00:01:17.920
+You can also query based on the values of an array.
+
+00:01:17.920 --> 00:01:24.120
+In the patient's document,
+
+00:01:24.120 --> 00:01:26.579
+the field "Medicines" is an array,
+
+00:01:26.579 --> 00:01:29.144
+so let's query based on that.
+
+00:01:29.144 --> 00:01:39.219
+I'm going to find all patients who have Advil as medicines in their array.
+
+00:01:39.739 --> 00:01:45.229
+You can also use it to find matches within sub-documents.
+
+00:01:45.230 --> 00:01:48.704
+Let's find patients living in Alabama.
+
+00:01:48.704 --> 00:02:03.659
+The state says Alabama here.
+
+00:02:03.659 --> 00:02:08.289
+You can also sort using the sort method.
+
+00:02:12.400 --> 00:02:17.555
+We're finding all patients whose gender field equals male,
+
+00:02:17.555 --> 00:02:20.890
+and we're sorting by the first name.
+
+00:02:20.889 --> 00:02:24.974
+Number one means the sort is in ascending order.
+
+00:02:24.974 --> 00:02:26.650
+If you want it in descending order,
+
+00:02:26.650 --> 00:02:29.969
+you can use negative one here.
+
+00:02:32.240 --> 00:02:39.240
+You can see that the first name is sorted in ascending order.
+
+00:02:40.479 --> 00:02:44.969
+You can also do a count like this.
+
+00:02:48.379 --> 00:02:55.150
+That's three documents that match the criteria. Also a limit.
+
+00:02:59.689 --> 00:03:03.680
+Selects all documents with gender equals female,
+
+00:03:03.680 --> 00:03:07.319
+and limits it to one, and then prints it.
+
+00:03:07.389 --> 00:03:13.359
+These operations can also be combined like this.
+
+00:03:14.930 --> 00:03:18.675
+You find then you sort,
+
+00:03:18.675 --> 00:03:21.910
+then you limit, then you print it.
+
+00:03:26.050 --> 00:03:29.795
+You found all documents with gender as male,
+
+00:03:29.794 --> 00:03:34.559
+and sorted it by first name in descending order,
+
+00:03:34.560 --> 00:03:36.920
+and then we limited it to two.
+
+00:03:36.919 --> 00:03:44.339
+As you can see, MongoDB provides a pretty powerful and flexible querying model.
+

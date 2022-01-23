@@ -1,0 +1,204 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Instructions</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Project: Build the Backend System for a Car Website</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Location Service Code.html">02. Location Service Code</a>
+    </li>
+    <li class="">
+      <a href="03. Pricing Service Code.html">03. Pricing Service Code</a>
+    </li>
+    <li class="">
+      <a href="04. Vehicles API Code.html">04. Vehicles API Code</a>
+    </li>
+    <li class="">
+      <a href="05. Instructions.html">05. Instructions</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Build the Backend System for a Car Website.html">Project Description - Build the Backend System for a Car Website</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Build the Backend System for a Car Website.html">Project Rubric - Build the Backend System for a Car Website</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Instructions</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="vehicles-api-instructions">Vehicles API Instructions</h1>
+<p>In this project you will have the opportunity to create a REST-based Vehicles API that communicates with a location and pricing service using Spring Boot, along with converting the existing Pricing Service API to a microservice registered on a Eureka server.<br />
+Follow the <a href="https://github.com/udacity/JDND/tree/master/projects/P02-VehiclesAPI" target="_blank">README and code instructions</a> and make sure to check the <a href="https://review.udacity.com/#!/rubrics/2649/view" target="_blank">rubric</a> to ensure you have completed all items.</p>
+<h3 id="convert-the-pricing-service">Convert the Pricing Service</h3>
+<p>Convert the Pricing Service to a microservice, registered on a Eureka server. Also, add an additional test for the microservice.</p>
+<h3 id="implement-the-vehicles-api">Implement the Vehicles API</h3>
+<p>Implement all TODOs for the CarService and CarController.</p>
+<h3 id="test-and-document-the-vehicles-api">Test and Document the Vehicles API</h3>
+<ul>
+<li>Add tests for the CarController class</li>
+<li>Use Swagger to implement API documentation for the Vehicles API</li>
+</ul>
+<h3 id="run-the-applications">Run the applications</h3>
+<p>Note that the Boogle Maps, Pricing Service and Vehicles API applications must all be running for all operations to perform correctly, although they should be able to launch on their own.</p>
+<p>You can either use these in separate windows in your favorite IDE, or use the below commands:</p>
+<ol>
+<li><code>$ mvn clean package</code> (run this in each directory containing the separate applications)</li>
+<li>Boogle Maps: <code>$ java -jar target/boogle-maps-0.0.1-SNAPSHOT.jar</code><ul>
+<li>The service is available by default on port 9191. You can check it on the command line by using <code>$ curl http://localhost:9191/maps\?lat\=20.0\&amp;lon\=30.0</code></li></ul></li>
+<li>Pricing Service: <code>$ java -jar target/pricing-service-0.0.1-SNAPSHOT.jar</code></li>
+<li>Vehicles API: <code>$ java -jar target/vehicles-api-0.0.1-SNAPSHOT.jar</code><ul>
+<li>When the Swagger API documentation is implemented, it should be available at: <a href="http://localhost:8080/swagger-ui.html" target="_blank">http://localhost:8080/swagger-ui.html</a></li></ul></li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Instructions')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

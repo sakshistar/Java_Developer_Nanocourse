@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.200
+Today, we learned about unit testing and integration testing using Spring Boot.
+
+00:00:05.200 --> 00:00:09.460
+We'd looked at testing using the @WebMVCTestAnnotation for
+
+00:00:09.460 --> 00:00:14.440
+unit testing and the @SpringBootTest annotation for integration testing.
+
+00:00:14.439 --> 00:00:18.204
+We saw how to mock the environment using MockMVC.
+
+00:00:18.204 --> 00:00:22.014
+MockMVC provides a powerful way to quickly test
+
+00:00:22.015 --> 00:00:26.649
+MVC controllers without needing to start a full HTTP server.
+
+00:00:26.649 --> 00:00:30.834
+We also saw Mockito for mocking the data needed by our tests.
+
+00:00:30.835 --> 00:00:35.274
+The @MockBeanAnnotation works well with the Mockito library.
+
+00:00:35.274 --> 00:00:38.454
+We wrapped up by learning more about tests rest template
+
+00:00:38.454 --> 00:00:43.250
+allowing us to consume rest APIs during testing.
+

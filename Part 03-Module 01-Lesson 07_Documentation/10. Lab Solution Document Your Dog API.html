@@ -1,0 +1,324 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lab Solution: Document Your Dog API</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Documentation</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Importance.html">02. Importance</a>
+    </li>
+    <li class="">
+      <a href="03. Swagger.html">03. Swagger</a>
+    </li>
+    <li class="">
+      <a href="04. Swagger UI.html">04. Swagger UI</a>
+    </li>
+    <li class="">
+      <a href="05. Swagger Configuration.html">05. Swagger Configuration</a>
+    </li>
+    <li class="">
+      <a href="06. Case Study Swagger Configuration.html">06. Case Study: Swagger Configuration</a>
+    </li>
+    <li class="">
+      <a href="07. Customizing Swagger.html">07. Customizing Swagger</a>
+    </li>
+    <li class="">
+      <a href="08. Case Study Error Messages.html">08. Case Study: Error Messages</a>
+    </li>
+    <li class="">
+      <a href="09. Lab Document Your Dog API.html">09. Lab: Document Your Dog API</a>
+    </li>
+    <li class="">
+      <a href="10. Lab Solution Document Your Dog API.html">10. Lab Solution: Document Your Dog API</a>
+    </li>
+    <li class="">
+      <a href="11. Recap.html">11. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">10. Lab Solution: Document Your Dog API</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="solution-document-your-dog-api">Solution: Document Your Dog API</h1>
+<p>Below, we'll walk through each step of the lab and look at <em>one potential way</em> to implement the lab. Even if you get stuck, you should always first try to work through the lab without the solution before coming here, so that you can best learn the related skills and be ready for the project at the end of the course.</p>
+<h2 id="step-1-add-the-necessary-dependencies-for-swagger"><strong>Step 1:</strong> Add the necessary dependencies for Swagger.</h2>
+<p>First, I have started by copying over my code from the Dog REST API (I've excluded the security piece from earlier for simplicity). From there, I just need to add two dependencies:</p>
+<pre><code>        &lt;dependency&gt;
+            &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+            &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;
+            &lt;version&gt;2.9.2&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+            &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;
+            &lt;version&gt;2.9.2&lt;/version&gt;
+            &lt;scope&gt;compile&lt;/scope&gt;
+        &lt;/dependency&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="step-2-configure-swagger-using-a-docket-bean"><strong>Step 2:</strong> Configure Swagger using a Docket Bean.</h2>
+<p>Now, I'll add a <code>config</code> package to my API and add a <code>SwaggerConfig</code> class within it. This file can be pretty much the same as the Case Study, although I'll alter it so the API Info matches the Dog API. I have not added any custom error messages here, although they can always be useful in your own implementations!</p>
+<pre><code class="java language-java">package com.udacity.DogRestApi.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import java.util.Collections;
+
+@Configuration
+@EnableSwagger2
+public class SwaggerConfig {
+    @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .select()
+                .apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.any())
+                .build()
+                .apiInfo(apiInfo());
+    }
+
+    private ApiInfo apiInfo() {
+        return new ApiInfo(
+                "Dog REST API",
+                "This API returns a list of dogs.",
+                "1.0",
+                "http://www.udacity.com/tos",
+                new Contact("Udacious Student", "www.udacity.com", "myeaddress@udacity.com"),
+                "License of API", "http://www.udacity.com/license", Collections.emptyList());
+    }
+
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="step-3-utilize-swagger-ui-to-review-and-test-your-api"><strong>Step 3:</strong> Utilize Swagger UI to review and test your API.</h2>
+<p>Now, you should be able to head to <a href="http://localhost:8080/swagger-ui.html#/" target="_blank">http://localhost:8080/swagger-ui.html#/</a> and test out your API.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/java-dog-swagger.png" alt="An example of the Dog REST API Swagger documentation page" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>An example of the Dog REST API Swagger documentation page</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/java-dog-swagger-get.png" alt="Swagger has documented the available GET requests for us" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Swagger has documented the available GET requests for us</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>If you click on one of the available commands for your API, you should be able to <em>Try it out</em> and test that it works correctly. Depending on which you test, you may need to provide information (such as the <code>id</code> for <code>getBreedByID</code>), or be able to immediately <em>Execute</em> the query.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/java-swagger-execute.png" alt="An example from an execution of &#x60;getAllDogs&#x60; in Swagger" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>An example from an execution of <code>getAllDogs</code> in Swagger</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>As you can see, automatically documenting your API with Swagger requires only a few lines of code, yet provides some incredibly useful functionality.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="full-solution">Full Solution</h2>
+<p>If you'd like the full solution code all in one place, you can download it through the link below.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="11. Recap.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. Lab Solution: Document Your Dog API')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

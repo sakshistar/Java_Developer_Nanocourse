@@ -1,0 +1,130 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.455
+We linked order and order item using a one-to-many relationship.
+
+00:00:04.455 --> 00:00:06.720
+When a customer places an order,
+
+00:00:06.719 --> 00:00:12.539
+we need to persist both order and order item entities separately.
+
+00:00:12.539 --> 00:00:14.129
+But if you think about it,
+
+00:00:14.130 --> 00:00:17.324
+an order item by itself has no meaning.
+
+00:00:17.324 --> 00:00:21.044
+It always has to be used in conjunction with an order.
+
+00:00:21.045 --> 00:00:25.560
+Why not persist both order and order item at the same time?
+
+00:00:25.559 --> 00:00:28.125
+That's where cascade helps.
+
+00:00:28.125 --> 00:00:35.230
+JPA can cascade operations performed on an entity to its associated entities.
+
+00:00:41.600 --> 00:00:44.249
+In the one-to-many annotation,
+
+00:00:44.249 --> 00:00:48.250
+I've marked cascade as cascade type persist
+
+00:00:48.250 --> 00:00:52.524
+which tells hibernate that when an order is persisted,
+
+00:00:52.524 --> 00:00:55.929
+the persist operation needs to be cascaded to
+
+00:00:55.929 --> 00:01:01.009
+the associated entity which in this case is order item.
+
+00:01:08.040 --> 00:01:15.415
+Let's run this code again to see if order item gets persisted along with the order.
+
+00:01:15.415 --> 00:01:18.910
+Again, the important thing to note here is that I am not
+
+00:01:18.909 --> 00:01:24.340
+persisting order items separately and I'm only persisting the order.
+
+00:01:33.140 --> 00:01:39.579
+Looks like it persisted order and order items as well.
+
+00:01:40.920 --> 00:01:45.685
+We can also scroll up to see the SQL queries
+
+00:01:45.685 --> 00:01:50.155
+that hibernate sent in order to verify if ordered items were inserted.
+
+00:01:50.155 --> 00:01:53.974
+This is the query to insert the order,
+
+00:01:53.974 --> 00:01:58.899
+this is the query to insert an order item.
+
+00:02:00.150 --> 00:02:04.075
+There are many other options in cascade type,
+
+00:02:04.075 --> 00:02:08.784
+be sure to read about all the available cascade options in the next section.
+
+00:02:08.784 --> 00:02:15.240
+We saw how order and order item can be persisted using one persist call.
+
+00:02:15.240 --> 00:02:19.405
+Naturally, the next step is to see if we can read them together.
+
+00:02:19.405 --> 00:02:24.710
+Fetch type allows us to read associated entities together.
+
+00:02:25.370 --> 00:02:29.754
+I've included a fetch type here of type eager.
+
+00:02:29.754 --> 00:02:34.314
+The default fetch type is lazy for a one-to-many relationship.
+
+00:02:34.314 --> 00:02:39.949
+The order item collection in order is fetched once it's accessed.
+
+00:02:39.949 --> 00:02:44.589
+In most cases, the order and order item are accessed together,
+
+00:02:44.590 --> 00:02:50.539
+and if you don't want to wait until the order item is accessed you can use eager.
+
+00:02:51.710 --> 00:03:00.230
+Let's run our test again to see if the entities get loaded at the same time.
+
+00:03:09.860 --> 00:03:18.455
+We have order and order items getting persisted here and if you look in the read method,
+
+00:03:18.455 --> 00:03:22.120
+I don't have a separate find call for reading
+
+00:03:22.120 --> 00:03:26.950
+the order item but the order item gets printed here.
+
+00:03:26.949 --> 00:03:32.739
+But how do we know that it was actually eagerly fetched instead of lazily fetched?
+
+00:03:32.740 --> 00:03:34.270
+So if you scroll up,
+
+00:03:34.270 --> 00:03:38.630
+you can see the SQL statement where if you scroll
+
+00:03:38.629 --> 00:03:43.250
+all the way to the right you can see that hibernate issues
+
+00:03:43.250 --> 00:03:48.000
+a join between the orders table and
+
+00:03:48.000 --> 00:03:55.719
+the order item table fetching both order and it's order items in one go.
+

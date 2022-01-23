@@ -1,0 +1,148 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.230 --> 00:00:02.790
+Let's see it in action.
+
+00:00:02.790 --> 00:00:07.049
+Start by cloning the code from the link found in the course notes section.
+
+00:00:07.049 --> 00:00:11.550
+The first step is to create an entity class to contain the joke data.
+
+00:00:11.550 --> 00:00:13.229
+I've opened my project,
+
+00:00:13.228 --> 00:00:15.974
+and I've navigated to joke.Java.
+
+00:00:15.974 --> 00:00:22.800
+This is a simple Java class that matches the JSON response returned from the jokes API.
+
+00:00:22.800 --> 00:00:25.350
+So we have an Id, the type,
+
+00:00:25.350 --> 00:00:27.570
+the setup, and the punchline.
+
+00:00:27.570 --> 00:00:31.769
+Now, the next step is to convert the JSON returned from
+
+00:00:31.769 --> 00:00:37.394
+the jokes API to Java so that we can access those fields from inside of our code.
+
+00:00:37.395 --> 00:00:41.865
+So in order to bind the JSON data to this jokes type,
+
+00:00:41.865 --> 00:00:44.550
+we're using something called "Jackson",
+
+00:00:44.549 --> 00:00:47.044
+and the field names and the joke class must match
+
+00:00:47.045 --> 00:00:50.060
+exactly to the key names in the JSON document.
+
+00:00:50.060 --> 00:00:51.350
+So like I mentioned,
+
+00:00:51.350 --> 00:00:53.899
+we're using Jackson for this binding.
+
+00:00:53.899 --> 00:00:57.259
+So let's navigate to the Maven palm file,
+
+00:00:57.259 --> 00:01:02.809
+and scroll down to lines 33 through 36.
+
+00:01:02.810 --> 00:01:06.650
+So this is where I include the dependency for Jackson.
+
+00:01:06.650 --> 00:01:13.490
+Jackson is a library that serializes or maps Java objects to JSON and vice versa.
+
+00:01:13.489 --> 00:01:18.304
+So we're enabling Jackson by adding this dependency in the Maven file,
+
+00:01:18.305 --> 00:01:22.255
+and like I said, this allows us to map the JSON to Java.
+
+00:01:22.254 --> 00:01:26.534
+So now, let's navigate to ConsumingApplication.Java,
+
+00:01:26.534 --> 00:01:29.670
+this is the main SpringBootApplication class.
+
+00:01:29.670 --> 00:01:36.829
+All I've done here is I've updated it to use the command line runner run method.
+
+00:01:36.829 --> 00:01:42.019
+So this callback method is executed by Spring Boot on startup,
+
+00:01:42.019 --> 00:01:43.609
+and notice all it does,
+
+00:01:43.609 --> 00:01:46.819
+it makes a call out to the jokes API,
+
+00:01:46.819 --> 00:01:49.029
+here on line 31,
+
+00:01:49.030 --> 00:01:52.745
+and it's using the rest template that we discussed.
+
+00:01:52.745 --> 00:01:57.175
+The rest template builder here on line 24,
+
+00:01:57.174 --> 00:01:59.129
+this is injected by spring.
+
+00:01:59.129 --> 00:02:01.339
+If you use it to create a rest template,
+
+00:02:01.340 --> 00:02:06.530
+then you will benefit from all of the auto configuration that happens in Spring Boot,
+
+00:02:06.530 --> 00:02:09.849
+with message converters, and requests factories etc.
+
+00:02:09.849 --> 00:02:12.889
+So it just makes the process very easy.
+
+00:02:12.889 --> 00:02:15.194
+So here on line 31,
+
+00:02:15.194 --> 00:02:19.894
+after I'm calling the jokes API using the rest template,
+
+00:02:19.895 --> 00:02:22.700
+all I do is print the joke out to the screen.
+
+00:02:22.699 --> 00:02:25.039
+So let's run this application,
+
+00:02:25.039 --> 00:02:29.405
+and we should see the output down here in this bottom window.
+
+00:02:29.405 --> 00:02:31.759
+So in just a few more moments,
+
+00:02:31.759 --> 00:02:33.484
+we should see the output.
+
+00:02:33.485 --> 00:02:35.720
+Here we see it at the very bottom,
+
+00:02:35.719 --> 00:02:38.405
+we see the Id, the type,
+
+00:02:38.405 --> 00:02:43.620
+the setup, what type of music do balloons hate?
+
+00:02:43.620 --> 00:02:46.650
+Then the punchline pop music.
+
+00:02:46.650 --> 00:02:54.810
+So that's how easy it is to consume a RESTful API in Spring Boot using the REST template.
+

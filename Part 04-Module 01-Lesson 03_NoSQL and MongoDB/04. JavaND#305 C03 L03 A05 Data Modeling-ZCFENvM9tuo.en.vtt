@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.669
+While designing documents in MongoDB,
+
+00:00:02.669 --> 00:00:06.689
+one of the key considerations for the structure of your documents is
+
+00:00:06.690 --> 00:00:12.130
+the decision to embed documents or to use references.
+
+00:00:12.230 --> 00:00:17.774
+MongoDB allows you to embed related data in the same document.
+
+00:00:17.774 --> 00:00:21.029
+In general, use embedded data models when you
+
+00:00:21.030 --> 00:00:24.855
+have a contains relationship between entities.
+
+00:00:24.855 --> 00:00:26.879
+In this customer document,
+
+00:00:26.879 --> 00:00:30.989
+the address sub document is embedded in the customer document.
+
+00:00:30.989 --> 00:00:37.859
+This feels more natural since customer information typically includes an address.
+
+00:00:39.250 --> 00:00:43.130
+You can also use embedded document when
+
+00:00:43.130 --> 00:00:46.400
+there is a one-to-many relationship between entities.
+
+00:00:46.399 --> 00:00:50.839
+In these relationships, the many or the child documents
+
+00:00:50.840 --> 00:00:55.875
+always appear within the context of the parent documents.
+
+00:00:55.875 --> 00:00:58.090
+In the patient record, for example,
+
+00:00:58.090 --> 00:01:01.310
+a patient can have many visits to the clinic.
+
+00:01:01.310 --> 00:01:06.635
+The visit document has no meaning when it's not associated with a patient,
+
+00:01:06.635 --> 00:01:10.685
+therefore, it is embedded within the patient document.
+
+00:01:10.685 --> 00:01:14.359
+Embedded model allows for a better read performance
+
+00:01:14.359 --> 00:01:18.724
+since all the related data can be read in one go.
+
+00:01:18.724 --> 00:01:23.989
+References can also be used to describe relationship between documents.
+
+00:01:23.989 --> 00:01:28.969
+In general, use references when embedding would result in
+
+00:01:28.969 --> 00:01:34.700
+duplication of data but would not affect read performance significantly.
+
+00:01:34.700 --> 00:01:42.545
+References can also be used to represent more complex many-to-many relationships.
+
+00:01:42.545 --> 00:01:46.320
+References provide more flexibility than embedding,
+
+00:01:46.319 --> 00:01:51.589
+but applications need to issue follow up queries to resolve the references.
+
+00:01:51.590 --> 00:01:57.185
+In other words, references require more round trips to the server.
+
+00:01:57.185 --> 00:02:00.829
+Embedded data models make it possible to update
+
+00:02:00.829 --> 00:02:05.060
+related data in a single atomic write operation.
+
+00:02:05.060 --> 00:02:11.360
+In MongoDB , a write operation is atomic on the level of a single document,
+
+00:02:11.360 --> 00:02:18.080
+even if the operation modifies multiple embedded documents within the single document.
+
+00:02:18.080 --> 00:02:21.260
+As soon as you start introducing references,
+
+00:02:21.259 --> 00:02:27.810
+it is up to the application to maintain the integrity of the related documents.
+

@@ -1,0 +1,139 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.980
+What is JDBC?
+
+00:00:01.980 --> 00:00:04.769
+It is a database agnostic API,
+
+00:00:04.769 --> 00:00:07.724
+that is used to interact with a relational database.
+
+00:00:07.724 --> 00:00:10.169
+Let's break that definition down.
+
+00:00:10.169 --> 00:00:12.644
+JDBC is an API.
+
+00:00:12.644 --> 00:00:14.839
+The Java platform only defines
+
+00:00:14.839 --> 00:00:18.844
+the contracts that allow an application to interact with the database.
+
+00:00:18.844 --> 00:00:22.488
+Database vendors like MySQL Postgres,
+
+00:00:22.489 --> 00:00:25.010
+provide the implementation of the contract.
+
+00:00:25.010 --> 00:00:28.795
+These implementations are called JDBC drivers.
+
+00:00:28.795 --> 00:00:31.240
+You as an application developer,
+
+00:00:31.239 --> 00:00:34.564
+never have to write a driver or use it directly.
+
+00:00:34.564 --> 00:00:38.479
+A JDBC driver can be built using various approaches.
+
+00:00:38.479 --> 00:00:42.890
+A detailed investigation of all of them is not relevant to this course.
+
+00:00:42.890 --> 00:00:49.469
+Please use the links in the additional resources section to read more about JDBC drivers.
+
+00:00:49.630 --> 00:00:53.090
+Let's look at the other term in the definition.
+
+00:00:53.090 --> 00:00:59.285
+Database agnostic, which means the contracts don't change for each database.
+
+00:00:59.284 --> 00:01:01.549
+What that translates to is,
+
+00:01:01.549 --> 00:01:04.700
+the code that you use to connect to MySQL can be
+
+00:01:04.700 --> 00:01:09.034
+used as is to connect to another database like postgres.
+
+00:01:09.034 --> 00:01:12.744
+This is the key reason for JDBC's existence.
+
+00:01:12.745 --> 00:01:15.829
+Without JDBC, it'll be very hard
+
+00:01:15.829 --> 00:01:20.310
+for an application to change its database if it needed to.
+
+00:01:21.319 --> 00:01:25.094
+JDBC has three main functions.
+
+00:01:25.094 --> 00:01:29.194
+First, it allows the application to connect to a database.
+
+00:01:29.194 --> 00:01:31.819
+Second, using that connection,
+
+00:01:31.819 --> 00:01:35.529
+an application can send SQL statements to the database,
+
+00:01:35.530 --> 00:01:41.210
+and finally, it lets the application process the results of those statements.
+
+00:01:41.209 --> 00:01:47.389
+JDBC essentially acts as a bridge between the application and the database.
+
+00:01:47.390 --> 00:01:52.125
+The application uses the JDBC provided contracts.
+
+00:01:52.125 --> 00:01:54.974
+JDBC selects the appropriate driver,
+
+00:01:54.974 --> 00:02:00.250
+and the driver implements the protocol that the database server understands.
+
+00:02:00.250 --> 00:02:02.055
+While working with JDBC,
+
+00:02:02.055 --> 00:02:05.540
+even though it has many interfaces and classes,
+
+00:02:05.540 --> 00:02:08.360
+you will mostly be working with a few of them.
+
+00:02:08.360 --> 00:02:12.995
+Let's see the basic building blocks that all applications need to use.
+
+00:02:12.995 --> 00:02:15.300
+First, DriverManager.
+
+00:02:15.300 --> 00:02:18.140
+DriverManager is responsible for selecting
+
+00:02:18.139 --> 00:02:21.784
+the appropriate driver and connecting to the database.
+
+00:02:21.784 --> 00:02:24.965
+It returns a connection object.
+
+00:02:24.965 --> 00:02:29.930
+A Connection. A Connection represents the applications connection to
+
+00:02:29.930 --> 00:02:35.460
+the database and allows the applications to send SQL statements to it.
+
+00:02:35.460 --> 00:02:42.409
+Statement, used for executing a SQL statement and return it's results.
+
+00:02:42.740 --> 00:02:47.515
+ResultSet, represents a set of results from the database,
+
+00:02:47.514 --> 00:02:51.569
+usually acquired by executing a statement.
+

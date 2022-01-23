@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.110
+Welcome to Lesson 4, MongoDB for Java.
+
+00:00:04.110 --> 00:00:08.265
+You're almost there. This is the last lesson for this course.
+
+00:00:08.265 --> 00:00:09.750
+In the previous lesson,
+
+00:00:09.750 --> 00:00:13.439
+you learned about the basics of MongoDB and its document model.
+
+00:00:13.439 --> 00:00:17.829
+Now, it's time to use it in your Java application.
+
+00:00:18.559 --> 00:00:21.329
+Just like relational databases,
+
+00:00:21.329 --> 00:00:28.139
+MongoDB also has a driver that speaks the protocol that the MongoDB server understands.
+
+00:00:28.140 --> 00:00:33.120
+Point to note, this driver does not implement JDBC.
+
+00:00:33.119 --> 00:00:38.864
+Java does not provide a unified interface for accessing non-relational databases,
+
+00:00:38.865 --> 00:00:43.215
+since each of them have their own unique data model.
+
+00:00:43.215 --> 00:00:45.660
+In this lesson, you will use
+
+00:00:45.659 --> 00:00:50.284
+the MongoDB Driver to do some basic crud operations on documents,
+
+00:00:50.284 --> 00:00:54.469
+and create repositories using spring data.
+
+00:00:54.469 --> 00:00:57.979
+Finally, you will test your MongoDB code using
+
+00:00:57.979 --> 00:01:01.984
+spring test and then embedded MongoDB implementation.
+
+00:01:01.984 --> 00:01:05.069
+Let's get on with the lesson.
+

@@ -1,0 +1,235 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.149
+We're now going to see how to create a collection and do
+
+00:00:03.149 --> 00:00:07.560
+some basic operations with documents using the Mongo Shell.
+
+00:00:07.559 --> 00:00:12.269
+The Mongo Shell is an interactive JavaScript interface to MongoDB.
+
+00:00:12.269 --> 00:00:15.269
+If you do not know JavaScript don't sweat it.
+
+00:00:15.269 --> 00:00:19.019
+The syntax is very readable and intuitive.
+
+00:00:19.019 --> 00:00:22.004
+If you just type in DB,
+
+00:00:22.004 --> 00:00:24.509
+it shows the current database.
+
+00:00:24.510 --> 00:00:26.895
+In this case, it's Course3.
+
+00:00:26.894 --> 00:00:31.964
+Assume that the DB is exposed as an object with functions on it.
+
+00:00:31.964 --> 00:00:36.195
+Those functions can be used to operate on this database.
+
+00:00:36.195 --> 00:00:42.310
+Let's go ahead and create a collection that will hold some patient records.
+
+00:00:43.579 --> 00:00:49.699
+A collection in MongoDB is analogous to a table in a relational database.
+
+00:00:49.700 --> 00:00:52.429
+But notice that when I create a collection,
+
+00:00:52.429 --> 00:00:56.570
+I didn't specify the structure of the documents that the collection will hold.
+
+00:00:56.570 --> 00:01:01.960
+In MongoDB, the collection is just a namespace for your documents.
+
+00:01:01.960 --> 00:01:07.140
+Now, let's insert a patient record into the collection.
+
+00:01:11.120 --> 00:01:14.295
+As you can see from the right result,
+
+00:01:14.295 --> 00:01:16.920
+one record got inserted.
+
+00:01:16.920 --> 00:01:27.310
+Let's use the find method to check if the patient record got inserted.
+
+00:01:27.349 --> 00:01:33.799
+As I said, if a document does not include an underscore ID field,
+
+00:01:33.799 --> 00:01:37.655
+MongoDB will generate one automatically.
+
+00:01:37.655 --> 00:01:43.594
+You can also insert multiple documents at the same time by passing in an array
+
+00:01:43.594 --> 00:01:49.989
+to the insert method like this.
+
+00:01:50.000 --> 00:01:53.519
+This inserted two documents.
+
+00:01:53.519 --> 00:01:56.959
+Let's run Find again to check it.
+
+00:01:56.959 --> 00:02:00.709
+You can also make find provide
+
+00:02:00.709 --> 00:02:05.729
+a prettier output that's more readable by using the pretty method.
+
+00:02:07.579 --> 00:02:10.264
+Since there's no schema,
+
+00:02:10.264 --> 00:02:15.100
+let's insert another patient record which includes a gender field.
+
+00:02:15.099 --> 00:02:20.539
+Notice that the earlier documents did not include the gender field.
+
+00:02:22.219 --> 00:02:25.419
+There you go, it got inserted.
+
+00:02:25.419 --> 00:02:28.219
+Lets run Find again.
+
+00:02:29.370 --> 00:02:35.169
+You can see the last inserted document has a gender field,
+
+00:02:35.169 --> 00:02:37.660
+but the rest of the documents do not.
+
+00:02:37.659 --> 00:02:40.810
+This is completely fine in MongoDB.
+
+00:02:40.810 --> 00:02:45.370
+Now, if you want to update another document to include the gender field,
+
+00:02:45.370 --> 00:02:48.349
+the update method can be used.
+
+00:02:51.800 --> 00:02:58.325
+The first argument includes the query to find the document.
+
+00:02:58.324 --> 00:03:02.719
+Notice that the second argument of the update method includes
+
+00:03:02.719 --> 00:03:07.895
+the entire document even though only the gender field needs to be updated.
+
+00:03:07.895 --> 00:03:10.580
+If you include just the gender field,
+
+00:03:10.580 --> 00:03:15.215
+the entire document will be replaced with just that field.
+
+00:03:15.215 --> 00:03:19.259
+So let's go ahead and run this method.
+
+00:03:19.849 --> 00:03:23.319
+Let's run Find again.
+
+00:03:23.419 --> 00:03:27.829
+Now, you can see this document which we selected by
+
+00:03:27.830 --> 00:03:32.120
+using the first name has the gender field in it.
+
+00:03:32.120 --> 00:03:35.875
+Update also supports operators to set,
+
+00:03:35.875 --> 00:03:38.525
+remove, and rename fields.
+
+00:03:38.525 --> 00:03:40.360
+To set the field,
+
+00:03:40.360 --> 00:03:42.910
+the dollar set operator is used.
+
+00:03:42.909 --> 00:03:48.590
+Let's see an example of the $set operator in action.
+
+00:03:52.490 --> 00:03:58.585
+Here, the first argument selects the document that needs to be updated,
+
+00:03:58.585 --> 00:04:01.510
+and in the second argument we used
+
+00:04:01.509 --> 00:04:08.090
+the $set operator and provide only the field that needs to be set.
+
+00:04:09.150 --> 00:04:14.740
+Let's run that. It matched one and it modified one.
+
+00:04:14.740 --> 00:04:17.045
+Let's run Find again.
+
+00:04:17.045 --> 00:04:22.759
+Then you can see that the match document now has a gender field.
+
+00:04:22.759 --> 00:04:31.654
+Similarly, you can use the $unset and the $rename operators to remove and rename fields.
+
+00:04:31.654 --> 00:04:38.399
+Let's see what happens if the update includes a query that matches no documents.
+
+00:04:42.050 --> 00:04:45.770
+In this method, the first argument says that
+
+00:04:45.769 --> 00:04:49.509
+we need to find a document whose first name is Eduardo.
+
+00:04:49.509 --> 00:04:53.344
+We do not have a document matching this criteria,
+
+00:04:53.345 --> 00:04:55.590
+let's see what happens.
+
+00:04:56.180 --> 00:04:59.295
+It didn't match anything.
+
+00:04:59.295 --> 00:05:03.470
+MongoDB supports upserts whether a document
+
+00:05:03.470 --> 00:05:07.420
+is inserted during update if it doesn't exist.
+
+00:05:07.420 --> 00:05:14.500
+Let's see how to use upsert and insert a document if it's not found.
+
+00:05:15.920 --> 00:05:24.720
+Now, you can see Update includes a third argument where the upsert field is set to true.
+
+00:05:26.529 --> 00:05:33.199
+The result clearly tells us that a document was upserted, not modified.
+
+00:05:33.199 --> 00:05:38.009
+Let's run Find again to check our upserted document.
+
+00:05:38.930 --> 00:05:44.944
+There you have it. You have a new document which just got upserted.
+
+00:05:44.944 --> 00:05:49.985
+Finally, to remove a document we can use the remove method.
+
+00:05:49.985 --> 00:05:53.335
+Let's remove the upserted document.
+
+00:05:53.334 --> 00:05:56.000
+It says it removed one.
+
+00:05:56.000 --> 00:05:58.524
+Let's run Find again,
+
+00:05:58.524 --> 00:06:01.370
+and the document is gone.
+
+00:06:01.370 --> 00:06:07.680
+There you go. You just learned how to use the Mongo Shell to work with documents.
+

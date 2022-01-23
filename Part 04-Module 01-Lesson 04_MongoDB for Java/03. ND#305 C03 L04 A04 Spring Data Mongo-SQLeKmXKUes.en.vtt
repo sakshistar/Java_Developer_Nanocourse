@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.509
+Let's see how to use Spring Data MongoDB.
+
+00:00:03.509 --> 00:00:08.115
+The first step is to specify the URI to connect to the server.
+
+00:00:08.115 --> 00:00:13.980
+As you can see, Spring Data uses Mongo driver under the covers.
+
+00:00:13.980 --> 00:00:20.109
+Next, a class is defined to represent the patient document.
+
+00:00:20.390 --> 00:00:24.990
+The @Document tells Spring Data that this is
+
+00:00:24.989 --> 00:00:29.159
+a document and it should be in a collection named patients.
+
+00:00:29.160 --> 00:00:35.700
+The @Id annotation denotes the object ID for the record.
+
+00:00:35.700 --> 00:00:38.835
+The rest of the fields are mapped as this.
+
+00:00:38.835 --> 00:00:44.960
+Finally, a repository is created for the patient document.
+
+00:00:44.960 --> 00:00:51.570
+The Mongo repository has methods for basic CRUD operations on a document.
+
+00:00:52.929 --> 00:00:58.729
+I have a basic springboard application here with a command line runner.
+
+00:00:58.729 --> 00:01:02.750
+You can also see the enabled Mongo repositories which tells
+
+00:01:02.750 --> 00:01:07.969
+springboard that this application is going to use Spring Data MongoDB.
+
+00:01:07.969 --> 00:01:11.629
+The command line runner does something very simple.
+
+00:01:11.629 --> 00:01:14.969
+It creates a patient record, saves it,
+
+00:01:14.969 --> 00:01:19.909
+and uses another method from the repository to read it,
+
+00:01:19.909 --> 00:01:22.879
+read the same record using its first name.
+
+00:01:22.879 --> 00:01:27.359
+Lets run this class to check if the repository works correctly.
+
+00:01:31.549 --> 00:01:40.534
+No headers and we also see the patient document that we just inserted and read back.
+
+00:01:40.534 --> 00:01:42.634
+Let's head to the Mongo Shell.
+
+00:01:42.635 --> 00:01:45.640
+Do you notice the underscore class field here?
+
+00:01:45.640 --> 00:01:50.310
+This class field contains the fully qualified name of the class
+
+00:01:50.310 --> 00:01:56.204
+that tells Spring Data which class to create when the document is loaded.
+
+00:01:56.204 --> 00:02:00.965
+The class field contains the fully qualified name of the class
+
+00:02:00.965 --> 00:02:05.765
+that tells Spring Data which class to create when the document is loaded.
+
+00:02:05.765 --> 00:02:08.449
+Did you see how simple that was?
+
+00:02:08.449 --> 00:02:14.294
+No need to write the boilerplate of creating a client and working with documents.
+
+00:02:14.294 --> 00:02:20.179
+This is the advantage of using a higher level abstraction like Spring Data.
+

@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.089 --> 00:00:07.169
+Spring Web Services provides functionality to automatically generate
+
+00:00:07.169 --> 00:00:12.015
+the Java files you need in order to consume a web service from your application,
+
+00:00:12.015 --> 00:00:15.450
+using the WSDL file for the SOAP web service.
+
+00:00:15.449 --> 00:00:18.509
+WSDL, W-S-D-L, stands for
+
+00:00:18.510 --> 00:00:23.325
+Web Services Description Language and simply describes the web service,
+
+00:00:23.324 --> 00:00:27.460
+it's location, and the operations allowed.
+

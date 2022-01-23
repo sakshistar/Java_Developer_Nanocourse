@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.875
+Hello, I'm Kisho Williams.
+
+00:00:01.875 --> 00:00:03.209
+Welcome to my course,
+
+00:00:03.209 --> 00:00:05.400
+web services and APIs.
+
+00:00:05.400 --> 00:00:09.750
+Today, I'm going to teach you about the importance of testing your APIs.
+
+00:00:09.750 --> 00:00:13.710
+Testing should just be a normal part of your development process.
+
+00:00:13.710 --> 00:00:17.400
+First, unit testing your small piece and then integrating
+
+00:00:17.399 --> 00:00:21.479
+your piece with all of the other system components with integration testing.
+
+00:00:21.480 --> 00:00:25.080
+Today, we are going to look at testing with Spring Boot.
+
+00:00:25.079 --> 00:00:27.989
+I will teach you about writing unit and integration tests,
+
+00:00:27.989 --> 00:00:30.149
+leveraging features like the at
+
+00:00:30.149 --> 00:00:34.949
+Spring Boot test annotation and the web MVC test annotation.
+
+00:00:34.950 --> 00:00:38.730
+I will also show you how to test using a mock environment.
+
+00:00:38.729 --> 00:00:42.375
+I will also teach you about the Spring Boot tests rest template.
+
+00:00:42.375 --> 00:00:44.799
+So let's get started.
+

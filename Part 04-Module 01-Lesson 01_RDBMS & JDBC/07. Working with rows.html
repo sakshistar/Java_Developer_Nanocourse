@@ -1,0 +1,316 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Working with rows</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>RDBMS &amp; JDBC</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Welcome.html">01. Welcome</a>
+    </li>
+    <li class="">
+      <a href="02. RDBMS.html">02. RDBMS</a>
+    </li>
+    <li class="">
+      <a href="03. MySQL.html">03. MySQL</a>
+    </li>
+    <li class="">
+      <a href="04. MySQL Datatypes.html">04. MySQL Datatypes</a>
+    </li>
+    <li class="">
+      <a href="05. Working with tables.html">05. Working with tables</a>
+    </li>
+    <li class="">
+      <a href="06. Working with Foreign Keys.html">06. Working with Foreign Keys</a>
+    </li>
+    <li class="">
+      <a href="07. Working with rows.html">07. Working with rows</a>
+    </li>
+    <li class="">
+      <a href="08. JDBC.html">08. JDBC</a>
+    </li>
+    <li class="">
+      <a href="09. Database Migration.html">09. Database Migration</a>
+    </li>
+    <li class="">
+      <a href="10. Recap.html">10. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">07. Working with rows</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>More info</p></h3>
+  <div>
+  <h4 id="select">SELECT</h4>
+<p>The SELECT statement reads rows from a table.</p>
+<pre><code class="sql language-sql">SELECT column-names FROM table-name</code></pre>
+<p>To select all columns, substitute <em>column-names</em> with *, like this</p>
+<pre><code class="sql language-sql">SELECT * FROM table-name</code></pre>
+<h4 id="select-with-where">SELECT with WHERE</h4>
+<p>WHERE is used to limit the number of rows.<br />
+The WHERE clause filters for rows that meet certain criteria.<br />
+WHERE is followed by a condition that returns either true or false.</p>
+<pre><code class="sql language-sql">SELECT column-names FROM table-name WHERE condition</code></pre>
+<h4 id="order-by">ORDER BY</h4>
+<p>SELECT returns records in no particular order, use ORDER BY to ensure a specific order.<br />
+ORDER BY allows sorting by one or more columns.<br />
+Rows can be returned in ascending or descending order.</p>
+<pre><code class="sql language-sql">SELECT column-names FROM table-name WHERE condition ORDER BY column-names</code></pre>
+<h4 id="join">JOIN</h4>
+<p>A SQL JOIN combines records from two tables. A query can contain zero, one, or more JOIN operations.</p>
+<h5 id="different-types-of-joins">Different types of JOINs</h5>
+<p>(INNER) JOIN: Select records that have matching values in both tables.<br />
+LEFT (OUTER) JOIN: Select records from the first (left-most) table with matching right table records.<br />
+RIGHT (OUTER) JOIN: Select records from the second (right-most) table with matching left table records.<br />
+FULL (OUTER) JOIN: Selects all records that match either left or right table records.</p>
+<h5 id="inner-join">INNER JOIN</h5>
+<pre><code class="sql language-sql">SELECT column-names FROM table-name1 INNER JOIN table-name2 ON column-name1 = column-name2 WHERE condition</code></pre>
+<p>The INNER keyword is optional.</p>
+<h5 id="left-join">LEFT JOIN</h5>
+<p>LEFT JOIN performs a join starting with the first (left-most) table and then any matching second (right-most) table records. </p>
+<pre><code class="sql language-sql">SELECT column-names FROM table-name1 LEFT JOIN table-name2 ON column-name1 = column-name2 WHERE condition</code></pre>
+<h5 id="right-join">RIGHT JOIN</h5>
+<p>RIGHT JOIN performs a join starting with the second (right-most) table and then any matching first (left-most) table records.</p>
+<pre><code class="sql language-sql">SELECT column-names FROM table-name1 RIGHT JOIN table-name2 ON column-name1 = column-name2 WHERE condition</code></pre>
+<h5 id="full-join">FULL JOIN</h5>
+<p>FULL JOIN returns all matching records from both tables whether the other table matches or not. It can potentially return very large datasets.</p>
+<pre><code class="sql language-sql">SELECT column-names FROM table-name1 FULL JOIN table-name2 ON column-name1 = column-name2 WHERE condition</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Question 1</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Write an INSERT statement to insert a record in the <em>post</em> table.</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="c6855c06-40da-4b87-8f45-2c8485ce5aac--0">
+        <label for="c6855c06-40da-4b87-8f45-2c8485ce5aac--0"><p>Insert contains values for all the columns except the primary key.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="c6855c06-40da-4b87-8f45-2c8485ce5aac--1">
+        <label for="c6855c06-40da-4b87-8f45-2c8485ce5aac--1"><p>Insert statement creates a record and generates a primary key.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Good job!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Question 2</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Write a SELECT statement to select a row from <em>post</em> table by primary key.</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="207a44f7-82e3-49ea-9ff4-dfe541aa417f--0">
+        <label for="207a44f7-82e3-49ea-9ff4-dfe541aa417f--0"><p>SELECT returns one row that matches the condition.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Well done.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Question 3</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Write a DELETE statement to delete a row in <em>post</em> table by primary key.</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="cb55506c-c60b-4e06-aa49-5ab70177cfe4--0">
+        <label for="cb55506c-c60b-4e06-aa49-5ab70177cfe4--0"><p>One row is deleted</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Well done.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="08. JDBC.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('07. Working with rows')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

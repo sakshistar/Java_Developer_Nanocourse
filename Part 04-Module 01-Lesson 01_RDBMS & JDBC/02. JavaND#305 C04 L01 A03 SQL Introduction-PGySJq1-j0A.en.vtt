@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.395
+In an earlier topic,
+
+00:00:01.395 --> 00:00:05.789
+we briefly touched on Structured Query Language or SQL.
+
+00:00:05.790 --> 00:00:11.039
+SQL is the primary interface used to interact with relational databases.
+
+00:00:11.039 --> 00:00:15.809
+SQL is a declarative domain specific language that
+
+00:00:15.810 --> 00:00:20.774
+is purposefully designed for managing data held in a relational database.
+
+00:00:20.774 --> 00:00:23.054
+Let's break that definition down.
+
+00:00:23.054 --> 00:00:25.289
+What does declarative mean?
+
+00:00:25.289 --> 00:00:29.280
+Declarative languages describe the desired results,
+
+00:00:29.280 --> 00:00:32.009
+but don't explicitly list commands or
+
+00:00:32.009 --> 00:00:35.774
+steps that must be performed to achieve those results.
+
+00:00:35.774 --> 00:00:38.734
+Before I delve deeper into the term declarative,
+
+00:00:38.734 --> 00:00:42.750
+let's see how a typical programming language works.
+
+00:00:42.979 --> 00:00:46.549
+In an imperative language like Java,
+
+00:00:46.549 --> 00:00:51.094
+lets say if you need to read 10 lines of text from a file,
+
+00:00:51.094 --> 00:00:55.054
+you will write code to open a file handle,
+
+00:00:55.054 --> 00:01:00.780
+then use an iterator that reads 10 lines using that file handle,
+
+00:01:00.780 --> 00:01:03.250
+then close the file handle.
+
+00:01:03.250 --> 00:01:08.120
+See that you're specifying all the steps that need to be performed to
+
+00:01:08.120 --> 00:01:13.300
+achieve your desired result which is read 10 lines from a file.
+
+00:01:13.299 --> 00:01:17.750
+In SQL, if you want to read ten rows from a table,
+
+00:01:17.750 --> 00:01:23.905
+you simply provide your intention in the form of a statement like this. That's it.
+
+00:01:23.905 --> 00:01:26.599
+The Database figures out the best steps to
+
+00:01:26.599 --> 00:01:29.509
+get the 10 rows from the table and returns it to you.
+
+00:01:29.510 --> 00:01:32.390
+Simple, right? Let's look at the other term.
+
+00:01:32.390 --> 00:01:35.814
+Domain-specific that was in the definition.
+
+00:01:35.814 --> 00:01:39.620
+SQL is not a general purpose programming language.
+
+00:01:39.620 --> 00:01:44.375
+Meaning you can't use SQL to build a web or mobile applications.
+
+00:01:44.375 --> 00:01:48.170
+It is designed for one purpose and one purpose only.
+
+00:01:48.170 --> 00:01:51.989
+That is, to interact with a relational database.
+

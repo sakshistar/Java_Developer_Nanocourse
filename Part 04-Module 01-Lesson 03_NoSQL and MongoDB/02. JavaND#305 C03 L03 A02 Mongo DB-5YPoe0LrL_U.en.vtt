@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.230
+The name MongoDB comes from the word "Humongous".
+
+00:00:04.230 --> 00:00:09.074
+It is built to scale and store lots and lots of data.
+
+00:00:09.074 --> 00:00:15.164
+Similar to MySQL, MongoDB also follows the client-server model.
+
+00:00:15.164 --> 00:00:19.859
+In MongoDB, data is organized into documents.
+
+00:00:19.859 --> 00:00:23.489
+Documents are a collection of key value pairs.
+
+00:00:23.489 --> 00:00:29.265
+The values can be scholar types like numbers, dates, and strings.
+
+00:00:29.265 --> 00:00:32.024
+The values can also be arrays,
+
+00:00:32.024 --> 00:00:35.869
+other documents, or arrays of documents.
+
+00:00:35.869 --> 00:00:39.199
+Documents are organized into collections.
+
+00:00:39.200 --> 00:00:43.594
+A set of collections is organized into a database.
+
+00:00:43.594 --> 00:00:47.750
+A typical document in MongoDB looks like this.
+
+00:00:47.750 --> 00:00:52.564
+As you can see, the structure is very similar to JSON.
+
+00:00:52.564 --> 00:00:57.459
+But MongoDB documents are represented in BSON format.
+
+00:00:57.460 --> 00:01:02.975
+BSON is a serialization format used to store documents in MongoDB.
+
+00:01:02.975 --> 00:01:06.394
+BSON stands for Binary JSON.
+
+00:01:06.394 --> 00:01:11.574
+Think of BSON as a binary representation of JSON documents.
+
+00:01:11.575 --> 00:01:15.359
+In MongoDB, each document stored in a collection
+
+00:01:15.359 --> 00:01:19.789
+requires a unique underscore ID field that access a primary key.
+
+00:01:19.790 --> 00:01:23.600
+If an inserted document omits the underscore ID field,
+
+00:01:23.599 --> 00:01:27.304
+the MongoDB database automatically generates one.
+
+00:01:27.305 --> 00:01:31.130
+Let's see how some relational concepts map to
+
+00:01:31.129 --> 00:01:34.670
+MongoDB so you can kind of co-relate them with MySQL.
+
+00:01:34.670 --> 00:01:39.549
+A database in a relational model maps to a database in MongoDB.
+
+00:01:39.549 --> 00:01:42.719
+A table maps to a collection,
+
+00:01:42.719 --> 00:01:45.060
+a row to a document,
+
+00:01:45.060 --> 00:01:49.750
+and finally, a column maps to a field.
+

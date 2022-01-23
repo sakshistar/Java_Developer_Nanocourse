@@ -1,0 +1,109 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.100 --> 00:00:04.710
+Nice job on installing and setting up MySQL.
+
+00:00:04.710 --> 00:00:08.310
+Now, you're going to learn how to create a table in MySQL.
+
+00:00:08.310 --> 00:00:12.690
+We'll be using the MySQL client to execute our SQL statements.
+
+00:00:12.689 --> 00:00:14.939
+Let's assume you are a developer in
+
+00:00:14.939 --> 00:00:18.719
+an e-commerce application and you're building the persistence layer for it.
+
+00:00:18.719 --> 00:00:23.835
+The basic function of this application is to allow customers to buy items.
+
+00:00:23.835 --> 00:00:29.170
+Let's go ahead and create a table to capture the ordered information.
+
+00:00:31.519 --> 00:00:36.469
+Here's the create table statement to create an order table.
+
+00:00:36.469 --> 00:00:41.009
+Create table as it says, creates a table.
+
+00:00:41.060 --> 00:00:45.800
+It is followed by the table name and a set of
+
+00:00:45.799 --> 00:00:51.469
+column definitions and the constraint that is imposed on the table.
+
+00:00:51.469 --> 00:00:54.619
+The only constraint on this table is that
+
+00:00:54.619 --> 00:01:01.099
+the order ID column is the primary key or the unique identifier for a row.
+
+00:01:01.100 --> 00:01:04.745
+Column definitions have the column name,
+
+00:01:04.745 --> 00:01:06.685
+the data type of the column,
+
+00:01:06.685 --> 00:01:11.775
+and a qualifier or a constraint like this.
+
+00:01:11.775 --> 00:01:16.075
+The quantifier for order ID is auto increment,
+
+00:01:16.075 --> 00:01:18.920
+which tells the database to automatically
+
+00:01:18.920 --> 00:01:23.439
+increment the values of the column upon each insertion.
+
+00:01:24.260 --> 00:01:26.954
+Item name, for example,
+
+00:01:26.954 --> 00:01:33.829
+has the type as VARCHAR which is 300 characters long and its constraint is not null,
+
+00:01:33.829 --> 00:01:38.554
+which means whenever a record is inserted into the order table,
+
+00:01:38.555 --> 00:01:42.320
+a value for item name must be present.
+
+00:01:42.319 --> 00:01:45.989
+Let's go ahead and create this table.
+
+00:01:47.140 --> 00:01:49.939
+Our table has created.
+
+00:01:49.939 --> 00:01:54.090
+Let's see if this table was actually created.
+
+00:01:54.969 --> 00:01:58.894
+Okay, we see one table which is Orders.
+
+00:01:58.894 --> 00:02:02.109
+Let's examine the table structure.
+
+00:02:06.109 --> 00:02:11.360
+All right, so you have all the columns that was defined in
+
+00:02:11.360 --> 00:02:14.090
+the original create table definition listed over
+
+00:02:14.090 --> 00:02:17.229
+here and then we can see all the data types,
+
+00:02:17.229 --> 00:02:19.234
+the constraints that we have added.
+
+00:02:19.235 --> 00:02:26.045
+Note that ORDER_ID was set as the primary key and it is marked as the primary key here.
+
+00:02:26.044 --> 00:02:29.084
+The qualifiers is also marked here,
+
+00:02:29.085 --> 00:02:31.629
+which is auto increment.
+

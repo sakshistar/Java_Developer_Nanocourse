@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.965
+Hello, I'm Kesha Williams.
+
+00:00:01.965 --> 00:00:03.225
+Welcome to my course,
+
+00:00:03.225 --> 00:00:05.595
+Web Services and APIs.
+
+00:00:05.594 --> 00:00:10.259
+Today, I'm going to teach you about the importance of documenting your APIs.
+
+00:00:10.259 --> 00:00:13.080
+When we talk about documentation versus coding,
+
+00:00:13.080 --> 00:00:16.019
+any developer will tell you that coding is definitely
+
+00:00:16.019 --> 00:00:19.410
+more fun than keeping documentation up to date.
+
+00:00:19.410 --> 00:00:23.070
+But documenting your code and APIs are important.
+
+00:00:23.070 --> 00:00:27.269
+It helps others better understand your code and your APIs.
+
+00:00:27.269 --> 00:00:31.259
+Today, we will review Swagger which dynamically generates
+
+00:00:31.260 --> 00:00:36.635
+documentation from your Java code and some of its components like Swagger UI.
+
+00:00:36.634 --> 00:00:40.954
+I will show you how to add Swagger to your project and configure it.
+
+00:00:40.954 --> 00:00:46.564
+We will wrap up with discussing ways to customize Swagger's output to meet your needs.
+
+00:00:46.564 --> 00:00:48.929
+So let's get started.
+

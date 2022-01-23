@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.740
+Today, you learned how to integrate third party RESTful APIs and SOAP
+
+00:00:04.740 --> 00:00:10.169
+based web services into your existing applications to speed up your delivery cycle.
+
+00:00:10.169 --> 00:00:12.974
+Why reinvent the wheel if you don't have to?
+
+00:00:12.974 --> 00:00:18.134
+You learned about REST template to programmatically call a REST API from your code.
+
+00:00:18.135 --> 00:00:19.950
+We then looked at Jackson,
+
+00:00:19.949 --> 00:00:24.570
+which is a library that maps Java objects to JSON and vice versa.
+
+00:00:24.570 --> 00:00:28.740
+Next, you learned about using Spring Web services to generate
+
+00:00:28.739 --> 00:00:33.314
+code from a WSDL to help you invoke a SOAP based web service.
+
+00:00:33.314 --> 00:00:39.849
+Next, you will learn about documenting the web services and APIs that you create.
+

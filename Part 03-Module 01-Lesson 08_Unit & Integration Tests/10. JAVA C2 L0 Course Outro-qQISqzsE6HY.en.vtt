@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.620 --> 00:00:03.075
+We've reached the end of the course.
+
+00:00:03.075 --> 00:00:06.360
+Thanks for following along with me and being fully engaged.
+
+00:00:06.360 --> 00:00:09.390
+You've mastered web services, micro-services,
+
+00:00:09.390 --> 00:00:13.035
+and APIs and learned how to share data using them.
+
+00:00:13.035 --> 00:00:17.699
+You even learned how to re-use third party web services in your existing systems,
+
+00:00:17.699 --> 00:00:19.559
+to help speed up your development.
+
+00:00:19.559 --> 00:00:24.179
+You saw how easy Spring Boot makes it to develop rest APIs.
+
+00:00:24.179 --> 00:00:27.460
+You were exposed to graph QL and the tool graphic
+
+00:00:27.460 --> 00:00:31.370
+QL for sending queries and mutations to a graph QL server.
+
+00:00:31.370 --> 00:00:34.070
+We discussed the importance of security,
+
+00:00:34.070 --> 00:00:37.670
+and securing the web services that provide access to your data.
+
+00:00:37.670 --> 00:00:41.379
+We use basic Auth to secure our rest API,
+
+00:00:41.378 --> 00:00:45.379
+and then discuss the importance of documentation and testing,
+
+00:00:45.380 --> 00:00:47.950
+which are oftentimes the last things we do.
+
+00:00:47.950 --> 00:00:51.470
+But they should be a part of our normal development process.
+
+00:00:51.469 --> 00:00:56.030
+You've seen how easy both unit and integration testing can be,
+
+00:00:56.030 --> 00:00:59.539
+due to useful frameworks like J-Unit and Mockito.
+
+00:00:59.539 --> 00:01:04.265
+I encourage you to take everything you've learned and fully embrace web services.
+
+00:01:04.265 --> 00:01:07.019
+Good luck on your learning journey.
+

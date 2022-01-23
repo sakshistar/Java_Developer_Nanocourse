@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.040
+Today we reviewed swagger,
+
+00:00:02.040 --> 00:00:05.849
+which dynamically generates documentation from your Java code.
+
+00:00:05.849 --> 00:00:12.029
+We saw how useful the swagger UI is by allowing other APIs developers or consumers
+
+00:00:12.029 --> 00:00:14.820
+to interact with your APIs resources
+
+00:00:14.820 --> 00:00:18.585
+without having any of their implementation logic in place.
+
+00:00:18.585 --> 00:00:21.208
+We wrapped up by discussing how to customize
+
+00:00:21.208 --> 00:00:24.419
+the response messages using swagger annotations.
+
+00:00:24.420 --> 00:00:30.130
+Next, I will teach you about unit and integration testing for your APIs.
+
