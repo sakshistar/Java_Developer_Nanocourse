@@ -1,0 +1,466 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.167
+Notem que este
+contador de laço
+
+00:00:02.200 --> 00:00:06.200
+não está aí só para controlar
+quantas vezes o laço deve iterar.
+
+00:00:06.234 --> 00:00:09.267
+Pode ser usado dentro do laço
+como uma variável.
+
+00:00:09.300 --> 00:00:10.300
+Vamos ver como.
+
+00:00:10.334 --> 00:00:13.501
+Digamos que você queira
+mudar a mensagem do alerta
+
+00:00:13.534 --> 00:00:17.000
+para que ela diga o número
+do aviso que está mostrando,
+
+00:00:17.033 --> 00:00:21.334
+como aviso nº 1, nº 2,
+3, 4 e 5.
+
+00:00:21.367 --> 00:00:27.734
+Basta concatenar a variável i
+à mensagem aqui.
+
+00:00:27.767 --> 00:00:29.934
+O resto fica igual.
+
+00:00:29.968 --> 00:00:33.067
+Vamos ver no programa
+o que acontece.
+
+00:00:33.100 --> 00:00:37.067
+Se chamarmos a função raiseAlarm
+passando o valor 5,
+
+00:00:37.100 --> 00:00:39.501
+o número de avisos
+é igual a 5.
+
+00:00:39.534 --> 00:00:42.033
+Começamos
+inicializando i como 1,
+
+00:00:42.067 --> 00:00:45.400
+e depois comparamos i
+ao número de alertas.
+
+00:00:45.434 --> 00:00:49.501
+Se for menor ou igual a 5,
+o que é verdadeiro, entramos no laço.
+
+00:00:49.534 --> 00:00:54.534
+Primeiro imprimimos "Warning #"
+concatenado com i.
+
+00:00:54.567 --> 00:01:00.100
+Nesse caso, i é igual a 1,
+então imprimirá "Warning # 1".
+
+00:01:00.133 --> 00:01:04.934
+Chegamos ao fim do laço. A primeira
+coisa a fazer é incrementar i.
+
+00:01:04.968 --> 00:01:10.734
+Escrevemos 2 e, feito isso,
+fazemos a nossa checagem.
+
+00:01:10.767 --> 00:01:15.234
+2&lt;=5, verdadeiro,
+então entramos no laço.
+
+00:01:15.267 --> 00:01:19.167
+i é igual a 2, então quando
+o concatenamos com o nº do aviso,
+
+00:01:19.200 --> 00:01:21.567
+obtemos a mensagem
+"Warning # 2".
+
+00:01:21.601 --> 00:01:25.601
+Iterando, então incrementamos i,
+comparamos
+
+00:01:25.634 --> 00:01:31.767
+e entramos, fazendo o alerta nº 3,
+porque i é 3, e o mesmo para 4.
+
+00:01:31.801 --> 00:01:35.133
+Comparamos, imprimimos.
+
+00:01:35.167 --> 00:01:40.367
+Fazemos o 5, imprimimos,
+e quando i se torna 6,
+
+00:01:40.400 --> 00:01:44.534
+comparamos, 6 não é mais
+menor ou igual a 5.
+
+00:01:44.567 --> 00:01:48.834
+Não entramos no laço,
+apenas terminamos a função.
+
+00:01:48.868 --> 00:01:52.801
+Podemos fazer muita coisa legal aqui
+usando a variável i.
+
+00:01:52.834 --> 00:01:56.400
+Ela continua mudando
+à medida que o laço incrementa.
+
+00:01:56.434 --> 00:02:01.033
+Entretanto, devem tomar cuidado
+para não mudar a variável i
+
+00:02:01.067 --> 00:02:03.968
+pois ainda é usada
+para controlar o laço.
+
+00:02:04.000 --> 00:02:06.067
+Vejamos um exemplo.
+
+00:02:06.100 --> 00:02:09.267
+Este laço começa
+inicializando i a 1,
+
+00:02:09.300 --> 00:02:15.133
+e segue iterando enquanto i &lt;= 3,
+e incrementa i em 1.
+
+00:02:15.167 --> 00:02:20.567
+Primeiro ele tira 1 de i
+e imprime i.
+
+00:02:21.100 --> 00:02:26.367
+O que este laço está fazendo?
+Claramente roda de 1 até 3,
+
+00:02:26.400 --> 00:02:28.267
+1, 2, 3.
+
+00:02:28.300 --> 00:02:31.133
+Subtraímos 1 e imprimimos i.
+
+00:02:31.167 --> 00:02:35.167
+Talvez possamos pensar
+que isto imprimiria 0 1 2.
+
+00:02:35.200 --> 00:02:38.133
+Bem, vamos ver
+o que obtemos.
+
+00:02:38.167 --> 00:02:41.267
+Primeiro
+inicializamos i como 1,
+
+00:02:41.300 --> 00:02:45.434
+comparamos se i &lt;= 3, e é.
+
+00:02:45.467 --> 00:02:51.200
+Entramos, e a primeira coisa
+que fazemos é mudar i para i-1.
+
+00:02:51.234 --> 00:02:56.067
+Isso faz de i zero,
+porque subtraímos 1 de i,
+
+00:02:56.100 --> 00:03:01.501
+que era 1, e atualizamos i
+para ser essa subtração, que é zero.
+
+00:03:01.534 --> 00:03:05.267
+Imprimimos i,
+que no nosso caso é zero,
+
+00:03:05.300 --> 00:03:07.734
+e a saída é zero.
+
+00:03:07.767 --> 00:03:10.033
+Terminamos o laço,
+voltamos aqui,
+
+00:03:10.067 --> 00:03:15.968
+incrementamos i, tornando-o 1,
+e comparamos i &lt;= 3.
+
+00:03:16.000 --> 00:03:19.801
+Sim, é, entramos no laço
+e fazemos isto de novo.
+
+00:03:19.834 --> 00:03:23.801
+Subtraímos 1 de i, que era 1,
+tornando-o zero.
+
+00:03:23.834 --> 00:03:27.801
+Entramos na linha que imprime,
+e imprimimos 0.
+
+00:03:27.834 --> 00:03:30.534
+Terminamos o laço,
+voltamos aqui,
+
+00:03:30.567 --> 00:03:33.300
+incrementamos i
+para se tornar 1 de novo.
+
+00:03:33.334 --> 00:03:40.467
+E, claro, 1 &lt;= 3, e isso
+continua acontecendo repetidamente.
+
+00:03:41.000 --> 00:03:47.000
+Isto é chamado de laço infinito,
+porque ele nunca terminaria.
+
+00:03:47.033 --> 00:03:50.300
+Ele se repetiria
+infinitamente.
+
+00:03:50.334 --> 00:03:54.100
+Você tem que parar o programa
+e forçá-lo a sair.
+
+00:03:54.133 --> 00:03:57.834
+Laços infinitos são comuns
+se você não for cuidadoso.
+
+00:03:57.868 --> 00:04:03.133
+Fique à vontade para usar i como
+parte do seu programa dentro do laço,
+
+00:04:03.167 --> 00:04:08.567
+mas cuidado para não mudá-lo para algo
+que não esteja sob seu controle.
+
+00:04:08.601 --> 00:04:12.734
+Neste caso, o problema era que
+estávamos atribuindo um valor a i,
+
+00:04:12.767 --> 00:04:16.300
+enquanto ainda estava sendo usado
+como contador de laço.
+
+00:04:16.334 --> 00:04:19.634
+E como sempre incrementamos
+e decrementamos de novo,
+
+00:04:19.667 --> 00:04:23.868
+eu sempre iteraria entre 1 e 0,
+e nunca terminaria,
+
+00:04:23.901 --> 00:04:25.901
+porque nunca alcançaria 3.
+
+00:04:25.934 --> 00:04:29.734
+Mas se implementarmos o laço assim,
+estaremos seguros.
+
+00:04:29.767 --> 00:04:31.133
+Vejamos por quê.
+
+00:04:31.167 --> 00:04:35.000
+Só o que mudamos foi criar
+esta nova variável, x,
+
+00:04:35.033 --> 00:04:37.801
+e ao subtrairmos 1 de i,
+o armazenamos em x,
+
+00:04:37.834 --> 00:04:40.100
+em vez de atualizarmos
+a variável i.
+
+00:04:40.133 --> 00:04:41.834
+Vejamos o que acontece.
+
+00:04:41.868 --> 00:04:46.167
+i começa com 1,
+e checamos se é &lt;= 3. Ele é.
+
+00:04:46.200 --> 00:04:51.267
+Entramos e atualizamos
+a variável x para ser i-1.
+
+00:04:51.300 --> 00:04:54.501
+1-1=0, x se torna 0.
+
+00:04:54.534 --> 00:04:59.200
+E imprimimos x.
+Nossa saída fica 0.
+
+00:04:59.234 --> 00:05:03.000
+Terminamos a iteração,
+voltamos e acrescentamos 1 a i.
+
+00:05:03.033 --> 00:05:08.767
+Como i não mudou, estamos
+acrescentando 1 a 1 e se torna 2.
+
+00:05:08.801 --> 00:05:13.667
+2 ainda é &lt;= 3, é verdadeiro,
+entramos no laço
+
+00:05:13.701 --> 00:05:16.667
+e atualizamos x
+para ser i-1.
+
+00:05:16.701 --> 00:05:19.033
+i é 2, x se torna 1.
+
+00:05:19.067 --> 00:05:23.300
+Imprimimos x que, no caso, é 1,
+imprimimos 1.
+
+00:05:23.334 --> 00:05:27.701
+É o fim da iteração, voltamos
+e incrementamos i para torná-lo 3,
+
+00:05:27.734 --> 00:05:31.367
+comparamos
+e ainda é verdadeiro.
+
+00:05:31.400 --> 00:05:35.100
+Entramos no laço e atualizamos x
+para se tornar 2
+
+00:05:35.133 --> 00:05:37.200
+e imprimimos x aqui.
+
+00:05:37.234 --> 00:05:40.501
+Voltamos e incrementamos i
+para torná-lo 4.
+
+00:05:40.534 --> 00:05:43.601
+Mas 4 não é mais &lt;= 3.
+
+00:05:43.634 --> 00:05:49.234
+Então não vamos mais entrar no laço
+ou atualizar x, nem imprimir nada.
+
+00:05:49.267 --> 00:05:50.834
+É o fim do laço.
+
+00:05:50.868 --> 00:05:54.667
+Isto foi seguro, em comparação
+ao laço infinito de antes,
+
+00:05:54.701 --> 00:05:57.367
+porque não atualizamos
+a variável i.
+
+00:05:57.400 --> 00:06:03.033
+Disso, aprendemos que podemos usar
+i como variável,
+
+00:06:03.067 --> 00:06:05.367
+desde que
+não a atualizemos.
+
+00:06:05.400 --> 00:06:07.934
+Vejamos outro exemplo
+também seguro.
+
+00:06:07.968 --> 00:06:11.167
+Aqui, a única coisa
+que fazemos dentro do laço
+
+00:06:11.200 --> 00:06:14.634
+é mandando imprimir i*2.
+
+00:06:14.667 --> 00:06:20.267
+Não atualizamos i, só o multiplicamos
+por 2 ao imprimi-lo.
+
+00:06:20.300 --> 00:06:24.367
+Em vez de imprimir i,
+imprimimos duas vezes i.
+
+00:06:24.400 --> 00:06:27.434
+Vamos ver o que acontece.
+
+00:06:27.467 --> 00:06:30.200
+Inicializamos i como 1,
+
+00:06:30.234 --> 00:06:33.667
+e comparamos se ele é &lt;= 3,
+o que é verdadeiro.
+
+00:06:33.701 --> 00:06:39.601
+Entramos, imprimimos i*2, que é 2,
+porque i é 1.
+
+00:06:40.300 --> 00:06:44.667
+Ao final da iteração,
+incrementamos i para se tornar 2.
+
+00:06:44.701 --> 00:06:48.400
+Tudo bem,
+porque i não mudou.
+
+00:06:48.434 --> 00:06:51.667
+Ao chegarmos ao incremento,
+ainda era 1,
+
+00:06:51.701 --> 00:06:54.167
+pulou para 2, que é normal.
+
+00:06:54.200 --> 00:07:00.300
+Comparamos i&lt;=3, e é,
+entramos e imprimimos i*2.
+
+00:07:00.334 --> 00:07:03.634
+i é 2, a saída seria 4.
+
+00:07:03.667 --> 00:07:06.934
+Voltamos, incrementamos i
+para se tornar 3.
+
+00:07:06.968 --> 00:07:13.200
+3 ainda é &lt;= 3, entramos
+e imprimimos 3*2, que é 6.
+
+00:07:13.234 --> 00:07:18.400
+Incrementamos i para torná-lo 4,
+mas 4 não é mais &lt;= 3.
+
+00:07:18.434 --> 00:07:21.300
+É falso,
+e não imprimimos nada.
+
+00:07:21.334 --> 00:07:25.100
+Quando esta condição se torna falsa,
+não entramos no laço.
+
+00:07:25.133 --> 00:07:26.601
+Apenas saímos.
+
+00:07:26.634 --> 00:07:30.400
+Então é assim.
+É bem útil usarmos a variável i,
+
+00:07:30.434 --> 00:07:34.000
+ou o nome que tiver o contador,
+dentro do laço.
+
+00:07:34.033 --> 00:07:37.133
+Também podem fazer isso
+com laços while, é claro.
+
+00:07:37.167 --> 00:07:40.267
+Só tomem cuidado
+para não atualizá-la.
+
+00:07:40.300 --> 00:07:45.334
+Vejamos como podemos usar laços
+para calcular coisas para nós.
+

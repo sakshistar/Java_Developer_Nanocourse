@@ -1,0 +1,60 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.868
+Vimos como controlar o modo
+como computadores tomam decisões,
+
+00:00:03.901 --> 00:00:07.834
+dando a eles informações do mundo
+sobre dados que podem mudar.
+
+00:00:07.868 --> 00:00:09.934
+Como semáforos,
+clima ou códigos.
+
+00:00:09.968 --> 00:00:12.934
+E podemos criar programas
+que reajam aos dados.
+
+00:00:12.968 --> 00:00:16.634
+Usamos booleanas para testar
+se os dados caem em condições
+
+00:00:16.667 --> 00:00:18.467
+verdadeiras ou falsas.
+
+00:00:18.501 --> 00:00:21.801
+E controle de fluxo para criar
+caminhos de decisões,
+
+00:00:21.834 --> 00:00:23.868
+com instruções if e else.
+
+00:00:23.901 --> 00:00:26.968
+Decisões são importantes
+para muitas aplicações.
+
+00:00:27.000 --> 00:00:29.501
+Vimos como se aplicam
+a carros autônomos
+
+00:00:29.534 --> 00:00:33.667
+e a comportamentos automatizados,
+como fixar preços de ingressos.
+
+00:00:33.701 --> 00:00:35.567
+Sabendo controle de fluxo,
+
+00:00:35.601 --> 00:00:38.767
+poderão fazer programas
+inteligentes e eficientes.
+
+00:00:38.801 --> 00:00:42.067
+Vamos aprender agora
+a agrupar código com funções.
+
+00:00:42.100 --> 00:00:43.667
+Vamos seguir aprendendo.
+

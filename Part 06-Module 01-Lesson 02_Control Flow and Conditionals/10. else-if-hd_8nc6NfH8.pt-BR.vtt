@@ -1,0 +1,279 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.334
+Vários cenários
+de tomada de decisões
+
+00:00:02.367 --> 00:00:05.334
+exigem mais
+do que dois caminhos,
+
+00:00:05.367 --> 00:00:09.434
+como, para o nosso carro autônomo,
+e se o sinal estiver amarelo?
+
+00:00:09.467 --> 00:00:13.000
+Podemos querer dizer a ele
+para executar uma outra ação,
+
+00:00:13.033 --> 00:00:14.501
+como desacelerar.
+
+00:00:14.534 --> 00:00:18.667
+Mas agora só temos as opções
+"parar" ou "dirigir".
+
+00:00:18.701 --> 00:00:23.767
+Como construir nossa instrução if else
+para incluir mais opções?
+
+00:00:23.801 --> 00:00:25.901
+É onde entra o else-if.
+
+00:00:25.934 --> 00:00:30.200
+Ele vem depois de uma instrução if,
+mas antes de um else.
+
+00:00:30.234 --> 00:00:33.934
+Ele checa uma condição de teste
+diferente daquela no if.
+
+00:00:33.968 --> 00:00:37.834
+Em vez de checar se o sinal
+está verde, o else-if pode checar
+
+00:00:37.868 --> 00:00:42.734
+se o sinal está amarelo,
+e fornecer outro caminho de decisão,
+
+00:00:42.767 --> 00:00:46.634
+um conjunto alternativo de instruções,
+como "desacelerar".
+
+00:00:46.667 --> 00:00:51.667
+Só vai ser executado se a condição
+de teste if anterior for falsa.
+
+00:00:51.701 --> 00:00:56.100
+Assim, quando isLightGreen é falsa,
+o código irá para o else-if.
+
+00:00:56.133 --> 00:00:59.667
+E se sua condição de teste
+isLightYellow for verdadeira,
+
+00:00:59.701 --> 00:01:02.033
+podemos imprimir "desacelerar".
+
+00:01:02.067 --> 00:01:05.467
+E "desacelerar" torna-se
+outro caminho de decisão.
+
+00:01:05.501 --> 00:01:08.901
+Só se essas duas condições
+forem falsas,
+
+00:01:08.934 --> 00:01:12.167
+o código irá para else
+e imprimir "parar".
+
+00:01:12.200 --> 00:01:15.968
+Vejamos como fica no código Java
+do carro autônomo.
+
+00:01:16.000 --> 00:01:18.100
+Aqui está o código
+com else if.
+
+00:01:18.133 --> 00:01:21.734
+A primeira coisa a saber
+para a condição de teste else if
+
+00:01:21.767 --> 00:01:23.901
+é se o sinal está amarelo.
+
+00:01:23.934 --> 00:01:27.968
+Digamos que temos uma nova
+variável booleana, isLightYellow,
+
+00:01:28.000 --> 00:01:30.334
+que será
+verdadeira ou falsa.
+
+00:01:30.367 --> 00:01:35.467
+E temos else if, após if,
+mas antes da instrução else.
+
+00:01:35.501 --> 00:01:38.534
+Isto checa a condição de teste
+isLightYellow.
+
+00:01:38.567 --> 00:01:42.634
+Se o sinal for amarelo,
+mas não verde, entramos else if
+
+00:01:42.667 --> 00:01:44.767
+e imprimimos "desacelerar".
+
+00:01:44.801 --> 00:01:48.033
+Agora temos 3 caminhos
+de decisão.
+
+00:01:48.067 --> 00:01:51.467
+1º, se o sinal for verde,
+imprimimos "dirigir".
+
+00:01:51.501 --> 00:01:57.334
+2º, se não for verde, mas amarelo,
+imprimimos "desacelerar".
+
+00:01:57.367 --> 00:02:00.234
+e 3º, se essas condições
+não forem atendidas,
+
+00:02:00.267 --> 00:02:02.000
+imprimimos "parar".
+
+00:02:02.033 --> 00:02:03.834
+Vamos tentar.
+
+00:02:03.868 --> 00:02:07.367
+Pensemos no que acontece
+se isLightGreen for verdadeiro
+
+00:02:07.400 --> 00:02:09.234
+e isLightYellow, falso.
+
+00:02:09.267 --> 00:02:12.634
+E, neste caso, o valor
+de isLightYellow não importa.
+
+00:02:12.667 --> 00:02:14.701
+Veremos por quê
+daqui a pouco.
+
+00:02:14.734 --> 00:02:16.701
+Com esses
+valores booleanos,
+
+00:02:16.734 --> 00:02:20.567
+o computador verá o código
+de tomar decisões linha a linha.
+
+00:02:20.601 --> 00:02:25.100
+Primeiro, ele checa se a instrução
+isLightGreen é verdadeira.
+
+00:02:25.133 --> 00:02:29.367
+É verdadeira, entramos o bloco
+de código if e imprimimos "dirigir".
+
+00:02:29.400 --> 00:02:33.067
+Isto completará o nosso código.
+É tudo o que imprimiremos.
+
+00:02:33.100 --> 00:02:36.634
+As instruções else if e else
+serão puladas.
+
+00:02:36.667 --> 00:02:40.200
+O valor de isLightYellow
+nunca será testado.
+
+00:02:40.234 --> 00:02:43.734
+Porque quando o computador executa
+o bloco de código if
+
+00:02:43.767 --> 00:02:45.767
+como fez
+ao imprimir "dirigir",
+
+00:02:45.801 --> 00:02:50.634
+ele pula para a chave do final
+do último else ou else if.
+
+00:02:50.667 --> 00:02:53.667
+Neste código,
+é bem no final do programa.
+
+00:02:54.234 --> 00:02:56.701
+E se trocarmos
+esses valores booleanos?
+
+00:02:56.734 --> 00:03:00.267
+isLightGreen seja falso
+e isLightYellow é verdadeiro.
+
+00:03:00.300 --> 00:03:03.601
+O computador recomeça,
+lendo o código do início,
+
+00:03:03.634 --> 00:03:05.634
+começando
+pela instrução if.
+
+00:03:05.667 --> 00:03:08.834
+Ele checa se a condição
+isLightGreen é verdadeira.
+
+00:03:08.868 --> 00:03:10.501
+E desta vez, não é.
+
+00:03:10.534 --> 00:03:14.400
+Ele vai para o bloco seguinte,
+else if.
+
+00:03:15.000 --> 00:03:18.601
+O else if checa
+se isLightYellow é verdadeira.
+
+00:03:18.634 --> 00:03:23.434
+Ela é. Entramos o bloco de código
+else if e imprimimos "desacelerar".
+
+00:03:23.467 --> 00:03:27.434
+A instrução else será pulada de novo,
+como no outro exemplo.
+
+00:03:27.467 --> 00:03:31.400
+Porque quando o computador executa
+um bloco de código else if,
+
+00:03:31.434 --> 00:03:36.033
+de novo, pula para a chave do final
+do último else ou else if.
+
+00:03:36.067 --> 00:03:40.667
+Mesmo para séries maiores de checagens
+com múltiplas instruções else if,
+
+00:03:40.701 --> 00:03:44.834
+só um dos blocos de código
+pode ser executado por vez.
+
+00:03:44.868 --> 00:03:49.000
+O bloco que pertence à condição
+de teste atendida primeiro.
+
+00:03:49.033 --> 00:03:51.601
+Só se essas duas condições
+forem falsas,
+
+00:03:51.634 --> 00:03:55.334
+o computador chegará à instrução else
+e imprimirá "parar".
+
+00:03:55.367 --> 00:03:59.200
+Se isLightGreen for falsa
+e isLightYellow for falsa,
+
+00:03:59.234 --> 00:04:02.534
+será a única forma
+de alcançarmos a instrução else.
+
+00:04:02.567 --> 00:04:07.400
+Vejamos mais exemplos de como usar
+else ifs para tomar decisões.
+

@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.384
+For this tic-tac-toe game whose characters X and O,
+
+00:00:03.384 --> 00:00:06.684
+are kept track of in a 2D array of characters named grid,
+
+00:00:06.684 --> 00:00:10.954
+which character do each of the following grid indices correspond to, X or O?
+
+00:00:10.955 --> 00:00:14.205
+Assume that the first index is the column
+
+00:00:14.205 --> 00:00:18.225
+that a character is in and the second index is the row that it's in.
+
+00:00:18.225 --> 00:00:21.520
+And type the character X or O for each answer.
+

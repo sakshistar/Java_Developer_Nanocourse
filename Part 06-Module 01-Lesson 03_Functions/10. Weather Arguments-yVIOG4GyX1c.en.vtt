@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.655
+For both of these, we're calling weatherInterpreter with some int argument put in.
+
+00:00:04.655 --> 00:00:07.780
+In the first case, if we have four as an input,
+
+00:00:07.780 --> 00:00:10.480
+our temperature will be set to that value of four.
+
+00:00:10.480 --> 00:00:12.685
+Then Java will enter our function code,
+
+00:00:12.685 --> 00:00:14.500
+and read it line by line.
+
+00:00:14.500 --> 00:00:15.939
+First comes our if statement,
+
+00:00:15.939 --> 00:00:18.655
+and it checks if temperature is greater than 30.
+
+00:00:18.655 --> 00:00:20.269
+Four is less than 30,
+
+00:00:20.269 --> 00:00:21.425
+so this will be false,
+
+00:00:21.425 --> 00:00:23.330
+and we'll move on to or else if.
+
+00:00:23.329 --> 00:00:25.524
+Then it checks if temperature is less than five.
+
+00:00:25.524 --> 00:00:27.329
+Four is less than five,
+
+00:00:27.329 --> 00:00:29.109
+so this condition is true,
+
+00:00:29.109 --> 00:00:32.140
+and we'll enter this statement and print out brr,
+
+00:00:32.140 --> 00:00:34.039
+consider wearing a jacket.
+
+00:00:34.039 --> 00:00:37.433
+In our second call, we're passing in 32,
+
+00:00:37.433 --> 00:00:40.320
+so our temperature parameter will be set to 32,
+
+00:00:40.320 --> 00:00:43.329
+and again will read our code line by line.
+
+00:00:43.329 --> 00:00:46.814
+First we see our if, and check if temperature is greater than 30.
+
+00:00:46.814 --> 00:00:48.689
+32 is greater than 30,
+
+00:00:48.689 --> 00:00:50.399
+so this time this is true,
+
+00:00:50.399 --> 00:00:53.179
+and we'll print out, it's hot outside.
+
+00:00:53.179 --> 00:00:57.604
+So even though we're using the same code for different arguments like four and 32,
+
+00:00:57.604 --> 00:01:00.269
+this can result in different lines being printed out.
+

@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.544
+Here's the correct code.
+
+00:00:01.544 --> 00:00:05.639
+We can change the range of our dice function just by changing the multiplier.
+
+00:00:05.639 --> 00:00:08.309
+For six-sided dice, the multiplier was six
+
+00:00:08.310 --> 00:00:11.294
+to give us a range one through six as an end results.
+
+00:00:11.294 --> 00:00:13.664
+For eight sides, we multiply it by eight.
+
+00:00:13.664 --> 00:00:15.625
+10 sides, we multiply it by 10.
+
+00:00:15.625 --> 00:00:16.940
+Do you see the pattern?
+
+00:00:16.940 --> 00:00:20.885
+Our multiplier has always been equal to the number of sides our dice has.
+
+00:00:20.885 --> 00:00:23.040
+So we can just change this line of code to be
+
+00:00:23.039 --> 00:00:26.004
+a random number equals random number times sides.
+
+00:00:26.004 --> 00:00:27.884
+The rest of our code will stay the same,
+
+00:00:27.885 --> 00:00:31.230
+so that when we shift our range up and convert to an integer,
+
+00:00:31.230 --> 00:00:34.560
+we'll get the range we want for any number of given sides a dice may have.
+

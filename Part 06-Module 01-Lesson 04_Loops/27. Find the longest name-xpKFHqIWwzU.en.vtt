@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.144
+Okay, so let's look at how we can implement this function.
+
+00:00:04.144 --> 00:00:07.469
+It accepts a parameter which is an array of strings called
+
+00:00:07.469 --> 00:00:12.739
+'names' and returns a string which has the longest name found in that array.
+
+00:00:12.740 --> 00:00:15.255
+The first thing we want to do is we want to calculate
+
+00:00:15.255 --> 00:00:18.870
+the length of our array and store it into a variable size,
+
+00:00:18.870 --> 00:00:21.929
+so that we know how many cells exist in this array;
+
+00:00:21.929 --> 00:00:25.410
+and then hence, build our loop based on that.
+
+00:00:25.410 --> 00:00:28.679
+The second thing we want to do is initialize a variable called
+
+00:00:28.679 --> 00:00:33.024
+'longestName' or whatever that would store the longest name we've found so far.
+
+00:00:33.024 --> 00:00:35.549
+And we want to initialize it to names of zero,
+
+00:00:35.549 --> 00:00:37.969
+which is the first name in our array.
+
+00:00:37.969 --> 00:00:41.115
+Then, we want to create our loop that would start from one,
+
+00:00:41.115 --> 00:00:43.730
+which is the very next name after that one,
+
+00:00:43.729 --> 00:00:47.834
+and it would keep going just before it reaches the size of the array.
+
+00:00:47.835 --> 00:00:50.594
+The increment is just i++ as usual.
+
+00:00:50.594 --> 00:00:53.820
+Inside that loop, we want to compare the length of
+
+00:00:53.820 --> 00:00:59.134
+each cell in that array to the longest name that we've found so far.
+
+00:00:59.134 --> 00:01:01.710
+So we say, if names of i,
+
+00:01:01.710 --> 00:01:07.849
+which is the string in that particular cell of the array at the position i;
+
+00:01:07.849 --> 00:01:10.487
+we say if names of i.length,
+
+00:01:10.487 --> 00:01:13.319
+so we're measuring the length of that particular string;
+
+00:01:13.319 --> 00:01:18.029
+and we're comparing it to the longestName.length,
+
+00:01:18.030 --> 00:01:22.189
+which should be storing the longest name we found so far.
+
+00:01:22.189 --> 00:01:27.060
+So if that name dot length is actually larger than the longestName.length,
+
+00:01:27.060 --> 00:01:31.200
+then we update the longest name to be that name.
+
+00:01:31.200 --> 00:01:34.995
+It's very similar to finding the smallest number in an array as well,
+
+00:01:34.995 --> 00:01:39.510
+except that we're comparing if it's greater than rather than smaller than.
+
+00:01:39.510 --> 00:01:41.295
+After we're done with our loop,
+
+00:01:41.295 --> 00:01:44.879
+that means we've visited every single cell in the array and we're
+
+00:01:44.879 --> 00:01:48.655
+always updating longestName if we find something that's longer,
+
+00:01:48.655 --> 00:01:53.560
+that means we can safely return longestName. There we go.
+

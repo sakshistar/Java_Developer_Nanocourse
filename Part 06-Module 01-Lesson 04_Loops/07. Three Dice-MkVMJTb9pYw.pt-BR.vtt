@@ -1,0 +1,273 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.534
+A resposta correta
+é esta checagem.
+
+00:00:03.567 --> 00:00:08.701
+enquanto NOT(dice1==dice2
+AND dice2==dice3).
+
+00:00:08.734 --> 00:00:13.434
+Vamos tentar uma por uma
+e ver por que só esta funciona.
+
+00:00:13.467 --> 00:00:19.534
+Vamos tentar esta condição.
+enquanto dice1==dice2 OR dice2==dice3.
+
+00:00:19.567 --> 00:00:24.968
+Imaginem que temos estes 3 dados
+com 6, 3, e 1.
+
+00:00:25.000 --> 00:00:29.834
+Então dice1 é 6, dice2 é 3,
+
+00:00:29.868 --> 00:00:31.701
+e dice3 é 1.
+
+00:00:31.734 --> 00:00:36.100
+Para ver o resultado dessa condição,
+vamos parte por parte.
+
+00:00:36.133 --> 00:00:39.467
+Esta parte vê se dice1
+é igual a dice2.
+
+00:00:39.501 --> 00:00:41.801
+E não é, isto é falso.
+
+00:00:41.834 --> 00:00:45.267
+Esta parte vê se dice2
+é igual a dice3.
+
+00:00:45.300 --> 00:00:47.834
+E não é.
+Também é falso.
+
+00:00:47.868 --> 00:00:51.667
+Porque as duas falsas
+estão separadas por um OR,
+
+00:00:51.701 --> 00:00:54.601
+tudo é falso.
+
+00:00:54.634 --> 00:00:57.167
+Ou seja, não entraremos
+no laço while
+
+00:00:57.200 --> 00:00:58.767
+e não jogaremos de novo,
+
+00:00:58.801 --> 00:01:01.701
+mesmo que o cenário
+devesse nos permitir isso.
+
+00:01:01.734 --> 00:01:04.601
+Está condição
+não funcionará.
+
+00:01:04.634 --> 00:01:07.400
+Vamos tentar
+esta condição agora.
+
+00:01:07.434 --> 00:01:11.968
+dice1==dice2
+AND dice2==dice3.
+
+00:01:12.000 --> 00:01:15.200
+Com o mesmo cenário,
+dice1 é 6,
+
+00:01:15.234 --> 00:01:18.334
+dice2 é 3, e dice3 é 1.
+
+00:01:18.367 --> 00:01:22.133
+Esta parte é falsa,
+e esta outra também.
+
+00:01:22.167 --> 00:01:24.834
+Elas são separadas
+por um AND.
+
+00:01:24.868 --> 00:01:27.901
+Ou seja, tudo será falso.
+
+00:01:27.934 --> 00:01:31.701
+Não vai jogar de novo,
+e neste caso deveria.
+
+00:01:31.734 --> 00:01:33.868
+Também não funciona.
+
+00:01:33.901 --> 00:01:38.534
+Vamos tentar enquanto
+dice1 não é igual a dice2
+
+00:01:38.567 --> 00:01:41.567
+AND dice2
+não é igual a dice3.
+
+00:01:41.601 --> 00:01:49.100
+Com o mesmo cenário, dice1 é 6,
+dice2 é 3, dice3 é 1.
+
+00:01:49.133 --> 00:01:53.467
+Esta parte checa se dice1
+não é igual a dice2.
+
+00:01:53.501 --> 00:01:56.067
+Não são iguais,
+é verdadeiro.
+
+00:01:56.100 --> 00:01:59.300
+Aqui também checa
+se não são iguais, e não são.
+
+00:01:59.334 --> 00:02:01.000
+Também é verdadeiro.
+
+00:02:01.033 --> 00:02:04.000
+E os dois verdadeiros
+são separados por um AND.
+
+00:02:04.033 --> 00:02:07.434
+Tudo isso é verdadeiro,
+e nos permite jogar de novo.
+
+00:02:07.467 --> 00:02:10.868
+E neste cenário devemos jogar,
+o que é perfeito.
+
+00:02:10.901 --> 00:02:18.234
+Mas e se fosse algo assim,
+onde tivéssemos dois 3 e um 1?
+
+00:02:18.267 --> 00:02:22.100
+Neste caso, dice1 seria 3,
+e dice2, também,
+
+00:02:22.133 --> 00:02:24.100
+e dice3 seria 1.
+
+00:02:24.133 --> 00:02:28.968
+Esta parte pergunta se
+dice1 e dice2 não são iguais,
+
+00:02:29.000 --> 00:02:31.634
+mas eles são, então é falso.
+
+00:02:31.667 --> 00:02:36.000
+Esta parte checa se não são iguais,
+e não são, então é verdadeiro.
+
+00:02:36.033 --> 00:02:39.100
+O falso e o verdadeiro
+são separados por um AND.
+
+00:02:39.133 --> 00:02:43.367
+Ou seja, como uma parte é falsa,
+tudo se torna falso.
+
+00:02:43.400 --> 00:02:46.968
+Ele não joga de novo,
+embora devesse.
+
+00:02:47.000 --> 00:02:49.968
+Funciona parcialmente,
+mas em certas situações,
+
+00:02:50.000 --> 00:02:52.634
+não nos permitirá jogar
+quando deveríamos.
+
+00:02:52.667 --> 00:02:54.567
+Também não funciona.
+
+00:02:54.601 --> 00:03:01.467
+Finalmente, se tentarmos enquanto
+NOT(dice1==dice2 AND dice2==dice3),
+
+00:03:01.501 --> 00:03:04.634
+usando o mesmo cenário,
+3, 3 e 1.
+
+00:03:04.667 --> 00:03:09.467
+Dice1 é 3, dice 2 também,
+e dice3 é 1.
+
+00:03:09.501 --> 00:03:13.601
+Esta parte é verdadeira,
+os dois são iguais.
+
+00:03:13.634 --> 00:03:17.367
+Esta é falsa,
+3 e 1 são diferentes.
+
+00:03:17.400 --> 00:03:19.767
+E são separadas por um AND.
+
+00:03:19.801 --> 00:03:23.467
+A verdadeira e a falsa
+resultam em falsa.
+
+00:03:23.501 --> 00:03:28.567
+Mas também há um NOT, que significa
+que este falso torna-se verdadeiro.
+
+00:03:28.601 --> 00:03:32.133
+E nesse cenário, entraríamos
+no laço para jogar de novo.
+
+00:03:32.167 --> 00:03:35.100
+Podem experimentar
+vários cenários,
+
+00:03:35.133 --> 00:03:38.501
+e sempre que deveria
+entrar no laço, ele o fará.
+
+00:03:38.534 --> 00:03:42.167
+Vamos ver um cenário
+onde os 3 dados são iguais.
+
+00:03:42.200 --> 00:03:45.367
+A condição onde o while
+não deveria jogar de novo.
+
+00:03:45.400 --> 00:03:49.167
+Neste caso,
+todos os dados são iguais a 3.
+
+00:03:49.200 --> 00:03:52.934
+Então ao começarmos a avaliar,
+esta parte é verdadeira,
+
+00:03:52.968 --> 00:03:56.033
+os dois são 3.
+Esta também é verdadeira.
+
+00:03:56.067 --> 00:03:58.801
+E duas verdadeiras
+separadas por um AND
+
+00:03:58.834 --> 00:04:00.634
+é verdadeira no total.
+
+00:04:00.667 --> 00:04:04.901
+E também há um NOT, ou seja,
+isto se torna falso.
+
+00:04:04.934 --> 00:04:08.534
+Aqui, não queremos
+entrar no laço,
+
+00:04:08.567 --> 00:04:12.100
+e é exatamente o que acontece aqui
+com esta condição.
+
+00:04:12.133 --> 00:04:13.701
+Isto também funciona.
+

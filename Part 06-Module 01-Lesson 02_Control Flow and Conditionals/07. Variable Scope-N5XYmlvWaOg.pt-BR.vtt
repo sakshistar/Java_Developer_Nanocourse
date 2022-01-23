@@ -1,0 +1,197 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.467
+Devem ter notado no código
+do carro autônomo, ou antes,
+
+00:00:03.501 --> 00:00:07.367
+que sempre declaramos variáveis
+booleanas, como isLightGreen,
+
+00:00:07.400 --> 00:00:08.934
+no início do código.
+
+00:00:08.968 --> 00:00:12.000
+Antes e fora do bloco de código
+instrução if.
+
+00:00:12.033 --> 00:00:15.133
+É por causa de algo
+chamado escopo de variáveis.
+
+00:00:15.167 --> 00:00:17.734
+Escopo de variáveis
+é o alcance de código
+
+00:00:17.767 --> 00:00:20.934
+onde uma certa variável
+pode ser usada e acessada.
+
+00:00:20.968 --> 00:00:23.934
+Aqui, precisávamos usar
+a variável isLightGreen
+
+00:00:23.968 --> 00:00:25.834
+na nossa
+condição de teste if.
+
+00:00:25.868 --> 00:00:30.033
+Então o escopo de isLightGreen
+deve conter toda essa instrução if.
+
+00:00:30.067 --> 00:00:34.133
+E declarando isLightGreen
+fora de chaves ou condições,
+
+00:00:34.167 --> 00:00:36.701
+a tornamos disponível
+a todo o programa.
+
+00:00:36.734 --> 00:00:38.868
+Todo o programa
+é o seu escopo.
+
+00:00:38.901 --> 00:00:43.667
+E devemos declarar variáveis
+antes de podermos usá-las no código.
+
+00:00:43.701 --> 00:00:46.200
+Por isso a variável
+da condição de teste
+
+00:00:46.234 --> 00:00:49.567
+é declarada antes de a usarmos
+no código de decisões.
+
+00:00:49.601 --> 00:00:53.634
+Mas e se declararmos uma variável
+dentro da instrução if?
+
+00:00:53.667 --> 00:00:55.267
+Dentro das chaves?
+
+00:00:55.300 --> 00:00:59.767
+Como esta, double carSpeed,
+que acompanha a velocidade do carro.
+
+00:00:59.801 --> 00:01:05.801
+Vamos pô-la = 100. Em km por hora.
+Umas 60 milhas por hora.
+
+00:01:05.834 --> 00:01:08.367
+O escopo da variável
+velocidade do carro
+
+00:01:08.400 --> 00:01:11.167
+será só o código
+dentro dessas chaves.
+
+00:01:11.200 --> 00:01:15.534
+Um conjunto de chaves define
+um escopo de uma variável específica
+
+00:01:15.567 --> 00:01:19.067
+Dentro do escopo,
+podemos usar a variável carSpeed
+
+00:01:19.100 --> 00:01:20.734
+e usamos, imprimindo-a.
+
+00:01:20.767 --> 00:01:24.634
+Mas se tentarmos nos referir
+a essa variável fora das chaves,
+
+00:01:24.667 --> 00:01:25.667
+não podemos.
+
+00:01:25.701 --> 00:01:28.534
+Se depois da última chave
+da instrução if,
+
+00:01:28.567 --> 00:01:31.467
+tentamos diminuir
+a velocidade do carro em 10,
+
+00:01:31.501 --> 00:01:36.334
+isto levará o computador a gerar
+uma mensagem de erro, como algo assim:
+
+00:01:36.367 --> 00:01:38.767
+Cannot resolve symbol 'carSpeed'.
+
+00:01:38.801 --> 00:01:40.667
+Estudaremos erros
+mais tarde.
+
+00:01:40.701 --> 00:01:44.434
+Mas isto causará um erro
+porque o programa não pode acessar
+
+00:01:44.467 --> 00:01:47.100
+a variável carSpeed
+fora do seu escopo.
+
+00:01:47.133 --> 00:01:50.801
+Pensem em escopo de variáveis
+como uma parede ou fronteira
+
+00:01:50.834 --> 00:01:53.534
+cujos lados são definidos
+por estas chaves.
+
+00:01:53.567 --> 00:01:56.667
+Todas as variáveis
+declaradas dentro das paredes,
+
+00:01:56.701 --> 00:01:58.567
+como carSpeed
+nesta fronteira,
+
+00:01:58.601 --> 00:02:00.934
+podem ser acessadas
+dentro do escopo.
+
+00:02:00.968 --> 00:02:05.667
+Mas ao sair da fronteira da parede
+e ir para fora das chaves, mesmo pouco,
+
+00:02:05.701 --> 00:02:08.334
+as variáveis
+não podem mais ser acessadas.
+
+00:02:08.367 --> 00:02:12.434
+A variável carSpeed, declarada
+dentro das chaves da instrução if,
+
+00:02:12.467 --> 00:02:15.400
+tem um escopo pequeno,
+uma pequena parede
+
+00:02:15.434 --> 00:02:18.133
+que não alcança
+fora do bloco de código if.
+
+00:02:18.167 --> 00:02:21.467
+Mas isLightGreen,
+que declaramos fora de chaves,
+
+00:02:21.501 --> 00:02:22.968
+tem um escopo grande,
+
+00:02:23.000 --> 00:02:25.767
+uma parede maior
+que contém todo o programa.
+
+00:02:25.801 --> 00:02:29.467
+Isso nos deixar usar
+e nos referir à variável isLightGreen
+
+00:02:29.501 --> 00:02:30.868
+na condição de teste.
+
+00:02:30.901 --> 00:02:33.367
+Lembrem-se disso
+ao usar instruções if.
+

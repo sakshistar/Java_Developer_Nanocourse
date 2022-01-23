@@ -1,0 +1,47 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.667
+Ótimo. Vimos como implementar
+a função findLongestName
+
+00:00:04.701 --> 00:00:08.234
+para encontrar a maior string
+em um vetor de strings.
+
+00:00:08.267 --> 00:00:14.100
+E se duas strings no vetor
+tiverem o mesmo tamanho?
+
+00:00:14.133 --> 00:00:16.400
+Por exemplo, veja este vetor.
+
+00:00:16.434 --> 00:00:21.133
+Estes dois nomes
+têm 8 caracteres.
+
+00:00:21.167 --> 00:00:25.334
+Veja esta implementação
+da função.
+
+00:00:25.367 --> 00:00:28.501
+Faça seu traço
+usando este exemplo
+
+00:00:28.534 --> 00:00:33.300
+e diga qual dessas opções
+você acha que é correta.
+
+00:00:33.334 --> 00:00:37.133
+A função retornaria Kimberli
+como o maior nome?
+
+00:00:37.167 --> 00:00:40.200
+Retornaria Apolonia
+como o maior nome?
+
+00:00:40.234 --> 00:00:43.501
+Retornaria as duas?
+Ou nenhuma?
+

@@ -1,0 +1,62 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.367
+Fiz um programa que aceita pedidos
+para um cartão de biblioteca.
+
+00:00:04.400 --> 00:00:07.968
+Cartões dão acesso a livros
+que você queira ler.
+
+00:00:08.000 --> 00:00:12.234
+Para pedir um, você deve mostrar
+algum tipo de identidade.
+
+00:00:12.267 --> 00:00:15.734
+Este programa aceita passaporte,
+certidão de nascimento
+
+00:00:15.767 --> 00:00:18.767
+ou carteira de motorista.
+
+00:00:18.801 --> 00:00:21.367
+Se a pessoa apresenta
+um desses ou não
+
+00:00:21.400 --> 00:00:23.901
+é armazenado
+nessas variáveis booleanas.
+
+00:00:23.934 --> 00:00:27.467
+passport, birthCertificate
+e driversLicense.
+
+00:00:27.501 --> 00:00:30.534
+São verdadeiras
+se tal identidade for fornecida.
+
+00:00:30.567 --> 00:00:34.801
+Uma pessoa pode apresentar várias
+formas de identidade, ou nenhuma.
+
+00:00:34.834 --> 00:00:38.067
+O programa vai imprimir
+se uma identidade é válida,
+
+00:00:38.100 --> 00:00:42.968
+ou se ela não é, sendo o pedido
+pelo cartão negado.
+
+00:00:43.000 --> 00:00:47.200
+O que este programa gera para
+para os seguintes valores booleanos?
+
+00:00:47.234 --> 00:00:50.634
+passport falso,
+birthCertificate verdadeiro,
+
+00:00:50.667 --> 00:00:52.601
+driversLicense verdadeiro.
+

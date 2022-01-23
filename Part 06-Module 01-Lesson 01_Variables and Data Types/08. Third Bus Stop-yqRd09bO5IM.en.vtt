@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.520
+So the correct solution was the first statement here,
+
+00:00:02.520 --> 00:00:06.370
+passengers equals passengers minus one plus five.
+
+00:00:06.370 --> 00:00:08.025
+As you've probably noticed by now,
+
+00:00:08.025 --> 00:00:12.550
+we can actually perform more than one arithmetic operation in the same statement.
+
+00:00:12.550 --> 00:00:15.420
+Of course we could have written them down into two statements like we did
+
+00:00:15.419 --> 00:00:19.969
+before or we could have even started by adding five and then subtracting one.
+
+00:00:19.969 --> 00:00:22.649
+However, none of these ones are correct. Let's see why.
+
+00:00:22.649 --> 00:00:27.054
+This one here is saying passengers equals five minus one.
+
+00:00:27.054 --> 00:00:29.699
+So it is five and subtracting one,
+
+00:00:29.699 --> 00:00:34.759
+but it's not updating upon the previous value of passengers like the one here.
+
+00:00:34.759 --> 00:00:37.724
+So this will set our passengers variable to four
+
+00:00:37.725 --> 00:00:42.060
+regardless of whatever happened before. That's not correct.
+
+00:00:42.060 --> 00:00:45.270
+This one here is updating our variable passengers but it's
+
+00:00:45.270 --> 00:00:49.145
+subtracting five and adding one which is the opposite of what we want to do.
+
+00:00:49.145 --> 00:00:52.260
+And the last option here seems like it's doing the right thing as
+
+00:00:52.259 --> 00:00:55.704
+well but it's still not updating passengers up here.
+
+00:00:55.704 --> 00:00:59.869
+It's just setting it to five and then subtracting one from it.
+
+00:00:59.869 --> 00:01:02.309
+That leaves us with this only correct option,
+
+00:01:02.310 --> 00:01:05.600
+passengers equals passengers minus one plus five.
+

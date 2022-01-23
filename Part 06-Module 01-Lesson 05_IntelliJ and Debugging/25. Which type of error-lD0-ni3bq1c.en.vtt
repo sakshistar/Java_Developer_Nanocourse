@@ -1,0 +1,151 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.245
+It's really common to find mistakes in your code the first time you try.
+
+00:00:04.245 --> 00:00:06.750
+You may forget to put a semi-colon at the end of
+
+00:00:06.750 --> 00:00:10.179
+an instruction or misspell a variable name.
+
+00:00:10.179 --> 00:00:15.390
+You could even do something less obvious like use the incorrect comparison operator.
+
+00:00:15.390 --> 00:00:18.719
+That's why IDEs like IntelliJ are super
+
+00:00:18.719 --> 00:00:23.689
+helpful because they can detect and point out errors like these and help you fix them.
+
+00:00:23.690 --> 00:00:25.170
+But first, let's have a look at
+
+00:00:25.170 --> 00:00:29.520
+some common errors and see how IntelliJ helps us resolve them.
+
+00:00:29.519 --> 00:00:33.640
+In Java, there are essentially three types of errors programmers tend to make.
+
+00:00:33.640 --> 00:00:38.365
+The first is called a syntax error or a compile time error.
+
+00:00:38.365 --> 00:00:40.500
+It's the kind of error that prevents your code from
+
+00:00:40.500 --> 00:00:43.109
+compiling in the first time because there is some sort of
+
+00:00:43.109 --> 00:00:48.810
+violation in the grammatical rules of the Java language like misspelling a variable name,
+
+00:00:48.810 --> 00:00:51.600
+or forgetting to close a set of curly brackets,
+
+00:00:51.600 --> 00:00:54.689
+or missing a semi-colon and such.
+
+00:00:54.689 --> 00:00:59.295
+Luckily, syntax errors are usually pointed out immediately in IntelliJ.
+
+00:00:59.295 --> 00:01:02.640
+It would highlight a problem like missing semi-colon with this red line
+
+00:01:02.640 --> 00:01:08.040
+here and it would also highlight variables that are misspelled or unknown.
+
+00:01:08.040 --> 00:01:11.010
+The second type of errors is called a runtime error.
+
+00:01:11.010 --> 00:01:14.609
+It's when something wrong happens while your program is running,
+
+00:01:14.609 --> 00:01:17.969
+like trying to access an index that is out of the bounds of an array
+
+00:01:17.969 --> 00:01:22.784
+or dividing some number by a variable that happens to be zero at that point.
+
+00:01:22.784 --> 00:01:24.659
+When a runtime error occurs,
+
+00:01:24.659 --> 00:01:29.144
+your program would immediately stop and it might even crash.
+
+00:01:29.144 --> 00:01:32.250
+If you have ever experienced a program crash on you before,
+
+00:01:32.250 --> 00:01:35.310
+it's very likely that an unexpected runtime error has
+
+00:01:35.310 --> 00:01:39.969
+occurred that was not handled correctly by the developer who made that program.
+
+00:01:39.969 --> 00:01:42.060
+We will learn a lot more about runtime errors in
+
+00:01:42.060 --> 00:01:45.530
+the next course when we discuss exceptions and how to handle them.
+
+00:01:45.530 --> 00:01:48.879
+Sometimes however, you end up with code that might seem there
+
+00:01:48.879 --> 00:01:52.064
+is nothing wrong with it because the syntax is perfect,
+
+00:01:52.064 --> 00:01:54.840
+and it would also run fine without crashing,
+
+00:01:54.840 --> 00:01:58.305
+but it just doesn't do what you expected to do.
+
+00:01:58.305 --> 00:02:01.295
+This type of error is called a bug.
+
+00:02:01.295 --> 00:02:04.950
+It's when you have something incorrect in the logic of your program itself,
+
+00:02:04.950 --> 00:02:10.409
+like using the wrong comparison operation or writing your statements in the wrong order.
+
+00:02:10.409 --> 00:02:14.219
+IDEs can't really detect bugs for you straight away because they
+
+00:02:14.219 --> 00:02:16.109
+can never know what's inside your mind or what
+
+00:02:16.110 --> 00:02:18.570
+you intend your program to do in the first place.
+
+00:02:18.569 --> 00:02:21.090
+They can however, help you find bugs by pointing
+
+00:02:21.090 --> 00:02:24.104
+out warning messages when it sees something suspicious,
+
+00:02:24.104 --> 00:02:28.409
+like this condition here that would always evaluate to false.
+
+00:02:28.409 --> 00:02:31.379
+Another thing IDEs allow you to do is to step inside
+
+00:02:31.379 --> 00:02:35.949
+the program as it runs and watch every instruction and statement as it happens.
+
+00:02:35.949 --> 00:02:38.179
+This process is called debugging.
+
+00:02:38.180 --> 00:02:42.027
+But before we take a look at how to use IntelliJ to debug some code,
+
+00:02:42.026 --> 00:02:46.349
+let's see if you can tell what type of error does this code have.
+
+00:02:46.349 --> 00:02:47.620
+Is it a syntax error,
+
+00:02:47.620 --> 00:02:51.129
+a runtime error, a bug or nothing is wrong with it.
+

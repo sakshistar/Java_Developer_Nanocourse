@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.235
+There doesn't seem to be anything wrong with the syntax of that code.
+
+00:00:04.235 --> 00:00:06.095
+And in fact, if you try to run it,
+
+00:00:06.094 --> 00:00:08.689
+it would run fine without even crashing.
+
+00:00:08.689 --> 00:00:11.945
+So it's not a syntax error and it's not a runtime error either.
+
+00:00:11.945 --> 00:00:15.740
+But when it does run, instead of printing out the numbers 1 to 100,
+
+00:00:15.740 --> 00:00:18.230
+it doesn't print out anything.
+
+00:00:18.230 --> 00:00:22.550
+That's a bug. And the only way to find out that it was a bug,
+
+00:00:22.550 --> 00:00:26.410
+is to follow it step by step and check if it works as expected or not.
+
+00:00:26.410 --> 00:00:28.969
+However, if you look closely at the loop condition,
+
+00:00:28.969 --> 00:00:33.710
+this greater than or equal 100 should be less than or equal to 100.
+
+00:00:33.710 --> 00:00:35.719
+Because i starts from 1,
+
+00:00:35.719 --> 00:00:41.479
+and the loop condition should be as long as i still less than or equal to 100.
+
+00:00:41.479 --> 00:00:46.000
+Now let's try out some of the debugging features in IntelliJ.
+

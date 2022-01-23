@@ -1,0 +1,35 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.734
+Aqui está a resposta certa.
+
+00:00:01.767 --> 00:00:05.334
+Precisamos de um if que
+use a variável boolean isRaining
+
+00:00:05.367 --> 00:00:06.868
+como condição de teste.
+
+00:00:06.901 --> 00:00:10.234
+Vai testar o seu valor
+para ver se está chovendo.
+
+00:00:10.267 --> 00:00:12.067
+Se isRaining for verdadeiro,
+
+00:00:12.100 --> 00:00:16.334
+vamos entrar em um bloco de código
+e imprimir "limpadores ligados".
+
+00:00:16.367 --> 00:00:19.734
+Mas se for falso,
+vamos pular o bloco de código
+
+00:00:19.767 --> 00:00:21.167
+e não imprimir nada.
+
+00:00:21.200 --> 00:00:23.534
+Este é o if completo.
+

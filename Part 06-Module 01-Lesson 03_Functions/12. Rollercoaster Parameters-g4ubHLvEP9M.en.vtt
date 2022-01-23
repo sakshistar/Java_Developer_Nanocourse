@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.279
+Here's the correct parameter, double, height.
+
+00:00:03.279 --> 00:00:07.064
+We know that the parameter name that this function is expecting is called height.
+
+00:00:07.065 --> 00:00:08.609
+And that's because that's the name of
+
+00:00:08.609 --> 00:00:11.464
+the variable that we check in our if test condition.
+
+00:00:11.464 --> 00:00:16.259
+And we also know that since a 130.5 is a valid argument value for height,
+
+00:00:16.260 --> 00:00:18.090
+that this can't be an integer.
+
+00:00:18.089 --> 00:00:19.699
+Integers are only whole numbers.
+
+00:00:19.699 --> 00:00:21.059
+So, this has to be a double.
+
+00:00:21.059 --> 00:00:23.234
+Which allows for a decimal point values.
+
+00:00:23.234 --> 00:00:25.484
+And by requiring this height parameter,
+
+00:00:25.484 --> 00:00:26.849
+this function can now check
+
+00:00:26.850 --> 00:00:31.030
+people's unique heights and tell them whether or not they passed the requirements.
+
+00:00:31.030 --> 00:00:35.039
+And we can include as many parameters in our function definition as we want.
+
+00:00:35.039 --> 00:00:38.000
+Next, let's see how to include multiple parameters.
+

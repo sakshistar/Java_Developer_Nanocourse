@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.139
+I've written a program that accepts applications for a library card.
+
+00:00:04.139 --> 00:00:07.889
+Library cards give you access to a lot of books you might want to read.
+
+00:00:07.889 --> 00:00:09.150
+And to apply for a card,
+
+00:00:09.150 --> 00:00:12.710
+you need to show some form of identification.
+
+00:00:12.710 --> 00:00:14.610
+This program accepts a passport,
+
+00:00:14.609 --> 00:00:18.494
+a birth certificate, or a driver's license as valid ID.
+
+00:00:18.495 --> 00:00:23.670
+And whether or not a person provides any of these is stored in these boolean variables,
+
+00:00:23.670 --> 00:00:27.720
+passport, birthCertificate and driversLicense.
+
+00:00:27.719 --> 00:00:30.434
+And these are true if that kind of ID is given.
+
+00:00:30.434 --> 00:00:34.519
+A person might provide multiple forms of ID or none at all.
+
+00:00:34.520 --> 00:00:37.740
+And this program will print out whether an ID is valid,
+
+00:00:37.740 --> 00:00:39.645
+or if the ID is invalid,
+
+00:00:39.645 --> 00:00:43.200
+and then the application for a library card is denied.
+
+00:00:43.200 --> 00:00:47.230
+What will the output of this program be for the following boolean values?
+
+00:00:47.229 --> 00:00:50.669
+Passport equals false, birth certificate equals true,
+
+00:00:50.670 --> 00:00:53.000
+and driver's license equals true.
+

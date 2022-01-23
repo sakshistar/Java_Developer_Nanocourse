@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.325
+Here's the incomplete documentation for a function called abs.
+
+00:00:04.325 --> 00:00:06.615
+Abs takes int, an integer parameter,
+
+00:00:06.615 --> 00:00:10.054
+and returns the absolute value of that number.
+
+00:00:10.054 --> 00:00:11.919
+Abs is just short for absolute,
+
+00:00:11.919 --> 00:00:13.724
+and the absolute value of a number,
+
+00:00:13.724 --> 00:00:16.804
+is just that number as a positive value.
+
+00:00:16.804 --> 00:00:20.314
+So the absolute value of five would still be positive five,
+
+00:00:20.315 --> 00:00:24.895
+and the absolute value of negative five would also be positive five.
+
+00:00:24.894 --> 00:00:27.695
+So it just turns negative values positive.
+
+00:00:27.695 --> 00:00:29.519
+Read through this incomplete doc,
+
+00:00:29.519 --> 00:00:32.344
+and see if you can figure out the piece that's missing.
+
+00:00:32.344 --> 00:00:34.304
+Then out of these three choices,
+
+00:00:34.304 --> 00:00:39.000
+select the corresponding Java doc component that could complete this documentation.
+

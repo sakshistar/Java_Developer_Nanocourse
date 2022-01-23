@@ -1,0 +1,172 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.965
+In the previous lesson,
+
+00:00:01.965 --> 00:00:05.205
+we've learned how to write our code in functions,
+
+00:00:05.205 --> 00:00:11.310
+mostly to organize our code into blocks that can be used in other places in our program.
+
+00:00:11.310 --> 00:00:15.240
+This is very helpful when we want to use this function many times,
+
+00:00:15.240 --> 00:00:18.240
+because instead of rewriting all that code over here,
+
+00:00:18.239 --> 00:00:22.149
+we can just call that function multiple times whenever needed.
+
+00:00:22.149 --> 00:00:26.219
+Say for example, you and a few of your friends were asked to program
+
+00:00:26.219 --> 00:00:31.744
+this alarm clock so that when it's time for the alarm to go off say at 6:00 am,
+
+00:00:31.745 --> 00:00:36.914
+it should continue to beep forever until someone hits the snooze button.
+
+00:00:36.914 --> 00:00:41.820
+Some of your teammates have already created and implemented some functions for you.
+
+00:00:41.820 --> 00:00:43.575
+One function is called beep,
+
+00:00:43.575 --> 00:00:49.170
+which when called causes the alarm speakers to emit a single beeping sound.
+
+00:00:49.170 --> 00:00:51.870
+Another function is called checkAlarm,
+
+00:00:51.869 --> 00:00:54.239
+that returns a boolean,
+
+00:00:54.240 --> 00:00:58.079
+which is true if the alarm is on or false if the alarm is off,
+
+00:00:58.079 --> 00:01:01.594
+which basically means someone hit the snooze button.
+
+00:01:01.594 --> 00:01:05.280
+You're supposed to create a third function called alarm.
+
+00:01:05.280 --> 00:01:09.254
+This function will be called when it's time for the alarm to go off.
+
+00:01:09.254 --> 00:01:14.054
+Your alarm function here should basically continue to repeatedly
+
+00:01:14.055 --> 00:01:19.495
+call this beep function for as long as this checkAlarm function returns true.
+
+00:01:19.495 --> 00:01:22.094
+So, to implement your alarm function,
+
+00:01:22.094 --> 00:01:25.664
+you need to call those two functions inside.
+
+00:01:25.665 --> 00:01:29.010
+Our alarm function doesn't return anything,
+
+00:01:29.010 --> 00:01:31.490
+so it's public void alarm.
+
+00:01:31.489 --> 00:01:35.539
+It also doesn't have any input parameters so it's just empty brackets there.
+
+00:01:35.540 --> 00:01:39.205
+First thing we need to do is check if the alarm is on.
+
+00:01:39.204 --> 00:01:40.500
+We just do this by calling
+
+00:01:40.500 --> 00:01:45.269
+the checkAlarm function and store that into a boolean called on here.
+
+00:01:45.269 --> 00:01:48.435
+The next thing we want to do is check if this on variable
+
+00:01:48.435 --> 00:01:52.000
+or the return of the checkAlarm function is true.
+
+00:01:52.000 --> 00:01:54.834
+In that case we want to call the beep function.
+
+00:01:54.834 --> 00:01:56.819
+So, we do this using an if block.
+
+00:01:56.819 --> 00:02:00.429
+We say if on and then just beep.
+
+00:02:00.430 --> 00:02:03.870
+This would basically call the beep function emitting a beep noise,
+
+00:02:03.870 --> 00:02:05.550
+if the alarm is on.
+
+00:02:05.549 --> 00:02:10.579
+If it has been turned off then we just skip this beep and nothing happens.
+
+00:02:10.580 --> 00:02:14.060
+However, we want to keep repeating this beep sound.
+
+00:02:14.060 --> 00:02:18.479
+So, the first thing we need to do next is to check the alarm again,
+
+00:02:18.479 --> 00:02:22.750
+and see if it returns true or false and update the on variable.
+
+00:02:22.750 --> 00:02:26.004
+So, we say on equals checkAlarm again.
+
+00:02:26.004 --> 00:02:29.759
+After that, we need to check if on is true again.
+
+00:02:29.759 --> 00:02:34.155
+So, we do another if block check if on is true,
+
+00:02:34.155 --> 00:02:38.985
+then do another beep and update the on with another checkAlarm call.
+
+00:02:38.985 --> 00:02:41.700
+Remember that checkAlarm is the only way we can
+
+00:02:41.699 --> 00:02:45.299
+tell if someone has turned off the alarm or hit the snooze button.
+
+00:02:45.300 --> 00:02:48.810
+So, we have to keep calling checkAlarm after every beep,
+
+00:02:48.810 --> 00:02:52.110
+just to check if someone has turned the alarm off.
+
+00:02:52.110 --> 00:02:53.610
+And then every time after that,
+
+00:02:53.610 --> 00:02:56.430
+we need to add another if block to emit
+
+00:02:56.430 --> 00:03:01.284
+another beep sound and then check again, and so on.
+
+00:03:01.284 --> 00:03:03.409
+When will this ever end?
+
+00:03:03.409 --> 00:03:07.335
+How many times should I repeat this if block here?
+
+00:03:07.335 --> 00:03:11.010
+What if no one turns off the alarm for a while?
+
+00:03:11.009 --> 00:03:15.689
+Can you think of the number of times I need to repeat this if block here?
+
+00:03:15.689 --> 00:03:19.530
+Remember that the purpose of this function is to continue beeping until
+
+00:03:19.530 --> 00:03:24.000
+someone turns the alarm off even if it has to beep forever.
+

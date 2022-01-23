@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.968
+Este programa separa o lixo
+e itens recicláveis,
+
+00:00:04.000 --> 00:00:07.167
+como papel e garrafas vazias
+de plástico ou vidro.
+
+00:00:07.200 --> 00:00:10.167
+Para estes itens,
+isRecyclable será verdadeira,
+
+00:00:10.200 --> 00:00:13.734
+mas ainda não sabemos qual será
+o valor de isRecyclable.
+
+00:00:13.767 --> 00:00:16.367
+Também pesamos os recicláveis
+
+00:00:16.400 --> 00:00:19.834
+e guardamos a informação
+na variável weight.
+
+00:00:19.868 --> 00:00:23.167
+Tendo um item reciclável,
+vamos imprimir seu peso.
+
+00:00:23.200 --> 00:00:25.734
+Neste código
+e declaração de variáveis,
+
+00:00:25.767 --> 00:00:30.200
+qual das 3 fronteiras representa
+o escopo da variável weight?
+
+00:00:30.234 --> 00:00:32.734
+Escolha o escopo A, B ou C,
+
+00:00:32.767 --> 00:00:35.634
+que vão da maior
+para a menor fronteira.
+

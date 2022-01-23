@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.094
+So, the correct answer is this last option here,
+
+00:00:04.094 --> 00:00:10.169
+I love JAVA, where love is all lower case letters and JAVA is all uppercase letters.
+
+00:00:10.169 --> 00:00:12.634
+Why is that the correct output there?
+
+00:00:12.634 --> 00:00:14.750
+Because we're printing out I,
+
+00:00:14.750 --> 00:00:16.609
+which is a string literal here,
+
+00:00:16.609 --> 00:00:19.140
+so it gets printed out exactly the same and
+
+00:00:19.140 --> 00:00:22.109
+then we concatenate that with a variable feeling,
+
+00:00:22.109 --> 00:00:28.169
+which happens to be this love string that was updated to all lower cases.
+
+00:00:28.170 --> 00:00:30.450
+That will print out love with
+
+00:00:30.449 --> 00:00:33.289
+a lowercase l and then we're
+
+00:00:33.289 --> 00:00:37.155
+concatenating that with an empty string which is just a space.
+
+00:00:37.155 --> 00:00:43.814
+And then finally, with the variable language which started with a string literal Java,
+
+00:00:43.814 --> 00:00:46.004
+and then we updated it to become
+
+00:00:46.005 --> 00:00:50.565
+all uppercase letters so that's going to be JAVA in all uppercase letters.
+
+00:00:50.564 --> 00:00:57.000
+The output would be I space love space JAVA, like that.
+

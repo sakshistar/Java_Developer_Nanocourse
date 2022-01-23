@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.819
+For checking if someone is greater than 60 years old,
+
+00:00:02.819 --> 00:00:07.064
+it's as simple as adding another age tag after the first as an else if.
+
+00:00:07.064 --> 00:00:08.699
+And our test condition should be,
+
+00:00:08.699 --> 00:00:11.279
+if age is greater than 60.
+
+00:00:11.279 --> 00:00:14.820
+This code works as an else if but would also work as just an
+
+00:00:14.820 --> 00:00:20.019
+if since a person cannot be both less than 15 and greater than 60.
+
+00:00:20.019 --> 00:00:22.949
+Then, our last test condition is to check if someone is
+
+00:00:22.949 --> 00:00:27.554
+a student which we can check by saying, else if isStudent.
+
+00:00:27.554 --> 00:00:29.519
+Then, if isStudent is true,
+
+00:00:29.519 --> 00:00:32.039
+we'll enter our discount block of code.
+
+00:00:32.039 --> 00:00:36.000
+Now notice that we're offering the same discount for all three of these checks.
+
+00:00:36.000 --> 00:00:38.515
+In the name of concise simple code,
+
+00:00:38.515 --> 00:00:41.590
+wouldn't it be nice if we could reduce this repetition?
+
+00:00:41.590 --> 00:00:44.070
+There is actually a way to do this by combining
+
+00:00:44.070 --> 00:00:48.179
+these three checks into one bigger test condition which we'll get into next.
+

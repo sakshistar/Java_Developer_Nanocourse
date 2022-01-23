@@ -1,0 +1,199 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.530
+So, to use a while loop to repeat something for a specific number of times,
+
+00:00:04.530 --> 00:00:08.414
+we need to have those three components: the loop counter,
+
+00:00:08.414 --> 00:00:12.139
+our loop condition, and our loop increment.
+
+00:00:12.140 --> 00:00:15.419
+They all have to work together to make sure that our loop keeps
+
+00:00:15.419 --> 00:00:19.449
+repeating for the specific number of times we need it to.
+
+00:00:19.449 --> 00:00:23.669
+However, Java actually offers another type of loops called for loops,
+
+00:00:23.670 --> 00:00:28.935
+which is basically a shorthand of what we've just done using the while loops here.
+
+00:00:28.934 --> 00:00:33.479
+Let's see how we could have implemented the raiseAlarm function using for loops.
+
+00:00:33.479 --> 00:00:35.654
+For loops are written like so,
+
+00:00:35.655 --> 00:00:41.505
+for followed by parentheses and three sections here separated by semi-colons.
+
+00:00:41.505 --> 00:00:46.115
+These three sections are basically those three steps that we did with a while loop.
+
+00:00:46.115 --> 00:00:49.005
+The first section here would have our loop counter,
+
+00:00:49.005 --> 00:00:51.568
+which is integer i=1,
+
+00:00:51.567 --> 00:00:53.789
+so that matches number one here.
+
+00:00:53.789 --> 00:00:59.119
+The second section is our loop condition exactly the same as we did with a while loop,
+
+00:00:59.119 --> 00:01:01.064
+i &lt;= to the numOfWarnings,
+
+00:01:01.064 --> 00:01:03.076
+so that maps number two here,
+
+00:01:03.076 --> 00:01:05.129
+and the last section is our loop increment,
+
+00:01:05.129 --> 00:01:06.339
+which is just i++,
+
+00:01:06.340 --> 00:01:09.755
+which matches number three up here.
+
+00:01:09.754 --> 00:01:13.769
+However, notice that we don't have a semi-colon following the i++.
+
+00:01:13.769 --> 00:01:18.484
+We only have those two semi-colons separating these three sections.
+
+00:01:18.484 --> 00:01:25.500
+So, our for loop that does exactly what this does is written as so: for integer i=1;
+
+00:01:25.500 --> 00:01:31.745
+i &lt;= numOfWarnings; i++.
+
+00:01:31.745 --> 00:01:36.600
+And then inside those curly brackets we write whatever instruction we want to repeat.
+
+00:01:36.599 --> 00:01:39.867
+Again, notice that we're not doing the increment inside the loop anymore,
+
+00:01:39.867 --> 00:01:42.599
+it's part of the definition of the loop up here.
+
+00:01:42.599 --> 00:01:45.479
+Let's try to trace that and see what's happening.
+
+00:01:45.480 --> 00:01:50.255
+As you can see already, the function looks a lot simpler when we write it with for loops.
+
+00:01:50.254 --> 00:01:53.574
+Because everything is written in the same line up here.
+
+00:01:53.575 --> 00:01:57.189
+So let's assume, that we're going to test it again with a value five.
+
+00:01:57.189 --> 00:02:02.474
+So, we pass in the value five to a number of warnings and then we step inside.
+
+00:02:02.474 --> 00:02:07.384
+The first thing that the for loop does is it initializes i to be equal to one,
+
+00:02:07.385 --> 00:02:12.560
+and then it does the comparison which is i less than or equal to a number of warnings,
+
+00:02:12.560 --> 00:02:15.405
+which is five, and that is true.
+
+00:02:15.405 --> 00:02:17.360
+So, it doesn't do the increment yet,
+
+00:02:17.360 --> 00:02:19.475
+it immediately steps into the loop,
+
+00:02:19.474 --> 00:02:21.094
+running this command here,
+
+00:02:21.094 --> 00:02:22.745
+which just prints out warning.
+
+00:02:22.745 --> 00:02:25.334
+Reached the end of the loop, so we go back up,
+
+00:02:25.334 --> 00:02:27.979
+the first thing it does is this increment.
+
+00:02:27.979 --> 00:02:30.394
+So, once the for loop finishes an iteration,
+
+00:02:30.395 --> 00:02:33.094
+the first thing it does is do this increment,
+
+00:02:33.094 --> 00:02:35.210
+making i become two.
+
+00:02:35.210 --> 00:02:37.254
+Once it's done with increment,
+
+00:02:37.254 --> 00:02:40.180
+it goes and performs this check operation,
+
+00:02:40.180 --> 00:02:43.453
+is i less than or equal to the number of warnings?
+
+00:02:43.453 --> 00:02:45.580
+and yes it is.
+
+00:02:45.580 --> 00:02:49.020
+Meaning, that we step inside the loop again and we print out warning.
+
+00:02:49.020 --> 00:02:51.185
+We reached the end of the loop,
+
+00:02:51.185 --> 00:02:54.670
+so we go back run the increment making i equals three
+
+00:02:54.669 --> 00:02:59.139
+and then we do our comparison and three is less than or equal to five.
+
+00:02:59.139 --> 00:03:02.839
+So, we step inside and we print out warning.
+
+00:03:02.840 --> 00:03:06.731
+Keep repeating that, i for less than five,
+
+00:03:06.731 --> 00:03:09.889
+so print out a warning and the same goes when i
+
+00:03:09.889 --> 00:03:13.389
+gets incremented to five and that is still true.
+
+00:03:13.389 --> 00:03:16.459
+So, step inside and will print out the warning.
+
+00:03:16.460 --> 00:03:17.900
+So, now we reach the end of the loop we,
+
+00:03:17.900 --> 00:03:20.805
+go back up we increment i to become six.
+
+00:03:20.805 --> 00:03:22.129
+We do this check,
+
+00:03:22.129 --> 00:03:25.715
+and this time six is no longer less than or equal to five.
+
+00:03:25.715 --> 00:03:28.189
+That means that we do not step into our loop.
+
+00:03:28.189 --> 00:03:32.109
+So, as you can see even tracing the variables is exactly the same as the while loop.
+
+00:03:32.110 --> 00:03:33.560
+The only difference is that it's written in
+
+00:03:33.560 --> 00:03:36.259
+a compact way that's easier to read and follow.
+

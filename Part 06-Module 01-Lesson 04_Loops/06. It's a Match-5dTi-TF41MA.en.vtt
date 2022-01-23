@@ -1,0 +1,280 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.120
+The problem we're trying to solve here is to count the number of
+
+00:00:03.120 --> 00:00:06.480
+times we need to roll five dice to get a Yahtzee.
+
+00:00:06.480 --> 00:00:09.675
+Five dice might seem a little bit too complicated,
+
+00:00:09.675 --> 00:00:12.375
+so a good idea is to start simple.
+
+00:00:12.375 --> 00:00:15.324
+Let's assume we're only rolling two dice for now.
+
+00:00:15.324 --> 00:00:18.300
+And the goal is to count and return the number
+
+00:00:18.300 --> 00:00:21.835
+of rolls we need until we get those two dice to match.
+
+00:00:21.835 --> 00:00:23.730
+Once we figure out the code for that,
+
+00:00:23.730 --> 00:00:28.949
+we can then modify it and add more dice to it and solve the actual problem.
+
+00:00:28.949 --> 00:00:32.189
+When writing code for a complicated problem,
+
+00:00:32.189 --> 00:00:35.074
+it's always a good idea to break it down that way.
+
+00:00:35.075 --> 00:00:37.955
+Think of an abstract or simple version of the problem.
+
+00:00:37.954 --> 00:00:39.684
+Write the code you need to solve that,
+
+00:00:39.685 --> 00:00:43.200
+and then build on that code till you solve the actual problem you have.
+
+00:00:43.200 --> 00:00:46.350
+To count the number of rolls needed for two dice to match,
+
+00:00:46.350 --> 00:00:49.715
+we will be declaring this function called keepRolling.
+
+00:00:49.715 --> 00:00:51.585
+It doesn't take any input arguments,
+
+00:00:51.585 --> 00:00:56.024
+and it returns an integer value which is the number of rolls needed.
+
+00:00:56.024 --> 00:00:57.969
+To simulate the dice rolling,
+
+00:00:57.969 --> 00:01:02.185
+we'll be using the function rollDice that we've created in the previous lesson.
+
+00:01:02.185 --> 00:01:03.929
+rolleDice returns a random number
+
+00:01:03.929 --> 00:01:07.590
+between 1 and 6 which basically simulates rolling a dice.
+
+00:01:07.590 --> 00:01:09.525
+Here we're calling it twice,
+
+00:01:09.525 --> 00:01:13.055
+and setting them into the variables dice1 and dice2.
+
+00:01:13.055 --> 00:01:15.300
+Then I'll declare another integer variable
+
+00:01:15.299 --> 00:01:17.649
+here that we'll keep track of the number of rolls.
+
+00:01:17.650 --> 00:01:19.920
+I'll initialized it to 1 because so far,
+
+00:01:19.920 --> 00:01:22.185
+we've rolled those two dice once.
+
+00:01:22.185 --> 00:01:26.234
+Next, we need to keep re-rolling our dice every time they don't match.
+
+00:01:26.234 --> 00:01:29.670
+We could use a while loop that checks if the dice don't match,
+
+00:01:29.670 --> 00:01:31.875
+and then re-roll the dice inside.
+
+00:01:31.875 --> 00:01:37.069
+That is while dice1 and dice2 are not equal,
+
+00:01:37.069 --> 00:01:41.244
+then we want to retry rolling our dice and hope for a match.
+
+00:01:41.245 --> 00:01:42.689
+So inside our while loop,
+
+00:01:42.689 --> 00:01:46.840
+we'll just call this rollDice function again for dice1 and dice2,
+
+00:01:46.840 --> 00:01:50.755
+and add 1 to count this extra roll that we did.
+
+00:01:50.754 --> 00:01:53.159
+Remember that we only add 1 here because
+
+00:01:53.159 --> 00:01:57.659
+those two calls simulate rolling those two dice just once.
+
+00:01:57.659 --> 00:01:59.039
+Eventually at some point,
+
+00:01:59.040 --> 00:02:01.770
+those two rolls would return the same value,
+
+00:02:01.769 --> 00:02:04.089
+and dice1 would match dice2,
+
+00:02:04.090 --> 00:02:05.820
+and this while loop would end.
+
+00:02:05.819 --> 00:02:08.159
+At that point, we could safely return the number
+
+00:02:08.159 --> 00:02:10.469
+of counts that we've counted so far which
+
+00:02:10.469 --> 00:02:15.284
+would indicate the number of rolls we needed to get that match. That looks pretty good.
+
+00:02:15.284 --> 00:02:19.145
+Let's trace that code with some examples and see if it works.
+
+00:02:19.145 --> 00:02:21.730
+So the first thing that happens here is we call
+
+00:02:21.729 --> 00:02:25.599
+this rollDice function and save its return value in dice1.
+
+00:02:25.599 --> 00:02:28.555
+Let's say that randomly returned the number 4.
+
+00:02:28.555 --> 00:02:31.885
+The next line calls rollDice again for dice2.
+
+00:02:31.884 --> 00:02:34.060
+Let's say that returned 2.
+
+00:02:34.060 --> 00:02:35.784
+So dice1 has 4 in it,
+
+00:02:35.784 --> 00:02:37.879
+and dice2 has 2 in it.
+
+00:02:37.879 --> 00:02:40.764
+And then we initialize the count variable to 1,
+
+00:02:40.764 --> 00:02:43.189
+and then we go to our while condition.
+
+00:02:43.189 --> 00:02:46.384
+It's checking if dice1 and dice2 are not the same.
+
+00:02:46.384 --> 00:02:48.789
+In this case, 4 and 2 are not the same,
+
+00:02:48.789 --> 00:02:52.734
+so our loop condition is true which means we step inside our loop,
+
+00:02:52.735 --> 00:02:54.500
+and we re-roll our dice,
+
+00:02:54.500 --> 00:02:56.365
+calling rollDice twice again,
+
+00:02:56.365 --> 00:02:58.850
+and updating the dice values 1 and 2.
+
+00:02:58.849 --> 00:03:01.405
+So let's say this time dice1 became 6,
+
+00:03:01.405 --> 00:03:03.580
+and dice2 became 5,
+
+00:03:03.580 --> 00:03:06.719
+and then after that, we add 1 to our variable count,
+
+00:03:06.719 --> 00:03:09.574
+updating it to become 2 instead of 1.
+
+00:03:09.574 --> 00:03:12.750
+Where each the closing brackets of the while loop,
+
+00:03:12.750 --> 00:03:16.409
+so we go back up and then we perform this comparison again.
+
+00:03:16.409 --> 00:03:18.604
+Our dice1 and dice2 not the same.
+
+00:03:18.604 --> 00:03:21.899
+Well, 6 and 5 are not the same, so that's true.
+
+00:03:21.900 --> 00:03:23.594
+So we step inside our loop again,
+
+00:03:23.594 --> 00:03:27.419
+and we update dice1 and dice2 using the rollDice again.
+
+00:03:27.419 --> 00:03:30.689
+Let's say this time, we got 2 and 3.
+
+00:03:30.689 --> 00:03:32.680
+We add 1 to the count again,
+
+00:03:32.680 --> 00:03:34.425
+updating it to 3.
+
+00:03:34.425 --> 00:03:38.165
+And then we go back up and perform our loop condition.
+
+00:03:38.164 --> 00:03:41.094
+We check if dice1 and dice2 are not the same,
+
+00:03:41.094 --> 00:03:42.534
+and 2 and 3 are not the same,
+
+00:03:42.534 --> 00:03:46.064
+so that's true which means we step inside our loop again.
+
+00:03:46.064 --> 00:03:48.585
+And then we update dice1 and dice2 again.
+
+00:03:48.585 --> 00:03:51.469
+Let's say this time we get 1 and 1,
+
+00:03:51.469 --> 00:03:54.194
+and then we add 1 to our count making it 4
+
+00:03:54.194 --> 00:03:57.305
+which means that we've rolled our dice four times so far.
+
+00:03:57.305 --> 00:04:00.885
+And then we go back up and do our loop condition comparison.
+
+00:04:00.884 --> 00:04:03.849
+This time, dice1 and dice2 are the same.
+
+00:04:03.849 --> 00:04:09.000
+So this check here evaluates to false which means our while loop is no
+
+00:04:09.000 --> 00:04:11.389
+longer going to step inside and just drop to
+
+00:04:11.389 --> 00:04:15.209
+the closed curly brackets here and continue the program.
+
+00:04:15.210 --> 00:04:18.745
+And since we only have this return count after the loop,
+
+00:04:18.745 --> 00:04:20.954
+so that means we return 4.
+
+00:04:20.954 --> 00:04:26.419
+Basically stating that we needed four rolls of those two dice until we got a match.
+
+00:04:26.420 --> 00:04:28.920
+Now can you think of what we need to change in this code
+
+00:04:28.920 --> 00:04:32.810
+here to make it work for three dice instead of two?
+

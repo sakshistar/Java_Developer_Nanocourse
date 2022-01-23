@@ -1,0 +1,307 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.834
+Mesmo que decidamos desligar o alarme
+depois de, digamos, 100 bipes,
+
+00:00:04.868 --> 00:00:07.501
+independentemente
+de se alguém desligá-lo,
+
+00:00:07.534 --> 00:00:12.334
+ainda precisamos copiar e colar
+este bloco if 100 vezes.
+
+00:00:12.934 --> 00:00:16.901
+Isto é terrível.
+Deve haver uma solução, não?
+
+00:00:16.934 --> 00:00:20.801
+Bem, o Java tem uma.
+Chama-se laços.
+
+00:00:20.834 --> 00:00:22.667
+Vejamos como funcionam.
+
+00:00:22.701 --> 00:00:28.000
+No Java, em vez de usarmos if,
+podemos usar algo chamado while,
+
+00:00:28.033 --> 00:00:30.868
+que é muito parecido
+com uma condição if,
+
+00:00:30.901 --> 00:00:34.133
+só que, em vez de checar
+esta condição uma vez,
+
+00:00:34.167 --> 00:00:38.033
+um while continuaria a checá-la,
+e aplicaria este bloco
+
+00:00:38.067 --> 00:00:40.400
+sempre que a condição
+for verdadeira.
+
+00:00:40.434 --> 00:00:43.067
+O que acontece
+em um bloco de código assim
+
+00:00:43.100 --> 00:00:46.300
+é que o while checa
+se a variável on é verdadeira.
+
+00:00:46.334 --> 00:00:49.934
+Se for, ele entra,
+roda todo este bloco de código,
+
+00:00:49.968 --> 00:00:52.534
+sobe de novo,
+checa on de novo.
+
+00:00:52.567 --> 00:00:57.234
+Se ainda for verdadeiro, desce
+e refaz esta parte repetidamente,
+
+00:00:57.267 --> 00:00:59.400
+até on
+não ser mais verdadeiro.
+
+00:00:59.434 --> 00:01:02.400
+Então ele pula esta parte
+e continua.
+
+00:01:02.434 --> 00:01:05.501
+Por isso isto se chama
+laços while.
+
+00:01:05.534 --> 00:01:09.634
+Porque ele segue rodando
+repetidamente este bloco de código
+
+00:01:09.667 --> 00:01:14.801
+quantas vezes forem, enquanto
+esta condição continua verdadeira.
+
+00:01:14.834 --> 00:01:19.100
+Isto basicamente significa
+que este único bloco while aqui
+
+00:01:19.133 --> 00:01:23.501
+pode substituir todos
+os blocos if repetidos de lá.
+
+00:01:23.534 --> 00:01:28.934
+Em vez de ter que checar a variável on
+várias vezes em vários blocos if,
+
+00:01:28.968 --> 00:01:31.434
+podemos checá-la
+em um laço while.
+
+00:01:31.467 --> 00:01:34.100
+Isso repetiria este bloco
+várias vezes
+
+00:01:34.133 --> 00:01:37.534
+até on
+não ser mais verdadeiro.
+
+00:01:37.567 --> 00:01:42.367
+E como estamos atualizando
+a variável on com a função checkAlarm,
+
+00:01:42.400 --> 00:01:47.000
+uma hora esta função retornaria falsa
+quando alguém desligasse o alarme,
+
+00:01:47.033 --> 00:01:49.067
+fazendo
+nossa variável on falsa
+
+00:01:49.100 --> 00:01:53.133
+e, em algum ponto,
+este while terminaria.
+
+00:01:53.167 --> 00:01:57.701
+Vejamos como esta função funciona
+usando o laço while.
+
+00:01:57.734 --> 00:02:00.501
+A função de atualização
+é assim.
+
+00:02:00.534 --> 00:02:04.934
+Começamos criando esta booleana on
+e checando o alarme
+
+00:02:04.968 --> 00:02:07.734
+e, em vez de termos
+os blocos if repetidos,
+
+00:02:07.767 --> 00:02:12.701
+temos só o laço while,
+que checa se on é verdadeiro.
+
+00:02:12.734 --> 00:02:19.567
+Se for, começamos a tocar, e então
+atualizamos on usando o checkAlarm.
+
+00:02:19.601 --> 00:02:21.534
+Lembrem-se,
+a função checkAlarm
+
+00:02:21.567 --> 00:02:25.234
+retorna uma booleana verdadeira
+se o alarme estiver ligado
+
+00:02:25.267 --> 00:02:27.634
+e falsa,
+se ele foi desligado.
+
+00:02:27.667 --> 00:02:30.200
+Vejamos
+como esta função funciona.
+
+00:02:30.234 --> 00:02:35.467
+Primeiro, chamamos a função checkAlarm
+para inicializar a variável on.
+
+00:02:35.501 --> 00:02:39.801
+Como são 6h, o checkAlarm
+retornaria verdadeiro.
+
+00:02:39.834 --> 00:02:42.434
+O alarme deveria
+tocar agora.
+
+00:02:42.467 --> 00:02:45.467
+A variável on é verdadeira.
+
+00:02:45.501 --> 00:02:49.567
+A checagem while aqui
+seria verdadeira
+
+00:02:49.601 --> 00:02:52.767
+então ele entraria
+e começaria a tocar.
+
+00:02:52.801 --> 00:02:56.868
+Isto faria o alarme tocar.
+
+00:02:56.901 --> 00:03:01.534
+Checamos o alarme de novo
+para atualizar a variável on,
+
+00:03:01.567 --> 00:03:06.167
+e como ninguém apertou a soneca,
+checkAlarm retorna verdadeiro.
+
+00:03:06.200 --> 00:03:09.834
+Nossa variável on
+fica verdadeira.
+
+00:03:09.868 --> 00:03:15.267
+Chegamos ao final do laço, voltamos
+e checamos se é verdadeiro de novo.
+
+00:03:15.300 --> 00:03:20.667
+Como on é verdadeiro, entramos
+e chamamos a função beep de novo,
+
+00:03:20.701 --> 00:03:23.567
+o que faz o alarme tocar.
+
+00:03:23.601 --> 00:03:26.634
+Então checamos o alarme
+de novo.
+
+00:03:26.667 --> 00:03:30.534
+Agora imagine
+que alguém aperte a soneca.
+
+00:03:30.567 --> 00:03:33.100
+Significa que
+quando chamamos checkAlarm
+
+00:03:33.133 --> 00:03:36.968
+para ver se o alarme ainda está ligado,
+ele retorna falso.
+
+00:03:37.000 --> 00:03:40.767
+Portanto,
+on também se torna falso.
+
+00:03:40.801 --> 00:03:46.234
+Chegamos ao fim do laço, voltamos,
+checamos esta comparação de novo
+
+00:03:46.267 --> 00:03:53.300
+e como o while não é mais verdadeiro,
+não entramos, logo não tocamos.
+
+00:03:53.334 --> 00:03:55.200
+Nada mais acontece.
+
+00:03:55.234 --> 00:04:00.067
+Isto significa que o while terminou
+e que não mais checará ou tentará,
+
+00:04:00.100 --> 00:04:03.167
+só continuará o programa,
+que não tem mais nada.
+
+00:04:03.200 --> 00:04:05.133
+E a função acaba.
+
+00:04:05.167 --> 00:04:08.501
+Parece estar fazendo
+exatamente o que esperamos.
+
+00:04:08.534 --> 00:04:11.801
+Isto continuaria
+a retornar verdadeiro,
+
+00:04:11.834 --> 00:04:14.167
+fazendo a variável on
+ser verdadeira,
+
+00:04:14.200 --> 00:04:17.400
+e fazendo o alarme tocar
+o quanto precisar
+
+00:04:17.434 --> 00:04:20.667
+até que o checkAlarm
+decida retornar falso
+
+00:04:20.701 --> 00:04:23.033
+quando alguém apertar
+o botão soneca.
+
+00:04:23.067 --> 00:04:24.434
+Perfeito.
+
+00:04:24.467 --> 00:04:27.200
+Podemos ver
+que usar um laço while
+
+00:04:27.234 --> 00:04:30.934
+pode repetir algo por um número
+variável de vezes.
+
+00:04:30.968 --> 00:04:35.200
+Não temos que saber antes
+quantas vezes devemos repetir algo.
+
+00:04:35.234 --> 00:04:37.000
+É só colocar num laço while
+
+00:04:37.033 --> 00:04:42.000
+e garantir que nossa condição acabe
+se tornando falsa, terminando o laço.
+
+00:04:42.033 --> 00:04:44.300
+Vamos ver mais exemplos.
+

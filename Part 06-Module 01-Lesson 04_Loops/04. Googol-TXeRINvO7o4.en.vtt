@@ -1,0 +1,94 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.620
+Did you know that Google name is originally a play on the word Googol,
+
+00:00:04.620 --> 00:00:12.179
+which is a mathematical term for a massive number equal to one followed by 100 zeros?
+
+00:00:12.179 --> 00:00:14.669
+Google liked it so much because it seemed like
+
+00:00:14.669 --> 00:00:18.405
+there was as many web pages over the Internet.
+
+00:00:18.405 --> 00:00:21.390
+In fact, Googol is so massive that there is
+
+00:00:21.390 --> 00:00:25.335
+no numerical data type in Java that can actually store it.
+
+00:00:25.335 --> 00:00:29.944
+Even a long data type can store only a number up to two to the 63,
+
+00:00:29.943 --> 00:00:34.524
+which is merely a 19 digit long number.
+
+00:00:34.524 --> 00:00:40.564
+In fact, there are far less electrons in the entire universe than one single Googol.
+
+00:00:40.564 --> 00:00:43.949
+On the other hand, we can store the number as a string of
+
+00:00:43.950 --> 00:00:48.600
+characters since it's only made up of 101 characters,
+
+00:00:48.600 --> 00:00:51.725
+it can actually fit in a string in Java.
+
+00:00:51.725 --> 00:00:56.408
+We can't really do any mathematical operation with it since it's stored in a string,
+
+00:00:56.408 --> 00:01:01.620
+but we can use the string to do other stuff like printed out for example.
+
+00:01:01.619 --> 00:01:07.064
+However, typing down 101 characters seems a bit tedious.
+
+00:01:07.064 --> 00:01:11.753
+So why don't we use a while loop to build that string for us?
+
+00:01:11.754 --> 00:01:15.650
+We start with initializing the string with just one,
+
+00:01:15.650 --> 00:01:21.700
+and then we can concatenate a zero string to it inside a while loop.
+
+00:01:21.700 --> 00:01:26.450
+The while loop would keep checking if the length of the string is still less than 101,
+
+00:01:26.450 --> 00:01:32.969
+and it would keep concatenating another zero to it until the length becomes 101.
+
+00:01:32.969 --> 00:01:35.500
+So we need to keep track of the string length.
+
+00:01:35.500 --> 00:01:39.180
+For that, we declare and initialize a variable len,
+
+00:01:39.180 --> 00:01:44.723
+which is an integer and we assign it the value of googol.length.
+
+00:01:44.722 --> 00:01:47.730
+The function length calculates the length of
+
+00:01:47.730 --> 00:01:51.704
+that string and returns it and stores it into the variable len.
+
+00:01:51.704 --> 00:01:55.140
+Then we also update that variable inside the loop so it's
+
+00:01:55.140 --> 00:01:58.844
+always keeping track of the length of the string googol.
+
+00:01:58.844 --> 00:02:01.885
+Can you think of what the while condition should be?
+
+00:02:01.885 --> 00:02:06.600
+Remember, we need to keep iterating over this loop for as long as
+
+00:02:06.599 --> 00:02:12.000
+googol is actually still smaller than the length that it should be which is a 101.
+

@@ -1,0 +1,223 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:05.434
+Na aula anterior, vimos
+como escrever o código em funções,
+
+00:00:05.467 --> 00:00:08.167
+principalmente
+para organizá-lo em blocos
+
+00:00:08.200 --> 00:00:11.434
+que podem ser usados
+em outros lugares no programa.
+
+00:00:11.467 --> 00:00:15.300
+É muito útil quando queremos usar
+esta função muitas vezes.
+
+00:00:15.334 --> 00:00:18.300
+Em vez de reescrever
+todo o código aqui,
+
+00:00:18.334 --> 00:00:22.100
+podemos chamar a função várias vezes,
+quando for preciso.
+
+00:00:22.133 --> 00:00:27.200
+Por exemplo, você e uns amigos
+devem programar este despertador.
+
+00:00:27.234 --> 00:00:31.734
+Quando for hora de tocar,
+digamos às 6h,
+
+00:00:31.767 --> 00:00:36.901
+ele deve continuar para sempre,
+até alguém apertar o botão snooze.
+
+00:00:36.934 --> 00:00:41.667
+Alguns colegas seus já criaram
+e implementaram umas funções para você.
+
+00:00:41.701 --> 00:00:43.901
+Uma função se chama "beep".
+
+00:00:43.934 --> 00:00:48.968
+Quando chamada, faz os alto-falantes
+tocarem um único som de bipe.
+
+00:00:49.000 --> 00:00:51.801
+Outra função
+se chama "checkAlarm",
+
+00:00:51.834 --> 00:00:56.267
+que retorna uma booleana que é
+verdadeira se o alarme estiver ligado,
+
+00:00:56.300 --> 00:00:58.501
+ou falsa, se estiver desligado,
+
+00:00:58.534 --> 00:01:01.734
+significando que alguém
+apertou o botão soneca.
+
+00:01:01.767 --> 00:01:05.167
+Vocês devem criar uma 3ª função
+chamada "alarm".
+
+00:01:05.200 --> 00:01:09.467
+Ela será chamada
+na hora em que o alarme deve tocar.
+
+00:01:09.501 --> 00:01:15.701
+Sua função "alarm" deve continuar
+a chamar a função "beep" repetidamente
+
+00:01:15.734 --> 00:01:19.868
+enquanto a função "checkAlarm"
+retornar verdadeiro.
+
+00:01:19.901 --> 00:01:22.167
+Para implementar
+sua função "alarm",
+
+00:01:22.200 --> 00:01:26.000
+vocês devem chamar
+essas duas funções dentro dela.
+
+00:01:26.033 --> 00:01:29.067
+A função "alarm"
+não retorna nada,
+
+00:01:29.100 --> 00:01:31.534
+então é public void alarm().
+
+00:01:31.567 --> 00:01:35.400
+Também não tem parâmetros de entrada,
+são parênteses vazios.
+
+00:01:35.434 --> 00:01:39.100
+A primeira coisa a fazer
+é checar se o alarme está ligado.
+
+00:01:39.133 --> 00:01:42.033
+Fazemos isso chamando
+a função "checkAlarm"
+
+00:01:42.067 --> 00:01:45.167
+e armazenando nesta booleana
+chamada on.
+
+00:01:45.200 --> 00:01:50.801
+Depois checamos se a variável on,
+ou o retorno da função "checkAlarm",
+
+00:01:50.834 --> 00:01:54.901
+é verdadeiro e, se for o caso,
+chamamos a função "beep".
+
+00:01:54.934 --> 00:01:58.334
+Fazemos isto com um bloco if.
+Dizemos if(on)
+
+00:01:58.367 --> 00:02:00.467
+e depois apenas beep().
+
+00:02:00.501 --> 00:02:05.734
+Isto chamaria a função "beep" emitindo
+um bipe, se o alarme estiver ligado.
+
+00:02:05.767 --> 00:02:10.567
+Se foi desligado, pulamos este beep
+e nada acontece.
+
+00:02:10.601 --> 00:02:14.133
+Entretanto, queremos seguir
+repetindo este bipe.
+
+00:02:14.167 --> 00:02:18.434
+Então precisamos, a seguir,
+checar o alarme de novo,
+
+00:02:18.467 --> 00:02:21.133
+ver se retorna
+verdadeiro ou falso,
+
+00:02:21.167 --> 00:02:23.167
+e atualizar a variável on.
+
+00:02:23.200 --> 00:02:26.033
+Dizemos on = checkAlarm()
+de novo.
+
+00:02:26.067 --> 00:02:29.901
+Depois disso, devemos checar
+se on é verdadeiro de novo.
+
+00:02:29.934 --> 00:02:32.334
+Fazemos outro bloco if,
+
+00:02:32.367 --> 00:02:35.634
+checamos se on é verdadeiro,
+fazemos outro beep(),
+
+00:02:35.667 --> 00:02:38.934
+e atualizamos o on
+com outra chamada a checkAlarm.
+
+00:02:38.968 --> 00:02:41.934
+Lembrem-se, checkAlarm
+é o único jeito de saber
+
+00:02:41.968 --> 00:02:45.501
+se desligaram o alarme
+ou apertaram a soneca.
+
+00:02:45.534 --> 00:02:48.701
+Temos que chamá-la
+após cada beep,
+
+00:02:48.734 --> 00:02:52.000
+para checar
+se desligaram o alarme.
+
+00:02:52.033 --> 00:02:55.901
+Sempre após isso,
+devemos acrescentar outro bloco if
+
+00:02:55.934 --> 00:02:59.200
+para emitir outro som de bipe,
+e checar de novo.
+
+00:02:59.234 --> 00:03:00.968
+E assim por diante.
+
+00:03:01.000 --> 00:03:03.434
+Quando isto acaba?
+
+00:03:03.467 --> 00:03:07.667
+Quantas vezes devo repetir
+este bloco if aqui?
+
+00:03:07.701 --> 00:03:10.868
+E se ninguém desligar o alarme
+por um tempo?
+
+00:03:10.901 --> 00:03:15.601
+Qual o número de vezes
+que devo repetir este bloco if?
+
+00:03:15.634 --> 00:03:17.667
+O propósito desta função
+
+00:03:17.701 --> 00:03:21.834
+é continuar a tocar
+até que alguém desligue o alarme,
+
+00:03:21.868 --> 00:03:24.200
+mesmo que tenha que ser
+para sempre.
+

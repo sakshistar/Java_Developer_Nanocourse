@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.810
+Here's the documentation for a math function called Max,
+
+00:00:03.810 --> 00:00:07.620
+that takes as input two int parameters, A and B.
+
+00:00:07.620 --> 00:00:09.404
+Read through this documentation,
+
+00:00:09.404 --> 00:00:15.684
+and then answer what will the function call Math.max of 20 and 15 output.
+
+00:00:15.685 --> 00:00:18.195
+Fill in the type of data it will output,
+
+00:00:18.195 --> 00:00:19.620
+whether that's a string, int,
+
+00:00:19.620 --> 00:00:23.310
+float, etc., and the specific value of that output.
+

@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.024
+Here's a function called admission,
+
+00:00:02.024 --> 00:00:04.759
+that tells people if they're eligible to ride a roller coaster.
+
+00:00:04.759 --> 00:00:08.865
+To ride, a person has to be taller than 120 centimeters,
+
+00:00:08.865 --> 00:00:12.044
+about four feet and if they fall above that range,
+
+00:00:12.044 --> 00:00:14.969
+then this prints out, you pass the height requirements.
+
+00:00:14.970 --> 00:00:16.115
+Otherwise, it prints out,
+
+00:00:16.114 --> 00:00:17.804
+sorry you do not pass.
+
+00:00:17.804 --> 00:00:21.484
+This function requires that a person input their height in centimeters.
+
+00:00:21.484 --> 00:00:24.960
+In admission, with an argument value of hundred thirty point five,
+
+00:00:24.960 --> 00:00:26.429
+is a valid function call.
+
+00:00:26.429 --> 00:00:27.731
+So knowing all this,
+
+00:00:27.731 --> 00:00:31.199
+fill in the type and name of the parameter that this function expects.
+

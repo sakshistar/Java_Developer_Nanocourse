@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.504
+This program, we'll print out a birth certificate is a valid ID.
+
+00:00:04.504 --> 00:00:06.000
+With these boolean values,
+
+00:00:06.000 --> 00:00:08.730
+our computer will go through our code line by line.
+
+00:00:08.730 --> 00:00:10.320
+First it sees our IF statement,
+
+00:00:10.320 --> 00:00:11.944
+and since passport is false,
+
+00:00:11.944 --> 00:00:15.646
+it passes by this block of code and goes to our next else if.
+
+00:00:15.646 --> 00:00:19.649
+This else if checks if birth certificate is true.
+
+00:00:19.649 --> 00:00:22.679
+It is, so it executes this block of code and
+
+00:00:22.679 --> 00:00:25.806
+prints out a birth certificate is a valid ID.
+
+00:00:25.806 --> 00:00:29.030
+Then it sees that there's only an else if and an else remaining.
+
+00:00:29.030 --> 00:00:32.594
+And since one else if block of code has already been executed,
+
+00:00:32.594 --> 00:00:34.170
+it can ignore these other blocks,
+
+00:00:34.170 --> 00:00:37.929
+even though the condition for driver's license is also true.
+
+00:00:37.929 --> 00:00:41.479
+And it will skip down to the end of this last else.
+
+00:00:41.479 --> 00:00:43.079
+And this is all that will print out.
+
+00:00:43.079 --> 00:00:46.184
+So this person will successfully get a library card.
+
+00:00:46.185 --> 00:00:48.660
+So for a series of else ifs and an else,
+
+00:00:48.659 --> 00:00:52.229
+only one block of code can be executed at a time,
+
+00:00:52.229 --> 00:00:55.319
+which every statement has its test condition met first.
+
+00:00:55.320 --> 00:00:59.159
+Which in this case was the birth certificate tests condition.
+
+00:00:59.159 --> 00:01:02.459
+So using ifs and else ifs in combination can be really
+
+00:01:02.460 --> 00:01:07.000
+useful for programming decision making with lots of unique pathways to take.
+

@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.865
+Here's what your function definition should look like.
+
+00:00:02.865 --> 00:00:05.365
+It starts out with these words, public void,
+
+00:00:05.365 --> 00:00:06.835
+and then the name of our function,
+
+00:00:06.835 --> 00:00:09.539
+playMusic, with empty parentheses.
+
+00:00:09.539 --> 00:00:13.504
+Then we have our decision making code inside our function's curly braces.
+
+00:00:13.505 --> 00:00:16.844
+We have an if statement that checks if the playButton is true.
+
+00:00:16.844 --> 00:00:21.354
+If it is true, we'll enter our if block of code and print out "Music is playing".
+
+00:00:21.355 --> 00:00:23.295
+Otherwise, if playButton is false,
+
+00:00:23.295 --> 00:00:25.215
+we won't pass our if test condition,
+
+00:00:25.214 --> 00:00:27.524
+and we'll move down to our else block of code,
+
+00:00:27.524 --> 00:00:30.269
+and this will print out "Music is paused".
+
+00:00:30.269 --> 00:00:32.369
+And that completes our playMusic function.
+

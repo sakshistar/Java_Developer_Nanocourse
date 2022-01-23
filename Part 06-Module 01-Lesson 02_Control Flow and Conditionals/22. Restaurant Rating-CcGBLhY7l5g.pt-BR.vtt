@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.534
+Se a avaliação for 4,
+passaremos nosso primeiro teste if,
+
+00:00:03.567 --> 00:00:05.734
+pois 4 fica entre zero e 5.
+
+00:00:05.767 --> 00:00:08.367
+Seguimos para o segundo
+if aninhado,
+
+00:00:08.400 --> 00:00:11.367
+e testamos se a avaliação
+é menor ou igual a 2.
+
+00:00:11.400 --> 00:00:15.200
+Como a avaliação é 4,
+não é menor que 2, isto é falso
+
+00:00:15.234 --> 00:00:17.601
+e não entramos
+neste bloco de código.
+
+00:00:17.634 --> 00:00:20.467
+Em vez disso,
+pulamos para a sua chave final.
+
+00:00:20.501 --> 00:00:24.734
+Após a chave, é impresso:
+"Obrigado por seu retorno."
+
+00:00:24.767 --> 00:00:28.667
+Só isso, quando a avaliação
+é igual a 4.
+
+00:00:28.701 --> 00:00:31.434
+Se ela fosse mais baixa,
+algo como 1,
+
+00:00:31.467 --> 00:00:33.601
+passaríamos
+pelos dois testes if.
+
+00:00:33.634 --> 00:00:35.834
+E como estamos lendo
+linha a linha,
+
+00:00:35.868 --> 00:00:38.701
+entraríamos no if aninhado antes,
+imprimindo:
+
+00:00:38.734 --> 00:00:41.200
+"Qual o motivo
+da sua baixa avaliação?"
+
+00:00:41.234 --> 00:00:44.167
+E ao sairmos:
+"Obrigado por seu retorno."
+
+00:00:44.200 --> 00:00:48.234
+Se a avaliação fosse 1,
+imprimiríamos as duas frases.
+
+00:00:48.267 --> 00:00:52.467
+Mas para a 4, só imprimimos
+"obrigado por seu retorno".
+
+00:00:52.501 --> 00:00:54.701
+Ifs aninhados
+podem ser muito úteis
+
+00:00:54.734 --> 00:00:58.534
+para fazermos algo só dentro
+do bloco de código if aninhado,
+
+00:00:58.567 --> 00:00:59.834
+e não fora dele.
+

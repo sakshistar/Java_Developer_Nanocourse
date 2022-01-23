@@ -1,0 +1,105 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.234
+Agora que contamos
+o número de jogadas necessárias
+
+00:00:03.267 --> 00:00:05.000
+para dois dados combinarem,
+
+00:00:05.033 --> 00:00:08.334
+vejamos o que é preciso
+para adicionar mais um dado,
+
+00:00:08.367 --> 00:00:12.033
+e contar as jogadas necessárias
+para que 3 dados combinem.
+
+00:00:12.067 --> 00:00:17.100
+Primeiro, temos que declarar
+esta nova variável int, dice3,
+
+00:00:17.133 --> 00:00:21.067
+e colocar nela o valor de retorno
+de outra chamada a rollDice.
+
+00:00:21.100 --> 00:00:24.000
+Também devemos fazer isso
+no nosso laço while.
+
+00:00:24.033 --> 00:00:27.567
+Quando jogarmos nossos 3 dados,
+devemos colocar em dice3
+
+00:00:27.601 --> 00:00:30.634
+o resultado de outra chamada
+à função rollDice.
+
+00:00:30.667 --> 00:00:34.801
+Por fim, precisamos mudar
+esta condição de laço while aqui,
+
+00:00:34.834 --> 00:00:38.601
+para checar se todos os dados
+combinam, não apenas dois.
+
+00:00:38.634 --> 00:00:41.334
+Infelizmente, não podemos
+fazer algo assim,
+
+00:00:41.367 --> 00:00:44.467
+onde dizemos
+dice1 igual a dice2 igual a dice 3.
+
+00:00:44.501 --> 00:00:48.000
+Qualquer comparação no Java
+só pode ter dois lados,
+
+00:00:48.033 --> 00:00:51.100
+ou o Java reclamaria
+e marcaria um erro
+
+00:00:51.133 --> 00:00:53.701
+antes de permitir
+que você rode o código.
+
+00:00:53.734 --> 00:00:57.868
+Mas podemos usar as operações lógicas
+que vimos na aula anterior,
+
+00:00:57.901 --> 00:01:02.367
+e quebrar esta checagem aqui
+em múltiplas checagens na condição.
+
+00:01:02.400 --> 00:01:04.367
+Como essas opções aqui.
+
+00:01:04.400 --> 00:01:07.334
+São todas corretas
+para o Java,
+
+00:01:07.367 --> 00:01:12.033
+mas só uma faria o nosso laço
+funcionar como queremos.
+
+00:01:12.067 --> 00:01:15.701
+Qual delas acham que esta
+condição de laço deveria ser?
+
+00:01:15.734 --> 00:01:18.634
+Lembrem-se, agora queremos
+que o laço continue
+
+00:01:18.667 --> 00:01:21.734
+desde que os 3 dados
+não combinem todos,
+
+00:01:21.767 --> 00:01:24.968
+ou seja,
+quando os 3 dados combinarem,
+
+00:01:25.000 --> 00:01:27.334
+o laço não deverá continuar.
+

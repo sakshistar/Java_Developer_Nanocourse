@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.589
+Here's a tic-tac-toe grid where O's have won.
+
+00:00:03.589 --> 00:00:06.535
+There are three in a row along this diagonal.
+
+00:00:06.535 --> 00:00:11.780
+Which grid indices do we need to check to know that this is a winning board?
+
+00:00:11.779 --> 00:00:15.709
+Here are all nine indices for the nine spots on our grid.
+
+00:00:15.710 --> 00:00:18.219
+Again, assume the first index checks the column
+
+00:00:18.219 --> 00:00:21.414
+a character is in and the second tracks the row.
+
+00:00:21.414 --> 00:00:24.099
+And you should be checking three options total
+
+00:00:24.100 --> 00:00:26.350
+for the three spots our program needs to check.
+

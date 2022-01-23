@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.075
+Say we've written a switch statement that prints out the month,
+
+00:00:03.075 --> 00:00:04.695
+based on the number we give it.
+
+00:00:04.695 --> 00:00:06.419
+So, if month equals one,
+
+00:00:06.419 --> 00:00:08.640
+our month string will equal January and we'll
+
+00:00:08.640 --> 00:00:11.290
+print that out at the end of our switch statement.
+
+00:00:11.289 --> 00:00:12.329
+If month equals two,
+
+00:00:12.330 --> 00:00:13.711
+we'll print out February,
+
+00:00:13.711 --> 00:00:15.820
+three, March and so on.
+
+00:00:15.820 --> 00:00:19.045
+But this code only includes cases up to the number 11,
+
+00:00:19.045 --> 00:00:20.222
+the month of November,
+
+00:00:20.222 --> 00:00:21.995
+the code isn't finished.
+
+00:00:21.995 --> 00:00:24.885
+Complete this switch statement by writing the last case,
+
+00:00:24.885 --> 00:00:28.620
+case 12 to print out December and writing a default case,
+
+00:00:28.620 --> 00:00:31.664
+so that for any month number not between 1 and 12,
+
+00:00:31.664 --> 00:00:33.543
+say too large number like 37,
+
+00:00:33.543 --> 00:00:36.059
+this code will print out, Invalid month.
+

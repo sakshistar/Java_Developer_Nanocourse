@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.009
+Here are the correct values.
+
+00:00:02.009 --> 00:00:03.586
+For our first expression,
+
+00:00:03.587 --> 00:00:07.144
+we're checking if x is less than or equal to 21.
+
+00:00:07.144 --> 00:00:08.759
+We know that x is 20,
+
+00:00:08.759 --> 00:00:12.390
+and 20 is less than 21, so this will be true.
+
+00:00:12.390 --> 00:00:14.175
+For our next expression,
+
+00:00:14.175 --> 00:00:16.769
+we're checking if two times two, is greater than eight.
+
+00:00:16.769 --> 00:00:22.045
+Two times two is four which is less than eight so this is false.
+
+00:00:22.045 --> 00:00:25.685
+Next we're checking if five is not equal to x.
+
+00:00:25.684 --> 00:00:28.589
+Remember that the exclamation point just means Not.
+
+00:00:28.589 --> 00:00:30.233
+We know that x is 20,
+
+00:00:30.233 --> 00:00:32.939
+so this is checking if five is not equal to
+
+00:00:32.939 --> 00:00:37.004
+20 and since five isn't equal to 20, this is true.
+
+00:00:37.005 --> 00:00:40.765
+Then we check if 20 is equal to x.
+
+00:00:40.765 --> 00:00:44.484
+In other words if 20 is equal to 20. And this is true.
+
+00:00:44.484 --> 00:00:49.289
+And remember the equality comparison is always done with a double equal sign.
+
+00:00:49.289 --> 00:00:51.750
+Next let's use our knowledge about decision making and
+
+00:00:51.750 --> 00:00:54.259
+Boolean expressions to help us build program.
+

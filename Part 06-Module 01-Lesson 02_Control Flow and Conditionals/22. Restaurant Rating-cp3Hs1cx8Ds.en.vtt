@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.199
+Here's a program for
+
+00:00:01.199 --> 00:00:06.165
+a restaurant rating system that rates a restaurant with a rating 0 through 5.
+
+00:00:06.165 --> 00:00:08.669
+Zero is the worst and five is the best.
+
+00:00:08.669 --> 00:00:13.900
+It uses nested ifs to first check if a rating is a valid input between zero and five.
+
+00:00:13.900 --> 00:00:15.425
+Then in our nested if,
+
+00:00:15.425 --> 00:00:17.760
+if the rating is less than or equal to two,
+
+00:00:17.760 --> 00:00:22.935
+it prompts you for a reason for why you're leaving a low rating and after the nested if,
+
+00:00:22.934 --> 00:00:25.404
+it prints out "Thank you for your feedback."
+
+00:00:25.405 --> 00:00:29.000
+What will this code print out if our rating variable is equal to four?
+

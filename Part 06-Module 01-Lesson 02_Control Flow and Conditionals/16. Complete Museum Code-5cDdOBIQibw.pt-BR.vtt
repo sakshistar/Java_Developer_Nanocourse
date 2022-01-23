@@ -1,0 +1,65 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.801
+Para verificar se alguém
+tem mais de 60 anos
+
+00:00:02.834 --> 00:00:07.067
+basta outra verificação de idade
+após a primeira, como um else if.
+
+00:00:07.100 --> 00:00:11.133
+A condição do teste deve ser:
+se a idade for maior que 60.
+
+00:00:11.167 --> 00:00:13.167
+Este código funciona
+como um else if.
+
+00:00:13.200 --> 00:00:15.400
+Mas também funcionaria
+só como um if,
+
+00:00:15.434 --> 00:00:18.133
+já que alguém não pode ter
+menos de 15 anos
+
+00:00:18.167 --> 00:00:19.934
+e mais de 60.
+
+00:00:19.968 --> 00:00:24.000
+Nossa última condição de teste
+é verificar se alguém é estudante.
+
+00:00:24.033 --> 00:00:27.601
+Fazemos isso dizendo:
+else if isStudent.
+
+00:00:27.634 --> 00:00:31.901
+Se isso for verdadeiro, entramos
+com o bloco de código de desconto.
+
+00:00:31.934 --> 00:00:36.033
+Notem que oferecemos o mesmo
+desconto para as 3 verificações.
+
+00:00:36.067 --> 00:00:38.534
+e para ter um código
+conciso e simples,
+
+00:00:38.567 --> 00:00:41.501
+não seria bom se reduzíssemos
+essa repetição?
+
+00:00:41.534 --> 00:00:43.200
+Há como fazer isto,
+
+00:00:43.234 --> 00:00:46.934
+combinando as 3 verificações
+em uma condição de teste maior,
+
+00:00:46.968 --> 00:00:48.567
+que veremos a seguir.
+

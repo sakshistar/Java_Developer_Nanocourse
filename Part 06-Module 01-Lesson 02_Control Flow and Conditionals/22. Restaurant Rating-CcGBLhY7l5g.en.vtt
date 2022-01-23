@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.435
+If the rating is 4, then we'll pass our first if test.
+
+00:00:03.435 --> 00:00:05.820
+Because 4 is between 0 and 5.
+
+00:00:05.820 --> 00:00:11.260
+Then, we move on to our second nested if and test if rating is less than or equal to 2.
+
+00:00:11.259 --> 00:00:14.189
+Since rating is 4, it's not lower than 2,
+
+00:00:14.189 --> 00:00:17.600
+this is false, and we do not enter this block of code.
+
+00:00:17.600 --> 00:00:21.690
+Instead, we'll skip to its ending curly brace and after this curly brace,
+
+00:00:21.690 --> 00:00:23.295
+there's a print line that prints out,
+
+00:00:23.295 --> 00:00:24.790
+"Thank you for your feedback".
+
+00:00:24.789 --> 00:00:28.530
+So that's all that will print out for when our rating is equal to 4.
+
+00:00:28.530 --> 00:00:30.140
+If the rating was lower,
+
+00:00:30.140 --> 00:00:33.780
+something like 1, we would pass through both our if tests,
+
+00:00:33.780 --> 00:00:35.655
+and because we're reading line by line,
+
+00:00:35.655 --> 00:00:38.045
+you go into our nested if first,
+
+00:00:38.045 --> 00:00:40.920
+and print out "What's the reason for your low rating?"
+
+00:00:40.920 --> 00:00:42.740
+Then when we exit it, we'd print out,
+
+00:00:42.740 --> 00:00:44.359
+"Thank you for your feedback".
+
+00:00:44.359 --> 00:00:46.079
+So if rating was equal to 1,
+
+00:00:46.079 --> 00:00:48.049
+we'd print out both of these lines.
+
+00:00:48.049 --> 00:00:49.709
+But for rating equals 4,
+
+00:00:49.710 --> 00:00:52.410
+we just print out, "Thank you for your feedback".
+
+00:00:52.409 --> 00:00:55.949
+So nested if statements can be very useful when you want to do something
+
+00:00:55.950 --> 00:00:59.440
+unique within the nested if block of code versus outside.
+

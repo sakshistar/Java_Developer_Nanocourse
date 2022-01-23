@@ -1,0 +1,282 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.901
+No programa de preços
+de ingressos do museu,
+
+00:00:02.934 --> 00:00:06.100
+oferecemos o mesmo desconto
+a 3 diferentes grupos.
+
+00:00:06.133 --> 00:00:07.934
+Pessoas com 15 anos
+ou menos,
+
+00:00:07.968 --> 00:00:10.667
+as com mais de 60,
+mas não com 60,
+
+00:00:10.701 --> 00:00:12.534
+e estudantes.
+
+00:00:12.567 --> 00:00:15.133
+Temos que repetir nosso desconto
+3 vezes.
+
+00:00:15.167 --> 00:00:19.167
+Em programação, é sempre boa ideia
+reduzir un código repetitivo
+
+00:00:19.200 --> 00:00:20.701
+e, neste caso, podemos.
+
+00:00:20.734 --> 00:00:23.567
+O Java permite
+que nos livremos de repetições
+
+00:00:23.601 --> 00:00:27.200
+combinando as 3 checagens
+em uma condição de teste maior.
+
+00:00:27.234 --> 00:00:29.200
+Queremos testar
+as 3 condições
+
+00:00:29.234 --> 00:00:32.467
+e aplicar o desconto
+se alguém atender a uma delas.
+
+00:00:32.501 --> 00:00:36.567
+A condição que queremos testar
+é se alguém tem 15 anos ou menos,
+
+00:00:36.601 --> 00:00:38.601
+ou se tem mais de 60 anos,
+
+00:00:38.634 --> 00:00:40.434
+ou se é estudante.
+
+00:00:40.467 --> 00:00:43.167
+Em qualquer dos casos,
+oferecemos desconto.
+
+00:00:43.200 --> 00:00:47.267
+Formamos este teste maior
+no Java, usando operadores lógicos.
+
+00:00:47.300 --> 00:00:50.234
+Há 3 operadores lógicos
+principais.
+
+00:00:50.267 --> 00:00:52.934
+AND, estes dois símbolos,
+
+00:00:52.968 --> 00:00:55.400
+OR, essas duas
+linhas retas,
+
+00:00:55.434 --> 00:00:59.100
+e NOT, um ponto de exclamação,
+que pode parecer conhecido,
+
+00:00:59.133 --> 00:01:02.968
+de como checamos se algum valor
+não era igual a algo mais.
+
+00:01:03.000 --> 00:01:06.701
+Os operadores AND e OR
+combinam duas condições de teste,
+
+00:01:06.734 --> 00:01:10.467
+ou expressões booleanas, por vez,
+em uma expressão maior,
+
+00:01:10.501 --> 00:01:15.033
+como: 3 é menor que 5?
+E 2 é maior que 15?
+
+00:01:15.067 --> 00:01:17.868
+Combinações AND como esta
+só são verdadeiras
+
+00:01:17.901 --> 00:01:19.968
+quando
+os dois testes combinados,
+
+00:01:20.000 --> 00:01:23.300
+as expressões à esquerda
+e à direita do símbolo AND,
+
+00:01:23.334 --> 00:01:24.834
+também são verdadeiras.
+
+00:01:24.868 --> 00:01:28.534
+Ou seja, ele checa se as expressões
+à esquerda e à direita
+
+00:01:28.567 --> 00:01:30.000
+são ambas verdadeiras.
+
+00:01:30.033 --> 00:01:33.934
+Neste exemplo, o teste
+"3 é menor que 5" é verdadeiro.
+
+00:01:33.968 --> 00:01:36.901
+Mas, à direita,
+2 não é maior que 15.
+
+00:01:36.934 --> 00:01:39.167
+Esta expressão é falsa.
+
+00:01:39.200 --> 00:01:45.067
+Como uma das expressões é falsa,
+toda esta combinação AND será falsa.
+
+00:01:45.100 --> 00:01:48.234
+Um operador OR
+também combina dois testes.
+
+00:01:48.267 --> 00:01:52.634
+Ele será verdadeiro quando uma
+ou as duas expressões são verdadeiras.
+
+00:01:52.667 --> 00:01:56.868
+Ele checa se a expressão à esquerda
+ou à direita é verdadeira.
+
+00:01:56.901 --> 00:02:01.167
+Se pelos menos uma for,
+a combinação OR será verdadeira.
+
+00:02:01.200 --> 00:02:05.801
+Para a mesma combinação de expressões,
+esta verdadeira, esta falsa,
+
+00:02:05.834 --> 00:02:09.968
+combinada com um OR,
+toda esta expressão será verdadeira.
+
+00:02:10.000 --> 00:02:13.667
+Finalmente, o operador NOT
+trabalha com um teste por vez,
+
+00:02:13.701 --> 00:02:16.167
+e nega qualquer valor
+a que se aplique.
+
+00:02:16.200 --> 00:02:19.367
+Ou seja, transforma
+um valor ou expressão booleana
+
+00:02:19.400 --> 00:02:21.100
+no seu valor oposto.
+
+00:02:21.133 --> 00:02:25.667
+Por exemplo, NOT 3 &lt; 5
+é o mesmo que dizer
+
+00:02:25.701 --> 00:02:27.801
+NOT essa expressão
+verdadeira,
+
+00:02:27.834 --> 00:02:30.300
+e "não verdadeiro"
+equivale a "falso".
+
+00:02:30.334 --> 00:02:32.067
+A expressão é falsa.
+
+00:02:32.100 --> 00:02:35.634
+Vamos ver mais exemplos
+desses operadores daqui a pouco.
+
+00:02:35.667 --> 00:02:39.601
+Agora, se usarmos esses 3 operadores
+para conectar expressões,
+
+00:02:39.634 --> 00:02:42.968
+podemos combinar quantas quisermos
+em um teste maior.
+
+00:02:43.000 --> 00:02:45.901
+É o que queremos fazer
+para o código do museu.
+
+00:02:45.934 --> 00:02:50.801
+Quanto ao desconto,
+vamos testar 3 condições diferentes.
+
+00:02:50.834 --> 00:02:54.801
+Primeiro, se a pessoa
+tem 15 anos ou menos,
+
+00:02:54.834 --> 00:02:57.434
+se a pessoa tem
+mais de 60 anos
+
+00:02:57.467 --> 00:02:59.734
+e, finalmente,
+se é estudante.
+
+00:02:59.767 --> 00:03:03.934
+Podemos combinar essas condições
+em uma grande expressão booleana,
+
+00:03:03.968 --> 00:03:05.934
+usando 2 operadores OR.
+
+00:03:05.968 --> 00:03:10.968
+Eles dirão que se uma única
+condição é atendida,
+
+00:03:11.000 --> 00:03:12.734
+podemos aplicar o desconto.
+
+00:03:12.767 --> 00:03:14.667
+Em código, fica assim.
+
+00:03:14.701 --> 00:03:17.801
+O primeiro OR combina
+as duas condições de idade,
+
+00:03:17.834 --> 00:03:21.000
+e o segundo combina essas
+à condição de estudante.
+
+00:03:21.033 --> 00:03:30.067
+Fica:
+if (age&lt;=15 OR age&gt;60 OR isStudent)
+
+00:03:30.100 --> 00:03:32.734
+Se uma das 3 condições
+for verdadeira,
+
+00:03:32.767 --> 00:03:37.200
+entraremos no bloco de código
+e aplicaremos o nosso desconto.
+
+00:03:37.234 --> 00:03:38.801
+É simples assim.
+
+00:03:38.834 --> 00:03:43.701
+Cada condição prévia testada,
+separada por operadores lógicos.
+
+00:03:43.734 --> 00:03:47.467
+Com cada condição de teste
+separada por um AND ou um OR,
+
+00:03:47.501 --> 00:03:50.601
+você pode criar um teste
+tão longo quanto quiser.
+
+00:03:50.634 --> 00:03:53.534
+Vejamos mais exemplos
+de condições combinadas,
+
+00:03:53.567 --> 00:03:56.300
+para entender melhor
+AND, OR e NOT.
+

@@ -1,0 +1,214 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.495
+So far we've seen how to use for loops to count from one to some larger number,
+
+00:00:05.495 --> 00:00:08.970
+but there's a few more things we can do with for loops.
+
+00:00:08.970 --> 00:00:12.780
+For example, we don't always have to start with one.
+
+00:00:12.779 --> 00:00:17.375
+Say you want to write a function that adds the numbers from 15 to 20,
+
+00:00:17.376 --> 00:00:22.400
+so 15 + 16 all the way to 20 and then return the total sum.
+
+00:00:22.399 --> 00:00:23.639
+Our function would be written as
+
+00:00:23.640 --> 00:00:27.780
+public int addNumbers and it doesn't take any parameters in,
+
+00:00:27.780 --> 00:00:30.770
+but returns an integer which is the total sum.
+
+00:00:30.769 --> 00:00:33.158
+The first thing we would do is initialize our sum
+
+00:00:33.158 --> 00:00:36.240
+variable to zero and then we start our loop.
+
+00:00:36.240 --> 00:00:38.115
+Here we could have our loop,
+
+00:00:38.115 --> 00:00:43.210
+have a variable i which is our loop counter start from 15.
+
+00:00:43.210 --> 00:00:50.054
+And our condition can be i &lt;= 20 and then our increment would be i ++.
+
+00:00:50.054 --> 00:00:53.207
+Inside the loop, we would normally add i
+
+00:00:53.207 --> 00:00:56.310
+to our sum and update the sum with this new value.
+
+00:00:56.310 --> 00:00:57.945
+Once the loop finishes,
+
+00:00:57.945 --> 00:01:00.719
+we would end up with the total number that is
+
+00:01:00.719 --> 00:01:05.670
+15 + 16 all the way to 20 and return it as our functions return.
+
+00:01:05.670 --> 00:01:09.754
+Let's actually trace this loop and see exactly what's happening.
+
+00:01:09.754 --> 00:01:12.449
+We first start with sum being initialized to zero,
+
+00:01:12.450 --> 00:01:18.185
+so our value is zero and then we step into the loop initializing i to be 15.
+
+00:01:18.185 --> 00:01:21.658
+And because i is less than or equal to 20 it's true,
+
+00:01:21.658 --> 00:01:25.079
+so we step in the loop and then we run this statement here,
+
+00:01:25.079 --> 00:01:27.477
+which is sum = sum + i.
+
+00:01:27.477 --> 00:01:30.530
+Sum was zero. Sum plus i is 15 so sum
+
+00:01:30.531 --> 00:01:34.945
+gets updated to the result of this calculation here which is 15.
+
+00:01:34.944 --> 00:01:36.609
+We reach the end of our loop.
+
+00:01:36.609 --> 00:01:39.954
+We go back up, we increment our counter making it
+
+00:01:39.954 --> 00:01:44.745
+16 and then we perform our check operation here,
+
+00:01:44.745 --> 00:01:46.660
+is i less than or equal to 20?
+
+00:01:46.659 --> 00:01:48.825
+Yes it is. We step back in,
+
+00:01:48.825 --> 00:01:52.194
+we add i to the sum again and then update sum,
+
+00:01:52.194 --> 00:01:55.784
+so we add i to the sum which is 15 + 16 then the result gets
+
+00:01:55.784 --> 00:02:00.119
+updated into the sum variable which is 31 and so on.
+
+00:02:00.120 --> 00:02:02.745
+So we increment i again to be 17,
+
+00:02:02.745 --> 00:02:04.990
+we do our comparison which is true,
+
+00:02:04.989 --> 00:02:09.840
+we step inside updating sum and then increment i and then
+
+00:02:09.840 --> 00:02:14.960
+do our comparison and then update sum increment i,
+
+00:02:14.960 --> 00:02:19.455
+comparison sum, increment i, comparison.
+
+00:02:19.455 --> 00:02:23.200
+So at this point sum is equal to 105.
+
+00:02:23.199 --> 00:02:25.537
+We reach our end of our loop, we go back up,
+
+00:02:25.538 --> 00:02:32.068
+we increment i to make it 21 and then we do our comparison here which is i&gt;= 20.
+
+00:02:32.068 --> 00:02:34.950
+Now i is 21 so this comparison is false,
+
+00:02:34.949 --> 00:02:37.629
+which means we do not step into the loop anymore.
+
+00:02:37.629 --> 00:02:40.280
+We go here which says return sum,
+
+00:02:40.280 --> 00:02:43.590
+so our function ends returning the value of sum which is 105,
+
+00:02:43.590 --> 00:02:46.305
+and that is the correct value.
+
+00:02:46.305 --> 00:02:49.655
+The idea here is that because we started i with a value
+
+00:02:49.655 --> 00:02:54.000
+not one just 15 and our loop condition went all the way to 20,
+
+00:02:54.000 --> 00:02:59.719
+you could see that i changes from 15 all the way till it exits the loop.
+
+00:02:59.719 --> 00:03:03.969
+Another thing you can do with four loops is count downwards rather than up.
+
+00:03:03.969 --> 00:03:07.780
+For example, this loop counts up from one all the way to three.
+
+00:03:07.780 --> 00:03:11.164
+If we run it, we'll get this output one, two, three.
+
+00:03:11.164 --> 00:03:15.364
+This is all because of i ++ here which is our loop increment.
+
+00:03:15.365 --> 00:03:19.460
+It's increasing i by one every time making it go from one,
+
+00:03:19.460 --> 00:03:21.280
+to two, to three.
+
+00:03:21.280 --> 00:03:24.175
+However, if we wanted our output to become three to one,
+
+00:03:24.175 --> 00:03:26.210
+count down from three to one,
+
+00:03:26.210 --> 00:03:29.730
+we can use the notation i --.
+
+00:03:29.729 --> 00:03:34.364
+Just like i ++ is adding one to i and updating it that way,
+
+00:03:34.365 --> 00:03:39.730
+i -- is subtracting one from i and updating it that way as well.
+
+00:03:39.729 --> 00:03:42.199
+It's called the decrement,
+
+00:03:42.199 --> 00:03:45.464
+because i is decreasing every time.
+
+00:03:45.465 --> 00:03:49.500
+And it's exactly the same as saying i = i -1.
+
+00:03:49.500 --> 00:03:51.925
+It's just the short hand version of it.
+
+00:03:51.925 --> 00:03:55.939
+However once we use i --, we're counting down.
+
+00:03:55.939 --> 00:04:00.849
+So we want our loop to start from the larger number this time which would be three.
+
+00:04:00.849 --> 00:04:04.264
+So i starts from three and it counts downwards.
+
+00:04:04.264 --> 00:04:07.844
+But our loop condition also needs to change.
+
+00:04:07.844 --> 00:04:11.030
+Can you try to figure out what this loop condition should be?
+

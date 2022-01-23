@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.600
+Just like nested if conditions,
+
+00:00:02.600 --> 00:00:06.464
+nested loops means we have a loop inside another loop.
+
+00:00:06.464 --> 00:00:08.929
+Say for example, we have this loop here,
+
+00:00:08.929 --> 00:00:11.150
+using the loop counter i that starts from
+
+00:00:11.150 --> 00:00:14.480
+zero and counts as long as i is less than three.
+
+00:00:14.480 --> 00:00:17.210
+This means, whatever code we write inside this code block
+
+00:00:17.210 --> 00:00:20.894
+here is going to be repeated exactly three times.
+
+00:00:20.894 --> 00:00:24.289
+Now, say we place another loop inside here,
+
+00:00:24.289 --> 00:00:26.509
+using the loop counter j, for example,
+
+00:00:26.510 --> 00:00:30.290
+that also starts from zero and counts as long as j is less than three,
+
+00:00:30.289 --> 00:00:35.710
+which means whatever I type inside there would also get repeated three times itself.
+
+00:00:35.710 --> 00:00:40.820
+So, if we place a statement like this that just prints out this message, "Hi!"
+
+00:00:40.820 --> 00:00:44.299
+How many times do you think this message would get printed?
+

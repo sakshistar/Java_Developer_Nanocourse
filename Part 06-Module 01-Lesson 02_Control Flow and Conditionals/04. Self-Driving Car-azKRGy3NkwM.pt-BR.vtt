@@ -1,0 +1,38 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.901
+No momento, o Google está no processo
+de construir e testar carros autônomos.
+
+00:00:04.934 --> 00:00:09.300
+São feitos para andar com segurança,
+sem precisar de motorista.
+
+00:00:09.334 --> 00:00:10.834
+Mas como fazem?
+
+00:00:10.868 --> 00:00:15.400
+Os carros têm sensores que detectam
+objetos e informações à sua volta.
+
+00:00:15.434 --> 00:00:20.634
+E o software processa tudo isso
+para ajudar o carro a tomar decisões.
+
+00:00:20.667 --> 00:00:23.501
+Torná-los seguros envolve
+muita programação,
+
+00:00:23.534 --> 00:00:25.400
+e tomar decisões é essencial.
+
+00:00:25.434 --> 00:00:28.534
+Vamos usar o que já vimos,
+e escrever um programa
+
+00:00:28.567 --> 00:00:32.100
+que ajude um carro a reconhecer
+e responder a semáforos.
+

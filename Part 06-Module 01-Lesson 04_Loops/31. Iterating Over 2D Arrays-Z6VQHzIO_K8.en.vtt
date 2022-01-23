@@ -1,0 +1,331 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.240
+Now that we've seen how to access individual numbers in a two dimensional array,
+
+00:00:04.240 --> 00:00:06.075
+say we wanted to do more than that,
+
+00:00:06.075 --> 00:00:11.550
+like calculate the average grades that all the students have achieved in English.
+
+00:00:11.550 --> 00:00:16.899
+This means we need to go through each and every student's grade in a particular row.
+
+00:00:16.899 --> 00:00:21.829
+Remember that a two dimensional array is basically an array of arrays.
+
+00:00:21.829 --> 00:00:25.289
+So, each row here is an array by itself.
+
+00:00:25.289 --> 00:00:29.324
+So, if we wanted to access every single item in a particular row,
+
+00:00:29.324 --> 00:00:33.689
+we specify the first number to be the index of that array.
+
+00:00:33.689 --> 00:00:35.879
+But the second index, however,
+
+00:00:35.880 --> 00:00:38.295
+we don't want a specific item,
+
+00:00:38.295 --> 00:00:40.054
+we want all of them.
+
+00:00:40.054 --> 00:00:43.091
+So we can surround this with a loop that uses i as
+
+00:00:43.091 --> 00:00:47.454
+a counter which starts from zero and as long as i is less than five.
+
+00:00:47.454 --> 00:00:51.960
+And then we can actually use this loop counter as our index here.
+
+00:00:51.960 --> 00:00:55.200
+Now, this loop counter i would have all the values from zero to
+
+00:00:55.200 --> 00:00:59.310
+five while one is specifically for the English row,
+
+00:00:59.310 --> 00:01:04.935
+which means once we run this loop we're accessing every student in the English row.
+
+00:01:04.935 --> 00:01:08.984
+So our loop would go through every item in this particular row.
+
+00:01:08.984 --> 00:01:13.474
+Let's see how we could use this to calculate the average in a Java function.
+
+00:01:13.474 --> 00:01:17.919
+English average is a function that calculates the average of a two dimensional array.
+
+00:01:17.920 --> 00:01:22.200
+It takes in this two dimensional array of integers as an input parameter and returns
+
+00:01:22.200 --> 00:01:24.359
+a double value which is equal to the average
+
+00:01:24.359 --> 00:01:27.385
+of all the items in that two dimensional array.
+
+00:01:27.385 --> 00:01:30.510
+This loop here is the one that we've just created earlier.
+
+00:01:30.510 --> 00:01:32.280
+It starts with a loop counter i equals
+
+00:01:32.280 --> 00:01:35.564
+zero and keeps going as long as i is less than five.
+
+00:01:35.564 --> 00:01:39.164
+And inside, we're accessing the grades of one and i.
+
+00:01:39.165 --> 00:01:46.715
+Remember that grades of one and i access every single student in the row of English.
+
+00:01:46.715 --> 00:01:50.995
+So this loop here would go through all the students in the English array.
+
+00:01:50.995 --> 00:01:55.204
+Now what we want to do is add up all these values inside this English array.
+
+00:01:55.204 --> 00:01:58.727
+So we can do that by declaring a total variable at the top
+
+00:01:58.727 --> 00:02:03.739
+and add this value to this total variable every single time in the loop.
+
+00:02:03.739 --> 00:02:05.444
+By the end of this loop,
+
+00:02:05.444 --> 00:02:09.719
+total would have the sum of all the values and grades and then we can start
+
+00:02:09.719 --> 00:02:14.504
+calculating the average by dividing that with the number of items in the array.
+
+00:02:14.504 --> 00:02:16.544
+Once we've calculated average,
+
+00:02:16.544 --> 00:02:19.544
+we could safely return it as the result of the function.
+
+00:02:19.544 --> 00:02:23.054
+Notice that I've divided this by five point zero not just five,
+
+00:02:23.055 --> 00:02:25.465
+because total was declared as an integer.
+
+00:02:25.465 --> 00:02:29.280
+And I want the result of the division to become a double. That's perfect.
+
+00:02:29.280 --> 00:02:33.569
+Now let's see what we need to do if we wanted to calculate the average of a column,
+
+00:02:33.569 --> 00:02:37.409
+like finding the average grade for Sandra, for example.
+
+00:02:37.409 --> 00:02:40.889
+To calculate the average grade for Sandra means we need to
+
+00:02:40.889 --> 00:02:44.794
+go through every item in a particular column.
+
+00:02:44.794 --> 00:02:47.984
+This should be very similar to what we've done with the English average,
+
+00:02:47.985 --> 00:02:52.645
+except that now we want to go through every subject array, not just the one.
+
+00:02:52.645 --> 00:02:57.439
+Which means our first index here has to be the loop counter i while
+
+00:02:57.439 --> 00:03:03.009
+the second number here would be equal to the index of the person who we're interested in.
+
+00:03:03.009 --> 00:03:05.709
+In the case of Sandra, that would become two.
+
+00:03:05.710 --> 00:03:08.200
+Now this means that this loop would go through
+
+00:03:08.199 --> 00:03:12.974
+all the grades that Sandra has achieved in all the subjects.
+
+00:03:12.974 --> 00:03:16.164
+Let's see how we could use that in some java code.
+
+00:03:16.164 --> 00:03:19.479
+The function Sandra average takes in a two dimensional array as
+
+00:03:19.479 --> 00:03:23.424
+an input and calculates the average and returns it as a double.
+
+00:03:23.425 --> 00:03:26.410
+It starts by declaring this total variable and initializing to
+
+00:03:26.409 --> 00:03:31.229
+zero and then it loops over all the grades under the Sandra column.
+
+00:03:31.229 --> 00:03:33.579
+This is done by using the loop counter i as
+
+00:03:33.580 --> 00:03:38.155
+the first index and the number two for Sandra as a second index.
+
+00:03:38.155 --> 00:03:42.754
+And again, inside the loop we're just adding grades to our total every single time.
+
+00:03:42.754 --> 00:03:47.439
+So by the end of this loop we could just divide our total value by four which is
+
+00:03:47.439 --> 00:03:49.750
+the number of subjects to get the average grades
+
+00:03:49.750 --> 00:03:53.129
+that Sandra has achieved and then we can return that.
+
+00:03:53.129 --> 00:03:57.349
+That looks pretty good. However, there are a few things that we can change in
+
+00:03:57.349 --> 00:04:02.014
+this function to make it more readable and easier to understand.
+
+00:04:02.014 --> 00:04:06.939
+First of all, these numbers four and two and four point zero don't really mean
+
+00:04:06.939 --> 00:04:08.859
+much to someone who hasn't seen the array
+
+00:04:08.860 --> 00:04:12.500
+before especially if they don't know what the array has inside it.
+
+00:04:12.500 --> 00:04:15.039
+So to make the function more generic we can actually
+
+00:04:15.039 --> 00:04:17.920
+figure out those numbers inside the code itself,
+
+00:04:17.920 --> 00:04:21.235
+like four which is equal to the number of subjects
+
+00:04:21.235 --> 00:04:25.435
+can be deduced from the two dimensional array that's passed in as a parameter.
+
+00:04:25.435 --> 00:04:31.030
+We can do that in the very first line of our function by using the keyword length again.
+
+00:04:31.029 --> 00:04:33.879
+Remember that when we use the length keyword,
+
+00:04:33.879 --> 00:04:37.399
+we're counting the number of elements or items in that array.
+
+00:04:37.399 --> 00:04:40.269
+And since grades is an array of arrays,
+
+00:04:40.269 --> 00:04:43.089
+grades.length tells us how many arrays there
+
+00:04:43.089 --> 00:04:47.534
+are in this two dimensional array which is equal to the number of subjects.
+
+00:04:47.535 --> 00:04:50.525
+So we can store that in a variable called subjects and
+
+00:04:50.524 --> 00:04:54.444
+now replace any four with that variable instead.
+
+00:04:54.444 --> 00:04:57.240
+And when we get to the four point zero down here,
+
+00:04:57.240 --> 00:05:00.165
+because we want to make sure that our subjects is a double,
+
+00:05:00.165 --> 00:05:01.920
+even though it's declared as an integer,
+
+00:05:01.920 --> 00:05:04.645
+we can cast it to a double row like we have learned before.
+
+00:05:04.644 --> 00:05:06.750
+So the average is now calculated by dividing
+
+00:05:06.750 --> 00:05:10.860
+total with the number of subjects but cast it into a double.
+
+00:05:10.860 --> 00:05:14.805
+This looks much better now because this would work for any two dimensional array,
+
+00:05:14.805 --> 00:05:17.340
+no matter how many subjects are inside it.
+
+00:05:17.339 --> 00:05:20.219
+One last thing we can do here is to generalize this
+
+00:05:20.220 --> 00:05:23.610
+too instead of having a function specifically for Sandra.
+
+00:05:23.610 --> 00:05:26.100
+And instead of having a function that calculates
+
+00:05:26.100 --> 00:05:29.080
+the average for any student that we specify.
+
+00:05:29.079 --> 00:05:32.159
+The best way to do that is to have a generic function called,
+
+00:05:32.160 --> 00:05:37.715
+studentAverage that now has an extra input parameter which is an integer student.
+
+00:05:37.714 --> 00:05:41.250
+So it takes in the actual two dimensional array with all the grades in
+
+00:05:41.250 --> 00:05:46.610
+it and the student index whom we're interested in calculating the average for.
+
+00:05:46.610 --> 00:05:51.759
+So inside, we could just replace the square brackets here with this variable student
+
+00:05:51.759 --> 00:05:53.699
+which means whatever number we pass in as
+
+00:05:53.699 --> 00:05:58.310
+an input parameter would be used to access this grade's two dimensional array.
+
+00:05:58.310 --> 00:06:01.680
+Now our studentAverage function would work for any student we
+
+00:06:01.680 --> 00:06:07.410
+specify and with any two dimensional array that has any number of subjects in it.
+
+00:06:07.410 --> 00:06:11.415
+So what if we wanted to do more analysis on this two dimensional array?
+
+00:06:11.415 --> 00:06:14.610
+Say we needed to loop over the entire array,
+
+00:06:14.610 --> 00:06:17.680
+accessing every single number in it.
+
+00:06:17.680 --> 00:06:20.720
+It almost seems like we need a loop for every row and
+
+00:06:20.720 --> 00:06:24.140
+inside that loop we need to go through every item in that row.
+
+00:06:24.139 --> 00:06:25.764
+A loop of loops?
+
+00:06:25.764 --> 00:06:27.659
+Yep, that's actually possible.
+
+00:06:27.660 --> 00:06:29.305
+Just like nested ifs.
+
+00:06:29.305 --> 00:06:33.000
+We can actually have nested loops as well. Let's see how.
+

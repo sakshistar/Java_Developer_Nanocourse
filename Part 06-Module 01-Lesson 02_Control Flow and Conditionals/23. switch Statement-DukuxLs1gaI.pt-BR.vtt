@@ -1,0 +1,421 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.534
+Lembram-se do plano da cafeteira
+inteligente do início da aula?
+
+00:00:04.567 --> 00:00:08.467
+Queríamos programá-la
+para nos dar nosso café preferido.
+
+00:00:08.501 --> 00:00:11.968
+Para isto, ela precisa saber
+quem pede o café,
+
+00:00:12.000 --> 00:00:16.234
+e damos instruções para selecionar
+o café correto para a pessoa.
+
+00:00:16.267 --> 00:00:19.033
+Cada pessoa escolherá
+um código de 3 dígitos
+
+00:00:19.067 --> 00:00:22.200
+que vão entrar na cafeteira
+para receber o café.
+
+00:00:22.234 --> 00:00:27.000
+Escolhi o código 555,
+que me dará um expresso.
+
+00:00:27.501 --> 00:00:31.400
+Ou, se quiser mais sabor,
+entre 312
+
+00:00:31.434 --> 00:00:34.133
+e terá um delicioso
+vanilla latte.
+
+00:00:34.167 --> 00:00:35.901
+Cada um com seu gosto.
+
+00:00:35.934 --> 00:00:39.334
+Quanto mais códigos ela souber,
+mais inteligente será.
+
+00:00:39.367 --> 00:00:41.934
+Agora vamos programar
+este comportamento.
+
+00:00:41.968 --> 00:00:45.300
+Para a cafeteira inteligente,
+queremos checar o valor
+
+00:00:45.334 --> 00:00:49.067
+de uma variável chamada passcode
+e testar se é igual
+
+00:00:49.100 --> 00:00:52.234
+a algum dos valores específicos
+que ela pode ter.
+
+00:00:52.267 --> 00:00:55.334
+Como o 555,
+para o meu expresso,
+
+00:00:55.367 --> 00:00:58.267
+e 312 para
+o vanilla latte dele.
+
+00:00:58.300 --> 00:01:00.501
+Vamos incluir mais um.
+
+00:01:00.534 --> 00:01:03.100
+629 para um café pingado.
+
+00:01:03.133 --> 00:01:07.601
+Podemos programar usando uma série
+de instruções de tomada de decisão.
+
+00:01:07.634 --> 00:01:10.801
+Digamos que temos acesso
+à variável int passcode.
+
+00:01:10.834 --> 00:01:12.968
+Mas não sabemos
+o valor que será.
+
+00:01:13.000 --> 00:01:15.501
+Só que será
+um número de 3 dígitos.
+
+00:01:15.534 --> 00:01:18.434
+Escrevemos uma instrução if
+e else ifs
+
+00:01:18.467 --> 00:01:22.701
+com condições de teste que chequem
+se passcode tem um certo valor,
+
+00:01:22.734 --> 00:01:25.067
+como 555 ou 312.
+
+00:01:25.100 --> 00:01:29.033
+E dentro de cada instrução
+determinamos que tipo de café fazer
+
+00:01:29.067 --> 00:01:31.100
+baseado no valor de passcode.
+
+00:01:31.133 --> 00:01:35.367
+E o tipo de café é guardado
+numa variável string, coffeeType.
+
+00:01:35.400 --> 00:01:39.067
+No final do código,
+imprimimos o valor de coffeeType.
+
+00:01:39.100 --> 00:01:41.801
+Olhando o primeiro if
+em detalhe,
+
+00:01:41.834 --> 00:01:45.701
+ele testa
+se passcode é igual a 555.
+
+00:01:45.734 --> 00:01:48.901
+Testamos por igualdade
+com o sinal duplo de igual.
+
+00:01:48.934 --> 00:01:52.467
+E o valor 555 corresponde
+ao passcode de expresso.
+
+00:01:52.501 --> 00:01:56.501
+Se esta condição for verdadeira,
+entramos no bloco de código if
+
+00:01:56.534 --> 00:01:59.267
+e damos a coffeType
+o valor "Expresso".
+
+00:01:59.300 --> 00:02:02.067
+Como executamos o código
+no if,
+
+00:02:02.100 --> 00:02:05.300
+pulamos para a chave final
+de todas as instruções,
+
+00:02:05.334 --> 00:02:08.934
+à linha de código que imprime,
+e imprimiremos "Expresso".
+
+00:02:08.968 --> 00:02:11.234
+O resto do código
+é parecido.
+
+00:02:11.267 --> 00:02:13.767
+Checamos
+se passcode é igual 312.
+
+00:02:13.801 --> 00:02:17.200
+Se não for,
+checamos se é igual a 629.
+
+00:02:17.234 --> 00:02:21.767
+Se não for igual a nenhum,
+o coffeType será "Desconhecido".
+
+00:02:21.801 --> 00:02:25.734
+Isto pode ficar bem longo
+para múltiplas checagens de códigos.
+
+00:02:25.767 --> 00:02:29.601
+E fazemos uma checagem parecida
+em cada condição de teste.
+
+00:02:29.634 --> 00:02:33.033
+Perguntamos se passcode
+é igual a um valor específico.
+
+00:02:33.067 --> 00:02:36.167
+O Java nos dá outro jeito
+de escrever este código
+
+00:02:36.200 --> 00:02:37.701
+com a instrução switch.
+
+00:02:37.734 --> 00:02:41.000
+Ela faz a mesma coisa,
+com mais concisão.
+
+00:02:41.033 --> 00:02:45.100
+Ela nos permite checar o valor
+de uma variável, como o passcode,
+
+00:02:45.133 --> 00:02:49.300
+e testar se é igual a uma lista
+de possíveis valores que pode ter,
+
+00:02:49.334 --> 00:02:52.601
+como 555, 312 e 629.
+
+00:02:52.634 --> 00:02:55.300
+Cada um destes valores
+se chama case,
+
+00:02:55.334 --> 00:02:59.067
+e podemos programar comportamentos
+diferentes para cada um.
+
+00:02:59.100 --> 00:03:01.868
+No Java a instrução switch
+fica assim:
+
+00:03:01.901 --> 00:03:07.267
+switch seguida da variável cujo valor
+queremos chegar, entre parênteses.
+
+00:03:07.300 --> 00:03:11.300
+Então as chaves conterão
+as checagens de igualdade.
+
+00:03:11.334 --> 00:03:14.601
+As checagens são
+esses cases específicos,
+
+00:03:14.634 --> 00:03:18.801
+que, aqui, são os passcodes
+de 3 dígitos que o programa conhece:
+
+00:03:18.834 --> 00:03:22.367
+555, 312 e 629.
+
+00:03:22.400 --> 00:03:25.868
+A primeira instrução if, aqui,
+executará o mesmo código
+
+00:03:25.901 --> 00:03:28.067
+que o case 555, aqui.
+
+00:03:28.100 --> 00:03:33.334
+O valor do passcode será checado
+por igualdade ao número 555.
+
+00:03:33.367 --> 00:03:37.801
+Se combinar, o valor
+da string coffeeType será "Expresso".
+
+00:03:37.834 --> 00:03:40.434
+Foi como fizemos
+no primeiro if.
+
+00:03:40.467 --> 00:03:45.501
+Mas se o passcode não for igual a 555,
+seguimos ao próximo case,
+
+00:03:45.534 --> 00:03:48.334
+como seguimos
+ao próximo else if.
+
+00:03:48.367 --> 00:03:53.067
+O case 312 e o 629
+correspondem ao código else if.
+
+00:03:53.100 --> 00:03:56.901
+Este case checa
+se o passcode é igual a 312.
+
+00:03:56.934 --> 00:04:00.367
+Se for, coffeeType
+será "Vanilla latte".
+
+00:04:00.400 --> 00:04:05.000
+Se não, vamos para o próximo case,
+como fomos para o próximo else if.
+
+00:04:05.033 --> 00:04:08.934
+Estes 3 cases checam
+os 3 valores conhecidos de passcode.
+
+00:04:08.968 --> 00:04:11.934
+Se o passcode combinar
+com um dos valores,
+
+00:04:11.968 --> 00:04:14.534
+entramos no código
+do case correspondente
+
+00:04:14.567 --> 00:04:17.501
+e colocamos o valor correto
+em coffeeType.
+
+00:04:17.534 --> 00:04:21.133
+Notem, após cada case ser definido,
+como case 312,
+
+00:04:21.167 --> 00:04:23.868
+colocamos dois pontos,
+não ponto e vírgula.
+
+00:04:23.901 --> 00:04:26.934
+E então, as instruções
+que o programa executará,
+
+00:04:26.968 --> 00:04:29.934
+que são dar um certo valor
+à string coffeeType.
+
+00:04:29.968 --> 00:04:32.400
+Este é o formato
+para todos os cases.
+
+00:04:32.434 --> 00:04:36.467
+A palavra case, o valor específico
+a ser checado,
+
+00:04:36.501 --> 00:04:39.601
+dois pontos,
+e o código a ser executado.
+
+00:04:39.634 --> 00:04:42.334
+Após cada case,
+está a palavra break.
+
+00:04:42.367 --> 00:04:46.067
+Um break acontece após o código
+em um case ser executado.
+
+00:04:46.100 --> 00:04:49.968
+Ele sai da instrução switch
+e vai para a sua chave final.
+
+00:04:50.000 --> 00:04:55.501
+Breaks após cada case garantem que
+só um dos blocos de código executará.
+
+00:04:55.534 --> 00:04:59.901
+É assim que só um bloco de código
+numa série de ifs e else ifs
+
+00:04:59.934 --> 00:05:01.467
+será executado por vez.
+
+00:05:01.501 --> 00:05:04.534
+Um break vai sair
+do código de tomada de decisão
+
+00:05:04.567 --> 00:05:09.033
+e ir para o fim da chave final,
+onde imprimirá o valor de coffeeType.
+
+00:05:09.067 --> 00:05:12.868
+Também há um case default
+que age como uma instrução else.
+
+00:05:12.901 --> 00:05:17.067
+O código default executa quando
+os outros cases não são atendidos,
+
+00:05:17.100 --> 00:05:20.968
+como se o passcode fosse algo
+como 914, e não o reconhecemos,
+
+00:05:21.000 --> 00:05:22.634
+ou não há case para ele.
+
+00:05:22.667 --> 00:05:25.501
+Estes dois conjuntos de código
+fazem o mesmo.
+
+00:05:25.534 --> 00:05:31.567
+Se passcode fosse 555, a saída
+para ambos os códigos seria Expresso.
+
+00:05:31.601 --> 00:05:34.901
+Neste código, ele entraria
+na primeira instrução if,
+
+00:05:34.934 --> 00:05:37.167
+e faria coffeeType
+ser "Expresso",
+
+00:05:37.200 --> 00:05:42.200
+e neste, compararia o valor de
+passcode com o primeiro case, 555.
+
+00:05:42.234 --> 00:05:44.868
+Como são iguais,
+ele entraria neste código
+
+00:05:44.901 --> 00:05:47.601
+e faria coffeeType
+ser "Expresso", de novo.
+
+00:05:47.634 --> 00:05:50.667
+Um switch pode ser
+implementado com ifs e elses,
+
+00:05:50.701 --> 00:05:54.033
+mas pode ser mais fácil e legível
+escrever um switch,
+
+00:05:54.067 --> 00:05:56.767
+se for fazer muitas
+checagens de igualdade.
+
+00:05:56.801 --> 00:05:59.300
+Como programador,
+você decide o que usar
+
+00:05:59.334 --> 00:06:02.434
+para ter um código
+mais fácil de entender e usar.
+
+00:06:02.467 --> 00:06:04.634
+Vamos praticar
+um pouco mais.
+

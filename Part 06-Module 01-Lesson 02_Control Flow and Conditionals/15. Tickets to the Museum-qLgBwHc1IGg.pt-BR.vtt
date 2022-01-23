@@ -1,0 +1,168 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.801
+Para entrar neste museu,
+
+00:00:01.834 --> 00:00:04.734
+um sistema de desconto automatizado
+seria bom.
+
+00:00:04.767 --> 00:00:09.234
+Vamos construir um programa que calcule
+o preço correto do ingresso.
+
+00:00:09.267 --> 00:00:12.534
+O preço normal
+deve ser $ 10 por pessoa.
+
+00:00:12.567 --> 00:00:16.901
+Mas deve incluir um desconto,
+$ 5, em 3 casos.
+
+00:00:16.934 --> 00:00:19.834
+1) Para jovens
+de 15 anos ou menos.
+
+00:00:19.868 --> 00:00:22.834
+2) Para pessoas
+com mais de 60 anos.
+
+00:00:22.868 --> 00:00:27.467
+3) Para estudantes, como você.
+Você também tem um desconto.
+
+00:00:27.501 --> 00:00:29.834
+Como construir
+este programa?
+
+00:00:29.868 --> 00:00:34.000
+Primeiro, acompanhamos o preço,
+declarando-o como uma variável.
+
+00:00:34.033 --> 00:00:36.934
+Damos a ela
+um valor geral de 10,
+
+00:00:36.968 --> 00:00:40.634
+que podemos mudar para o valor
+do desconto, $5, no código.
+
+00:00:40.667 --> 00:00:43.701
+Para ver se alguém
+se qualifica para o desconto,
+
+00:00:43.734 --> 00:00:46.767
+precisaremos de variáveis
+para a idade da pessoa
+
+00:00:46.801 --> 00:00:48.634
+e se são estudantes.
+
+00:00:48.667 --> 00:00:52.567
+Vou representar a idade
+como um número inteiro, um int.
+
+00:00:52.601 --> 00:00:56.634
+E se a pessoa é estudante,
+pode ser verdadeiro ou falso.
+
+00:00:56.667 --> 00:00:58.200
+Seria uma booleana.
+
+00:00:58.234 --> 00:01:01.667
+Digamos que temos acesso
+ao valor das duas variáveis,
+
+00:01:01.701 --> 00:01:04.601
+mas não sabemos bem
+qual ele será.
+
+00:01:04.634 --> 00:01:07.467
+Vejamos nossa primeira
+condição de desconto.
+
+00:01:07.501 --> 00:01:10.033
+Que alguém tenha 15 anos,
+ou menos.
+
+00:01:10.067 --> 00:01:12.734
+Queremos fazer disso
+uma instrução if,
+
+00:01:12.767 --> 00:01:16.934
+onde a condição de teste cheque
+se a idade é menor ou igual a 15.
+
+00:01:16.968 --> 00:01:20.834
+Se for verdadeiro, executamos
+código para dar o desconto,
+
+00:01:20.868 --> 00:01:23.033
+e determinar o preço em $ 5.
+
+00:01:23.067 --> 00:01:26.434
+Para escrever o primeiro teste
+para 15 anos ou menos,
+
+00:01:26.467 --> 00:01:32.300
+como uma comparação booleana,
+diríamos: if (age &lt;= 15)
+
+00:01:32.334 --> 00:01:34.934
+Se for verdadeiro,
+dentro do if,
+
+00:01:34.968 --> 00:01:38.434
+queremos determinar o preço
+com desconto de $ 5.
+
+00:01:38.467 --> 00:01:43.267
+No fim do código, quero imprimir
+o valor do ingresso para que vejamos.
+
+00:01:43.300 --> 00:01:47.367
+Se rodarmos este código
+e a variável age for menos que 15,
+
+00:01:47.400 --> 00:01:51.300
+digamos, 10 anos,
+passaremos a condição de teste if,
+
+00:01:51.334 --> 00:01:53.467
+e o preço do ingresso
+será $ 5.
+
+00:01:53.501 --> 00:01:55.200
+Imprimimos este valor.
+
+00:01:55.234 --> 00:01:58.601
+Mas se a idade for maior que 15,
+digamos 25,
+
+00:01:58.634 --> 00:02:00.601
+não entramos
+a instrução if,
+
+00:02:00.634 --> 00:02:04.400
+e o preço do ingresso
+ficará no valor inicial de $ 10.
+
+00:02:04.434 --> 00:02:06.300
+Imprimimos este valor.
+
+00:02:06.334 --> 00:02:11.067
+As outras condições de desconto
+checam se alguém tem mais de 60 anos,
+
+00:02:11.100 --> 00:02:13.567
+não mais ou igual a 60,
+
+00:02:13.601 --> 00:02:16.033
+e se a pessoa é estudante.
+
+00:02:16.067 --> 00:02:18.701
+Faremos isto
+no próximo exercício.
+

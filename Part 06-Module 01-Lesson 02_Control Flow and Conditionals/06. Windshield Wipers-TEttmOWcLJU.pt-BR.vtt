@@ -1,0 +1,30 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.701
+Queremos colocar limpadores
+de para-brisa inteligentes,
+
+00:00:03.734 --> 00:00:06.434
+para que se ativem
+quando estiver chovendo.
+
+00:00:06.467 --> 00:00:08.534
+Com o boolean isRaining,
+
+00:00:08.567 --> 00:00:11.868
+que será verdadeiro se chover
+e falso se não chover,
+
+00:00:11.901 --> 00:00:15.501
+escreva um if que imprima
+"limpadores ligados"
+
+00:00:15.534 --> 00:00:16.834
+se estiver chovendo,
+
+00:00:16.868 --> 00:00:19.067
+e não imprima nada,
+caso contrário.
+

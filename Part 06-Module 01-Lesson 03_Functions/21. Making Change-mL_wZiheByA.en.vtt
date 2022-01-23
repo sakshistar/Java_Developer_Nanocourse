@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.960
+Here's the correct function definition for make change.
+
+00:00:02.960 --> 00:00:04.585
+It takes in our two parameters,
+
+00:00:04.585 --> 00:00:07.265
+double itemCost and double dollarsProvided,
+
+00:00:07.264 --> 00:00:10.515
+and then inside the function it calculates the correct change.
+
+00:00:10.515 --> 00:00:12.530
+And change will also be a double.
+
+00:00:12.529 --> 00:00:16.280
+And that's because it's the result of subtracting two other doubles.
+
+00:00:16.280 --> 00:00:18.375
+Then at the end, it has a return statement,
+
+00:00:18.375 --> 00:00:21.179
+that will return the value of change and it has
+
+00:00:21.179 --> 00:00:25.829
+a matching return type that tells us that this function will be returning a double value.
+
+00:00:25.829 --> 00:00:27.179
+Now if I call this function,
+
+00:00:27.179 --> 00:00:31.605
+which I can do by saying something like make change and then passing in two values,
+
+00:00:31.605 --> 00:00:34.424
+this call will calculate the value of change.
+
+00:00:34.424 --> 00:00:39.949
+5.75 minus 3.60 and return that value as output.
+
+00:00:39.950 --> 00:00:42.390
+I can even assign the output of this function call
+
+00:00:42.390 --> 00:00:45.160
+to a variable, like double returnedChange.
+
+00:00:45.159 --> 00:00:47.959
+And then I can treat this as I would any other double.
+
+00:00:47.960 --> 00:00:53.320
+So returning output like this is a good way to get access to the result of a calculation.
+

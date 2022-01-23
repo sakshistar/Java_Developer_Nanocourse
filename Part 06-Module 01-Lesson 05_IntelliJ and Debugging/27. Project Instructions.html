@@ -1,0 +1,343 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Instructions</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>IntelliJ and Debugging</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. JDK.html">02. JDK</a>
+    </li>
+    <li class="">
+      <a href="03. Mac Install Java Development Kit.html">03. Mac: Install Java Development Kit</a>
+    </li>
+    <li class="">
+      <a href="04. Windows Install Java Development Kit.html">04. Windows: Install Java Development Kit</a>
+    </li>
+    <li class="">
+      <a href="05. Mac The Terminal.html">05. Mac: The Terminal</a>
+    </li>
+    <li class="">
+      <a href="06. Windows Command Prompt .html">06. Windows: Command Prompt </a>
+    </li>
+    <li class="">
+      <a href="07. Mac Hello Java!.html">07. Mac: Hello Java!</a>
+    </li>
+    <li class="">
+      <a href="08. Windows Hello Java!.html">08. Windows: Hello Java!</a>
+    </li>
+    <li class="">
+      <a href="09. Windows Changing Environment Variables.html">09. Windows: Changing Environment Variables</a>
+    </li>
+    <li class="">
+      <a href="10. IntelliJ.html">10. IntelliJ</a>
+    </li>
+    <li class="">
+      <a href="11. Mac Install IntelliJ.html">11. Mac: Install IntelliJ</a>
+    </li>
+    <li class="">
+      <a href="12. Mac Install IntelliJ 2.html">12. Mac: Install IntelliJ 2</a>
+    </li>
+    <li class="">
+      <a href="13. Windows Install IntelliJ.html">13. Windows: Install IntelliJ</a>
+    </li>
+    <li class="">
+      <a href="14. Setup a Project .html">14. Setup a Project </a>
+    </li>
+    <li class="">
+      <a href="15. IntelliJ Environment.html">15. IntelliJ Environment</a>
+    </li>
+    <li class="">
+      <a href="16. Hello World in IntelliJ.html">16. Hello World in IntelliJ</a>
+    </li>
+    <li class="">
+      <a href="17. Tic Tac Toe.html">17. Tic Tac Toe</a>
+    </li>
+    <li class="">
+      <a href="18. Download Tic Tac Toe.html">18. Download Tic Tac Toe</a>
+    </li>
+    <li class="">
+      <a href="19. Import the Project Code into IntelliJ.html">19. Import the Project Code into IntelliJ</a>
+    </li>
+    <li class="">
+      <a href="20. Run the Game!.html">20. Run the Game!</a>
+    </li>
+    <li class="">
+      <a href="21. The Grid.html">21. The Grid</a>
+    </li>
+    <li class="">
+      <a href="22. 2D Coordinates.html">22. 2D Coordinates</a>
+    </li>
+    <li class="">
+      <a href="23. Winning Conditions.html">23. Winning Conditions</a>
+    </li>
+    <li class="">
+      <a href="24. Detect a Win.html">24. Detect a Win</a>
+    </li>
+    <li class="">
+      <a href="25. What type of error.html">25. What type of error</a>
+    </li>
+    <li class="">
+      <a href="26. Debugging in IntelliJ.html">26. Debugging in IntelliJ</a>
+    </li>
+    <li class="">
+      <a href="27. Project Instructions.html">27. Project Instructions</a>
+    </li>
+    <li class="">
+      <a href="28. Next Steps.html">28. Next Steps</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">27. Project Instructions</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Project 1: Tic Tac Toe</p></h3>
+  <div>
+  <h1 id="summary">Summary</h1>
+<p>In this project, you are required to complete the code for a Tic-Tac-Toe game. The source code of the game GUI and computer logic can be downloaded <a href="https://github.com/udacity/ud282" target="_blank">here</a>. While you can start compiling and playing straight away, the code is not complete because the game never detects the winner!<br />
+</p>
+<h1 id="rules-of-the-game">Rules of the Game</h1>
+<p>Tic-Tac-Toe is a 2 player board game. One player is X and the other player is O. The game starts with an empty 3x3 grid with 9 cells. The players take turns marking each cell with either an X or an O. The goal for the X player is to get 3 X’s in one line either vertically, horizontally or diagonally. The goal for the O player is to get 3 O’s in one line either vertically, horizontally or diagonally. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>X wins by forming a diagonal line</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/image00.png" alt="X wins by forming a diagonal line" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>X wins by forming a diagonal line</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>O wins by forming a horizontal line</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/image04.png" alt="O wins by forming a horizontal line" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>O wins by forming a horizontal line</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Project 1: Tic Tac Toe</p></h3>
+  <div>
+  <p>Once a line is formed the game ends and the player who formed that line wins! </p>
+<p>Sometimes there is no winner. This occurs when all of the cells are filled in but there is no line of 3 X's or 3 O's. This often happens, especially when both players are good. In this case, this game ends as a tie.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Game ends as a tie</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/image03.png" alt="Game ends as a tie" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Game ends as a tie</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Project 1: Tic Tac Toe</p></h3>
+  <div>
+  <h1 id="code-design">Code design</h1>
+<p>The source code includes 2 main Java files, <strong>Game.java</strong> and <strong>GameUI.java</strong>.</p>
+<ol>
+<li><strong>Game.java</strong> is where all the game logic code exists.</li>
+<li><strong>GameUI.java</strong> is where all the user interface code exists.  You can take a look at GameUI.java if you like, but it is not necessary to change any code there to complete the project.</li>
+</ol>
+<p>Your job is to implement the <strong>checkGameWinner()</strong> function in the <strong>Game.java</strong> file.</p>
+<p><code>String checkGameWinner(char [][] grid)</code> has a 2D char array as an input representing the game grid (see below for details) and it returns a String message indicating which player has won (X wins , O wins, Tie, or None if the game hasn't ended yet)</p>
+<p><strong>doChecks()</strong>  is another function that is responsible for calling checkGameWinner every time a player takes a turn, so you should not worry about fitting this function into the rest of the program, this is already taken care of.</p>
+<p>The Grid is represented as a 2D array of characters, indexed as follows:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>2D Array Indicies</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/image01.png" alt="2D Array Indicies" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>2D Array Indicies</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Project 1: Tic Tac Toe</p></h3>
+  <div>
+  <h1 id="requirements">Requirements</h1>
+<p>In checkGameWinner() you should access those cells in the 2D array to find out if X or O has won the game by checking if there’s 3 of the same kind in a row either horizontally, vertically or diagonally!</p>
+<ol>
+<li>If you detect a winner, set the variable result to either “X wins” or “O wins” depending on the player who won. </li>
+<li>If the game ends as a tie, set result to “Tie.”</li>
+<li>If the game has not ended yet set result to “None.”</li>
+</ol>
+<p>Then make sure the function returns that variable result at the end (you can also return the string literal directly as you detect a winner or tie).</p>
+<p>You are allowed to create and use extra functions if you want, but you should not need to do so.</p>
+<p>As a free student, you will not be able to submit your project to Udacity for review. Make sure you test the code by playing the game many times with different outcomes (X wins, O wins, tie). If you find a bug, remember that you can use the debugging feature in IntelliJ to point you to the right direction. Check the forums for help from your fellow students. </p>
+<p>Good luck! We hope you enjoyed taking this course.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="28. Next Steps.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('27. Project Instructions')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

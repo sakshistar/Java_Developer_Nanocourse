@@ -1,0 +1,382 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.459
+Arrays, just like any other variable type,
+
+00:00:02.459 --> 00:00:05.515
+can be passed in as arguments to functions.
+
+00:00:05.514 --> 00:00:07.820
+They can also be returned as return types.
+
+00:00:07.820 --> 00:00:10.500
+Say for example, we want to create a function that calculates
+
+00:00:10.500 --> 00:00:13.664
+the average temperature from an array of temperatures.
+
+00:00:13.664 --> 00:00:17.044
+Let's name our function, calculateAverage.
+
+00:00:17.045 --> 00:00:21.655
+It will take in an input of an array of doubles and it would return a single double,
+
+00:00:21.655 --> 00:00:25.690
+which is the average value of all the doubles in the input array.
+
+00:00:25.690 --> 00:00:27.940
+Our function definition would look something like this,
+
+00:00:27.940 --> 00:00:30.375
+public double calculateAverage, and
+
+00:00:30.375 --> 00:00:34.304
+a parameter of an array of doubles just called, temperatures.
+
+00:00:34.304 --> 00:00:36.174
+The first thing we need to do is figure out
+
+00:00:36.174 --> 00:00:39.250
+how many temperature values are stored inside this array.
+
+00:00:39.250 --> 00:00:41.604
+Because there are parsed in as a parameter,
+
+00:00:41.604 --> 00:00:44.589
+we don't really know how many elements are stored in it.
+
+00:00:44.590 --> 00:00:46.055
+To figure that out,
+
+00:00:46.054 --> 00:00:49.890
+we could type in the array name followed by the key word length.
+
+00:00:49.890 --> 00:00:52.119
+This basically counts the number of items inside
+
+00:00:52.119 --> 00:00:55.239
+that array and stores it into our variable, size.
+
+00:00:55.240 --> 00:00:57.219
+Next, to calculate the average,
+
+00:00:57.219 --> 00:01:00.390
+we need to add up all the items inside the array first.
+
+00:01:00.390 --> 00:01:03.039
+We can do that by declaring this total variable of type,
+
+00:01:03.039 --> 00:01:05.230
+double, and initialize it to zero,
+
+00:01:05.230 --> 00:01:07.359
+and then we follow that with a loop.
+
+00:01:07.359 --> 00:01:12.620
+Our loop counter, i, starts from zero and keeps going as long as i is less than size,
+
+00:01:12.620 --> 00:01:14.425
+which we have calculated earlier.
+
+00:01:14.424 --> 00:01:15.694
+Now, inside that loop,
+
+00:01:15.694 --> 00:01:20.974
+we could continue to add to our total variable the temperatures of i.
+
+00:01:20.974 --> 00:01:25.390
+Notice how I have used the loop counter as our index in our array here.
+
+00:01:25.390 --> 00:01:27.650
+This is basically because our loop counter starts from
+
+00:01:27.650 --> 00:01:30.410
+zero and keeps incrementing by one every time,
+
+00:01:30.409 --> 00:01:32.914
+which means using this inside the loop,
+
+00:01:32.915 --> 00:01:36.670
+we're accessing every single item in the temperatures array.
+
+00:01:36.670 --> 00:01:39.064
+And because we're adding it to our total variable,
+
+00:01:39.064 --> 00:01:40.340
+by the end of this loop,
+
+00:01:40.340 --> 00:01:44.210
+total would have the total sum of the values inside this temperatures array.
+
+00:01:44.209 --> 00:01:45.964
+To calculate the average then,
+
+00:01:45.965 --> 00:01:48.020
+we just need to divide that by our size,
+
+00:01:48.019 --> 00:01:50.539
+which is the number of elements inside the array.
+
+00:01:50.540 --> 00:01:54.140
+Then we could safely return our average calculation as
+
+00:01:54.140 --> 00:01:57.844
+a result of our function. That looks great.
+
+00:01:57.844 --> 00:02:01.870
+Let's trace it with an example array of doubles to see if it actually works.
+
+00:02:01.870 --> 00:02:06.594
+If temperatures was equal to this array here with those four different temperatures,
+
+00:02:06.594 --> 00:02:08.919
+then once we start calculating the length,
+
+00:02:08.919 --> 00:02:13.434
+it would set our size to four because we have four different values there.
+
+00:02:13.435 --> 00:02:17.650
+The next step is to initialize total to zero and then we step into the loop.
+
+00:02:17.650 --> 00:02:20.650
+Let's draw this table here and keep track of our loop counter,
+
+00:02:20.650 --> 00:02:22.710
+what's it's accessing inside the array,
+
+00:02:22.710 --> 00:02:25.525
+and the updated total value every step.
+
+00:02:25.525 --> 00:02:28.314
+The first thing that happens is initializing i to zero,
+
+00:02:28.314 --> 00:02:30.259
+so i becomes zero.
+
+00:02:30.259 --> 00:02:32.289
+And because i is less than size,
+
+00:02:32.289 --> 00:02:34.150
+which is four in this case,
+
+00:02:34.150 --> 00:02:37.795
+we step inside the loop and run this statement here.
+
+00:02:37.794 --> 00:02:39.234
+What happens inside the loop,
+
+00:02:39.235 --> 00:02:42.090
+is we're trying to access temperatures of i.
+
+00:02:42.090 --> 00:02:46.085
+i is zero at this case so we're trying to access temperatures of zero,
+
+00:02:46.085 --> 00:02:50.900
+which is the first item in the array which is equal to 75.
+
+00:02:50.900 --> 00:02:52.194
+Once we get that value,
+
+00:02:52.194 --> 00:02:56.060
+we add that to total because we're using the plus equal sign here.
+
+00:02:56.060 --> 00:03:02.604
+And total was initialized to zero so once we add 75 to zero, total becomes 75.
+
+00:03:02.604 --> 00:03:09.414
+And then we reach this closing brackets of our loop so we go back up and increment i.
+
+00:03:09.414 --> 00:03:11.935
+Once we run the increment i instruction,
+
+00:03:11.935 --> 00:03:15.789
+i increases by 1 from 0 to 1.
+
+00:03:15.789 --> 00:03:20.324
+The next thing that happens, is we check if i is less than the size.
+
+00:03:20.324 --> 00:03:25.504
+i is one and size is four so that means we're allowed to step inside the loop.
+
+00:03:25.504 --> 00:03:28.325
+Inside our loop, we're accessing temperatures of i,
+
+00:03:28.325 --> 00:03:29.930
+which is now 1,
+
+00:03:29.930 --> 00:03:33.500
+and temperatures of 1 is equal to 73.
+
+00:03:33.500 --> 00:03:37.264
+At that case, we're accessing 73 and then we're adding
+
+00:03:37.264 --> 00:03:41.569
+this temperatures of i to total using this plus equal sign.
+
+00:03:41.569 --> 00:03:47.849
+So we're basically adding 73 to 75 and total gets updated to 148.
+
+00:03:47.849 --> 00:03:51.034
+Again, we reach this closing brackets, so we go back up,
+
+00:03:51.034 --> 00:03:54.935
+increment i by one making it from 1 to 2,
+
+00:03:54.935 --> 00:03:58.354
+and then we go back and check if i is less than size.
+
+00:03:58.354 --> 00:04:02.814
+Size is four so that's still true so we step inside the loop again.
+
+00:04:02.814 --> 00:04:05.919
+Temperatures of i at that point is temperatures of 2,
+
+00:04:05.919 --> 00:04:09.979
+so that's the item of index two here which is 72,
+
+00:04:09.979 --> 00:04:11.979
+and then we're adding that to our total.
+
+00:04:11.979 --> 00:04:16.289
+We have updated total from 148 to 220.
+
+00:04:16.290 --> 00:04:19.250
+We reach the closing bracket, go back up,
+
+00:04:19.250 --> 00:04:23.540
+increment i from 2 to 3 and then we're comparing it with
+
+00:04:23.540 --> 00:04:27.845
+the size and 3 is still less than 4 so we step inside our loop,
+
+00:04:27.845 --> 00:04:29.895
+access our temperatures of 3,
+
+00:04:29.894 --> 00:04:31.564
+which is 80 at that point,
+
+00:04:31.564 --> 00:04:36.540
+and add that to total making it from 220 to 300.
+
+00:04:36.540 --> 00:04:38.240
+Then at the last iteration,
+
+00:04:38.240 --> 00:04:39.650
+once we get this closing bracket,
+
+00:04:39.649 --> 00:04:41.246
+we go back up, increment i,
+
+00:04:41.247 --> 00:04:42.715
+which makes it four.
+
+00:04:42.714 --> 00:04:46.639
+But now, four is no longer less than size so we do not step into
+
+00:04:46.639 --> 00:04:52.599
+that loop and we basically just jump all the way down to the closing bracket down here.
+
+00:04:52.600 --> 00:04:54.064
+Now that we're done with the loop,
+
+00:04:54.064 --> 00:04:58.079
+we calculate the average by dividing total with size.
+
+00:04:58.079 --> 00:05:05.375
+Total ended up being 300 and size started as four so 300 divided by four becomes 75,
+
+00:05:05.375 --> 00:05:07.519
+and that's the value that gets stored into
+
+00:05:07.519 --> 00:05:12.049
+the variable average so we can safely return that as the result of the function.
+
+00:05:12.050 --> 00:05:16.095
+Knowing the size of the array is very handy in many occasions.
+
+00:05:16.095 --> 00:05:19.860
+We've seen how to use it as the upper limit in a loop but there's
+
+00:05:19.860 --> 00:05:24.085
+a more serious problem that could happen if you just ignore the size of your array.
+
+00:05:24.084 --> 00:05:27.370
+Imagine we're accessing different numbers in this array here.
+
+00:05:27.370 --> 00:05:29.485
+We know that it has four numbers in it,
+
+00:05:29.485 --> 00:05:32.949
+which means the indices start from 0 all the way with 3.
+
+00:05:32.949 --> 00:05:35.050
+And we've already seen how we can detect
+
+00:05:35.050 --> 00:05:38.290
+the number of items in an array using the length keyword.
+
+00:05:38.290 --> 00:05:41.110
+If we run this statement here on this array,
+
+00:05:41.110 --> 00:05:45.620
+then length would actually calculate there are to be four items and size becomes four.
+
+00:05:45.620 --> 00:05:51.625
+But say we ignore this size variable and try to access the item with index 10,
+
+00:05:51.625 --> 00:05:53.769
+which obviously doesn't exist in the array.
+
+00:05:53.769 --> 00:05:55.495
+Once you try to run this program,
+
+00:05:55.495 --> 00:06:00.290
+Java would give an error saying that this index is beyond the bounds of the array.
+
+00:06:00.290 --> 00:06:02.545
+But since we have this variable size now,
+
+00:06:02.545 --> 00:06:05.980
+we know how many items exist in the array and adding
+
+00:06:05.980 --> 00:06:09.895
+something as simple as this if condition around this print line statement,
+
+00:06:09.894 --> 00:06:12.310
+we can check if the number of index that we're trying to
+
+00:06:12.310 --> 00:06:15.819
+access is indeed smaller than our size.
+
+00:06:15.819 --> 00:06:18.404
+In a case where the array looks something like this,
+
+00:06:18.404 --> 00:06:23.614
+this if condition would evaluate to false and it would not run the statement at all.
+
+00:06:23.615 --> 00:06:26.949
+However, if another array had more than ten items,
+
+00:06:26.949 --> 00:06:29.379
+then this if condition would actually evaluate to
+
+00:06:29.379 --> 00:06:33.870
+true and the statement would print the tenth item normally.
+
+00:06:33.870 --> 00:06:36.535
+Always be aware of your array bounds.
+
+00:06:36.535 --> 00:06:38.927
+The first thing you should do when dealing with arrays
+
+00:06:38.927 --> 00:06:41.319
+is try to figure out how many items are in
+
+00:06:41.319 --> 00:06:43.420
+there and always check before accessing
+
+00:06:43.420 --> 00:06:47.000
+any item if it's within the bounds of the array or not.
+

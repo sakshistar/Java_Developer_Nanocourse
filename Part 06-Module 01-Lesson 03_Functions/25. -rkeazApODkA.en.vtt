@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.950
+Our current rollDice function returns a random integer between one and six.
+
+00:00:04.950 --> 00:00:07.830
+But what if we wanted to change the range to be between one and
+
+00:00:07.830 --> 00:00:11.925
+eight or one in 10 for eight and 10-sided dice?
+
+00:00:11.925 --> 00:00:15.053
+We'd have to change the range of roll values that we output,
+
+00:00:15.053 --> 00:00:18.280
+and there are only two lines of code that control the range of a dice roll.
+
+00:00:18.280 --> 00:00:21.750
+There this multiplication line that controls how big our range is
+
+00:00:21.750 --> 00:00:25.890
+and then this addition of one line of code that shifts our range up by one.
+
+00:00:25.890 --> 00:00:29.464
+To change this whole range so that it fits an eight-sided dice,
+
+00:00:29.464 --> 00:00:32.780
+we want the range to be from 1-8 instead of 1-6.
+
+00:00:32.780 --> 00:00:36.480
+And we can do this just by changing the multiplication line that controls how big
+
+00:00:36.479 --> 00:00:40.994
+our range is by increasing the multiplier by two from 6-8.
+
+00:00:40.994 --> 00:00:44.339
+And to change the range from 1-10 for a 10 sided dice,
+
+00:00:44.340 --> 00:00:45.920
+we'd multiply by 10 here.
+
+00:00:45.920 --> 00:00:50.910
+The plus one line of code stays the same because our lowest value roll or one,
+
+00:00:50.909 --> 00:00:53.959
+stays the same no matter how many sides of dice has.
+
+00:00:53.960 --> 00:00:55.740
+So the multiplication line controls
+
+00:00:55.740 --> 00:00:59.070
+our whole range and to get the correct range of roll values,
+
+00:00:59.070 --> 00:01:02.744
+our random number is multiplied by the number of sides of dice has,
+
+00:01:02.744 --> 00:01:04.259
+whether that six, eight,
+
+00:01:04.260 --> 00:01:06.000
+10 are something else.
+
+00:01:06.000 --> 00:01:10.936
+So say, we have an input parameter inside's that tells us how many sides a dice has,
+
+00:01:10.936 --> 00:01:13.305
+eight, 10 or any other number of sides.
+
+00:01:13.305 --> 00:01:16.740
+Use this variable sides in this code so that it returns
+
+00:01:16.739 --> 00:01:20.129
+the correct range of values no matter the number of sides a dice may have.
+

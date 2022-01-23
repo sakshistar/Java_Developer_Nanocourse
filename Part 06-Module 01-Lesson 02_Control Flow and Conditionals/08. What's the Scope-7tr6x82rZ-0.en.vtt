@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.184
+This program is for sorting trash and recycling items that are recyclable,
+
+00:00:04.184 --> 00:00:07.214
+like paper or empty plastic or glass bottles.
+
+00:00:07.214 --> 00:00:10.125
+For these items isRecyclable will be true.
+
+00:00:10.125 --> 00:00:13.769
+But for now, we don't know what the value of isRecyclable will be.
+
+00:00:13.769 --> 00:00:16.515
+We also weigh our recyclable items in ounces
+
+00:00:16.515 --> 00:00:20.030
+and store that information in the variable double weight.
+
+00:00:20.030 --> 00:00:23.240
+And if we have a recyclable item, we'll print out this weight.
+
+00:00:23.239 --> 00:00:25.859
+Looking at this code and variable declarations,
+
+00:00:25.859 --> 00:00:30.105
+which of these three boundaries represents the scope of the variable weight?
+
+00:00:30.105 --> 00:00:32.939
+Choose either scope A, B, or C,
+
+00:00:32.939 --> 00:00:36.000
+which go from the largest to the smallest scope boundaries.
+

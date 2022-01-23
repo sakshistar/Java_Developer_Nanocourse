@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.625
+Here are the correct answers.
+
+00:00:02.625 --> 00:00:05.220
+Grid [2] [1] is at the rightmost column,
+
+00:00:05.219 --> 00:00:08.629
+column two, and then down to our middle row.
+
+00:00:08.630 --> 00:00:13.825
+This stores an X symbol and so grid [2] [1] is equal to the character X.
+
+00:00:13.824 --> 00:00:16.754
+Grid [0] [2] is at the first column,
+
+00:00:16.754 --> 00:00:20.924
+column zero, and then down to the bottom row, row number two.
+
+00:00:20.925 --> 00:00:22.820
+And this is also an X.
+
+00:00:22.820 --> 00:00:27.690
+Finally, grid [1] [1] is the center of our grid, and that's an O.
+
+00:00:27.690 --> 00:00:30.480
+Next, let's see how to detect if someone has won a game.
+

@@ -1,0 +1,209 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.734
+Uma estratégia popular de apostas
+usada na roleta e outros,
+
+00:00:03.767 --> 00:00:05.968
+é chamada
+de estratégia martingale.
+
+00:00:06.000 --> 00:00:08.501
+Você começa apostando pouco,
+e sempre que perde,
+
+00:00:08.534 --> 00:00:11.634
+você joga de novo, apostando
+o dobro da aposta anterior.
+
+00:00:11.667 --> 00:00:15.501
+E quando ganha,
+recupera sua perda até agora,
+
+00:00:15.534 --> 00:00:19.334
+e tem um pequeno lucro, graças
+à estratégia de dupla aposta.
+
+00:00:19.367 --> 00:00:23.100
+Você pode voltar a sua aposta
+àquela pequena aposta inicial
+
+00:00:23.133 --> 00:00:25.000
+e começar tudo de novo.
+
+00:00:25.033 --> 00:00:29.634
+A estratégia supõe que você
+acumularia os pequenos lucros,
+
+00:00:29.667 --> 00:00:33.100
+mas o perigo é que
+você pode ficar sem dinheiro.
+
+00:00:33.133 --> 00:00:38.601
+Dobrando sempre a aposta,
+o dinheiro acabará rapidamente.
+
+00:00:38.634 --> 00:00:42.100
+A chave
+é saber quando parar.
+
+00:00:42.634 --> 00:00:45.701
+Digamos que você vá começar
+com mil dólares,
+
+00:00:45.734 --> 00:00:48.901
+e ficará muito feliz
+se conseguir um lucro de 20%.
+
+00:00:48.934 --> 00:00:52.334
+Você terminaria
+com $ 1.200,00.
+
+00:00:52.367 --> 00:00:55.467
+Mas a aposta mínima
+que pode fazer é $ 10,00.
+
+00:00:55.501 --> 00:00:58.667
+Para chegar lá, você começa
+com essa aposta mínima
+
+00:00:58.701 --> 00:01:01.701
+e segue dobrando
+sempre que perde.
+
+00:01:01.734 --> 00:01:04.400
+Mas volta a $ 10,00
+quando ganha.
+
+00:01:04.434 --> 00:01:06.834
+Aqui está a função
+chamada martingale.
+
+00:01:06.868 --> 00:01:10.367
+Não tem parâmetros de entrada,
+mas retorna o inteiro
+
+00:01:10.400 --> 00:01:12.968
+que é o valor do dinheiro
+com que você termina.
+
+00:01:13.000 --> 00:01:16.567
+Pode ser maior do que o do início
+ou bem menor.
+
+00:01:16.601 --> 00:01:20.200
+Primeiro, inicializamos
+essas 3 variáveis:
+
+00:01:20.234 --> 00:01:23.467
+money, target e bet,
+com esses valores.
+
+00:01:23.501 --> 00:01:25.534
+Então temos
+este laço while.
+
+00:01:25.567 --> 00:01:29.267
+A ideia dele é que ele repetiria
+este bloco de código aqui
+
+00:01:29.300 --> 00:01:32.400
+enquanto ainda temos
+o bastante para apostar,
+
+00:01:32.434 --> 00:01:34.901
+enquanto money
+for maior que bet.
+
+00:01:34.934 --> 00:01:37.067
+Quando não temos
+mais o bastante,
+
+00:01:37.100 --> 00:01:39.400
+retornamos o que temos.
+
+00:01:39.434 --> 00:01:42.934
+Neste laço, estamos usando
+a função chamada play.
+
+00:01:42.968 --> 00:01:45.434
+Ela simula a jogada
+no jogo de apostas.
+
+00:01:45.467 --> 00:01:48.234
+Suponha que seja implementada
+em outro lugar
+
+00:01:48.267 --> 00:01:49.634
+e retorne um boolean.
+
+00:01:49.667 --> 00:01:52.234
+Ele é verdadeiro
+se você ganhou a aposta,
+
+00:01:52.267 --> 00:01:53.767
+e falso, se não ganhou.
+
+00:01:53.801 --> 00:01:57.367
+Armazenamos o retorno
+desta função na variável win,
+
+00:01:57.400 --> 00:01:58.801
+que é um booleano,
+
+00:01:58.834 --> 00:02:01.868
+e checamos
+se ganhamos mesmo a aposta.
+
+00:02:01.901 --> 00:02:05.701
+Se ganhamos, adicionamos
+o valor da aposta ao nosso dinheiro
+
+00:02:05.734 --> 00:02:07.400
+e fazemos voltar a ser 10.
+
+00:02:07.434 --> 00:02:11.200
+Se não ganhamos, a subtraímos
+do nosso valor de dinheiro
+
+00:02:11.234 --> 00:02:13.200
+e multiplicamos
+a aposta por 2
+
+00:02:13.234 --> 00:02:15.501
+para dobrar a aposta
+na próxima vez.
+
+00:02:15.534 --> 00:02:18.000
+Este bloco de código
+seguiria repetindo
+
+00:02:18.033 --> 00:02:21.000
+até não termos bastante
+para apostar mais.
+
+00:02:21.033 --> 00:02:23.033
+Falta uma parte aqui.
+
+00:02:23.067 --> 00:02:26.434
+Precisamos sair deste laço
+na hora de parar de jogar.
+
+00:02:26.467 --> 00:02:29.167
+É quando atingimos o alvo
+que nos satisfaz.
+
+00:02:29.200 --> 00:02:32.100
+Modifique o código
+adicionando uma condição if
+
+00:02:32.133 --> 00:02:36.133
+que cheque se o dinheiro atingiu
+ou excedeu o alvo predefinido.
+
+00:02:36.167 --> 00:02:38.300
+Se for assim,
+interrompa o laço.
+

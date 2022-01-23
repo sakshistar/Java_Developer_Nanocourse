@@ -1,0 +1,358 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.634
+O problema que temos aqui
+
+00:00:01.667 --> 00:00:05.200
+é contar o número de vezes
+que precisamos lançar 5 dados
+
+00:00:05.234 --> 00:00:06.667
+para conseguir um Yam.
+
+00:00:06.701 --> 00:00:09.167
+5 dados parece
+meio complicado,
+
+00:00:09.200 --> 00:00:12.167
+então é uma boa ideia
+começar de forma simples.
+
+00:00:12.200 --> 00:00:15.167
+Vamos supor que estamos
+lançando só dois dados.
+
+00:00:15.200 --> 00:00:19.367
+O objetivo é contar e retornar
+o número de lançamentos necessários
+
+00:00:19.400 --> 00:00:21.400
+até os dois dados
+serem iguais.
+
+00:00:21.434 --> 00:00:23.901
+Quando descobrirmos
+o código para isso,
+
+00:00:23.934 --> 00:00:26.868
+podemos modificá-lo
+e adicionar mais dados
+
+00:00:26.901 --> 00:00:28.534
+para resolver o problema.
+
+00:00:28.567 --> 00:00:31.901
+Quando escrevemos código
+para um problema complicado,
+
+00:00:31.934 --> 00:00:34.634
+é sempre uma boa ideia
+destrinchá-lo assim.
+
+00:00:34.667 --> 00:00:37.968
+Pense em uma versão
+abstrata ou simples do problema,
+
+00:00:38.000 --> 00:00:39.734
+escreva o código para isso,
+
+00:00:39.767 --> 00:00:42.868
+e construa em cima dele
+para o problema original.
+
+00:00:42.901 --> 00:00:46.367
+Para contar os lançamentos
+até dois dados serem iguais,
+
+00:00:46.400 --> 00:00:49.567
+vamos declarar essa função
+chamada keepRolling.
+
+00:00:49.601 --> 00:00:53.968
+Ela não recebe nenhum parâmetro
+e retorna um valor inteiro:
+
+00:00:54.000 --> 00:00:56.267
+o número
+de lançamentos necessários.
+
+00:00:56.300 --> 00:00:58.100
+Para simular os lançamentos,
+
+00:00:58.133 --> 00:01:01.968
+vamos usar a função rollDice
+que criamos na última aula.
+
+00:01:02.000 --> 00:01:05.100
+rollDice retorna um número
+aleatório entre 1 e 6,
+
+00:01:05.133 --> 00:01:07.701
+que simula
+o lançamento de um dado.
+
+00:01:07.734 --> 00:01:09.534
+Estamos chamando duas vezes,
+
+00:01:09.567 --> 00:01:12.834
+e colocando nas variáveis
+dice1 e dice2.
+
+00:01:12.868 --> 00:01:17.601
+Vou declarar outra variável
+que vai contar os lançamentos.
+
+00:01:17.634 --> 00:01:21.601
+Vou inicializar como 1, porque
+já lançamos os dados uma vez.
+
+00:01:21.634 --> 00:01:24.534
+Precisamos continuar
+a lançar os dados de novo
+
+00:01:24.567 --> 00:01:26.300
+sempre que
+não forem iguais.
+
+00:01:26.334 --> 00:01:29.734
+Podemos usar um laço while
+que checa se são diferentes
+
+00:01:29.767 --> 00:01:31.968
+e depois lança de novo
+dentro dele.
+
+00:01:32.000 --> 00:01:36.934
+Enquanto dice1 e dice2
+não forem iguais,
+
+00:01:36.968 --> 00:01:39.434
+queremos tentar de novo
+lançar os dados
+
+00:01:39.467 --> 00:01:41.400
+e torcer para que
+sejam iguais.
+
+00:01:41.434 --> 00:01:42.567
+Dentro do while,
+
+00:01:42.601 --> 00:01:45.000
+vamos chamar
+a função rollDice de novo
+
+00:01:45.033 --> 00:01:46.767
+para dice1 e dice2,
+
+00:01:46.801 --> 00:01:50.400
+e somar 1 a count
+para contar o novo lançamento.
+
+00:01:50.434 --> 00:01:54.267
+Lembre que só somamos 1
+porque as duas chamadas
+
+00:01:54.300 --> 00:01:57.467
+simulam lançar os dois dados
+apenas uma vez.
+
+00:01:57.501 --> 00:02:01.634
+Em algum momento, os dois lançamentos
+vão retornar o mesmo valor,
+
+00:02:01.667 --> 00:02:03.968
+e dice1 será igual a dice2,
+
+00:02:04.000 --> 00:02:05.767
+e este laço terminará.
+
+00:02:05.801 --> 00:02:10.033
+Neste ponto, podemos retornar
+o número de lançamentos contados,
+
+00:02:10.067 --> 00:02:13.467
+que indica o número necessário
+para que fossem iguais.
+
+00:02:13.501 --> 00:02:15.000
+Isso parece bom.
+
+00:02:15.033 --> 00:02:17.501
+Vamos fazer o traço
+com alguns exemplos
+
+00:02:17.534 --> 00:02:18.968
+para ver se funciona.
+
+00:02:19.000 --> 00:02:22.834
+A primeira coisa que acontece
+é chamar a função rollDice
+
+00:02:22.868 --> 00:02:25.501
+e colocar seu valor de retorno
+em dice1.
+
+00:02:25.534 --> 00:02:28.567
+Digamos que ela tenha
+retornado o valor 4.
+
+00:02:28.601 --> 00:02:31.901
+A linha seguinte chama
+rollDice de novo, para dice2.
+
+00:02:31.934 --> 00:02:33.968
+Digamos que retorne 2.
+
+00:02:34.000 --> 00:02:37.701
+dice1 vale 4
+e dice2 vale 2.
+
+00:02:37.734 --> 00:02:40.734
+Inicializamos count como 1
+
+00:02:40.767 --> 00:02:42.968
+e vamos para a condição
+do while.
+
+00:02:43.000 --> 00:02:46.267
+Ela checa se dice1 e dice2
+não são iguais.
+
+00:02:46.300 --> 00:02:48.601
+Neste caso, 4 e 2
+não são iguais,
+
+00:02:48.634 --> 00:02:50.701
+então a condição
+é verdadeira.
+
+00:02:50.734 --> 00:02:54.367
+Por isso, entramos no laço
+e lançamos os dados de novo,
+
+00:02:54.400 --> 00:02:58.734
+chamando rollDice duas vezes
+e atualizando as variáveis.
+
+00:02:58.767 --> 00:03:03.501
+Digamos que agora dice1 vale 6
+e dice2 vale 5.
+
+00:03:03.534 --> 00:03:06.567
+Depois, somamos 1
+à variável count,
+
+00:03:06.601 --> 00:03:09.868
+que passa a valer 2
+em vez de 1.
+
+00:03:09.901 --> 00:03:12.767
+Chegamos à chave
+que fecha o while,
+
+00:03:12.801 --> 00:03:16.200
+voltamos para cima,
+e comparamos de novo.
+
+00:03:16.234 --> 00:03:18.501
+dice1 e dice2
+são diferentes?
+
+00:03:18.534 --> 00:03:21.767
+Bem, 6 e 5 são diferentes,
+então é verdadeiro.
+
+00:03:21.801 --> 00:03:25.801
+Entramos no laço de novo
+e atualizamos dice1 e dice2
+
+00:03:25.834 --> 00:03:27.400
+usando rollDice de novo.
+
+00:03:27.434 --> 00:03:30.834
+Digamos que desta vez
+obtivemos 2 e 3.
+
+00:03:30.868 --> 00:03:34.267
+Somamos 1 a count de novo,
+que passa a ser 3,
+
+00:03:34.300 --> 00:03:37.834
+voltamos para cima
+e checamos a condição do laço.
+
+00:03:37.868 --> 00:03:40.868
+Checamos se dice1 e dice2
+não são iguais,
+
+00:03:40.901 --> 00:03:43.601
+e 2 e 3 não são iguais,
+então é verdadeiro,
+
+00:03:43.634 --> 00:03:46.067
+e por isso
+entramos no laço de novo,
+
+00:03:46.100 --> 00:03:48.400
+atualizamos dice1 e dice2
+de novo.
+
+00:03:48.434 --> 00:03:51.200
+Digamos que desta vez
+obtivemos 1 e 1.
+
+00:03:51.234 --> 00:03:53.801
+Somamos 1 ao contador,
+que passa a ser 4,
+
+00:03:53.834 --> 00:03:57.367
+o que significa que lançamos
+os dados 4 vezes até agora.
+
+00:03:57.400 --> 00:04:01.000
+Depois voltamos para cima
+e fazemos a comparação do laço.
+
+00:04:01.033 --> 00:04:03.701
+Desta vez dice1 e dice2
+são iguais,
+
+00:04:03.734 --> 00:04:06.767
+então esta checagem
+é falsa,
+
+00:04:06.801 --> 00:04:10.434
+e por isso o laço
+não vai mais entrar,
+
+00:04:10.467 --> 00:04:13.234
+mas vai pular para
+a chave que fecha aqui,
+
+00:04:13.267 --> 00:04:15.000
+e continuar o programa.
+
+00:04:15.033 --> 00:04:18.634
+Como só temos este retorno
+depois do laço,
+
+00:04:18.667 --> 00:04:20.801
+vamos retornar 4.
+
+00:04:20.834 --> 00:04:24.767
+Estamos dizendo que precisamos
+de 4 lançamentos dos dois dados
+
+00:04:24.801 --> 00:04:26.367
+até que ficassem iguais.
+
+00:04:26.400 --> 00:04:29.300
+O que precisamos mudar
+neste código
+
+00:04:29.334 --> 00:04:32.234
+para que funcione
+com 3 dados em vez de 2?
+

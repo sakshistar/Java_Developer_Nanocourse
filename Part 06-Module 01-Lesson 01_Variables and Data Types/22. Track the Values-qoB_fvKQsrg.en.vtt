@@ -1,0 +1,109 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.785
+The correct answer happens to be x equals two,
+
+00:00:02.785 --> 00:00:06.230
+y equals six, and z equals negative 1.0.
+
+00:00:06.230 --> 00:00:07.680
+But why this one?
+
+00:00:07.679 --> 00:00:10.830
+Well, let's follow this program step by step and keep track
+
+00:00:10.830 --> 00:00:14.695
+of our variables and see why they ended up with those values.
+
+00:00:14.695 --> 00:00:17.640
+I'll draw a table over here following the values of x,
+
+00:00:17.640 --> 00:00:19.755
+y, and z, as they change.
+
+00:00:19.754 --> 00:00:21.609
+X starts with zero,
+
+00:00:21.609 --> 00:00:23.429
+so it has the value zero in it,
+
+00:00:23.429 --> 00:00:25.199
+y is initialized to four,
+
+00:00:25.199 --> 00:00:27.324
+and z is initialized to three.
+
+00:00:27.324 --> 00:00:29.109
+But because it's stored as a double,
+
+00:00:29.109 --> 00:00:31.253
+so it gets stored as 3.0.
+
+00:00:31.253 --> 00:00:37.164
+The first statement here after these initializations is x equals x plus two.
+
+00:00:37.164 --> 00:00:41.490
+So that's adding two to the current value of x and updating x.
+
+00:00:41.490 --> 00:00:44.304
+The current value was zero, add two to it,
+
+00:00:44.304 --> 00:00:47.490
+and then update x itself, making it two.
+
+00:00:47.490 --> 00:00:50.325
+This one here is updating the variable z,
+
+00:00:50.325 --> 00:00:55.670
+setting it to the value of the current value of x plus y minus seven.
+
+00:00:55.670 --> 00:00:58.875
+So, we add the current value of x which is two,
+
+00:00:58.875 --> 00:01:01.424
+and the current value of y which is four,
+
+00:01:01.424 --> 00:01:04.170
+which gives us six, and then subtract seven,
+
+00:01:04.170 --> 00:01:05.769
+giving us negative one.
+
+00:01:05.769 --> 00:01:09.944
+So z gets updated from 3.0 to negative 1.0.
+
+00:01:09.944 --> 00:01:13.604
+And then finally, y is equal to x times three.
+
+00:01:13.605 --> 00:01:15.755
+Current value of x is two,
+
+00:01:15.754 --> 00:01:17.789
+so multiply two by three,
+
+00:01:17.790 --> 00:01:22.190
+giving us six, and we update y to get the value six.
+
+00:01:22.189 --> 00:01:24.554
+So, by the time we reach those print statements,
+
+00:01:24.555 --> 00:01:26.040
+x is equal to two,
+
+00:01:26.040 --> 00:01:27.435
+y is equal to six,
+
+00:01:27.435 --> 00:01:29.980
+and z is equal to negative 1.0.
+
+00:01:29.980 --> 00:01:34.670
+And we're simply concatenating those values of those variables to those strings here,
+
+00:01:34.670 --> 00:01:36.900
+so the output becomes x equals two,
+
+00:01:36.900 --> 00:01:40.000
+y equals six, and z equals negative 1.0.
+

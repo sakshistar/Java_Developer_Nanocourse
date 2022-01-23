@@ -1,0 +1,265 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>switch Statement</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Control Flow and Conditionals</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introducing Control Flow.html">01. Introducing Control Flow</a>
+    </li>
+    <li class="">
+      <a href="02. Decision Making.html">02. Decision Making</a>
+    </li>
+    <li class="">
+      <a href="03. if Statement.html">03. if Statement</a>
+    </li>
+    <li class="">
+      <a href="04. Self-Driving Car.html">04. Self-Driving Car</a>
+    </li>
+    <li class="">
+      <a href="05. Recognize Traffic Lights.html">05. Recognize Traffic Lights</a>
+    </li>
+    <li class="">
+      <a href="06. Windshield Wipers.html">06. Windshield Wipers</a>
+    </li>
+    <li class="">
+      <a href="07. Variable Scope.html">07. Variable Scope</a>
+    </li>
+    <li class="">
+      <a href="08. What&#x27;s the Scope.html">08. What&#x27;s the Scope?</a>
+    </li>
+    <li class="">
+      <a href="09. else Statement.html">09. else Statement</a>
+    </li>
+    <li class="">
+      <a href="10. else-if.html">10. else-if</a>
+    </li>
+    <li class="">
+      <a href="11. Multiple else-if&#x27;s.html">11. Multiple else-if&#x27;s</a>
+    </li>
+    <li class="">
+      <a href="12. Boolean Expressions.html">12. Boolean Expressions</a>
+    </li>
+    <li class="">
+      <a href="13. Evaluate these Expressions.html">13. Evaluate these Expressions</a>
+    </li>
+    <li class="">
+      <a href="14. The Art Museum.html">14. The Art Museum</a>
+    </li>
+    <li class="">
+      <a href="15. Tickets to the Museum.html">15. Tickets to the Museum</a>
+    </li>
+    <li class="">
+      <a href="16. Complete Museum Code.html">16. Complete Museum Code</a>
+    </li>
+    <li class="">
+      <a href="17. Logical Operators.html">17. Logical Operators</a>
+    </li>
+    <li class="">
+      <a href="18. Order of Operations for Logical Operators.html">18. Order of Operations for Logical Operators</a>
+    </li>
+    <li class="">
+      <a href="19. Logical Operators Practice.html">19. Logical Operators Practice</a>
+    </li>
+    <li class="">
+      <a href="20. true or false.html">20. true or false?</a>
+    </li>
+    <li class="">
+      <a href="21. Nested if Statements.html">21. Nested if Statements</a>
+    </li>
+    <li class="">
+      <a href="22. Restaurant Rating.html">22. Restaurant Rating</a>
+    </li>
+    <li class="">
+      <a href="23. switch Statement.html">23. switch Statement</a>
+    </li>
+    <li class="">
+      <a href="24. switch(month).html">24. switch(month)</a>
+    </li>
+    <li class="">
+      <a href="25. Conclusion.html">25. Conclusion</a>
+    </li>
+    <li class="">
+      <a href="26. Lesson 2 Problem Set.html">26. Lesson 2 Problem Set</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">23. switch Statement</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>switch Statement</p></h3>
+  <video controls>
+  <source src="23. switch Statement-DukuxLs1gaI.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="23. switch Statement-DukuxLs1gaI.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="23. switch Statement-DukuxLs1gaI.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="23. switch Statement-DukuxLs1gaI.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="23. switch Statement-DukuxLs1gaI.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Switch Statement Components</p></h3>
+  <div>
+  <h3 id="switch-statement">Switch statement</h3>
+<p>A <strong>switch</strong> statement let’s you check the value of a certain variable (like our coffee maker <code>passcode</code>) and test it for equality against a list of possible values that it can take.</p>
+<p>Each of these specific values is called a <strong>case</strong> and you can program different behavior for each case.</p>
+<p>In Java this looks like this:</p>
+<p><img src="media/unnamed-6051-0.gif" alt="coffee maker switch" /></p>
+<p><em>This code checks the value of <code>passcode</code>, which is some 3-digit integer value, and compares it to the specific case values: <code>555</code>, <code>312</code>, and <code>629</code>.</em></p>
+<p>Then if the variable equals a certain case value, the code after that case will be executed. For example, in the code above, if <code>passcode</code> is equal to <code>312</code> then the <code>coffeeType</code> String will be set to <em>”Vanilla latte”</em>.</p>
+<h3 id="break">Break;</h3>
+<p>After this code is this word <code>break;</code> which will <strong>break</strong> out of the case code and go to the ending curly brace of the switch statement, where this code prints the value of <code>coffeeType</code>.</p>
+<p><strong>So the break ensures that only one case at a time will have it’s code executed.</strong></p>
+<p>If the break were <strong><em>not</em></strong> included, Java would continue reading code in the switch statement line by line and keep executing statements (like the default case code) until it reaches the end of the switch statement or hits another break!</p>
+<h3 id="default-case">Default case</h3>
+<p>The <strong>default</strong> case typically comes at the end of a switch statement and its code will execute whenever the other cases aren’t met. So, if the <code>passcode</code> was something like <code>914</code>, this code doesn’t have a case for this particular value, and so it would fall into the default category and the <code>coffeeType</code> String would be set to “Unknown".</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="24. switch(month).html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('23. switch Statement')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

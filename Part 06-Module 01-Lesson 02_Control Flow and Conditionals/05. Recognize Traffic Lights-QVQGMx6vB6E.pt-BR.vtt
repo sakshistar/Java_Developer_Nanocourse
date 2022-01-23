@@ -1,0 +1,123 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.000
+Se estamos programando
+um carro autônomo,
+
+00:00:03.033 --> 00:00:07.300
+a primeira coisa que queremos
+que ele faça é reconhecer um semáforo
+
+00:00:07.334 --> 00:00:11.267
+e usar estrutura de controle
+para andar ao ver um sinal verde.
+
+00:00:11.300 --> 00:00:14.167
+Primeiro devemos saber
+se o sinal está verde.
+
+00:00:14.200 --> 00:00:16.367
+Se estiver,
+queremos seguir.
+
+00:00:16.400 --> 00:00:18.901
+Vamos traduzir isto
+para o código Java.
+
+00:00:18.934 --> 00:00:21.567
+Primeiro devemos saber
+se a luz está verde
+
+00:00:21.601 --> 00:00:24.400
+e armazenar a informação
+como uma booleana,
+
+00:00:24.434 --> 00:00:26.300
+que chamarei de isLightGreen.
+
+00:00:26.334 --> 00:00:28.567
+Isto será
+verdadeiro ou falso.
+
+00:00:28.601 --> 00:00:30.734
+Agora, criamos
+nossa instrução if.
+
+00:00:30.767 --> 00:00:34.567
+Queremos que a condição
+cheque se isLightGreen é verdadeiro.
+
+00:00:34.601 --> 00:00:36.801
+Dizemos if(isLightGreen).
+
+00:00:36.834 --> 00:00:39.033
+Se a condição for verdadeira,
+
+00:00:39.067 --> 00:00:43.167
+entramos no código
+escrito entre as chaves,
+
+00:00:43.200 --> 00:00:44.467
+e o executamos.
+
+00:00:44.501 --> 00:00:49.000
+Dentro da instrução if imprimimos
+a ação que queremos que o carro faça,
+
+00:00:49.033 --> 00:00:50.033
+que é dirigir.
+
+00:00:50.067 --> 00:00:52.567
+Se a condição de teste
+não for atendida,
+
+00:00:52.601 --> 00:00:54.300
+se isLightGreen for falso,
+
+00:00:54.334 --> 00:00:58.601
+O Java pulará o código do if
+e irá para o final desta chave.
+
+00:00:58.634 --> 00:01:00.968
+Se houver mais linhas
+de código aqui,
+
+00:01:01.000 --> 00:01:03.767
+ele continuará a ler
+linhas de código daqui.
+
+00:01:03.801 --> 00:01:05.601
+Esta é a nossa instrução.
+
+00:01:05.634 --> 00:01:09.033
+Se isLightGreen for verdadeiro
+e rodarmos este código,
+
+00:01:09.067 --> 00:01:11.534
+entraremos no bloco de código
+
+00:01:11.567 --> 00:01:13.834
+e o resultado impresso
+será "Drive!"
+
+00:01:13.868 --> 00:01:16.200
+Se a condição isLightGreen
+for falsa,
+
+00:01:16.234 --> 00:01:17.734
+ele não imprimirá nada.
+
+00:01:17.767 --> 00:01:21.934
+É bom notar que poderíamos adicionar
+mais instruções if após essa,
+
+00:01:21.968 --> 00:01:25.067
+para checar e reagir
+a outras condições de teste.
+
+00:01:25.100 --> 00:01:27.868
+Agora vamos praticar
+escrever instruções if.
+

@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.759
+It seems like those two statements are the ones that have problems in them.
+
+00:00:03.759 --> 00:00:06.472
+Let's go through them one by one and see why.
+
+00:00:06.472 --> 00:00:08.910
+The first one is a variable called me of
+
+00:00:08.910 --> 00:00:14.219
+type char and it's initialized this character uppercase I.
+
+00:00:14.220 --> 00:00:17.050
+There doesn't seem to be anything wrong with this.
+
+00:00:17.050 --> 00:00:21.330
+It's declared as a character and it's being initialized to this character.
+
+00:00:21.329 --> 00:00:24.869
+Perfect. The second one is a variable called fact that is
+
+00:00:24.870 --> 00:00:29.609
+declared of type Boolean and it's initialized this value true.
+
+00:00:29.609 --> 00:00:32.519
+That also seems to be perfectly fine.
+
+00:00:32.520 --> 00:00:37.040
+This one however, is the variable number which is declared to be of type Boolean,
+
+00:00:37.039 --> 00:00:41.100
+but it's initialized to this number 17.
+
+00:00:41.100 --> 00:00:42.463
+As we mentioned earlier,
+
+00:00:42.463 --> 00:00:46.769
+Boolean variables can only store a value of true or false.
+
+00:00:46.770 --> 00:00:48.735
+They cannot store numbers.
+
+00:00:48.734 --> 00:00:51.104
+So this one is incorrect.
+
+00:00:51.104 --> 00:00:53.729
+This one is a string called text that is
+
+00:00:53.729 --> 00:00:57.119
+initialized to this text within double quotation marks.
+
+00:00:57.119 --> 00:00:59.219
+So that's perfectly fine.
+
+00:00:59.219 --> 00:01:01.214
+This one's the variable price of type
+
+00:01:01.215 --> 00:01:05.775
+double and it's initialized to this fractional number 23.75,
+
+00:01:05.775 --> 00:01:10.530
+because it's a double it's allowed to store fractional numbers so that's perfectly fine.
+
+00:01:10.530 --> 00:01:12.120
+This last one however,
+
+00:01:12.120 --> 00:01:14.954
+is the variable total of type long,
+
+00:01:14.954 --> 00:01:17.834
+but it's initialized to this 100.1.
+
+00:01:17.834 --> 00:01:19.739
+Long are like integers,
+
+00:01:19.739 --> 00:01:21.352
+they only store natural numbers,
+
+00:01:21.352 --> 00:01:23.799
+you're not allowed to have a fractional number in them.
+
+00:01:23.799 --> 00:01:26.000
+So Java would complain about this one as well.
+

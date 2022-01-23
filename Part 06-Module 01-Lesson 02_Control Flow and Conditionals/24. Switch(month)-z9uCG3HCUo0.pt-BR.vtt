@@ -1,0 +1,56 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.968
+Escrevemos
+uma instrução switch
+
+00:00:02.000 --> 00:00:04.968
+que imprime o mês
+baseado no número que damos.
+
+00:00:05.000 --> 00:00:08.300
+Se month é 1,
+monthString é "Janeiro".
+
+00:00:08.334 --> 00:00:11.267
+Imprimimos isso
+no fim da instrução switch.
+
+00:00:11.300 --> 00:00:13.734
+Se month é 2,
+imprimimos "Fevereiro".
+
+00:00:13.767 --> 00:00:15.868
+3, "Março",
+e assim por diante.
+
+00:00:15.901 --> 00:00:20.100
+Mas este código só inclui casos
+até o número 11, novembro.
+
+00:00:20.133 --> 00:00:21.868
+O código
+não está terminado.
+
+00:00:21.901 --> 00:00:24.801
+Complete este switch
+escrevendo o último caso,
+
+00:00:24.834 --> 00:00:26.834
+nº 12,
+para imprimir "Dezembro",
+
+00:00:26.868 --> 00:00:30.033
+e um caso default
+para que para qualquer nº de mês
+
+00:00:30.067 --> 00:00:33.834
+não entre 1 e 12,
+como um número maior, como 37,
+
+00:00:33.868 --> 00:00:36.334
+este código imprima
+"mês inválido".
+

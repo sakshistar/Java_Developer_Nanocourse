@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.720
+Here's the correct answer: Our smallest boundaries
+
+00:00:02.720 --> 00:00:05.730
+scope C represents the scope of our weight variable.
+
+00:00:05.730 --> 00:00:10.245
+Weight is declared inside the code of our if-statement inside these curly braces;
+
+00:00:10.244 --> 00:00:13.549
+and a pair of curly braces define the bounds of a scope.
+
+00:00:13.550 --> 00:00:16.365
+So because weight was declared inside these braces,
+
+00:00:16.364 --> 00:00:20.489
+it can only be accessed inside the code inside this boundary.
+
+00:00:20.489 --> 00:00:22.604
+Scope B is a little too big.
+
+00:00:22.605 --> 00:00:25.320
+It contains the if and the if test condition,
+
+00:00:25.320 --> 00:00:27.589
+which are outside of our curly braces.
+
+00:00:27.589 --> 00:00:32.350
+So if we tried to access weight and say this test condition, we wouldn't be able to.
+
+00:00:32.350 --> 00:00:35.460
+We'd get an error because it's outside of weight scope.
+
+00:00:35.460 --> 00:00:37.314
+Scope A is the biggest.
+
+00:00:37.314 --> 00:00:41.204
+It's a whole program and it includes code where weight cannot be accessed,
+
+00:00:41.204 --> 00:00:42.769
+just like scope B did.
+
+00:00:42.770 --> 00:00:45.350
+It's outside of the curly braces where weight is declared,
+
+00:00:45.350 --> 00:00:47.820
+so it's outside of the scope; and actually,
+
+00:00:47.820 --> 00:00:51.600
+scope A is the scope of the boolean variable isRecyclable.
+
+00:00:51.600 --> 00:00:56.350
+IsRecyclable has the largest scope because it's outside of any curly braces.
+
+00:00:56.350 --> 00:00:58.789
+And that means its scope is our whole program.
+
+00:00:58.789 --> 00:01:02.000
+So keep scope in mind whenever you declare and use variables.
+

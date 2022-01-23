@@ -1,0 +1,118 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.540
+Here's the correct answer.
+
+00:00:01.540 --> 00:00:04.000
+And the complete documentation for abs.
+
+00:00:04.000 --> 00:00:08.039
+You could have even look this up on Java's documentation web page.
+
+00:00:08.039 --> 00:00:12.269
+This documentation includes a general description of what this absolute value function
+
+00:00:12.269 --> 00:00:17.269
+does and it includes a description of the return value, just like before.
+
+00:00:17.269 --> 00:00:20.269
+But the previous documentation for abs was missing
+
+00:00:20.269 --> 00:00:25.269
+this parameters section and that's an important part of this function.
+
+00:00:25.269 --> 00:00:27.439
+Abs takes in one parameter an int,
+
+00:00:27.440 --> 00:00:31.160
+named a, that it calculates the absolute value of.
+
+00:00:31.160 --> 00:00:32.549
+So the correct answer is that
+
+00:00:32.549 --> 00:00:36.649
+this documentation was missing a description of its parameter a,
+
+00:00:36.649 --> 00:00:40.652
+and to include that in a Java doc comment it would look like this,
+
+00:00:40.652 --> 00:00:42.945
+an at symbol followed by param,
+
+00:00:42.945 --> 00:00:44.490
+then the name of that parameter,
+
+00:00:44.490 --> 00:00:46.260
+which is just the letter A.
+
+00:00:46.259 --> 00:00:49.909
+And then finally a description of that parameter.
+
+00:00:49.909 --> 00:00:52.709
+Again, we already had a return value description so we
+
+00:00:52.710 --> 00:00:56.105
+don't need to add this return part of the Java doc comment.
+
+00:00:56.104 --> 00:00:59.459
+And this last parameter comment line is incomplete,
+
+00:00:59.460 --> 00:01:03.500
+because it doesn't include the name of that parameter, the name A.
+
+00:01:03.500 --> 00:01:07.920
+So @param a, the argument whose absolute value is to be determined,
+
+00:01:07.920 --> 00:01:10.170
+is the correct answer.
+
+00:01:10.170 --> 00:01:12.989
+So if we include this parameter description line,
+
+00:01:12.989 --> 00:01:15.599
+the complete Java doc comment that goes along with
+
+00:01:15.599 --> 00:01:19.109
+this documentation looks like this: First,
+
+00:01:19.109 --> 00:01:22.799
+a general description that tells us what the function abs does.
+
+00:01:22.799 --> 00:01:25.709
+It returns the absolute value of a given int.
+
+00:01:25.709 --> 00:01:27.929
+Next, are parameters.
+
+00:01:27.930 --> 00:01:31.140
+In this case there's one parameter, parameter A.
+
+00:01:31.140 --> 00:01:32.805
+And to describe that in a comment,
+
+00:01:32.805 --> 00:01:35.645
+we say @param a, then the description.
+
+00:01:35.644 --> 00:01:37.609
+And that was our correct answer.
+
+00:01:37.609 --> 00:01:41.789
+And finally, we have our @return with the description of the return value.
+
+00:01:41.790 --> 00:01:43.890
+And with this complete documentation,
+
+00:01:43.890 --> 00:01:47.010
+we can figure out how to use this abs function by putting in
+
+00:01:47.010 --> 00:01:50.180
+a number and expecting a returned absolute value,
+
+00:01:50.180 --> 00:01:52.710
+even though we haven't seen this function before.
+
+00:01:52.709 --> 00:01:55.279
+And that's what's so cool about documentation.
+

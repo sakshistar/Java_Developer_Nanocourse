@@ -1,0 +1,249 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:05.367
+Se criarmos uma variável String
+chamada newsOutlet, por exemplo,
+
+00:00:05.400 --> 00:00:09.100
+só podemos guardar nela
+um valor de cada vez.
+
+00:00:09.133 --> 00:00:10.501
+Vetores, entretanto,
+
+00:00:10.534 --> 00:00:14.968
+permitem guardar várias Strings
+na mesma variável.
+
+00:00:15.000 --> 00:00:17.767
+Cada uma pode ter
+o seu próprio valor.
+
+00:00:17.801 --> 00:00:20.767
+Mas todas precisam ser
+do mesmo tipo.
+
+00:00:20.801 --> 00:00:24.067
+Neste caso,
+como é um vetor de Strings,
+
+00:00:24.100 --> 00:00:26.834
+cada valor
+precisa ser uma String.
+
+00:00:26.868 --> 00:00:30.701
+E como estão todas guardadas
+na mesma variável,
+
+00:00:30.734 --> 00:00:34.667
+para distinguí-las,
+cada item do vetor é numerado,
+
+00:00:34.701 --> 00:00:36.334
+sempre começando de zero,
+
+00:00:36.367 --> 00:00:39.801
+e contando quantos itens
+existem no vetor.
+
+00:00:39.834 --> 00:00:43.367
+Se quiser recuperar o valor
+dentro de alguma das caixas,
+
+00:00:43.400 --> 00:00:45.534
+só precisa digitar
+o nome do vetor
+
+00:00:45.567 --> 00:00:50.767
+seguido de colchetes
+com o número da caixa dentro.
+
+00:00:50.801 --> 00:00:57.267
+Por exemplo, newsOutlet[0]
+tem "abc" dentro.
+
+00:00:57.300 --> 00:01:02.167
+newsOutlet[1]
+tem "bbc" dentro.
+
+00:01:02.200 --> 00:01:08.601
+newsOutlet[2] tem "CNN" dentro,
+e assim por diante.
+
+00:01:08.634 --> 00:01:13.200
+Cada expressão dessas pode ser
+tratada como variável normal.
+
+00:01:13.234 --> 00:01:14.901
+Vamos ver como.
+
+00:01:14.934 --> 00:01:17.601
+Em Java, podemos pensar
+em qualquer vetor
+
+00:01:17.634 --> 00:01:20.501
+como se fosse uma linha
+de uma tabela.
+
+00:01:20.534 --> 00:01:24.601
+Cada caixa no vetor
+tem um valor diferente,
+
+00:01:24.634 --> 00:01:26.767
+mas todos têm o mesmo nome.
+
+00:01:26.801 --> 00:01:30.734
+Neste exemplo, criei
+um vetor de inteiros.
+
+00:01:30.767 --> 00:01:33.834
+Cada caixa tem um inteiro.
+
+00:01:33.868 --> 00:01:37.501
+Essas caixas, em Java,
+se chamam células.
+
+00:01:37.534 --> 00:01:40.801
+Como já mencionamos,
+cada célula tem um número,
+
+00:01:40.834 --> 00:01:43.467
+começando de zero,
+e aumentando.
+
+00:01:43.501 --> 00:01:46.667
+Estes números se chamam
+índices das células,
+
+00:01:46.701 --> 00:01:50.467
+porque cada número é um índice
+para uma caixa específica.
+
+00:01:50.501 --> 00:01:55.133
+Por exemplo, esta célula
+tem o índice zero,
+
+00:01:55.167 --> 00:01:58.334
+esta célula tem índice 3.
+
+00:01:58.367 --> 00:02:02.534
+Podemos tratar cada célula
+como uma variável separada.
+
+00:02:02.567 --> 00:02:06.801
+Por exemplo, se quisermos
+somar esta célula com esta,
+
+00:02:06.834 --> 00:02:09.133
+podemos dizer algo assim:
+
+00:02:09.167 --> 00:02:14.100
+int sum =
+numbers[0] + numbers[3].
+
+00:02:14.133 --> 00:02:16.234
+Nosso vetor se chama numbers
+
+00:02:16.267 --> 00:02:20.234
+e acessamos as células diferentes
+usando índices, assim.
+
+00:02:20.267 --> 00:02:24.100
+Esta linha é considerada
+como se fosse uma variável.
+
+00:02:24.133 --> 00:02:29.000
+Podemos somá-las, fazer tudo
+o que fazemos com variáveis.
+
+00:02:29.033 --> 00:02:34.501
+Isso faria a variável sum
+ter o valor 15,
+
+00:02:34.534 --> 00:02:40.901
+porque soma 12, que é numbers[0],
+com 3, que é numbers[3].
+
+00:02:40.934 --> 00:02:42.567
+Isso dá 15.
+
+00:02:42.601 --> 00:02:45.901
+Mas como declarar
+os vetores?
+
+00:02:45.934 --> 00:02:49.834
+Se quisermos declarar
+um vetor assim,
+
+00:02:49.868 --> 00:02:53.367
+digitamos int,
+um colchete vazio,
+
+00:02:53.400 --> 00:02:58.167
+só para dizer que queremos
+um vetor, e não um só int,
+
+00:02:58.200 --> 00:03:02.467
+depois escrevemos o nome do vetor,
+que neste caso é numbers,
+
+00:03:02.501 --> 00:03:06.033
+seguido de igual e chaves.
+
+00:03:06.067 --> 00:03:11.534
+Dentro das chaves, listamos
+todos os valores do vetor.
+
+00:03:11.567 --> 00:03:15.100
+Note que não precisei dizer
+o tamanho do vetor.
+
+00:03:15.133 --> 00:03:19.367
+O que o Java faria é colocar
+cada um dos valores
+
+00:03:19.400 --> 00:03:24.834
+em uma célula na memória interna
+e dar um índice a cada célula.
+
+00:03:24.868 --> 00:03:31.334
+Se quiser acessar o valor 121,
+use o índice 7.
+
+00:03:31.367 --> 00:03:35.734
+Por exemplo, se eu quiser
+imprimir numbers[0],
+
+00:03:35.767 --> 00:03:41.534
+ele imprime 12, porque é
+o valor da célula de índice zero.
+
+00:03:41.567 --> 00:03:44.934
+Se eu quiser imprimir
+o resultado do produto
+
+00:03:44.968 --> 00:03:47.968
+entre numbers[9] e numbers[12],
+
+00:03:48.000 --> 00:03:54.634
+isso é -4 vezes 2,
+e ele imprime -8.
+
+00:03:54.667 --> 00:03:57.267
+Um vetor de doubles
+não é diferente.
+
+00:03:57.300 --> 00:04:01.634
+Se quisermos um vetor de doubles
+que seja assim,
+
+00:04:01.667 --> 00:04:07.834
+dizemos double, colchete vazio
+para distinguir de um double,
+
+00:04:07.868 --> 00:04:14.367
+depois o nome do vetor, igual,
+chaves, e a lista de valores.
+

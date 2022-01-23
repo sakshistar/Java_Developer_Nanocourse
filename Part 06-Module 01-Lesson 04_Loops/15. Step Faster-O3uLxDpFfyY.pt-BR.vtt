@@ -1,0 +1,312 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:05.100
+Lembrem-se sempre que nos dois casos,
+laços while e laços for,
+
+00:00:05.133 --> 00:00:09.901
+o contador de laços é só
+uma variável como qualquer outra.
+
+00:00:09.934 --> 00:00:12.334
+Chamamos de i,
+para ficar simples,
+
+00:00:12.367 --> 00:00:15.200
+mas podíamos chamá-la
+de qualquer outro nome.
+
+00:00:15.234 --> 00:00:17.567
+O mesmo
+com o incremento do laço.
+
+00:00:17.601 --> 00:00:22.167
+Pode ser qualquer operação matemática
+que podemos fazer com um inteiro.
+
+00:00:22.200 --> 00:00:24.334
+Vamos ver algumas comuns.
+
+00:00:24.367 --> 00:00:31.067
+A mais usada é i++, que é só
+abreviação de i = i+1.
+
+00:00:31.100 --> 00:00:33.801
+Só acrescenta 1 a um i.
+
+00:00:33.834 --> 00:00:37.100
+Digamos que nosso i=10.
+
+00:00:37.133 --> 00:00:40.467
+i++ mudaria isso para 11.
+
+00:00:40.501 --> 00:00:46.167
+Também vimos i--,
+que é abreviação de 1=1-1,
+
+00:00:46.200 --> 00:00:49.033
+e ele subtrai 1 de i.
+
+00:00:49.067 --> 00:00:52.567
+Se i fosse 10, ficaria 9.
+
+00:00:52.601 --> 00:00:56.801
+Agora podemos ir mais rápido
+do que acrescentando ou subtraindo 1.
+
+00:00:56.834 --> 00:01:01.968
+Lembram que somamos números
+a uma variável só dizendo i=i+5,
+
+00:01:02.000 --> 00:01:03.801
+ou o número que fosse?
+
+00:01:03.834 --> 00:01:07.934
+Isto pode ser abreviado
+como i += aquele número.
+
+00:01:07.968 --> 00:01:10.667
+Os dois significam
+exatamente o mesmo.
+
+00:01:10.701 --> 00:01:13.400
+Neste caso,
+só está acrescentando 5 a i
+
+00:01:13.434 --> 00:01:15.734
+e atualizando i
+com o novo valor.
+
+00:01:15.767 --> 00:01:21.000
+Se i fosse 10,
+acabaria atualizando i para 15.
+
+00:01:21.667 --> 00:01:24.634
+O mesmo
+com i menos um número.
+
+00:01:24.667 --> 00:01:27.868
+Se dissermos i = i-6,
+por exemplo,
+
+00:01:27.901 --> 00:01:31.667
+isto pode ser abreviado
+em i -= 6.
+
+00:01:31.701 --> 00:01:33.901
+Ou seja,
+se i fosse igual a 10,
+
+00:01:33.934 --> 00:01:35.968
+ele atualizaria para 4.
+
+00:01:36.000 --> 00:01:39.167
+O mesmo acontece
+com multiplicação e divisão.
+
+00:01:39.200 --> 00:01:43.501
+Podemos atualizar uma variável
+multiplicando-a por um número.
+
+00:01:43.534 --> 00:01:45.634
+i = i*3.
+
+00:01:45.667 --> 00:01:49.601
+Isto multiplica i por 3,
+e atualiza i com o novo valor.
+
+00:01:49.634 --> 00:01:54.667
+Abreviando, i *= 3,
+como na adição e subtração.
+
+00:01:54.701 --> 00:01:56.334
+Se i for igual a 10,
+
+00:01:56.367 --> 00:01:59.601
+isso o multiplicará por 3
+e o atualizaria para 30.
+
+00:01:59.634 --> 00:02:01.701
+O mesmo para divisão.
+
+00:02:01.734 --> 00:02:04.834
+Podemos dividir a variável
+por um número, assim.
+
+00:02:04.868 --> 00:02:07.300
+i = i/2.
+
+00:02:07.334 --> 00:02:12.434
+Isso a dividiria por 2 e atualizaria
+seu valor ao novo cálculo.
+
+00:02:13.300 --> 00:02:17.334
+A abreviação para isso
+é i /= 2.
+
+00:02:17.367 --> 00:02:23.834
+Neste caso, se i fosse 10, seria
+dividido por 2 e atualizado para 5.
+
+00:02:23.868 --> 00:02:27.901
+Vejamos alguns exemplos
+que usam essas abreviações.
+
+00:02:27.934 --> 00:02:32.567
+Digamos que você queira imprimir
+só os números pares entre 2 e 10.
+
+00:02:32.601 --> 00:02:37.067
+Você quer criar um laço
+que comece no 2, que vá até 10,
+
+00:02:37.100 --> 00:02:40.067
+mas em vez de acrescentar 1
+ao contador de laço
+
+00:02:40.100 --> 00:02:42.100
+queremos incrementá-lo por 2.
+
+00:02:42.133 --> 00:02:44.901
+Escrevemos uma função
+chamada números pares
+
+00:02:44.934 --> 00:02:47.868
+que não aceita parâmetros
+e não retorna nada.
+
+00:02:47.901 --> 00:02:53.400
+Chama-se public void evenNumbers()
+e depois as chaves.
+
+00:02:53.434 --> 00:02:55.634
+Dentro, só temos este laço,
+
+00:02:55.667 --> 00:02:58.934
+que começa
+com o contador de laço i = 2
+
+00:02:58.968 --> 00:03:02.734
+e continua contando
+enquanto i for &lt;= 10.
+
+00:03:02.767 --> 00:03:06.300
+Mas o incremento do laço
+é i+=2.
+
+00:03:06.334 --> 00:03:10.267
+Esta instrução
+sempre acrescenta 2 a i.
+
+00:03:10.300 --> 00:03:14.467
+Toda iteração no laço,
+i aumenta em 2.
+
+00:03:14.501 --> 00:03:16.868
+Vamos ver o que acontece.
+
+00:03:16.901 --> 00:03:20.234
+Primeiro,
+i é inicializado com 2,
+
+00:03:20.267 --> 00:03:23.734
+e i &lt;= 10, e é verdadeiro.
+
+00:03:23.767 --> 00:03:25.400
+Entramos no laço
+
+00:03:25.434 --> 00:03:30.801
+e fazemos esta linha de impressão
+que imprime i como está, que é 2.
+
+00:03:30.834 --> 00:03:34.701
+Chegamos ao fim do laço, voltamos,
+e a primeira coisa a fazer
+
+00:03:34.734 --> 00:03:36.100
+é o incremento.
+
+00:03:36.133 --> 00:03:40.334
+Ele acrescenta 2
+ao contador de laço i.
+
+00:03:40.367 --> 00:03:42.968
+Era 2, torna-se 4,
+
+00:03:43.000 --> 00:03:46.968
+e fazemos a comparação i &lt;= 10,
+que é verdadeira.
+
+00:03:47.000 --> 00:03:51.000
+Entramos no laço
+e imprimimos i de novo,
+
+00:03:51.033 --> 00:03:52.868
+que é apenas 4.
+
+00:03:52.901 --> 00:03:57.667
+Voltamos, acrescentamos 2
+ao contador de laço que o torna 6,
+
+00:03:57.701 --> 00:04:00.467
+que ainda é
+menor ou igual a 10.
+
+00:04:00.501 --> 00:04:02.634
+Imprimimos 6.
+
+00:04:03.234 --> 00:04:07.634
+Voltamos, acrescentamos 2,
+8 ainda é menor ou igual a 10,
+
+00:04:07.667 --> 00:04:09.567
+imprimimos 8.
+
+00:04:09.601 --> 00:04:15.767
+8 torna-se 10,
+ainda menor ou igual a 10,
+
+00:04:15.801 --> 00:04:17.701
+Imprimimos 10.
+
+00:04:17.734 --> 00:04:23.634
+Chegamos aqui, voltamos, acrescentando
+2 ao contador, tornando-o 12.
+
+00:04:23.667 --> 00:04:26.601
+12 não é mais
+menor ou igual a 10.
+
+00:04:26.634 --> 00:04:30.334
+É falso,
+e não entramos mais no laço.
+
+00:04:30.367 --> 00:04:32.701
+Não imprimimos mais nada.
+
+00:04:32.734 --> 00:04:39.000
+Quando mudamos o incremento do laço
+de i++ para algo como i+=2,
+
+00:04:39.033 --> 00:04:43.968
+podemos ver que i está aumentando
+em 2 em vez de 1.
+
+00:04:44.000 --> 00:04:49.267
+Também podem mudar isto para i+=3,
+por exemplo, e cresceria em 3.
+
+00:04:49.300 --> 00:04:53.534
+Também podem usar multiplicação,
+como i*=2.
+
+00:04:53.567 --> 00:04:58.868
+Ou seja, o i sempre seria multiplicado
+por 2, em vez de somado a 2.
+
+00:04:58.901 --> 00:05:01.734
+Podem fazer muita coisa
+com essas operações.
+

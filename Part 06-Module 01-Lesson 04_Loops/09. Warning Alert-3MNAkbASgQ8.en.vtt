@@ -1,0 +1,235 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.894
+While loops are really good at repeating things for as long as some condition stays true,
+
+00:00:05.894 --> 00:00:08.129
+like while money spent is less than
+
+00:00:08.130 --> 00:00:13.304
+a certain amount or while waiting for the time to reach a certain point.
+
+00:00:13.304 --> 00:00:18.539
+But sometimes, we want to repeat things for a certain specific number of times.
+
+00:00:18.539 --> 00:00:25.174
+Imagine there was a warning that we wanted to display the message for exactly 10 times.
+
+00:00:25.175 --> 00:00:27.039
+Let's have a look at an example.
+
+00:00:27.039 --> 00:00:31.739
+Let's declare a function called raiseAlarm that would print out a certain number of
+
+00:00:31.739 --> 00:00:36.954
+warning messages based on the value of an input argument and return nothing.
+
+00:00:36.954 --> 00:00:43.349
+Hence, public void raiseAlarm and it will accept the argument number
+
+00:00:43.350 --> 00:00:46.435
+of warnings which is an integer because we were
+
+00:00:46.435 --> 00:00:50.234
+going to specify a specific number that we want to display.
+
+00:00:50.234 --> 00:00:53.579
+To stop after a specific number of repetitions,
+
+00:00:53.579 --> 00:00:58.364
+we need to keep track of every iteration the loop has successfully completed.
+
+00:00:58.365 --> 00:01:03.795
+To do that, we need to declare an integer variable just before the loop starts.
+
+00:01:03.795 --> 00:01:06.210
+Let's call it i for iteration,
+
+00:01:06.209 --> 00:01:08.899
+and we'll initialize it to one.
+
+00:01:08.900 --> 00:01:12.452
+This is usually referred to as the loop counter.
+
+00:01:12.451 --> 00:01:15.909
+Then, we want to make sure our loop would only keep
+
+00:01:15.909 --> 00:01:20.000
+going as long as it's still less than or equal to the number of warnings.
+
+00:01:20.000 --> 00:01:23.540
+So, this would be our loop condition right here.
+
+00:01:23.540 --> 00:01:28.485
+This is basically saying that we want to repeat this instruction here,
+
+00:01:28.484 --> 00:01:31.763
+print line warning for as long as i
+
+00:01:31.763 --> 00:01:35.685
+is still less than or equal to the number of warnings.
+
+00:01:35.685 --> 00:01:37.810
+The last thing we need to do is to keep
+
+00:01:37.810 --> 00:01:40.909
+track of the number of iterations that we've done.
+
+00:01:40.909 --> 00:01:46.549
+This is done by updating our loop counter i by adding one to it inside our loop.
+
+00:01:46.549 --> 00:01:50.045
+So each iteration, our i increases by one.
+
+00:01:50.045 --> 00:01:53.650
+This statement here is called the loop increment.
+
+00:01:53.650 --> 00:01:55.415
+As a shorthand however,
+
+00:01:55.415 --> 00:02:02.110
+this increment here can be written as i++ which means exactly the same thing.
+
+00:02:02.109 --> 00:02:06.814
+Simply, increase i by one or add one to i.
+
+00:02:06.814 --> 00:02:10.750
+You could use either the shorthand version or the longhand version,
+
+00:02:10.750 --> 00:02:13.259
+it doesn't matter, they would do the exact same thing.
+
+00:02:13.259 --> 00:02:15.239
+However, as we going to see later on,
+
+00:02:15.240 --> 00:02:20.545
+this shorthand makes our program a lot more readable. So, there we go.
+
+00:02:20.544 --> 00:02:24.092
+With these three important parts of our while loop,
+
+00:02:24.092 --> 00:02:28.929
+we managed to build a loop that would repeat something for a specific number of times.
+
+00:02:28.930 --> 00:02:31.355
+Let's trace it and see what's happening.
+
+00:02:31.354 --> 00:02:35.869
+Okay, let's assume we're going to call this function with a parameter value of five,
+
+00:02:35.870 --> 00:02:39.960
+making our number of warnings variable equal to five.
+
+00:02:39.960 --> 00:02:43.715
+First, we start by initializing our variable i to one,
+
+00:02:43.715 --> 00:02:48.560
+and then we reach our loop where it starts comparing i to the number of warnings.
+
+00:02:48.560 --> 00:02:51.677
+Because number of warnings was passed in as five,
+
+00:02:51.677 --> 00:02:56.055
+so it's comparing whether i is less than or equal to five, which is true.
+
+00:02:56.055 --> 00:03:01.355
+Since it's true, we step inside our loop and we start executing the commands inside it.
+
+00:03:01.354 --> 00:03:04.729
+The first one is basically saying print line warning.
+
+00:03:04.729 --> 00:03:07.879
+So, our output would have a warning in it.
+
+00:03:07.879 --> 00:03:09.829
+The second statement is incrementing i,
+
+00:03:09.830 --> 00:03:12.785
+simply adding one to i and updating it,
+
+00:03:12.784 --> 00:03:14.840
+making our i value two.
+
+00:03:14.840 --> 00:03:17.320
+Then reach our end of our loop,
+
+00:03:17.320 --> 00:03:20.259
+so we go back up and we repeat that condition,
+
+00:03:20.259 --> 00:03:23.060
+would check if two is less than or equal to the number
+
+00:03:23.060 --> 00:03:25.914
+of warnings which in that case is five.
+
+00:03:25.914 --> 00:03:27.544
+So it's still true,
+
+00:03:27.544 --> 00:03:32.780
+meaning that we step inside the loop again and we print out the warning one more time.
+
+00:03:32.780 --> 00:03:38.689
+Again, we increment i making it one more and then we reach our end of our loop,
+
+00:03:38.689 --> 00:03:40.639
+go back up to our comparison,
+
+00:03:40.639 --> 00:03:43.029
+and three is still less than or equal to five,
+
+00:03:43.030 --> 00:03:47.069
+so we step back in and we print out the warning message.
+
+00:03:47.069 --> 00:03:49.739
+Increment i again and go back and check
+
+00:03:49.740 --> 00:03:53.531
+our loop condition which is still less than or equal to five,
+
+00:03:53.531 --> 00:03:54.956
+so I stepped back into our loop,
+
+00:03:54.956 --> 00:03:56.209
+print one more time,
+
+00:03:56.210 --> 00:03:58.610
+increment i making it five,
+
+00:03:58.610 --> 00:04:03.515
+and then we step back to the top of that loop comparing five to the number of warnings,
+
+00:04:03.514 --> 00:04:07.099
+which is still less than or equal to five because five is equal to five.
+
+00:04:07.099 --> 00:04:11.719
+So that's true. We step into our loop and then we print out warning again.
+
+00:04:11.719 --> 00:04:15.689
+And then we increment i making it equal to six,
+
+00:04:15.689 --> 00:04:18.050
+go back up, do our check.
+
+00:04:18.050 --> 00:04:19.780
+Is six less than or equal to five?
+
+00:04:19.779 --> 00:04:23.500
+No. This means we've reached this part.
+
+00:04:23.500 --> 00:04:25.125
+This condition is false.
+
+00:04:25.125 --> 00:04:28.720
+So we do not step into our loop and we just exit.
+
+00:04:28.720 --> 00:04:30.890
+And that's the end of our function.
+
+00:04:30.889 --> 00:04:33.639
+So, if we call this function with a parameter five,
+
+00:04:33.639 --> 00:04:36.180
+we see warning printed out five times.
+

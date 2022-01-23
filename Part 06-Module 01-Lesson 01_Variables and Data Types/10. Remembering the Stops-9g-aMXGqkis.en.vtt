@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.914
+Computers can actually keep track of more than one variable at a time,
+
+00:00:03.914 --> 00:00:06.929
+something that us humans struggle with,
+
+00:00:06.929 --> 00:00:11.309
+which means that we could have a variable keeping track of the number of stops a bus
+
+00:00:11.310 --> 00:00:16.660
+makes and another variable that keeps track of the ticket fare collected on the bus.
+
+00:00:16.660 --> 00:00:19.269
+Have a look at this Java program over here.
+
+00:00:19.269 --> 00:00:23.535
+What do you think this print line statement at the end will print on the screen?
+
+00:00:23.535 --> 00:00:26.250
+Will it display the word stops,
+
+00:00:26.250 --> 00:00:27.795
+or the number one,
+
+00:00:27.795 --> 00:00:30.735
+or the number three, or the number seven?
+
+00:00:30.734 --> 00:00:32.280
+There's only one correct answer here.
+

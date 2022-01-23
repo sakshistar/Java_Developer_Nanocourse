@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.299
+This function has the wrong return type.
+
+00:00:02.299 --> 00:00:05.654
+The return type is void which means it's not returning any data at
+
+00:00:05.655 --> 00:00:09.144
+all and we want this to be retained as string passText.
+
+00:00:09.144 --> 00:00:12.240
+Even though we have a return statement at the end of our code,
+
+00:00:12.240 --> 00:00:15.660
+nothing will be returned without a return type that matches.
+
+00:00:15.660 --> 00:00:17.940
+Here's what the correct code looks like with
+
+00:00:17.940 --> 00:00:20.910
+string as the return type since we are returning the string.
+
+00:00:20.910 --> 00:00:22.350
+For our first option,
+
+00:00:22.350 --> 00:00:24.650
+we know that passText is a string.
+
+00:00:24.649 --> 00:00:26.639
+We initialize it to one at the very beginning of
+
+00:00:26.640 --> 00:00:30.240
+our code and the values it takes are surrounded by double quotes.
+
+00:00:30.239 --> 00:00:31.884
+For our return statement,
+
+00:00:31.885 --> 00:00:34.109
+we have our return right at the end of our code that
+
+00:00:34.109 --> 00:00:37.229
+returns the passText string, so this is correct.
+
+00:00:37.229 --> 00:00:39.269
+It was just the wrong return type.
+
+00:00:39.270 --> 00:00:41.530
+Next let's see an example of returning numbers.
+

@@ -1,0 +1,39 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.200
+Este é um programa para um sistema
+de avaliar restaurantes.
+
+00:00:03.234 --> 00:00:06.200
+Ele faz isso
+com avaliações de zero a 5.
+
+00:00:06.234 --> 00:00:08.300
+Zero é o pior,
+e 5 é o melhor.
+
+00:00:08.334 --> 00:00:12.834
+Ele usa ifs aninhados para checar
+se uma avaliação é uma entrada válida
+
+00:00:12.868 --> 00:00:14.000
+entre 0 e 5.
+
+00:00:14.033 --> 00:00:17.968
+Depois, no if aninhado,
+se a avaliação for menor ou igual a 2,
+
+00:00:18.000 --> 00:00:21.267
+ele pede um motivo
+para a avaliação baixa.
+
+00:00:21.300 --> 00:00:25.300
+Depois do if aninhado, ele imprime:
+"Obrigado por seu retorno."
+
+00:00:25.334 --> 00:00:29.434
+O que ele imprimirá se a variável
+de avaliação for igual a 4?
+

@@ -1,0 +1,51 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.534
+Vamos completar as verificações
+para ver quem se qualifica
+
+00:00:02.567 --> 00:00:05.334
+para uma entrada com desconto
+para o museu de arte.
+
+00:00:05.367 --> 00:00:09.601
+Já temos a variável para
+o preço geral da entrada em 10
+
+00:00:09.634 --> 00:00:14.234
+e o código para ver se a idade
+da pessoa é menos ou igual a 15 anos.
+
+00:00:14.267 --> 00:00:16.567
+Ainda precisamos
+de mais dois testes.
+
+00:00:16.601 --> 00:00:20.100
+Preencha os espaços no código
+para verificar dois outros casos
+
+00:00:20.133 --> 00:00:22.634
+e aplique o desconto
+para estas condições.
+
+00:00:22.667 --> 00:00:25.100
+O primeiro deve ser
+se a idade de uma pessoa
+
+00:00:25.133 --> 00:00:26.434
+é maior do que 60.
+
+00:00:26.467 --> 00:00:29.467
+Não igual a 60,
+mas qualquer coisa acima disso.
+
+00:00:29.501 --> 00:00:33.033
+E o segundo teste deve ser
+se a pessoa é estudante ou não.
+
+00:00:33.067 --> 00:00:36.901
+Se uma das condições for atendida,
+aplicamos o preço com desconto.
+

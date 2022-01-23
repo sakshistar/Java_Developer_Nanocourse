@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.274
+So the correct answer here is three.
+
+00:00:03.274 --> 00:00:07.109
+This is because it's printing out the value of the variable stops.
+
+00:00:07.110 --> 00:00:10.380
+Why did this not print out the word stops?
+
+00:00:10.380 --> 00:00:13.470
+Because we're not surrounding it by quotation marks down here.
+
+00:00:13.470 --> 00:00:16.679
+Instead because it doesn't have quotation marks,
+
+00:00:16.679 --> 00:00:18.989
+Java assumes that this is a variable and prints
+
+00:00:18.989 --> 00:00:21.869
+out the value of that variable at that time.
+
+00:00:21.870 --> 00:00:24.050
+But why three? Why not one and seven?
+
+00:00:24.050 --> 00:00:26.410
+Well, let's trace this program and see.
+
+00:00:26.410 --> 00:00:32.429
+First thing that happens here is declaring those two variables here, stops and fare.
+
+00:00:32.429 --> 00:00:37.039
+Both are of type integers because they will only store natural numbers.
+
+00:00:37.039 --> 00:00:41.359
+Let me draw this table on the side here so I can keep track of the variables
+
+00:00:41.359 --> 00:00:45.945
+stops and fare side by side as I go through the program.
+
+00:00:45.945 --> 00:00:47.960
+Once a variable changes,
+
+00:00:47.960 --> 00:00:51.024
+I strike it out and write the new value underneath.
+
+00:00:51.024 --> 00:00:54.696
+As you can see here both variables are initialized to zero,
+
+00:00:54.697 --> 00:00:58.890
+which means that stop has zero and fare has zero.
+
+00:00:58.890 --> 00:01:04.049
+Then this line here adds one to our variable stops and updates
+
+00:01:04.049 --> 00:01:09.816
+our variable stops that way so stops instead of becoming zero would become one.
+
+00:01:09.816 --> 00:01:14.109
+The next line here says fare equals fare plus five,
+
+00:01:14.109 --> 00:01:18.140
+which is adding five to our variable fare and updating it.
+
+00:01:18.140 --> 00:01:22.090
+So instead of fare being zero it would become five.
+
+00:01:22.090 --> 00:01:26.609
+The next line here is updating our variable stops by adding one to it.
+
+00:01:26.609 --> 00:01:28.420
+So instead of it being one,
+
+00:01:28.420 --> 00:01:33.359
+it becomes two, and our variable fare becomes fare plus three.
+
+00:01:33.359 --> 00:01:35.079
+So instead of it being five,
+
+00:01:35.079 --> 00:01:40.593
+it becomes eight and then our stops the variable gets updated again by adding one to it,
+
+00:01:40.593 --> 00:01:42.890
+so instead of two, it becomes three.
+
+00:01:42.890 --> 00:01:47.329
+And finally our fare variable gets updated by adding seven to it.
+
+00:01:47.329 --> 00:01:50.385
+So adding seven to eight makes it 15.
+
+00:01:50.385 --> 00:01:54.799
+So by the time we get to this print line statement at the end here,
+
+00:01:54.799 --> 00:02:01.334
+it seems like the current values of stops is three and the current value of fare is 15.
+
+00:02:01.334 --> 00:02:06.719
+But this is only printing out the variable stops which happen to be three.
+
+00:02:06.719 --> 00:02:11.000
+So the print output of this program is three.
+

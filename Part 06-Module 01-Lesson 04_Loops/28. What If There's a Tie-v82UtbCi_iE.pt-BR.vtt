@@ -1,0 +1,253 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.133
+Na verdade, a resposta certa
+é Kimberli.
+
+00:00:04.167 --> 00:00:05.667
+Mas por quê?
+
+00:00:05.701 --> 00:00:08.033
+Vamos fazer
+o traço do programa.
+
+00:00:08.067 --> 00:00:12.968
+A primeira coisa é criar
+e inicializar a variável size,
+
+00:00:13.000 --> 00:00:15.000
+usando names.length.
+
+00:00:15.033 --> 00:00:18.400
+Neste caso,
+o comprimento é 7.
+
+00:00:18.434 --> 00:00:21.400
+Depois, criamos
+a variável longestName
+
+00:00:21.434 --> 00:00:26.067
+e inicializamos com names[0],
+que é este valor aqui.
+
+00:00:26.100 --> 00:00:28.968
+Então longestName
+se torna Anja.
+
+00:00:29.000 --> 00:00:33.133
+Depois começamos o for,
+inicializando i como 1,
+
+00:00:33.167 --> 00:00:35.767
+e enquanto i for menor
+do que size,
+
+00:00:35.801 --> 00:00:38.734
+incrementando com i++.
+
+00:00:38.767 --> 00:00:42.133
+Dentro do laço, checamos
+se names[i].length
+
+00:00:42.167 --> 00:00:45.467
+é maior do que
+longestName.lenght.
+
+00:00:45.501 --> 00:00:49.634
+names[i] neste ponto
+é Kimberli
+
+00:00:49.667 --> 00:00:52.000
+e longestName é Anja.
+
+00:00:52.033 --> 00:00:56.400
+Este tem 8 caracteres
+e este só tem 4,
+
+00:00:56.434 --> 00:00:58.968
+então este if é verdadeiro,
+
+00:00:59.000 --> 00:01:01.501
+names[i].lenght, que é 8,
+
+00:01:01.534 --> 00:01:04.934
+é maior do que
+longestName.length, que é 4.
+
+00:01:04.968 --> 00:01:06.934
+Então entramos na condição,
+
+00:01:06.968 --> 00:01:10.901
+e atualizamos longestNames
+para ser igual a names[i],
+
+00:01:10.934 --> 00:01:12.868
+que é Kimberli.
+
+00:01:12.901 --> 00:01:17.000
+Continuamos, aumentando i em 1,
+passando para Edmond,
+
+00:01:17.033 --> 00:01:18.567
+fazemos a comparação,
+
+00:01:18.601 --> 00:01:21.601
+e Edmond só tem 6 caracteres,
+comparando com 8,
+
+00:01:21.634 --> 00:01:26.868
+então não entramos na condição,
+só seguimos em frente.
+
+00:01:26.901 --> 00:01:30.334
+Agora comparamos Shenna,
+que também tem 6 caracteres,
+
+00:01:30.367 --> 00:01:32.601
+então não é maior
+do que Kimberli,
+
+00:01:32.634 --> 00:01:37.234
+então esta condição é falsa,
+não atualizamos, e continuamos.
+
+00:01:37.267 --> 00:01:40.634
+Agora chegamos a Apolonia,
+que tem 8 caracteres.
+
+00:01:40.667 --> 00:01:45.567
+O if está dizendo
+se names[i], que é Apolonia,
+
+00:01:45.601 --> 00:01:48.234
+.length, que é 8,
+
+00:01:48.267 --> 00:01:50.801
+for maior do que
+longestName.length,
+
+00:01:50.834 --> 00:01:53.701
+que é Kimberli.length,
+que é 8.
+
+00:01:53.734 --> 00:01:58.100
+Está dizendo
+se 8 for maior do que 8.
+
+00:01:58.133 --> 00:02:01.501
+Isso não é verdade.
+8 não é maior do que 8.
+
+00:02:01.534 --> 00:02:06.701
+Então não entramos aqui,
+e não atualizamos longestName.
+
+00:02:06.734 --> 00:02:09.467
+longestName
+continua sendo Kimberli.
+
+00:02:09.501 --> 00:02:11.567
+Continuamos o laço,
+
+00:02:11.601 --> 00:02:16.367
+e as duas strings restantes
+são menores do que Kimberli.
+
+00:02:16.400 --> 00:02:18.267
+Então, quando terminamos,
+
+00:02:18.300 --> 00:02:21.267
+retornamos longestName,
+que ainda é Kimberli.
+
+00:02:21.300 --> 00:02:24.734
+É por isso que,
+nesta implementação,
+
+00:02:24.767 --> 00:02:28.000
+este exemplo
+retorna Kimberli.
+
+00:02:28.033 --> 00:02:33.534
+De forma geral, retornaria
+a primeira string mais longa.
+
+00:02:33.567 --> 00:02:37.334
+Entretanto, outra implementação
+correta dessa função
+
+00:02:37.367 --> 00:02:41.934
+seria com esta checagem aqui,
+maior ou igual.
+
+00:02:41.968 --> 00:02:45.167
+Vamos fazer o traço desta
+e ver o que ela retorna.
+
+00:02:45.200 --> 00:02:48.133
+longestName começa com Anja
+de novo,
+
+00:02:48.167 --> 00:02:52.100
+e depois começamos a descer
+para Kimberli,
+
+00:02:52.133 --> 00:02:55.534
+que é maior do que Anja,
+então atualizamos,
+
+00:02:55.567 --> 00:02:57.300
+e depois descemos de novo,
+
+00:02:57.334 --> 00:03:00.901
+para Edmond, que não é maior,
+então pulamos.
+
+00:03:00.934 --> 00:03:04.534
+Shenna também não é maior
+do que Kimberli, e pulamos.
+
+00:03:04.567 --> 00:03:09.067
+Agora Apolonia é 8,
+Kimberli é 8,
+
+00:03:09.100 --> 00:03:13.400
+e a condição é se 8 for
+maior ou igual a 8,
+
+00:03:13.434 --> 00:03:15.367
+que é verdadeiro agora.
+
+00:03:15.400 --> 00:03:19.300
+Então entramos e atualizamos
+longestName para names[i],
+
+00:03:19.334 --> 00:03:20.734
+que é Apolonia.
+
+00:03:20.767 --> 00:03:24.400
+longestName foi atualizado
+para Apolonia agora.
+
+00:03:24.434 --> 00:03:27.968
+Passamos de Caroll,
+e do último nome,
+
+00:03:28.000 --> 00:03:30.267
+e ambos são menores
+do que Apolonia,
+
+00:03:30.300 --> 00:03:34.801
+então retornamos o maior nome,
+que é este agora.
+
+00:03:34.834 --> 00:03:40.133
+Uma pequena diferença como esta,
+entre maior e maior ou igual,
+
+00:03:40.167 --> 00:03:42.267
+pode fazer
+essa diferença sutil.
+

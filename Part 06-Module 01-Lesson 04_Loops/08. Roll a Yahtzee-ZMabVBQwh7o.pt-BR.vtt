@@ -1,0 +1,134 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.834
+Vamos pensar no que
+precisaríamos mudar
+
+00:00:02.868 --> 00:00:06.367
+para simular um sistema completo
+para fazer um Yam
+
+00:00:06.400 --> 00:00:08.934
+com 5 dados, em vez de 3.
+
+00:00:08.968 --> 00:00:13.501
+Primeiro, devemos declarar essas
+duas variáveis, dice4 e dice5.
+
+00:00:13.534 --> 00:00:16.801
+As inicializamos
+chamando a função rollDice.
+
+00:00:16.834 --> 00:00:19.734
+Chamamos essa função
+5 vezes,
+
+00:00:19.767 --> 00:00:22.234
+simulando
+5 dados diferentes.
+
+00:00:22.267 --> 00:00:24.434
+E, no laço while,
+
+00:00:24.467 --> 00:00:29.400
+a chamamos 5 vezes atualizando
+dice4 e dice5 também.
+
+00:00:29.434 --> 00:00:31.334
+Sempre que jogamos
+os 5 dados,
+
+00:00:31.367 --> 00:00:33.868
+atualizamos
+nossa variável count em 1,
+
+00:00:33.901 --> 00:00:37.567
+pois significa uma jogada
+para os 5 dados.
+
+00:00:37.601 --> 00:00:41.767
+Finalmente, atualizamos
+nossa condição do laço while.
+
+00:00:41.801 --> 00:00:45.334
+Em vez de só checar
+se dice1 é igual a dice2,
+
+00:00:45.367 --> 00:00:47.300
+e dice2 é igual a dice3,
+
+00:00:47.334 --> 00:00:50.901
+também checamos
+se dice3 é igual a dice4,
+
+00:00:50.934 --> 00:00:53.467
+e dice4 é igual a dice5.
+
+00:00:53.501 --> 00:00:59.467
+Tudo isso é cercado por parênteses
+com um sinal de NOT antes.
+
+00:00:59.501 --> 00:01:05.133
+Ou seja, o while continuaria a rodar
+enquanto isto não for verdadeiro,
+
+00:01:05.167 --> 00:01:08.734
+ou seja, enquanto
+os 5 dados não combinam.
+
+00:01:08.767 --> 00:01:11.467
+Notem que não tive que dizer
+explicitamente
+
+00:01:11.501 --> 00:01:15.767
+que dice5 é igual a dice2,
+pois isto está implícito.
+
+00:01:15.801 --> 00:01:19.701
+Se essa condição acontece
+e essa condição acontece...
+
+00:01:19.734 --> 00:01:22.968
+e essa condição acontece,
+e essa condição acontece,
+
+00:01:23.000 --> 00:01:27.334
+isso diz, implicitamente,
+que os 5 dados combinam.
+
+00:01:27.367 --> 00:01:29.367
+E notem, também,
+
+00:01:29.400 --> 00:01:33.701
+como escrevi isto em duas linhas
+em vez de uma só.
+
+00:01:33.734 --> 00:01:36.400
+É para facilitar a leitura.
+
+00:01:36.434 --> 00:01:40.567
+Geralmente, podemos pôr novas linhas
+no meio dos comando no Java,
+
+00:01:40.601 --> 00:01:43.000
+desde que isso
+não quebre o comando.
+
+00:01:43.033 --> 00:01:46.501
+É usado
+para facilitar a leitura.
+
+00:01:46.534 --> 00:01:49.501
+Não se preocupem
+se tiverem que escrever
+
+00:01:49.534 --> 00:01:52.033
+comando longos
+em uma linha,
+
+00:01:52.067 --> 00:01:55.801
+mas lembrem-se
+que podem fazer algo assim.
+

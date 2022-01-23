@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.889
+Let's complete our checks to see who
+
+00:00:01.889 --> 00:00:04.964
+qualifies for a discounted ticket to this art museum.
+
+00:00:04.964 --> 00:00:08.855
+We already have the variable for our general ticket price set equal to
+
+00:00:08.855 --> 00:00:12.450
+10 and code for checking if a person's age is less than,
+
+00:00:12.449 --> 00:00:14.209
+or equal to 15 years old.
+
+00:00:14.210 --> 00:00:16.500
+But we still need two more tests.
+
+00:00:16.500 --> 00:00:20.144
+Fill in the blanks in our code to check for two other discount cases,
+
+00:00:20.144 --> 00:00:22.634
+and apply the discount for these conditions.
+
+00:00:22.635 --> 00:00:23.910
+Our first should be,
+
+00:00:23.910 --> 00:00:26.304
+if a person's age is greater than 60.
+
+00:00:26.304 --> 00:00:27.894
+Not exactly equal to 60,
+
+00:00:27.894 --> 00:00:29.509
+but anything above that.
+
+00:00:29.510 --> 00:00:31.080
+And our second test should be,
+
+00:00:31.079 --> 00:00:32.969
+if the person is a student or not.
+
+00:00:32.969 --> 00:00:34.710
+And if any of these conditions are met,
+
+00:00:34.710 --> 00:00:36.310
+we apply the discount price.
+

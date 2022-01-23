@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.019
+The correct solution here is, we can't tell.
+
+00:00:04.019 --> 00:00:07.469
+The problem here, is we don't know how many beeps it will
+
+00:00:07.469 --> 00:00:11.669
+take for someone to actually hit the snooze button and turn it off.
+
+00:00:11.669 --> 00:00:13.199
+And for every beep,
+
+00:00:13.199 --> 00:00:15.929
+we need to copy and paste this if block
+
+00:00:15.929 --> 00:00:20.789
+here for as many times as it needs until someone hits the snooze button.
+
+00:00:20.789 --> 00:00:25.079
+And because we don't know how many times it will be before someone hits the button,
+
+00:00:25.079 --> 00:00:28.000
+we really don't know how many times we should repeat this.
+

@@ -1,0 +1,187 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.169
+It turns out the correct answer is actually Kimberli.
+
+00:00:04.169 --> 00:00:07.859
+But why? Let's trace the program and see.
+
+00:00:07.860 --> 00:00:15.120
+The first thing we do, is we create and initialize this variable size using names.length.
+
+00:00:15.119 --> 00:00:18.309
+In this case, the size is actually seven.
+
+00:00:18.309 --> 00:00:24.157
+Then we create this variable longestName and we initialize it to names of zero,
+
+00:00:24.157 --> 00:00:26.190
+which is this value here.
+
+00:00:26.190 --> 00:00:28.770
+So longestName becomes Anja.
+
+00:00:28.769 --> 00:00:31.144
+Then we start our for loop
+
+00:00:31.144 --> 00:00:32.698
+initializing i to one.
+
+00:00:32.698 --> 00:00:39.811
+And as long as i is less than size, and then we increment by i++.
+
+00:00:39.811 --> 00:00:45.000
+So inside our loop, we check if name of i the length is greater than longestName.length.
+
+00:00:45.000 --> 00:00:46.670
+Names of I in
+
+00:00:46.670 --> 00:00:52.230
+this particular point is Kimberli and longestName is Anja.
+
+00:00:52.229 --> 00:00:56.839
+This happensaaa to be eight characters long and this is only four,
+
+00:00:56.840 --> 00:00:59.000
+so this if statement is true.
+
+00:00:59.000 --> 00:01:05.159
+names[i].length, which is eight is greater than longestName.length, which is four.
+
+00:01:05.159 --> 00:01:07.704
+So we step inside the if condition and we update
+
+00:01:07.704 --> 00:01:13.019
+longest name to be equal to names, which is Kimberli.
+
+00:01:13.019 --> 00:01:15.170
+We move on adding one to i.
+
+00:01:15.170 --> 00:01:17.144
+So we're Know checking Edmond,
+
+00:01:17.144 --> 00:01:18.481
+we do our comparison.
+
+00:01:18.481 --> 00:01:21.992
+Edmond's only six characters long compared to eight,
+
+00:01:21.992 --> 00:01:27.134
+so we do not step into the if condition and we just keep going.
+
+00:01:27.135 --> 00:01:28.440
+Then we compare Shenna,
+
+00:01:28.439 --> 00:01:30.579
+which is also six characters long,
+
+00:01:30.579 --> 00:01:32.704
+so it's not greater than Kimberli.
+
+00:01:32.704 --> 00:01:37.390
+So this if statement is false we do not update longestName and we keep going.
+
+00:01:37.390 --> 00:01:40.704
+Now reach Apolonia, which is eight characters long.
+
+00:01:40.704 --> 00:01:46.629
+So our if statement is saying if names of i, which is Apolonia.length,
+
+00:01:46.629 --> 00:01:50.834
+which happens to be eight is greater than longestName.length,
+
+00:01:50.834 --> 00:01:53.824
+which is Kimberli.length, which is eight.
+
+00:01:53.825 --> 00:01:59.829
+So it's saying if eight is greater than eight, that's not true.
+
+00:01:59.829 --> 00:02:01.730
+Eight is not greater than eight,
+
+00:02:01.730 --> 00:02:06.614
+so we do not step into this statement and hence we do not update the longest name.
+
+00:02:06.614 --> 00:02:10.799
+So longestName remains Kimberli and then we continue
+
+00:02:10.800 --> 00:02:16.445
+our loop where the remaining two strings are also smaller than Kimberli.
+
+00:02:16.444 --> 00:02:21.384
+So, by the end of our loop we return the longestName which still has Kimberli in it.
+
+00:02:21.384 --> 00:02:24.689
+And that's why, in this particular implementation,
+
+00:02:24.689 --> 00:02:27.974
+this example would actually return Kimberli.
+
+00:02:27.974 --> 00:02:29.539
+In a general sense,
+
+00:02:29.539 --> 00:02:33.375
+It would return the first longest string it finds.
+
+00:02:33.375 --> 00:02:38.569
+However, another correct implementation of this function could be,
+
+00:02:38.569 --> 00:02:41.954
+this check here greater than or equal to.
+
+00:02:41.955 --> 00:02:45.060
+Let's trace this one and see what this would return.
+
+00:02:45.060 --> 00:02:48.223
+longestName would be initialized to Anja again,
+
+00:02:48.223 --> 00:02:52.349
+and then in our loop we start moving down to Kimberli,
+
+00:02:52.349 --> 00:02:54.120
+which is greater than Anja.
+
+00:02:54.120 --> 00:02:57.895
+So, we update that and then we step down again to Edmond,
+
+00:02:57.895 --> 00:03:01.140
+it's not greater than Kimberli so we just skip that one.
+
+00:03:01.139 --> 00:03:04.649
+Shenna is also not greater than Kimberli so we skip that one.
+
+00:03:04.650 --> 00:03:09.246
+And now Apolonia is eight, Kimberli is eight,
+
+00:03:09.246 --> 00:03:13.439
+so where condition is if eight is greater than or equal to eight,
+
+00:03:13.439 --> 00:03:15.560
+which is true in this case,
+
+00:03:15.560 --> 00:03:20.870
+so we step inside and we update longestName to names of i, which is Apolonia.
+
+00:03:20.870 --> 00:03:24.405
+So longestName gets updated to Apolonia this time.
+
+00:03:24.405 --> 00:03:26.967
+And then we step through Caroll,
+
+00:03:26.967 --> 00:03:30.230
+and the last name which are both smaller than Apolonia.
+
+00:03:30.229 --> 00:03:32.699
+So we end up returning that longestName,
+
+00:03:32.699 --> 00:03:34.909
+which is this one this time.
+
+00:03:34.909 --> 00:03:38.234
+So a small difference like this check, between greater than,
+
+00:03:38.235 --> 00:03:42.230
+or greater than or equal can make this subtle difference.
+

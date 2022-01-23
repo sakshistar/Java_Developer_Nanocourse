@@ -1,0 +1,231 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.267
+Vimos como booleanas assumem
+o valor de verdadeiro ou falso.
+
+00:00:04.300 --> 00:00:07.400
+Até aqui, temos atribuído
+diretamente este valor.
+
+00:00:07.434 --> 00:00:10.167
+Como com o código:
+boolean b1=verdadeiro
+
+00:00:10.200 --> 00:00:12.133
+e: boolean b2=false.
+
+00:00:12.167 --> 00:00:16.033
+Mas valores booleanos também podem
+ser calculados com testes,
+
+00:00:16.067 --> 00:00:17.234
+como comparações.
+
+00:00:17.267 --> 00:00:19.634
+São chamados
+de expressões booleanas.
+
+00:00:19.667 --> 00:00:22.033
+E elas são assim.
+
+00:00:22.067 --> 00:00:25.367
+Esta expressão, que checa
+se 3 é menor que 5,
+
+00:00:25.400 --> 00:00:28.801
+é algo que sabemos ser verdadeiro.
+3 é menor que 5.
+
+00:00:28.834 --> 00:00:32.834
+Esta expressão resulta
+no valor booleano de verdadeiro.
+
+00:00:32.868 --> 00:00:36.934
+Podemos atribuir esse valor
+a uma variável booleana, como antes.
+
+00:00:36.968 --> 00:00:38.868
+Vamos chamar esta de b3.
+
+00:00:38.901 --> 00:00:43.234
+Aqui, b1 e b3 são iguais
+ao mesmo valor, verdadeiro.
+
+00:00:43.267 --> 00:00:46.601
+Mas b3 é atribuída
+ao valor desta comparação,
+
+00:00:46.634 --> 00:00:48.567
+e não diretamente
+a verdadeiro.
+
+00:00:48.601 --> 00:00:52.400
+Se escrevermos esta expressão,
+que checa se 3 é maior que 5,
+
+00:00:52.434 --> 00:00:55.667
+isto resultará
+no valor booleano de falso,
+
+00:00:55.701 --> 00:00:57.734
+pois 3 não é maior que 5.
+
+00:00:57.767 --> 00:01:01.167
+Então b2 e b4
+terão o mesmo valor.
+
+00:01:01.200 --> 00:01:04.467
+Há várias formas de comparar
+números ou variáveis
+
+00:01:04.501 --> 00:01:07.133
+que resultarão
+em verdadeiro ou falso.
+
+00:01:07.167 --> 00:01:10.334
+Além dessas expressões
+menor e maior que,
+
+00:01:10.367 --> 00:01:14.434
+podemos ter também menor ou igual a
+e maior ou igual a.
+
+00:01:14.467 --> 00:01:16.534
+Vamos usá-las
+em exemplos também.
+
+00:01:16.567 --> 00:01:18.968
+Podemos comparar
+dois números de novo,
+
+00:01:19.000 --> 00:01:22.400
+como testar
+se 7 é menor ou igual a 6.
+
+00:01:22.434 --> 00:01:26.501
+E como 7 é maior que 6,
+esta expressão não é verdadeira.
+
+00:01:26.534 --> 00:01:27.868
+Ela é falsa.
+
+00:01:27.901 --> 00:01:32.033
+Em vez de usar números, podemos
+usar variáveis nas combinações.
+
+00:01:32.067 --> 00:01:35.267
+Digamos que declaramos
+uma variável int chamada x
+
+00:01:35.300 --> 00:01:38.968
+e a inicializamos como 10
+antes de começar as comparações.
+
+00:01:39.000 --> 00:01:43.000
+Podemos comparar essa variável
+a outro número ou variável.
+
+00:01:43.033 --> 00:01:47.601
+Como esta expressão que testa:
+x é maior ou igual a 10?
+
+00:01:47.634 --> 00:01:50.033
+O Java verá isto e dirá:
+x é 10.
+
+00:01:50.067 --> 00:01:53.501
+Então, sim, é igual a 10,
+e a expressão é verdadeira.
+
+00:01:53.534 --> 00:01:57.734
+Se quisermos só testar igualdade,
+usamos sinais duplos de igual.
+
+00:01:57.767 --> 00:02:01.834
+Podemos testar algo como:
+if x == 9.
+
+00:02:01.868 --> 00:02:06.868
+Como 10 não é igual a 9,
+a expressão será falsa.
+
+00:02:06.901 --> 00:02:10.000
+Vamos olhar este teste de igualdade
+em detalhe.
+
+00:02:10.033 --> 00:02:13.501
+No Java, o sinal duplo de igual
+testa igualdade.
+
+00:02:13.534 --> 00:02:16.400
+Não confundam
+com o sinal de igual único
+
+00:02:16.434 --> 00:02:19.133
+que, no Java,
+é uma atribuição de variável.
+
+00:02:19.167 --> 00:02:21.767
+Quando escrevemos x == 9,
+
+00:02:21.801 --> 00:02:25.167
+é o equivalente
+do valor booleano "falso".
+
+00:02:25.200 --> 00:02:28.334
+E nossa variável x
+ainda será igual a 10.
+
+00:02:28.367 --> 00:02:31.567
+Mas se dissermos x = 9
+com um só =,
+
+00:02:31.601 --> 00:02:34.534
+isto mudará o valor de x
+de 10 para 9,
+
+00:02:34.567 --> 00:02:37.067
+e nenhum valor booleano
+será calculado.
+
+00:02:37.100 --> 00:02:40.901
+Lembrem-se de usar sinais duplos
+de = para checar igualdade.
+
+00:02:40.934 --> 00:02:45.667
+E para checar se dois valores
+não são iguais, usamos !=.
+
+00:02:45.701 --> 00:02:48.534
+Com esta exclamação
+significa NOT.
+
+00:02:48.567 --> 00:02:51.534
+Então, x diferente de 9
+será verdadeiro,
+
+00:02:51.567 --> 00:02:53.701
+pois 10 é diferente de 9.
+
+00:02:53.734 --> 00:02:56.534
+É o oposto
+da última checagem de igualdade.
+
+00:02:56.567 --> 00:03:00.367
+Como todas essas expressões
+resultam em verdadeiro ou falso,
+
+00:03:00.400 --> 00:03:04.968
+são usadas como condições de teste
+em instruções if para tomar decisões.
+
+00:03:05.000 --> 00:03:07.200
+Mas antes de usá-las nisso,
+
+00:03:07.234 --> 00:03:10.334
+vamos ganhar mais prática
+avaliando-as.
+

@@ -1,0 +1,244 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.567
+Para usar um while para repetir algo
+um número fixo de vezes,
+
+00:00:04.601 --> 00:00:07.033
+precisamos ter
+essas 3 componentes.
+
+00:00:07.067 --> 00:00:08.400
+O contador do laço,
+
+00:00:08.434 --> 00:00:09.801
+a condição do laço,
+
+00:00:09.834 --> 00:00:11.968
+e o incremento do laço.
+
+00:00:12.000 --> 00:00:13.534
+Todas trabalham juntas
+
+00:00:13.567 --> 00:00:19.467
+para o laço repetir o número
+específico de vezes que precisamos.
+
+00:00:19.501 --> 00:00:23.734
+Mas o Java tem outro tipo de laço
+chamado laço for,
+
+00:00:23.767 --> 00:00:28.968
+que é uma abreviação do que
+acabamos de fazer usando while.
+
+00:00:29.000 --> 00:00:32.033
+Vamos ver como implementar
+a função raiseAlarm
+
+00:00:32.067 --> 00:00:33.601
+usando um laço for.
+
+00:00:33.634 --> 00:00:35.734
+Eles são escritos assim.
+
+00:00:35.767 --> 00:00:38.000
+for, seguido de parênteses,
+
+00:00:38.033 --> 00:00:41.367
+e 3 seções separadas
+por ponto e vírgula.
+
+00:00:41.400 --> 00:00:46.000
+Essas 3 seções são basicamente
+os 3 passos que fizemos com o while.
+
+00:00:46.033 --> 00:00:51.501
+A primeira teria o contador,
+que é int i = 1.
+
+00:00:51.534 --> 00:00:53.901
+Este é o número 1 aqui.
+
+00:00:53.934 --> 00:00:56.400
+A segunda seção
+é a condição do laço,
+
+00:00:56.434 --> 00:01:02.968
+exatamente como fizemos com o while,
+i &lt;= numOfWarnings, como o número 2.
+
+00:01:03.000 --> 00:01:05.400
+A última seção
+é o incremento do laço,
+
+00:01:05.434 --> 00:01:09.367
+que é só i++,
+como o número 3 aqui.
+
+00:01:09.400 --> 00:01:13.767
+Mas note que não temos
+ponto e vírgula depois do i++.
+
+00:01:13.801 --> 00:01:18.133
+Só temos esses dois
+separando as 3 seções.
+
+00:01:18.167 --> 00:01:21.634
+Então o laço for que faz
+exatamente o que isto faz
+
+00:01:21.667 --> 00:01:23.000
+se escreve assim.
+
+00:01:23.033 --> 00:01:31.667
+for (int i=1;
+i&lt;=numOfWarnings; i++).
+
+00:01:31.701 --> 00:01:36.267
+Dentro das chaves, escrevemos
+a instrução que queremos repetir.
+
+00:01:36.300 --> 00:01:39.701
+Note que não fazemos mais
+o incremento dentro do laço,
+
+00:01:39.734 --> 00:01:42.634
+ele é parte da definição
+do laço aqui em cima.
+
+00:01:42.667 --> 00:01:45.434
+Vamos fazer o traço
+para ver o que acontece.
+
+00:01:45.467 --> 00:01:50.200
+Você já pode ver que a função
+fica mais simples usando for,
+
+00:01:50.234 --> 00:01:53.567
+porque tudo está escrito
+na mesma linha aqui em cima.
+
+00:01:53.601 --> 00:01:57.100
+Vamos testar de novo
+com o valor 5.
+
+00:01:57.133 --> 00:02:00.734
+Passamos o valor 5
+para numOfWarnings
+
+00:02:00.767 --> 00:02:02.434
+e depois entramos.
+
+00:02:02.467 --> 00:02:07.200
+A primeira coisa que o for faz
+é inicializar i como 1,
+
+00:02:07.234 --> 00:02:13.400
+e depois faz a comparação,
+que é i &lt;= numOfWarnings, que é 5,
+
+00:02:13.434 --> 00:02:15.300
+e é verdadeiro.
+
+00:02:15.334 --> 00:02:19.434
+Ele não incrementa ainda,
+mas entra imediatamente no laço.
+
+00:02:19.467 --> 00:02:22.367
+Roda este comando aqui,
+que imprime "Warning".
+
+00:02:22.400 --> 00:02:25.567
+Chegamos ao fim do laço,
+então voltamos para cima.
+
+00:02:25.601 --> 00:02:28.367
+A primeira coisa que ele faz
+é o incremento.
+
+00:02:28.400 --> 00:02:30.534
+Quando o for termina
+uma iteração,
+
+00:02:30.567 --> 00:02:33.334
+a primeira coisa que ele faz
+é o incremento,
+
+00:02:33.367 --> 00:02:35.200
+e assim i se torna 2.
+
+00:02:35.234 --> 00:02:40.200
+Depois de incrementar,
+ele faz a checagem.
+
+00:02:40.234 --> 00:02:45.133
+i &lt;= numOfWarnings?
+É, sim.
+
+00:02:45.167 --> 00:02:49.534
+Por isso entramos no laço de novo
+e imprimimos "Warning".
+
+00:02:49.567 --> 00:02:52.067
+Chegamos ao fim do laço,
+então voltamos,
+
+00:02:52.100 --> 00:02:54.667
+incrementamos i para 3,
+
+00:02:54.701 --> 00:02:56.534
+fazemos a comparação,
+
+00:02:56.567 --> 00:03:02.200
+e 3 &lt;= 5, então entramos,
+e imprimimos "Warning".
+
+00:03:02.234 --> 00:03:06.567
+Continuamos repetindo isso,
+i = 4, menor do que 5,
+
+00:03:06.601 --> 00:03:08.334
+imprime "Warning".
+
+00:03:08.367 --> 00:03:11.601
+O mesmo para quando
+i aumenta para 5,
+
+00:03:11.634 --> 00:03:13.300
+isso ainda é verdadeiro,
+
+00:03:13.334 --> 00:03:14.467
+então entramos,
+
+00:03:14.501 --> 00:03:16.000
+e imprimimos "Warning".
+
+00:03:16.033 --> 00:03:18.801
+Chegamos ao fim do laço,
+voltamos para cima,
+
+00:03:18.834 --> 00:03:20.601
+incrementamos i para 6,
+
+00:03:20.634 --> 00:03:21.968
+fazemos a checagem,
+
+00:03:22.000 --> 00:03:25.334
+e desta vez 6 não é mais
+menor ou igual a 5,
+
+00:03:25.367 --> 00:03:27.968
+por isso
+não entramos no laço.
+
+00:03:28.000 --> 00:03:31.934
+Como podem ver, o traço
+é igual ao do laço while.
+
+00:03:31.968 --> 00:03:36.200
+A única diferença é estar escrito
+de forma compacta e fácil de ler.
+

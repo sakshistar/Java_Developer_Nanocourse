@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.200
+Aqui estão
+os valores corretos.
+
+00:00:02.234 --> 00:00:07.067
+Na primeira expressão,
+veremos se x é menor ou igual a 21.
+
+00:00:07.100 --> 00:00:10.901
+Sabemos que x é 20,
+e 20 é menor que 21.
+
+00:00:10.934 --> 00:00:12.701
+Então isto será verdadeiro.
+
+00:00:12.734 --> 00:00:16.968
+Na próxima expressão,
+veremos se 2 vezes 2 é maior que 8.
+
+00:00:17.000 --> 00:00:20.234
+2 vezes 2 é 4,
+que é menor que 8.
+
+00:00:20.267 --> 00:00:21.868
+Então esta é falsa.
+
+00:00:21.901 --> 00:00:25.501
+Depois, veremos se 5
+não é igual a x.
+
+00:00:25.534 --> 00:00:28.567
+Lembrem-se, a exclamação
+significa "não".
+
+00:00:28.601 --> 00:00:33.400
+Sabemos que x é 20, e isto está
+checando se 5 não é igual a 20.
+
+00:00:33.434 --> 00:00:37.234
+E como 5 não é igual a 20,
+isto é verdadeiro.
+
+00:00:37.267 --> 00:00:40.501
+Então checamos
+se 20 é igual a x.
+
+00:00:40.534 --> 00:00:44.367
+Ou seja, se 20 é igual a 20.
+E isto é verdadeiro.
+
+00:00:44.400 --> 00:00:46.334
+Lembrem-se,
+a comparação de igualdade
+
+00:00:46.367 --> 00:00:48.901
+sempre é feita
+com um sinal de igual duplo.
+
+00:00:48.934 --> 00:00:51.601
+Vamos usar o que sabemos
+sobre tomada de decisões
+
+00:00:51.634 --> 00:00:54.534
+e expressões booleanas
+para construir programas.
+

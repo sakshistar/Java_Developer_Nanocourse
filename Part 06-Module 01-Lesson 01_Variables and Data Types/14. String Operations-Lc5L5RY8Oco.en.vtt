@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.615
+Now that you've learned a little bit about string concatenation,
+
+00:00:02.615 --> 00:00:05.640
+try to predict what this program would output.
+
+00:00:05.639 --> 00:00:08.844
+Follow the program step by step and make sure you're
+
+00:00:08.845 --> 00:00:12.150
+updating the values of the variables as they change.
+
+00:00:12.150 --> 00:00:15.435
+Remember that toLowerCase and toUpperCase commands,
+
+00:00:15.435 --> 00:00:20.085
+update the variable inside the string to either become all lowercases,
+
+00:00:20.085 --> 00:00:23.045
+which is just small letters or toUpperCases,
+
+00:00:23.045 --> 00:00:24.930
+which is all capital letters.
+
+00:00:24.929 --> 00:00:28.059
+Which of those outputs would be the correct output from this program?
+

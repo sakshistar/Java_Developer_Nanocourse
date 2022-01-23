@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.250
+All three of these scenarios could be helped by
+
+00:00:02.250 --> 00:00:05.089
+using functions instead of just blocks of code.
+
+00:00:05.089 --> 00:00:07.609
+Functions let you easily reuse code.
+
+00:00:07.610 --> 00:00:11.574
+So if you put this block of addition code into one big addition function,
+
+00:00:11.574 --> 00:00:14.949
+you could use it over and over again to add up your expenses.
+
+00:00:14.949 --> 00:00:19.839
+Functions also organize and group together lines of code to perform a specific task,
+
+00:00:19.839 --> 00:00:21.475
+like rating a restaurant.
+
+00:00:21.475 --> 00:00:23.845
+So without knowing the details of your friends code,
+
+00:00:23.844 --> 00:00:25.629
+they could share it with you and you can use
+
+00:00:25.629 --> 00:00:27.747
+it by referring to the name of their function,
+
+00:00:27.748 --> 00:00:29.745
+similar to how we use println.
+
+00:00:29.745 --> 00:00:33.140
+Lastly, functions make code more maintainable.
+
+00:00:33.140 --> 00:00:37.024
+So in this case, if you organize this code into one alarm function,
+
+00:00:37.024 --> 00:00:39.784
+you would just need to change the mistake in one place,
+
+00:00:39.784 --> 00:00:44.000
+in the one function and not in all the separate clocks it's been used in.
+

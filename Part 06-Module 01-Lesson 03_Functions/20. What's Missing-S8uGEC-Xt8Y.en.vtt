@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.910
+Here's our function admission again that tells people
+
+00:00:02.910 --> 00:00:06.060
+whether or not they pass their requirements to ride a roller coaster.
+
+00:00:06.059 --> 00:00:08.250
+But the code is a little bit changed.
+
+00:00:08.250 --> 00:00:11.820
+It still requires that a person input their height so that they can test it.
+
+00:00:11.820 --> 00:00:14.214
+And then this function will return a string passText
+
+00:00:14.214 --> 00:00:17.550
+that tells them whether they pass or don't pass.
+
+00:00:17.550 --> 00:00:18.810
+In our previous example,
+
+00:00:18.809 --> 00:00:22.009
+the string was printed out using print lines inside our function.
+
+00:00:22.010 --> 00:00:24.135
+But this time, we're returning an output,
+
+00:00:24.135 --> 00:00:28.859
+this passText string, and nothing will print out when we call this function.
+
+00:00:28.859 --> 00:00:30.750
+Notice the inner if and else statements,
+
+00:00:30.750 --> 00:00:33.225
+the passText string takes on a different value,
+
+00:00:33.225 --> 00:00:36.515
+and we only return its value at the very end of our program.
+
+00:00:36.515 --> 00:00:39.570
+Return statements like this one end a function call,
+
+00:00:39.570 --> 00:00:43.219
+and so they always have to go below any code that we want to execute.
+
+00:00:43.219 --> 00:00:45.104
+So this code is almost finished,
+
+00:00:45.104 --> 00:00:47.279
+but it won't actually return the string we want.
+
+00:00:47.280 --> 00:00:49.920
+Something is incomplete or missing.
+
+00:00:49.920 --> 00:00:53.310
+Can you identify the problem out of the following four options?
+
+00:00:53.310 --> 00:00:56.094
+passText isn't a string variable,
+
+00:00:56.094 --> 00:00:57.710
+we have the wrong return type,
+
+00:00:57.710 --> 00:00:59.280
+a wrong return statement,
+
+00:00:59.280 --> 00:01:01.000
+or nothing is wrong at all.
+

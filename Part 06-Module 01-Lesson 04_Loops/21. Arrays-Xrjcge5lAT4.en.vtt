@@ -1,0 +1,202 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.370
+If we create a string variable called newsOutlet for example,
+
+00:00:05.370 --> 00:00:09.234
+we can only store one value in it at a time.
+
+00:00:09.234 --> 00:00:15.239
+Arrays however allow us to store many strings in that same variable.
+
+00:00:15.240 --> 00:00:18.059
+Each can have its own value.
+
+00:00:18.059 --> 00:00:21.004
+They all however have to be of the same type.
+
+00:00:21.004 --> 00:00:26.854
+In this case, because this is an array of strings each value has to be a string.
+
+00:00:26.855 --> 00:00:30.510
+And, since they're all stored in the same variable,
+
+00:00:30.510 --> 00:00:35.130
+to tell them apart each part of the array is numbered always
+
+00:00:35.130 --> 00:00:39.929
+starting from zero and counting up for as many items exist in the array.
+
+00:00:39.929 --> 00:00:43.335
+If you want to retrieve the value inside any of those boxes,
+
+00:00:43.335 --> 00:00:47.609
+you just have to type the arrays name followed by the square brackets,
+
+00:00:47.609 --> 00:00:50.609
+with the box number inside those squared brackets.
+
+00:00:50.609 --> 00:00:56.984
+For example, newsOutlet of zero has ABC in it.
+
+00:00:56.984 --> 00:01:02.085
+NewsOutlet of one has BBC in it
+
+00:01:02.085 --> 00:01:08.355
+and newsOutlet of two has CNN in it and so on for the rest of the array.
+
+00:01:08.355 --> 00:01:14.755
+Each of those expressions can be treated as if they are normal variables. Let's see how.
+
+00:01:14.754 --> 00:01:20.379
+In Java, you could think of any array as if it's one row of a table,
+
+00:01:20.379 --> 00:01:26.979
+where each box in the array has a different value but they all have the same name.
+
+00:01:26.980 --> 00:01:29.500
+In this example, I'm creating an array of
+
+00:01:29.500 --> 00:01:33.965
+integers so each box would have an integer inside it.
+
+00:01:33.965 --> 00:01:37.820
+Those boxes in Java are called cells.
+
+00:01:37.819 --> 00:01:39.213
+As we've mentioned earlier,
+
+00:01:39.213 --> 00:01:43.739
+each of those cells is numbered starting from zero and counting up.
+
+00:01:43.739 --> 00:01:46.774
+These numbers are called the cell indices,
+
+00:01:46.775 --> 00:01:50.630
+because each number is an index to a particular cell.
+
+00:01:50.629 --> 00:01:55.234
+For example, this cell here has an index of zero.
+
+00:01:55.234 --> 00:01:58.424
+This cell here is the cell with index three.
+
+00:01:58.424 --> 00:02:02.754
+We can treat each cell as if it was a separate variable.
+
+00:02:02.754 --> 00:02:06.804
+Like for example if we wanted to add this cell here to that cell there,
+
+00:02:06.805 --> 00:02:08.955
+we would just say something like this.
+
+00:02:08.955 --> 00:02:13.985
+Integer sum equals numbers of zero plus numbers of three.
+
+00:02:13.985 --> 00:02:16.910
+Our array name is called numbers and we
+
+00:02:16.909 --> 00:02:20.370
+just access the different cells using the indices like that.
+
+00:02:20.370 --> 00:02:24.370
+And then this statement here is just considered as if it was a variable.
+
+00:02:24.370 --> 00:02:25.689
+We could add them together,
+
+00:02:25.689 --> 00:02:29.294
+we could do anything we can with a normal variable.
+
+00:02:29.294 --> 00:02:34.340
+This would update our valuable sum to become 15.
+
+00:02:34.340 --> 00:02:36.500
+Because it's adding 12,
+
+00:02:36.500 --> 00:02:38.997
+which has numbers of zero, two,
+
+00:02:38.997 --> 00:02:42.510
+three which is numbers of three giving us 15.
+
+00:02:42.509 --> 00:02:46.014
+But, how do we even declare those arrays in the first place?
+
+00:02:46.014 --> 00:02:49.954
+Let's say we want to declare an array that looks something like this.
+
+00:02:49.955 --> 00:02:54.890
+We type in integer and then empty square brackets just to say that we want to
+
+00:02:54.889 --> 00:02:57.169
+create an array of integers not just a single
+
+00:02:57.169 --> 00:03:00.439
+integer and then we write the name of our array.
+
+00:03:00.439 --> 00:03:02.930
+Which in our case is called numbers and then we
+
+00:03:02.930 --> 00:03:06.064
+follow that by equals and then curly brackets.
+
+00:03:06.064 --> 00:03:07.865
+Inside those curly brackets,
+
+00:03:07.865 --> 00:03:11.719
+we just list all the values we want to have in our array.
+
+00:03:11.719 --> 00:03:15.034
+Notice that I didn't have to specify how big the array is.
+
+00:03:15.034 --> 00:03:19.879
+What Java would do, is it will just assign each of those values into
+
+00:03:19.879 --> 00:03:25.120
+a cell in its internal memory and it would assign each cell an index,
+
+00:03:25.120 --> 00:03:28.310
+so that if you want to reach the value 121,
+
+00:03:28.310 --> 00:03:31.640
+you just have to access it using the index seven.
+
+00:03:31.639 --> 00:03:35.674
+For example, if I tried to print out numbers of zero,
+
+00:03:35.675 --> 00:03:41.405
+I get the output 12 because this is the value inside the cell with index zero.
+
+00:03:41.405 --> 00:03:44.120
+If I wanted to print out the result of
+
+00:03:44.120 --> 00:03:47.944
+the multiplication between numbers of 9 and numbers of 12,
+
+00:03:47.944 --> 00:03:51.965
+that's basically negative 4 times 2,
+
+00:03:51.965 --> 00:03:54.784
+then our output would be negative 8.
+
+00:03:54.784 --> 00:03:57.465
+An array of doubles is no different.
+
+00:03:57.465 --> 00:04:01.694
+For example if we wanted to create an array of doubles that looks something like this,
+
+00:04:01.694 --> 00:04:03.454
+we just go ahead and say,
+
+00:04:03.455 --> 00:04:07.940
+double and then empty square brackets again to separate it from a normal double.
+
+00:04:07.939 --> 00:04:10.370
+And then we just put in the array name,
+
+00:04:10.370 --> 00:04:14.259
+followed by equals, curly brackets and we list the values inside.
+

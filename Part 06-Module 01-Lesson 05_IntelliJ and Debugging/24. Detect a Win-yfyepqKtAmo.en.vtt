@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.290
+We need to tell our program to check these three spots.
+
+00:00:03.290 --> 00:00:07.799
+Grid[2][0], grid[1][1], and grid[0][2].
+
+00:00:07.799 --> 00:00:11.699
+Knowing that this first index is our column, and the second,
+
+00:00:11.699 --> 00:00:16.719
+our row number, we know that grid[2][0] is the top right corner of our grid.
+
+00:00:16.719 --> 00:00:23.085
+Grid[1][1] is this middle spot and grid[0][2] is this bottom left.
+
+00:00:23.085 --> 00:00:25.955
+And since these three spots are equal to the character O,
+
+00:00:25.954 --> 00:00:28.684
+we know that this is a win.
+
+00:00:28.684 --> 00:00:30.890
+Next, you'll see the project rubric and learn how to
+
+00:00:30.890 --> 00:00:34.000
+submit your complete win detection code. Good luck.
+

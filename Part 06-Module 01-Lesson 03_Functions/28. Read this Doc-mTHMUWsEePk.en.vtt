@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.439
+I called a Math.max with the arguments 20 and 15 put in,
+
+00:00:03.439 --> 00:00:06.324
+we'll return the value 20, which is an int.
+
+00:00:06.325 --> 00:00:10.725
+From the general description of this function and the description of the return,
+
+00:00:10.724 --> 00:00:14.250
+we know from the documentation that this function is expected to
+
+00:00:14.250 --> 00:00:18.734
+output the larger of its two input arguments.
+
+00:00:18.734 --> 00:00:23.910
+And in this case 20 is larger than 15 so we expect 20 to be returned.
+
+00:00:23.910 --> 00:00:27.990
+We also know that it returns an int because of its return type right here,
+
+00:00:27.989 --> 00:00:31.679
+where it says public static int max so
+
+00:00:31.679 --> 00:00:35.399
+even though this is the first time you've seen this function max in this course,
+
+00:00:35.399 --> 00:00:37.244
+just by reading this documentation,
+
+00:00:37.244 --> 00:00:40.890
+you know how to use it and what to expect as output.
+
+00:00:40.890 --> 00:00:42.075
+You know how to use it,
+
+00:00:42.075 --> 00:00:43.725
+what parameters it takes in,
+
+00:00:43.725 --> 00:00:45.810
+and what it returns.
+
+00:00:45.810 --> 00:00:48.020
+So documentation is really useful.
+

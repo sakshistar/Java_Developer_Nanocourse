@@ -1,0 +1,424 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Run the Game!</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>IntelliJ and Debugging</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. JDK.html">02. JDK</a>
+    </li>
+    <li class="">
+      <a href="03. Mac Install Java Development Kit.html">03. Mac: Install Java Development Kit</a>
+    </li>
+    <li class="">
+      <a href="04. Windows Install Java Development Kit.html">04. Windows: Install Java Development Kit</a>
+    </li>
+    <li class="">
+      <a href="05. Mac The Terminal.html">05. Mac: The Terminal</a>
+    </li>
+    <li class="">
+      <a href="06. Windows Command Prompt .html">06. Windows: Command Prompt </a>
+    </li>
+    <li class="">
+      <a href="07. Mac Hello Java!.html">07. Mac: Hello Java!</a>
+    </li>
+    <li class="">
+      <a href="08. Windows Hello Java!.html">08. Windows: Hello Java!</a>
+    </li>
+    <li class="">
+      <a href="09. Windows Changing Environment Variables.html">09. Windows: Changing Environment Variables</a>
+    </li>
+    <li class="">
+      <a href="10. IntelliJ.html">10. IntelliJ</a>
+    </li>
+    <li class="">
+      <a href="11. Mac Install IntelliJ.html">11. Mac: Install IntelliJ</a>
+    </li>
+    <li class="">
+      <a href="12. Mac Install IntelliJ 2.html">12. Mac: Install IntelliJ 2</a>
+    </li>
+    <li class="">
+      <a href="13. Windows Install IntelliJ.html">13. Windows: Install IntelliJ</a>
+    </li>
+    <li class="">
+      <a href="14. Setup a Project .html">14. Setup a Project </a>
+    </li>
+    <li class="">
+      <a href="15. IntelliJ Environment.html">15. IntelliJ Environment</a>
+    </li>
+    <li class="">
+      <a href="16. Hello World in IntelliJ.html">16. Hello World in IntelliJ</a>
+    </li>
+    <li class="">
+      <a href="17. Tic Tac Toe.html">17. Tic Tac Toe</a>
+    </li>
+    <li class="">
+      <a href="18. Download Tic Tac Toe.html">18. Download Tic Tac Toe</a>
+    </li>
+    <li class="">
+      <a href="19. Import the Project Code into IntelliJ.html">19. Import the Project Code into IntelliJ</a>
+    </li>
+    <li class="">
+      <a href="20. Run the Game!.html">20. Run the Game!</a>
+    </li>
+    <li class="">
+      <a href="21. The Grid.html">21. The Grid</a>
+    </li>
+    <li class="">
+      <a href="22. 2D Coordinates.html">22. 2D Coordinates</a>
+    </li>
+    <li class="">
+      <a href="23. Winning Conditions.html">23. Winning Conditions</a>
+    </li>
+    <li class="">
+      <a href="24. Detect a Win.html">24. Detect a Win</a>
+    </li>
+    <li class="">
+      <a href="25. What type of error.html">25. What type of error</a>
+    </li>
+    <li class="">
+      <a href="26. Debugging in IntelliJ.html">26. Debugging in IntelliJ</a>
+    </li>
+    <li class="">
+      <a href="27. Project Instructions.html">27. Project Instructions</a>
+    </li>
+    <li class="">
+      <a href="28. Next Steps.html">28. Next Steps</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">20. Run the Game!</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Run the game!</p></h3>
+  <div>
+  <h2 id="1-edit-run-configurations">1. Edit Run Configurations</h2>
+<p>Right now, there is a lot of code in this project and IntelliJ needs to be told what to run. To tell it to run Game.java, you need to go to Run &gt; Edit Configurations, and set up a New configuration.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Edit config drop down menu</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/editconfigmenu.png" alt="Edit Configurations... drop down menu." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Edit Configurations… drop down menu.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>step 2</p></h3>
+  <div>
+  <p>Then in the Run Configurations window, click the <code>+</code> button at the top left of this window to add a new configuration, and select <em>Application</em>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Select new application</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/new-application-select.png" alt="Add new Application configuration." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Add new Application configuration.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>step 3</p></h3>
+  <div>
+  <p>Then you'll see this configurations window, and the first thing you want to do is to <strong>name your configuration</strong>, and I'll name this <em>Run Game</em>.</p>
+<p>Then you'll see the four fields that we've seen before:</p>
+<ol>
+<li>The main class that we want to run.</li>
+<li>The project directory for Project 1 - TicTacToe.</li>
+<li>The classpath of the module.</li>
+<li>The version of Java you're using.</li>
+</ol>
+<p>You'll want to make sure these are all set to the correct fields before moving on and running the game. You'll also need to select the correct <em>main class</em> and <em>module</em>; the project directory and version of Java should be automatically chosen by IntelliJ.</p>
+<p>So, after changing the name, the first thing you should select is the <em>Main class</em> by clicking the <code>...</code> to the side of the Main class field. Then, a window will prompt you to select the Game class. Select this and click Okay.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Main class, Game.java</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/main-classselection.png" alt="Main class selection screen." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Main class selection screen.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>step 4</p></h3>
+  <div>
+  <p>Next select the correct <em>module</em> by using the drop-down menu to the right of this field, and choose the <strong>Project_1_-_TicTacToe_main</strong> module. Make sure you select the <strong>main</strong> module and not the test or default project modules.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Module selection</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/module-select.png" alt="Module selection." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Module selection.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>step 5</p></h3>
+  <div>
+  <p>So, your final configuration should have the following fields:</p>
+<ol>
+<li>The main class that we want to run should be <strong>com.udacity.Game</strong>.</li>
+<li>The project directory for Project 1 - TicTacToe (left as is).</li>
+<li>The classpath of the module, which should be <strong>Project_1_-_TicTacToe_main</strong>.</li>
+<li>The version of Java you're using, which should be version 8.</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Correct run config</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/completed-config.png" alt="Correct run configuration." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Correct run configuration.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>step 6</p></h3>
+  <div>
+  <p><em>Make sure all of these fields are correct and match the picture before proceeding.</em></p>
+<p>After you've named and set your configuration to run Game.java, click Apply then Okay to get back to your program.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Apply button</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/apply-button.png" alt="Click Apply... then Okay!" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Click Apply… then Okay!</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>step 6 plus</p></h3>
+  <div>
+  <h2 id="2-run-the-game">2. Run the Game!</h2>
+<p>After your run configuration is set up, you should see it's name appear in the top right of your screen next to the Run button. Now, you can simply click this button and Game.java will run.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Run Game</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/rungamebuttonchanged.png" alt="Run Game button." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Run Game button.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>running 1</p></h3>
+  <div>
+  <p>When you click Run, you should see a tic tac toe grid appear!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Tic tac toe grid</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/tictactoegrid.png" alt="Tic Tac Toe!" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Tic Tac Toe!</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>tic tac toe grid</p></h3>
+  <div>
+  <p>You can even play a one or two player game of Tic Tac Toe, but this game code does not yet detect when a player wins!</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="21. The Grid.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('20. Run the Game!')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

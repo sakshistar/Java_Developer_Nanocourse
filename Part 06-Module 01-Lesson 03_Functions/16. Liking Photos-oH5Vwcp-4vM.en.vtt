@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.310
+Every function call looks like this.
+
+00:00:02.310 --> 00:00:04.299
+It's just the name of the function,
+
+00:00:04.299 --> 00:00:06.434
+followed by the arguments it expects,
+
+00:00:06.434 --> 00:00:08.809
+and it finishes with a semi-colon.
+
+00:00:08.810 --> 00:00:12.845
+Here's an example of a valid function call for likePhoto.
+
+00:00:12.845 --> 00:00:14.894
+It first expects an int argument,
+
+00:00:14.894 --> 00:00:16.259
+followed by a string,
+
+00:00:16.260 --> 00:00:18.825
+followed by a boolean in that order.
+
+00:00:18.824 --> 00:00:22.739
+And so, any function call that looks like this will be valid.
+
+00:00:22.739 --> 00:00:26.989
+This particular function call will set the currentLikes to be 10.
+
+00:00:26.989 --> 00:00:29.504
+The comment will just be great photo,
+
+00:00:29.504 --> 00:00:31.739
+and the boolean like will be set to true.
+
+00:00:31.739 --> 00:00:33.854
+So, our current likes would increase.
+
+00:00:33.854 --> 00:00:36.434
+If the order of these arguments were switched,
+
+00:00:36.435 --> 00:00:38.130
+or we were missing an argument,
+
+00:00:38.130 --> 00:00:40.054
+this would create an error.
+
+00:00:40.054 --> 00:00:44.310
+So, it's always important to match up parameters with arguments.
+
+00:00:44.310 --> 00:00:47.385
+So, for functions that expect parameters is input,
+
+00:00:47.384 --> 00:00:52.000
+the order and type of arguments you put in in a function call is really important.
+

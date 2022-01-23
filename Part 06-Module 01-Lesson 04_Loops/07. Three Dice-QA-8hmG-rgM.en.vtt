@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.580
+Now that we've managed to count the number of rolls,
+
+00:00:02.580 --> 00:00:04.734
+we need to get two dice to match.
+
+00:00:04.735 --> 00:00:07.800
+Let's see what we need to do to add one more dice to
+
+00:00:07.799 --> 00:00:11.870
+our problem and count the rolls we need to get three dice to match.
+
+00:00:11.869 --> 00:00:16.500
+The first thing we need to do is declare this new variable integer dice3
+
+00:00:16.500 --> 00:00:21.535
+here and set it to the return value of another roll dice call.
+
+00:00:21.535 --> 00:00:23.789
+We also need to do that inside a while loop.
+
+00:00:23.789 --> 00:00:25.859
+When we re-roll our three dice,
+
+00:00:25.859 --> 00:00:30.539
+we need to set dice3 to be equal to another call of the roll dice function.
+
+00:00:30.539 --> 00:00:32.519
+Now the last thing we need to do is change
+
+00:00:32.520 --> 00:00:36.930
+this while loop condition over here to check that all three dice match,
+
+00:00:36.929 --> 00:00:38.750
+instead of just two.
+
+00:00:38.750 --> 00:00:41.789
+Unfortunately, we can't do something like this where we say,
+
+00:00:41.789 --> 00:00:44.524
+dice1 equal to dice2, equal to dice3.
+
+00:00:44.524 --> 00:00:48.420
+Any comparison in Java can only have two sides.
+
+00:00:48.420 --> 00:00:50.460
+Otherwise, Java would complain and throw
+
+00:00:50.460 --> 00:00:53.785
+an error before it even allows you to run that code.
+
+00:00:53.784 --> 00:00:56.399
+However, we could use the logical operations that we've
+
+00:00:56.399 --> 00:00:58.890
+learned in the previous lesson and break this check
+
+00:00:58.890 --> 00:01:04.379
+here into multiple checks into one condition like these options here.
+
+00:01:04.379 --> 00:01:07.329
+They're all correct as far as Java is concerned,
+
+00:01:07.329 --> 00:01:11.965
+but only one of them would actually make our loop work the way we want it to.
+
+00:01:11.965 --> 00:01:15.890
+So which one of them do you think this loop condition should be?
+
+00:01:15.890 --> 00:01:18.724
+Remember that now, we want the loop to keep going
+
+00:01:18.724 --> 00:01:21.979
+as long as the three dice don't all match.
+
+00:01:21.980 --> 00:01:23.120
+Or in other words,
+
+00:01:23.120 --> 00:01:25.070
+once all three dice match,
+
+00:01:25.069 --> 00:01:27.409
+the loop should not go any longer.
+

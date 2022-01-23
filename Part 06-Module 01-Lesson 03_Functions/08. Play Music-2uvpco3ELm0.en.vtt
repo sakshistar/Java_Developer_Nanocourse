@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.475
+Instead of programming in a karaoke machine,
+
+00:00:02.475 --> 00:00:06.585
+let's write code that let's you listen to the music you want on a music player.
+
+00:00:06.585 --> 00:00:11.324
+You'll define a function called playMusic that let's a user play or pause a song.
+
+00:00:11.324 --> 00:00:14.699
+This is like on a phone or music player where there's a play button.
+
+00:00:14.699 --> 00:00:16.410
+For a typical device,
+
+00:00:16.410 --> 00:00:18.765
+the music plays when the play button has been pressed
+
+00:00:18.765 --> 00:00:22.109
+and pauses when it hasn't been pressed or when it's been released.
+
+00:00:22.109 --> 00:00:24.780
+So let's say you have access to a boolean variable named
+
+00:00:24.780 --> 00:00:29.060
+playButton and this needs to be set equal to either true or false.
+
+00:00:29.059 --> 00:00:32.210
+It should be true when the play button is pressed and music is playing,
+
+00:00:32.210 --> 00:00:36.115
+and it should be false when the button is released and when the music is paused.
+
+00:00:36.115 --> 00:00:40.215
+And this variable will be declared outside of your playMusic function.
+
+00:00:40.215 --> 00:00:41.595
+So using this variable,
+
+00:00:41.594 --> 00:00:44.894
+write a function definition for playMusic, that'll print out,
+
+00:00:44.895 --> 00:00:47.730
+Music is playing, when play button is equal to true,
+
+00:00:47.729 --> 00:00:49.310
+and otherwise prints out,
+
+00:00:49.310 --> 00:00:52.000
+Music is paused, when play button equals false.
+

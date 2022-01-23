@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.279
+After success with printing photos,
+
+00:00:02.279 --> 00:00:05.490
+we've built a program that let's people share their photos online.
+
+00:00:05.490 --> 00:00:08.130
+And we've created a function that let's people interact with
+
+00:00:08.130 --> 00:00:12.750
+shared photos by commenting on and liking individual photos.
+
+00:00:12.750 --> 00:00:14.429
+This function likePhoto,
+
+00:00:14.429 --> 00:00:19.515
+takes in three parameters: an int that holds the current number of likes a photo has,
+
+00:00:19.515 --> 00:00:22.649
+a string that holds a person's comment and
+
+00:00:22.649 --> 00:00:26.445
+a boolean that will be true if a person likes a photo and false if they don't.
+
+00:00:26.445 --> 00:00:28.530
+It will then print out the comment as
+
+00:00:28.530 --> 00:00:33.060
+feedback and increase the number of likes if boolean like is true.
+
+00:00:33.060 --> 00:00:36.515
+Write down a valid function call for this function.
+
+00:00:36.515 --> 00:00:41.000
+Remember that this expects these three parameters to be provided in a function call.
+

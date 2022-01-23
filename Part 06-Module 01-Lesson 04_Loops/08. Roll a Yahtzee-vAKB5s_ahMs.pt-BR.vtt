@@ -1,0 +1,39 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.868
+Até agora, contamos
+de quantas jogadas precisamos
+
+00:00:02.901 --> 00:00:05.467
+para conseguir uma combinação
+usando 3 dados.
+
+00:00:05.501 --> 00:00:09.367
+Você pode modificar o código
+para jogar 5 dados em vez de 3,
+
+00:00:09.400 --> 00:00:13.167
+e contar quantas jogadas
+precisamos para combinar os 5?
+
+00:00:13.200 --> 00:00:15.634
+Ou seja, fazer um Yam?
+
+00:00:15.667 --> 00:00:19.801
+Lembrem-se, terão que declarar
+mais dois dados aqui,
+
+00:00:19.834 --> 00:00:22.934
+e também lançá-los de novo
+dentro do seu laço.
+
+00:00:22.968 --> 00:00:27.234
+Finalmente, lembrem-se de que devem
+mudar a condição do laço while
+
+00:00:27.267 --> 00:00:30.267
+para lidar com os 5 dados,
+não apenas 3.
+

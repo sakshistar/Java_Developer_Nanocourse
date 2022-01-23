@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.734
+Aqui está a resposta certa.
+
+00:00:01.767 --> 00:00:05.701
+A menor fronteira, o escopo C,
+é o escopo da variável weight.
+
+00:00:05.734 --> 00:00:08.501
+Ela foi declarada dentro
+do código do if,
+
+00:00:08.534 --> 00:00:10.200
+dentro destas chaves.
+
+00:00:10.234 --> 00:00:13.367
+Um par de chaves define
+a fronteira de um escopo.
+
+00:00:13.400 --> 00:00:16.234
+Como weight foi declarada
+dentro das chaves,
+
+00:00:16.267 --> 00:00:20.133
+só pode ser acessada dentro
+do código nesta fronteira.
+
+00:00:20.167 --> 00:00:22.434
+O escopo B é um pouco
+grande demais.
+
+00:00:22.467 --> 00:00:25.200
+Ele contém o if
+e sua condição de teste,
+
+00:00:25.234 --> 00:00:27.400
+que estão fora das chaves.
+
+00:00:27.434 --> 00:00:30.834
+Se tentarmos acessar weight
+na condição de teste,
+
+00:00:30.868 --> 00:00:32.334
+não vamos conseguir.
+
+00:00:32.367 --> 00:00:35.534
+Daria um erro, por estar
+fora do escopo da weight.
+
+00:00:35.567 --> 00:00:36.934
+O escopo A é o maior.
+
+00:00:36.968 --> 00:00:41.033
+É o programa inteiro. Inclui código
+que não pode acessar weight,
+
+00:00:41.067 --> 00:00:42.501
+assim como o escopo B.
+
+00:00:42.534 --> 00:00:45.501
+Está fora das chaves
+onde weight foi declarada,
+
+00:00:45.534 --> 00:00:47.200
+então está fora do escopo.
+
+00:00:47.234 --> 00:00:51.667
+Na verdade, A é o escopo
+da variável isRecyclable.
+
+00:00:51.701 --> 00:00:56.167
+Ela tem o maior escopo porque
+está fora de qualquer chave.
+
+00:00:56.200 --> 00:00:58.834
+Por isso, seu escopo
+é o programa inteiro.
+
+00:00:58.868 --> 00:01:02.267
+Pensem no escopo quando
+declararem e usarem variáveis.
+

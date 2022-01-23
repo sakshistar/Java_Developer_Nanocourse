@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.084
+Here's a function weatherInterpreter,
+
+00:00:02.084 --> 00:00:04.365
+that prints out a message when it's hot, or cold,
+
+00:00:04.365 --> 00:00:08.144
+or in between, depending on the value of the parameter temperature,
+
+00:00:08.144 --> 00:00:11.224
+which is an int variable in degree Celsius.
+
+00:00:11.224 --> 00:00:15.279
+It prints out a hot message when the temperature is above 30 degrees Celsius,
+
+00:00:15.279 --> 00:00:17.544
+which is about 85 degrees Fahrenheit.
+
+00:00:17.545 --> 00:00:20.845
+And a cold message from when it's below five degrees Celsius,
+
+00:00:20.844 --> 00:00:23.140
+which is about 40 degrees Fahrenheit.
+
+00:00:23.140 --> 00:00:28.144
+Otherwise, it considers this neutral weather and prints out not too hot, not too cold.
+
+00:00:28.144 --> 00:00:32.008
+What will this print out if we call weatherInterpreter with an argument value of
+
+00:00:32.008 --> 00:00:37.000
+four and what will it print out if we change the argument value to 32?
+

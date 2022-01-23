@@ -1,0 +1,16 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.915
+What should this loop condition become to print out the numbers 3 to 1?
+
+00:00:04.915 --> 00:00:09.570
+Should it be i &lt;= 3, i &gt;= 1,
+
+00:00:09.570 --> 00:00:14.504
+i &lt;=1, or i == 3?
+
+00:00:14.505 --> 00:00:16.080
+There's only one correct answer.
+

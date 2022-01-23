@@ -1,0 +1,65 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.601
+Imagine que estamos organizando
+uma coletiva de imprensa.
+
+00:00:03.634 --> 00:00:05.868
+Convidamos 10 jornalistas
+
+00:00:05.901 --> 00:00:08.601
+e quando vão fazer
+a primeira pergunta,
+
+00:00:08.634 --> 00:00:10.901
+queremos escolher um
+aleatoriamente.
+
+00:00:10.934 --> 00:00:14.167
+Para a escolha aleatória
+ser o mais justa possível,
+
+00:00:14.200 --> 00:00:17.434
+decidimos escrever um programa
+em Java para ajudar.
+
+00:00:17.467 --> 00:00:20.167
+Mas a primeira coisa
+que precisamos decidir
+
+00:00:20.200 --> 00:00:22.601
+é os tipos de variáveis
+que vamos usar
+
+00:00:22.634 --> 00:00:25.400
+para guardar os nomes
+das redes de notícias.
+
+00:00:25.434 --> 00:00:28.601
+Pensamos em strings,
+mas são 10 delas.
+
+00:00:28.634 --> 00:00:31.834
+Vamos declarar
+10 strings diferentes?
+
+00:00:31.868 --> 00:00:33.434
+Nós podemos,
+
+00:00:33.467 --> 00:00:37.167
+mas nosso código não só vai ficar
+feio e longo demais,
+
+00:00:37.200 --> 00:00:41.234
+mas como escolheríamos
+uma delas aleatoriamente?
+
+00:00:41.267 --> 00:00:45.234
+Que bom que o Java tem
+um tipo de variável chamado vetor.
+
+00:00:45.267 --> 00:00:47.000
+Vamos ver como funcionam.
+

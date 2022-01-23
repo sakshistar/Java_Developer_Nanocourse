@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.767
+Então, a solução correta é:
+i é maior ou igual a 1,
+
+00:00:04.801 --> 00:00:07.801
+porque queremos
+que este laço continue
+
+00:00:07.834 --> 00:00:11.634
+enquanto i for
+maior ou igual a 1.
+
+00:00:11.667 --> 00:00:14.234
+Lembrem-se que i,
+agora, começa por 3,
+
+00:00:14.267 --> 00:00:16.934
+e está diminuindo
+sucessivamente.
+
+00:00:16.968 --> 00:00:19.400
+Para o nosso laço
+continuar rodando,
+
+00:00:19.434 --> 00:00:24.767
+queremos que nossa condição seja
+enquanto i for maior ou igual a 1.
+
+00:00:24.801 --> 00:00:28.834
+Porque começa em 3,
+3 é maior ou igual a 1,
+
+00:00:28.868 --> 00:00:32.334
+então escrevemos 3,
+e será diminuído.
+
+00:00:32.367 --> 00:00:34.601
+2 ainda é maior
+ou igual a 1,
+
+00:00:34.634 --> 00:00:38.167
+então escrevemos 2,
+e será diminuído,
+
+00:00:38.200 --> 00:00:41.567
+e 1 ainda será maior ou igual a 1,
+escrevemos 1,
+
+00:00:41.601 --> 00:00:46.501
+e será diminuído,
+e vai acabar em 0.
+
+00:00:46.534 --> 00:00:50.834
+Nossa condição deverá ser:
+enquanto i for maior ou igual a 1,
+
+00:00:50.868 --> 00:00:52.067
+continue rodando.
+
+00:00:52.100 --> 00:00:56.501
+Quando não for mais,
+devemos parar.
+

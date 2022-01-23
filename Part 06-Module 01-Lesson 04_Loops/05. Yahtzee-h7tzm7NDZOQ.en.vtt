@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:05.690 --> 00:00:08.009
+Hey, what are you up to?
+
+00:00:08.009 --> 00:00:11.369
+I'm just trying to roll a Yahtzee.
+
+00:00:11.369 --> 00:00:11.724
+What's a Yahtzee?
+
+00:00:11.724 --> 00:00:14.154
+Well, Yahtzee is this game where you roll these dice,
+
+00:00:14.154 --> 00:00:16.899
+five dice, and you try to get them all to match.
+
+00:00:16.899 --> 00:00:19.489
+Okay, so like if I rolled all sixes.
+
+00:00:19.489 --> 00:00:21.159
+Well, not necessarily sixes.
+
+00:00:21.160 --> 00:00:24.059
+As long as they all match a single number, then that's a Yahtzee.
+
+00:00:24.059 --> 00:00:26.229
+Okay, but why?
+
+00:00:26.230 --> 00:00:28.030
+I'm just trying to count how many times
+
+00:00:28.030 --> 00:00:31.010
+I actually need to roll the dice to get a Yahtzee.
+
+00:00:31.010 --> 00:00:33.510
+And I'm also waiting for my computer to reboot.
+
+00:00:33.509 --> 00:00:35.460
+Okay, well, I can help you out.
+
+00:00:35.460 --> 00:00:37.990
+Thanks.
+
+00:00:48.219 --> 00:00:51.954
+This is taking forever.
+
+00:00:51.954 --> 00:00:53.475
+I know, right?
+
+00:00:53.475 --> 00:00:57.274
+The odds are actually one to 1,296.
+
+00:00:57.274 --> 00:00:59.699
+So, mathematically speaking, we probably need to
+
+00:00:59.700 --> 00:01:02.250
+keep rolling for like a thousand times to get a Yahtzee.
+
+00:01:02.250 --> 00:01:05.814
+That's a lot. We can always use a Java program to help us.
+
+00:01:05.814 --> 00:01:09.450
+I've actually just written a function that simulates rolling dice. You should use that.
+
+00:01:09.450 --> 00:01:10.730
+Yeah, that's a good idea.
+
+00:01:10.730 --> 00:01:13.200
+Why don't we use the while loops that we've just learned to simulate
+
+00:01:13.200 --> 00:01:16.969
+this experiment and see how many rolls we actually need to get a Yahtzee?
+
+00:01:16.969 --> 00:01:18.019
+Sounds like a plan.
+

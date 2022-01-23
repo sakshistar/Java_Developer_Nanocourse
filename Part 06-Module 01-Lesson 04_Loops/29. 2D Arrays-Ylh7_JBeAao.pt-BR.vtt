@@ -1,0 +1,214 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.801
+Já vimos antes como calcular
+a média de um vetor de doubles,
+
+00:00:03.834 --> 00:00:05.901
+a temperatura média,
+por exemplo.
+
+00:00:05.934 --> 00:00:08.400
+Digamos que queremos
+escrever um código
+
+00:00:08.434 --> 00:00:12.334
+para fazer uma análise de notas
+em uma tabela de notas assim.
+
+00:00:12.367 --> 00:00:16.901
+Temos as notas de 4 matérias
+de 5 alunos.
+
+00:00:16.934 --> 00:00:20.767
+Por isso temos uma tabela
+de 4 por 5 itens.
+
+00:00:20.801 --> 00:00:22.734
+São 20 notas.
+
+00:00:22.767 --> 00:00:26.367
+Podemos colocar todas
+em um vetor de inteiros
+
+00:00:26.400 --> 00:00:27.968
+que tenha 20 inteiros.
+
+00:00:28.000 --> 00:00:32.234
+Mas isso não vai ajudar com muitas
+das análises que queremos fazer.
+
+00:00:32.267 --> 00:00:34.801
+Se quisermos a nota média
+de cada aluno,
+
+00:00:34.834 --> 00:00:38.968
+temos que calcular a média
+para cada um individualmente,
+
+00:00:39.000 --> 00:00:43.200
+mas se todos os inteiros
+estivessem em um só vetor,
+
+00:00:43.234 --> 00:00:46.501
+fica mais complicado ligar
+cada número do vetor
+
+00:00:46.534 --> 00:00:50.067
+com um aluno específico
+em uma matéria específica.
+
+00:00:50.100 --> 00:00:54.267
+Uma solução é guardar as notas
+em vários vetores.
+
+00:00:54.300 --> 00:00:57.033
+Podemos ter um vetor
+para cada aluno
+
+00:00:57.067 --> 00:00:59.734
+guardando as notas
+de todas as matérias.
+
+00:00:59.767 --> 00:01:04.701
+Podemos usar laços, por exemplo,
+para calcular a média do aluno.
+
+00:01:04.734 --> 00:01:07.968
+Mas e se quisermos a média
+de cada matéria,
+
+00:01:08.000 --> 00:01:11.267
+para ver como os alunos
+estão indo em Biologia?
+
+00:01:11.300 --> 00:01:14.300
+Precisamos acessar
+um item individual
+
+00:01:14.334 --> 00:01:16.234
+em todos os vetores.
+
+00:01:16.267 --> 00:01:18.734
+Laços não vão ajudar
+com isso.
+
+00:01:18.767 --> 00:01:22.400
+Em vez disso, podemos criar
+um vetor para cada matéria,
+
+00:01:22.434 --> 00:01:23.801
+em vez de cada aluno.
+
+00:01:23.834 --> 00:01:27.834
+Assim podemos calcular a média
+de cada matéria individualmente,
+
+00:01:27.868 --> 00:01:31.734
+mas não podemos mais fazer um laço
+pelas notas de cada aluno.
+
+00:01:31.767 --> 00:01:36.067
+Por isso, quando temos dados
+que se parecem com uma tabela,
+
+00:01:36.100 --> 00:01:39.567
+o Java oferece
+vetores bidimensionais.
+
+00:01:39.601 --> 00:01:44.501
+Pense em um vetor bidimensional
+como um vetor de vetores.
+
+00:01:44.534 --> 00:01:50.200
+Imagine que cada linha da tabela
+é ela mesma um vetor de inteiros.
+
+00:01:50.234 --> 00:01:55.100
+Podemos juntar todas elas
+em um vetor dos vetores.
+
+00:01:55.133 --> 00:01:59.734
+Cada vetor individual
+tem um índice de 0 a 3
+
+00:01:59.767 --> 00:02:04.300
+e cada item dentro dos vetores
+também é indexado.
+
+00:02:04.334 --> 00:02:06.968
+Para declarar
+um vetor bidimensional,
+
+00:02:07.000 --> 00:02:10.033
+você digita o tipo de dados
+que ele vai guardar,
+
+00:02:10.067 --> 00:02:12.400
+e em seguida
+dois pares de colchetes,
+
+00:02:12.434 --> 00:02:13.601
+e o nome do vetor.
+
+00:02:13.634 --> 00:02:17.767
+É porque estamos criando
+um vetor de vetores de inteiros,
+
+00:02:17.801 --> 00:02:19.067
+chamado grades.
+
+00:02:19.100 --> 00:02:23.267
+Vetores bidimensionais servem
+para acessar qualquer item da tabela
+
+00:02:23.300 --> 00:02:25.434
+usando os dois índices.
+
+00:02:25.467 --> 00:02:29.067
+Se quisermos saber a nota
+do Tim em Biologia,
+
+00:02:29.100 --> 00:02:32.534
+podemos escrever grades[2][1].
+
+00:02:32.567 --> 00:02:36.701
+O 2 se refere ao índice do vetor
+que nos interessa,
+
+00:02:36.734 --> 00:02:38.567
+que no caso é Biologia,
+
+00:02:38.601 --> 00:02:44.767
+e o 1 no segundo colchete se refere
+ao índice do item neste vetor.
+
+00:02:44.801 --> 00:02:49.501
+Então grades[2][1]
+tem o valor 75.
+
+00:02:49.534 --> 00:02:53.434
+Se quisermos saber
+a nota do Sam em Inglês,
+
+00:02:53.467 --> 00:02:56.734
+estaria em grades[1][3],
+
+00:02:56.767 --> 00:03:01.834
+porque Inglês tem índice 1
+e o Sam tem índice 3.
+
+00:03:01.868 --> 00:03:05.701
+Sempre começamos com o índice
+do próprio vetor
+
+00:03:05.734 --> 00:03:11.801
+e depois o segundo colchete
+tem o índice do item no vetor.
+
+00:03:11.834 --> 00:03:16.400
+O que devemos usar para descobrir
+a nota da Sandra em Arte?
+

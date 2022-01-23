@@ -1,0 +1,162 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.934
+Agora,
+no nosso carro autônomo,
+
+00:00:01.968 --> 00:00:05.000
+temos um carro que dirige
+ao ver um sinal verde.
+
+00:00:05.033 --> 00:00:07.801
+Mas não faz nada específico
+quando não o vê,
+
+00:00:07.834 --> 00:00:10.334
+quando o amarelo
+ou o vermelho acendem.
+
+00:00:10.367 --> 00:00:12.834
+E, por segurança,
+queremos que ele pare
+
+00:00:12.868 --> 00:00:15.667
+quando a condição isLightGreen
+for falsa.
+
+00:00:15.701 --> 00:00:19.801
+O Java facilita isto
+com uma instrução else.
+
+00:00:19.834 --> 00:00:23.167
+Uma instrução else só pode vir
+após uma instrução if.
+
+00:00:23.200 --> 00:00:27.067
+Ela nos permite fornecer
+um conjunto alternativo de instruções
+
+00:00:27.100 --> 00:00:30.000
+para quando a condição do if
+não for atendida.
+
+00:00:30.033 --> 00:00:32.901
+Usar isso junto
+chama-se instrução if else.
+
+00:00:32.934 --> 00:00:37.067
+Ela dá dois possíveis
+caminhos de decisão para o computador.
+
+00:00:37.100 --> 00:00:42.000
+Esta instrução é comparada
+a como os humanos tomam decisões.
+
+00:00:42.033 --> 00:00:45.501
+Neste caso, posso descrever
+a decisão de dirigir assim:
+
+00:00:45.534 --> 00:00:49.534
+Se o sinal estiver verde, eu ando,
+se não, eu paro.
+
+00:00:49.567 --> 00:00:53.868
+Uma instrução else é o código
+equivalente a dizer "se não".
+
+00:00:53.901 --> 00:00:57.467
+Baseado no valor
+da variável booleana isLightGreen,
+
+00:00:57.501 --> 00:01:01.467
+o computador tomará uma decisão
+para executar o código do if
+
+00:01:01.501 --> 00:01:03.701
+quando isLightGreen
+for verdadeiro,
+
+00:01:03.734 --> 00:01:06.968
+ou o do else,
+quando isLight Green for falso.
+
+00:01:07.000 --> 00:01:10.367
+Ele nunca executará
+os dois blocos de códigos.
+
+00:01:10.400 --> 00:01:13.234
+Vejamos como escrever
+uma instrução else.
+
+00:01:13.267 --> 00:01:18.100
+Aqui está ela. Em vez de não ter
+nenhum código após a instrução if,
+
+00:01:18.133 --> 00:01:22.334
+apenas escrevemos else após o fim
+da última chave do if.
+
+00:01:22.367 --> 00:01:26.667
+E o código que queremos executar
+no else será cercado por chaves.
+
+00:01:26.701 --> 00:01:30.934
+Note que a instrução else não tem
+condição de teste associada a ela
+
+00:01:30.968 --> 00:01:32.467
+como a instrução if.
+
+00:01:32.501 --> 00:01:36.601
+Agora, se o sinal não estiver verde,
+queremos que o carro pare.
+
+00:01:36.634 --> 00:01:40.234
+Imprimimos a ação "Stop"
+no else.
+
+00:01:40.267 --> 00:01:44.133
+Vamos tentar este código
+com valores booleanos designados.
+
+00:01:44.167 --> 00:01:48.667
+Se isLightGreen for verdadeiro,
+a condição de teste if será satisfeita.
+
+00:01:48.701 --> 00:01:50.767
+E nosso código
+imprimirá "Drive".
+
+00:01:50.801 --> 00:01:54.133
+Se for falso, isto não vai
+passar na condição do if,
+
+00:01:54.167 --> 00:01:57.133
+e irá para o bloco de código
+da instrução else.
+
+00:01:57.167 --> 00:01:58.701
+E imprimirá "Stop".
+
+00:01:58.734 --> 00:02:03.567
+De novo, só um desses blocos de código
+será executado ao rodarmos o código.
+
+00:02:03.601 --> 00:02:07.000
+Ou o código do if,
+ou o do else.
+
+00:02:07.033 --> 00:02:10.767
+Estão pensando: "E se o sinal
+estiver amarelo ou piscando?"
+
+00:02:10.801 --> 00:02:13.968
+Precisaremos de mais
+que dois caminhos de decisão.
+
+00:02:14.000 --> 00:02:16.767
+Logo veremos
+como construir mais caminhos.
+

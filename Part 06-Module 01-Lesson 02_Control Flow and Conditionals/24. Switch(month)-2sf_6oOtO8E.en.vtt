@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.898
+Here's the solution. For our last case, case 12,
+
+00:00:03.898 --> 00:00:08.290
+we write it just like any other case and set our month string to December.
+
+00:00:08.289 --> 00:00:10.244
+Then for our default case,
+
+00:00:10.244 --> 00:00:11.579
+we just write default,
+
+00:00:11.580 --> 00:00:16.134
+a colon, and then set our monthString to equal Invalid month.
+
+00:00:16.135 --> 00:00:21.030
+And this handles any case where a month doesn't fall between the values 1 and 12.
+
+00:00:21.030 --> 00:00:24.450
+So this handles both of the cases we described before. Well done.
+

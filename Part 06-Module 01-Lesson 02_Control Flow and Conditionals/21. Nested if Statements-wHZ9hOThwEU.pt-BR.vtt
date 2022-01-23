@@ -1,0 +1,206 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.701
+Digamos que uns amigos
+venham ver um filme,
+
+00:00:02.734 --> 00:00:07.367
+e você quer escrever um programa que
+escolha um filme que agrade a todos.
+
+00:00:07.400 --> 00:00:12.234
+Você só gosta dos de ação,
+mas o amigo 1 gosta dos românticos,
+
+00:00:12.267 --> 00:00:16.601
+e o amigo 2 só gosta de comédias
+ou dos de terror.
+
+00:00:16.634 --> 00:00:18.767
+Dadas essas
+4 variáveis booleanas,
+
+00:00:18.801 --> 00:00:23.033
+que armazenam se um filme inclui
+ação, romance, horror ou comédia,
+
+00:00:23.067 --> 00:00:25.834
+todas verdadeiras, se sim,
+e falsas, se não,
+
+00:00:25.868 --> 00:00:30.434
+que instrução if será correta para
+escolher um filme que agrade a todos?
+
+00:00:30.467 --> 00:00:34.868
+Devemos escrever uma condição de teste
+que envolva as 3 preferências.
+
+00:00:34.901 --> 00:00:39.067
+A primeira é ação,
+a segunda, romance
+
+00:00:39.100 --> 00:00:42.834
+e a terceira,
+ou comédia ou terror.
+
+00:00:42.868 --> 00:00:46.234
+E podemos combiná-las todas
+em uma condição de teste,
+
+00:00:46.267 --> 00:00:48.400
+usando operadores lógicos.
+
+00:00:48.434 --> 00:00:52.100
+Separando as 3
+com operadores AND,
+
+00:00:52.133 --> 00:00:57.100
+todas devem ser verdadeiras
+para a condição de teste também ser.
+
+00:00:57.133 --> 00:01:01.067
+Para a 3ª preferência,
+o amigo quer comédia ou terror.
+
+00:01:01.100 --> 00:01:04.901
+Se uma dessas for verdadeira,
+toda a combinação também será.
+
+00:01:04.934 --> 00:01:09.167
+Mas imagine pôr outro amigo na lista,
+com preferências complicadas.
+
+00:01:09.200 --> 00:01:12.934
+Os testes lógicos pode ficar longos,
+com muitos parênteses,
+
+00:01:12.968 --> 00:01:14.467
+e difíceis de entender.
+
+00:01:14.501 --> 00:01:18.634
+Às vezes, os programadores preferem
+usar instruções if aninhadas.
+
+00:01:18.667 --> 00:01:22.501
+Elas são instruções if
+dentro de uma instrução if.
+
+00:01:22.534 --> 00:01:27.133
+Permitem combinar várias condições
+de teste, como um operador AND.
+
+00:01:27.167 --> 00:01:32.000
+Nossa longa instrução if pode ser
+escrita como um if dentro de outro if.
+
+00:01:32.033 --> 00:01:35.834
+O if de fora tem sua chave
+em volta do if de dentro.
+
+00:01:35.868 --> 00:01:40.334
+E o if aninhado só contém este
+bloco de código dentro da sua chave.
+
+00:01:40.367 --> 00:01:43.400
+E este código executa
+a mesma checagem de antes.
+
+00:01:43.434 --> 00:01:47.501
+O if de fora checa se um filme
+inclui ação e romance,
+
+00:01:47.534 --> 00:01:52.200
+e o de dentro checa a 3ª preferência:
+se há comédia ou terror.
+
+00:01:52.234 --> 00:01:56.801
+O if aninhado nos permitiu quebrar
+uma condição de teste longa
+
+00:01:56.834 --> 00:02:02.133
+e adicionar código que execute
+em cada instrução if, separadamente.
+
+00:02:02.634 --> 00:02:07.133
+Com estes valores, olhamos o código
+de tomada de decisão linha a linha.
+
+00:02:07.167 --> 00:02:10.033
+Vemos que ação e romance
+são verdadeiros.
+
+00:02:10.067 --> 00:02:14.467
+Combinados por um operador AND,
+toda essa expressão também será.
+
+00:02:14.501 --> 00:02:17.701
+Entramos no código
+no if de fora e imprimimos:
+
+00:02:17.734 --> 00:02:20.434
+"Este filme
+contém ação e romance."
+
+00:02:20.467 --> 00:02:23.267
+A próxima linha
+é a instrução if aninhada,
+
+00:02:23.300 --> 00:02:26.667
+que checa se comédia ou terror
+são verdadeiros.
+
+00:02:26.701 --> 00:02:30.567
+Como ambos são falsos,
+esta expressão também será.
+
+00:02:30.601 --> 00:02:33.501
+Pulamos o código
+do if de dentro
+
+00:02:33.534 --> 00:02:37.767
+e só imprimimos:
+"Este filme inclui ação e romance."
+
+00:02:37.801 --> 00:02:41.467
+Agora mudemos a variável comédia
+para que seja verdadeira.
+
+00:02:41.501 --> 00:02:45.033
+Ainda entramos no primeiro
+if de fora e imprimimos:
+
+00:02:45.067 --> 00:02:47.601
+"Este filme
+inclui ação e romance."
+
+00:02:47.634 --> 00:02:51.567
+Então o if de dentro checa
+se comédia ou terror é verdadeiro.
+
+00:02:51.601 --> 00:02:55.667
+Desta vez, comédia é verdadeiro,
+então entramos no if de dentro,
+
+00:02:55.701 --> 00:02:59.501
+e também imprimimos: "Este também
+inclui comédia ou terror."
+
+00:02:59.534 --> 00:03:01.934
+Nossa saída será
+duas linhas de texto.
+
+00:03:01.968 --> 00:03:04.934
+Se você tiver
+uma condição de teste complicada
+
+00:03:04.968 --> 00:03:07.033
+ou se só quiser
+separar o código,
+
+00:03:07.067 --> 00:03:09.467
+ifs aninhados são
+uma ferramenta útil.
+

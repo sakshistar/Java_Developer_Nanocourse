@@ -1,0 +1,113 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.868
+Esses são
+os valores corretos.
+
+00:00:01.901 --> 00:00:04.033
+A primeira expressão
+é verdadeira,
+
+00:00:04.067 --> 00:00:07.167
+pois todas essas condições
+são separadas por ORS.
+
+00:00:07.200 --> 00:00:11.234
+Só uma precisa ser verdadeira
+para toda a combinação ser.
+
+00:00:11.267 --> 00:00:14.634
+E a primeira condição,
+'a' == 'a', é verdadeira.
+
+00:00:14.667 --> 00:00:16.834
+A próxima expressão
+é falsa.
+
+00:00:16.868 --> 00:00:20.100
+Com um operador AND,
+suas duas condições combinadas
+
+00:00:20.133 --> 00:00:23.601
+devem ser verdadeiras,
+para que toda a combinação seja.
+
+00:00:23.634 --> 00:00:26.434
+E 3 &gt; 5 é falso.
+
+00:00:26.467 --> 00:00:29.300
+Toda essa expressão
+também é falsa.
+
+00:00:29.334 --> 00:00:31.601
+A 3ª expressão
+é meio complicada.
+
+00:00:31.634 --> 00:00:34.601
+Primeiro o Java vê
+o que está entre parênteses.
+
+00:00:34.634 --> 00:00:37.200
+Duas comparações
+combinadas com um OR.
+
+00:00:37.234 --> 00:00:40.133
+Significa que uma delas
+tem que ser verdadeira
+
+00:00:40.167 --> 00:00:42.367
+para a combinação
+também ser.
+
+00:00:42.400 --> 00:00:45.133
+Sabemos que 3 &gt; 5 é falso.
+
+00:00:45.167 --> 00:00:47.701
+Mas 2 &lt; 10 é verdadeiro.
+
+00:00:47.734 --> 00:00:50.968
+Ou seja, esta combinação OR
+também é verdadeira.
+
+00:00:51.000 --> 00:00:54.100
+Então este valor é combinado
+com outro verdadeiro
+
+00:00:54.133 --> 00:00:57.534
+com um operador AND,
+e uma combinação AND é verdadeira
+
+00:00:57.567 --> 00:00:59.901
+quando os dois lados
+são verdadeiros.
+
+00:00:59.934 --> 00:01:02.133
+Toda esta expressão
+é verdadeira.
+
+00:01:02.167 --> 00:01:06.200
+A última expressão checa se
+NOT(10 &gt; 1)
+
+00:01:06.234 --> 00:01:09.000
+Sabemos que 10 é maior que 1
+é verdadeiro.
+
+00:01:09.033 --> 00:01:11.801
+E o operador NOT
+nega este valor.
+
+00:01:11.834 --> 00:01:15.334
+Tudo isto se torna
+não verdadeiro, ou seja, falso.
+
+00:01:15.367 --> 00:01:19.133
+Operadores lógicos permitem
+combinar condições de teste
+
+00:01:19.167 --> 00:01:21.367
+e negar valores
+quando você quiser.
+

@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.464
+Imagine we're organizing this press conference.
+
+00:00:03.464 --> 00:00:08.789
+We've invited 10 news reporters and when it's time for them to ask the first question,
+
+00:00:08.789 --> 00:00:11.250
+we want to randomly pick one of them.
+
+00:00:11.250 --> 00:00:14.370
+To make the random selection as fair as possible,
+
+00:00:14.369 --> 00:00:17.679
+we decided to build a Java program to help us.
+
+00:00:17.679 --> 00:00:20.699
+However, the first thing we need to decide is what
+
+00:00:20.699 --> 00:00:25.169
+variable types should we use to keep track of the news outlet names.
+
+00:00:25.170 --> 00:00:26.975
+Strings come to mind,
+
+00:00:26.975 --> 00:00:28.830
+but there are 10 of them.
+
+00:00:28.829 --> 00:00:32.009
+Are we going to declare 10 different strings?
+
+00:00:32.009 --> 00:00:37.254
+Well, we can, but not only will our code get ugly and too long,
+
+00:00:37.255 --> 00:00:41.219
+but also, how are we going to randomly pick one of them?
+
+00:00:41.219 --> 00:00:45.289
+Luckily, Java has this cool datatype called arrays.
+
+00:00:45.289 --> 00:00:47.079
+Let's have a look how they work.
+

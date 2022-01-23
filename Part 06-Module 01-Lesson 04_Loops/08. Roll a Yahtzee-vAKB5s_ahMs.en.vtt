@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.490
+So far, we've managed to count how many roles we need to get a match using three dice.
+
+00:00:05.490 --> 00:00:08.699
+Can you modify the code to roll five dice instead of
+
+00:00:08.699 --> 00:00:13.064
+three and count how many rolls we need to get those five dice to match,
+
+00:00:13.064 --> 00:00:15.664
+or other words, a yahtzee?
+
+00:00:15.664 --> 00:00:19.859
+Remember, you will need to declare two more dice here.
+
+00:00:19.859 --> 00:00:23.184
+And also remember to re-roll them inside your loop.
+
+00:00:23.184 --> 00:00:25.589
+And finally, remember that you need to change
+
+00:00:25.589 --> 00:00:30.000
+the while loop condition to handle all five dice, not just three.
+

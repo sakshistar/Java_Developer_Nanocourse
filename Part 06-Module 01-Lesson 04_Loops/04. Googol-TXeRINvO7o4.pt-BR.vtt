@@ -1,0 +1,150 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.400
+Sabiam que o nome Google é
+uma brincadeira com a palavra googol,
+
+00:00:04.434 --> 00:00:07.734
+um termo da matemática
+para um número imenso
+
+00:00:07.767 --> 00:00:11.968
+igual a 1,
+seguido por 100 zeros?
+
+00:00:12.000 --> 00:00:17.834
+O Google gostou muito, pois parecia
+o número de páginas na Internet.
+
+00:00:17.868 --> 00:00:20.834
+Na verdade, googol é tão enorme
+
+00:00:20.868 --> 00:00:23.767
+que não há no Java
+tipos de dados numéricos
+
+00:00:23.801 --> 00:00:25.567
+que possam armazená-lo.
+
+00:00:25.601 --> 00:00:30.534
+Mesmo o tipo long só armazena
+um número até 2 elevado a 63,
+
+00:00:30.567 --> 00:00:34.267
+que é um número
+de 19 dígitos.
+
+00:00:34.300 --> 00:00:40.467
+Há bem menos elétrons no universo
+do que um único googol.
+
+00:00:40.501 --> 00:00:43.133
+Por outro lado,
+podemos armazenar o número
+
+00:00:43.167 --> 00:00:45.033
+como uma string
+de caracteres.
+
+00:00:45.067 --> 00:00:48.434
+Como é feito apenas
+de 101 caracteres
+
+00:00:48.467 --> 00:00:51.367
+pode caber
+numa string no Java.
+
+00:00:51.400 --> 00:00:54.434
+Não podemos fazer
+operações matemáticas com ele,
+
+00:00:54.467 --> 00:00:56.334
+pois é armazenado
+numa string,
+
+00:00:56.367 --> 00:00:59.200
+mas podemos usar a string
+para outras coisas,
+
+00:00:59.234 --> 00:01:01.534
+como imprimir, por exemplo.
+
+00:01:01.567 --> 00:01:06.968
+Entretanto, digitar
+101 caracteres é meio maçante.
+
+00:01:07.000 --> 00:01:09.834
+Então, por que não usamos
+um laço while
+
+00:01:09.868 --> 00:01:12.133
+para construir
+essa string para nós?
+
+00:01:12.167 --> 00:01:15.801
+Começamos inicializando
+essa string com apenas "1".
+
+00:01:15.834 --> 00:01:19.834
+Depois, podemos concatenar
+a string "0" a ela
+
+00:01:19.868 --> 00:01:21.901
+dentro de um laço while.
+
+00:01:21.934 --> 00:01:24.901
+O laço seguiria checando
+se o tamanho da string
+
+00:01:24.934 --> 00:01:29.567
+ainda é menor que 101,
+e continuaria a concatenar outro 0,
+
+00:01:29.601 --> 00:01:32.834
+até o tamanho chegar a 101.
+
+00:01:32.868 --> 00:01:35.767
+Devemos acompanhar
+o tamanho da string.
+
+00:01:35.801 --> 00:01:39.400
+Para isso, declaramos
+e inicializamos uma variável len,
+
+00:01:39.434 --> 00:01:44.767
+que é um número inteiro, e damos
+a ela o valor de googol.length.
+
+00:01:44.801 --> 00:01:48.400
+A função length
+calcula o tamanho dessa string,
+
+00:01:48.434 --> 00:01:51.801
+a devolve e a armazena
+na variável len.
+
+00:01:51.834 --> 00:01:54.801
+Então também atualizamos
+essa variável no laço,
+
+00:01:54.834 --> 00:01:58.767
+para que sempre acompanhe
+o tamanho da string googol.
+
+00:01:58.801 --> 00:02:01.767
+Qual acham que seria
+a condição while?
+
+00:02:01.801 --> 00:02:05.634
+Lembrem-se, devemos seguir
+iterando neste laço
+
+00:02:05.667 --> 00:02:10.467
+enquanto googol ainda for menor
+que o tamanho que deveria ter,
+
+00:02:10.501 --> 00:02:12.000
+que é 101.
+

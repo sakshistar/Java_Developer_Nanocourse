@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.609
+Say we want to add smart windshield wipers to
+
+00:00:02.609 --> 00:00:06.490
+our self-driving car and have them activate when it's raining outside.
+
+00:00:06.490 --> 00:00:08.669
+Given the boolean variable isRaining,
+
+00:00:08.669 --> 00:00:11.870
+which will be true when it rains and false when it isn't raining,
+
+00:00:11.869 --> 00:00:14.264
+write an if statement that will print the sentence,
+
+00:00:14.265 --> 00:00:16.734
+windshield wipers on, when it is raining,
+
+00:00:16.734 --> 00:00:19.000
+and it will print out nothing otherwise.
+

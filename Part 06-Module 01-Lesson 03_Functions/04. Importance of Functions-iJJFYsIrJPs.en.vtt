@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.520
+We know that functions are useful for grouping code together,
+
+00:00:03.520 --> 00:00:07.439
+and that we can execute that code just by referring to the function name.
+
+00:00:07.440 --> 00:00:10.435
+And functions only have to be written one time,
+
+00:00:10.435 --> 00:00:14.250
+so no copy and pasting lots of code when you want to repeat it.
+
+00:00:14.250 --> 00:00:16.125
+For the following scenarios,
+
+00:00:16.125 --> 00:00:18.809
+check which ones would be helped if you organized your code
+
+00:00:18.809 --> 00:00:21.974
+into functions instead of leaving them as blocks of code.
+
+00:00:21.975 --> 00:00:26.115
+In scenario one, you've written a block of code that adds two numbers together,
+
+00:00:26.114 --> 00:00:30.384
+and you want to use it repeatedly to calculate your expenses over some time.
+
+00:00:30.385 --> 00:00:31.920
+In the second scenario,
+
+00:00:31.920 --> 00:00:35.054
+a friend wants to share their restaurant rating code with you.
+
+00:00:35.054 --> 00:00:38.835
+And in the third, you've written a block of code that sets a wake-up alarm,
+
+00:00:38.835 --> 00:00:41.115
+and you use it in all your clocks at home.
+
+00:00:41.115 --> 00:00:45.135
+But you made a mistake inside the code and need to fix it for all the clocks.
+
+00:00:45.134 --> 00:00:46.890
+So for all these scenarios,
+
+00:00:46.890 --> 00:00:50.000
+check any one of them that could be helped by using functions.
+

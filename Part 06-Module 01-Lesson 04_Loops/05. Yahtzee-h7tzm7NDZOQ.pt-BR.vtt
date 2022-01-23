@@ -1,0 +1,98 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:06.400 --> 00:00:07.968
+O que você está fazendo?
+
+00:00:08.000 --> 00:00:10.234
+Estou tentando
+conseguir um Yam.
+
+00:00:10.267 --> 00:00:11.467
+O que é um Yam?
+
+00:00:11.501 --> 00:00:14.434
+Yam é um jogo onde
+você rola 5 dados
+
+00:00:14.467 --> 00:00:17.033
+e tenta fazer com que
+sejam todos iguais.
+
+00:00:17.067 --> 00:00:19.501
+Como se todos forem 6.
+
+00:00:19.534 --> 00:00:21.100
+Não precisa ser 6.
+
+00:00:21.133 --> 00:00:23.934
+Se forem todos o mesmo número,
+é um Yam.
+
+00:00:23.968 --> 00:00:26.033
+Tudo bem.
+Mas por quê?
+
+00:00:26.067 --> 00:00:29.234
+Quero contar quantas vezes
+preciso lançar os dados
+
+00:00:29.267 --> 00:00:30.701
+para conseguir um Yam.
+
+00:00:30.734 --> 00:00:33.300
+Estou esperando
+meu computador reiniciar.
+
+00:00:33.334 --> 00:00:35.067
+Tudo bem.
+Eu posso ajudar.
+
+00:00:35.100 --> 00:00:36.100
+Obrigado.
+
+00:00:50.567 --> 00:00:51.934
+Está demorando muito!
+
+00:00:51.968 --> 00:00:53.234
+Não é mesmo?
+
+00:00:53.267 --> 00:00:57.133
+A probabilidade
+é de uma em 1296.
+
+00:00:57.167 --> 00:01:01.234
+Matematicamente, provavelmente
+precisamos lançar mais mil vezes
+
+00:01:01.267 --> 00:01:03.133
+-até sair um Yam.
+-São muitas!
+
+00:01:03.167 --> 00:01:05.300
+Podemos fazer
+um programa em Java.
+
+00:01:05.334 --> 00:01:08.501
+Escrevi uma função
+que simula lançamento de dados.
+
+00:01:08.534 --> 00:01:10.334
+-Você devia usar.
+-Boa ideia.
+
+00:01:10.367 --> 00:01:12.767
+Vamos usar o laço while
+que aprendemos
+
+00:01:12.801 --> 00:01:14.467
+para simular o experimento
+
+00:01:14.501 --> 00:01:17.000
+e contar os lançamentos
+até sair um Yam.
+
+00:01:17.033 --> 00:01:18.033
+É um bom plano.
+

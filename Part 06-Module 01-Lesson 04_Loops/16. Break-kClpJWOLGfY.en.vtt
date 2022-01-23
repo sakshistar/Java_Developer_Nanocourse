@@ -1,0 +1,274 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.849
+In many occasions, you won't want to end the loop before it's supposed to.
+
+00:00:04.849 --> 00:00:06.945
+Let's have a look at an example.
+
+00:00:06.945 --> 00:00:09.720
+Imagine you writing a program that controls
+
+00:00:09.720 --> 00:00:13.200
+your smartphone to search for Wi-Fi networks around you.
+
+00:00:13.199 --> 00:00:17.799
+You want to retry 10 times and then give up.
+
+00:00:17.800 --> 00:00:23.905
+So we build a loop that starts I from one all the way until 10 and increment by one.
+
+00:00:23.905 --> 00:00:28.385
+So this is going to repeat whatever's inside that loop exactly 10 times.
+
+00:00:28.385 --> 00:00:30.290
+Inside our for loop,
+
+00:00:30.289 --> 00:00:32.089
+we will be calling this function,
+
+00:00:32.090 --> 00:00:34.265
+which is called check Wi-Fi.
+
+00:00:34.265 --> 00:00:36.375
+Imagine that this function actually performs as
+
+00:00:36.375 --> 00:00:40.549
+a Wi-Fi search and returns true if it actually found one.
+
+00:00:40.549 --> 00:00:42.859
+So, we're going to assign the return value from
+
+00:00:42.859 --> 00:00:47.329
+this function into our Boolean here which we called Wi-Fi available.
+
+00:00:47.329 --> 00:00:49.864
+Which means that if this Boolean is true,
+
+00:00:49.865 --> 00:00:52.950
+then we've successfully found a Wi-Fi network.
+
+00:00:52.950 --> 00:00:57.425
+If it's false, we still haven't found anything, and we keep trying.
+
+00:00:57.424 --> 00:01:03.519
+Right after that, we just add this If condition and check if that variable is true.
+
+00:01:03.520 --> 00:01:08.655
+If it is, then we just simply print out Wi-Fi found and that's it.
+
+00:01:08.655 --> 00:01:09.950
+If it's not true,
+
+00:01:09.950 --> 00:01:15.775
+then we keep looping inside our for loop for the 10 times that we want it to.
+
+00:01:15.775 --> 00:01:21.475
+This we'll keep retrying 10 times until it either finds it or not.
+
+00:01:21.474 --> 00:01:23.208
+This looks really perfect,
+
+00:01:23.209 --> 00:01:26.799
+except for one weird scenario where say
+
+00:01:26.799 --> 00:01:31.554
+that we actually find a Wi-Fi network in the middle of our loop.
+
+00:01:31.555 --> 00:01:34.355
+Say it iteration number five.
+
+00:01:34.355 --> 00:01:36.920
+So, imagine that iteration number five,
+
+00:01:36.920 --> 00:01:40.109
+our check Wi-Fi happened to return true.
+
+00:01:40.109 --> 00:01:42.935
+Updating our variable here to become true.
+
+00:01:42.935 --> 00:01:47.385
+So we step inside our If condition here and we print out Wi-Fi found.
+
+00:01:47.385 --> 00:01:49.180
+We end our IF condition,
+
+00:01:49.180 --> 00:01:50.840
+and we're still inside the loop.
+
+00:01:50.840 --> 00:01:57.030
+So we go back up, we increment I making it six and six is still less than or equal to 10.
+
+00:01:57.030 --> 00:02:00.460
+So we go back in here again and we check Wi-Fi again,
+
+00:02:00.459 --> 00:02:02.259
+which if we're still in range,
+
+00:02:02.260 --> 00:02:06.850
+will also return true so that will actually print out Wi-Fi found again.
+
+00:02:06.849 --> 00:02:09.489
+In fact, it will keep printing out Wi-Fi
+
+00:02:09.490 --> 00:02:12.900
+for the remaining iterations in our for loop here.
+
+00:02:12.900 --> 00:02:15.939
+This doesn't seem exactly like what we expected to do.
+
+00:02:15.939 --> 00:02:20.710
+The way I would have imagined it is that once we find a Wi-Fi network,
+
+00:02:20.710 --> 00:02:23.409
+we want to end this search.
+
+00:02:23.409 --> 00:02:27.009
+Luckily, Java offers this keyword called break.
+
+00:02:27.009 --> 00:02:29.620
+If we simply add break keyword here,
+
+00:02:29.620 --> 00:02:35.289
+what we're saying is once we actually find a Wi-Fi and printout Wi-Fi found,
+
+00:02:35.289 --> 00:02:39.275
+break would actually exit this for loop entirely.
+
+00:02:39.275 --> 00:02:44.474
+So it will not continue looping no matter whether this condition is still true or not.
+
+00:02:44.474 --> 00:02:48.180
+This is very handy in so many situations that we are going to run into.
+
+00:02:48.180 --> 00:02:50.810
+In fact, it also works with while loops.
+
+00:02:50.810 --> 00:02:53.175
+Let's have a look at an example there.
+
+00:02:53.175 --> 00:02:55.480
+Imagine that you're playing this game where
+
+00:02:55.479 --> 00:02:59.349
+the goal is to roll a dice until you get a six.
+
+00:02:59.349 --> 00:03:03.114
+However, if you get a three then you lose.
+
+00:03:03.115 --> 00:03:08.740
+So we're going to implement a function that keeps rolling a dice until you get a six.
+
+00:03:08.740 --> 00:03:10.430
+If you get a six, then you win,
+
+00:03:10.430 --> 00:03:12.900
+but if you get a three, you lose.
+
+00:03:12.900 --> 00:03:19.034
+Our function would return a Boolean which is true if I won or false if I didn't win.
+
+00:03:19.034 --> 00:03:21.004
+We'll just call it roll a six.
+
+00:03:21.004 --> 00:03:22.944
+It doesn't take any parameters.
+
+00:03:22.944 --> 00:03:26.919
+Inside, we'll simply roll the dice using
+
+00:03:26.919 --> 00:03:31.209
+the roll dice function and store that into an integer variable called dice,
+
+00:03:31.210 --> 00:03:33.020
+and we'll follow it with our while loop.
+
+00:03:33.020 --> 00:03:36.359
+While dice is not equal to six, keep rolling.
+
+00:03:36.359 --> 00:03:42.455
+Perfect. So, this while loop would keep rolling our dice until we eventually get a six.
+
+00:03:42.455 --> 00:03:46.935
+However, we need to check if the dice ever got a three.
+
+00:03:46.935 --> 00:03:48.414
+So we add this if condition,
+
+00:03:48.414 --> 00:03:52.424
+if dice equals equals three, then we break.
+
+00:03:52.425 --> 00:03:56.050
+Break here means that we're going to break outside this while loop.
+
+00:03:56.050 --> 00:03:57.915
+We're not going to keep trying,
+
+00:03:57.914 --> 00:04:00.370
+we're not going to keep looping inside the while loop.
+
+00:04:00.370 --> 00:04:02.504
+It's over. We've lost.
+
+00:04:02.504 --> 00:04:03.819
+However, if you noticed,
+
+00:04:03.819 --> 00:04:08.275
+whether we actually get a six or a three in both cases,
+
+00:04:08.275 --> 00:04:10.930
+we're just going to end up at this part here.
+
+00:04:10.930 --> 00:04:13.180
+We're not going to be able to tell whether we
+
+00:04:13.180 --> 00:04:16.155
+actually got a six or a three at that point.
+
+00:04:16.154 --> 00:04:20.389
+So to be able to decide whether we actually won or not,
+
+00:04:20.389 --> 00:04:23.675
+we're just going to add another If condition down here.
+
+00:04:23.675 --> 00:04:25.780
+If the dice is equal to six,
+
+00:04:25.779 --> 00:04:27.279
+then we're going to return true,
+
+00:04:27.279 --> 00:04:30.304
+else, we're going to return false.
+
+00:04:30.305 --> 00:04:33.894
+So if this while loop kept retrying
+
+00:04:33.894 --> 00:04:38.074
+until it eventually got a six and then we got to this phase here,
+
+00:04:38.074 --> 00:04:42.490
+so we just checked that the dice is actually a six, then we return true.
+
+00:04:42.490 --> 00:04:46.990
+If the dice however happened to have a three in the middle of our retries here,
+
+00:04:46.990 --> 00:04:48.910
+then we're going to break out the loop ending
+
+00:04:48.910 --> 00:04:52.295
+here and we're going to do this if condition and it's not six.
+
+00:04:52.295 --> 00:04:55.520
+So it's going to go to the else and it's going to return a false.
+
+00:04:55.519 --> 00:05:00.354
+Perfect. So we can see how handy break is even with the while loops.
+
+00:05:00.355 --> 00:05:03.270
+Now, let's have a look at an example where you are going to
+
+00:05:03.269 --> 00:05:07.000
+use the break keyword to solve a problem.
+

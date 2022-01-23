@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.084
+Let's say you want to write a simple cashier program for a store.
+
+00:00:04.084 --> 00:00:06.540
+This program should automatically calculate and return
+
+00:00:06.540 --> 00:00:10.859
+the correct change in dollars and cents to someone trying to make a purchase.
+
+00:00:10.859 --> 00:00:12.989
+So say, they buy a bunch of bananas that cost $3.60
+
+00:00:12.990 --> 00:00:18.329
+and then they hand our cashier program $5.75.
+
+00:00:18.329 --> 00:00:20.534
+The program will calculate the correct change,
+
+00:00:20.535 --> 00:00:24.940
+which will be the difference between the provided dollars and the cost of the item.
+
+00:00:24.940 --> 00:00:27.105
+In this case, $2.15.
+
+00:00:27.105 --> 00:00:30.074
+And we want our program to return this value as output.
+
+00:00:30.074 --> 00:00:33.234
+To do this in code, write a function called makeChange,
+
+00:00:33.234 --> 00:00:36.539
+that should take in two parameters: the cost of an item,
+
+00:00:36.539 --> 00:00:38.310
+like 3.60 for bananas,
+
+00:00:38.310 --> 00:00:41.755
+and the dollars a person provides, like 5.75.
+
+00:00:41.755 --> 00:00:43.940
+And these are both double variable types.
+
+00:00:43.939 --> 00:00:46.394
+Then this function should calculate the correct change,
+
+00:00:46.395 --> 00:00:49.950
+which will just be the dollars provided minus the cost of the item.
+
+00:00:49.950 --> 00:00:51.929
+And then finally, you want your function to return
+
+00:00:51.929 --> 00:00:55.019
+this value and to return any data like change,
+
+00:00:55.020 --> 00:00:57.655
+you'll have to do two things in your function definition.
+
+00:00:57.655 --> 00:00:59.670
+The first is to change the return type,
+
+00:00:59.670 --> 00:01:03.518
+which has usually been void to the output type you expect to be returned,
+
+00:01:03.518 --> 00:01:06.114
+the output type of the calculated change.
+
+00:01:06.114 --> 00:01:08.519
+Second, you want to return the value of your data.
+
+00:01:08.519 --> 00:01:12.079
+The value of the calculated change in a return statement.
+
+00:01:12.079 --> 00:01:14.459
+So go ahead and write the function makeChange.
+

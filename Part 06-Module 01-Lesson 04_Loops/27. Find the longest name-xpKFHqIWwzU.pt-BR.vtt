@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.901
+Vamos ver como podemos
+implementar esta função.
+
+00:00:03.934 --> 00:00:07.100
+Ela recebe um parâmetro
+que é um vetor de strings,
+
+00:00:07.133 --> 00:00:08.234
+chamado names,
+
+00:00:08.267 --> 00:00:12.634
+e retorna uma string, que é o nome
+mais longo encontrado nesse vetor.
+
+00:00:12.667 --> 00:00:16.567
+Primeiro, você vai calcular
+o tamanho do vetor
+
+00:00:16.601 --> 00:00:18.934
+e guardá-lo na variável size,
+
+00:00:18.968 --> 00:00:21.934
+para saber quantas células
+existem neste vetor
+
+00:00:21.968 --> 00:00:25.267
+e então, construir o laço
+baseado nisso.
+
+00:00:25.300 --> 00:00:26.801
+A segunda coisa a fazer
+
+00:00:26.834 --> 00:00:30.067
+é inicializar uma variável
+chamada longestName,
+
+00:00:30.100 --> 00:00:33.133
+que guardará o nome mais longo
+achado até agora,
+
+00:00:33.167 --> 00:00:35.501
+e inicializá-la com names[0],
+
+00:00:35.534 --> 00:00:37.868
+que é o primeiro nome
+no nosso vetor.
+
+00:00:37.901 --> 00:00:40.968
+Depois criamos um laço
+que começa de 1,
+
+00:00:41.000 --> 00:00:43.634
+que é o próximo nome
+após aquele,
+
+00:00:43.667 --> 00:00:47.734
+e continua até alcançar
+o tamanho do vetor.
+
+00:00:47.767 --> 00:00:50.601
+O incremento é apenas i++,
+como sempre.
+
+00:00:50.634 --> 00:00:56.200
+Dentro desse laço, vamos comparar
+o tamanho de cada célula nesse vetor
+
+00:00:56.234 --> 00:00:59.167
+ao nome mais longo
+que achamos até aqui.
+
+00:00:59.200 --> 00:01:01.901
+Se names[i],
+
+00:01:01.934 --> 00:01:07.934
+que é a string nessa célula
+específica do vetor na posição i,
+
+00:01:07.968 --> 00:01:10.501
+dizemos if(names[i].length(),
+
+00:01:10.534 --> 00:01:13.634
+estamos medindo o tamanho
+dessa célula específica
+
+00:01:13.667 --> 00:01:18.133
+e comparando-o
+a longestName.length,
+
+00:01:18.167 --> 00:01:22.100
+que deve estar guardando
+o nome mais longo achado até aqui.
+
+00:01:22.133 --> 00:01:27.167
+Se esse nome for mesmo maior
+do que o nome mais longo,
+
+00:01:27.200 --> 00:01:30.934
+atualizamos longestName
+para esse nome.
+
+00:01:30.968 --> 00:01:35.000
+É muito parecido com achar
+o menor número em um vetor.
+
+00:01:35.033 --> 00:01:39.334
+Só que comparamos se é maior
+em vez de menor.
+
+00:01:39.367 --> 00:01:41.234
+Quando terminarmos
+nosso laço,
+
+00:01:41.267 --> 00:01:44.367
+teremos visitado
+cada célula no vetor
+
+00:01:44.400 --> 00:01:48.701
+e sempre vamos atualizar
+longestName se acharmos algo maior.
+
+00:01:48.734 --> 00:01:52.501
+Ou seja, podemos com segurança
+retornar longestName.
+
+00:01:52.534 --> 00:01:53.834
+É isso.
+

@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.430
+Great. So we've seen how to implement
+
+00:00:02.430 --> 00:00:08.314
+the function findLongestName to find the longest string in array of strings.
+
+00:00:08.314 --> 00:00:13.699
+Have you wondered what if there are two strings in that array that have the same length?
+
+00:00:13.699 --> 00:00:16.554
+For example, have a look at this array.
+
+00:00:16.554 --> 00:00:21.140
+These two names here are both eight characters long.
+
+00:00:21.140 --> 00:00:25.227
+Have a look at this implementation of the function here,
+
+00:00:25.227 --> 00:00:33.079
+trace it using this example and tell me which one of those options you think is correct.
+
+00:00:33.079 --> 00:00:37.149
+Would this function return Kimberli as the longest name?
+
+00:00:37.149 --> 00:00:40.195
+Would it return Apolonia as the longest name?
+
+00:00:40.195 --> 00:00:43.369
+Would it return both of them or none of them?
+

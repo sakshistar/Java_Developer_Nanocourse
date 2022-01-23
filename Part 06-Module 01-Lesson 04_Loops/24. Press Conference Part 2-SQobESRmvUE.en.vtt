@@ -1,0 +1,196 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.984
+Now, let's go back to our press conference.
+
+00:00:02.984 --> 00:00:09.134
+What we want to do is declare an array of strings that holds all our news outlet names.
+
+00:00:09.134 --> 00:00:11.125
+Something that looks like this.
+
+00:00:11.125 --> 00:00:14.220
+To do that, we type in string followed by
+
+00:00:14.220 --> 00:00:17.820
+the square brackets which means that we're creating an array of strings.
+
+00:00:17.820 --> 00:00:19.791
+And then, the name of our array,
+
+00:00:19.791 --> 00:00:21.667
+in this case, newsOutlet,
+
+00:00:21.667 --> 00:00:24.984
+followed by equals and the curly brackets and inside,
+
+00:00:24.984 --> 00:00:27.545
+we list all the values we want to store.
+
+00:00:27.545 --> 00:00:32.460
+Then, say we want to pick a certain value in the array,
+
+00:00:32.460 --> 00:00:36.390
+we just go ahead and say system.out.print and then,
+
+00:00:36.390 --> 00:00:39.030
+newsOutlet of index two.
+
+00:00:39.030 --> 00:00:43.695
+So, we're basically pointing to the string of index two.
+
+00:00:43.695 --> 00:00:47.182
+Zero, one, two which is going to be CNN,
+
+00:00:47.182 --> 00:00:50.039
+so the output is CNN.
+
+00:00:50.039 --> 00:00:53.810
+And basically, you have chosen someone to ask the first question.
+
+00:00:53.810 --> 00:00:55.635
+But in our initial problem,
+
+00:00:55.634 --> 00:00:57.419
+we wanted this to be random.
+
+00:00:57.420 --> 00:01:00.605
+We wanted to randomly pick a news outlet.
+
+00:01:00.604 --> 00:01:02.159
+Well, if you remember,
+
+00:01:02.159 --> 00:01:06.894
+we use Math.random earlier to generate random numbers for us.
+
+00:01:06.894 --> 00:01:08.579
+This might come in handy now.
+
+00:01:08.579 --> 00:01:10.474
+Just like we did before,
+
+00:01:10.474 --> 00:01:15.569
+we will generate a random number and store it into the double variable, lucky.
+
+00:01:15.569 --> 00:01:19.289
+So, we go double lucky equals Math.random.
+
+00:01:19.290 --> 00:01:23.250
+Remember that this generates a random number between zero and one.
+
+00:01:23.250 --> 00:01:28.745
+So we need to multiply that by 10 to get a fractional number between zero and 10,
+
+00:01:28.745 --> 00:01:31.635
+which is the number of news outlets that we have.
+
+00:01:31.635 --> 00:01:34.890
+Remember that lucky times equals 10 is just
+
+00:01:34.890 --> 00:01:39.420
+multiplying lucky by 10 and updating itself with that new value.
+
+00:01:39.420 --> 00:01:42.030
+And then, we want to cast that variable into
+
+00:01:42.030 --> 00:01:45.365
+an integer so that we don't get a fractional number anymore,
+
+00:01:45.365 --> 00:01:49.219
+but we get a whole integer number and that's between zero and nine.
+
+00:01:49.219 --> 00:01:52.500
+The way we do casting is we just write the type that we
+
+00:01:52.500 --> 00:01:56.049
+want to cast it to between brackets just before the variable name here.
+
+00:01:56.049 --> 00:01:59.579
+And then we can store that in an integer called luckyIndex.
+
+00:01:59.579 --> 00:02:04.560
+So now, we end up with this luckyIndex variable that is between zero and nine,
+
+00:02:04.560 --> 00:02:10.120
+and it is an integer so we can access any particular part of the array.
+
+00:02:10.120 --> 00:02:12.480
+So the last thing we want to do is print out
+
+00:02:12.479 --> 00:02:15.679
+the name of the news outlet who we randomly picked.
+
+00:02:15.680 --> 00:02:18.099
+So we go ahead and say system.out.print,
+
+00:02:18.099 --> 00:02:22.674
+and then we say newsOutlet, square brackets, luckyIndex.
+
+00:02:22.675 --> 00:02:25.602
+So based on the random number that was generated,
+
+00:02:25.602 --> 00:02:28.920
+this luckyIndex can be anything between zero and nine.
+
+00:02:28.919 --> 00:02:33.434
+So we randomly pick one of those and displayed it in the print screen.
+
+00:02:33.435 --> 00:02:36.504
+Let's trace a few examples and see what's happening.
+
+00:02:36.504 --> 00:02:42.990
+Assume that Math.random generated a number that's equal to 0.433.
+
+00:02:42.990 --> 00:02:47.025
+The first thing we do is we multiply it by 10, making it 4.23,
+
+00:02:47.025 --> 00:02:49.157
+and then we cast it into an integer,
+
+00:02:49.157 --> 00:02:52.735
+throwing away the fractional part so that becomes just four.
+
+00:02:52.735 --> 00:02:55.060
+So our luckyIndex is four.
+
+00:02:55.060 --> 00:02:58.569
+So the last line just prints out news outlet of four.
+
+00:02:58.569 --> 00:03:00.259
+And what is news out of four?
+
+00:03:00.259 --> 00:03:03.389
+It's zero, one, two,
+
+00:03:03.389 --> 00:03:06.594
+three, four, it's this string here, which is AP.
+
+00:03:06.594 --> 00:03:10.349
+If our random number that was generated was 0.987,
+
+00:03:10.349 --> 00:03:11.750
+so that's in lucky,
+
+00:03:11.750 --> 00:03:15.310
+we'll multiply that by 10, giving us 9.87.
+
+00:03:15.310 --> 00:03:17.729
+And then we cast that into an integer so we throw away
+
+00:03:17.729 --> 00:03:20.474
+that fractional part giving us nine,
+
+00:03:20.474 --> 00:03:24.659
+and then we print out news outlet of nine,
+
+00:03:24.659 --> 00:03:27.305
+which happens to be Aljazeera.
+
+00:03:27.305 --> 00:03:31.980
+The same happens for any value that is generated for a variable lucky because
+
+00:03:31.979 --> 00:03:36.469
+we always multiply it by 10 and then cast it into an integer. So there we go.
+

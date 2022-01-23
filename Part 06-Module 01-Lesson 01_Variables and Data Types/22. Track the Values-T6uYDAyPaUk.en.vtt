@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.935
+Congratulations! You've made it this far already.
+
+00:00:02.935 --> 00:00:07.175
+We've learned so much about variables and sorts of operations you can perform on them.
+
+00:00:07.174 --> 00:00:10.913
+We've seen how to concatenate strings together and we've seen how to add,
+
+00:00:10.913 --> 00:00:14.789
+multiply, subtract and divide integers and doubles as well.
+
+00:00:14.789 --> 00:00:17.024
+Now let's have a look at this program here.
+
+00:00:17.024 --> 00:00:20.399
+What do you think it would print as an output when you run it?
+
+00:00:20.399 --> 00:00:21.779
+Notice how the variables x,
+
+00:00:21.780 --> 00:00:26.745
+y and z keep changing over time and then we finally print those three values.
+
+00:00:26.745 --> 00:00:29.380
+Which one of those would be the correct output?
+
+00:00:29.379 --> 00:00:32.129
+Remember to follow this program step by step and
+
+00:00:32.130 --> 00:00:35.000
+keep track of the value of each variable individually.
+

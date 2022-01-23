@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.015
+Now that we've talked about the different variable types,
+
+00:00:03.015 --> 00:00:05.640
+try to go through each of those declarations and
+
+00:00:05.639 --> 00:00:11.269
+initialization statements and check out any statement that you think is wrong.
+
+00:00:11.269 --> 00:00:15.390
+Sometimes, the initialization and the declaration don't match.
+
+00:00:15.390 --> 00:00:19.000
+Select all the statements that you think have a problem in them.
+

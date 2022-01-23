@@ -1,0 +1,199 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.084
+All right, let's see how we could implement this function, countBlocks.
+
+00:00:04.084 --> 00:00:06.480
+It takes this integer levels as input
+
+00:00:06.480 --> 00:00:09.458
+which is the number of levels the pyramid is made up of,
+
+00:00:09.458 --> 00:00:13.320
+and returns an integer which is equal to the number of blocks it needs.
+
+00:00:13.320 --> 00:00:17.969
+The first thing we need to do is declare and initialize this total variable here.
+
+00:00:17.969 --> 00:00:20.489
+This will keep track of the number of blocks it needs to build
+
+00:00:20.489 --> 00:00:24.041
+the entire pyramid by adding every level one by one.
+
+00:00:24.042 --> 00:00:28.890
+Then, we start a loop that counts from one to the number of levels in this pyramid,
+
+00:00:28.890 --> 00:00:30.914
+and the increment is just i++.
+
+00:00:30.914 --> 00:00:33.329
+Inside the loop and for each level,
+
+00:00:33.329 --> 00:00:37.799
+we need to calculate the number of blocks in that level which is equal to i times i,
+
+00:00:37.799 --> 00:00:40.269
+because i changes from one, two,
+
+00:00:40.270 --> 00:00:43.782
+three, all the way until the maximum number of levels.
+
+00:00:43.781 --> 00:00:46.604
+Once we calculate that number of what's needed for that level,
+
+00:00:46.604 --> 00:00:51.354
+we just add it to our total variable and update total to be equal to the sum.
+
+00:00:51.354 --> 00:00:53.409
+Finally, when the loop ends,
+
+00:00:53.409 --> 00:00:54.659
+we just return the variable,
+
+00:00:54.659 --> 00:00:56.309
+total, because it would have
+
+00:00:56.310 --> 00:00:59.804
+the total number of blocks for all the levels in the pyramid.
+
+00:00:59.804 --> 00:01:02.729
+Let's test it out for a three-level pyramid,
+
+00:01:02.729 --> 00:01:06.659
+which means our input variable levels here is going to be three,
+
+00:01:06.659 --> 00:01:08.390
+total is initialized to zero,
+
+00:01:08.390 --> 00:01:12.870
+and our loop goes from one to levels which happens to be three.
+
+00:01:12.870 --> 00:01:17.740
+Now let's keep track of every variable we have as we go through the loop.
+
+00:01:17.739 --> 00:01:18.964
+i starts by one,
+
+00:01:18.965 --> 00:01:24.225
+and then we check this condition if i is less than or equal to levels which is basically,
+
+00:01:24.224 --> 00:01:26.644
+if i is less than or equal to three,
+
+00:01:26.644 --> 00:01:29.200
+and that is true because i is still one.
+
+00:01:29.200 --> 00:01:30.990
+So we calculate the number of blocks in
+
+00:01:30.989 --> 00:01:34.774
+that particular level over here which is i times i,
+
+00:01:34.775 --> 00:01:38.505
+and then we add the result of i times i to total,
+
+00:01:38.504 --> 00:01:41.784
+which started as zero so makes total equal to one.
+
+00:01:41.784 --> 00:01:44.879
+We reached the end of the first loop, so we go back up,
+
+00:01:44.879 --> 00:01:47.174
+add one to i, making it equal to two,
+
+00:01:47.174 --> 00:01:49.349
+and then check the condition again.
+
+00:01:49.349 --> 00:01:51.274
+Is i less than or equal to three?
+
+00:01:51.275 --> 00:01:53.785
+And it's still two, so that's true.
+
+00:01:53.784 --> 00:01:57.070
+So we calculate i times i which is two times two,
+
+00:01:57.070 --> 00:01:58.280
+happens to be four,
+
+00:01:58.280 --> 00:02:00.079
+and add that to total.
+
+00:02:00.079 --> 00:02:01.114
+Total was already one,
+
+00:02:01.114 --> 00:02:03.454
+so we add that, making it five.
+
+00:02:03.454 --> 00:02:06.135
+We reached the end of this loop again so we go back up,
+
+00:02:06.135 --> 00:02:08.715
+we add one to i, making it three.
+
+00:02:08.715 --> 00:02:09.844
+We do this check again,
+
+00:02:09.844 --> 00:02:11.800
+is three less than or equal to three?
+
+00:02:11.800 --> 00:02:14.775
+Yes it is, because it is equal to three, so that's true.
+
+00:02:14.775 --> 00:02:16.740
+So we step inside again,
+
+00:02:16.740 --> 00:02:19.439
+and calculate i times i, making it nine.
+
+00:02:19.439 --> 00:02:20.814
+Just three times three,
+
+00:02:20.814 --> 00:02:23.300
+add that to total which was five.
+
+00:02:23.300 --> 00:02:26.445
+So that's nine plus five equals 14,
+
+00:02:26.444 --> 00:02:29.039
+and our total gets up to 14.
+
+00:02:29.039 --> 00:02:32.054
+So, we reached the end of this loop, go back up,
+
+00:02:32.055 --> 00:02:33.879
+add one more to i,
+
+00:02:33.879 --> 00:02:35.704
+and then we do this condition again.
+
+00:02:35.705 --> 00:02:37.507
+Is four less than or equal to three?
+
+00:02:37.507 --> 00:02:39.675
+Nope, it's not anymore.
+
+00:02:39.675 --> 00:02:42.180
+So we do not step into that loop anymore,
+
+00:02:42.180 --> 00:02:45.425
+and we just skip down here to return total.
+
+00:02:45.425 --> 00:02:48.660
+So, that not value of total at that point is 14,
+
+00:02:48.659 --> 00:02:50.924
+which is the output of this function,
+
+00:02:50.925 --> 00:02:53.185
+that is if the input is three.
+
+00:02:53.185 --> 00:02:56.360
+Brilliant. You could also try to trace it
+
+00:02:56.360 --> 00:03:01.000
+with larger input values and see if it works for that as well.
+

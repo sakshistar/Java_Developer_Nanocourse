@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.367
+Este programa imprimirá que
+uma certidão é uma identidade válida.
+
+00:00:04.400 --> 00:00:08.701
+Com estes valores booleanos,
+o computador verá cada linha do código.
+
+00:00:08.734 --> 00:00:10.467
+Primeiro, o if,
+
+00:00:10.501 --> 00:00:13.667
+e como passport é falso,
+ele passa por este bloco,
+
+00:00:13.701 --> 00:00:16.100
+e vai para o próximo
+else if.
+
+00:00:16.133 --> 00:00:19.968
+Este else if checa se certidão
+de nascimento é verdadeiro.
+
+00:00:20.000 --> 00:00:22.567
+É, então ele executa
+este bloco de código
+
+00:00:22.601 --> 00:00:25.701
+e imprime "uma certidão
+é uma identidade válida."
+
+00:00:25.734 --> 00:00:29.234
+Depois ele vê que só sobraram
+um else if e um else.
+
+00:00:29.267 --> 00:00:34.100
+Como um bloco else if
+já foi executado, ele ignora os outros,
+
+00:00:34.133 --> 00:00:38.000
+mesmo a condição para carteira
+de motorista sendo verdadeira.
+
+00:00:38.033 --> 00:00:41.267
+Ele pula para o fim
+deste último else.
+
+00:00:41.300 --> 00:00:43.167
+E imprimirá só isto.
+
+00:00:43.200 --> 00:00:45.934
+A pessoa conseguirá
+um cartão.
+
+00:00:45.968 --> 00:00:48.701
+Então para uma série
+de else ifs e um else,
+
+00:00:48.734 --> 00:00:52.000
+só um bloco pode ser
+executado por vez.
+
+00:00:52.033 --> 00:00:55.534
+A afirmação que atender
+primeiro a condição do teste.
+
+00:00:55.567 --> 00:00:58.968
+Neste caso, foi a condição
+da certidão de nascimento.
+
+00:00:59.000 --> 00:01:02.701
+Combinar ifs e else ifs
+pode ser muito útil
+
+00:01:02.734 --> 00:01:06.934
+para programar decisões
+onde há vários caminhos ímpares.
+

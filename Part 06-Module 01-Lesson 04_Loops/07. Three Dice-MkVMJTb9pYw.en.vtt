@@ -1,0 +1,247 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.225
+So the correct answer is this check here.
+
+00:00:03.225 --> 00:00:08.714
+While not dice one is the same as dice two and dice two is the same as dice three.
+
+00:00:08.714 --> 00:00:13.655
+Let's try them all one by one and see why only this one works.
+
+00:00:13.654 --> 00:00:15.519
+Let's try out this condition here.
+
+00:00:15.519 --> 00:00:19.689
+while(dice1==dice2 || dice2==dice3).
+
+00:00:19.690 --> 00:00:24.895
+Imagine we have this scenario where the three dice are six, three, and one.
+
+00:00:24.894 --> 00:00:27.475
+Which means dice1 is six,
+
+00:00:27.475 --> 00:00:31.615
+dice2 is three, and dice3 is one.
+
+00:00:31.614 --> 00:00:34.098
+To see what this entire condition evaluates to,
+
+00:00:34.098 --> 00:00:35.994
+let's take it part by part.
+
+00:00:35.994 --> 00:00:38.530
+This part here is checking if dice1 is the same as
+
+00:00:38.530 --> 00:00:42.009
+dice2 and it's not, so that will be false.
+
+00:00:42.009 --> 00:00:46.570
+This part here checks if dice2 is the same as dice3 and it's not,
+
+00:00:46.570 --> 00:00:47.965
+so that's also false.
+
+00:00:47.965 --> 00:00:51.610
+And because those two falses are separated by an or,
+
+00:00:51.609 --> 00:00:54.564
+it evaluates the entire place to be false,
+
+00:00:54.564 --> 00:00:57.579
+which means we will not step into a while loop and
+
+00:00:57.579 --> 00:01:01.619
+we will not re-roll even though this scenario should have allowed us to re-roll.
+
+00:01:01.619 --> 00:01:04.670
+That means this condition won't work.
+
+00:01:04.670 --> 00:01:07.445
+Okay. Let's try this condition instead,
+
+00:01:07.444 --> 00:01:08.729
+dice1 is the same as dice2,
+
+00:01:08.730 --> 00:01:11.859
+and dice2 is the same as dice3.
+
+00:01:11.859 --> 00:01:13.810
+If we go with the same scenario again,
+
+00:01:13.810 --> 00:01:15.189
+so dice1 is six,
+
+00:01:15.189 --> 00:01:18.435
+dice2 is three, and dice3 is one.
+
+00:01:18.435 --> 00:01:22.250
+This part evaluates to false and this part also evaluates to false.
+
+00:01:22.250 --> 00:01:24.790
+And those two falses are separated with an and,
+
+00:01:24.790 --> 00:01:28.005
+which means the entire thing is also evaluated to false.
+
+00:01:28.004 --> 00:01:29.784
+So it will not re-roll.
+
+00:01:29.784 --> 00:01:31.774
+And in this scenario it should have,
+
+00:01:31.775 --> 00:01:33.910
+so that also doesn't work.
+
+00:01:33.909 --> 00:01:41.688
+Okay, let's try, while(dice1!= dice2 &amp;&amp; dice2!= dice3).
+
+00:01:41.688 --> 00:01:43.969
+So, let's try this scenario again,
+
+00:01:43.969 --> 00:01:45.310
+where dice1 is six,
+
+00:01:45.310 --> 00:01:49.450
+dice2 is three, and dice3 is one.
+
+00:01:49.450 --> 00:01:53.140
+Now, this is checking if dice1 is not the same as dice2,
+
+00:01:53.140 --> 00:01:56.140
+and they're not the same so that evaluates to true.
+
+00:01:56.140 --> 00:01:59.260
+This also checks if they're not the same and three and one are not the same,
+
+00:01:59.260 --> 00:02:01.079
+so that evaluates to true as well.
+
+00:02:01.079 --> 00:02:03.807
+And those two trues are separated with an and,
+
+00:02:03.808 --> 00:02:07.600
+so this entire thing evaluates to true and allows us to re-roll.
+
+00:02:07.599 --> 00:02:10.844
+And in that scenario, we should be re-rolling which is perfect.
+
+00:02:10.844 --> 00:02:14.775
+But what if the scenario was something like this?
+
+00:02:14.775 --> 00:02:18.335
+Where we had two threes and just one.
+
+00:02:18.335 --> 00:02:20.515
+In this case, dice1 would be three,
+
+00:02:20.514 --> 00:02:24.304
+dice2 would also be three and dice3 would be one.
+
+00:02:24.305 --> 00:02:26.379
+So if we have a look at this part here,
+
+00:02:26.379 --> 00:02:29.979
+it evaluates that dice1 and dice2 are not the same although they are,
+
+00:02:29.979 --> 00:02:31.784
+so that evaluates to false.
+
+00:02:31.784 --> 00:02:35.835
+This one checks if they're not the same and they're not the same so that's true.
+
+00:02:35.835 --> 00:02:38.860
+But the false and true are separated by an and,
+
+00:02:38.860 --> 00:02:42.430
+which means since one of them is false the whole thing becomes
+
+00:02:42.430 --> 00:02:46.870
+false and it doesn't step into re-roll even though it should have.
+
+00:02:46.870 --> 00:02:48.855
+So that partially works,
+
+00:02:48.854 --> 00:02:52.524
+but in some situations it will not allow us to re-roll when we should have.
+
+00:02:52.525 --> 00:02:54.295
+So that doesn't work either.
+
+00:02:54.294 --> 00:03:01.319
+Now finally, if we try while(!(dice1 == dice2 &amp;&amp; dice2 == dice3)){.
+
+00:03:01.319 --> 00:03:03.489
+Let's try this scenario again,
+
+00:03:03.490 --> 00:03:04.580
+three three and one.
+
+00:03:04.580 --> 00:03:05.965
+So dice1 is three,
+
+00:03:05.965 --> 00:03:07.608
+dice2 is also three,
+
+00:03:07.608 --> 00:03:09.780
+and dice3 is just one.
+
+00:03:09.780 --> 00:03:13.895
+This part evaluates to true because both dice are the same.
+
+00:03:13.895 --> 00:03:16.570
+This one evaluates to false because three and one are
+
+00:03:16.569 --> 00:03:19.623
+different and that is separated with an and,
+
+00:03:19.623 --> 00:03:23.469
+so the true and false evaluate to false.
+
+00:03:23.469 --> 00:03:25.335
+But this is all surrounded with a not,
+
+00:03:25.335 --> 00:03:28.435
+which means that this force turns into a true.
+
+00:03:28.435 --> 00:03:31.944
+And in that scenario the loop would step in and re-roll.
+
+00:03:31.944 --> 00:03:35.239
+Now you could go and try all the different scenarios that you could think of.
+
+00:03:35.240 --> 00:03:38.580
+And every time it should step inside the while loop it will.
+
+00:03:38.580 --> 00:03:42.250
+Let's have a look at a scenario where all three dice match,
+
+00:03:42.250 --> 00:03:45.365
+which is the condition that the while should not re-roll.
+
+00:03:45.365 --> 00:03:49.200
+In this case all dice are equal to three.
+
+00:03:49.199 --> 00:03:54.209
+So when we start to evaluate this part evaluates to true because they're both threes.
+
+00:03:54.210 --> 00:03:57.042
+This one also evaluates to true and two trues
+
+00:03:57.042 --> 00:04:00.509
+separated with an and entirely evaluates to true.
+
+00:04:00.509 --> 00:04:05.049
+And that's also rounded with a not which means that this becomes false.
+
+00:04:05.050 --> 00:04:07.960
+Now, in this scenario we do not want to step inside
+
+00:04:07.960 --> 00:04:11.825
+the loop and that's exactly what happens here with this check condition.
+
+00:04:11.824 --> 00:04:13.539
+So this also works.
+

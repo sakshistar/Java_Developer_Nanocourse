@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.860
+Here's the correct solution.
+
+00:00:01.860 --> 00:00:04.065
+After public comes a return type,
+
+00:00:04.065 --> 00:00:05.250
+which is something like void,
+
+00:00:05.250 --> 00:00:07.439
+then comes our function name,
+
+00:00:07.440 --> 00:00:09.509
+which we can later use to call the function.
+
+00:00:09.509 --> 00:00:11.484
+This is something like print line.
+
+00:00:11.484 --> 00:00:14.004
+Then finally our block of code inside the function,
+
+00:00:14.005 --> 00:00:16.400
+which it will execute when it's called.
+
+00:00:16.399 --> 00:00:19.000
+Now let's fill in these blanks by writing our own function.
+
