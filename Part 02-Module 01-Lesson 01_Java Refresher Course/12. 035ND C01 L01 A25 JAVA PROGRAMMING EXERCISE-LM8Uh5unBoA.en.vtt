@@ -1,0 +1,184 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.060
+I hope we have found this other coding problems we have
+
+00:00:03.060 --> 00:00:07.004
+and I hope you have solutions for all of those.
+
+00:00:07.004 --> 00:00:11.609
+In this video, I'm going to show you the answer for
+
+00:00:11.609 --> 00:00:16.425
+the two problems we have for the coding problems.
+
+00:00:16.425 --> 00:00:19.199
+So this is the first one.
+
+00:00:19.199 --> 00:00:21.989
+So the first one is remember,
+
+00:00:21.989 --> 00:00:26.129
+is to find the duplicate integers in a string.
+
+00:00:26.129 --> 00:00:28.980
+What we do here is remember,
+
+00:00:28.980 --> 00:00:30.254
+we have a set.
+
+00:00:30.254 --> 00:00:34.409
+The set is you won't have a duplication in a set.
+
+00:00:34.409 --> 00:00:37.934
+So the logic here is you use thorough set
+
+00:00:37.935 --> 00:00:42.015
+and you're iterating through the string character by character.
+
+00:00:42.015 --> 00:00:46.664
+If the set contains the character,
+
+00:00:46.664 --> 00:00:48.674
+meaning the character already exist,
+
+00:00:48.674 --> 00:00:53.114
+they return the index of the character.
+
+00:00:53.115 --> 00:00:59.835
+So we start a character base HashSet,
+
+00:00:59.835 --> 00:01:03.664
+and we're going through the string character by character.
+
+00:01:03.664 --> 00:01:05.284
+You can see this here.
+
+00:01:05.284 --> 00:01:10.500
+The charAt is polling out the character that based on the index.
+
+00:01:11.890 --> 00:01:15.715
+If the HashSet contains this character,
+
+00:01:15.715 --> 00:01:19.905
+meaning, this is a duplicate and we're returning the index.
+
+00:01:19.905 --> 00:01:24.405
+If not, we are adding the character into the set.
+
+00:01:24.405 --> 00:01:26.924
+If now those are duplicate,
+
+00:01:26.924 --> 00:01:29.950
+we're returning negative one.
+
+00:01:31.969 --> 00:01:39.629
+So the second problem,
+
+00:01:39.629 --> 00:01:46.875
+I'm going to walk through that is the find the TopKLargest number in array.
+
+00:01:46.875 --> 00:01:51.629
+So what are we using here is we're using a TreeSet.
+
+00:01:51.629 --> 00:01:56.039
+If you remember, the TreeSet is the order set.
+
+00:01:56.040 --> 00:02:00.860
+So we're using that and we're adding number to
+
+00:02:00.859 --> 00:02:07.189
+the TreeSet and a non-number will be ordered in TreeSet.
+
+00:02:07.189 --> 00:02:15.469
+What do we do is, we go through the integer array and we add that to the TreeSet.
+
+00:02:15.469 --> 00:02:20.044
+If the size of TreeSet is larger than K,
+
+00:02:20.044 --> 00:02:21.969
+we're polling the first.
+
+00:02:21.969 --> 00:02:24.599
+So remember the order of the TreeSet.
+
+00:02:24.599 --> 00:02:27.680
+The TreeSet is if you don't define the order,
+
+00:02:27.680 --> 00:02:32.805
+it will default by smaller to larger in the TreeSet.
+
+00:02:32.805 --> 00:02:34.980
+So what do we do is, we poll in the first.
+
+00:02:34.979 --> 00:02:38.924
+So first will be the smallest number in the TreeSet.
+
+00:02:38.925 --> 00:02:41.380
+So by doing this,
+
+00:02:41.379 --> 00:02:47.629
+we are keeping all the largest number for the array.
+
+00:02:47.629 --> 00:02:51.979
+Let's try that with a test case here.
+
+00:02:51.979 --> 00:03:00.094
+So we have a list of integer in here and we want to keep the top four largest number,
+
+00:03:00.094 --> 00:03:04.185
+in this array, and we should get this.
+
+00:03:04.185 --> 00:03:06.240
+If you can take a look at this.
+
+00:03:06.240 --> 00:03:09.270
+The second one is the same this one.
+
+00:03:09.270 --> 00:03:11.355
+We're keeping the top two,
+
+00:03:11.354 --> 00:03:14.159
+which should be 15 and 100,
+
+00:03:14.159 --> 00:03:20.020
+and we order that from ascending order. Let's run this.
+
+00:03:21.439 --> 00:03:26.909
+Cool. So which means we've already passed the test case.
+
+00:03:28.550 --> 00:03:31.990
+When you think of solving a problem,
+
+00:03:31.990 --> 00:03:36.995
+think about what data structure is best fit for a problem.
+
+00:03:36.995 --> 00:03:39.810
+So if you don't use a TreeSet, whatever you can use.
+
+00:03:39.810 --> 00:03:41.275
+I mean, we can use a list, of course,
+
+00:03:41.275 --> 00:03:42.950
+but it's not going to take a longer time.
+
+00:03:42.949 --> 00:03:50.224
+We need to sort the list and grab the TopK one,
+
+00:03:50.224 --> 00:03:54.824
+so which will increased the time complexity for that one.
+
+00:03:54.824 --> 00:03:58.709
+For here, if you remember the documentation,
+
+00:03:58.710 --> 00:04:02.939
+the time complexity for TreeSet is all log in.
+
+00:04:02.939 --> 00:04:08.759
+So relatively it's as much faster than sorting a list.
+
+00:04:08.759 --> 00:04:13.120
+I hope you got the right answer. Have fun.
+

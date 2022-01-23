@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.514
+For Infostring obtained in per byte profile,
+
+00:00:04.514 --> 00:00:11.894
+it is used to read bytes oriented-data like image data, audio, videos.
+
+00:00:11.894 --> 00:00:14.969
+You can also read character string data,
+
+00:00:14.970 --> 00:00:21.280
+but it's recommended to use far reader costs to read character string data.
+
+00:00:21.620 --> 00:00:27.359
+For upper string is upper string used for writing data to a file.
+
+00:00:27.359 --> 00:00:31.589
+If you have primitive values into a file,
+
+00:00:31.589 --> 00:00:33.899
+you'd follow upper string class.
+
+00:00:33.899 --> 00:00:43.695
+You can write byte-oriented as well as tetra-oriented data to a file upper string class.
+
+00:00:43.695 --> 00:00:46.125
+But for character-oriented data,
+
+00:00:46.125 --> 00:00:51.340
+it is preferred to use file reader than file upper string.
+

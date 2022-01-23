@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.730
+Scope is used to determine which of
+
+00:00:02.730 --> 00:00:07.095
+this resources are available to other parts of the system,
+
+00:00:07.094 --> 00:00:11.189
+and here we are going to cover three type of scopes in
+
+00:00:11.189 --> 00:00:17.519
+candid: Request, session, and application.
+
+00:00:17.519 --> 00:00:21.689
+Again, let's take a look at the example next.
+

@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.379
+In this lesson, we're going to continue our Java refreshment course.
+
+00:00:04.379 --> 00:00:10.199
+I'm going to cover collection which including: List,
+
+00:00:10.199 --> 00:00:14.189
+stack, queue, set, and map.
+
+00:00:14.189 --> 00:00:17.669
+Again, rather than going through each implementation,
+
+00:00:17.670 --> 00:00:21.270
+this course will only cover some basic implantations.
+
+00:00:21.269 --> 00:00:24.285
+If you're interested, I will give you some links
+
+00:00:24.285 --> 00:00:27.315
+where you can find more implantations on your own.
+
+00:00:27.315 --> 00:00:30.705
+But you should be able to solve all the quizzes,
+
+00:00:30.704 --> 00:00:36.729
+and coding accesses with errors you learned from this lesson.
+

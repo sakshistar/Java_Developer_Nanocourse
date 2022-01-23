@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.960
+In the last lesson, we have learned how to create a Spring Boot project
+
+00:00:03.960 --> 00:00:08.280
+from scratch and how the Spring Boot project is structured.
+
+00:00:08.279 --> 00:00:12.464
+In this lesson, we're going to learn more about springboard development.
+
+00:00:12.464 --> 00:00:14.490
+To start, we'll create
+
+00:00:14.490 --> 00:00:19.679
+a Controller to make all our Spring Boot application a web application.
+
+00:00:19.679 --> 00:00:24.239
+Before that, it's just running code like a command line app.
+
+00:00:24.239 --> 00:00:30.164
+Then we're going to replace the Controller with the RestController.
+
+00:00:30.164 --> 00:00:34.890
+Then we are going to dig a little bit deeper
+
+00:00:34.890 --> 00:00:40.409
+by implementing Servlet, Filter and Listener.
+
+00:00:40.409 --> 00:00:44.734
+After that, we're going to see how to use
+
+00:00:44.734 --> 00:00:50.254
+resources in the static folder where we can create views.
+
+00:00:50.255 --> 00:00:57.960
+This all that, we're going to implement our Spring Boot application for file upload.
+

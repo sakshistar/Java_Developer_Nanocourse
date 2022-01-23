@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.184
+In this class, I'm going to show you the map and set interface.
+
+00:00:04.184 --> 00:00:06.660
+Map is a key value pair collection.
+
+00:00:06.660 --> 00:00:11.669
+We store an element in key and element fashion.
+
+00:00:11.669 --> 00:00:14.535
+That is, we'll store element,
+
+00:00:14.535 --> 00:00:22.199
+you'll give it a key for the map to retrieve and manipulate [inaudible].
+
+00:00:22.199 --> 00:00:24.105
+Let's take a look at the example.
+
+00:00:24.105 --> 00:00:27.975
+We have a key value pair table.
+
+00:00:27.975 --> 00:00:32.160
+The key is a non-string,
+
+00:00:32.159 --> 00:00:35.729
+and the value is a position.
+
+00:00:35.729 --> 00:00:39.044
+To retrieve a certain people's position,
+
+00:00:39.045 --> 00:00:42.804
+we can use people's name to search for it.
+
+00:00:42.804 --> 00:00:47.945
+Two common map implementations are HashMap and TreeMap.
+
+00:00:47.945 --> 00:00:54.715
+The main differences between both maps are HashMap have no order,
+
+00:00:54.715 --> 00:00:57.655
+and TreeMap is ordered.
+
+00:00:57.655 --> 00:01:00.825
+If you're interested to learn more,
+
+00:01:00.825 --> 00:01:04.189
+please follow the API documents I forwarded.
+
+00:01:04.189 --> 00:01:09.409
+For set, you could consider a set is a map with all value.
+
+00:01:09.409 --> 00:01:12.950
+We just store elements by using hashing.
+
+00:01:12.950 --> 00:01:19.775
+Similar to map, if you adding a value to map with a key which already exists,
+
+00:01:19.775 --> 00:01:23.695
+Java will treat it as update.
+
+00:01:23.694 --> 00:01:28.099
+To old value, will be updated with a new value.
+
+00:01:28.099 --> 00:01:33.394
+For set, if adding an element which already exists in the set,
+
+00:01:33.394 --> 00:01:35.619
+it will be ignored.
+
+00:01:35.620 --> 00:01:44.094
+Similar to map, two common set implementations are HashSet and TreeSet.
+
+00:01:44.094 --> 00:01:47.329
+If you're interested to learn more,
+
+00:01:47.329 --> 00:01:50.609
+please see API documents as well.
+

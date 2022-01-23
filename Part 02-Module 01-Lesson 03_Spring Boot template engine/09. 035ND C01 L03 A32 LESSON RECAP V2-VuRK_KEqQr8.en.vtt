@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.200 --> 00:00:03.570
+In this lesson, we have covered Spring Boot,
+
+00:00:03.569 --> 00:00:07.875
+template engine and we'll focus on thymeleaf.
+
+00:00:07.875 --> 00:00:12.884
+After that, we'll also cover how to create a unit test,
+
+00:00:12.884 --> 00:00:16.155
+to test over a Spring Boot Application.
+
+00:00:16.155 --> 00:00:19.065
+How to enable Hot Swap,
+
+00:00:19.065 --> 00:00:23.380
+use DevTool to speed up to the development.
+
+00:00:23.420 --> 00:00:29.230
+How to save logging to trap problems, use LogBack.
+
+00:00:29.960 --> 00:00:35.475
+We also covered how to use validation annotation to do
+
+00:00:35.475 --> 00:00:41.969
+form validation to making sure that all our obligation is protected.
+
+00:00:41.969 --> 00:00:44.354
+I hope you enjoyed the lesson,
+
+00:00:44.354 --> 00:00:46.664
+and if we have a lot to cover,
+
+00:00:46.664 --> 00:00:49.060
+in our next video.
+

@@ -1,0 +1,308 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Microservice And MVC framework</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Introduction to the Spring Boot framework</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro to Microservice.html">01. Intro to Microservice</a>
+    </li>
+    <li class="">
+      <a href="02. Microservice And MVC framework.html">02. Microservice And MVC framework</a>
+    </li>
+    <li class="">
+      <a href="03. Spring Boot Introduction.html">03. Spring Boot Introduction</a>
+    </li>
+    <li class="">
+      <a href="04. Spring Boot MVC Development Introduction.html">04. Spring Boot MVC Development Introduction</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Microservice And MVC framework</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="microservice-and-mvc-framework">Microservice And MVC framework</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L02 A02.1 MVC FRAMEWORK INTRO</p></h3>
+  <video controls>
+  <source src="02. 035ND C01 L02 A02.1 MVC FRAMEWORK INTRO-qRWMn9lD2_4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. 035ND C01 L02 A02.1 MVC FRAMEWORK INTRO-qRWMn9lD2_4.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Microservice Summary</p></h3>
+  <div>
+  <p>To sum up, microservice is the most popular architectures in today’s world. And almost all major companies are replacing their Monolith architectures with microservice architectures. If you are interested to find out more about Microservice and its architecture, please visit the following links.</p>
+<p><a href="https://microservices.io/" target="_blank">https://microservices.io/</a></p>
+<p><a href="https://opensource.com/resources/what-are-microservices" target="_blank">https://opensource.com/resources/what-are-microservices</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="mvc-framework">MVC Framework</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Before we jump into Spring Boot introduction, let’s talk about MVC framework. </p>
+<p>MVC stands for Model-View-Controller, which is an architectural pattern that separates an application into three main logical components: the model, the view and the controller. Each of these components are built to handle specific development aspects of an application. MVC is one of the most frequently used industry-standard web development frameworks to create scalable and extensible projects. In the next video, I am going to talk about each component separately.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="mvc-components---model">MVC Components - Model</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L02.1 MVC FRAMEWORK - MODEL</p></h3>
+  <video controls>
+  <source src="02. 035ND C01 L02.1 MVC FRAMEWORK - MODEL-2HTrTCKzRQQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. 035ND C01 L02.1 MVC FRAMEWORK - MODEL-2HTrTCKzRQQ.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>MVC Components - Model Quiz</p></h3>
+  <div>
+  <p><strong>QUESTION: <p>MVC</p></strong></p>
+  <p>If we are building a course management system to allow teachers to register class, and allow students to sign-up for the class, take it and get the grade for the class they attend. Please take a few minutes to think about how many models we can create for this system.</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Thanks for your response. Designing the model is the very first step in MVC design. A good model design will simplify the rest of your works.</p>
+<p>This is my answer:</p>
+<p>Student, Class, Teacher, StudentClass, TeacherClass</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="mvc-model---the-controller">MVC Model - The Controller</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L02 A02.2 MVC FRAMEWORK - CONTROLLER</p></h3>
+  <video controls>
+  <source src="02. 035ND C01 L02 A02.2 MVC FRAMEWORK - CONTROLLER-YPGpqd-sVd4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. 035ND C01 L02 A02.2 MVC FRAMEWORK - CONTROLLER-YPGpqd-sVd4.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>MVC Model - The Controller Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following is TRUE?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899259" id="rbk1">
+        <label for="rbk1"><p>The controller redirects incoming request to model.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899259" id="rbk2">
+        <label for="rbk2"><p>The controller executes an incoming request.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899259" id="rbk3">
+        <label for="rbk3"><p>The controller controls the data.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="899259" id="rbk4">
+        <label for="rbk4"><p>The controller render html to view.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    The controller executes an incoming request.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="mvc-component---the-view">MVC Component - The View</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L02 A02.3 MVC FRAMEWORK - VIEW</p></h3>
+  <video controls>
+  <source src="02. 035ND C01 L02 A02.3 MVC FRAMEWORK - VIEW-ap-94SXjk3A.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. 035ND C01 L02 A02.3 MVC FRAMEWORK - VIEW-ap-94SXjk3A.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Spring Boot Introduction.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Microservice And MVC framework')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

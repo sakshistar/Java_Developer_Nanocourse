@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.370
+In this session, we have covered WebSocket and STNP.
+
+00:00:06.620 --> 00:00:09.330
+We have discussed the components,
+
+00:00:09.330 --> 00:00:12.884
+we need to implement for a WebSocket obligation,
+
+00:00:12.884 --> 00:00:15.765
+and we'll walk through them one by one.
+
+00:00:15.765 --> 00:00:17.685
+If you're following instruction,
+
+00:00:17.684 --> 00:00:21.824
+you have your spring put WebSocket application ready.
+
+00:00:21.824 --> 00:00:24.855
+As you can see, with Spring put framework,
+
+00:00:24.855 --> 00:00:29.385
+we can design and implement a web application easily.
+
+00:00:29.385 --> 00:00:31.560
+In the next session,
+
+00:00:31.559 --> 00:00:37.914
+I'm going to show you how to package this application with Maven plugins,
+
+00:00:37.914 --> 00:00:44.369
+so that your application will be production ready. Stay tuned.
+

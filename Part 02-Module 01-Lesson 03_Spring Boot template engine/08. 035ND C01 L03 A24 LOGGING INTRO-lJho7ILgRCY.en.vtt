@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:07.184
+Spring Boot supports Java Util logging; Log4j2 and LogBack.
+
+00:00:07.184 --> 00:00:11.144
+By default, it uses LogBack.
+
+00:00:11.144 --> 00:00:13.589
+With this login components,
+
+00:00:13.589 --> 00:00:18.480
+you can configure constant login as well as far login,
+
+00:00:18.480 --> 00:00:23.070
+for you to quickly detect problems and solve the problems.
+
+00:00:23.070 --> 00:00:25.138
+With this login components,
+
+00:00:25.138 --> 00:00:28.530
+you can configure the constant login as well as
+
+00:00:28.530 --> 00:00:34.125
+far login for you to quickly detect problems and the source of the problems.
+
+00:00:34.125 --> 00:00:40.784
+The default Spring Boot login provide the following information: Date, time,
+
+00:00:40.784 --> 00:00:44.864
+log level, process ID,
+
+00:00:44.865 --> 00:00:50.145
+thread name, logger name, and log message.
+
+00:00:50.145 --> 00:00:53.980
+With all the informations you get from the login,
+
+00:00:53.979 --> 00:00:59.949
+you should be able to track and solving your problem quickly.
+

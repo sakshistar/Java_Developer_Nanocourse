@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.585
+Here are some STOMP commands,
+
+00:00:03.585 --> 00:00:08.384
+where you can see that you can connect it to the broker,
+
+00:00:08.384 --> 00:00:15.734
+you can send a message, you can subscribe, unsubscribe, acknowledge, disconnect.
+
+00:00:15.734 --> 00:00:22.210
+If you're interested to understand each components and how they are work,
+
+00:00:22.210 --> 00:00:27.900
+please take a look at the link I gave in the task.
+
+00:00:27.899 --> 00:00:32.769
+WebSocket includes the following component.
+
+00:00:33.979 --> 00:00:43.809
+WebSocketConfig is a config fall to create WebSocket and add message broker information.
+
+00:00:43.810 --> 00:00:48.225
+Message is what we get from UI.
+
+00:00:48.225 --> 00:00:55.620
+We use message wrapper to add some contexts and pushed back to UI.
+
+00:00:55.780 --> 00:01:00.600
+Message controller receive message from you UI,
+
+00:01:00.600 --> 00:01:04.185
+process it, and edit to the broker.
+
+00:01:04.185 --> 00:01:08.950
+UI is where user has all the inputs
+

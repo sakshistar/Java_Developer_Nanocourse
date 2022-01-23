@@ -1,0 +1,16 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.399
+Any program languages, unit tests are
+
+00:00:02.399 --> 00:00:06.660
+important parts to make sure your code runs the problem,
+
+00:00:06.660 --> 00:00:12.600
+and your code does not break other ones code after submitting your code.
+
+00:00:12.599 --> 00:00:17.980
+Let's learn how to write unit tests for Spring Boot application. Shall we?
+

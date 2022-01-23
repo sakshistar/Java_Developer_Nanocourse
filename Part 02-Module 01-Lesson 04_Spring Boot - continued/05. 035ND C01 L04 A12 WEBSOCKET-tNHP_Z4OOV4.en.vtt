@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.724
+First of all, we need to define the model and then contest the message
+
+00:00:04.724 --> 00:00:10.425
+and message rubber to be passed between client-side and server-side.
+
+00:00:10.425 --> 00:00:16.935
+In this example, we're defining the message as a user class,
+
+00:00:16.934 --> 00:00:21.494
+and we add one attribute name in this class.
+
+00:00:21.495 --> 00:00:30.520
+We define the message rubber as user response clause with one attribute content.
+

@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.040
+If you follow the instruction,
+
+00:00:02.040 --> 00:00:05.790
+you'll see the log domain appear in the console
+
+00:00:05.790 --> 00:00:10.289
+and the log file you've defined in your application.property file.
+
+00:00:10.289 --> 00:00:18.179
+As you can see, we added a dependency for log4j2, your pom.xml.
+
+00:00:18.179 --> 00:00:24.314
+We have added the log file paths in our controller.
+
+00:00:24.315 --> 00:00:29.800
+This will trigger when I go to the log.pass.
+
+00:00:30.679 --> 00:00:36.750
+Let's take a look. So I'm trying to trigger
+
+00:00:36.750 --> 00:00:43.890
+that and then we'll see that error seeing will be logged on here.
+
+00:00:47.840 --> 00:00:53.200
+If you open the log file, you'll see that as well.
+

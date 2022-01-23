@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.360
+If you set up the Bean Glenbow correctly and look carefully into the Castle Stack Trace,
+
+00:00:06.360 --> 00:00:10.859
+you may notice that where this time using Bean instead of
+
+00:00:10.859 --> 00:00:15.899
+servlet component scan to create a servlet, filter and listener.
+
+00:00:15.900 --> 00:00:18.839
+Before you jumped into to understand what a Bean is,
+
+00:00:18.839 --> 00:00:21.059
+we want to know what is IoC?
+
+00:00:21.059 --> 00:00:28.210
+IoC is a process in which an object define its dependencies without creating them.
+
+00:00:28.399 --> 00:00:32.579
+For Bean, it's an object that is initiated,
+
+00:00:32.579 --> 00:00:38.880
+assembled, and otherwise managed by a spring IoC container.
+

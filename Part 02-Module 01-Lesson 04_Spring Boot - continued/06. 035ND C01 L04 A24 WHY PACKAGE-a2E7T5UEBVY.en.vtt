@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.365
+Assume you have no problem running your application locally,
+
+00:00:04.365 --> 00:00:08.370
+but our angle is to make this application running
+
+00:00:08.369 --> 00:00:12.974
+on server so people from different location can use it.
+
+00:00:12.974 --> 00:00:19.869
+To achieve that, we need to make sure our application is packaged.
+
+00:00:21.620 --> 00:00:25.900
+There are two types of packaging strategy.
+
+00:00:26.269 --> 00:00:30.839
+We can pack that into a JAR file.
+
+00:00:30.839 --> 00:00:33.299
+The JAR file contains library's,
+
+00:00:33.299 --> 00:00:38.569
+resource, and accessories files like property file.
+
+00:00:38.570 --> 00:00:42.304
+We can also pack that into WAR file.
+
+00:00:42.304 --> 00:00:50.950
+The WAR file contains web application that can be deployed on any server or container.
+
+00:00:50.950 --> 00:00:55.109
+The WAR file contains JSP, HTML, JavaScript,
+
+00:00:55.109 --> 00:01:01.429
+and other files necessary for the development of web application.
+
+00:01:01.429 --> 00:01:07.750
+In this session, we're only going to cover JAR file packaging.
+

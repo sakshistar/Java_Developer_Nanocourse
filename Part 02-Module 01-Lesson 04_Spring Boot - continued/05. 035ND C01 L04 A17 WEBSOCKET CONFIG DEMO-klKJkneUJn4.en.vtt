@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.724
+Let's take a look at the config file we created for the WebSocket application.
+
+00:00:04.724 --> 00:00:07.184
+As you can see in the demo,
+
+00:00:07.184 --> 00:00:11.234
+we have created a WebSocketConfig class
+
+00:00:11.234 --> 00:00:16.064
+which implements the WebSocketMessageBrokerConfigurer class,
+
+00:00:16.065 --> 00:00:23.109
+and override registers stompEndpoints and ConfigureMessageBroker are missing.
+
+00:00:24.530 --> 00:00:30.150
+In this method, we are creating a broker.
+
+00:00:30.149 --> 00:00:33.239
+So we're defining an endpoint,
+
+00:00:33.240 --> 00:00:35.460
+and in here, we are saying,
+
+00:00:35.460 --> 00:00:37.875
+we are using SockJS.
+
+00:00:37.875 --> 00:00:41.024
+In the ConfigMessageBroker method,
+
+00:00:41.024 --> 00:00:48.179
+we are enabling this broker and we add a prefix for it.
+
+00:00:48.179 --> 00:00:56.575
+Then we add an application destination prefix to send the message to the correct channel.
+
+00:00:56.575 --> 00:00:59.325
+After we're done with all the class,
+
+00:00:59.325 --> 00:01:03.885
+we annotate this class with configuration.
+
+00:01:03.884 --> 00:01:05.998
+Also with this annotation,
+
+00:01:05.998 --> 00:01:10.140
+we enabled the WebSocketMessageBroker.
+

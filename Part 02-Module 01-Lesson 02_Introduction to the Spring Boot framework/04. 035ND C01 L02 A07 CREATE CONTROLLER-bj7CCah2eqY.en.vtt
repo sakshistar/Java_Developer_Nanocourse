@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.355
+In this video, we're going to add
+
+00:00:02.355 --> 00:00:05.910
+a controller to already existing Hello World application,
+
+00:00:05.910 --> 00:00:09.794
+to mix the application of web application.
+
+00:00:09.794 --> 00:00:13.769
+The controller will return a JSON to user.
+
+00:00:13.769 --> 00:00:16.394
+If you don't know what JSON is,
+
+00:00:16.394 --> 00:00:20.439
+please take a look at the link in the text.
+

@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.200
+Servlet is a technology API or clause
+
+00:00:04.200 --> 00:00:08.594
+that is used to handle requests in web applications.
+
+00:00:08.595 --> 00:00:12.405
+Servlet resides in server-side.
+
+00:00:12.404 --> 00:00:17.640
+Spring Boot use Servlet to receive requests from client side.
+
+00:00:17.640 --> 00:00:21.480
+There are two ways in Spring Boot to use Servlet,
+
+00:00:21.480 --> 00:00:27.435
+which is using the Servlet components scan annotation,
+
+00:00:27.434 --> 00:00:30.644
+or using Bean annotation.
+
+00:00:30.644 --> 00:00:35.740
+I'm going to cover these two topics separately in the next video.
+

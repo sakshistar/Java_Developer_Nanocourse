@@ -1,0 +1,94 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.619
+If you follow the instruction,
+
+00:00:01.619 --> 00:00:04.349
+let's take a look at the project you just created and get
+
+00:00:04.349 --> 00:00:08.219
+familiar with what each photo contains.
+
+00:00:08.220 --> 00:00:12.359
+So we're creating a source folder.
+
+00:00:12.359 --> 00:00:15.794
+Inside of the source, we have a main package,
+
+00:00:15.794 --> 00:00:21.644
+Java, the com, and spring are all the packages we have.
+
+00:00:21.644 --> 00:00:25.155
+We have a HelloWorldApplication.java,
+
+00:00:25.155 --> 00:00:30.100
+which is the entry point of the Spring Boot application.
+
+00:00:30.140 --> 00:00:33.704
+Inside of the resource folder,
+
+00:00:33.704 --> 00:00:36.839
+we have application.properties file,
+
+00:00:36.840 --> 00:00:40.405
+which is a configuration file for the Spring Boot application
+
+00:00:40.405 --> 00:00:44.924
+where we can define the login information,
+
+00:00:44.924 --> 00:00:47.699
+debugging information, and change
+
+00:00:47.700 --> 00:00:52.365
+the default configuration for the Spring Boot application.
+
+00:00:52.365 --> 00:01:01.240
+In here, we have a static folder where we can put other other HTMLs in here,
+
+00:01:01.250 --> 00:01:04.810
+or images file, or CSS file in here,
+
+00:01:04.810 --> 00:01:07.725
+or the static file inside this folder.
+
+00:01:07.724 --> 00:01:10.484
+For the template files folder,
+
+00:01:10.484 --> 00:01:17.069
+we put in our template engine or templates into this folder.
+
+00:01:17.709 --> 00:01:24.744
+There is another folder called test where we put all our unit tests in here.
+
+00:01:24.745 --> 00:01:27.109
+It's similar to Java.
+
+00:01:27.510 --> 00:01:34.105
+In here is pom.xml is a Maven configuration file.
+
+00:01:34.105 --> 00:01:38.250
+Remember that we're creating the springboard application,
+
+00:01:38.250 --> 00:01:41.034
+we are using the Maven based.
+
+00:01:41.034 --> 00:01:42.979
+So if you're using Window,
+
+00:01:42.980 --> 00:01:45.460
+there will be a different follow here.
+
+00:01:45.459 --> 00:01:50.644
+So that's it off our Spring Boot project structure.
+
+00:01:50.644 --> 00:01:53.519
+Hopefully, you understand the structure,
+
+00:01:53.519 --> 00:01:55.829
+where you put each files,
+
+00:01:55.829 --> 00:01:59.530
+and how to use each file in here.
+

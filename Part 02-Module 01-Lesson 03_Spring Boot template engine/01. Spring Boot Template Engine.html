@@ -1,0 +1,338 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spring Boot Template Engine</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Spring Boot template engine</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Spring Boot Template Engine.html">01. Spring Boot Template Engine</a>
+    </li>
+    <li class="">
+      <a href="02. Spring Boot Template Engine - Thymeleaf.html">02. Spring Boot Template Engine - Thymeleaf</a>
+    </li>
+    <li class="">
+      <a href="03. Thymeleaf - Variable.html">03. Thymeleaf - Variable</a>
+    </li>
+    <li class="">
+      <a href="04. Thymeleaf - Condition.html">04. Thymeleaf - Condition</a>
+    </li>
+    <li class="">
+      <a href="05. Thymeleaf - Loop.html">05. Thymeleaf - Loop</a>
+    </li>
+    <li class="">
+      <a href="06. Thymeleaf - Scope.html">06. Thymeleaf - Scope</a>
+    </li>
+    <li class="">
+      <a href="07. Thymeleaf - URL.html">07. Thymeleaf - URL</a>
+    </li>
+    <li class="">
+      <a href="08. Spring Boot Unit Test, Hot Swap And Logging.html">08. Spring Boot Unit Test, Hot Swap And Logging</a>
+    </li>
+    <li class="">
+      <a href="09. Spring Boot Form Validation.html">09. Spring Boot Form Validation</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Spring Boot Template Engine</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In the previous lesson, we have introduced microservice, MVC framework and Spring Boot framework. I believe now you have a good sense about how to create a simple Spring Boot application. Let’s continue our Spring Boot journey. In this lesson we are going to learn the  Spring Boot template engine and a persistence framework. There are three major template engines in Spring Boot which are: </p>
+<ol>
+<li>Freemarker</li>
+<li>JSP</li>
+<li>Thymeleaf<br />
+We are going to focus on Thymeleaf for this course. But I will still give you a brief introduction on Freemarker. I won’t cover JSP, because it is not widely used in spring boot application.</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A01 WELCOME</p></h3>
+  <video controls>
+  <source src="01. 035ND C01 L03 A01 WELCOME-Prbodc9EvZA.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="01. 035ND C01 L03 A01 WELCOME-Prbodc9EvZA.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="freemarker-introduction">Freemarker Introduction</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>FreeMarker is a Java based template engine package from Apache. </p>
+<p>Actually I was one of the contributors for that project. It’s become a fully accepted Apache project in 2018. </p>
+<p>FreeMarker work as a sequential text processor which is a different approach compared to Thymeleaf. But again, FreeMarker is a new project, and I see the potential in it. In this lesson, we are going to briefly show how to use FreeMarker in SpringBoot. If you are interested in FreeMarker, please feel free to check it out at its website: <a href="https://freemarker.apache.org/" target="_blank">https://freemarker.apache.org/</a>. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="instructions">Instructions</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>(Resources: Freemaker: <a href="https://freemarker.apache.org/" target="_blank">https://freemarker.apache.org/</a>. )</p>
+<p>Goto <a href="https://start.spring.io/" target="_blank">https://start.spring.io/</a> change artifact to freemarker</p>
+<p>Add web-starter and freemarker as dependency.</p>
+<p>Download, unzip and import the project.</p>
+<p>Create a model directory and create Student class with id, studentname, and grade as our model. Make sure you set up the constructor.</p>
+<pre><code>public class Student {
+   private Integer Id;
+   private String studentName;
+   private double grade;
+
+   public Student(Integer id, String studentName, double grade) {
+       Id = id;
+       this.studentName = studentName;
+       this.grade = grade;
+   }
+
+   public double getGrade() {
+       return grade;
+   }
+
+   public void setGrade(double grade) {
+       this.grade = grade;
+   }
+
+   public String getStudentName() {
+       return studentName;
+   }
+
+   public void setStudentName(String studentName) {
+       this.studentName = studentName;
+   }
+
+   public Integer getId() {
+
+       return Id;
+   }
+
+   public void setId(Integer id) {
+       Id = id;
+   }
+}</code></pre>
+<p>Create a controller directory and create a StudentList class as our controller. </p>
+<pre><code>@Controller
+public class StudentList {
+
+   @RequestMapping("/list")
+   public String list(Model model) {
+       List&lt;Student&gt; list = new ArrayList&lt;&gt;();
+       list.add(new Student(1, "Tom", 80.5));
+       list.add(new Student(2, "Jerry", 90.4));
+       list.add(new Student(3, "Paul", 77.5));
+       model.addAttribute("list", list);
+       return "list";
+   }
+}</code></pre>
+<p>Create a list.html in resource/templates contents below</p>
+<pre><code>&lt;html&gt;
+   &lt;title&gt;Student List&lt;/title&gt;
+   &lt;meta charset="utf-8" /&gt;
+   &lt;body&gt;
+       &lt;h3&gt;Student Grade Table&lt;/h3&gt;
+       &lt;table&gt;
+           &lt;tr&gt;
+               &lt;th&gt;Student ID&lt;/th&gt;
+               &lt;th&gt;Student Name&lt;/th&gt;
+               &lt;th&gt;Grade&lt;/th&gt;
+           &lt;/tr&gt;
+           &lt;#list list as student&gt;
+           &lt;tr&gt;
+               &lt;td&gt;${student.id}&lt;/td&gt;
+               &lt;td&gt;${student.studentName}&lt;/td&gt;
+               &lt;td&gt;${student.grade}&lt;/td&gt;
+           &lt;tr&gt;
+           &lt;/#list&gt;
+       &lt;/table&gt;
+   &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Start the application and goto localhost:8080/list</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="spring-boot-with-freemarker">Spring Boot with Freemarker</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A02 SPRINGBOOT WITH FREEMARKER</p></h3>
+  <video controls>
+  <source src="01. 035ND C01 L03 A02 SPRINGBOOT WITH FREEMARKER-Cdqb1sX8xBA.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="01. 035ND C01 L03 A02 SPRINGBOOT WITH FREEMARKER-Cdqb1sX8xBA.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Few things you might noticed during the development. We are using <a href="https://github.com/Controller" target="_blank">@Controller</a> this time rather than <a href="https://github.com/RestController" target="_blank">@RestController</a>. To clarify, <a href="https://github.com/RestController" target="_blank">@RestController</a> is used to tell that the response sent from your controller should be sent to the browser, usually an object mapped to json. It is the same as adding <a href="https://github.com/ResponseBody" target="_blank">@ResponseBody</a>.</p>
+<p>We are adding the view in template rather than static folder.</p>
+<p>We are creating a student model with three attributes. And the controller send a student List back to the freemarker view. Please take a look at the freemarker’s syntax and understand how it works.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Spring Boot Template Engine - Thymeleaf.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Spring Boot Template Engine')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

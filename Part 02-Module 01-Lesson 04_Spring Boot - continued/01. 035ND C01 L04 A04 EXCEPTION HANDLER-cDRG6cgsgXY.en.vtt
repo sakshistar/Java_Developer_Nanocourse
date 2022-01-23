@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.555
+So if you set up correctly on this,
+
+00:00:02.555 --> 00:00:06.005
+let's walk through the demo two we have for exceptions.
+
+00:00:06.004 --> 00:00:08.464
+What we defined in our controller is,
+
+00:00:08.464 --> 00:00:14.189
+we have an add method which will give you the mass exception.
+
+00:00:14.189 --> 00:00:18.975
+Yes, you can see that you are leading to a numeric overflow exception,
+
+00:00:18.975 --> 00:00:24.885
+and we have an update which are leading to a NullPointer exception.
+
+00:00:24.885 --> 00:00:27.045
+What we're adding here is,
+
+00:00:27.045 --> 00:00:33.554
+we are adding two method and we annotate it with exception handler.
+
+00:00:33.554 --> 00:00:41.159
+Each exception handler will take in one exception, let's take look.
+
+00:00:43.159 --> 00:00:49.809
+Each exception we're leading to a different HTML page.
+
+00:00:50.299 --> 00:00:55.959
+So to mathError we're leading to that mass exception,
+
+00:00:56.329 --> 00:01:02.234
+mathError.html and the nullPointerError we're leading that to the
+
+00:01:02.234 --> 00:01:08.340
+nullPointerError.html so that if you have different exceptions,
+
+00:01:08.340 --> 00:01:13.579
+you could take the user to a different error page.
+
+00:01:14.569 --> 00:01:18.464
+Let's take a look. So we're coming here,
+
+00:01:18.465 --> 00:01:20.355
+if we use add a number,
+
+00:01:20.355 --> 00:01:26.175
+for the ADD, we have a math exception, numeric overflow exception.
+
+00:01:26.174 --> 00:01:31.539
+Now let's go to a different view now and I'll try update.
+
+00:01:31.700 --> 00:01:37.070
+So the update should go to find a NullPointerException.
+
+00:01:37.069 --> 00:01:40.679
+Now we are going to that view as well.
+

@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.665
+In the last video, we have used NotBlank annotation to check
+
+00:00:04.665 --> 00:00:10.859
+if the string entered for username and password is null or empty.
+
+00:00:10.859 --> 00:00:19.365
+Let's try to use other annotations and see if we can improve this application.
+
+00:00:19.364 --> 00:00:24.404
+So in addition to checking the username and password.
+
+00:00:24.405 --> 00:00:30.900
+In this demo, I'm also checking the length of the password so
+
+00:00:30.899 --> 00:00:40.019
+that it has minimum length of six and maximum of 10.
+
+00:00:40.020 --> 00:00:43.020
+I also check to see on the grade,
+
+00:00:43.020 --> 00:00:48.090
+because grade cannot be negative or more than 100.
+
+00:00:48.090 --> 00:00:57.359
+I'm using an e-mail validation tag to check the format of the e-mail input by user.
+
+00:00:59.240 --> 00:01:01.289
+So that's our model.
+
+00:01:01.289 --> 00:01:04.510
+Let's take a look at the controller we have.
+
+00:01:04.700 --> 00:01:08.144
+So the controller is part of the scene,
+
+00:01:08.144 --> 00:01:12.334
+it's only difference is we're adding the binding result
+
+00:01:12.334 --> 00:01:17.719
+to our controller so that if anything is incorrect,
+
+00:01:17.719 --> 00:01:23.060
+so we're binding other result here and sending back to the view.
+
+00:01:26.540 --> 00:01:29.405
+In our view as you can see,
+
+00:01:29.405 --> 00:01:38.734
+we're adding all the error statement for each attribute or each element in this form.
+
+00:01:38.734 --> 00:01:41.620
+Let's try to test it.
+
+00:01:41.900 --> 00:01:45.190
+So you can see that we have our form here.
+
+00:01:45.189 --> 00:01:48.814
+Let's try to input some invite data.
+
+00:01:48.814 --> 00:01:50.310
+Let's leave this blank,
+
+00:01:50.310 --> 00:01:52.680
+let's have three digit for the password,
+
+00:01:52.680 --> 00:01:55.095
+let's have a negative grade,
+
+00:01:55.094 --> 00:01:59.950
+and lets have an inverted e-mail for the e-mail field.
+
+00:02:01.280 --> 00:02:08.245
+We click that you will see that the error is returned to the view and go rendered,
+
+00:02:08.245 --> 00:02:18.349
+and you will find the form is validated with all the validation annotation we have.
+
+00:02:18.349 --> 00:02:25.444
+So here are some common annotations for use to validate Spring Boot.
+
+00:02:25.444 --> 00:02:33.435
+NotBlank, NotEmpty, Length which include the max and minimum.
+
+00:02:33.435 --> 00:02:38.800
+It's a Min, Max, Email, etc.
+
+00:02:38.800 --> 00:02:40.710
+So while using this,
+
+00:02:40.710 --> 00:02:47.830
+we can use all of this annotations to validate the user inputs in Spring Boot.
+

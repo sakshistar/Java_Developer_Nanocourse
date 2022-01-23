@@ -1,0 +1,463 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spring Boot Form Validation</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Spring Boot template engine</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Spring Boot Template Engine.html">01. Spring Boot Template Engine</a>
+    </li>
+    <li class="">
+      <a href="02. Spring Boot Template Engine - Thymeleaf.html">02. Spring Boot Template Engine - Thymeleaf</a>
+    </li>
+    <li class="">
+      <a href="03. Thymeleaf - Variable.html">03. Thymeleaf - Variable</a>
+    </li>
+    <li class="">
+      <a href="04. Thymeleaf - Condition.html">04. Thymeleaf - Condition</a>
+    </li>
+    <li class="">
+      <a href="05. Thymeleaf - Loop.html">05. Thymeleaf - Loop</a>
+    </li>
+    <li class="">
+      <a href="06. Thymeleaf - Scope.html">06. Thymeleaf - Scope</a>
+    </li>
+    <li class="">
+      <a href="07. Thymeleaf - URL.html">07. Thymeleaf - URL</a>
+    </li>
+    <li class="">
+      <a href="08. Spring Boot Unit Test, Hot Swap And Logging.html">08. Spring Boot Unit Test, Hot Swap And Logging</a>
+    </li>
+    <li class="">
+      <a href="09. Spring Boot Form Validation.html">09. Spring Boot Form Validation</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. Spring Boot Form Validation</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>035ND C01 L03 A27 VALIDATION</p></h3>
+  <video controls>
+  <source src="09. 035ND C01 L03 A27 VALIDATION-WL6kbDDFQgU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="09. 035ND C01 L03 A27 VALIDATION-WL6kbDDFQgU.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="instructions">Instructions</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ol>
+<li>Goto <a href="https://start.spring.io/" target="_blank">https://start.spring.io/</a> and create a Spring Boot project named: spring-boot-validation. With web and thymeleaf, devtool as dependency.</li>
+<li>Create a User model. Please generate the getter and setter (<strong>important</strong>)</li>
+</ol>
+<pre><code>import javax.validation.constraints.NotBlank;
+
+public class User {
+   @NotBlank(message = "username cannot be empty")
+   private String name;
+   @NotBlank(message = "password cannot be empty")
+   private String password;
+   private Double grade;
+
+   public User(String name, String password, Double grade) {
+       this.name = name;
+       this.password = password;
+       this.grade = grade;
+   }
+}</code></pre>
+<ul>
+<li>Create a UserController</li>
+</ul>
+<pre><code>package com.example.springbootvalidation.controller;
+
+import com.example.springbootvalidation.model.User;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.validation.Valid;
+
+@Controller
+public class UserController {
+
+   @RequestMapping("add")
+   public String toAdd(User user) {
+       return "add";
+   }
+
+   @RequestMapping("addUser")
+   public String add(@Valid User user, BindingResult result) {
+       if (result.hasErrors()) {
+           return "add";
+       }
+       System.out.println("Save user =" + user);
+       return "success";
+   }
+}</code></pre>
+<ul>
+<li>Add add.html in templates</li>
+</ul>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;title&gt;Add User&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3&gt;Add User&lt;/h3&gt;
+
+&lt;form action="addUser" method="post"&gt;
+Username: &lt;input type="text" name="name" /&gt;
+&lt;span th:errors="${user.name}" style="color:red"&gt;&lt;/span&gt;&lt;br /&gt;
+Password: &lt;input type="password" name="password"/&gt;&lt;br /&gt;
+&lt;span th:errors="${user.password}" style="color:red"&gt;&lt;/span&gt;&lt;br /&gt;
+Grade: &lt;input type="text" name="grade" /&gt;&lt;br /&gt;
+&lt;input type="submit" value="Add" &gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<ul>
+<li>Add success.html in templates</li>
+</ul>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;title&gt;Successful&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+User successfully added.
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A28 VALIDATION EXAMPLE EXPLAIN</p></h3>
+  <video controls>
+  <source src="09. 035ND C01 L03 A28 VALIDATION EXAMPLE EXPLAIN-h85_6bQ8tWI.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="09. 035ND C01 L03 A28 VALIDATION EXAMPLE EXPLAIN-h85_6bQ8tWI.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Spring Boot Validation Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Object is used by a request processing method to check validation failure</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899634" id="rbk1">
+        <label for="rbk1"><p>BindingResult</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899634" id="rbk2">
+        <label for="rbk2"><p>ValidationBinding</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    BindingResult
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A29 VALIDATION DEMO</p></h3>
+  <video controls>
+  <source src="09. 035ND C01 L03 A29 VALIDATION DEMO-VMigHOlqGWI.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="09. 035ND C01 L03 A29 VALIDATION DEMO-VMigHOlqGWI.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="spring-boot-validation-common-annotations">Spring Boot Validation Common Annotations</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A30 VALIDATION ANNOTATIONS V2</p></h3>
+  <video controls>
+  <source src="09. 035ND C01 L03 A30 VALIDATION ANNOTATIONS V2-SXcOm-NJ1cM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="09. 035ND C01 L03 A30 VALIDATION ANNOTATIONS V2-SXcOm-NJ1cM.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Common validation annotations:</p>
+<p><a href="https://github.com/NotBlank" target="_blank">@NotBlank</a>: check if string is null or empty after trimmed the front and end spaces.</p>
+<p><a href="https://github.com/NotEmpty" target="_blank">@NotEmpty</a>: check if string is null or empty without trim the front and end spaces.</p>
+<p><a href="https://github.com/Length" target="_blank">@Length</a>: check string length, include max and min.</p>
+<p><a href="https://github.com/Min" target="_blank">@Min</a>: check min, cannot be less. for instance if <a href="https://github.com/Min" target="_blank">@Min</a>(0), then input should not less than 0.</p>
+<p><a href="https://github.com/Max" target="_blank">@Max</a>: check max, cannot be over.</p>
+<p><a href="https://github.com/Emai" target="_blank">@Emai</a>: check email format, should be <a href="&#x6d;&#x61;&#x69;lt&#111;&#58;&#88;&#x58;&#x40;&#x58;&#x58;&#x2e;&#x58;&#x58;">XX&#64;&#x58;&#88;&#46;&#x58;&#x58;</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Spring Boot Validation Common Annotations Example Prep</p></h3>
+  <div>
+  <p>Update User  to use code below, again please generate the getter and setter yourself (<strong>important</strong>)</p>
+<pre><code>import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+
+public class User {
+   @NotBlank(message = "username cannot be empty")
+   private String name;
+   @NotBlank(message = "password cannot be empty")
+   @Length(min=6, max=10, message="length of password should between 6 to 10 characters")
+   private String password;
+   @Min(value=0)
+   @Max(value=100)
+   private Double grade;
+   @Email
+   private String email;
+
+   public User(String name, String password, Double grade, String email) {
+       this.name = name;
+       this.password = password;
+       this.grade = grade;
+       this.email = email;
+   }
+}</code></pre>
+<p>Update add.html to code below</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;title&gt;Add User&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3&gt;Add User&lt;/h3&gt;
+
+&lt;form action="addUser" method="post"&gt;
+&lt;span th:errors="${user.name}" style="color:red"&gt;&lt;/span&gt;&lt;br /&gt;
+Username: &lt;input type="text" name="name" /&gt;&lt;br /&gt;
+&lt;span th:errors="${user.password}" style="color:red"&gt;&lt;/span&gt;&lt;br /&gt;
+Password: &lt;input type="password" name="password"/&gt;&lt;br /&gt;
+&lt;span th:errors="${user.grade}" style="color:red"&gt;&lt;/span&gt;&lt;br /&gt;
+Grade: &lt;input type="text" name="grade" /&gt;&lt;br /&gt;
+&lt;span th:errors="${user.email}" style="color:red"&gt;&lt;/span&gt;&lt;br /&gt;
+Email: &lt;input type="text" name="email" /&gt;&lt;br /&gt;
+&lt;input type="submit" value="Add" &gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A31 VALIDATION ANNOTATIONS EXAMPLE</p></h3>
+  <video controls>
+  <source src="09. 035ND C01 L03 A31 VALIDATION ANNOTATIONS EXAMPLE-d2CUJeeJmBI.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="09. 035ND C01 L03 A31 VALIDATION ANNOTATIONS EXAMPLE-d2CUJeeJmBI.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Spring Boot Validation Common Annotations Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>If we create a field, this field should allow string like “ “, but does not allow null string. Which validation annotation I should use.</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899627" id="rbk1">
+        <label for="rbk1"><p><a href="https://github.com/NotBlank" target="_blank">@NotBlank</a></p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899627" id="rbk2">
+        <label for="rbk2"><p><a href="https://github.com/NotEmpty" target="_blank">@NotEmpty</a></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    @NotEmpty
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A32 LESSON RECAP V2</p></h3>
+  <video controls>
+  <source src="09. 035ND C01 L03 A32 LESSON RECAP V2-VuRK_KEqQr8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="09. 035ND C01 L03 A32 LESSON RECAP V2-VuRK_KEqQr8.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. Spring Boot Form Validation')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

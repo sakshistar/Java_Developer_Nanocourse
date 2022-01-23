@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.019
+Various exception handling method, a very good.
+
+00:00:04.019 --> 00:00:07.109
+But the problem is you have to find
+
+00:00:07.110 --> 00:00:11.685
+other exception types and write code to call all of them.
+
+00:00:11.685 --> 00:00:17.925
+Instead, I'm going to introduce a relatively easy approach,
+
+00:00:17.925 --> 00:00:21.929
+which is using the simple mapping exception resolver.
+
+00:00:21.929 --> 00:00:29.214
+Each map, each category of exceptions to a view in a configurable way.
+
+00:00:29.214 --> 00:00:33.994
+So instead of using the global exception hunger to define
+
+00:00:33.994 --> 00:00:39.484
+each individual exceptions in individual method,
+
+00:00:39.484 --> 00:00:43.715
+we're creating one method to handle all the exceptions.
+
+00:00:43.715 --> 00:00:52.120
+What do we do is, we initiate a simple mapping exception resolver in the method.
+
+00:00:52.119 --> 00:00:56.625
+Where we're putting other exception
+
+00:00:56.625 --> 00:01:02.359
+and the exception views into the map as a key value pair.
+
+00:01:02.359 --> 00:01:10.984
+Let's take a look. So error seems pretty much as soon as we did to handle the exceptions.
+
+00:01:10.984 --> 00:01:17.120
+What differences is, rather than reading the message one-by-one,
+
+00:01:17.120 --> 00:01:19.625
+we're adding those to a map.
+
+00:01:19.625 --> 00:01:25.170
+So our code is much more easier to manage.
+

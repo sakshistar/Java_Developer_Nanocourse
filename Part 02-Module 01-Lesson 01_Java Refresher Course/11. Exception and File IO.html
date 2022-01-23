@@ -1,0 +1,579 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exception and File IO</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Java Refresher Course</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Java Introduction.html">01. Java Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Java Basic APIs.html">02. Java Basic APIs</a>
+    </li>
+    <li class="">
+      <a href="03. Java Basic APIs - String.html">03. Java Basic APIs - String</a>
+    </li>
+    <li class="">
+      <a href="04. Java Basic APIs - StringBuilder, StringBuffer, Regex.html">04. Java Basic APIs - StringBuilder, StringBuffer, Regex</a>
+    </li>
+    <li class="">
+      <a href="05. Java Basic APIs - Binary Search, Recursion, Big-O Notation.html">05. Java Basic APIs - Binary Search, Recursion, Big-O Notation</a>
+    </li>
+    <li class="">
+      <a href="06. Collections.html">06. Collections</a>
+    </li>
+    <li class="">
+      <a href="07. Collections - List.html">07. Collections - List</a>
+    </li>
+    <li class="">
+      <a href="08. Collections - Stack and Queue.html">08. Collections - Stack and Queue</a>
+    </li>
+    <li class="">
+      <a href="09. Collections - Map and Set.html">09. Collections - Map and Set</a>
+    </li>
+    <li class="">
+      <a href="10. Environment Setup.html">10. Environment Setup</a>
+    </li>
+    <li class="">
+      <a href="11. Exception and File IO.html">11. Exception and File IO</a>
+    </li>
+    <li class="">
+      <a href="12. Java Programming Practice Exercises.html">12. Java Programming Practice Exercises</a>
+    </li>
+    <li class="">
+      <a href="13. Java Refresher Course - Summary.html">13. Java Refresher Course - Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">11. Exception and File IO</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="exception">Exception</h1>
+<p>Exception is a problem that arises during run-time. Let’s try the following example in code.</p>
+<pre><code>10 / 0
+List&lt;Integer&gt; lst = null; int size = lst.size();
+String s = "FOOBAR"; int i = Integer.parseInt(s);
+Int[] a = {1, 2, 3}; System.out.println(a[3]);</code></pre>
+<p>If there is no exception handling mechanism, when exception happens, the system basically crash. Therefore, we need to find a way to properly handle our exceptions, so we can find out the problem while keeping our application running.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L01 A16 EXCEPTION AND JAVA IO V2 (Post Launch) 1</p></h3>
+  <video controls>
+  <source src="11. 035ND C01 L01 A16 EXCEPTION AND JAVA IO V2 (Post Launch) 1-o9yikSy7D2I.mp4" type="video/mp4">
+
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Exception keywords:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2019-07-09-at-3.45.35-pm.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Create a program like </p>
+<pre><code>public class JavaExceptionExample{  
+  public static void main(String args[]){  
+   try{  
+      //code that may raise exception  
+      int data=100/0;  
+   }catch(ArithmeticException e){System.out.println(e);}  
+   //rest code of the program   
+   System.out.println("rest of the code...");  
+  }  
+}  </code></pre>
+<p>You will see that, you can see the error, but the rest of the code is still running. Add a final block as well.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L01 A17 EXCEPTION AND HANDLE EXCEPTION</p></h3>
+  <video controls>
+  <source src="11. 035ND C01 L01 A17 EXCEPTION AND HANDLE EXCEPTION-aK0UlU5VI9k.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="11. 035ND C01 L01 A17 EXCEPTION AND HANDLE EXCEPTION-aK0UlU5VI9k.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exception, Handle Exception Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which exception handling keyword will not actually throw the error?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1565286943166" name="908201" id="a1565286943166">
+        <label for="a1565286943166"><p>throw</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1565287065995" name="908201" id="a1565287065995">
+        <label for="a1565287065995"><p>throws</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    throws
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exception, Handle Exception Quiz 2</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is the built in base class to handle all exceptions in Java? Is It Exception or Throwable?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899127" id="rbk1">
+        <label for="rbk1"><p>Exception</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899127" id="rbk2">
+        <label for="rbk2"><p>Throwable</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Throwable
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L01 A18 HOW TO HANDLE EXCEPTION CODE</p></h3>
+  <video controls>
+  <source src="11. 035ND C01 L01 A18 HOW TO HANDLE EXCEPTION CODE-GSxAgljq0go.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="11. 035ND C01 L01 A18 HOW TO HANDLE EXCEPTION CODE-GSxAgljq0go.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L01 A19 EXCEPTION SUMMARY</p></h3>
+  <video controls>
+  <source src="11. 035ND C01 L01 A19 EXCEPTION SUMMARY-3tMnWgLyqqY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="11. 035ND C01 L01 A19 EXCEPTION SUMMARY-3tMnWgLyqqY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="file-io">File IO</h1>
+<p>Here we are going to cover Java.IO. Java IO is an API that comes with Java to read and write data. Most of the applications today support IO, for instance, ask user to upload a data feed, ask user to upload a photo, generate a PDF after user complete the form, grade students’ online exam and send the report as email. </p>
+<p>IO Stream is like an endless flow of data. You can either read from a stream or write to a stream. A stream is connected to a data source or a data destination. Streams in Java IO can be either byte (reading and writing bytes) based or character based (reading and writing characters).</p>
+<p>The File class in the Java IO API gives you access to the underlying file system. Using the File class you can:</p>
+<ul>
+<li>Check if a file or directory exists.</li>
+<li>Create a directory if it does not exist.</li>
+<li>Read the length of a file.</li>
+<li>Rename or move a file.</li>
+<li>Delete a file.</li>
+<li>Check if path is file or directory.</li>
+<li>Read list of files in a directory.</li>
+</ul>
+<h3 id="resources">Resources:</h3>
+<p>Stream: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html" target="_blank">https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html</a></p>
+<p>File api: <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html" target="_blank">https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L01 A20 FILE IO, STREAMS, FILE APIS</p></h3>
+  <video controls>
+  <source src="11. 035ND C01 L01 A20 FILE IO, STREAMS, FILE APIS-We5x0AnzJsg.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="11. 035ND C01 L01 A20 FILE IO, STREAMS, FILE APIS-We5x0AnzJsg.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>File IO, Streams, File APIs Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>The input/output package usually used with Java is?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899174" id="rbk1">
+        <label for="rbk1"><p>java.input</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899174" id="rbk2">
+        <label for="rbk2"><p>java.inout</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899174" id="rbk3">
+        <label for="rbk3"><p>java.io</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="899174" id="rbk4">
+        <label for="rbk4"><p>java.file</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    java.io
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="stream">Stream</h1>
+<p>Stream is like an endless flow of data. You can either read from a stream or write to a stream. A stream is connected to a data source or a data destination. Streams in Java IO can be either byte (reading and writing bytes) based or character based (reading and writing characters).</p>
+<p>A program that needs to read data from some source needs an InputStream or a Reader. A program that need to write data to some destination needs an OutputStream or a Writer.  Can show a graph like</p>
+<p>[source] -&gt; [input stream/reader] -&gt; [program]</p>
+<p>[program] -&gt; [output stream/writer] -&gt; [destination]</p>
+<p>FileInputStream and FileOutputStream are common input and output stream classes. FileReader and FileWriter are common reader and writer classes. <br />
+We are going to be digging more in the next few videos</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L01 A21 STREAM V@ (Post Launch) 1</p></h3>
+  <video controls>
+  <source src="11. 035ND C01 L01 A21 STREAM V@ (Post Launch) 1-MJoy3KtgA14.mp4" type="video/mp4">
+
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="fileinputstream">FileInputStream</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>FileInputStream</strong> obtains input bytes from a file. It’s used for reading byte-oriented data such as image data, audio, videos. You can also read character-stream data. But, it’s recommended to use FileReader class to read character stream data.</p>
+<p>Java FileOutputStream is an output stream used for writing data to a file. If you have to write primitive values into a file, use FileOutputStream class. You can write byte-oriented as well as character-oriented data through FileOutputStream class. But, for character-oriented data, it is preferred to use FileWriter than FileOutputStream.</p>
+<p>FileReader is used to read character-oriented data from a file and FileWriter class is used to write character-oriented data to a file.</p>
+<h3 id="resources">Resources:</h3>
+<p>FileInputStream: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/FileInputStream.html" target="_blank">https://docs.oracle.com/javase/8/docs/api/java/io/FileInputStream.html</a></p>
+<p>FileOutputStream: <a href="https://docs.oracle.com/javase/8/docs/api/?java/io/FileOutputStream.html" target="_blank">https://docs.oracle.com/javase/8/docs/api/?java/io/FileOutputStream.html</a></p>
+<p>FileReader: <a href="https://docs.oracle.com/javase/9/docs/api/?java/io/FileReader.html" target="_blank">https://docs.oracle.com/javase/9/docs/api/?java/io/FileReader.html</a></p>
+<p>FileWriter: <a href="https://docs.oracle.com/javase/9/docs/api/?java/io/FileWriter.html" target="_blank">https://docs.oracle.com/javase/9/docs/api/?java/io/FileWriter.html</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L01 A22 FILE INPUT</p></h3>
+  <video controls>
+  <source src="11. 035ND C01 L01 A22 FILE INPUT-ScNJx0_tvps.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="11. 035ND C01 L01 A22 FILE INPUT-ScNJx0_tvps.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>FileInputStream/FileOutputStream, FileReader/FileWriter Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is the name of the abstract base class for streams dealing with a general purpose (non-character) input?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899173" id="rbk1">
+        <label for="rbk1"><p>InputStream</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899173" id="rbk2">
+        <label for="rbk2"><p>OutputStream</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899173" id="rbk3">
+        <label for="rbk3"><p>Reader</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="899173" id="rbk4">
+        <label for="rbk4"><p>Writer</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    InputStream
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>FileReader and FileWriter Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Can a stream act as a data source for another stream?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899163" id="rbk1">
+        <label for="rbk1"><p>No. Streams must be connected directly to physical devices.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899163" id="rbk2">
+        <label for="rbk2"><p>No. Streams do not deal with data.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899163" id="rbk3">
+        <label for="rbk3"><p>Yes. Some streams can be connected together.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="899163" id="rbk4">
+        <label for="rbk4"><p>Yes. An input stream can be connected to an output stream.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Yes. Some streams can be connected together.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="buffer-bufferedreader">Buffer, BufferedReader</h1>
+<p>We’ve covered stream, inputstream, outputstream, filereader and filewriter. In this video we are going to learn Buffer and BufferReader.</p>
+<p>Buffer is a region of a physical memory storage used to temporarily store data while it’s being moved from one place to another. The physical memory storage would be RAM in most case. For file IO, buffer is a storage stores part of the streamed data and feeds this to output. </p>
+<p>When we use a buffer what happens is that each character is stored in the buffer first one by one in consecutive memory locations thus converting the stream of data into a single solid value.</p>
+<p>Java BufferedReader class is used to read the text from a character-based input stream. It can be used to read data line by line by readLine() method, it can also be used to read data character by character by read() method. By sure to close bufferreader as well if you finish use it.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L01 A23 BUFFER V2 (Post Launch) 1</p></h3>
+  <video controls>
+  <source src="11. 035ND C01 L01 A23 BUFFER V2 (Post Launch) 1-qYXwOZCw0z8.mp4" type="video/mp4">
+
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="resources">Resources:</h3>
+<p>BufferedReader: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html" target="_blank">https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Buffer Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is a buffer?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899139" id="rbk1">
+        <label for="rbk1"><p>A section of memory used as a staging area for input or output data.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899139" id="rbk2">
+        <label for="rbk2"><p>The cable that connects a data source to the bus.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899139" id="rbk3">
+        <label for="rbk3"><p>Any stream that deals with character IO.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="899139" id="rbk4">
+        <label for="rbk4"><p>A file that contains binary data.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    A section of memory used as a staging area for input or output data.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="12. Java Programming Practice Exercises.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('11. Exception and File IO')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

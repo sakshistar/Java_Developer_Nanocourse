@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.180
+Welcome back. Let's take a little bit break for
+
+00:00:03.180 --> 00:00:06.405
+your APIs and trying to set up your environment,
+
+00:00:06.405 --> 00:00:10.275
+and making sure that you are ready with the development.
+
+00:00:10.275 --> 00:00:14.445
+I'm sure that you already installed Java and IntelliJ.
+
+00:00:14.445 --> 00:00:16.365
+So in this course,
+
+00:00:16.364 --> 00:00:22.439
+we're going to install Maven and Maven plugin for your IntelliJ.
+

@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.585
+In this video I'm going to cover Java IO.
+
+00:00:03.585 --> 00:00:10.105
+Java IO is API that come with Java to read and write data.
+
+00:00:10.105 --> 00:00:13.320
+Most of the application today support IO.
+
+00:00:13.320 --> 00:00:19.574
+For instance, system allows user to upload a data feed,
+
+00:00:19.574 --> 00:00:23.730
+system ask user to upload a photo,
+
+00:00:23.730 --> 00:00:29.609
+system generate a PDF of the user complete the form.
+
+00:00:29.609 --> 00:00:33.060
+So there are three parts of IO here.
+
+00:00:33.060 --> 00:00:36.880
+So I'm starting with introducing what IO is.
+
+00:00:36.880 --> 00:00:41.330
+Then I am going to introduce what is Stream.
+
+00:00:41.329 --> 00:00:47.765
+After that I'm going through the list of APIs from file to
+
+00:00:47.765 --> 00:00:54.770
+let you understand how to operate and how to manipulate the file using Java IO.
+
+00:00:54.770 --> 00:01:02.855
+Java file class in Java IO API give you the access to the underlying file system.
+
+00:01:02.854 --> 00:01:04.849
+Using the file class,
+
+00:01:04.849 --> 00:01:08.879
+you can check if the file or directory exists.
+
+00:01:10.989 --> 00:01:17.299
+The file class in Java IO API gives you the access to the underlying file system.
+
+00:01:17.299 --> 00:01:19.295
+You can use it to check
+
+00:01:19.295 --> 00:01:25.625
+if a file or directory exists or create a directory if that does not exist.
+
+00:01:25.625 --> 00:01:27.864
+To read the length of the file,
+
+00:01:27.864 --> 00:01:31.814
+rename or move the file, delete a file,
+
+00:01:31.814 --> 00:01:35.640
+check if a path is a file or directory,
+
+00:01:35.640 --> 00:01:39.359
+read a list of file in a directory.
+

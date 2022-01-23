@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.810
+Let's take a look at the example for scope.
+
+00:00:03.810 --> 00:00:09.540
+In this example, we are passing the requests,
+
+00:00:09.539 --> 00:00:11.894
+we are passing the session,
+
+00:00:11.894 --> 00:00:14.759
+and we are passing the application.
+
+00:00:14.759 --> 00:00:18.884
+We're passing all this information to our view.
+
+00:00:18.885 --> 00:00:22.929
+Let's take a look at our view.
+
+00:00:23.839 --> 00:00:26.219
+This is our view,
+
+00:00:26.219 --> 00:00:32.564
+that our view retrieving the information from the controller.
+
+00:00:32.564 --> 00:00:38.500
+Were using syntax to retrieve the request, session, and application.
+
+00:00:39.530 --> 00:00:42.795
+Let's take a look at our browser.
+
+00:00:42.795 --> 00:00:44.820
+So here is our browser.
+
+00:00:44.820 --> 00:00:52.280
+It shows that we are getting all of the data for our request, session, and obligation.
+
+00:00:52.280 --> 00:00:57.799
+Now you should know how to set attributes in different scope like request,
+
+00:00:57.799 --> 00:01:03.379
+session, and application, and how to retrieve them in Canvas.
+
+00:01:03.380 --> 00:01:07.144
+This scope are very helpful when you have
+
+00:01:07.144 --> 00:01:12.979
+multiple pages and want to pass to attributes from this page to another.
+
+00:01:12.980 --> 00:01:18.730
+For instance, if you want to make sure that each page validate the user session,
+
+00:01:18.730 --> 00:01:22.469
+you can have the user ID in each session.
+
+00:01:22.469 --> 00:01:26.644
+If a page can now verify the user ID in session,
+
+00:01:26.644 --> 00:01:29.569
+meaning, null or empty,
+
+00:01:29.569 --> 00:01:32.759
+the page will not be rendered.
+

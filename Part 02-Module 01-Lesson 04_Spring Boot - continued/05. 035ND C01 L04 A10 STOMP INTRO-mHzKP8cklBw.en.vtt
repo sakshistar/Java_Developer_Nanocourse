@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.279
+So what is STOMP?
+
+00:00:02.279 --> 00:00:07.964
+STOMP stands for, Simple Text Oriented Message Protocol,
+
+00:00:07.964 --> 00:00:13.094
+which is some simple text-based message protocol.
+
+00:00:13.095 --> 00:00:20.210
+With it, user can send and retrieve message to and fro each other,
+
+00:00:20.210 --> 00:00:25.385
+STOMP is called HTTP for web,
+
+00:00:25.385 --> 00:00:33.750
+it defines a handful of frame types that are mapped onto websocket frames.
+
+00:00:35.719 --> 00:00:39.960
+So here are the STOMP for an object,
+
+00:00:39.960 --> 00:00:43.125
+so you have command which is a string,
+
+00:00:43.125 --> 00:00:47.579
+you have a header which is a JavaScript object,
+
+00:00:47.579 --> 00:00:50.679
+and the body is also a string.
+

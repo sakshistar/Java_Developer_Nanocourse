@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.884
+For all the Spring Boot access you did before,
+
+00:00:03.884 --> 00:00:07.535
+you might find out even for simple type of fix,
+
+00:00:07.535 --> 00:00:12.644
+you have to stop and restart the application server to see the change.
+
+00:00:12.644 --> 00:00:17.879
+This is not convenient and greatly slow down our development.
+
+00:00:17.879 --> 00:00:19.799
+In the next few videos,
+
+00:00:19.800 --> 00:00:26.475
+I'm going to show you how to set up your Spring Boot application with hot swap.
+
+00:00:26.475 --> 00:00:28.260
+So when you make a change,
+
+00:00:28.260 --> 00:00:32.190
+the application server will do a hot swap to apply
+
+00:00:32.189 --> 00:00:37.390
+the change to avoid stop and restart the application server.
+

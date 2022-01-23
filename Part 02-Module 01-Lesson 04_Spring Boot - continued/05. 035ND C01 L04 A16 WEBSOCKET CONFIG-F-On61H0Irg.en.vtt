@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.975
+Here are some steps to implement WebSocket Config.
+
+00:00:03.975 --> 00:00:07.889
+First, our config clause need to implement
+
+00:00:07.889 --> 00:00:14.740
+web socket message broker configure clause to override to default method.
+
+00:00:15.830 --> 00:00:21.315
+We need to overwrite register assume p endpoints method,
+
+00:00:21.315 --> 00:00:25.440
+which is where the WebSocket is created.
+
+00:00:25.440 --> 00:00:29.505
+We'll create one socket in this example.
+
+00:00:29.504 --> 00:00:34.725
+If you want, you can create multiples of WebSockets in this method.
+
+00:00:34.725 --> 00:00:40.395
+We need to override configuration message broker to set the broker information.
+
+00:00:40.395 --> 00:00:43.920
+In which, we need to add a prefix,
+
+00:00:43.920 --> 00:00:47.704
+so that the message will go to correct channel.
+
+00:00:47.704 --> 00:00:56.210
+A message broker is a computer program that transmit a message for a sender to receiver.
+
+00:00:56.210 --> 00:01:01.503
+Last, we need to add annotations to tell Spring Boot application,
+
+00:01:01.503 --> 00:01:03.919
+this is configuration clause,
+
+00:01:03.920 --> 00:01:08.159
+and this is a WebSocket Message Broker.
+

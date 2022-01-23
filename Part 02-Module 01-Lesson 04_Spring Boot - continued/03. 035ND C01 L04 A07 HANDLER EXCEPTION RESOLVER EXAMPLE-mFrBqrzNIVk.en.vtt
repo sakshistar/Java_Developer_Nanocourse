@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.609
+Let's walk through to loss approach,
+
+00:00:02.609 --> 00:00:05.699
+to handle exceptions in Spring Boot.
+
+00:00:05.700 --> 00:00:08.609
+In this video, I'm going to show you how to handle
+
+00:00:08.609 --> 00:00:12.299
+exceptions with Handler Exception Resolver.
+
+00:00:12.300 --> 00:00:17.115
+As you can see, Handler Exception Resolver
+
+00:00:17.114 --> 00:00:21.375
+is very similar to simple Mapping Exception Resolver.
+
+00:00:21.375 --> 00:00:24.945
+What differences is instead of using a map,
+
+00:00:24.945 --> 00:00:30.660
+here we are using reflection to see what kind of
+
+00:00:30.660 --> 00:00:37.899
+exception there is and assign them to the view to handle the exception.
+

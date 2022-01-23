@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.180
+Let's see how to use Loop in Thymeleaf.
+
+00:00:03.180 --> 00:00:08.310
+As other languages, Loop is widely used in Thymeleaf as well.
+
+00:00:08.310 --> 00:00:14.054
+In Thymeleaf, loop is achieved by using each attribute.
+
+00:00:14.054 --> 00:00:21.824
+This attribute is that it will accept and iterate over some different data types
+
+00:00:21.824 --> 00:00:30.660
+such as the iterable map or arrays.
+
+00:00:30.660 --> 00:00:35.140
+Again, let's take a look at the example next.
+

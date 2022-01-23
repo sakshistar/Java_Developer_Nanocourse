@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.339
+I hope you enjoyed this course so far.
+
+00:00:02.339 --> 00:00:06.495
+In this lesson, we're going to cover Spring Boot Exception Handling.
+
+00:00:06.495 --> 00:00:10.199
+After that, we're going to cover WebSocket.
+
+00:00:10.199 --> 00:00:13.779
+We're going to implement a WebSocket application.
+
+00:00:14.089 --> 00:00:17.414
+After doing that, we are going to packaging,
+
+00:00:17.414 --> 00:00:19.995
+its application, we implement it.
+
+00:00:19.995 --> 00:00:24.480
+Similar to Java, Spring Boot has his own exceptions.
+
+00:00:24.480 --> 00:00:28.170
+In this lesson, we are going to learn how to handle
+
+00:00:28.170 --> 00:00:35.320
+Spring Boot Exceptions to make sure our Spring Boot application runs without issue.
+

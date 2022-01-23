@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.089
+With hot swap enabled for a Spring Boot application,
+
+00:00:03.089 --> 00:00:05.759
+you can keep application running and making
+
+00:00:05.759 --> 00:00:09.269
+changes without the need to restart the application server.
+
+00:00:09.269 --> 00:00:13.394
+Visit your different time work need to greatly reduced,
+
+00:00:13.394 --> 00:00:15.750
+especially when you're working on
+
+00:00:15.750 --> 00:00:21.359
+some final changes that you need to constantly adjust the content.
+
+00:00:21.359 --> 00:00:26.625
+So that's it for the hot swap setup in Spring Boot.
+
+00:00:26.625 --> 00:00:32.289
+You'll find it very helpful when developing a Spring Boot application.
+

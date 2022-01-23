@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.290
+There are many ways to achieve Hot Swap in Spring Boot.
+
+00:00:04.290 --> 00:00:10.664
+In this lesson, we are going to use Spring Boot DevTool module.
+
+00:00:10.664 --> 00:00:14.849
+With DevTool module, we can achieve the following things.
+
+00:00:14.849 --> 00:00:23.625
+We can reload static content like HTML, image, CSS, etc.
+
+00:00:23.625 --> 00:00:30.129
+We can reload to template like thymeleaf or FreeMarker.
+
+00:00:30.260 --> 00:00:37.980
+We can reload our Java classes and we'll have fast application restart,
+
+00:00:37.979 --> 00:00:44.339
+because the DevTool module includes support for automatic obligation restart.
+

@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.910
+There are two conditions in Thymeleaf.
+
+00:00:02.910 --> 00:00:11.595
+If is to evaluate the conditions specified into attribute and if they are true.
+
+00:00:11.595 --> 00:00:16.995
+Switch are use to create a switch statement.
+
+00:00:16.995 --> 00:00:20.835
+Switch will holds a value to switch on,
+
+00:00:20.835 --> 00:00:27.570
+and the case will evaluate it's a case statement for this variable.
+
+00:00:27.570 --> 00:00:32.054
+This two syntax are very similar to all other program languages.
+
+00:00:32.054 --> 00:00:36.399
+So our standard should be easier for you.
+

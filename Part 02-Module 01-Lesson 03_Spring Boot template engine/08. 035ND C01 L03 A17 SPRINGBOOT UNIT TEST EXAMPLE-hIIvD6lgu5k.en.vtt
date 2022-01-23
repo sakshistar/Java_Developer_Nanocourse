@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.560
+If error seen setup correctly,
+
+00:00:01.560 --> 00:00:03.750
+you should see a test case passed
+
+00:00:03.750 --> 00:00:08.355
+recruited of Spring Boot unit tests to test your unit service.
+
+00:00:08.355 --> 00:00:11.535
+It is very similar to unit test.
+
+00:00:11.535 --> 00:00:15.900
+In addition, the edit annotation [inaudible] a
+
+00:00:15.900 --> 00:00:21.355
+Spring Boot to indicate this is a Spring Boot test.
+
+00:00:21.355 --> 00:00:26.295
+Let's run it. So what we are doing here is,
+
+00:00:26.295 --> 00:00:30.910
+we're getting a user from the user service.
+
+00:00:30.949 --> 00:00:37.299
+As you can see the format is very much similar to unit test.
+
+00:00:43.340 --> 00:00:50.135
+If you run the test, you will notice that it is a Spring Boot unit tests.
+
+00:00:50.134 --> 00:00:56.879
+It is different than the J unit tests we have done before for Java.
+

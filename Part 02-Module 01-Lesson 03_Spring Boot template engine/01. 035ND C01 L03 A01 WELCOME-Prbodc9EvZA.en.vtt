@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.705
+Welcome back. In the previous lesson,
+
+00:00:03.705 --> 00:00:05.804
+we have introduced microservice,
+
+00:00:05.804 --> 00:00:09.525
+MVC Framework and Spring Boot Framework.
+
+00:00:09.525 --> 00:00:16.030
+I believe now you have a good sense about how to create a simple Spring Boot application.
+
+00:00:17.000 --> 00:00:21.780
+In this lesson, we're going to learn template engine.
+
+00:00:21.780 --> 00:00:24.075
+So what is template engine?
+
+00:00:24.074 --> 00:00:30.039
+Template engine also known as template processor or template parser,
+
+00:00:30.039 --> 00:00:36.214
+it combines data model with source template to produce result documents,
+
+00:00:36.215 --> 00:00:39.380
+the result document can be any file type.
+
+00:00:39.380 --> 00:00:43.000
+Here are some components in template engine flow,
+
+00:00:43.000 --> 00:00:47.384
+we have data model which can be any data,
+
+00:00:47.384 --> 00:00:52.344
+it can be data from database, XML, spreadsheet.
+
+00:00:52.344 --> 00:00:55.475
+The source template can be any file type,
+
+00:00:55.475 --> 00:01:01.829
+it can be HTML, XML, or XHTML.
+
+00:01:04.340 --> 00:01:12.020
+The template engine connect to datatype and processing code in source template.
+
+00:01:12.019 --> 00:01:18.840
+The result document is the result of partial or entire document.
+
+00:01:19.549 --> 00:01:22.439
+Here's the template engine flow,
+
+00:01:22.439 --> 00:01:30.939
+you can see that the template engine connect the data and template as the input,
+
+00:01:30.939 --> 00:01:35.905
+and the output of the template engine is a result document.
+
+00:01:35.905 --> 00:01:38.894
+Now that you know what template engine is,
+
+00:01:38.894 --> 00:01:43.409
+I'm going to show you three major template engine in Spring Boot,
+
+00:01:43.409 --> 00:01:52.259
+which are FreeMarker, Thymeleaf, and JSP.
+
+00:01:52.260 --> 00:01:56.055
+We're going to focus on Thymeleaf for this lesson,
+
+00:01:56.055 --> 00:02:01.465
+but I'll still give you a brief introduction on FreeMarker.
+
+00:02:01.465 --> 00:02:04.139
+We are not going to call it JSP,
+
+00:02:04.138 --> 00:02:09.044
+because JSP is not well used in Spring Boot applications.
+
+00:02:09.044 --> 00:02:11.094
+In our next video,
+
+00:02:11.094 --> 00:02:18.210
+we're going to start learning template engine in Spring Boot and how to use it.
+

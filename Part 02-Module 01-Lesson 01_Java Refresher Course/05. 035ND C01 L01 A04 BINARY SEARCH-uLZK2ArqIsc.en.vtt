@@ -1,0 +1,163 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.000
+Binary search is very important searching algorithm used widely in programming languages.
+
+00:00:06.000 --> 00:00:09.449
+To better understanding the time complexity,
+
+00:00:09.449 --> 00:00:12.539
+we're going to learn binary search in this video.
+
+00:00:12.539 --> 00:00:18.149
+Given a sorted array and we are searching for number 35,
+
+00:00:18.149 --> 00:00:22.289
+to see if the number is in this array or not.
+
+00:00:22.289 --> 00:00:24.989
+If you're iterating through this array,
+
+00:00:24.989 --> 00:00:28.439
+we're going to take a times to find this number.
+
+00:00:28.440 --> 00:00:31.725
+If we're looking for number 37,
+
+00:00:31.725 --> 00:00:35.204
+we need to iterate through the entire array.
+
+00:00:35.204 --> 00:00:37.409
+Can we do better than that?
+
+00:00:37.409 --> 00:00:40.344
+Sure. Let's use binary search.
+
+00:00:40.344 --> 00:00:43.409
+So here are some steps for the algorithm,
+
+00:00:43.409 --> 00:00:45.000
+the binary search algorithm.
+
+00:00:45.000 --> 00:00:49.990
+We start with looking at the middle number using the mid index.
+
+00:00:49.990 --> 00:00:56.164
+So mid index can be calculated by start index and end index.
+
+00:00:56.164 --> 00:00:59.435
+If the middle number is larger than the target,
+
+00:00:59.435 --> 00:01:03.125
+then we ignore the second half of the array,
+
+00:01:03.125 --> 00:01:07.924
+because a target can only be in the first half of the array.
+
+00:01:07.924 --> 00:01:11.390
+If the middle number is smaller than the target,
+
+00:01:11.390 --> 00:01:14.780
+then we ignore the first half of the array,
+
+00:01:14.780 --> 00:01:19.564
+because the target can only be in the second half of the array.
+
+00:01:19.564 --> 00:01:22.659
+If the middle number equals to target,
+
+00:01:22.659 --> 00:01:25.810
+then are done, we already found our target.
+
+00:01:26.519 --> 00:01:34.459
+Let's use this algorithm to apply it to the example we have and see how to work.
+
+00:01:34.590 --> 00:01:38.290
+If you are using the algorithm we described,
+
+00:01:38.290 --> 00:01:40.840
+so here we are starting with some middle number.
+
+00:01:40.840 --> 00:01:43.015
+The middle number is 22,
+
+00:01:43.015 --> 00:01:50.864
+and we are looking for 35 since 22 is smaller than 35,
+
+00:01:50.864 --> 00:01:56.289
+which means we don't need to worry about the first half of the array anymore,
+
+00:01:56.290 --> 00:01:59.380
+so we ignore the first half of the array
+
+00:01:59.379 --> 00:02:02.614
+and we look in through the second half of the array.
+
+00:02:02.614 --> 00:02:04.039
+So we are taking out
+
+00:02:04.040 --> 00:02:09.215
+the first half of the array and only focus on the second half of the array.
+
+00:02:09.215 --> 00:02:12.979
+So second iteration, we're looking at
+
+00:02:12.979 --> 00:02:18.269
+the middle number of the rest of the array which has 29.
+
+00:02:18.270 --> 00:02:21.945
+Twenty-nine, again 29 is smaller than the 35,
+
+00:02:21.944 --> 00:02:26.699
+and we can ignore the first half of the remaining array.
+
+00:02:27.270 --> 00:02:30.439
+They were taken out.
+
+00:02:30.759 --> 00:02:36.859
+So now we're looking at the middle number of the remaining array we have,
+
+00:02:36.860 --> 00:02:44.695
+which is 35, so we take three iterations to find the target, rather than eight.
+
+00:02:44.694 --> 00:02:46.784
+Let's do some cognition.
+
+00:02:46.784 --> 00:02:51.598
+If we have N number to find our target,
+
+00:02:51.598 --> 00:02:56.310
+the worst-case here is log N. Because,
+
+00:02:56.310 --> 00:02:59.699
+every time if the first one was N,
+
+00:02:59.699 --> 00:03:06.644
+the second iteration we have N over two numbers left,
+
+00:03:06.645 --> 00:03:11.030
+the third iteration we have N over four number left.
+
+00:03:11.030 --> 00:03:12.830
+So the worst-case scenario,
+
+00:03:12.830 --> 00:03:19.620
+we need to run through log N times to find our target.
+
+00:03:19.620 --> 00:03:22.245
+By using binary search,
+
+00:03:22.245 --> 00:03:24.525
+we have a prerequisite.
+
+00:03:24.525 --> 00:03:29.835
+Is a collection, it's an array of list you're searching, it'll be sorted,
+
+00:03:29.835 --> 00:03:33.030
+otherwise you cannot use the binary search or you
+
+00:03:33.030 --> 00:03:37.419
+can sort it first and use a binary search.
+

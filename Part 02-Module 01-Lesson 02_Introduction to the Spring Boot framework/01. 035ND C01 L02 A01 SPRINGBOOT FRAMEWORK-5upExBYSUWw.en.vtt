@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.099
+Welcome back. I hope you enjoyed the Java refresher course.
+
+00:00:05.099 --> 00:00:10.559
+In this lesson, we're going to start with introducing microservice, MVC framework.
+
+00:00:10.560 --> 00:00:14.640
+Then we're going to introduce Spring Boot framework.
+
+00:00:14.640 --> 00:00:16.844
+After that, we're going to build
+
+00:00:16.844 --> 00:00:22.439
+a simple Spring Boot application and continue to add more components to it.
+
+00:00:22.440 --> 00:00:26.625
+We're going to implement a simple Spring Boot file
+
+00:00:26.625 --> 00:00:32.259
+upload application to test the knowledge we have learned so far.
+
+00:00:33.350 --> 00:00:36.164
+Before diving into Spring Boot,
+
+00:00:36.164 --> 00:00:41.070
+this course will start with introducing microservice.
+
+00:00:41.070 --> 00:00:43.035
+What is the microservice?
+
+00:00:43.034 --> 00:00:47.909
+Why it is better than the monarchy architecture?
+
+00:00:47.909 --> 00:00:51.514
+Then we'll continue with introducing the MVC framework,
+
+00:00:51.515 --> 00:00:54.005
+each component of MVC framework,
+
+00:00:54.005 --> 00:00:59.429
+and other existing MVC frameworks beside Spring Boot framework.
+
+00:00:59.429 --> 00:01:03.119
+You may have heard these terms lots of times.
+
+00:01:03.119 --> 00:01:08.024
+Microservice are a service development technique,
+
+00:01:08.025 --> 00:01:14.189
+a variant of a service-oriented architecture, SOA,
+
+00:01:14.188 --> 00:01:21.784
+so that structure and application as a collection of loosely coupled service.
+
+00:01:21.784 --> 00:01:27.259
+Like the service architecture evolve as a solution to
+
+00:01:27.260 --> 00:01:34.340
+the scalability and innovation challenges to monolith architectures.
+
+00:01:34.340 --> 00:01:39.469
+Microservice allow you to take larger application and
+
+00:01:39.469 --> 00:01:47.179
+decompose or break into smaller pieces with narrowly-defined responsibility.
+
+00:01:47.180 --> 00:01:50.210
+I'm using this image to illustrate
+
+00:01:50.209 --> 00:01:53.579
+the differences between microservice and its counterpart.
+
+00:01:53.579 --> 00:01:59.959
+As you can see, microservice break a singular component into
+
+00:01:59.959 --> 00:02:07.629
+smaller components so that it's easy to scale and easy to manage.
+

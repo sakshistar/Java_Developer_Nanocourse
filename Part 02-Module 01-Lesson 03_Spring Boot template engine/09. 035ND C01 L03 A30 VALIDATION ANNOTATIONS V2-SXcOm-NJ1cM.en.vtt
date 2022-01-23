@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.230
+Here are some common Spring Boot validation annotations.
+
+00:00:06.049 --> 00:00:09.890
+Not blank, not empty,
+
+00:00:09.890 --> 00:00:14.120
+length, with checking the string length,
+
+00:00:14.119 --> 00:00:16.714
+include the max and min.
+
+00:00:16.714 --> 00:00:22.035
+So minimum will check if the number is smaller than this.
+
+00:00:22.035 --> 00:00:25.094
+It cannot be less than that.
+
+00:00:25.094 --> 00:00:27.979
+Use a max to check the max number.
+
+00:00:27.980 --> 00:00:30.115
+It cannot be go over with.
+
+00:00:30.114 --> 00:00:33.799
+Use the e-mail to check the e-mail format.
+
+00:00:33.799 --> 00:00:37.679
+It should be look like something like this.
+
+00:00:37.810 --> 00:00:45.240
+So let's go through this example and see what changes we have made so far.
+

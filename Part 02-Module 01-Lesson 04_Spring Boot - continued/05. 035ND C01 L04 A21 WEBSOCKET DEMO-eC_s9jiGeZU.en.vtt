@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.214
+Great. Now you should have your WebSocket application ready.
+
+00:00:04.214 --> 00:00:07.109
+Let's run it, shall we?
+
+00:00:07.110 --> 00:00:10.455
+So I'm running the WebSocket application here.
+
+00:00:10.455 --> 00:00:13.050
+What it can do is, when you connect it to
+
+00:00:13.050 --> 00:00:18.054
+the broker and you will see that you can start sending the messages.
+
+00:00:18.054 --> 00:00:22.070
+In here, what we are sending is a name.
+
+00:00:22.070 --> 00:00:26.460
+You can see that the Schedulers keep coming because we
+
+00:00:26.460 --> 00:00:31.140
+are trying to putting out auto messages into the broker when it's empty.
+
+00:00:31.140 --> 00:00:37.034
+So if I say, I'm John and we'll send this message to broker,
+
+00:00:37.034 --> 00:00:41.954
+it will display that in the UI. Let's try different.
+
+00:00:41.954 --> 00:00:45.280
+Let me start another UI.
+
+00:00:46.399 --> 00:00:49.454
+So this is second client,
+
+00:00:49.454 --> 00:00:52.420
+which is connected to the broker.
+
+00:00:54.170 --> 00:00:57.855
+Here with Stephen, I'm sending that,
+
+00:00:57.854 --> 00:00:59.625
+and in this here,
+
+00:00:59.625 --> 00:01:01.484
+you can also see the messages.
+
+00:01:01.484 --> 00:01:05.239
+Because remember, we are sending all the messages to
+
+00:01:05.239 --> 00:01:11.140
+one broker and all the UI are showing that.
+
+00:01:11.200 --> 00:01:15.409
+So if I'm doing that here and I'm sending John 2,
+
+00:01:15.409 --> 00:01:19.265
+I'm the message, you'll see the message over her,
+
+00:01:19.265 --> 00:01:21.310
+and you will see the message over here.
+
+00:01:21.310 --> 00:01:24.100
+I hope you enjoy this demo.
+

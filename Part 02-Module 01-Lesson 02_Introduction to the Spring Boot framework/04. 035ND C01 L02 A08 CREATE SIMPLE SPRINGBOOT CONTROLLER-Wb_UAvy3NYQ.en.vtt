@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.070
+So far, you have learned how to create a Spring Boot application from scratch,
+
+00:00:05.070 --> 00:00:08.280
+the basic Spring Boot configuration,
+
+00:00:08.279 --> 00:00:14.234
+and we create a Spring Boot replication with a simple controller.
+
+00:00:14.234 --> 00:00:15.989
+In the next video,
+
+00:00:15.990 --> 00:00:18.045
+we are going to learn how to use
+
+00:00:18.045 --> 00:00:25.390
+rest controller annotation to replace the controller annotation in Spring Boot.
+

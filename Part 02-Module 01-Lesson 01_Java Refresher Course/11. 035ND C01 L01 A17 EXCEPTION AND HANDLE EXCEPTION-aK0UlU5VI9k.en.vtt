@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.024
+Let's talk about exception first.
+
+00:00:02.024 --> 00:00:06.720
+Exception is a problem that arise during runtime.
+
+00:00:06.719 --> 00:00:12.899
+So below are some common exceptions that won't be captured during compile time,
+
+00:00:12.900 --> 00:00:15.644
+but it will happen during the runtime.
+
+00:00:15.644 --> 00:00:19.829
+For example, if I use 10 divided by zero,
+
+00:00:19.829 --> 00:00:22.004
+it will give me exception.
+
+00:00:22.004 --> 00:00:26.879
+If I start in a non-list and I'm trying to get the size of the list,
+
+00:00:26.879 --> 00:00:28.574
+it will give me exception.
+
+00:00:28.574 --> 00:00:31.314
+Same thing here, if I'm to have a string,
+
+00:00:31.315 --> 00:00:34.445
+I'm trying to parse that to integer,
+
+00:00:34.445 --> 00:00:36.380
+the exception will happen.
+
+00:00:36.380 --> 00:00:42.804
+If I have an integer array and I'm trying to get a number that has outside of it's array,
+
+00:00:42.804 --> 00:00:44.674
+it will give me exception.
+
+00:00:44.674 --> 00:00:50.239
+So if you don't have an exception handling mechanism and when exception happens,
+
+00:00:50.240 --> 00:00:51.935
+the system will crash.
+
+00:00:51.935 --> 00:00:56.750
+Therefore, is very important that we have a way to properly
+
+00:00:56.750 --> 00:01:02.429
+handle our exceptions so that we can keep our system running.
+

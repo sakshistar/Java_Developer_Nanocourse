@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.115
+If you set up correctly,
+
+00:00:02.115 --> 00:00:06.464
+you should see that validations working.
+
+00:00:06.464 --> 00:00:13.320
+First, we're adding the @NotBlank annotation for username and password.
+
+00:00:13.320 --> 00:00:15.330
+This error message to
+
+00:00:15.330 --> 00:00:21.329
+our user cause to make sure that these two attributes cannot be empty,
+
+00:00:21.329 --> 00:00:24.044
+where it turned from view.
+
+00:00:24.045 --> 00:00:30.810
+We add it rarely annotation in our controller and passing the model value to view.
+
+00:00:30.809 --> 00:00:32.640
+If it's not valid,
+
+00:00:32.640 --> 00:00:39.515
+it will go back to form and render the error message we defined in our user model.
+
+00:00:39.515 --> 00:00:49.120
+We update our view to include errors tag to render more errors view.
+
+00:00:51.020 --> 00:00:57.520
+So here is all the thing we added in our example one.
+

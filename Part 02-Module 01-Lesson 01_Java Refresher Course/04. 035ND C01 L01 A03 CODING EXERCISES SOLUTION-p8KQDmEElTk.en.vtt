@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.825
+So here's my solution for the coding problems.
+
+00:00:03.825 --> 00:00:05.429
+So for the problem,
+
+00:00:05.429 --> 00:00:09.495
+we are trying to find all the laws inside of the string.
+
+00:00:09.494 --> 00:00:10.934
+So what do we do is,
+
+00:00:10.935 --> 00:00:15.810
+we're using because the string is immutable objects.
+
+00:00:15.810 --> 00:00:21.089
+So we don't want to construct the new string is using the string only.
+
+00:00:21.089 --> 00:00:28.210
+Instead, we're using a StringBuilder and we are having the law over here, a IOU.
+
+00:00:29.210 --> 00:00:36.820
+We iterating through the input and we're changing the input into a CharArray in here.
+
+00:00:38.270 --> 00:00:42.870
+For each char, if this is a wall,
+
+00:00:42.869 --> 00:00:46.644
+we keep it and we add it to the StringBuilder.
+
+00:00:46.645 --> 00:00:50.030
+We're using the append to add that to the StringBuilder.
+
+00:00:50.030 --> 00:00:54.410
+We're using the two lowercase in making sure that if
+
+00:00:54.409 --> 00:00:59.659
+the input has an uppercase we're still append that to the string.
+
+00:00:59.659 --> 00:01:06.454
+Then we return that to the output. Let's test it out.
+
+00:01:06.454 --> 00:01:11.105
+So we have a task which have two test cases.
+
+00:01:11.105 --> 00:01:14.615
+The first one we are using the input as Hello World.
+
+00:01:14.614 --> 00:01:20.254
+You will notice all the uppercasing here and a special cases.
+
+00:01:20.254 --> 00:01:31.359
+For second case, we are using USE courses which also we have the uppercase and the space.
+
+00:01:31.359 --> 00:01:38.400
+The expected output for the first one is e00 here.
+
+00:01:38.400 --> 00:01:39.960
+Because you can see e over here,
+
+00:01:39.959 --> 00:01:42.569
+o over here, and o over here.
+
+00:01:42.569 --> 00:01:46.009
+The expected output for the second one is
+
+00:01:46.010 --> 00:01:50.689
+the uppercase U and all lowercase aioue over here.
+
+00:01:50.689 --> 00:01:59.984
+Let's run it. Our program paths ought two tests.
+
+00:01:59.984 --> 00:02:03.010
+Hope you get the right answer.
+

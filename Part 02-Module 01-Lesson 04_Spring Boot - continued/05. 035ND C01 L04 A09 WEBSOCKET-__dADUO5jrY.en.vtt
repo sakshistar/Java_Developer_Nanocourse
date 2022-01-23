@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.294
+Starting this lesson, we're going to learn WebSocket in Spring Boot.
+
+00:00:05.294 --> 00:00:09.449
+We're starting with introduce WebSocket,
+
+00:00:09.449 --> 00:00:15.910
+then we introduce STOMP, and STOMP commands.
+
+00:00:16.280 --> 00:00:23.890
+We'll then implement Spring Boot WebSocket components in our demo.
+
+00:00:26.510 --> 00:00:30.675
+So the component incurred WebSocket Config,
+
+00:00:30.675 --> 00:00:36.810
+Message, Message Wrapper, Message Controller, and Browser Client.
+
+00:00:36.810 --> 00:00:44.800
+Also, we created a Scheduler for the WebSocket application we created.
+
+00:00:45.380 --> 00:00:51.350
+We are going to explain each WebSocket components we are going to implement,
+
+00:00:51.350 --> 00:00:54.755
+and implement them step by step.
+
+00:00:54.755 --> 00:00:56.585
+So what is WebSocket?
+
+00:00:56.585 --> 00:01:00.454
+To make a short, WebSocket is a protocol
+
+00:01:00.454 --> 00:01:06.275
+used to transmit real-time messages between client and server.
+
+00:01:06.275 --> 00:01:10.475
+Therefore, to implement a WebSocket application,
+
+00:01:10.474 --> 00:01:15.349
+we need to have both server side and client side.
+
+00:01:15.349 --> 00:01:18.524
+In this lesson, I'm going to walk through
+
+00:01:18.525 --> 00:01:23.800
+a quick WebSocket implementation using Spring Boot framework.
+
+00:01:23.799 --> 00:01:26.399
+We'll use a STOMP,
+
+00:01:26.400 --> 00:01:30.870
+or WebSocket to communicate with each other.
+

@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.214
+Now you know how to create a Spring Boot with the controller.
+
+00:00:04.214 --> 00:00:09.030
+Let's take a look at how to use a static resource for Spring Boot.
+
+00:00:09.029 --> 00:00:11.445
+Now I start my Spring Boot application.
+
+00:00:11.445 --> 00:00:13.620
+If I go to my page,
+
+00:00:13.619 --> 00:00:18.285
+I will only see this because I don't have a HTML page for that.
+
+00:00:18.285 --> 00:00:23.129
+Let's first stop our application and go to
+
+00:00:23.129 --> 00:00:29.114
+resource folder and you'll see I already have a image over here.
+
+00:00:29.114 --> 00:00:33.670
+Let's create a HTML inside of the resource folder.
+
+00:00:35.090 --> 00:00:43.060
+Let's call it index and let's put that under the static folder.
+
+00:00:50.929 --> 00:00:54.789
+Let's put the contents over here.
+
+00:00:54.920 --> 00:01:02.890
+So I'm using a Hello World and referencing the Udacity image. Let's run this.
+
+00:01:04.969 --> 00:01:07.679
+Now the application is running.
+
+00:01:07.680 --> 00:01:11.360
+Let's take a quick look at the homepage again.
+
+00:01:14.629 --> 00:01:19.015
+Now you see we have the text and we have the image.
+
+00:01:19.015 --> 00:01:25.394
+So if you go back to the folder structure,
+
+00:01:25.394 --> 00:01:29.009
+where you put the HTML and where you put
+
+00:01:29.010 --> 00:01:32.420
+the static resource for your Spring Boot application.
+
+00:01:32.420 --> 00:01:38.510
+Now you know how to use the static resource in Spring Boot.
+
+00:01:38.510 --> 00:01:42.079
+In next video, let's create
+
+00:01:42.079 --> 00:01:48.719
+a file upload application with all the knowledges we have acquired during this course.
+

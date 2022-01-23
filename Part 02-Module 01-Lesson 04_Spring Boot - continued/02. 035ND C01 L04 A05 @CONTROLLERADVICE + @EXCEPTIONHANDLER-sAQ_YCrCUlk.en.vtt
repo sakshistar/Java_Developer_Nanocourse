@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:07.035
+In the last video, we learned how to define the exception handlers in the controller.
+
+00:00:07.035 --> 00:00:10.259
+But what if we have multiple controllers?
+
+00:00:10.259 --> 00:00:12.765
+Are we going to duplicate our code and put to
+
+00:00:12.765 --> 00:00:16.019
+our controller as a set of exception handlers?
+
+00:00:16.019 --> 00:00:20.939
+What we can do is, we can use the controller otherwise
+
+00:00:20.940 --> 00:00:26.710
+annotation to create a set of global exception handlers.
+
+00:00:27.530 --> 00:00:31.950
+So when exceptions happens in the controller,
+
+00:00:31.949 --> 00:00:34.259
+this will handle the exception.
+
+00:00:34.259 --> 00:00:38.204
+Let's take a look at the demo we have.
+
+00:00:38.204 --> 00:00:43.479
+As you can see, if we have multiple controllers in our application,
+
+00:00:43.479 --> 00:00:46.114
+we don't want to duplicate our code.
+
+00:00:46.115 --> 00:00:49.039
+So instead, we are creating
+
+00:00:49.039 --> 00:00:55.729
+global exception handlers to handle all the exceptions in here in one class.
+
+00:00:55.729 --> 00:01:01.979
+Let's take a look. So the concept is as seen.
+
+00:01:01.979 --> 00:01:03.704
+So what changes is,
+
+00:01:03.704 --> 00:01:05.564
+to award the duplication,
+
+00:01:05.564 --> 00:01:09.079
+we create a global exception handler file
+
+00:01:09.079 --> 00:01:13.650
+to handle all the exceptions in our application.
+

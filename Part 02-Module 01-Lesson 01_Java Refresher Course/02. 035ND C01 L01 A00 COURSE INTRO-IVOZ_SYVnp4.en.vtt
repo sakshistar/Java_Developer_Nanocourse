@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.910
+Welcome to John nano degree program.
+
+00:00:02.910 --> 00:00:04.440
+My name is Steven Chen,
+
+00:00:04.440 --> 00:00:07.065
+I'm a full-stack developer with more than ten years
+
+00:00:07.065 --> 00:00:10.500
+experience in building web applications.
+
+00:00:10.500 --> 00:00:15.179
+In this course, we are going to refresh all the John knowledge first.
+
+00:00:15.179 --> 00:00:19.515
+Then, we're going to introduce SpringBoard framework.
+
+00:00:19.515 --> 00:00:23.609
+I'll show you how to implement SpringBoard application for a scratch.
+
+00:00:23.609 --> 00:00:30.179
+We are going to implement a product ready SpringBoard application using the web-socket.
+
+00:00:30.179 --> 00:00:36.075
+We're also going to correspond SpringBoard miscellaneous topics like validation,
+
+00:00:36.075 --> 00:00:40.665
+hot swap, logging, exception handling and paging.
+
+00:00:40.664 --> 00:00:44.750
+We are going to introduce template engine,
+
+00:00:44.750 --> 00:00:47.854
+and we're going to focus on temp leave.
+
+00:00:47.854 --> 00:00:52.769
+I hope you enjoy this course, and I will see you later.
+

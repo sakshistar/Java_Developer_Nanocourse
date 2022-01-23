@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.220
+In previous video, I showed you that what
+
+00:00:02.220 --> 00:00:05.765
+happen if we don't have Exception handling mechanism.
+
+00:00:05.765 --> 00:00:10.395
+I have shown you some Exception Handling and syntax in Java.
+
+00:00:10.395 --> 00:00:16.110
+In this video, I'm going to show you a program that will show you if exception
+
+00:00:16.110 --> 00:00:23.325
+happens and I am using some exception handling mechanism to deal with that.
+
+00:00:23.325 --> 00:00:25.500
+So here's our program.
+
+00:00:25.500 --> 00:00:31.950
+In this program, I'm trying to use 100 divided by 0,
+
+00:00:31.950 --> 00:00:35.745
+which should give me Exceptional here.
+
+00:00:35.745 --> 00:00:37.955
+But if I catch that,
+
+00:00:37.955 --> 00:00:43.865
+this a try-catch block and let's see what happens.
+
+00:00:43.865 --> 00:00:52.400
+Let me run this, and I should get something like this in my console.
+
+00:00:52.400 --> 00:00:56.235
+So we're saying what the exception is,
+
+00:00:56.235 --> 00:00:59.195
+I'm printing the exception stack trace.
+
+00:00:59.195 --> 00:01:02.750
+But the rest of my code is still running.
+
+00:01:02.750 --> 00:01:05.255
+If I'm ticking off this block,
+
+00:01:05.255 --> 00:01:08.905
+my distributed won't be executed.
+
+00:01:08.905 --> 00:01:12.890
+So in this program I'll show you how important it
+
+00:01:12.890 --> 00:01:17.525
+is to have exception handling mechanism.
+
+00:01:17.525 --> 00:01:23.100
+So that even as you happen the rest the code will still run.
+

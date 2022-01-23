@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.165
+Let's walk through to user and UserResponse we created as our model.
+
+00:00:06.165 --> 00:00:08.925
+So we create a model directory,
+
+00:00:08.925 --> 00:00:11.550
+where we place two class.
+
+00:00:11.550 --> 00:00:12.765
+One is user class.
+
+00:00:12.765 --> 00:00:20.100
+The user class have one attribute name and another one is UserResponse class.
+
+00:00:20.100 --> 00:00:22.515
+Remember, this is all our message.
+
+00:00:22.515 --> 00:00:25.455
+So user is our message class,
+
+00:00:25.454 --> 00:00:31.239
+and UserResponse is our message repre class.
+

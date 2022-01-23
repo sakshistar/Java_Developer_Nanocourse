@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.343
+In Java list is an interface,
+
+00:00:03.343 --> 00:00:09.345
+an ArrayList and LinkedList are two common implementations for lists.
+
+00:00:09.345 --> 00:00:14.310
+The differences between ArrayList and LinkedList are;
+
+00:00:14.310 --> 00:00:23.640
+ArrayList use dynamic array where LinkedList use doubly-linked list to store element.
+
+00:00:23.640 --> 00:00:26.505
+I will detail the differences next,
+
+00:00:26.504 --> 00:00:31.019
+please take a look at their API documents and see if you can solve
+
+00:00:31.019 --> 00:00:36.100
+the quizzes and coding problems on your own. Good luck.
+

@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.105
+Most of the web application require user input.
+
+00:00:04.105 --> 00:00:12.224
+Without input validation, it is easy to trigger a security concerns like cross-site,
+
+00:00:12.224 --> 00:00:17.355
+scripting aka XSS attack,
+
+00:00:17.355 --> 00:00:20.250
+and SQL Injection attack.
+
+00:00:20.250 --> 00:00:26.969
+Therefore, validation is very important when building a web application.
+
+00:00:26.969 --> 00:00:32.969
+In this lesson, I'm going to show you how to use Hibernate
+
+00:00:32.969 --> 00:00:39.670
+validate annotation to achieve simple Spring Boot validation.
+

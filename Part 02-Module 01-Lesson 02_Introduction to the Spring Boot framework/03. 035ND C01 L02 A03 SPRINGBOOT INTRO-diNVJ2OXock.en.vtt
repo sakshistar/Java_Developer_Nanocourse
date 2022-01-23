@@ -1,0 +1,103 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.389
+In this lesson, we're going to learn a Spring Boot.
+
+00:00:04.400 --> 00:00:08.230
+First, we are going to understand what Spring Boot
+
+00:00:08.230 --> 00:00:12.815
+is and any other framework similar to Spring Boot,
+
+00:00:12.814 --> 00:00:16.890
+and why Spring Boot is better compared to then.
+
+00:00:16.890 --> 00:00:20.100
+We are going to create our first Spring Boot app from
+
+00:00:20.100 --> 00:00:24.070
+scratch and understand Spring Boot application structure.
+
+00:00:24.070 --> 00:00:26.920
+The Spring Boot framework is probably
+
+00:00:26.920 --> 00:00:31.435
+the most useful framework for Java-based microservice.
+
+00:00:31.434 --> 00:00:37.074
+Spring Boot is a good platform for Java developers
+
+00:00:37.075 --> 00:00:43.210
+to develop a stand along and production grade spring application.
+
+00:00:43.210 --> 00:00:46.090
+Developers can get started with
+
+00:00:46.090 --> 00:00:52.280
+minimal configurations without the need for the entire Spring configuration setup.
+
+00:00:52.280 --> 00:00:57.609
+In a way, Spring Boot really help you to speed up
+
+00:00:57.609 --> 00:01:04.254
+your application development without many required configuration need for Spring.
+
+00:01:04.254 --> 00:01:09.369
+I will compare this two framework in the next few videos.
+
+00:01:09.370 --> 00:01:15.700
+Here are some advantages Spring Boot framework provides to developers.
+
+00:01:15.700 --> 00:01:20.710
+The first, it will simplify your spring dependencies.
+
+00:01:22.519 --> 00:01:29.259
+It can be run straight from command line with our application container.
+
+00:01:29.900 --> 00:01:33.080
+It build more with less code.
+
+00:01:33.079 --> 00:01:38.090
+There's no need for XML, not even web.XML.
+
+00:01:38.090 --> 00:01:43.710
+There is auto-configuration you can use in Spring Boot application.
+
+00:01:44.030 --> 00:01:51.495
+They're useful tools for running in production, database initialization,
+
+00:01:51.495 --> 00:01:58.829
+environment specific config files, collecting metrics.
+
+00:01:58.829 --> 00:02:00.640
+If the Spring is the cake,
+
+00:02:00.640 --> 00:02:02.530
+Spring Boot it's the icing.
+
+00:02:02.530 --> 00:02:08.250
+Personally, I think this is a great comparison between Spring and Spring Boot.
+
+00:02:09.129 --> 00:02:13.609
+Spring Boot and Spring frameworks are different in
+
+00:02:13.610 --> 00:02:22.985
+this configuration, XML, controlling, use.
+
+00:02:22.985 --> 00:02:26.760
+In short both frameworks help you build
+
+00:02:26.759 --> 00:02:32.254
+a web application and Spring Boot is built on top of the Spring framework.
+
+00:02:32.254 --> 00:02:37.294
+Well, you can build everything with Spring framework without using the Spring Boot.
+
+00:02:37.294 --> 00:02:42.030
+The Spring Boot can help you get the [inaudible] done really quick,
+
+00:02:42.030 --> 00:02:49.080
+which is the reason why we're using Spring Boot over Spring in this course.
+

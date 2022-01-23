@@ -1,0 +1,166 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.740 --> 00:00:03.660
+Java math, date, string,
+
+00:00:03.660 --> 00:00:06.269
+and character are really basic,
+
+00:00:06.269 --> 00:00:08.730
+but really helpful Java APIs.
+
+00:00:08.730 --> 00:00:13.170
+You should expect to see a lot of this in your Java program.
+
+00:00:13.169 --> 00:00:16.170
+If you're coming from a different programming language,
+
+00:00:16.170 --> 00:00:18.915
+for instance, Python, C++,
+
+00:00:18.914 --> 00:00:23.129
+you should have no problem learning them and you should be able to
+
+00:00:23.129 --> 00:00:28.469
+solve all the quizzes and coding across easily.
+
+00:00:28.469 --> 00:00:33.320
+Java math class is very important Java class that you can
+
+00:00:33.320 --> 00:00:37.579
+use in future to perform mathematic task like calculation,
+
+00:00:37.579 --> 00:00:39.979
+data analysis, and machine learning.
+
+00:00:39.979 --> 00:00:41.524
+To use math class,
+
+00:00:41.524 --> 00:00:45.204
+you need to import java.lang package.
+
+00:00:45.204 --> 00:00:48.390
+All math methods are static,
+
+00:00:48.390 --> 00:00:50.960
+so there's no need to construct it.
+
+00:00:50.960 --> 00:00:55.160
+Here are some common methods for math class that you can use.
+
+00:00:55.159 --> 00:00:59.919
+There really helpful, so please take a look and understand how they're used.
+
+00:00:59.920 --> 00:01:02.460
+We have a quiz for that.
+
+00:01:02.460 --> 00:01:05.320
+Hopefully, you can learn quickly.
+
+00:01:05.319 --> 00:01:12.449
+Date is another useful class where you come check a date,
+
+00:01:12.450 --> 00:01:16.269
+perform the date tasks like comparing two dates.
+
+00:01:16.269 --> 00:01:21.545
+So Java provides the date class in the java.util package,
+
+00:01:21.545 --> 00:01:27.219
+this package encapsulates the current date and time.
+
+00:01:27.219 --> 00:01:30.250
+There are two constructor for date class.
+
+00:01:30.250 --> 00:01:35.364
+One is you can construct the date without the parameter,
+
+00:01:35.364 --> 00:01:39.504
+another one is you can construct date with the millisecond.
+
+00:01:39.504 --> 00:01:42.754
+Here's some common method for Java date class.
+
+00:01:42.754 --> 00:01:46.924
+You can use this method to compare two dates,
+
+00:01:46.924 --> 00:01:50.744
+you can also use this method to get the date,
+
+00:01:50.745 --> 00:01:53.010
+to get the time, or set the time.
+
+00:01:53.010 --> 00:01:56.640
+Java string is a very helpful class and
+
+00:01:56.640 --> 00:02:00.754
+string is a very important concept for all programming languages.
+
+00:02:00.754 --> 00:02:03.694
+String is a sequence of characters.
+
+00:02:03.694 --> 00:02:05.159
+For example, hello world.
+
+00:02:05.159 --> 00:02:09.615
+Hello world is a sequence of all the characters, you can see that.
+
+00:02:09.615 --> 00:02:14.825
+String is immutable which means you cannot change it once it's created.
+
+00:02:14.824 --> 00:02:20.269
+Let's take a moment to understand what is the immutable and mutable means.
+
+00:02:21.280 --> 00:02:26.314
+Mutable means you can change the states and fields after the object is created.
+
+00:02:26.314 --> 00:02:32.620
+For example, StringBuilder, StringBuffer, date, and etc.
+
+00:02:33.009 --> 00:02:38.104
+Immutable means you cannot change anything after the object is created.
+
+00:02:38.104 --> 00:02:44.489
+For example, string, integer, long, and double.
+
+00:02:44.490 --> 00:02:48.110
+Assuming you already know what char is,
+
+00:02:48.110 --> 00:02:54.575
+character is a wrapper class for char which contains a single char field.
+
+00:02:54.574 --> 00:02:56.664
+To create our char object,
+
+00:02:56.664 --> 00:02:59.250
+you can do something like this.
+
+00:02:59.250 --> 00:03:02.430
+You start a Character class.
+
+00:03:02.430 --> 00:03:09.189
+You use char as the parameter for your constructor.
+
+00:03:10.370 --> 00:03:16.265
+Character class provides really helpful method when dealing with string problems.
+
+00:03:16.264 --> 00:03:24.589
+Sometimes you have to decompose a string and rebuild the string by using the char APIs.
+
+00:03:24.590 --> 00:03:27.060
+So here are some really common,
+
+00:03:27.060 --> 00:03:33.485
+really helpful character APIs you can use to solve the problem.
+
+00:03:33.485 --> 00:03:37.944
+Now that you have learned math, date, string,
+
+00:03:37.943 --> 00:03:44.504
+and character classes, and I hope you look at the API document and our standard.
+
+00:03:44.504 --> 00:03:50.400
+Let's test out and see if you can finish the quizzes yourself.
+

@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.990
+You may notice the stack trace below when you're executing the Hello Filter example.
+
+00:00:06.990 --> 00:00:10.605
+This means filter will filter the request first,
+
+00:00:10.605 --> 00:00:13.080
+and runs a similar method,
+
+00:00:13.080 --> 00:00:16.574
+and future request after the similar method.
+
+00:00:16.574 --> 00:00:20.219
+We can use a filter to remove unnecessary information we want to
+
+00:00:20.219 --> 00:00:24.719
+pass in request and response.
+

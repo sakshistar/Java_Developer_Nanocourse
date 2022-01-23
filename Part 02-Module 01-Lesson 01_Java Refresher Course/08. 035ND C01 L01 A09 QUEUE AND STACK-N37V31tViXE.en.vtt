@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:07.240
+In this video I'm going to introduce two interesting data structure: stack and queue.
+
+00:00:07.459 --> 00:00:11.535
+Stack follow first in last out principle.
+
+00:00:11.535 --> 00:00:13.859
+That's it when you're adding element,
+
+00:00:13.859 --> 00:00:15.945
+you're adding that to the top,
+
+00:00:15.945 --> 00:00:18.254
+and when you remove element,
+
+00:00:18.254 --> 00:00:20.714
+you also remove that from top.
+
+00:00:20.714 --> 00:00:23.925
+On the other hand, queue follows first in,
+
+00:00:23.925 --> 00:00:29.115
+first out, which is when you adding an element you're adding that down to the bottom.
+
+00:00:29.114 --> 00:00:30.599
+When you remove element,
+
+00:00:30.600 --> 00:00:32.895
+you remove that from top.
+
+00:00:32.895 --> 00:00:38.470
+Let's take a look at an example we have and understand them better.
+
+00:00:38.630 --> 00:00:42.005
+To help you better understand what is first in,
+
+00:00:42.005 --> 00:00:44.330
+first out or first in,
+
+00:00:44.329 --> 00:00:51.265
+last out, let's use an example to illustrate how stack and queue works.
+
+00:00:51.265 --> 00:00:56.189
+From adding number 1-5 to stack and queue,
+
+00:00:56.189 --> 00:00:58.864
+the order will look like this.
+
+00:00:58.865 --> 00:01:01.685
+If I'm adding 1-5 to stack,
+
+00:01:01.685 --> 00:01:03.650
+I'm adding always on the top,
+
+00:01:03.649 --> 00:01:07.390
+and this is the order for stack.
+
+00:01:07.390 --> 00:01:10.805
+If I'm adding 1-5 to queue,
+
+00:01:10.805 --> 00:01:13.885
+I'm always adding to the bottom.
+
+00:01:13.885 --> 00:01:15.734
+If I remove that,
+
+00:01:15.734 --> 00:01:18.375
+I will remove from top for the queue,
+
+00:01:18.375 --> 00:01:21.180
+I remove top from the stack.
+
+00:01:21.180 --> 00:01:27.560
+So for example, if I take three numbers out from the stack,
+
+00:01:27.560 --> 00:01:32.320
+I'm taking 5, 4, 3.
+
+00:01:32.659 --> 00:01:35.939
+If I'm taking three number from the queue,
+
+00:01:35.939 --> 00:01:39.405
+I am taking 1, 2, and 3.
+
+00:01:39.405 --> 00:01:44.670
+I hope this give you a better understanding what is first in,
+
+00:01:44.670 --> 00:01:48.114
+first out or first in, last out.
+
+00:01:48.114 --> 00:01:54.064
+Let's take a look at the quizzes we have and also take a look
+
+00:01:54.064 --> 00:02:00.429
+at the coding access we have to help you better understand queue and stack.
+

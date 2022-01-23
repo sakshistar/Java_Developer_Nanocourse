@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.080 --> 00:00:03.464
+In this example, I'm
+
+00:00:03.464 --> 00:00:13.455
+using some party libraries.
+
+00:00:13.455 --> 00:00:18.164
+So we're using Bootstrap to making sure that our style looks good,
+
+00:00:18.164 --> 00:00:21.195
+we're using the jQuery.
+
+00:00:21.195 --> 00:00:28.269
+We're using sockJS and S2MPJS to handle the messages.
+
+00:00:29.030 --> 00:00:34.049
+A you can see that in our JavaScript in the view,
+
+00:00:34.049 --> 00:00:38.609
+we have connect, disconnect, send message.
+
+00:00:38.609 --> 00:00:45.820
+So we're using all of this to send message from a UI to the controller,
+
+00:00:46.090 --> 00:00:50.930
+and the rest of those are just HTML's that we
+
+00:00:50.929 --> 00:00:56.909
+use to get user input and render the message.
+
+00:00:59.030 --> 00:01:02.919
+To use all the third party libraries,
+
+00:01:03.679 --> 00:01:08.790
+I'm adding few dependencies over here,
+
+00:01:10.129 --> 00:01:15.039
+and you can use them as well in your example.
+

@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.915
+Let's walk through to use a controller we created.
+
+00:00:03.915 --> 00:00:06.405
+So we created our controller directory,
+
+00:00:06.405 --> 00:00:09.089
+where we put to use a controller over here.
+
+00:00:09.089 --> 00:00:13.169
+We annotated this controller annotation.
+
+00:00:13.169 --> 00:00:17.144
+We'd create a message here called getUser.
+
+00:00:17.144 --> 00:00:19.995
+We get user from UI,
+
+00:00:19.995 --> 00:00:25.785
+and we wrap it with massive wrapper, UserResponse.
+
+00:00:25.785 --> 00:00:30.699
+We annotated this method with message mapping,
+
+00:00:30.699 --> 00:00:34.564
+which is mapped this message to user.
+
+00:00:34.564 --> 00:00:38.659
+We're defining where this message we will be sending to.
+
+00:00:38.659 --> 00:00:44.159
+So here we are sending this to this broker.
+
+00:00:44.200 --> 00:00:49.234
+We have created the model and the controller.
+
+00:00:49.234 --> 00:00:56.549
+Next, we are going to implement to config file for our web socket application.
+

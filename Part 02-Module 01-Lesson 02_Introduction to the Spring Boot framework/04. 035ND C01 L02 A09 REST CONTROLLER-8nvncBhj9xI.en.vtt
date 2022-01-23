@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.139
+RestController annotation is a specialized version
+
+00:00:04.139 --> 00:00:08.849
+of the controller introduced in Spring 4.0.
+
+00:00:08.849 --> 00:00:14.039
+Combines the controller and the response body
+
+00:00:14.039 --> 00:00:19.500
+annotation to simplify the controller implementation.
+
+00:00:19.500 --> 00:00:23.230
+You should see that in the next example.
+

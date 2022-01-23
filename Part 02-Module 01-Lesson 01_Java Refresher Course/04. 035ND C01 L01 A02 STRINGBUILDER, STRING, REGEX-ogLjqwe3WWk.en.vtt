@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.004
+Difference in string, StringBuilder and StringBuffer are mutable.
+
+00:00:04.004 --> 00:00:07.035
+Both classes create a mutable sequence of
+
+00:00:07.035 --> 00:00:11.714
+characters as they are very much similar to each other.
+
+00:00:11.714 --> 00:00:15.060
+However, StringBuilder provide no guarantee
+
+00:00:15.060 --> 00:00:19.035
+of synchronization, whereas StringBuffer does.
+
+00:00:19.035 --> 00:00:26.714
+As for rejects aka regular expression is used to match or filter our strings.
+
+00:00:26.714 --> 00:00:30.704
+Again please take a look at the API documents on your own,
+
+00:00:30.704 --> 00:00:36.670
+and see if you can solve the crisis and coding problems. See you in a bit.
+

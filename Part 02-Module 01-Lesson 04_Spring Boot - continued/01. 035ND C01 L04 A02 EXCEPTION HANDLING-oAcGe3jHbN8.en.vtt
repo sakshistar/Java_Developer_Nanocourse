@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.065
+There are five ways we can handle Spring Boot exceptions.
+
+00:00:04.065 --> 00:00:08.320
+First, we can create a custom error page.
+
+00:00:09.019 --> 00:00:14.679
+Second, we can use Exception Handler annotation.
+
+00:00:14.810 --> 00:00:22.240
+Three, we can use Controller Advice and Exception Handler.
+
+00:00:22.460 --> 00:00:28.929
+Four, we can configure a Simple Mapping Exception Resolver.
+
+00:00:29.570 --> 00:00:35.505
+Five, we can Custom Handler Exception Resolver class.
+
+00:00:35.505 --> 00:00:40.620
+Let's walk through this approaches one by one.
+

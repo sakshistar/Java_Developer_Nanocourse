@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.365
+The model component correspond to data related logic.
+
+00:00:04.365 --> 00:00:08.519
+Model can be represented as data being transferred between
+
+00:00:08.519 --> 00:00:13.544
+the view and the controller or other logic related data.
+
+00:00:13.544 --> 00:00:20.550
+If we are creating a student management application to store students' grade,
+
+00:00:20.550 --> 00:00:27.045
+we can create a student object to retrieve the student records from the database,
+
+00:00:27.045 --> 00:00:29.910
+process it and update the database,
+
+00:00:29.910 --> 00:00:32.534
+is updated student record,
+
+00:00:32.534 --> 00:00:36.549
+or pass it to the view to render it.
+

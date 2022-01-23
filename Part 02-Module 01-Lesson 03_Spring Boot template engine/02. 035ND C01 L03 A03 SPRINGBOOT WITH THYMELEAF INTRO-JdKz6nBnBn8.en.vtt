@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.784
+In the next few videos,
+
+00:00:01.784 --> 00:00:03.794
+I'm going to talk about Thymeleaf,
+
+00:00:03.794 --> 00:00:09.000
+which is highly recommended to Spring Boot for template engine.
+
+00:00:09.000 --> 00:00:12.990
+Like Euro, Let's start with a example.
+
+00:00:12.990 --> 00:00:16.170
+Thymeleaf is an in-memory template engine,
+
+00:00:16.170 --> 00:00:19.890
+so it does all its processing in memory.
+
+00:00:19.890 --> 00:00:28.200
+If use a [inaudible] the maps to the HTML of the page in memory and the value changes.
+
+00:00:28.199 --> 00:00:31.949
+So parse page are also changed.
+
+00:00:31.949 --> 00:00:38.369
+Thymeleaf is a compute engine that relies mostly on attributes installed paths,
+
+00:00:38.369 --> 00:00:41.099
+like what GSP does.
+
+00:00:41.100 --> 00:00:49.270
+This make it testable in the browser directly without requiring a server.
+

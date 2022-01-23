@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.575
+Now the model is created,
+
+00:00:01.575 --> 00:00:03.405
+let's create the controller.
+
+00:00:03.404 --> 00:00:07.259
+The controller is used to send messages to endpoint.
+
+00:00:07.259 --> 00:00:11.205
+We're going to mapping the messages to the model created.
+
+00:00:11.205 --> 00:00:16.035
+Out handling our messages or sending to the endpoint,
+
+00:00:16.035 --> 00:00:18.103
+you send two annotation,
+
+00:00:18.103 --> 00:00:24.549
+or subscriber to the destination will receive the message.
+

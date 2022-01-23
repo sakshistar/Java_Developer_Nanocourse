@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.830
+Next, I'm going to show you how to create URLs in your web application,
+
+00:00:04.830 --> 00:00:09.435
+so that they incur any required URL preparation artifacts.
+
+00:00:09.435 --> 00:00:14.339
+Just a term by means of so-called link expression.
+
+00:00:14.339 --> 00:00:18.179
+A type of ThymeLeaf standard expression.
+
+00:00:18.179 --> 00:00:20.759
+Let's take all glad to demo first.
+
+00:00:20.760 --> 00:00:24.525
+If it technically URL was set up in our view,
+
+00:00:24.524 --> 00:00:29.579
+the first is we're passing nothing to the new page.
+
+00:00:29.579 --> 00:00:32.625
+The second one, we're passing the ID,
+
+00:00:32.625 --> 00:00:35.804
+and then to our new view.
+
+00:00:35.804 --> 00:00:40.799
+So this is how this link get rendered in the browser.
+
+00:00:40.799 --> 00:00:43.884
+So the first link if you click that,
+
+00:00:43.884 --> 00:00:49.019
+it will take you to the demo view with no parameter.
+
+00:00:50.329 --> 00:00:53.369
+If you click the second link,
+
+00:00:53.369 --> 00:00:55.599
+you'll also go to the demo view,
+
+00:00:55.600 --> 00:01:00.170
+but this time it will have its ID equals to one,
+
+00:01:00.170 --> 00:01:06.734
+and then equals to Eric parameter within the western link.
+
+00:01:06.734 --> 00:01:09.704
+That's it for our ThymeLeaf introduction.
+
+00:01:09.704 --> 00:01:11.364
+If you want to learn more,
+
+00:01:11.364 --> 00:01:19.579
+please visit this link and see what you can learn from ThymeLeaf. I'll see you later.
+

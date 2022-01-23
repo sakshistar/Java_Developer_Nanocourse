@@ -1,0 +1,482 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spring Boot Unit Test, Hot Swap And Logging</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Spring Boot template engine</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Spring Boot Template Engine.html">01. Spring Boot Template Engine</a>
+    </li>
+    <li class="">
+      <a href="02. Spring Boot Template Engine - Thymeleaf.html">02. Spring Boot Template Engine - Thymeleaf</a>
+    </li>
+    <li class="">
+      <a href="03. Thymeleaf - Variable.html">03. Thymeleaf - Variable</a>
+    </li>
+    <li class="">
+      <a href="04. Thymeleaf - Condition.html">04. Thymeleaf - Condition</a>
+    </li>
+    <li class="">
+      <a href="05. Thymeleaf - Loop.html">05. Thymeleaf - Loop</a>
+    </li>
+    <li class="">
+      <a href="06. Thymeleaf - Scope.html">06. Thymeleaf - Scope</a>
+    </li>
+    <li class="">
+      <a href="07. Thymeleaf - URL.html">07. Thymeleaf - URL</a>
+    </li>
+    <li class="">
+      <a href="08. Spring Boot Unit Test, Hot Swap And Logging.html">08. Spring Boot Unit Test, Hot Swap And Logging</a>
+    </li>
+    <li class="">
+      <a href="09. Spring Boot Form Validation.html">09. Spring Boot Form Validation</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">08. Spring Boot Unit Test, Hot Swap And Logging</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>035ND C01 L03 A15 SPRINGBOOT</p></h3>
+  <video controls>
+  <source src="08. 035ND C01 L03 A15 SPRINGBOOT-o38XEevy2Qw.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. 035ND C01 L03 A15 SPRINGBOOT-o38XEevy2Qw.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="example---instructions">Example - instructions</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In this example, we are going to create a spring boot application first, then create a unit test to test it. </p>
+<ol>
+<li>Create a new spring boot application name spring-boot-unit-tests.</li>
+<li>Add web as dependency. Then download, and import the project into IntelliJ</li>
+<li>Create a dao directory and create a UserDao class inside.</li>
+</ol>
+<pre><code>@Repository
+public class UserDao {
+   public String getUser() {
+       return "Tom";
+   }
+}</code></pre>
+<ul>
+<li>Create a service directory and create a UserService class inside.</li>
+</ul>
+<pre><code>@Service
+public class UserService {
+   @Resource
+   private UserDao userDao;
+
+   public String getUser() {
+       return userDao.getUser();
+   }
+}</code></pre>
+<ul>
+<li>Create a unit test class under test/java/com/example/springbootunittest called UserServiceTest with code</li>
+</ul>
+<pre><code>@RunWith(SpringJUnit4ClassRunner.class) // @RunWith: integrate spring with junit
+@SpringBootTest(classes = {SpringBootUnitTestApplication.class}) // @SpringBootTest: this class is spring boot test.
+public class UserServiceTest {
+   @Resource
+   private UserService userService;
+
+   @Test
+   public void testGetUser() {
+       Assert.assertEquals(userService.getUser(), "Tom");
+   }
+}</code></pre>
+<p>Directly run the UserServiceTest class to see  the test result.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A16 CREATE SPRINGBOOT</p></h3>
+  <video controls>
+  <source src="08. 035ND C01 L03 A16 CREATE SPRINGBOOT-gz2UQHcGjfU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. 035ND C01 L03 A16 CREATE SPRINGBOOT-gz2UQHcGjfU.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>If everything is setup correctly, you should see a test case passed. What we are doing here is, we are adding a one method class UserDao, and a business logc UserService. UserDao has <a href="https://github.com/Repository" target="_blank">@Repository</a> and UserService uses <a href="https://github.com/Service" target="_blank">@Service</a>. And we created a Spring Boot Unit test to test the UserService. </p>
+<p>It’s very similar to Junit test. In addition, we added annotation <a href="https://github.com/RunWith" target="_blank">@RunWith</a>(SpringJUnit4ClassRunner.class) to integrate junit with spring boot. And we added <a href="https://github.com/SpringBootTest" target="_blank">@SpringBootTest</a>(classes = {SpringBootUnitTestApplication.class}) to tell the application that this class is spring boot test. </p>
+<p>Since we are going to cover more Spring Boot test in future class, I just give you an idea about how spring boot unit test look like here. If you are interested to see how unit test works in spring boot, please feel free to create more unit tests on your own.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="spring-boot-unit-test-annotations">Spring Boot unit test annotations</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A18 ANNOTATIONS</p></h3>
+  <video controls>
+  <source src="08. 035ND C01 L03 A18 ANNOTATIONS-PGncNhZiH3Y.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. 035ND C01 L03 A18 ANNOTATIONS-PGncNhZiH3Y.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="example---instructions">Example - instructions</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In this example, we are going to add the DevTool step by step. Instead of creating a new project, we can reuse our existing project spring-boot-thymeleaf. In your future project, you can directly add DevTool dependency when you creating your Spring Boot application.</p>
+<ul>
+<li>Add the devtool dependency to your pom.xml</li>
+</ul>
+<pre><code>&lt;dependency&gt;
+  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+  &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;
+  &lt;scope&gt;runtime&lt;/scope&gt;
+  &lt;optional&gt;true&lt;/optional&gt;
+&lt;/dependency&gt;</code></pre>
+<ul>
+<li>You may want to make sure the following item are there before jumping into testing.</li>
+</ul>
+<p><a href="https://www.mkyong.com/spring-boot/intellij-idea-spring-boot-template-reload-is-not-working/" target="_blank">https://www.mkyong.com/spring-boot/intellij-idea-spring-boot-template-reload-is-not-working/</a>, personally I found this extremely helpful.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A17 SPRINGBOOT UNIT TEST EXAMPLE</p></h3>
+  <video controls>
+  <source src="08. 035ND C01 L03 A17 SPRINGBOOT UNIT TEST EXAMPLE-hIIvD6lgu5k.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. 035ND C01 L03 A17 SPRINGBOOT UNIT TEST EXAMPLE-hIIvD6lgu5k.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Now you have the spring boot devtool setup. Let’s do some testing to make sure we got what we are expecting. </p>
+<ol>
+<li><p>We want to make sure it works for html pages http://localhost:8080/demo. Update “You passed the exam.” in your demo.html to “You successfully passed your exam.” Give a sec for the application server to restart and refresh the demo page. </p></li>
+<li><p>We also want to make sure it works for changes in Java. First goto localhost:8080/demo2, Change Tom’s age from 30 to 32. When you clicked the save button, you would notice the changes in your console. And you will see the application server is restarting. When you refresh the page, you will see Tom’s age is updated.</p></li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="spring-boot-unit-test-and-hot-swap">Spring boot unit test and hot swap</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A19 HOTSWAP</p></h3>
+  <video controls>
+  <source src="08. 035ND C01 L03 A19 HOTSWAP-483OGTkNJTE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. 035ND C01 L03 A19 HOTSWAP-483OGTkNJTE.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A20 DEVTOOL</p></h3>
+  <video controls>
+  <source src="08. 035ND C01 L03 A20 DEVTOOL-NVxakFcFmvY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. 035ND C01 L03 A20 DEVTOOL-NVxakFcFmvY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A21 DEVTOOL EXAMPLE</p></h3>
+  <video controls>
+  <source src="08. 035ND C01 L03 A21 DEVTOOL EXAMPLE-osVq-QxOWrg.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. 035ND C01 L03 A21 DEVTOOL EXAMPLE-osVq-QxOWrg.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A22 HOTSWAP SUMMARY</p></h3>
+  <video controls>
+  <source src="08. 035ND C01 L03 A22 HOTSWAP SUMMARY-vIVCCAVLGfs.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. 035ND C01 L03 A22 HOTSWAP SUMMARY-vIVCCAVLGfs.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A23 SPRINGBOOT SUMMARY</p></h3>
+  <video controls>
+  <source src="08. 035ND C01 L03 A23 SPRINGBOOT SUMMARY-UN9qQ2cYCp8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. 035ND C01 L03 A23 SPRINGBOOT SUMMARY-UN9qQ2cYCp8.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="springboot-logging">Springboot Logging</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A24 LOGGING INTRO</p></h3>
+  <video controls>
+  <source src="08. 035ND C01 L03 A24 LOGGING INTRO-lJho7ILgRCY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. 035ND C01 L03 A24 LOGGING INTRO-lJho7ILgRCY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Spring Boot supports Java Util Logging, Log4j2, and Logback. By default, it uses Logback. With these logging components, you can configure the console logging as well as file logging for you to quickly detect problems and the source of the problems. The default Spring Boot logging provides the following information.</p>
+<ol>
+<li>Date and time.</li>
+<li>Log level - INFO, ERROR, TRACE, WARN. how many logs do you want to see? Based on the level you set, Spring Boot will print the messages fit for that level. 3 For complete logging level, you can see here: <a href="https://logging.apache.org/log4j/2.0/manual/architecture.html" target="_blank">https://logging.apache.org/log4j/2.0/manual/architecture.html</a></li>
+<li>Process ID</li>
+<li>Thread name.</li>
+<li>Logger name - the source of the class.<br />
+Log message</li>
+</ol>
+<p>By default, all logs will be print on console, not in file. But in reality, we always want to be able to trace historical logs, so we need to keep them in file.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Check out demo code from github: <a href="https://github.com/udacity/JDND/tree/master/demos/c1/spring-boot-logging" target="_blank">https://github.com/udacity/JDND/tree/master/demos/c1/spring-boot-logging</a></p>
+<p>As mentioned above, there are two outputs you can setup, console log or file log. In here I am setting the error level to Debug for both. Console Log: by default, “INFO”, “ERROR” and “WARN” log messages will print in the log file. If you want to enable Debug level Log. Just add the following to your application.properties.</p>
+<pre><code>debug=true</code></pre>
+<p>File Log: You need to specific your log file path in application.properties</p>
+<pre><code>logging.level.root = DEBUG
+logging.file = /var/tmp/mylog.log</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Spring Boot Logging Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which LOG level is higher? (meaning will produce more loggings)</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899630" id="rbk1">
+        <label for="rbk1"><p>INFO</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899630" id="rbk2">
+        <label for="rbk2"><p>WARN</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    INFO
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A25 LOGGING DEMO</p></h3>
+  <video controls>
+  <source src="08. 035ND C01 L03 A25 LOGGING DEMO-GvfdQdiKfBI.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. 035ND C01 L03 A25 LOGGING DEMO-GvfdQdiKfBI.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L03 A26 LOGGING ANOTHER OPTION</p></h3>
+  <video controls>
+  <source src="08. 035ND C01 L03 A26 LOGGING ANOTHER OPTION-IIausERcN4E.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. 035ND C01 L03 A26 LOGGING ANOTHER OPTION-IIausERcN4E.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="09. Spring Boot Form Validation.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. Spring Boot Unit Test, Hot Swap And Logging')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

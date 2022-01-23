@@ -1,0 +1,355 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spring Boot Exception</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Spring Boot - continued</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Spring Boot Exception.html">01. Spring Boot Exception</a>
+    </li>
+    <li class="">
+      <a href="02. Spring Boot Exception- @ControllerAdvise + @ExceptionHandler.html">02. Spring Boot Exception- @ControllerAdvise + @ExceptionHandler</a>
+    </li>
+    <li class="">
+      <a href="03. Spring Boot Exception - SimpleMappingExceptionResolver.html">03. Spring Boot Exception - SimpleMappingExceptionResolver</a>
+    </li>
+    <li class="">
+      <a href="04. Spring Boot Exception Handling - Summary.html">04. Spring Boot Exception Handling - Summary</a>
+    </li>
+    <li class="">
+      <a href="05. WebSocket.html">05. WebSocket</a>
+    </li>
+    <li class="">
+      <a href="06. Package Spring Boot Application.html">06. Package Spring Boot Application</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Spring Boot Exception</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>035ND C01 L04 A01 SPRINGBOOT EXCEPTION</p></h3>
+  <video controls>
+  <source src="01. 035ND C01 L04 A01 SPRINGBOOT EXCEPTION-hAYKm2LlqIU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="01. 035ND C01 L04 A01 SPRINGBOOT EXCEPTION-hAYKm2LlqIU.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="spring-boot-exception-handling">Spring Boot Exception Handling</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A02 EXCEPTION HANDLING</p></h3>
+  <video controls>
+  <source src="01. 035ND C01 L04 A02 EXCEPTION HANDLING-oAcGe3jHbN8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="01. 035ND C01 L04 A02 EXCEPTION HANDLING-oAcGe3jHbN8.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>There are five types of situations we can handle Spring Boot exceptions rather than showing error pages like 404 or 500.</p>
+<ol>
+<li><p>Create custom error page.</p></li>
+<li><p><a href="https://github.com/ExceptionHandler" target="_blank">@ExceptionHandler</a>.</p></li>
+<li><p><a href="https://github.com/ControllerAdvice" target="_blank">@ControllerAdvice</a> + <a href="https://github.com/ExceptionHandler" target="_blank">@ExceptionHandler</a>.</p></li>
+<li><p>Configure SimpleMappingExceptionResolver class.</p></li>
+<li><p>Custom HandlerExceptionResolver class.</p></li>
+</ol>
+<p>Let’s learn these one by one.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ol>
+<li>Let’s create a new project, named spring-boot-exception with web, thymeleaf and devTool as dependency.</li>
+<li>Download, unzip and import as always.</li>
+<li>Create a UserController inside controller directory.</li>
+</ol>
+<pre><code>@Controller
+public class UserController {
+
+   @RequestMapping("/add")
+   public String add() {
+       int num = 10 / 0;
+       return "add";
+   }
+}</code></pre>
+<p>Create an empty add.html inside resources/templates directory.</p>
+<p>Run the application and goto http://localhost:8080/add</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A03 SPRINGBOOT EXAMPLE</p></h3>
+  <video controls>
+  <source src="01. 035ND C01 L04 A03 SPRINGBOOT EXAMPLE-5KveNO5V9f0.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="01. 035ND C01 L04 A03 SPRINGBOOT EXAMPLE-5KveNO5V9f0.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>If everything is setup correctly, you should see something like below</p>
+<pre><code>There was an unexpected error (type=Internal Server Error, status=500).
+/ by zero
+java.lang.ArithmeticException: / by zero</code></pre>
+<p>The page you are looking at is the spring boot default error handling page. But what if we want to show our own custom page.</p>
+<p>What we can do is to add a error.html page in resources/template folder</p>
+<p>(create a error.html in IDE)</p>
+<p>It will be something like:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;title&gt;Custom Error Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h3&gt;Error Page&lt;/h3&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Because we are using devTool already, once you add the error page, you can just refresh localhost:8080/add, and you should see the error.html page you just created, not the default Spring boot error page. </p>
+<p>Create a custom error page is easy, but for most of the users, it’s not ideal because they want to separate error handling page for different errors. Let’s take a look at different solutions.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="spring-boot-exception-exceptionhandler-example-prep">Spring boot exception <a href="https://github.com/exceptionhandler" target="_blank">@exceptionhandler</a> example prep</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Spring boot exception <a href="https://github.com/exceptionhandler" target="_blank">@exceptionhandler</a> example prep</p></h3>
+  <div>
+  <p>Let’s reuse the project we have created. Adding a new method in the controller.</p>
+<pre><code>@ExceptionHandler(value={java.lang.ArithmeticException.class})
+public ModelAndView handlerArithmeticException(Exception e) {
+   ModelAndView modelAndView = new ModelAndView();
+   modelAndView.addObject("exception", e.toString());
+   modelAndView.setViewName("mathError");
+   return modelAndView;
+}</code></pre>
+<p>Rename error.html to error.bak.html</p>
+<p>Add new html under template folder named mathError.html. </p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+This contains math exceptions
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A04 EXCEPTION HANDLER</p></h3>
+  <video controls>
+  <source src="01. 035ND C01 L04 A04 EXCEPTION HANDLER-cDRG6cgsgXY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="01. 035ND C01 L04 A04 EXCEPTION HANDLER-cDRG6cgsgXY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="spring-boot---exceptionhandler-example-2">Spring boot - ExceptionHandler example 2</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Spring boot - exceptionhandler example 2</p></h3>
+  <div>
+  <p>This time we are going to handle a different exception, null pointer exception. Update the controller and add two methods</p>
+<pre><code>@RequestMapping("/update")
+public String update() {
+   String name = null;
+   name = name.toLowerCase(); // this should cause null pointer exception
+   return "update";
+}</code></pre>
+<p>And</p>
+<pre><code>@ExceptionHandler(value={java.lang.NullPointerException.class})
+public ModelAndView handlerNullPointerException(Exception e) {
+   ModelAndView modelAndView = new ModelAndView();
+   modelAndView.addObject("exception", e.toString());
+   modelAndView.setViewName("nullPointerError");
+   return modelAndView;
+}</code></pre>
+<p>Add a new html page named nullPointerError.html under templates directory. </p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+This contains null pointer exceptions.
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Spring Boot Exception- @ControllerAdvise + @ExceptionHandler.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Spring Boot Exception')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,375 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Java Basic APIs - String</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Java Refresher Course</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Java Introduction.html">01. Java Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Java Basic APIs.html">02. Java Basic APIs</a>
+    </li>
+    <li class="">
+      <a href="03. Java Basic APIs - String.html">03. Java Basic APIs - String</a>
+    </li>
+    <li class="">
+      <a href="04. Java Basic APIs - StringBuilder, StringBuffer, Regex.html">04. Java Basic APIs - StringBuilder, StringBuffer, Regex</a>
+    </li>
+    <li class="">
+      <a href="05. Java Basic APIs - Binary Search, Recursion, Big-O Notation.html">05. Java Basic APIs - Binary Search, Recursion, Big-O Notation</a>
+    </li>
+    <li class="">
+      <a href="06. Collections.html">06. Collections</a>
+    </li>
+    <li class="">
+      <a href="07. Collections - List.html">07. Collections - List</a>
+    </li>
+    <li class="">
+      <a href="08. Collections - Stack and Queue.html">08. Collections - Stack and Queue</a>
+    </li>
+    <li class="">
+      <a href="09. Collections - Map and Set.html">09. Collections - Map and Set</a>
+    </li>
+    <li class="">
+      <a href="10. Environment Setup.html">10. Environment Setup</a>
+    </li>
+    <li class="">
+      <a href="11. Exception and File IO.html">11. Exception and File IO</a>
+    </li>
+    <li class="">
+      <a href="12. Java Programming Practice Exercises.html">12. Java Programming Practice Exercises</a>
+    </li>
+    <li class="">
+      <a href="13. Java Refresher Course - Summary.html">13. Java Refresher Course - Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Java Basic APIs - String</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>035ND C01 L01 A01 MATH, DATE, STRING</p></h3>
+  <video controls>
+  <source src="03. 035ND C01 L01 A01 MATH, DATE, STRING-imFeLfQ9Bh4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. 035ND C01 L01 A01 MATH, DATE, STRING-imFeLfQ9Bh4.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Java <strong>math</strong>, <strong>date</strong>, <strong>string</strong> and <strong>character</strong> are really basic yet useful java APIs. <br />
+You should expect to see lots of these in this class. If you are coming from different programming language, you should be OK to learn them quickly. <br />
+In this class, I am not going to teach them one by one, please take a look at the API documents yourself. And you should have no problem to complete the quizzes or the coding exercises.</p>
+<p>Math class helps user to perform the mathematic operations. For simple usage, it can help you to do basic mathematic calculation. It can also be used in data analysis, big data calculation, machine learning and AI.</p>
+<h3 id="resources">Resources:</h3>
+<p>Math: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html" target="_blank">https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html</a></p>
+<p>Date: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Date.html" target="_blank">https://docs.oracle.com/javase/8/docs/api/java/util/Date.html</a></p>
+<p>String: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" target="_blank">https://docs.oracle.com/javase/8/docs/api/java/lang/String.html</a></p>
+<p>Character: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html" target="_blank">https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="here-some-quizzes-to-get-us-up-to-speed">Here some quizzes to get us up to speed!</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Math, Date, String, Character Quiz 1</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following Java statement will produce 8.0?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899113" id="rbk1">
+        <label for="rbk1"><p>Math.ceil(8.2)</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899113" id="rbk2">
+        <label for="rbk2"><p>Math.floor(7.2)</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899113" id="rbk3">
+        <label for="rbk3"><p>Math.round(8.01)</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="899113" id="rbk4">
+        <label for="rbk4"><p>Math.abs(-8.0)</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Math.abs(-8.0)
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Math, Date, String, Character Quiz 2</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Given a &gt; b, b &gt; c, which statement will return the a?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899112" id="rbk1">
+        <label for="rbk1"><p>Math.max(c, Math.abs(Math.min(-a, -b)))</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899112" id="rbk2">
+        <label for="rbk2"><p>Math.min(c, Math.abs(Math.max(a, b)))</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Math.max(c, Math.abs(Math.min(-a, -b)))
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Math, Date, String, Character Quiz 3</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Convert 1561554154352 to UTC time you would get what date and time?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899130" id="rbk1">
+        <label for="rbk1"><p>Wed Jun 26 2019 13:02:34</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899130" id="rbk2">
+        <label for="rbk2"><p>Wed Jun 26 2019 09:02:34</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Wed Jun 26 2019 13:02:34
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Math, Date, String, Character Quiz 4</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>String in Java is a?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899137" id="rbk1">
+        <label for="rbk1"><p>object</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899137" id="rbk2">
+        <label for="rbk2"><p>class</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899137" id="rbk3">
+        <label for="rbk3"><p>variable</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="899137" id="rbk4">
+        <label for="rbk4"><p>character array</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    class
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Math, Date, String, Character Quiz5</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which statement below will NOT produce a char ‘a’ ?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1565209010332" name="908073" id="a1565209010332">
+        <label for="a1565209010332"><p>'A' + 32</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1565209056015" name="908073" id="a1565209056015">
+        <label for="a1565209056015"><p>'z' - 25</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1565209056728" name="908073" id="a1565209056728">
+        <label for="a1565209056728"><p>Character.toString(‘a’)</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1565209057874" name="908073" id="a1565209057874">
+        <label for="a1565209057874"><p>Character.toLowerCase(‘A’)</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Character.toString(‘a’)
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Java Basic APIs - StringBuilder, StringBuffer, Regex.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Java Basic APIs - String')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

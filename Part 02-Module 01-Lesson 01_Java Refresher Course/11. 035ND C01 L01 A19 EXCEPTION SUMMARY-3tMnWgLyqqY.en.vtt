@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.139
+We have learned Java exception and saw a few different types of exceptions.
+
+00:00:04.139 --> 00:00:09.269
+We have also learned how to handle exceptions in Java.
+
+00:00:09.269 --> 00:00:14.564
+To sum up, you always want to have your code to be wrapped
+
+00:00:14.564 --> 00:00:20.594
+by trying cache to prevent exception happens,
+
+00:00:20.594 --> 00:00:26.380
+to ensure that your system wouldn't be crash by the exceptions.
+

@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.570
+In this video, I'm going to show you how to install to Maven Plugin IntelliJ.
+
+00:00:06.570 --> 00:00:10.574
+So here is our IntelliJ project,
+
+00:00:10.574 --> 00:00:12.734
+and what do you want to do is,
+
+00:00:12.734 --> 00:00:16.289
+you want to open the Preference,
+
+00:00:16.289 --> 00:00:18.899
+and go to Plugins,
+
+00:00:18.899 --> 00:00:21.640
+and searching for Maven.
+
+00:00:22.309 --> 00:00:26.174
+So I already has a Plugin installed.
+
+00:00:26.175 --> 00:00:30.524
+So if you want to know the name of the Plugin,
+
+00:00:30.524 --> 00:00:32.309
+it's called Maven Integration.
+
+00:00:32.310 --> 00:00:34.484
+So if you're not have it installed,
+
+00:00:34.484 --> 00:00:38.640
+could marketplace and search for Maven Integration,
+
+00:00:38.640 --> 00:00:40.875
+and just install it.
+
+00:00:40.875 --> 00:00:45.450
+If you have the Maven Plugin installed in your IntelliJ,
+
+00:00:45.450 --> 00:00:51.135
+it will show up in the right-hand side in the sidebar and we open it,
+
+00:00:51.134 --> 00:00:53.679
+you will see something like this.
+

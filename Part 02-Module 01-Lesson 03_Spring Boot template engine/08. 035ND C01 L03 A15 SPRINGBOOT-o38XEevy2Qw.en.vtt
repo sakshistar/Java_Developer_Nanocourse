@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.950
+We're going to cover creating
+
+00:00:01.950 --> 00:00:07.199
+Spring Boot Unit Test to make the Spring Boot app more reliable.
+
+00:00:07.199 --> 00:00:11.580
+We're going to cover Hot Swap to make
+
+00:00:11.580 --> 00:00:17.159
+the Spring Boot development faster without restart the server every time.
+
+00:00:17.159 --> 00:00:24.760
+We're going to cover Logging for user to track errors as fast.
+

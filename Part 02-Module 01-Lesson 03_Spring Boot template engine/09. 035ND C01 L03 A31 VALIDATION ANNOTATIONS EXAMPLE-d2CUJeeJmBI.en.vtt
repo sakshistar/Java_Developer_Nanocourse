@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.560
+So in this example,
+
+00:00:01.560 --> 00:00:06.960
+we're adding all the common annotations we know for SpringBoot.
+
+00:00:06.960 --> 00:00:11.460
+So we are keeping this too for the username and password.
+
+00:00:11.460 --> 00:00:16.140
+For the password, we're adding a length to making sure
+
+00:00:16.140 --> 00:00:21.460
+that the password length is between 6-10.
+
+00:00:21.679 --> 00:00:26.399
+We're adding two checks for the grade,
+
+00:00:26.399 --> 00:00:31.904
+because grade cannot be negative and cannot be over 100.
+
+00:00:31.905 --> 00:00:38.914
+We're adding an email tag to making sure that the email format is valid.
+
+00:00:38.914 --> 00:00:42.530
+Let's try it. So here's our form.
+
+00:00:42.530 --> 00:00:46.109
+Let's try to input some invalid inflammation.
+
+00:00:47.289 --> 00:00:50.534
+Let's leave this username blank,
+
+00:00:50.534 --> 00:00:53.654
+lets have three digit for password,
+
+00:00:53.655 --> 00:00:56.745
+let's put a negative number here,
+
+00:00:56.744 --> 00:01:01.179
+and let's try this invalid email.
+
+00:01:03.350 --> 00:01:09.629
+So as you see, all the invalidation is working,
+
+00:01:09.629 --> 00:01:15.784
+meaning all this information will not even be send to controller, the process.
+
+00:01:15.784 --> 00:01:19.759
+You will be stopped at the validation level.
+
+00:01:19.760 --> 00:01:25.010
+With this validation, we could protect our application from
+
+00:01:25.010 --> 00:01:32.340
+malicious input from user to make our application more safe.
+

@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.149
+As I mentioned in the previous video,
+
+00:00:03.149 --> 00:00:09.734
+there are two types of packaging options available for a Spring Boot application.
+
+00:00:09.734 --> 00:00:14.910
+By default, Spring Boot application will be packed in Java.
+
+00:00:14.910 --> 00:00:17.954
+If you want to pack it as VAR file,
+
+00:00:17.954 --> 00:00:23.049
+you need to add the following attribute in your poem dark CM-O
+

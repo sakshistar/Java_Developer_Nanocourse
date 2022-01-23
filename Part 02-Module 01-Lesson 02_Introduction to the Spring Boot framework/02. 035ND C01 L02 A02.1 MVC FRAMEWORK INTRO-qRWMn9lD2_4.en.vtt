@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.785
+MVC stands for Model, View, Controller,
+
+00:00:04.785 --> 00:00:08.925
+which is the architectural pattern that separates
+
+00:00:08.925 --> 00:00:15.839
+an application into three logical components: the model,
+
+00:00:15.839 --> 00:00:19.059
+the view, and the controller.
+
+00:00:20.030 --> 00:00:28.570
+Each of those components are built to handle specific development aspect of application.
+
+00:00:29.000 --> 00:00:31.440
+MVC is one of
+
+00:00:31.440 --> 00:00:36.465
+the most frequently used industry-standard web application framework
+
+00:00:36.465 --> 00:00:40.955
+to create scalable and extensible projects.
+
+00:00:40.954 --> 00:00:46.140
+In the next video, I'm going to talk about each component separately.
+

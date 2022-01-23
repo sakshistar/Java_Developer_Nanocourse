@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.009
+In order for Spring Boot unit test to run a batch job,
+
+00:00:05.009 --> 00:00:08.910
+the framework must load to jobs obligation contacts.
+
+00:00:08.910 --> 00:00:13.000
+Two annotations are used to trigger this.
+
+00:00:13.359 --> 00:00:16.769
+We start with the RunWith indicates that
+
+00:00:16.769 --> 00:00:22.269
+the class should be used Spring Boot Unit test facilities.
+
+00:00:22.760 --> 00:00:26.475
+We're adding SpringBootTest annotation.
+
+00:00:26.475 --> 00:00:30.885
+With this annotation, Spring Boot provides a convenient way to
+
+00:00:30.885 --> 00:00:36.219
+start up an application contexts to be used in a test.
+
+00:00:36.549 --> 00:00:42.229
+We can replace the SpringBootTest with ContextsConfiguration.
+
+00:00:42.229 --> 00:00:45.579
+The behavior are similar.
+

@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:07.049
+In this demo, I'm creating a student and give the student a grade.
+
+00:00:07.049 --> 00:00:11.969
+I'm using all the condition in cognitive.
+
+00:00:11.970 --> 00:00:13.875
+So first condition is,
+
+00:00:13.875 --> 00:00:17.475
+if a student grade is greater than 60,
+
+00:00:17.475 --> 00:00:20.220
+so means assume pass exam,
+
+00:00:20.219 --> 00:00:26.519
+and we're showing the level of the student using switch case.
+
+00:00:26.519 --> 00:00:29.429
+If the grade is less than 60,
+
+00:00:29.429 --> 00:00:32.219
+means the student failed the exam.
+
+00:00:32.219 --> 00:00:34.454
+This is our view,
+
+00:00:34.454 --> 00:00:36.119
+and in the controller,
+
+00:00:36.119 --> 00:00:39.809
+we're passing a grade of the student.
+
+00:00:39.810 --> 00:00:45.170
+We are converting the grade to the GPA so that we can show
+
+00:00:45.170 --> 00:00:50.810
+this in the view. Let's take a look.
+
+00:00:50.810 --> 00:00:54.370
+If you remember, we are passing 90.
+
+00:00:54.369 --> 00:00:57.390
+When rendering, first of all,
+
+00:00:57.390 --> 00:01:02.520
+you'll see the student pass the exam and when look entry-level,
+
+00:01:02.520 --> 00:01:05.350
+the student is excellent.
+

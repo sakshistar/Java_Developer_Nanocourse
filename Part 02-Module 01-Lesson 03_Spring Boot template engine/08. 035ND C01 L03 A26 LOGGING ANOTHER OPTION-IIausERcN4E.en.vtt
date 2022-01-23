@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.830
+You may have noticed that I only showed one way to configure console and fall
+
+00:00:04.830 --> 00:00:12.269
+log output which is changing to attribute in application.portfolio.
+
+00:00:12.269 --> 00:00:22.019
+Using logback, you can also add in logback.xml to configure the log format and path.
+
+00:00:22.019 --> 00:00:25.050
+We're not going to cover that in this lesson.
+
+00:00:25.050 --> 00:00:27.495
+If you're interested in this topic,
+
+00:00:27.495 --> 00:00:31.649
+please feel free to take a look at logback tutorials,
+
+00:00:31.649 --> 00:00:40.210
+are given where you can learn more details about logging using logback.xml.
+

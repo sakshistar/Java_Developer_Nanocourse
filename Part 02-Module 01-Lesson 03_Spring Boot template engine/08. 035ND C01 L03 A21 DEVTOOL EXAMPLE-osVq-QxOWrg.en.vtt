@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.080
+Now that you should have to Spring Boot down to our setup,
+
+00:00:04.080 --> 00:00:09.960
+let's do some testing to make sure we got what we were expecting.
+
+00:00:12.140 --> 00:00:16.269
+So I'm going to use the same example here.
+
+00:00:21.620 --> 00:00:27.615
+So we're going to use the same example here for the student grade.
+
+00:00:27.614 --> 00:00:29.250
+So instead of saying,
+
+00:00:29.250 --> 00:00:32.895
+"You passed your exam" in the browser, I will say,
+
+00:00:32.895 --> 00:00:35.370
+"You successfully passed your exam."
+
+00:00:35.369 --> 00:00:37.589
+So now I change this to,
+
+00:00:37.590 --> 00:00:40.545
+"You successfully passed your exam."
+
+00:00:40.545 --> 00:00:43.570
+Let's see what [inaudible] changes.
+
+00:00:45.340 --> 00:00:51.440
+So now you see without restarting the application server,
+
+00:00:51.439 --> 00:00:58.909
+with the [inaudible] we can change the code and restart it with the [inaudible].
+
+00:00:58.909 --> 00:01:02.909
+Let's try to see if we can change the Java code instead.
+
+00:01:04.010 --> 00:01:06.355
+So if you remember,
+
+00:01:06.355 --> 00:01:10.219
+we gave the grade 90 so that it passed the exam.
+
+00:01:10.219 --> 00:01:13.769
+Let's change it to 40 to see how it works.
+
+00:01:22.189 --> 00:01:24.750
+So after I save it,
+
+00:01:24.750 --> 00:01:27.780
+you'll notice that in the console,
+
+00:01:27.780 --> 00:01:31.609
+the application server is on [inaudible] restart.
+
+00:01:31.609 --> 00:01:34.950
+Let's take a look at the browser.
+
+00:01:37.989 --> 00:01:42.228
+So instead of saying, you had passed the exam,
+
+00:01:42.228 --> 00:01:45.969
+this time because of 40, you failed exam.
+
+00:01:45.969 --> 00:01:48.000
+With the [inaudible]
+
+00:01:48.000 --> 00:01:53.849
+you don't have to restart the application server, every time we make a change.
+

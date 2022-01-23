@@ -1,0 +1,456 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WebSocket</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Spring Boot - continued</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Spring Boot Exception.html">01. Spring Boot Exception</a>
+    </li>
+    <li class="">
+      <a href="02. Spring Boot Exception- @ControllerAdvise + @ExceptionHandler.html">02. Spring Boot Exception- @ControllerAdvise + @ExceptionHandler</a>
+    </li>
+    <li class="">
+      <a href="03. Spring Boot Exception - SimpleMappingExceptionResolver.html">03. Spring Boot Exception - SimpleMappingExceptionResolver</a>
+    </li>
+    <li class="">
+      <a href="04. Spring Boot Exception Handling - Summary.html">04. Spring Boot Exception Handling - Summary</a>
+    </li>
+    <li class="">
+      <a href="05. WebSocket.html">05. WebSocket</a>
+    </li>
+    <li class="">
+      <a href="06. Package Spring Boot Application.html">06. Package Spring Boot Application</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. WebSocket</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="what-is-websocket">What is WebSocket?</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A09 WEBSOCKET</p></h3>
+  <video controls>
+  <source src="05. 035ND C01 L04 A09 WEBSOCKET-__dADUO5jrY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. 035ND C01 L04 A09 WEBSOCKET-__dADUO5jrY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="websocket-and-stomp-protocols">WebSocket and STOMP Protocols</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A10 STOMP INTRO</p></h3>
+  <video controls>
+  <source src="05. 035ND C01 L04 A10 STOMP INTRO-mHzKP8cklBw.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. 035ND C01 L04 A10 STOMP INTRO-mHzKP8cklBw.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Websocket is a low-level protocol. It defines how a stream of bytes is transformed into frames, which contains a text or binary message. A WebSocket message itself does not have instructions about how to route or process it. Therefore, we need additional support to achieve two-way communication. With Spring Boot, we have STOPM.</p>
+<p>STOMP is a simple text-based message protocol. With it, clients can send and receive messages to and from each other. STOMP is called HTTP for Web. It defines a handful of frame types that are mapped onto WebSockets frames, e.g., CONNECT, SUBSCRIBE, UNSUBSCRIBE, ACK, or SEND.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A11 STOMP COMMANDS</p></h3>
+  <video controls>
+  <source src="05. 035ND C01 L04 A11 STOMP COMMANDS-O55DixiEg_0.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. 035ND C01 L04 A11 STOMP COMMANDS-O55DixiEg_0.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="websocket---create-project">WebSocket - Create Project</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>WebSocket Create Project</p></h3>
+  <div>
+  <p>Goto <a href="https://start.spring.io/" target="_blank">https://start.spring.io/</a> and name the Artifact - spring-boot-websocket</p>
+<p>Add the following dependencies Web, WebSocket, Thymeleaf, DevTool</p>
+<p>Download, unzip and import the project.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="websocket-implementation---model">WebSocket Implementation - Model</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A12 WEBSOCKET</p></h3>
+  <video controls>
+  <source src="05. 035ND C01 L04 A12 WEBSOCKET-tNHP_Z4OOV4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. 035ND C01 L04 A12 WEBSOCKET-tNHP_Z4OOV4.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>WebSocket Implementation Model Example</p></h3>
+  <div>
+  <p>The message we are sending containing the name of the sender. Therefore, we need to create a message containing the sender’s name.<br />
+It will be something like </p>
+<pre><code>public class Message {
+  private String name;
+
+  // getters and setters.
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A13 WEBSOCKET MESSAGE DEMO</p></h3>
+  <video controls>
+  <source src="05. 035ND C01 L04 A13 WEBSOCKET MESSAGE DEMO-gAXppfO_ljs.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. 035ND C01 L04 A13 WEBSOCKET MESSAGE DEMO-gAXppfO_ljs.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="websocket---controller">WebSocket - controller</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A14 WEBSOCKET CONTROLLER</p></h3>
+  <video controls>
+  <source src="05. 035ND C01 L04 A14 WEBSOCKET CONTROLLER-xxeMizdCgqE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. 035ND C01 L04 A14 WEBSOCKET CONTROLLER-xxeMizdCgqE.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="websocket---create-message-handling-controller">WebSocket - Create Message Handling Controller</h2>
+<ol>
+<li><p>You need to build another model as described in the last video first.</p></li>
+<li><p>After that, you need to create a controller with a <a href="https://github.com/SendTo" target="_blank">@SendTo</a> annotation which you will specific the message destination.</p></li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A15 WEBSOCKET CONTROLLER DEMO</p></h3>
+  <video controls>
+  <source src="05. 035ND C01 L04 A15 WEBSOCKET CONTROLLER DEMO-fG8Tpdj2gew.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. 035ND C01 L04 A15 WEBSOCKET CONTROLLER DEMO-fG8Tpdj2gew.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>WebSocket - enable WebSocket in Spring Boot</p></h3>
+  <div>
+  <p>Now we need to enable the WebSocket and STOMP messaging in Spring Boot. To do that, we need to create a class named WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer and with <a href="https://github.com/EnableWebSocketMessageBroker" target="_blank">@EnableWebSocketMessageBroker</a> annotation. </p>
+<p>You class will look like below:</p>
+<p><a href="https://github.com/Configuration" target="_blank">@Configuration</a></p>
+<p><a href="https://github.com/EnableWebSocketMessageBroker" target="_blank">@EnableWebSocketMessageBroker</a></p>
+<pre><code>public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
+    @Override
+    public void configureMessageBroker(MessageBrokerRegistry config) {
+    }
+
+    @Override
+    public void registerStompEndpoints(StompEndpointRegistry registry) {
+    }
+}</code></pre>
+<p>And you need to implement two methods. The configureMessageBroker is used to configure the message broker. We want to 1) enable an in-memory message broker to carry the messges back to client on destination. </p>
+<p>Then we want to set the application destination prefixes. </p>
+<p>After that, you need to implement registerStompEndpoints method to register the endpoint. You will need to find a prefix for your endpoint. This will enable Spring’s STOMP support and SockJS fallback options, so that alternative messaging options may be used if WebSockets are not available.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="websocket---config">WebSocket - Config</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A16 WEBSOCKET CONFIG</p></h3>
+  <video controls>
+  <source src="05. 035ND C01 L04 A16 WEBSOCKET CONFIG-F-On61H0Irg.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. 035ND C01 L04 A16 WEBSOCKET CONFIG-F-On61H0Irg.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A17 WEBSOCKET CONFIG DEMO</p></h3>
+  <video controls>
+  <source src="05. 035ND C01 L04 A17 WEBSOCKET CONFIG DEMO-klKJkneUJn4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. 035ND C01 L04 A17 WEBSOCKET CONFIG DEMO-klKJkneUJn4.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A18 WEBSOCKET SCHEDULER</p></h3>
+  <video controls>
+  <source src="05. 035ND C01 L04 A18 WEBSOCKET SCHEDULER-v-vxQiAmz0g.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. 035ND C01 L04 A18 WEBSOCKET SCHEDULER-v-vxQiAmz0g.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="websocket---creating-view">WebSocket - Creating View</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A19 WEBSOCKET VIEW</p></h3>
+  <video controls>
+  <source src="05. 035ND C01 L04 A19 WEBSOCKET VIEW-7u9VPX6TDfQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. 035ND C01 L04 A19 WEBSOCKET VIEW-7u9VPX6TDfQ.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ol>
+<li><p>You need to create a simple UI with a message input, and a button. User can enter message and send it.</p></li>
+<li><p>You need to create two buttons to manage WebSocket connection. One is to connect, one is to disconnect.</p></li>
+<li><p>You need to add javascript to send messages and receive messages from server side. You basically need to import sockjs and stomp javascript libraries to communicate with the server using STOMP. There are few functions needed to be implemented.</p>
+<ul>
+<li>connect() -&gt; to establish the connection to the endpoint. And making the stompClient subscribe to the prefix.</li>
+<li>disconnect() -&gt; disconnect from endpoint</li>
+<li>sendMessage() -&gt; send message with stopmClient.send when clicked.</li></ul></li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A20 VIEW EXPLAIN</p></h3>
+  <video controls>
+  <source src="05. 035ND C01 L04 A20 VIEW EXPLAIN-J7v34DJTfYE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. 035ND C01 L04 A20 VIEW EXPLAIN-J7v34DJTfYE.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A21 WEBSOCKET DEMO</p></h3>
+  <video controls>
+  <source src="05. 035ND C01 L04 A21 WEBSOCKET DEMO-eC_s9jiGeZU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. 035ND C01 L04 A21 WEBSOCKET DEMO-eC_s9jiGeZU.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="websocket-implementation---summary">WebSocket Implementation - Summary</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A22 WEBSOCKET IMPLEMENTATION SUMMARY</p></h3>
+  <video controls>
+  <source src="05. 035ND C01 L04 A22 WEBSOCKET IMPLEMENTATION SUMMARY-LoJlpMwIAfo.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. 035ND C01 L04 A22 WEBSOCKET IMPLEMENTATION SUMMARY-LoJlpMwIAfo.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Some of you might find this implementation extremely difficulty and some of you may get stuck because you are not familiar with Javascript or did not get the whole idea of WebSocket. Don’t worry about it. Please feel free to checkout the complete solution and compare each class or file with the implementation step. <br />
+Luckily, all WebSocket implementations look familiar, so once you figured out how to implement one application, you should have no problem to implement one yourself in future. </p>
+<p>Solution: <a href="https://github.com/udacity/JDND/tree/master/demos/c1/spring-boot-websocket" target="_blank">https://github.com/udacity/JDND/tree/master/demos/c1/spring-boot-websocket</a></p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Package Spring Boot Application.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. WebSocket')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

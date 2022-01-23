@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.424
+Controller components usually handles most of the works,
+
+00:00:04.424 --> 00:00:12.554
+which act as our interface between model and view to process our business logic.
+
+00:00:12.554 --> 00:00:15.599
+Handling coming in requests,
+
+00:00:15.599 --> 00:00:18.660
+manipulate data using model component,
+
+00:00:18.660 --> 00:00:23.530
+and interrupt this views to render the output.
+

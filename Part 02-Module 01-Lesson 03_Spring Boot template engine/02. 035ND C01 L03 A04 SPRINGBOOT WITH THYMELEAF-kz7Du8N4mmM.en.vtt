@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.604
+Compared to free marker,
+
+00:00:01.604 --> 00:00:03.825
+Thymeleaf is easier to use.
+
+00:00:03.825 --> 00:00:08.714
+You found notice you're keeping HTML and you're adding
+
+00:00:08.714 --> 00:00:15.615
+attack to attach to my header so that it tells that we are using the Thymeleaf engine.
+
+00:00:15.615 --> 00:00:21.734
+Next, let's take a look at the Thymeleaf syntax including
+
+00:00:21.734 --> 00:00:29.230
+variable output, condition, and loop.
+

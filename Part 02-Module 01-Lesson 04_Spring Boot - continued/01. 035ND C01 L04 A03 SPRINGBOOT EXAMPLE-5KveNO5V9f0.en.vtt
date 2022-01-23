@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.189
+Let's walk through a demo one.
+
+00:00:02.189 --> 00:00:04.040
+So if you don't have a page,
+
+00:00:04.040 --> 00:00:06.609
+this is always a full page.
+
+00:00:06.610 --> 00:00:10.199
+This is default Spring Boot error page.
+
+00:00:10.199 --> 00:00:13.964
+As you can see, it doesn't really tell you anything about it.
+
+00:00:13.964 --> 00:00:19.809
+Let's see what happen if we enable the error the XML page.
+
+00:00:33.350 --> 00:00:36.780
+As I can see, we've created
+
+00:00:36.780 --> 00:00:44.145
+a custom error page for all the exceptions happening in Spring Boot application.
+
+00:00:44.145 --> 00:00:51.815
+Let's see what happened. So instead of showing the default Spring Boot error page,
+
+00:00:51.814 --> 00:00:54.949
+now we are lending a different error page.
+
+00:00:54.950 --> 00:00:58.115
+It's the custom page we've created ourselves.
+
+00:00:58.115 --> 00:01:00.690
+So if we try something else.
+
+00:01:00.950 --> 00:01:05.195
+As you can see, all the errors are leading to this page now.
+
+00:01:05.194 --> 00:01:07.399
+Is this a good approach?
+
+00:01:07.400 --> 00:01:12.460
+Probably, but we should see some other pages.
+

@@ -1,0 +1,725 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spring Boot MVC Development Introduction</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Introduction to the Spring Boot framework</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro to Microservice.html">01. Intro to Microservice</a>
+    </li>
+    <li class="">
+      <a href="02. Microservice And MVC framework.html">02. Microservice And MVC framework</a>
+    </li>
+    <li class="">
+      <a href="03. Spring Boot Introduction.html">03. Spring Boot Introduction</a>
+    </li>
+    <li class="">
+      <a href="04. Spring Boot MVC Development Introduction.html">04. Spring Boot MVC Development Introduction</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Spring Boot MVC Development Introduction</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>035ND C01 L02 A06 SPRINGBOOT DEVELOPMENT</p></h3>
+  <video controls>
+  <source src="04. 035ND C01 L02 A06 SPRINGBOOT DEVELOPMENT-Grnjq19EcvU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. 035ND C01 L02 A06 SPRINGBOOT DEVELOPMENT-Grnjq19EcvU.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L02 A07 CREATE CONTROLLER</p></h3>
+  <video controls>
+  <source src="04. 035ND C01 L02 A07 CREATE CONTROLLER-bj7CCah2eqY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. 035ND C01 L02 A07 CREATE CONTROLLER-bj7CCah2eqY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>If you don’t know what Json is, please take a look at here: <a href="https://www.w3schools.com/whatis/whatis_json.asp" target="_blank">https://www.w3schools.com/whatis/whatis_json.asp</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="instructions">Instructions</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Add a simple controller</p></h3>
+  <div>
+  <p>Create a controller package under com.example.helloworld.<br />
+Create a Java class named HelloController. And make the content like below.</p>
+<pre><code>@Controller
+public class HelloController {
+   private Map&lt;String, Object&gt; result = new HashMap&lt;&gt;();
+
+   @RequestMapping("/hello")
+   @ResponseBody
+   public Map&lt;String, Object&gt; hello() {
+       result.put("name", "Stephen");
+       result.put("city", "San Jose");
+       return result;
+   }
+}</code></pre>
+<p>If you see any red bulb, click that and select import. Will solve the import issue. Notice that IntelliJ will automatically add the dependency to your pom.xml file. For this example, the spring-boot-web will be added to your dependency list.</p>
+<pre><code>&lt;dependency&gt;
+  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+  &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+<p>Now you can run command below in your IntelliJ Terminal:</p>
+<pre><code>mvn spring-boot:run </code></pre>
+<p>Once you see something like “Completed initialization in xxx ms”. Open a browser, and goto<br />
+http://localhost:8080/hello<br />
+You should see something like “{"city":"San Jose","name":"Stephen"}</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L02 A08 CREATE SIMPLE SPRINGBOOT CONTROLLER</p></h3>
+  <video controls>
+  <source src="04. 035ND C01 L02 A08 CREATE SIMPLE SPRINGBOOT CONTROLLER-Wb_UAvy3NYQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. 035ND C01 L02 A08 CREATE SIMPLE SPRINGBOOT CONTROLLER-Wb_UAvy3NYQ.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="use-restcontroller">Use RestController</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L02 A09 REST CONTROLLER</p></h3>
+  <video controls>
+  <source src="04. 035ND C01 L02 A09 REST CONTROLLER-8nvncBhj9xI.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. 035ND C01 L02 A09 REST CONTROLLER-8nvncBhj9xI.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/RestController" target="_blank">@RestController</a> is a specialized version of controller, which includes <a href="https://github.com/Controller" target="_blank">@Controller</a> and <a href="https://github.com/ResponseBody" target="_blank">@ResponseBody</a>. In this example, we are going to use it to update our existing Controller class we created previously. <br />
+Steps:</p>
+<ol>
+<li><p>Replace the <a href="https://github.com/Controller" target="_blank">@Controller</a> with <a href="https://github.com/RestController" target="_blank">@RestController</a>.</p></li>
+<li><p>Remove <a href="https://github.com/ResponseBody" target="_blank">@ResponseBody</a> annotation.</p></li>
+</ol>
+<p>If you have auto imports, the imports will be changed when you change the annotation.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Spring Boot RestController Quiz</p></h3>
+  <div>
+  <p><strong>QUESTION: <p>HTTP Request methods</p></strong></p>
+  <p>Since we are dealing with a web application, name any common http request methods you know or you have heard of. Separated by comma.</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Thanks for your response.<br />
+This is mine: PUT, GET, POST, DELETE, PATCH</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Hello Servlet Heading</p></h3>
+  <div>
+  <p>We have created a simple spring boot application with a controller. In the next few videos, we are going to dig a little deeper. And we are going to use Servlet, Filter and Listener class. All these classes are used by java backend server to receive requests, manipulate them and respond with responses.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="hello-servlet">Hello Servlet</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Servlet is a technology/API/class that is used to create handle requests in web applications. Reside in server side, Spring Boot uses Servlet to receive requests from client side. There are two ways in Spring Boot to use Servlet Api:</p>
+<ol>
+<li>Use <a href="https://github.com/ServletComponentScan" target="_blank">@ServletComponentScan</a> annotation.</li>
+<li>Use <a href="https://github.com/Bean" target="_blank">@Bean</a> annotation.</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L02 A10 HELLO SERVLET</p></h3>
+  <video controls>
+  <source src="04. 035ND C01 L02 A10 HELLO SERVLET-hUgS4sTepmk.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. 035ND C01 L02 A10 HELLO SERVLET-hUgS4sTepmk.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="hello-servlet-example-prep">Hello Servlet Example Prep</h2>
+<ol>
+<li><p>Create a servlet package under com.example.hello.</p></li>
+<li><p>Create a HelloServlet class under controller servlet.</p></li>
+<li><p>Add java code in the class</p></li>
+</ol>
+<pre><code>import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(name="helloServlet", urlPatterns ="/helloServlet")
+public class HelloServlet extends HttpServlet{
+   @Override
+   protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+       System.out.println("Running Hello Servlet doGet method");
+   }
+}</code></pre>
+<p>Add the <a href="https://github.com/ServletComponentScan" target="_blank">@ServletComponentScan</a> under <a href="https://github.com/SpringBootApplication" target="_blank">@SpringBootApplication</a> in your helloWorldApplication.<br />
+Again, please make sure to use red bulb for missing imports.</p>
+<p>Stop (Control + C) and Run the command below to start the application.</p>
+<pre><code>mvn spring-boot:run</code></pre>
+<p>When the application is ready, start a web browser and goto http://localhost:8080/helloServlet. You should see “Running Hello Servlet doGet method” printed in your console.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L02 A11 HELLO SERVLET EXAMPLE V2 (Post Launch) 1</p></h3>
+  <video controls>
+  <source src="04. 035ND C01 L02 A11 HELLO SERVLET EXAMPLE V2 (Post Launch) 1-Qyp77hbTYbc.mp4" type="video/mp4">
+
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>If you look at the console, you can see the print message we added in our doGet method is printed here. </p>
+<p>You may realize that we need to add <a href="https://github.com/ServletComponentScan" target="_blank">@ServletComponentScan</a> to make this application running. The <a href="https://github.com/ServletComponentScan" target="_blank">@ServletComponentScan</a> is making SpringBoot scan for <a href="https://github.com/WebServlet" target="_blank">@WebServlet</a> annotation and it’s only performed when using an embedded web server such as Spring Boot. If you want to know more about ServletComponentScan, please take a look at its API doc: <br />
+<a href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/web/servlet/ServletComponentScan.html" target="_blank">https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/web/servlet/ServletComponentScan.html</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="filter">Filter</h1>
+<p>Filter is a component that is used to preprocessing and postprocessing requests. It can be used to validate, encrypt/decrypt, log requests. For instance, it can filter out request if it contains some invalid content, or ignore requests that do not contain required request parameter.</p>
+<p>Let’s create a Filter under servlet.</p>
+<ol>
+<li>Create a HelloFilter class under servlet class</li>
+<li>Add the following code.</li>
+</ol>
+<pre><code>@WebFilter(filterName="helloFilter", urlPatterns="/helloServlet")
+public class HelloFilter implements Filter {
+
+   @Override
+   public void doFilter(ServletRequest servletRequest,
+                        ServletResponse servletResponse, FilterChain filterChain)
+           throws IOException, ServletException {
+       System.out.println("Executing doFilter method");
+       filterChain.doFilter(servletRequest, servletResponse);
+       System.out.println("Done executing doFilter method");
+   }
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L02 A12 HELLO FILTER</p></h3>
+  <video controls>
+  <source src="04. 035ND C01 L02 A12 HELLO FILTER-o5PZqD-7bOI.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. 035ND C01 L02 A12 HELLO FILTER-o5PZqD-7bOI.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="listener-for-servlet---instructions">Listener for Servlet - instructions</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In the previous videos, we have learned how to create Servlet and Filter. In this video, we are going to learn what Listener is and how to implement a simple Listener in Spring Boot.</p>
+<p>Let’s create a Listener for Servlet</p>
+<ol>
+<li>Create a HelloListener class that implements ServletContextListener.</li>
+<li>Copy the code below to your class</li>
+</ol>
+<pre><code>import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
+
+@WebListener
+public class HelloListener implements ServletContextListener {
+
+   @Override
+   public void contextDestroyed(ServletContextEvent servletContextEvent) {
+       System.out.println("Servlet Context Destroyed");
+   }
+
+   @Override
+   public void contextInitialized(ServletContextEvent servletContextEvent) {
+       System.out.println("Servlet Context Initialized");
+   }
+}</code></pre>
+<p>Make sure to import necessary imports</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L02 A13 HELLO LISTENER</p></h3>
+  <video controls>
+  <source src="04. 035ND C01 L02 A13 HELLO LISTENER-6B7w5kFLevg.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. 035ND C01 L02 A13 HELLO LISTENER-6B7w5kFLevg.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="servlet-with-bean---instructions">Servlet with Bean - instructions</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Let’s create servlet with bean. Bean is a very important concept in Spring. There are many definitions about what’s Bean. To make it short, Bean is an object that is used by Spring IoC container.</p>
+<p>If you are interested in Bean or IoC please check the link below.</p>
+<p>Bean: <a href="https://www.tutorialspoint.com/spring_boot/spring_boot_beans_and_dependency_injection.htm" target="_blank">https://www.tutorialspoint.com/spring_boot/spring_boot_beans_and_dependency_injection.htm</a></p>
+<p>Spring IoC: <a href="https://howtodoinjava.com/spring-core/different-spring-ioc-containers/" target="_blank">https://howtodoinjava.com/spring-core/different-spring-ioc-containers/</a></p>
+<p>If you want to keep your existing code for future reference, you can stash your existing code, or copy it to another place. Switch to use bean is minimal here.</p>
+<ol>
+<li>Remove <a href="https://github.com/ServletComponentScan" target="_blank">@ServletComponentScan</a> annotation in Application class.</li>
+<li>Add the following method to Application class</li>
+</ol>
+<pre><code>/// Register Servlet.
+@Bean
+public ServletRegistrationBean getServletRegistrationBean() {
+  ServletRegistrationBean servletBean = new ServletRegistrationBean(new HelloServlet());
+  servletBean.addUrlMappings("/helloServlet");
+  return servletBean;
+}
+
+/// Register Filter.
+@Bean
+public FilterRegistrationBean getFilterRegistrationBean() {
+  FilterRegistrationBean filterBean = new FilterRegistrationBean(new HelloFilter());
+  // Add filter path
+  filterBean.addUrlPatterns("/helloServlet");
+  return filterBean;
+}
+
+@Bean
+public ServletListenerRegistrationBean&lt;HelloListener&gt; getServletListenerRegistrationBean() {
+  ServletListenerRegistrationBean listenerBean =
+        new ServletListenerRegistrationBean(new HelloListener());
+  return listenerBean;
+}</code></pre>
+<p>Make sure your imports are like below </p>
+<pre><code>import com.example.helloworld.servlet.HelloFilter;
+import com.example.helloworld.servlet.HelloListener;
+import com.example.helloworld.servlet.HelloServlet;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.context.annotation.Bean;</code></pre>
+<p>Run the application</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="bean">Bean</h1>
+<p>If you are interested to know what bean and Ioc is? Here are the definitions:: <a href="https://www.baeldung.com/spring-bean" target="_blank">https://www.baeldung.com/spring-bean</a>.</p>
+<p>If you take carefully into the console stack trace, you may notice we are using <a href="https://github.com/Bean" target="_blank">@Bean</a> instead of <a href="https://github.com/ServletComponentScan" target="_blank">@ServletComponentScan</a> to create a Servlet, Filter and Listen. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L02 A14 HELLO BEAN</p></h3>
+  <video controls>
+  <source src="04. 035ND C01 L02 A14 HELLO BEAN-D_XGjM2FL4I.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. 035ND C01 L02 A14 HELLO BEAN-D_XGjM2FL4I.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Spring Boot Servlet/Filter/Listener Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>If a web application has Servlet, Listener and Filter classes. Which of them will be instantiated first by the server?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899240" id="rbk1">
+        <label for="rbk1"><p>Servlet</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899240" id="rbk2">
+        <label for="rbk2"><p>Filter</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899240" id="rbk3">
+        <label for="rbk3"><p>Listener</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Listener
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Spring Boot Servlet/Filter/Listener Quiz 2</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which object is used by the filters to get the next component invoked?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899251" id="rbk1">
+        <label for="rbk1"><p>RequestDispatcher</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899251" id="rbk2">
+        <label for="rbk2"><p>ServletContext</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899251" id="rbk3">
+        <label for="rbk3"><p>FilterChain</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    FilterChain
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Spring Boot Servlet/Filter/Listener Quiz 3</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following objects can not be used by the listeners and servlets of an application for sharing information b/w them?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk1" name="899253" id="rbk1">
+      <label for="rbk1"><p>ServletRequest</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk2" name="899253" id="rbk2">
+      <label for="rbk2"><p>HttpSession</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk3" name="899253" id="rbk3">
+      <label for="rbk3"><p>ServletContext</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>ServletRequest</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="use-static-resources">Use Static resources</h1>
+<p>You may have noticed if you start your application and goto localhost:8080 direct, you will get an ugly error message. Let’s fix that by understanding how the static resource works in spring boot.</p>
+<p>Let’s create an image folder under static folder. And copy any image you have on your computer to it. I am using a book logo.</p>
+<p>Let’s create a html page with the following content.</p>
+<pre><code>Hello World
+&lt;img src="images/book.jpg" alt="Book" /&gt;</code></pre>
+<p>Let’s run the application and goto localhost:8080</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L02 A15 STATIC RESOURCES</p></h3>
+  <video controls>
+  <source src="04. 035ND C01 L02 A15 STATIC RESOURCES-Aeplyf1AmIA.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. 035ND C01 L02 A15 STATIC RESOURCES-Aeplyf1AmIA.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="spring-boot-application-for-file-upload---instructions">Spring Boot application for file upload - instructions</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In this example, we are going to create a Spring Boot application for file upload. You can use the file upload application to upload your local file to your server (in this example, your local as well)</p>
+<ol>
+<li>Goto <a href="https://start.spring.io/" target="_blank">https://start.spring.io/</a> and enter artifact as spring-boot-file-upload</li>
+<li>Search for “Web” in dependency search and Select Spring Boot Web Starter</li>
+<li>Download, unzip and import as your intelliJ maven project.</li>
+</ol>
+<p>View creation</p>
+<p>Create an index.html under src/main/resources/static file. With a form and input and submit button. If you are not familiar with html, don’t worry about it right now. You can take a look it how it works here: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file" target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file</a>, feel free to your own code here.</p>
+<pre><code>&lt;h3&gt;File Upload&lt;/h3&gt;
+&lt;form action="upload" method="post" enctype="multipart/form-data"&gt;
+   Select file: &lt;input type="file" name="attach"/&gt;&lt;br /&gt;
+   &lt;input type="submit" value="Upload"&gt;
+&lt;/form&gt;</code></pre>
+<p>Create a controller<br />
+Create a controller directory and create a UploadController class inside</p>
+<pre><code>Map&lt;String, Object&gt; result = new HashMap&lt;&gt;();
+/// Receive message
+@RequestMapping("/uploadFile")
+public Map&lt;String, Object&gt; upload(@RequestParam("attach")MultipartFile file) throws IOException {
+   // File info
+   System.out.println("File name = "  + file.getOriginalFilename());
+   System.out.println("File type = " + file.getContentType());
+
+   // Save to disk
+   // file path example 1) Windows c:/, 3) Mac ~/Documents/
+   String filePath = "~/Documents/";
+   file.transferTo(new File(filePath + file.getOriginalFilename()));
+   result.put("Success", true);
+   return result;
+}</code></pre>
+<p>Let’s run it.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="spring-boot-file-upload">Spring Boot File Upload</h1>
+<p>In case you have having issue with uploading big files. You can update the application.properties with the following statement</p>
+<pre><code>spring.http.multipart.maxFileSize=XXXMB</code></pre>
+<p>In case you want to try multiple files, you can update the configuration to</p>
+<pre><code>spring.http.multipart.maxRequestSize=XXXMB</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L02 A16 SPRINGBOOT FILE UPLOAD</p></h3>
+  <video controls>
+  <source src="04. 035ND C01 L02 A16 SPRINGBOOT FILE UPLOAD-tG9H4pHlY90.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. 035ND C01 L02 A16 SPRINGBOOT FILE UPLOAD-tG9H4pHlY90.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="lesson-summary">Lesson summary</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L02 A18 LESSON RECAP</p></h3>
+  <video controls>
+  <source src="04. 035ND C01 L02 A18 LESSON RECAP-rLQEvPm7NQY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. 035ND C01 L02 A18 LESSON RECAP-rLQEvPm7NQY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Spring Boot Upload file summary</p></h3>
+  <div>
+  <p>How do you like Spring Boot so far? Let’s talk about some advanced spring boot components in our next lesson. See you around.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Spring Boot MVC Development Introduction')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.669
+So let's take a look at the example we had.
+
+00:00:03.680 --> 00:00:07.979
+We've created a list of users,
+
+00:00:07.979 --> 00:00:11.669
+there's ID, name, and age.
+
+00:00:11.669 --> 00:00:15.615
+They pass this list to our view.
+
+00:00:15.615 --> 00:00:18.074
+This is our view,
+
+00:00:18.074 --> 00:00:21.085
+if you notice we are creating a table.
+
+00:00:21.085 --> 00:00:24.469
+We iterating through the list.
+
+00:00:24.469 --> 00:00:29.699
+I'm printing out the ID, name and age.
+
+00:00:29.750 --> 00:00:32.984
+This is how it look like in our browser.
+
+00:00:32.984 --> 00:00:39.104
+As you can see that we're printing to use a list in
+
+00:00:39.104 --> 00:00:46.319
+our browser successfully with loop statement we have in Thymeleaf.
+
+00:00:46.320 --> 00:00:49.509
+I hope you set up correctly in this.
+
