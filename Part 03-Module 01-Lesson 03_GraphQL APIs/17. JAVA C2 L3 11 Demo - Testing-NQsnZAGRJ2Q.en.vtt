@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.905
+Now that I've started and deployed the GraphQL application to Tomcat,
+
+00:00:04.905 --> 00:00:07.620
+let's see the GraphQL server in action.
+
+00:00:07.620 --> 00:00:15.150
+The first step is to navigate to localhost:8080/graphql/schema.json in a web browser.
+
+00:00:15.150 --> 00:00:17.399
+In this case, I'm using Firefox.
+
+00:00:17.399 --> 00:00:21.000
+This shows all of the schemas on the GraphQL server.
+
+00:00:21.000 --> 00:00:24.734
+Notice, it highlights the queries and the mutations.
+
+00:00:24.734 --> 00:00:26.969
+So for the query like we saw before,
+
+00:00:26.969 --> 00:00:29.070
+we have find all locations.
+
+00:00:29.070 --> 00:00:33.109
+For the mutations, we have adding a new location,
+
+00:00:33.109 --> 00:00:35.314
+deleting and existing location,
+
+00:00:35.314 --> 00:00:37.774
+and updating the location name.
+
+00:00:37.774 --> 00:00:40.699
+Now that the GraphQL server is up and running,
+
+00:00:40.700 --> 00:00:43.100
+we have several options for testing.
+
+00:00:43.100 --> 00:00:46.175
+The first is to use a simple tool like postman.
+
+00:00:46.174 --> 00:00:47.959
+So let's navigate there.
+
+00:00:47.960 --> 00:00:50.149
+To test the GraphQL server,
+
+00:00:50.149 --> 00:00:54.810
+simply send a post request to this URL.
+
+00:00:55.390 --> 00:01:01.295
+Localhost:8080/graphql. For headers, you would set the content type to application.json,
+
+00:01:01.295 --> 00:01:03.573
+and for the post body,
+
+00:01:03.573 --> 00:01:06.844
+you would use query because we're sending a query.
+
+00:01:06.844 --> 00:01:10.215
+The name of the query findAllLocations,
+
+00:01:10.215 --> 00:01:13.655
+and the fields that you want returned back in your query,
+
+00:01:13.655 --> 00:01:16.174
+name, ID, and address.
+
+00:01:16.174 --> 00:01:20.179
+Simply click "Send" and notice here it sends back all of
+
+00:01:20.180 --> 00:01:24.275
+the locations found in our H2 in memory database.
+
+00:01:24.275 --> 00:01:28.490
+There's also another popular way to test GraphQL APIs,
+
+00:01:28.489 --> 00:01:31.250
+and it is through a tool called Graph EQL.
+
+00:01:31.250 --> 00:01:33.659
+So let's take a look at it.
+

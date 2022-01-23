@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.745
+Welcome to web services and APIs.
+
+00:00:02.745 --> 00:00:04.485
+My name is Kisho Williams.
+
+00:00:04.485 --> 00:00:09.734
+I'm sure by now you've heard the terms web services, APIs, and microservices.
+
+00:00:09.734 --> 00:00:11.529
+The premise is the same.
+
+00:00:11.529 --> 00:00:14.324
+Web services, APIs, and microservices
+
+00:00:14.324 --> 00:00:17.714
+allow you to share data between two separate systems.
+
+00:00:17.714 --> 00:00:21.074
+Essentially, integrate two totally different systems
+
+00:00:21.074 --> 00:00:24.089
+so that data can flow seamlessly between the two.
+
+00:00:24.089 --> 00:00:27.359
+Web services are designed to communicate with other programs
+
+00:00:27.359 --> 00:00:30.750
+or applications rather than directly with users.
+
+00:00:30.750 --> 00:00:35.429
+I will teach you how Java and more specifically the Spring framework which includes
+
+00:00:35.429 --> 00:00:41.210
+Spring Boot makes it very easy for you to expose data in your systems to other systems,
+
+00:00:41.210 --> 00:00:44.884
+integrate data from external systems into your systems,
+
+00:00:44.884 --> 00:00:48.695
+and quickly build your own custom web services from scratch.
+
+00:00:48.695 --> 00:00:52.459
+I will teach you about the fundamentals of web services, APIs,
+
+00:00:52.459 --> 00:00:56.575
+and microservices, how they are similar and how they are different.
+
+00:00:56.575 --> 00:00:58.275
+While learning the fundamentals,
+
+00:00:58.274 --> 00:01:02.119
+you will explore Spring Boot for exposing data in your systems.
+
+00:01:02.119 --> 00:01:06.049
+After providing an overview of web services and Spring Boot,
+
+00:01:06.049 --> 00:01:10.069
+I will teach you about developing rest APIs and microservices.
+
+00:01:10.069 --> 00:01:13.729
+I will then introduce you to a query language for APIs called
+
+00:01:13.730 --> 00:01:17.855
+GraphQL and show you how to develop APIs using it.
+
+00:01:17.855 --> 00:01:22.670
+Then, we will discuss securing your web services and API endpoints.
+
+00:01:22.670 --> 00:01:26.450
+I will then show you how to consume existing web services in
+
+00:01:26.450 --> 00:01:31.010
+the applications you develop to help speed up your delivery timeframe.
+
+00:01:31.010 --> 00:01:34.400
+Next, I will show you how to document the web services
+
+00:01:34.400 --> 00:01:37.925
+you create so that others can use them effectively.
+
+00:01:37.924 --> 00:01:42.484
+Finally, we wrap up with me showing you how to efficiently conduct
+
+00:01:42.484 --> 00:01:48.069
+unit and integration testing of your web services using common testing framework.
+
+00:01:48.069 --> 00:01:49.824
+By the end of the course,
+
+00:01:49.825 --> 00:01:52.954
+you will have developed and deployed your first web service.
+
+00:01:52.954 --> 00:01:55.230
+So let's get started.
+

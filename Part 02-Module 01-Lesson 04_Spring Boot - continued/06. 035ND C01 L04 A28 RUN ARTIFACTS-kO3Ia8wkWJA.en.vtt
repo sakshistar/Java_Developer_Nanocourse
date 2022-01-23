@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.815
+Okay. Now you have your snapshot generated.
+
+00:00:04.815 --> 00:00:06.915
+Let's see how to run it.
+
+00:00:06.915 --> 00:00:11.969
+As you can see that, the snapshot is generated inside the target folder.
+
+00:00:11.970 --> 00:00:13.515
+So what I can do is,
+
+00:00:13.515 --> 00:00:14.625
+if you want to run it,
+
+00:00:14.625 --> 00:00:16.394
+in intelligence it's really easy,
+
+00:00:16.394 --> 00:00:19.329
+you can just run it like this.
+
+00:00:21.469 --> 00:00:24.479
+We can also run it with command line.
+
+00:00:24.480 --> 00:00:26.379
+What we do is,
+
+00:00:26.379 --> 00:00:30.179
+just go to the target folder and run this command line.
+
+00:00:34.299 --> 00:00:38.169
+So you can also run it with command line.
+
+00:00:38.170 --> 00:00:40.380
+What do you do, is just using
+
+00:00:40.380 --> 00:00:46.630
+the Java command
+
+00:00:46.630 --> 00:00:51.380
+to run it.
+

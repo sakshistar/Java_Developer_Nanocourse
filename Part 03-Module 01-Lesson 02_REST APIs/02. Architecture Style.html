@@ -1,0 +1,252 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Architecture Style</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>REST APIs</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Architecture Style.html">02. Architecture Style</a>
+    </li>
+    <li class="">
+      <a href="03. Case Study Intro &amp; Maven Dependencies.html">03. Case Study: Intro &amp; Maven Dependencies</a>
+    </li>
+    <li class="">
+      <a href="04. Lab I Build a Dog REST API (Set Up).html">04. Lab I: Build a Dog REST API (Set Up)</a>
+    </li>
+    <li class="">
+      <a href="05. Lab I Solution.html">05. Lab I: Solution</a>
+    </li>
+    <li class="">
+      <a href="06. Case Study Annotations.html">06. Case Study: Annotations</a>
+    </li>
+    <li class="">
+      <a href="07. Lab II Build a Dog REST API (Annotations I).html">07. Lab II: Build a Dog REST API (Annotations I)</a>
+    </li>
+    <li class="">
+      <a href="08. Lab II Solution.html">08. Lab II: Solution</a>
+    </li>
+    <li class="">
+      <a href="09. Case Study Continued.html">09. Case Study Continued</a>
+    </li>
+    <li class="">
+      <a href="10. Lab III Build a Dog REST API (Annotations II).html">10. Lab III: Build a Dog REST API (Annotations II)</a>
+    </li>
+    <li class="">
+      <a href="11. Lab III Solution.html">11. Lab III: Solution</a>
+    </li>
+    <li class="">
+      <a href="12. Recap.html">12. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Architecture Style</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>JAVA C2 L2 02 REST Architecture Style</p></h3>
+  <video controls>
+  <source src="02. JAVA C2 L2 02 REST Architecture Style-672a5lB093o.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. JAVA C2 L2 02 REST Architecture Style-672a5lB093o.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>REST stands for <strong>RE</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer. It’s a set of guidelines application developers use to design APIs.  </p>
+<p>There are four principles that APIs follow:</p>
+<ol>
+<li>Data and functionality in the API are considered “resources” and identified through something called the URI, or Uniform Resource Identifier. These are accessed by web links.</li>
+<li>Resources are manipulated using a fixed set of operations.  GET retrieves a resource. POST creates one. Use PUT to update the resource, and of course, DELETE will remove it. </li>
+<li>Resources can be represented in multiple formats, such as HTML, XML, plain text, and other formats defined by a media type. 
+</li>
+<li>Communication between the client and server (i.e. endpoint) is stateless. This means the server will not remember or store any state about the client that made the call.</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Identify TWO principles that REST APIs must follow.</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1562302398206" name="898203" id="a1562302398206">
+      <label for="a1562302398206"><p>Resources are manipulated through a fixed set of operations.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1562302456269" name="898203" id="a1562302456269">
+      <label for="a1562302456269"><p>Resources must be represented in a single format, like XML.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1562302457141" name="898203" id="a1562302457141">
+      <label for="a1562302457141"><p>Communication between the client and server must be cached for efficiency.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1562302458023" name="898203" id="a1562302458023">
+      <label for="a1562302458023"><p>Resources are identified through a URI and are accessible via web links.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Resources are manipulated through a fixed set of operations.</li>
+      <li>Resources are identified through a URI and are accessible via web links.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Case Study Intro &amp; Maven Dependencies.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Architecture Style')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

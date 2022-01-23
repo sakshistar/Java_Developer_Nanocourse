@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.275
+Today, you learned about developing Microservices using Spring Boot.
+
+00:00:04.275 --> 00:00:07.800
+When developing Microservices, there are several steps.
+
+00:00:07.799 --> 00:00:12.655
+First, I showed you how to create a Registry Service using Netflix Eureka,
+
+00:00:12.654 --> 00:00:18.015
+that allows your services to be registered and found by clients that need to call them.
+
+00:00:18.015 --> 00:00:23.460
+Next, I taught you how to create a simple Rest API using Spring Data Rest,
+
+00:00:23.460 --> 00:00:27.464
+which generated Rest APIs' from a Spring Data Repository.
+
+00:00:27.464 --> 00:00:31.304
+We wrapped up with me showing you how to call a Microservice.
+
+00:00:31.304 --> 00:00:37.600
+Next, I will teach you about securing API endpoints using Spring Security.
+

@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.069
+Let's look at how we query.
+
+00:00:02.069 --> 00:00:05.639
+The first step is to implement what's called a query resolver,
+
+00:00:05.639 --> 00:00:09.809
+which will use this location repository to query the database.
+
+00:00:09.810 --> 00:00:13.290
+So navigate to query.java and you will see that
+
+00:00:13.289 --> 00:00:17.910
+query.Java implements the GraphQL query resolver.
+
+00:00:17.910 --> 00:00:21.210
+So this allows spring to automatically detect and call
+
+00:00:21.210 --> 00:00:25.080
+the right method in response to one of the GraphQLQueries,
+
+00:00:25.079 --> 00:00:26.909
+declared inside of the schema.
+
+00:00:26.910 --> 00:00:29.265
+So let's navigate back to the schema.
+
+00:00:29.265 --> 00:00:34.954
+Notice we have one query that's defined here on line eight called findAlllocations.
+
+00:00:34.954 --> 00:00:37.850
+So this findAlllocations is going to be
+
+00:00:37.850 --> 00:00:42.594
+mapped to this findAlllocations method in the query class.
+
+00:00:42.594 --> 00:00:44.604
+It's very simple, all it does,
+
+00:00:44.604 --> 00:00:47.000
+it calls the find all method on
+
+00:00:47.000 --> 00:00:51.219
+the location repository which retrieves a list of locations.
+
+00:00:51.219 --> 00:00:57.530
+GraphQL has the ability to update the data stored on the server by using a mutator.
+
+00:00:57.530 --> 00:01:00.820
+So let's navigate to mutation.java.
+
+00:01:00.820 --> 00:01:06.075
+Notice that the mutation implements the GraphQLMutationResolver.
+
+00:01:06.075 --> 00:01:07.560
+So this resolver again,
+
+00:01:07.560 --> 00:01:11.269
+allow spring to automatically detect and call the write method
+
+00:01:11.269 --> 00:01:15.890
+in response to one of the GraphQL mutations declared inside of the schema.
+
+00:01:15.890 --> 00:01:18.454
+So let's navigate back to the schema.
+
+00:01:18.454 --> 00:01:21.019
+Here, we have three mutations.
+
+00:01:21.019 --> 00:01:25.640
+On line 12, we have the ability to create a new location, on line 13,
+
+00:01:25.640 --> 00:01:28.209
+we have the ability to delete a location,
+
+00:01:28.209 --> 00:01:32.089
+and on line 14, we have the ability to update a location.
+
+00:01:32.090 --> 00:01:35.240
+So let's navigate back to mutation.java.
+
+00:01:35.239 --> 00:01:41.419
+So each mutator is going to be mapped to one of the methods here in this mutation class.
+
+00:01:41.420 --> 00:01:43.640
+Notice for the new location,
+
+00:01:43.640 --> 00:01:49.025
+it's going to create a new location and call the save method of the location repository.
+
+00:01:49.025 --> 00:01:50.990
+For the delete, it's very simple.
+
+00:01:50.989 --> 00:01:56.214
+It's going to use the location repository to delete a location by id,
+
+00:01:56.215 --> 00:02:00.620
+and the update location name here it's going to take this new name.
+
+00:02:00.620 --> 00:02:02.945
+It's going to find a location,
+
+00:02:02.944 --> 00:02:05.409
+and that comes back as optional.
+
+00:02:05.409 --> 00:02:07.709
+If it was able to find that location,
+
+00:02:07.709 --> 00:02:10.250
+it's going to set the new name and
+
+00:02:10.250 --> 00:02:13.645
+save it using the save method of the location repository.
+
+00:02:13.645 --> 00:02:17.570
+Now, if it can't find that location in order to update it,
+
+00:02:17.569 --> 00:02:20.780
+it is going to throw a location not found exception,
+
+00:02:20.780 --> 00:02:23.580
+and we'll talk about that in a moment.
+

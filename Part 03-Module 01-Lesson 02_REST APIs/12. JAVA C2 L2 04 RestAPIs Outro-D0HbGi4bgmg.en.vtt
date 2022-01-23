@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.500
+Today, we learned how to build a RESTful APIs using Spring Boot.
+
+00:00:04.500 --> 00:00:07.904
+First, you learned about the REST architecture style.
+
+00:00:07.905 --> 00:00:11.280
+Next, we bootstrapped a very simple application
+
+00:00:11.279 --> 00:00:14.279
+using the web version of Spring Initializr.
+
+00:00:14.279 --> 00:00:20.160
+Then, we added a REST controller that received and responded to client request.
+
+00:00:20.160 --> 00:00:26.035
+You learned about useful annotations like @RestController and @GetMapping.
+
+00:00:26.035 --> 00:00:28.559
+We wrapped up with exception handling.
+
+00:00:28.559 --> 00:00:34.960
+Next, I will teach you about developing GraphQL APIs using Spring Boot.
+

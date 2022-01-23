@@ -1,0 +1,509 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lab III: Solution</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>REST APIs</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Architecture Style.html">02. Architecture Style</a>
+    </li>
+    <li class="">
+      <a href="03. Case Study Intro &amp; Maven Dependencies.html">03. Case Study: Intro &amp; Maven Dependencies</a>
+    </li>
+    <li class="">
+      <a href="04. Lab I Build a Dog REST API (Set Up).html">04. Lab I: Build a Dog REST API (Set Up)</a>
+    </li>
+    <li class="">
+      <a href="05. Lab I Solution.html">05. Lab I: Solution</a>
+    </li>
+    <li class="">
+      <a href="06. Case Study Annotations.html">06. Case Study: Annotations</a>
+    </li>
+    <li class="">
+      <a href="07. Lab II Build a Dog REST API (Annotations I).html">07. Lab II: Build a Dog REST API (Annotations I)</a>
+    </li>
+    <li class="">
+      <a href="08. Lab II Solution.html">08. Lab II: Solution</a>
+    </li>
+    <li class="">
+      <a href="09. Case Study Continued.html">09. Case Study Continued</a>
+    </li>
+    <li class="">
+      <a href="10. Lab III Build a Dog REST API (Annotations II).html">10. Lab III: Build a Dog REST API (Annotations II)</a>
+    </li>
+    <li class="">
+      <a href="11. Lab III Solution.html">11. Lab III: Solution</a>
+    </li>
+    <li class="">
+      <a href="12. Recap.html">12. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">11. Lab III: Solution</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="solution-build-a-dog-rest-api---annotations-part-ii">Solution: Build a Dog REST API - Annotations Part II</h1>
+<p>Below, we'll walk through each step of the lab and look at <em>one potential way</em> to implement the lab. Even if you get stuck, you should always first try to work through the lab without the solution before coming here, so that you can best learn the related skills and be ready for the project at the end of the course.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="step-1-create-a-repository-that-extends-crudrepository"><strong>Step 1</strong>: Create a repository that extends CrudRepository.</h2>
+<ul>
+<li>This repository is for creating, reading, updating, and deleting Dog objects.</li>
+</ul>
+<p>First, create a new package in the same directory that holds your main application, called <code>repository</code>. Then, create a new Java <strong>interface</strong> called <code>DogRepository</code> (note that you can create a new <code>interface</code> in IntelliJ first by adding a new Java class, and then selecting <code>interface</code> on the menu that comes up).</p>
+<p>Here, you'll need to import both your <code>Dog</code> entity as well as <code>CrudRepository</code> from the Spring framework, which will extend your <code>DogRepository</code> interface. While Spring implements a lot of the <code>repository</code> for you, I have added a few helpful queries to be able to obtain some of the necessary information for our <code>DogService</code> later. When I use an <code>id</code> as input to <code>findBreedById</code>, I needed to add a <code>:</code> into the query line to feed in from my method.</p>
+<p>Note that instead of taking this approach, you could alternatively use the built-in queries from <code>CrudRepository</code> within the <code>DogService</code> to get all dogs or get a dog by ID, then process the resulting object as well.</p>
+<pre><code class="java language-java">package com.udacity.DogRestApi.repository;
+
+import com.udacity.DogRestApi.entity.Dog;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import java.util.List;
+
+public interface DogRepository extends CrudRepository&lt;Dog, Long&gt; {
+    @Query("select d.id, d.breed from Dog d where d.id=:id")
+    String findBreedById(Long id);
+
+    @Query("select d.id, d.breed from Dog d")
+    List&lt;String&gt; findAllBreed();
+
+    @Query("select d.id, d.name from Dog d")
+    List&lt;String&gt; findAllName();
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="step-2-create-a-dog-service"><strong>Step 2</strong>: Create a dog service.</h2>
+<ul>
+<li>The service should perform the following operations:<ul>
+<li>retrieveDogBreed</li>
+<li>retrieveDogBreedById</li>
+<li>retrieveDogNames</li></ul></li>
+</ul>
+<p>First, create a new package in the same directory that holds your main application, called <code>service</code>. Then, we'll create two files - one for an <code>interface</code> called <code>DogService</code>, and the other a <code>class</code> called <code>DogServiceImpl</code> that will actually <code>implement</code> the <code>DogService</code>. Splitting them like this is not necessarily required, but is good practice.</p>
+<p>First, let's look at <code>DogService</code>, which can pretty simply add the method names noted for this step. Note that I also added a <code>retrieveDogs</code> method that can get all of the dogs' information, but that's not required.</p>
+<pre><code>package com.udacity.DogRestApi.service;
+
+import com.udacity.DogRestApi.entity.Dog;
+
+import java.util.List;
+
+public interface DogService {
+    List&lt;Dog&gt; retrieveDogs();
+    List&lt;String&gt; retrieveDogBreed();
+    String retrieveDogBreedById(Long id);
+    List&lt;String&gt; retrieveDogNames();
+}</code></pre>
+<p>Now, we can look at the implementation of the <code>DogService</code> within <code>DogServiceImpl</code>. Note that while the <code>repository</code> already has <code>findAll()</code> (and <code>findById(id)</code>, not used here) implemented, the other methods used here were implemented above within the <code>DogRepository</code>, or else they would not work. You'll want to use the <code>@Service</code> and <code>@AutoWired</code> annotations here as well.</p>
+<pre><code class="java language-java">package com.udacity.DogRestApi.service;
+
+import com.udacity.DogRestApi.entity.Dog;
+import com.udacity.DogRestApi.repository.DogRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class DogServiceImpl implements DogService {
+    @Autowired
+    DogRepository dogRepository;
+
+    public List&lt;Dog&gt; retrieveDogs() {
+        return (List&lt;Dog&gt;) dogRepository.findAll();
+    }
+
+    public List&lt;String&gt; retrieveDogBreed() {
+        return (List&lt;String&gt;) dogRepository.findAllBreed();
+    }
+
+    public String retrieveDogBreedById(Long id) {
+        return (String) dogRepository.findBreedById(id);
+    }
+
+    public List&lt;String&gt; retrieveDogNames() {
+        return (List&lt;String&gt;) dogRepository.findAllName();
+    }
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="step-3-update-the-web-controller"><strong>Step 3</strong>: Update the web controller.</h2>
+<ul>
+<li>The updated controller should handle requests for retrieving:<ul>
+<li>a list of Dog breeds</li>
+<li>a list of Dog breeds by Id </li>
+<li>a list of Dog names</li></ul></li>
+</ul>
+<p>Below, I have updated the <code>DogController</code> to now use functions from the <code>DogService</code>, along with <code>@GetMapping</code>, to configure the different paths where a user could <code>GET</code> information from the Dog API. Note the use of <code>ResponseEntity</code> and <code>HttpStatus</code> to help formulate the API response. The paths <strong>do not</strong> need to match what I used - theoretically, if you wanted to return the information about your dogs from a path <code>/cats</code> you could, although that would clearly be confusing to the end user. I also added the extra mapping just for getting all dogs (<code>/dogs</code>), although it wasn't specified in the lab.</p>
+<p>While I use <code>@PathVariable</code> along with the dog ID below, note that you could also use <code>@RequestParam</code> with a few minor changes to achieve the same result (see more <a href="https://javarevisited.blogspot.com/2017/10/differences-between-requestparam-and-pathvariable-annotations-spring-mvc.html" target="_blank">here</a>).</p>
+<pre><code class="java language-java">package com.udacity.DogRestApi.web;
+
+// Don't forget the new imports!
+import com.udacity.DogRestApi.entity.Dog;
+import com.udacity.DogRestApi.service.DogService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+public class DogController {
+    private DogService dogService;
+
+    @Autowired
+    public void setDogService(DogService dogService) {
+        this.dogService = dogService;
+    }
+
+    @GetMapping("/dogs")
+    public ResponseEntity&lt;List&lt;Dog&gt;&gt; getAllDogs() {
+        List&lt;Dog&gt; list = dogService.retrieveDogs();
+        return new ResponseEntity&lt;List&lt;Dog&gt;&gt;(list, HttpStatus.OK);
+    }
+
+    @GetMapping("/dogs/breed")
+    public ResponseEntity&lt;List&lt;String&gt;&gt; getDogBreeds() {
+        List&lt;String&gt; list = dogService.retrieveDogBreed();
+        return new ResponseEntity&lt;List&lt;String&gt;&gt;(list, HttpStatus.OK);
+    }
+
+    @GetMapping("/{id}/breed")
+    public ResponseEntity&lt;String&gt; getBreedByID(@PathVariable Long id) {
+        String breed = dogService.retrieveDogBreedById(id);
+        return new ResponseEntity&lt;String&gt;(breed, HttpStatus.OK);
+    }
+
+    @GetMapping("/dogs/name")
+    public ResponseEntity&lt;List&lt;String&gt;&gt; getDogNames() {
+        List&lt;String&gt; list = dogService.retrieveDogNames();
+        return new ResponseEntity&lt;List&lt;String&gt;&gt;(list, HttpStatus.OK);
+    }
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="step-4-make-sure-errors-are-handled-appropriately"><strong>Step 4</strong>: Make sure errors are handled appropriately.</h2>
+<ul>
+<li>If an id is requested that doesn’t exist, appropriately handle the error</li>
+</ul>
+<p>Here, you'll want to first add a new Java class to the <code>service</code> package, called <code>DogNotFoundException</code>. We'll use <code>@ResponseStatus</code> along with an <code>HttpStatus</code> of <code>NOT_FOUND</code> to return a message (or <code>reason</code> in code) if an invalid ID was used.</p>
+<pre><code class="java language-java">package com.udacity.DogRestApi.service;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(code = HttpStatus.NOT_FOUND, reason = "Dog not found")
+public class DogNotFoundException extends RuntimeException {
+
+    public DogNotFoundException() {
+    }
+
+    public DogNotFoundException(String message) {
+        super(message);
+    }
+}</code></pre>
+<p>That's part one  - we haven't actually handled the error yet. To do so, you'll want to go back to <code>DogServiceImpl</code>, and specifically to the <code>retrieveDogBreedById</code> method (or your similarly named method) for retrieving a Dog breed by Id.</p>
+<p>You'll want to make sure to import <code>Optional</code>, as we'll use that to try to get the resulting <code>Dog</code> object. If the <code>Dog</code> does not exist, you'll throw the <code>DogNotFoundException</code>.</p>
+<pre><code class="java language-java">// Make sure to add this import
+import java.util.Optional;
+
+...
+
+    public String retrieveDogBreedById(Long id) {
+        Optional&lt;String&gt; optionalBreed = Optional.ofNullable(dogRepository.findBreedById(id));
+        String breed = optionalBreed.orElseThrow(DogNotFoundException::new);
+        return breed;
+    }
+
+...</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="step-5-create-a-datasql-file"><strong>Step 5</strong>: Create a <code>data.sql</code> file.</h2>
+<ul>
+<li>The file should create sample dog data in the database.</li>
+</ul>
+<p>This last step is very open-ended, as you can add whatever dog details you want. Below, I've added five example dogs into my own <code>data.sql</code> file. This file should be within the <code>resources</code> directory (where your <code>application.properties</code> file was earlier).</p>
+<pre><code class="sql language-sql">INSERT INTO dog (id, name, breed, origin) VALUES (1, 'Fluffy', 'Pomeranian', 'Mountain View, CA');
+INSERT INTO dog (id, name, breed, origin) VALUES (2, 'Spot', 'Pit Bull', 'Austin, TX');
+INSERT INTO dog (id, name, breed, origin) VALUES (3, 'Ginger', 'Cocker Spaniel', 'Kansas City, KS');
+INSERT INTO dog (id, name, breed, origin) VALUES (4, 'Lady', 'Direwolf', 'The North');
+INSERT INTO dog (id, name, breed, origin) VALUES (5, 'Sasha', 'Husky', 'Buffalo, NY');</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="step-6-check-that-you-are-able-to-access-your-api"><strong>Step 6</strong>: Check that you are able to access your API.</h2>
+<p>If everything is implemented correctly, once you run your code, you should be able to visit <a href="localhost:8080/h2" target="_blank">localhost:8080/h2</a> to first reach the H2 console. Here, I added my my <code>spring.datasource.url</code> from <code>application.properties</code>:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/h2-console.png" alt="The H2 console" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>The H2 console</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>After clicking "Connect", you should go to the next H2 page, where you should be able to "Run" the query and see everything you added to <code>data.sql</code>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/h2-query.png" alt="The H2 &quot;Run&quot; query showing the dogs added to &#x60;data.sql&#x60;" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>The H2 "Run" query showing the dogs added to <code>data.sql</code></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>From there, I check that I can access the paths I added to my <code>DogController</code> at localhost:8080/{path}. Below is the example for my additional <code>/dogs</code> path I added.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/dogs-path.png" alt="My result from localhost:8080/dogs" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>My result from localhost:8080/dogs</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>You should check the two methods returning just breed and name as well for all of the dogs, but most important is likely the response for the breed of a single dog, since it makes use of an ID and error handling.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/breed-success.png" alt="Use of a valid ID" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Use of a valid ID</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/breed-error.png" alt="An invalid ID example - note it was &#x60;Not Found&#x60; with reason &#x60;Dog not found&#x60;" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>An invalid ID example - note it was <code>Not Found</code> with reason <code>Dog not found</code></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In the above, you can see the potential results of a valid ID being used in the <code>GET</code> request, as well as the error when an invalid ID was used. Note that you can further customize this error page (I didn't add an explicit mapping for <code>/error</code> as noted in the image), but you can see that the error reason was appropriately returned at the bottom.</p>
+<h2 id="full-solution">Full Solution</h2>
+<p>If you'd like the full solution code all in one place, you can download it through the link below.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="12. Recap.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('11. Lab III: Solution')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

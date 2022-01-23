@@ -1,0 +1,196 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.084
+This service is indicated with the at service annotation,
+
+00:00:05.084 --> 00:00:08.550
+I'm auto wiring a location repository beam.
+
+00:00:08.550 --> 00:00:11.670
+In here for retrieve all locations,
+
+00:00:11.669 --> 00:00:17.009
+I'm simply calling the find all method on the location repository,
+
+00:00:17.010 --> 00:00:20.605
+which is going to return a list of locations.
+
+00:00:20.605 --> 00:00:25.094
+Next, let's talk about the location repository layer.
+
+00:00:25.094 --> 00:00:28.964
+This is the layer that interacts with the database.
+
+00:00:28.964 --> 00:00:34.019
+The spring data repository abstraction here crud repository,
+
+00:00:34.020 --> 00:00:37.850
+it greatly reduces the amount of boilerplate code
+
+00:00:37.850 --> 00:00:42.605
+needed to implement a data access layer for the H2 database.
+
+00:00:42.604 --> 00:00:46.234
+So this uses the spring data GPA repository,
+
+00:00:46.234 --> 00:00:53.045
+and it automatically creates simple queries behind the scenes using method names.
+
+00:00:53.045 --> 00:00:56.795
+Notice this location repository isn't interface,
+
+00:00:56.795 --> 00:01:00.590
+but there's no class anywhere that implements it.
+
+00:01:00.590 --> 00:01:02.600
+That's the neat thing about spring,
+
+00:01:02.600 --> 00:01:07.875
+it creates an implementation on the fly whenever the application runs.
+
+00:01:07.875 --> 00:01:10.388
+Now, let's go back to the controller,
+
+00:01:10.388 --> 00:01:14.414
+and let's look at our get all locations method one more time.
+
+00:01:14.415 --> 00:01:17.620
+Notice, we're returning a list of locations,
+
+00:01:17.620 --> 00:01:22.075
+but it's included in what's called this response entity.
+
+00:01:22.075 --> 00:01:27.260
+Now, the response entity represents the entire HTTP response,
+
+00:01:27.260 --> 00:01:29.585
+that includes the status code,
+
+00:01:29.584 --> 00:01:31.879
+headers, and the response body.
+
+00:01:31.879 --> 00:01:35.584
+We can fully configure what's returned.
+
+00:01:35.584 --> 00:01:40.399
+Notice here, I'm returning an HTTP status of okay.
+
+00:01:40.400 --> 00:01:44.615
+That means I was able to retrieve the data and everything went well.
+
+00:01:44.614 --> 00:01:48.379
+In some cases, you may need to return air responses.
+
+00:01:48.379 --> 00:01:52.004
+So for example, 404 for not found.
+
+00:01:52.004 --> 00:01:53.474
+So in order to do that,
+
+00:01:53.474 --> 00:01:58.409
+you can simply change this to not found,
+
+00:01:58.409 --> 00:02:00.494
+I'm going to change it back to okay,
+
+00:02:00.495 --> 00:02:02.314
+that was just an example.
+
+00:02:02.314 --> 00:02:05.060
+So that is our rest API.
+
+00:02:05.060 --> 00:02:08.405
+We have our location entities that live in the database,
+
+00:02:08.405 --> 00:02:13.250
+we have the location repository that allows us to interact with the database,
+
+00:02:13.250 --> 00:02:17.375
+using the crud repository to do things like read,
+
+00:02:17.375 --> 00:02:21.080
+update, delete, create etc,
+
+00:02:21.080 --> 00:02:23.510
+we have our service layer.
+
+00:02:23.509 --> 00:02:28.639
+Here, this is typically where you put the business logic.
+
+00:02:28.639 --> 00:02:35.239
+So for example, if we wanted to filter this list and remove clothes locations,
+
+00:02:35.240 --> 00:02:38.710
+that business logic with live here in the service layer,
+
+00:02:38.710 --> 00:02:41.750
+but here I'm just returning all of the locations,
+
+00:02:41.750 --> 00:02:44.449
+and then we have our main controller.
+
+00:02:44.449 --> 00:02:47.754
+So let's deploy and execute this.
+
+00:02:47.754 --> 00:02:51.740
+Spring Boot packages the code and deploys it to
+
+00:02:51.740 --> 00:02:59.860
+the embedded Tomcat server and we'll be able to access that using local hosts.
+
+00:02:59.860 --> 00:03:03.645
+So Tomcat started on port 8080,
+
+00:03:03.645 --> 00:03:07.070
+let's navigate to the web browser,
+
+00:03:07.069 --> 00:03:10.924
+and let's navigate to the H2 in-memory console,
+
+00:03:10.925 --> 00:03:13.510
+that's the first thing I want to show you.
+
+00:03:13.509 --> 00:03:16.689
+So it's a local host/H2,
+
+00:03:17.389 --> 00:03:22.154
+the JDBC URL from the application properties file,
+
+00:03:22.155 --> 00:03:24.555
+the default username is sa,
+
+00:03:24.555 --> 00:03:27.344
+there's no password, click "Connect".
+
+00:03:27.344 --> 00:03:33.544
+Notice, we have a location table and that maps back to our location entity.
+
+00:03:33.544 --> 00:03:36.655
+Click on it, let's select "Run",
+
+00:03:36.655 --> 00:03:39.409
+and this shows the data that's persisted.
+
+00:03:39.409 --> 00:03:46.879
+Remember, I had the data.SQL file to just generate sample data in our database.
+
+00:03:46.879 --> 00:03:49.729
+Now, let's test out our API.
+
+00:03:49.729 --> 00:03:56.689
+If you remember, here the path to test the API is slash location.
+
+00:03:56.689 --> 00:04:04.069
+So let's do localhost: 8080 and type location. There we have it.
+
+00:04:04.069 --> 00:04:09.634
+We have a list of the locations stored in our H2 in memory database,
+
+00:04:09.634 --> 00:04:14.734
+and we were able to access that list through a RESTful API,
+
+00:04:14.735 --> 00:04:17.759
+with the path of location.
+

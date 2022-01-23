@@ -1,0 +1,196 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.250 --> 00:00:07.154
+When I started writing software,
+
+00:00:07.155 --> 00:00:11.429
+n-tier and monolithic applications were the de facto standard.
+
+00:00:11.429 --> 00:00:16.410
+In one single binary Web artifact like an EAR or WAR file,
+
+00:00:16.410 --> 00:00:18.660
+there would be a layered architecture with
+
+00:00:18.660 --> 00:00:21.960
+decomposition of code into more functional components.
+
+00:00:21.960 --> 00:00:24.780
+So we'd have the presentation layer, the business layer,
+
+00:00:24.780 --> 00:00:26.475
+and the data access layer,
+
+00:00:26.475 --> 00:00:28.290
+all in one file.
+
+00:00:28.289 --> 00:00:32.964
+There are several disadvantages to interior monolithic applications.
+
+00:00:32.965 --> 00:00:35.320
+First, there's tight coupling of code,
+
+00:00:35.320 --> 00:00:38.719
+which makes changes hard because a single deployment
+
+00:00:38.719 --> 00:00:42.634
+contains all of the layers which causes long testing,
+
+00:00:42.634 --> 00:00:45.049
+building, and deployment cycles.
+
+00:00:45.049 --> 00:00:50.959
+A big monolithic application makes code reuse and sharing of components difficult.
+
+00:00:50.960 --> 00:00:54.395
+When components are shared in a monolithic application,
+
+00:00:54.395 --> 00:00:56.890
+it brings about tight coupling.
+
+00:00:56.890 --> 00:00:58.484
+Due to tight coupling,
+
+00:00:58.484 --> 00:01:05.045
+the smallest of changes can require large-scale releases which impacts speed to market.
+
+00:01:05.045 --> 00:01:11.825
+The Microservices Architecture or MSA provides improvements over the big monolith.
+
+00:01:11.825 --> 00:01:15.920
+The microservices architecture decomposes systems into
+
+00:01:15.920 --> 00:01:19.969
+discrete individual standalone components that can
+
+00:01:19.969 --> 00:01:25.450
+communicate amongst themselves working together or with external systems.
+
+00:01:25.450 --> 00:01:30.950
+MSA is a more agile framework that fits well with the cloud-based world we live in
+
+00:01:30.950 --> 00:01:37.120
+today and lends itself well to web application development and web service development.
+
+00:01:37.120 --> 00:01:40.385
+MSA is very flexible because it supports
+
+00:01:40.385 --> 00:01:44.030
+any language that can communicate via a Restful endpoint
+
+00:01:44.030 --> 00:01:50.859
+since it leverages rest over HTTP and is a far simpler means for delivering web services,
+
+00:01:50.859 --> 00:01:52.379
+than let's say SOAP,
+
+00:01:52.379 --> 00:01:55.170
+which has long been criticized for complexity.
+
+00:01:55.170 --> 00:01:59.780
+MSA offers agility and systems that are easier to write,
+
+00:01:59.780 --> 00:02:02.335
+test, deploy, and share.
+
+00:02:02.334 --> 00:02:06.859
+MSA provides systems that can better scale to load and demand.
+
+00:02:06.859 --> 00:02:10.849
+MSA provides systems that are resilient because failures
+
+00:02:10.849 --> 00:02:15.484
+are isolated and don't cascade through the entire infrastructure.
+
+00:02:15.485 --> 00:02:20.060
+Typically, once an application reaches a certain level of scale,
+
+00:02:20.060 --> 00:02:21.860
+it transitions to MSA.
+
+00:02:21.860 --> 00:02:26.584
+We will see this with some real-world examples from both Amazon and Netflix,
+
+00:02:26.584 --> 00:02:29.349
+who leverage a microservices architecture.
+
+00:02:29.349 --> 00:02:32.854
+When it comes to Amazon's global footprint,
+
+00:02:32.854 --> 00:02:34.924
+with the spike in sales,
+
+00:02:34.925 --> 00:02:39.515
+one big monolithic application would be very hard to manage.
+
+00:02:39.514 --> 00:02:43.759
+Netflix converted from a traditional development model with
+
+00:02:43.759 --> 00:02:49.189
+100 engineers producing a monolithic DVD rental application to
+
+00:02:49.189 --> 00:02:51.469
+a microservices architecture with
+
+00:02:51.469 --> 00:02:55.669
+many small teams responsible for the end-to-end development of
+
+00:02:55.669 --> 00:02:59.059
+hundreds of microservices that work together to
+
+00:02:59.060 --> 00:03:03.185
+stream digital entertainment to millions of Netflix customers.
+
+00:03:03.185 --> 00:03:07.235
+There are several characteristics of the microservices architecture.
+
+00:03:07.235 --> 00:03:12.320
+The phrase micro and microservices isn't related to the lines of code,
+
+00:03:12.319 --> 00:03:15.174
+but is based on the scope of the interface.
+
+00:03:15.175 --> 00:03:18.570
+Each microservice is single-purpose,
+
+00:03:18.569 --> 00:03:22.680
+it's simple, and it has a well-defined interface.
+
+00:03:22.680 --> 00:03:25.545
+It's modular and independent,
+
+00:03:25.544 --> 00:03:28.194
+and it has isolated persistence,
+
+00:03:28.194 --> 00:03:31.750
+which simply means the microservices don't share data,
+
+00:03:31.750 --> 00:03:34.620
+they have their own unique database,
+
+00:03:34.620 --> 00:03:39.020
+and they serve as the single system of record for data.
+
+00:03:39.020 --> 00:03:43.865
+The case study that we are going to look at is an online ordering application.
+
+00:03:43.865 --> 00:03:48.110
+There are multiple services that work together to create the system.
+
+00:03:48.110 --> 00:03:50.195
+There is the item service,
+
+00:03:50.194 --> 00:03:53.844
+the order service, and the shipping service,
+
+00:03:53.844 --> 00:03:55.995
+each with their own database.
+
+00:03:55.995 --> 00:03:59.150
+Now, instead of building out the entire system,
+
+00:03:59.150 --> 00:04:02.610
+we will focus only on the item service.
+

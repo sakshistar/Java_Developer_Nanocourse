@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.160
+Hello, I'm Kesha Williams.
+
+00:00:02.160 --> 00:00:03.525
+Welcome to my course,
+
+00:00:03.524 --> 00:00:05.594
+Web Services and APIs.
+
+00:00:05.594 --> 00:00:10.515
+Today, I'm going to teach you about how to build RESTful APIs using Spring Boot.
+
+00:00:10.515 --> 00:00:13.875
+First, I will teach you about the REST architecture style,
+
+00:00:13.875 --> 00:00:19.140
+then I will show you how to bootstrap a simple application using the spring initializer,
+
+00:00:19.140 --> 00:00:21.359
+then we will add a rest controller to
+
+00:00:21.359 --> 00:00:25.530
+the application to handle incoming client requests for data.
+
+00:00:25.530 --> 00:00:28.380
+I will teach you about the annotations required,
+
+00:00:28.379 --> 00:00:32.070
+how to properly format the response back to the calling client,
+
+00:00:32.070 --> 00:00:34.409
+and we will wrap up with exception handling.
+
+00:00:34.409 --> 00:00:36.759
+So let's get started.
+

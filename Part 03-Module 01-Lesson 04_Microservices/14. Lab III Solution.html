@@ -1,0 +1,314 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lab III: Solution</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Microservices</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. MSA.html">02. MSA</a>
+    </li>
+    <li class="">
+      <a href="03. Spring Cloud &amp; Eureka.html">03. Spring Cloud &amp; Eureka</a>
+    </li>
+    <li class="">
+      <a href="04. Case Study Eureka Server.html">04. Case Study: Eureka Server</a>
+    </li>
+    <li class="">
+      <a href="05. Lab I Build a Dog Microservice (Eureka).html">05. Lab I: Build a Dog Microservice (Eureka)</a>
+    </li>
+    <li class="">
+      <a href="06. Lab I Solution.html">06. Lab I: Solution</a>
+    </li>
+    <li class="">
+      <a href="07. Spring Data REST.html">07. Spring Data REST</a>
+    </li>
+    <li class="">
+      <a href="08. Case Study Spring Data REST.html">08. Case Study: Spring Data REST</a>
+    </li>
+    <li class="">
+      <a href="09. Lab II Build a Dog Microservice (Spring Data REST).html">09. Lab II: Build a Dog Microservice (Spring Data REST)</a>
+    </li>
+    <li class="">
+      <a href="10. Lab II Solution.html">10. Lab II: Solution</a>
+    </li>
+    <li class="">
+      <a href="11. Microservice Registration.html">11. Microservice Registration</a>
+    </li>
+    <li class="">
+      <a href="12. Case Study Registration.html">12. Case Study: Registration</a>
+    </li>
+    <li class="">
+      <a href="13. Lab III Build a Dog Microservice (Registration).html">13. Lab III: Build a Dog Microservice (Registration)</a>
+    </li>
+    <li class="">
+      <a href="14. Lab III Solution.html">14. Lab III: Solution</a>
+    </li>
+    <li class="">
+      <a href="15. Recap.html">15. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">14. Lab III: Solution</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="solution-build-a-dog-microservice---registration">Solution: Build a Dog Microservice - Registration</h1>
+<p>Below, we'll walk through each step of the lab and look at <em>one potential way</em> to implement the lab. Even if you get stuck, you should always first try to work through the lab without the solution before coming here, so that you can best learn the related skills and be ready for the project at the end of the course.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="step-1-turn-the-microservice-into-a-eureka-client"><strong>Step 1:</strong> Turn the microservice into a Eureka client.</h2>
+<ul>
+<li>Add the appropriate annotations and dependencies in the Maven POM file.</li>
+</ul>
+<p>If you followed Step 0 in the Lab II solution, you already have the necessary dependencies, but if not, you'll want to add both the Eureka discovery client and cloud config.</p>
+<pre><code>        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-client&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-config&lt;/artifactId&gt;
+        &lt;/dependency&gt;</code></pre>
+<p>Spring Initializr may have already added the dependency management for you, but if that field does not exist in your POM file, add the following:</p>
+<pre><code>    &lt;dependencyManagement&gt;
+        &lt;dependencies&gt;
+            &lt;dependency&gt;
+                &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-cloud-starter-parent&lt;/artifactId&gt;
+                &lt;version&gt;Greenwich.RELEASE&lt;/version&gt;
+                &lt;type&gt;pom&lt;/type&gt;
+                &lt;scope&gt;import&lt;/scope&gt;
+            &lt;/dependency&gt;
+        &lt;/dependencies&gt;
+    &lt;/dependencyManagement&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>From there, it's just a couple of imports in <code>DogMicroserviceApplication.java</code> (or your similarly named application file) and a single additional annotation.</p>
+<pre><code class="java language-java">package com.udacity.DogMicroservice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+
+@SpringBootApplication
+@EnableEurekaClient
+public class DogMicroserviceApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(DogMicroserviceApplication.class, args);
+    }
+
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Last is adding the necessary lines to <code>application.properties</code>. I decided to add my application <code>dog-service</code>, and set to port 8762. You can choose which port to use here, although I will keep it simple by using the very next port after the one for the Eureka server.</p>
+<pre><code class="pseudo language-pseudo">spring.application.name=dog-service
+server.port=8762
+eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka/
+eureka.client.service-url.default-zone=http://localhost:8761/eureka/
+eureka.instance.prefer-ip-address=true</code></pre>
+<p>And that's it! Your microservice is now able to be registered with the Eureka server.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="step-2-ensure-your-microservice-is-registered"><strong>Step 2:</strong> Ensure your microservice is registered.</h2>
+<ul>
+<li>Use a web browser to view the Eureka web console, and check that your microservice is listed.</li>
+</ul>
+<p>First, if you stopped or closed it earlier, make sure your Eureka server is running at http://localhost:8761/. Then, go ahead and run the application for your Dog Microservice. You will likely need to refresh the page to see your new <code>dog-service</code> shown as registered with the Eureka server.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/java-registered-microservice.png" alt="The &#x60;dog-service&#x60; is now registered with the Eureka server" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>The <code>dog-service</code> is now registered with the Eureka server</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>You should also be able to see the returned JSON from your Dog microservice at http://localhost:8762/dogs. If you want to go even further, research how to further configure the microservice so you can access it at http://dog-service/dogs instead!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="full-solution">Full Solution</h2>
+<p>If you'd like the full solution code all in one place, you can download it through the links below.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="15. Recap.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('14. Lab III: Solution')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

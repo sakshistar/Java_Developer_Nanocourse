@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.310 --> 00:00:07.500
+Rest is the most popular way to expose data from a server through an API.
+
+00:00:07.500 --> 00:00:12.059
+However, the response returned from a Rest API is very rigid,
+
+00:00:12.060 --> 00:00:16.035
+and returns all of the data points as designed by the developer,
+
+00:00:16.035 --> 00:00:17.969
+whether you need them or not.
+
+00:00:17.969 --> 00:00:23.429
+GraphQL offers greater flexibility in their response returned than Rest.
+
+00:00:23.429 --> 00:00:25.094
+What is GraphQL?
+
+00:00:25.094 --> 00:00:28.304
+Simply put GraphQL is a query language for
+
+00:00:28.304 --> 00:00:33.090
+APIs or syntax that describes how to ask for data,
+
+00:00:33.090 --> 00:00:37.030
+and is generally used to load data from a server to a client.
+
+00:00:37.030 --> 00:00:41.120
+The neat thing about GraphQL is that it lets the calling client or
+
+00:00:41.119 --> 00:00:45.169
+the user specify exactly what data it needs,
+
+00:00:45.170 --> 00:00:49.520
+and allows for the aggregation of data from multiple sources on the back-end,
+
+00:00:49.520 --> 00:00:54.160
+allowing the client to make one call to get all of the data it needs.
+
+00:00:54.159 --> 00:00:58.969
+GraphQL offers maximum efficiency and flexibility.
+
+00:00:58.969 --> 00:01:01.789
+Let's look at a simple query.
+
+00:01:01.789 --> 00:01:07.795
+The left-hand side shows the query and the right-hand side shows the return data.
+
+00:01:07.795 --> 00:01:14.204
+Here, I'm calling the 'findAllLocations' and I'm requesting the ID,
+
+00:01:14.203 --> 00:01:16.064
+and on the right-hand side,
+
+00:01:16.064 --> 00:01:18.480
+it returns all of the locations,
+
+00:01:18.480 --> 00:01:20.939
+but only the ID data-point.
+
+00:01:20.939 --> 00:01:23.280
+To include GraphQL on your project,
+
+00:01:23.280 --> 00:01:25.454
+a couple of dependencies are needed.
+
+00:01:25.454 --> 00:01:29.200
+First, you need the GraphQL Spring Boot Starter.
+
+00:01:29.200 --> 00:01:32.450
+This starter is very helpful because it will add and
+
+00:01:32.450 --> 00:01:35.810
+automatically configure a GraphQL servlet,
+
+00:01:35.810 --> 00:01:38.734
+that you can access at slash GraphQL.
+
+00:01:38.734 --> 00:01:42.814
+This starter will also use a GraphQL schema library,
+
+00:01:42.814 --> 00:01:46.519
+to parse all Schema Files found on the class path.
+
+00:01:46.519 --> 00:01:51.604
+The starter will also set up an endpoint that can access post requests.
+
+00:01:51.605 --> 00:01:55.814
+The next dependency is the GraphQL Java tools,
+
+00:01:55.814 --> 00:02:01.409
+and this is a helper library that parses the GraphQL schema.
+

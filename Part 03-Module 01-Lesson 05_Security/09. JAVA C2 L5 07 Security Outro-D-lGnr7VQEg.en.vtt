@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.695
+Today you learned about securing rest APIs using springs security.
+
+00:00:04.695 --> 00:00:09.285
+We covered security basics like authentication and authorization.
+
+00:00:09.285 --> 00:00:13.650
+Authentication is about validating the identity of a client,
+
+00:00:13.650 --> 00:00:18.000
+that is attempting to call a web service that accesses your secure data.
+
+00:00:18.000 --> 00:00:22.065
+Authorization is the next step after authentication.
+
+00:00:22.065 --> 00:00:24.554
+So once the client is authenticated,
+
+00:00:24.554 --> 00:00:26.564
+they have proven who they are,
+
+00:00:26.565 --> 00:00:28.679
+what do they have access to?
+
+00:00:28.679 --> 00:00:33.765
+Next, you learned about basic off as a way to protect your APIs.
+
+00:00:33.765 --> 00:00:36.990
+Lastly, we integrated spring security into
+
+00:00:36.990 --> 00:00:42.304
+a rest API to allow only authorized users to retrieve data from it.
+
+00:00:42.304 --> 00:00:44.840
+Next, we will learn about consuming
+
+00:00:44.840 --> 00:00:50.880
+an existing soap web service or rest API in your existing application.
+

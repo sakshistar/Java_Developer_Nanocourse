@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.790 --> 00:00:09.855
+You will be amazed to see how easy spring data rest makes it to expose a micro service.
+
+00:00:09.855 --> 00:00:12.315
+Before spring data rest came along,
+
+00:00:12.314 --> 00:00:16.859
+writing a rest web service for a multi-domain objects system
+
+00:00:16.859 --> 00:00:21.449
+was tedious and resulted in a lot of boilerplate code and
+
+00:00:21.449 --> 00:00:25.559
+the use of annotations like rest controller and request
+
+00:00:25.559 --> 00:00:31.019
+mapping in order to create APIs for simple CRUD operations.
+
+00:00:31.019 --> 00:00:34.875
+Spring data rest bills on top of spring data repositories
+
+00:00:34.875 --> 00:00:38.909
+and automatically exports them as rest resources.
+
+00:00:38.909 --> 00:00:42.029
+So this is something to really get excited about.
+
+00:00:42.030 --> 00:00:47.135
+The simplest way to get started is if you are building a Spring Boot application,
+
+00:00:47.134 --> 00:00:49.534
+that's because when using Spring Boot,
+
+00:00:49.534 --> 00:00:52.929
+spring data rest gets configured automatically.
+
+00:00:52.929 --> 00:00:58.564
+The first step is to update the Maven palm file with the spring data rest dependency,
+
+00:00:58.564 --> 00:01:00.739
+Spring Boot starter data rest.
+
+00:01:00.740 --> 00:01:03.460
+So how does spring data rest work?
+
+00:01:03.460 --> 00:01:08.765
+At application startup, it finds all of the spring data repositories.
+
+00:01:08.765 --> 00:01:12.290
+It creates an endpoint that matches the entity name,
+
+00:01:12.290 --> 00:01:16.685
+it then appends an S to the entity name in the endpoint,
+
+00:01:16.685 --> 00:01:20.555
+and it automatically exposes CRUD, create, read,
+
+00:01:20.555 --> 00:01:25.445
+update and delete operations as restful APIs over HTTP.
+
+00:01:25.444 --> 00:01:29.824
+There is no need to create a controller or even a service layer.
+
+00:01:29.825 --> 00:01:34.730
+For this repository, spring data rest exposes a collection of
+
+00:01:34.730 --> 00:01:40.175
+resources at HTTP localhost: 8080 items.
+
+00:01:40.174 --> 00:01:43.265
+The path is derived from the uncapitalized,
+
+00:01:43.265 --> 00:01:47.480
+pluralized simple class name of the entity class being managed.
+
+00:01:47.480 --> 00:01:49.520
+In this case, item.
+
+00:01:49.519 --> 00:01:54.170
+It also exposes an item resource for each of the items
+
+00:01:54.170 --> 00:02:00.719
+managed by the repository under the URI template items ID.
+

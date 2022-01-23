@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.790 --> 00:00:09.015
+GraphQL offers operations on data like queries and mutations.
+
+00:00:09.015 --> 00:00:14.800
+Each query will have a specific object that it returns and based on the object returned,
+
+00:00:14.800 --> 00:00:17.219
+you can add or remove fields to match
+
+00:00:17.219 --> 00:00:21.210
+the exact data you need to fit your specific use case.
+
+00:00:21.210 --> 00:00:24.839
+GraphQL also has the ability to update the data
+
+00:00:24.839 --> 00:00:28.289
+stored on the server by the means of mutations.
+
+00:00:28.289 --> 00:00:31.019
+Mutations like we saw; create, update,
+
+00:00:31.019 --> 00:00:33.269
+or delete will change the data,
+
+00:00:33.270 --> 00:00:35.859
+unlike a simple query.
+

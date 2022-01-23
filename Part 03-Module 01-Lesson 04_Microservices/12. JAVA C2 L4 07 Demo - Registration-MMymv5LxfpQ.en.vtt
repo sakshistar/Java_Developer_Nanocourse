@@ -1,0 +1,187 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.680 --> 00:00:04.349
+After creating the Spring Data REST service,
+
+00:00:04.349 --> 00:00:08.334
+the next step is to register the service using the Eureka Client.
+
+00:00:08.335 --> 00:00:10.210
+Now let's turn this items,
+
+00:00:10.210 --> 00:00:12.910
+micro service into Eurereka Client.
+
+00:00:12.910 --> 00:00:17.109
+Doing this will cause the service to act like a Spring Discovery Client
+
+00:00:17.109 --> 00:00:21.460
+and it will register itself in the Eureka Server attached to this service.
+
+00:00:21.460 --> 00:00:23.230
+So if you remember,
+
+00:00:23.230 --> 00:00:25.359
+on the spring Eureka dashboard,
+
+00:00:25.359 --> 00:00:28.824
+right now there are no instances currently registered.
+
+00:00:28.824 --> 00:00:31.509
+So let's get our microservices register.
+
+00:00:31.510 --> 00:00:33.895
+Let's navigate back to intelJ.
+
+00:00:33.895 --> 00:00:36.745
+The first step is in the palm file.
+
+00:00:36.744 --> 00:00:39.489
+We have to add the correct dependencies.
+
+00:00:39.490 --> 00:00:41.635
+So I have them here already.
+
+00:00:41.634 --> 00:00:44.079
+Let's uncomment them.
+
+00:00:44.079 --> 00:00:48.070
+So having this Spring Discovery Client here,
+
+00:00:48.070 --> 00:00:50.844
+spring client started netflix-eureka-client,
+
+00:00:50.844 --> 00:00:52.865
+let's import the changes,
+
+00:00:52.865 --> 00:00:56.484
+this will make the service register itself.
+
+00:00:56.484 --> 00:00:59.978
+We also need the spring-cloud-starter config,
+
+00:00:59.978 --> 00:01:03.579
+and then from a dependency management perspective,
+
+00:01:03.579 --> 00:01:08.049
+let's include the spring cloud starter parent and import the changes.
+
+00:01:08.049 --> 00:01:11.409
+The next step is in the Spring Boot application,
+
+00:01:11.409 --> 00:01:15.295
+microservices application.java navigate there.
+
+00:01:15.295 --> 00:01:16.689
+So in the past,
+
+00:01:16.689 --> 00:01:21.590
+we've needed to annotate this main spring class with this @EnableEurekaClient,
+
+00:01:21.590 --> 00:01:26.909
+but now it's optional because of the dependencies that we have on the class path.
+
+00:01:26.909 --> 00:01:31.265
+But I like to include it just to make the code more verbose,
+
+00:01:31.265 --> 00:01:36.034
+and let's add the necessary imports back that we need for that annotation.
+
+00:01:36.034 --> 00:01:39.364
+The next step is to set up the application properties file.
+
+00:01:39.364 --> 00:01:41.104
+So let's navigate there.
+
+00:01:41.105 --> 00:01:46.325
+Down here, let's uncomment out all of the Eureka configuration items,
+
+00:01:46.325 --> 00:01:48.325
+and let's talk about each one.
+
+00:01:48.325 --> 00:01:50.719
+First, this is the application name.
+
+00:01:50.719 --> 00:01:53.328
+So the application name uniquely identifies
+
+00:01:53.328 --> 00:01:56.914
+the client in the list of registered applications.
+
+00:01:56.915 --> 00:02:00.980
+So we're calling this microservice, item-service.
+
+00:02:00.980 --> 00:02:04.835
+We're setting up the server port to be 8762,
+
+00:02:04.834 --> 00:02:09.454
+and then here we're adding the Eureka Client, the service URL.
+
+00:02:09.455 --> 00:02:14.360
+Remember, in the previous example we used 8761,
+
+00:02:14.360 --> 00:02:17.184
+that's the location of our Eureka Service,
+
+00:02:17.183 --> 00:02:21.305
+and then we're adding here the prefer IP address equals true,
+
+00:02:21.305 --> 00:02:23.150
+and that's all we need to do.
+
+00:02:23.150 --> 00:02:26.469
+So let's run this microservices application.
+
+00:02:26.469 --> 00:02:30.875
+Now, this is going to launch the micro service application,
+
+00:02:30.875 --> 00:02:35.164
+and the service is going to register itself using the Eureka Client.
+
+00:02:35.164 --> 00:02:37.953
+So when we navigate back to the Eureka dashboard,
+
+00:02:37.954 --> 00:02:40.355
+we should see this instance registered.
+
+00:02:40.354 --> 00:02:43.173
+So I'll give it a second to actually launch,
+
+00:02:43.174 --> 00:02:49.430
+and then let's navigate back to the Eureka Service dashboard and let's do a refresh,
+
+00:02:49.430 --> 00:02:54.325
+and now notice here in the instances currently registered section,
+
+00:02:54.324 --> 00:02:57.909
+we now have our ITEM-SERVICE microservice.
+
+00:02:57.909 --> 00:03:04.025
+The next step is to discover and invoke item service without the hard-coded URL path.
+
+00:03:04.025 --> 00:03:09.260
+Typically, this endpoint will use the service discovery style URL using
+
+00:03:09.259 --> 00:03:15.334
+the application name instead of the full URL with a host and port as shown here.
+
+00:03:15.335 --> 00:03:18.305
+So after some additional configuration,
+
+00:03:18.305 --> 00:03:20.275
+you would see something like this.
+
+00:03:20.275 --> 00:03:23.060
+Clearly, we are using only the service name,
+
+00:03:23.060 --> 00:03:26.629
+item-service in place of the host and port.
+
+00:03:26.629 --> 00:03:30.129
+This will be handled internally by the Spring framework,
+
+00:03:30.129 --> 00:03:34.109
+the Eureka Server and the rest template together.
+

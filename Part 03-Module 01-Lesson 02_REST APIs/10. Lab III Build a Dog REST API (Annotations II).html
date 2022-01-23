@@ -1,0 +1,251 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lab III: Build a Dog REST API (Annotations II)</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>REST APIs</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Architecture Style.html">02. Architecture Style</a>
+    </li>
+    <li class="">
+      <a href="03. Case Study Intro &amp; Maven Dependencies.html">03. Case Study: Intro &amp; Maven Dependencies</a>
+    </li>
+    <li class="">
+      <a href="04. Lab I Build a Dog REST API (Set Up).html">04. Lab I: Build a Dog REST API (Set Up)</a>
+    </li>
+    <li class="">
+      <a href="05. Lab I Solution.html">05. Lab I: Solution</a>
+    </li>
+    <li class="">
+      <a href="06. Case Study Annotations.html">06. Case Study: Annotations</a>
+    </li>
+    <li class="">
+      <a href="07. Lab II Build a Dog REST API (Annotations I).html">07. Lab II: Build a Dog REST API (Annotations I)</a>
+    </li>
+    <li class="">
+      <a href="08. Lab II Solution.html">08. Lab II: Solution</a>
+    </li>
+    <li class="">
+      <a href="09. Case Study Continued.html">09. Case Study Continued</a>
+    </li>
+    <li class="">
+      <a href="10. Lab III Build a Dog REST API (Annotations II).html">10. Lab III: Build a Dog REST API (Annotations II)</a>
+    </li>
+    <li class="">
+      <a href="11. Lab III Solution.html">11. Lab III: Solution</a>
+    </li>
+    <li class="">
+      <a href="12. Recap.html">12. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">10. Lab III: Build a Dog REST API (Annotations II)</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="lab-iii-build-a-dog-rest-api">Lab III: Build a Dog REST API</h1>
+<p>Here, we'll finish off this lesson's lab, creating a REST API that returns a list of dogs from an embedded H2 in memory database. This time, you'll add a repository &amp; service, complete the <code>DogController</code> you started earlier, make sure errors are handled, and then create a <code>.sql</code> file for some example dog data.</p>
+<h2 id="annotations-part-ii">Annotations Part II</h2>
+<ul>
+<li><p><strong>Step 1</strong>: Create a repository that extends CrudRepository for creating, reading, updating, and deleting Dog objects.</p></li>
+<li><p><strong>Step 2</strong>: Create a dog service that performs the following operations:</p>
+<ul>
+<li>retrieveDogBreed</li>
+<li>retrieveDogBreedById</li>
+<li>retrieveDogNames</li></ul></li>
+</ul>
+<p>You may want to check out <a href="https://stackoverflow.com/questions/22007341/spring-jpa-selecting-specific-columns" target="_blank">this Stack Overflow post</a> for one possible way you might help implement these operations by adjusting the repository created in Step 1.</p>
+<ul>
+<li><p><strong>Step 3</strong>: Update the web controller using <code>@RestController</code> that handles requests for retrieving:</p>
+<ul>
+<li>a list of Dog breeds</li>
+<li>a list of Dog breeds by Id</li>
+<li>a list of Dog names</li></ul></li>
+<li><p><strong>Step 4</strong>: Make sure errors are handled appropriately.</p>
+<ul>
+<li>if an id is requested that doesn’t exist, appropriately handle the error</li></ul></li>
+<li><p><strong>Step 5</strong>: Create a <code>data.sql</code> file to create sample dog data in the database.</p></li>
+</ul>
+<p>If you aren't familiar with SQL, take a look back at <a href="https://gitlab.com/videolearning/udacity-java/blob/master/Lesson2-restapis/bootstrap/src/main/resources/data.sql" target="_blank">Kesha's file</a> from the Location API case study.</p>
+<ul>
+<li><strong>Step 6</strong>: Check that you are able to access your API.</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Build a Dog REST API Lab</p></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="fa28ca45-7acd-4223-9293-ed24166bfb44--0">
+        <label for="fa28ca45-7acd-4223-9293-ed24166bfb44--0"><p>I completed the "Build a Dog REST API" lab.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Great! You've now built your own functioning REST API. Soon, you'll develop a similar GraphQL API and microservice!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="11. Lab III Solution.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. Lab III: Build a Dog REST API (Annotations II)')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

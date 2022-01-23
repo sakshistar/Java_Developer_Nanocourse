@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.519 --> 00:00:10.454
+Let's see the steps to create a GraphQL API using Spring Boot.
+
+00:00:10.455 --> 00:00:14.550
+First, I will show you how to bootstrap a simple application,
+
+00:00:14.550 --> 00:00:18.750
+then I will show you where to place the GraphQL dependencies.
+
+00:00:18.750 --> 00:00:22.559
+We will use the same case study from the previous lesson
+
+00:00:22.559 --> 00:00:26.759
+to return a list of locations persistent in H2.
+
+00:00:26.760 --> 00:00:31.710
+Next, I will show you how to create the schema and the API.
+
+00:00:31.710 --> 00:00:38.740
+Then I will show you how to use GraphiQL to issue queries and mutations against the data.
+

@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.980 --> 00:00:08.009
+Web services support reusability of code.
+
+00:00:08.009 --> 00:00:10.769
+Because they are meant to be small components,
+
+00:00:10.769 --> 00:00:13.709
+they can be used by multiple systems.
+
+00:00:13.710 --> 00:00:20.115
+Web services makes sense when you need to reuse the same data in several applications.
+
+00:00:20.114 --> 00:00:23.189
+Let's say you're having your morning coffee and you
+
+00:00:23.190 --> 00:00:26.790
+want to review the most recent posts in your LinkedIn feed.
+
+00:00:26.789 --> 00:00:32.174
+Well, you can access that feed from the client app you downloaded on your phone.
+
+00:00:32.174 --> 00:00:36.140
+You can also open your computer and access your feed from
+
+00:00:36.140 --> 00:00:40.265
+LinkedIn's web application that runs inside of a web browser.
+
+00:00:40.265 --> 00:00:44.884
+Behind the scenes, there's probably a web service that serves
+
+00:00:44.884 --> 00:00:49.474
+up the same data no matter from where you're trying to access that data,
+
+00:00:49.475 --> 00:00:52.149
+from your phone or from your computer.
+
+00:00:52.149 --> 00:00:59.015
+Web services also promote usability as they are an easy way to expose business logic
+
+00:00:59.015 --> 00:01:06.055
+and data to other systems in a secure fashion to a wide range of audiences and platforms.
+
+00:01:06.055 --> 00:01:09.740
+These concepts of reusability and usability
+
+00:01:09.739 --> 00:01:14.449
+allow organizations to use web services provided by third parties.
+
+00:01:14.450 --> 00:01:19.745
+This reduces development time and delivers more powerful applications.
+
+00:01:19.745 --> 00:01:26.840
+For example, let's say your system is the source of truth for airport locations.
+
+00:01:26.840 --> 00:01:32.600
+Well, you can expose that data via a web service and now every client or
+
+00:01:32.599 --> 00:01:38.509
+system on the planet that needs a list of airport locations can call your service.
+
+00:01:38.510 --> 00:01:40.910
+There is no need for each client to create
+
+00:01:40.909 --> 00:01:45.000
+their own version of an airport listing service.
+

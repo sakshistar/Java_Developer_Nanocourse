@@ -1,0 +1,109 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.339
+Schemas to find the data points in operations offered via an API.
+
+00:00:05.339 --> 00:00:08.429
+Let's navigate back to the Maven POM file.
+
+00:00:08.429 --> 00:00:12.254
+I mentioned this dependency, GraphQL Java tools.
+
+00:00:12.255 --> 00:00:16.755
+This is a helper library that assists with parsing GraphQL schemas.
+
+00:00:16.754 --> 00:00:21.419
+Behind the scenes, schema files found anywhere in the class path are process,
+
+00:00:21.420 --> 00:00:24.030
+and the necessary beans are wired.
+
+00:00:24.030 --> 00:00:30.675
+All schema files must end in the GraphQLS and can be present anywhere.
+
+00:00:30.675 --> 00:00:36.289
+I've placed ours underneath the resources folder and I've created GraphQL.
+
+00:00:36.289 --> 00:00:40.384
+We're looking at a sample locations schema.
+
+00:00:40.384 --> 00:00:44.570
+There can only be one root query and one root mutation.
+
+00:00:44.570 --> 00:00:49.355
+Each file will contain all of the query and mutation operations for the given type.
+
+00:00:49.354 --> 00:00:54.214
+The location type here is defined along with all the queries and mutations.
+
+00:00:54.215 --> 00:00:56.125
+Notice for the location,
+
+00:00:56.125 --> 00:00:57.784
+the fields are tight.
+
+00:00:57.784 --> 00:00:59.508
+So this is an id,
+
+00:00:59.509 --> 00:01:03.034
+this is a string and address is also a string.
+
+00:01:03.034 --> 00:01:06.034
+These types can be any scalar types; int,
+
+00:01:06.034 --> 00:01:09.194
+flow, Boolean, ID, et cetera.
+
+00:01:09.194 --> 00:01:14.224
+Now, this exclamation point here means the field is required,
+
+00:01:14.224 --> 00:01:18.509
+and whenever you see a field in brackets like here we have location in brackets,
+
+00:01:18.510 --> 00:01:20.540
+it represents an array.
+
+00:01:20.540 --> 00:01:24.140
+Every complex type in the GraphQL server like
+
+00:01:24.140 --> 00:01:29.000
+location is represented by a corresponding Java class or object.
+
+00:01:29.000 --> 00:01:35.075
+So I've created this entity package and I've added the location entity to that package.
+
+00:01:35.075 --> 00:01:41.480
+Notice in this location schema location here on lines one through five,
+
+00:01:41.480 --> 00:01:44.965
+maps exactly to this location class.
+
+00:01:44.965 --> 00:01:47.469
+And like with our RESTful API,
+
+00:01:47.469 --> 00:01:50.329
+there is a location repository that gives us
+
+00:01:50.329 --> 00:01:53.870
+the ability to interact with our H2 in memory database.
+
+00:01:53.870 --> 00:01:55.280
+We can query, save,
+
+00:01:55.280 --> 00:01:57.739
+delete and update locations.
+
+00:01:57.739 --> 00:01:59.134
+In the real world,
+
+00:01:59.135 --> 00:02:02.750
+you would have a service layer like we did in our RESTful API,
+
+00:02:02.750 --> 00:02:06.159
+but since this is a simple use case, I've excluded it.
+
+00:02:06.159 --> 00:02:11.310
+Now, let's look at the queries and mutations that I've added.
+

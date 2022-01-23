@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.520 --> 00:00:06.554
+Basic Authentication, also referred to as Basic Auth,
+
+00:00:06.554 --> 00:00:12.809
+is the simplest protocol available for performing Web Service authentication over HTTP.
+
+00:00:12.810 --> 00:00:16.769
+Basic Auth only requires a username and password.
+
+00:00:16.769 --> 00:00:20.594
+The client calling the Web Service takes these two credentials,
+
+00:00:20.594 --> 00:00:23.759
+converts them to a single base 64 encoded
+
+00:00:23.760 --> 00:00:28.845
+value and passes it along in the authentication HTTP header.
+
+00:00:28.844 --> 00:00:31.679
+The server compares the values passed into
+
+00:00:31.679 --> 00:00:34.884
+the username and password credentials it has stored.
+
+00:00:34.884 --> 00:00:40.469
+If it matches, the server fulfills the requests and provides access to the data.
+
+00:00:40.469 --> 00:00:46.564
+If the authentication HTTP header is missing or the password doesn't match the username,
+
+00:00:46.564 --> 00:00:50.929
+the server denies access and returns a 401 status code,
+
+00:00:50.929 --> 00:00:53.990
+which means the request is unauthorized.
+
+00:00:53.990 --> 00:00:58.940
+API Key Authentication is another technique used to secure Web Services,
+
+00:00:58.939 --> 00:01:03.814
+which requires the API to be accessed with a unique key.
+
+00:01:03.814 --> 00:01:08.129
+This unique key is like the pass code to your phone.
+

@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.590 --> 00:00:05.234
+REST, stands for Representational State Transfer.
+
+00:00:05.235 --> 00:00:06.689
+It's a set of guidelines,
+
+00:00:06.689 --> 00:00:10.335
+application developers use to design APIs.
+
+00:00:10.335 --> 00:00:13.500
+There are four principles that APIs follow.
+
+00:00:13.500 --> 00:00:18.509
+First, data and functionality in the API are considered resources and
+
+00:00:18.510 --> 00:00:23.595
+identified through something called the URI or Uniform Resource Identifier.
+
+00:00:23.594 --> 00:00:26.309
+These are often accessed by web links.
+
+00:00:26.309 --> 00:00:31.994
+Second, resources are manipulated using a fixed set of operations.
+
+00:00:31.995 --> 00:00:35.730
+GET retrieves a resource, POST creates one,
+
+00:00:35.729 --> 00:00:37.918
+use PUT to update the resource,
+
+00:00:37.918 --> 00:00:40.544
+and of course DELETE will remove it.
+
+00:00:40.545 --> 00:00:46.010
+Third, resources can be represented in multiple formats like HTML,
+
+00:00:46.009 --> 00:00:50.844
+XML plain texts, and other formats defined by immediate type.
+
+00:00:50.844 --> 00:00:55.729
+Finally, communication between the client and endpoint is stateless.
+
+00:00:55.729 --> 00:00:58.069
+Meaning, the server will not remember or
+
+00:00:58.070 --> 00:01:01.204
+store any state about the client that made the call.
+
+00:01:01.204 --> 00:01:07.534
+Restful APIs are easier to create and easier for many clients to consume.
+
+00:01:07.534 --> 00:01:12.185
+They are used a lot for web integration and mobile device applications.
+
+00:01:12.185 --> 00:01:17.180
+So let's look at how we build rest APIs using Spring Boot.
+

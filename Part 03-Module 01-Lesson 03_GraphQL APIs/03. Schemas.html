@@ -1,0 +1,311 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Schemas</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>GraphQL APIs</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Overview.html">02. Overview</a>
+    </li>
+    <li class="">
+      <a href="03. Schemas.html">03. Schemas</a>
+    </li>
+    <li class="">
+      <a href="04. Operations.html">04. Operations</a>
+    </li>
+    <li class="">
+      <a href="05. GraphiQL.html">05. GraphiQL</a>
+    </li>
+    <li class="">
+      <a href="06. Case Study Steps.html">06. Case Study: Steps</a>
+    </li>
+    <li class="">
+      <a href="07. Case Study Bootstrap &amp; Configure.html">07. Case Study: Bootstrap &amp; Configure</a>
+    </li>
+    <li class="">
+      <a href="08. Lab I Build a Dog GraphQL API (Set Up).html">08. Lab I: Build a Dog GraphQL API (Set Up)</a>
+    </li>
+    <li class="">
+      <a href="09. Lab I Solution.html">09. Lab I: Solution</a>
+    </li>
+    <li class="">
+      <a href="10. Case Study Schema Creation.html">10. Case Study: Schema Creation</a>
+    </li>
+    <li class="">
+      <a href="11. Lab II Build a Dog GraphQL API (Schema).html">11. Lab II: Build a Dog GraphQL API (Schema)</a>
+    </li>
+    <li class="">
+      <a href="12. Lab II Solution.html">12. Lab II: Solution</a>
+    </li>
+    <li class="">
+      <a href="13. Case Study Queries &amp; Mutations.html">13. Case Study: Queries &amp; Mutations</a>
+    </li>
+    <li class="">
+      <a href="14. Case Study Exception Handling.html">14. Case Study: Exception Handling</a>
+    </li>
+    <li class="">
+      <a href="15. Lab III Build a Dog GraphQL API (Queries &amp; Exceptions).html">15. Lab III: Build a Dog GraphQL API (Queries &amp; Exceptions)</a>
+    </li>
+    <li class="">
+      <a href="16. Lab III Solution.html">16. Lab III: Solution</a>
+    </li>
+    <li class="">
+      <a href="17. Case Study Testing.html">17. Case Study: Testing</a>
+    </li>
+    <li class="">
+      <a href="18. Case Study GraphiQL.html">18. Case Study: GraphiQL</a>
+    </li>
+    <li class="">
+      <a href="19. Lab IV Build a Dog GraphQL API (Testing).html">19. Lab IV: Build a Dog GraphQL API (Testing)</a>
+    </li>
+    <li class="">
+      <a href="20. Lab IV Solution.html">20. Lab IV: Solution</a>
+    </li>
+    <li class="">
+      <a href="21. Recap.html">21. Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Schemas</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>JAVA C2 L3 03 Schemas</p></h3>
+  <video controls>
+  <source src="03. JAVA C2 L3 03 Schemas-C-TtBoSBOMM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. JAVA C2 L3 03 Schemas-C-TtBoSBOMM.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The GraphQL schema defines the data points offered via an API. The schema contains the data types and relationships between them and the set of operations available, things like queries for retrieving data and mutations for creating, updating, and deleting data.</p>
+<p>The schema from the Case Study is shown below.</p>
+<pre>
+type Location {
+ id: ID!
+ name: String!
+ address: String!
+}
+
+type Query {
+ findAllLocations: [Location]!
+}
+
+type Mutation {
+ newLocation(name: String!, address: String) : Location!
+ deleteLocation(id:ID!) : Boolean
+ updateLocationName(newName: String!, id:ID!) : Location!
+}
+</pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>There can be multiple root Query and Mutation types in a single schema. </p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1562302831463" name="898204" id="a1562302831463">
+        <label for="a1562302831463"><p>False</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1562302834926" name="898204" id="a1562302834926">
+        <label for="a1562302834926"><p>True</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    False
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is the file extension for a GraphQL schema file?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1562302991276" name="898205" id="a1562302991276">
+        <label for="a1562302991276"><p>.graphs</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1562303031450" name="898205" id="a1562303031450">
+        <label for="a1562303031450"><p>.graphql</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1562303032797" name="898205" id="a1562303032797">
+        <label for="a1562303032797"><p>.graphqls</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1562303033651" name="898205" id="a1562303033651">
+        <label for="a1562303033651"><p>.graphical</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    .graphqls
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Operations.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Schemas')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.629 --> 00:00:05.429
+Let's see this in action.
+
+00:00:05.429 --> 00:00:09.029
+Let's look at the items Microservices module.
+
+00:00:09.029 --> 00:00:11.489
+First, let's look at the Maven POM file.
+
+00:00:11.490 --> 00:00:16.800
+Our dependencies we have the spring-boot-starter-jpa to include jpa.
+
+00:00:16.800 --> 00:00:20.804
+We have the spring-boot-starter-web which we've seen before.
+
+00:00:20.804 --> 00:00:27.405
+The starter-test, and for h2 or in-memory database the h2 dependency.
+
+00:00:27.405 --> 00:00:34.010
+The new dependency that we've added for spring data rest can be found here on lines 42.
+
+00:00:34.009 --> 00:00:38.629
+43. It is the spring-boot-starter-data-rest.
+
+00:00:38.630 --> 00:00:41.015
+Let's look at the entity item.
+
+00:00:41.015 --> 00:00:44.509
+Here item is an entity that has an ID,
+
+00:00:44.509 --> 00:00:46.384
+a name, and a description.
+
+00:00:46.384 --> 00:00:48.619
+The item entity also has
+
+00:00:48.619 --> 00:00:54.359
+the associated item repository for interacting with the h2 in memory database.
+
+00:00:54.359 --> 00:00:58.159
+Then the application.propertiesfile, what we've seen
+
+00:00:58.159 --> 00:01:02.629
+before setting the path to h2 and the data source URL,
+
+00:01:02.630 --> 00:01:04.945
+here in this case two items.
+
+00:01:04.944 --> 00:01:09.875
+That's all you need to expose the item table through a spring data rest API.
+
+00:01:09.875 --> 00:01:11.885
+There's no controller layer,
+
+00:01:11.885 --> 00:01:15.770
+no need to use address controller that annotation anywhere.
+
+00:01:15.769 --> 00:01:22.619
+Now, I've deployed and executed the application and to access the items microservice,
+
+00:01:22.620 --> 00:01:30.320
+let's navigate to a web browser and just enter localhost:8080 and items.
+
+00:01:30.319 --> 00:01:32.814
+So that's item with an s on the end.
+
+00:01:32.814 --> 00:01:38.164
+Notice here it shows a listing of all of the items in our database table.
+
+00:01:38.165 --> 00:01:40.835
+Now that we've created this microservice,
+
+00:01:40.834 --> 00:01:44.399
+let's register it as a eureka client.
+

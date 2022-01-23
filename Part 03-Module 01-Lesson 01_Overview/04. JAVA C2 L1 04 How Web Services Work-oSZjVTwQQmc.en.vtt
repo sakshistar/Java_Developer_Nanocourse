@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.500 --> 00:00:08.199
+The communication typically happens between
+
+00:00:08.199 --> 00:00:12.204
+a client and a server sometimes called the service provider.
+
+00:00:12.205 --> 00:00:14.679
+The client makes a request for data or
+
+00:00:14.679 --> 00:00:18.655
+information and the server responds to that request.
+
+00:00:18.655 --> 00:00:22.179
+The means of communication between the two systems is via
+
+00:00:22.179 --> 00:00:29.234
+a standard web protocol like HTTP or HTTPS over the worldwide web,
+
+00:00:29.234 --> 00:00:35.590
+and it uses a common language or message format like JSON or XML.
+
+00:00:35.590 --> 00:00:40.025
+Message formats are like different languages; English,
+
+00:00:40.024 --> 00:00:42.695
+Portuguese, Italian, et cetera,
+
+00:00:42.695 --> 00:00:45.679
+that allows systems to talk to each other.
+
+00:00:45.679 --> 00:00:53.030
+Humans speak English or Portuguese or Italian while computers speak XML or JSON.
+
+00:00:53.030 --> 00:00:55.910
+Web services can provide data in a number of
+
+00:00:55.909 --> 00:01:00.304
+different formats but XML and JSON are the most common.
+
+00:01:00.304 --> 00:01:04.400
+Extensible Markup Language or XML has long been
+
+00:01:04.400 --> 00:01:09.350
+a popular way to structure data using a familiar markup language.
+
+00:01:09.349 --> 00:01:12.649
+JavaScript Object Notation or JSON is
+
+00:01:12.650 --> 00:01:18.350
+a text-based data interchange format derived from the JavaScript scripting language.
+
+00:01:18.349 --> 00:01:23.409
+It is formatted as key value pairs and is more lightweight than XML.
+
+00:01:23.409 --> 00:01:29.844
+A client invokes a web service by sending an XML or JSON message,
+
+00:01:29.844 --> 00:01:35.780
+then waits for a corresponding XML response from the server.
+
+00:01:35.780 --> 00:01:38.935
+How does it work? The first step,
+
+00:01:38.935 --> 00:01:40.674
+the web service provider,
+
+00:01:40.674 --> 00:01:43.789
+the person who created the web service defines
+
+00:01:43.790 --> 00:01:48.215
+a standard format for requests and also for the response provided.
+
+00:01:48.215 --> 00:01:53.515
+Next, the client makes a request of the web service across the network.
+
+00:01:53.515 --> 00:01:58.939
+Lastly, the web service receives that request and performs an action like
+
+00:01:58.939 --> 00:02:05.909
+querie database or perform a calculation and sends a response back to the calling client.
+

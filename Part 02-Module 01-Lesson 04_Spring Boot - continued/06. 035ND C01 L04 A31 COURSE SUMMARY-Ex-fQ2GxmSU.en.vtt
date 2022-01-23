@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.960
+Congratulation. I'm glad you made it so far.
+
+00:00:03.960 --> 00:00:08.190
+In this course, where I started with some Java refreshment.
+
+00:00:08.189 --> 00:00:11.580
+With that, if you're coming from a different programming language,
+
+00:00:11.580 --> 00:00:14.234
+you should be able to pick up Java easily.
+
+00:00:14.234 --> 00:00:16.109
+If you're coming from Java,
+
+00:00:16.109 --> 00:00:20.009
+you just see if it can solve all the problems in the lesson.
+
+00:00:20.010 --> 00:00:23.955
+Next we started our Spring Boot introduction.
+
+00:00:23.954 --> 00:00:26.070
+With that, you should find yourself
+
+00:00:26.070 --> 00:00:29.984
+comfortable to build a Spring Boot application from scratch.
+
+00:00:29.984 --> 00:00:35.984
+We covered template engine to show you how to implement Spring Boot views.
+
+00:00:35.984 --> 00:00:40.954
+We then covered a particular Spring Boot application web socket.
+
+00:00:40.954 --> 00:00:42.859
+If you follow the steps,
+
+00:00:42.859 --> 00:00:48.109
+you see how a Spring Boot application is designed and implemented.
+
+00:00:48.109 --> 00:00:51.484
+We have also covered some miscellaneous topics,
+
+00:00:51.484 --> 00:00:54.070
+like unit tests, validation,
+
+00:00:54.070 --> 00:00:56.655
+exception handling, and packaging,
+
+00:00:56.655 --> 00:01:00.689
+which are very helpful in your Spring Boot development.
+
+00:01:00.700 --> 00:01:03.260
+Thanks for tuning in guys.
+
+00:01:03.259 --> 00:01:07.649
+I hope this course will help you in the future. Good luck.
+

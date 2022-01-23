@@ -1,0 +1,139 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.440
+Let's see the steps to develop a graphQL API using Spring Boot.
+
+00:00:04.440 --> 00:00:06.660
+At this point, you can clone the code from
+
+00:00:06.660 --> 00:00:09.615
+the link in the course notes and follow along with me.
+
+00:00:09.615 --> 00:00:14.294
+First, we're going to bootstrap a simple application using the spring initializr.
+
+00:00:14.294 --> 00:00:16.079
+We've seen this tool before.
+
+00:00:16.079 --> 00:00:18.854
+For project maven language Java,
+
+00:00:18.855 --> 00:00:20.565
+leave the default here.
+
+00:00:20.565 --> 00:00:22.993
+For the project metadata,
+
+00:00:22.993 --> 00:00:27.509
+let's change this to something more descriptive, here as well.
+
+00:00:27.510 --> 00:00:31.890
+Just like before, we're going to add the web dependency,
+
+00:00:31.890 --> 00:00:36.645
+the H2 dependency, and the JPA dependency.
+
+00:00:36.645 --> 00:00:42.515
+Now, you would think that you could go ahead and add the graphQL dependency,
+
+00:00:42.515 --> 00:00:44.840
+but we have to add those manually.
+
+00:00:44.840 --> 00:00:48.820
+Generate the project, you'll download the zip,
+
+00:00:48.820 --> 00:00:52.384
+you can unzip it and open it in your IDE.
+
+00:00:52.384 --> 00:00:54.259
+So let's navigate to that.
+
+00:00:54.259 --> 00:00:58.129
+Bringing up intelligence to the palm file.
+
+00:00:58.130 --> 00:01:00.798
+Scroll down, as expected,
+
+00:01:00.798 --> 00:01:03.549
+we see JPA here on line 24,
+
+00:01:03.549 --> 00:01:06.224
+H2 here on line 29,
+
+00:01:06.224 --> 00:01:08.424
+the Spring Bootstarter tests,
+
+00:01:08.424 --> 00:01:11.795
+and Spring Boot Starter web here on line 40.
+
+00:01:11.795 --> 00:01:16.040
+So the first two dependencies that you have to add in your palm file are
+
+00:01:16.040 --> 00:01:20.925
+shown here on lines 43 through 53.
+
+00:01:20.924 --> 00:01:24.239
+So this is the graphQL Spring Boot Starter,
+
+00:01:24.239 --> 00:01:26.905
+and the graphQL Java tools.
+
+00:01:26.905 --> 00:01:31.655
+There is one more dependency that you'll need to add for graphQL,
+
+00:01:31.655 --> 00:01:35.700
+and that's shown here on lines 55 through 59.
+
+00:01:35.700 --> 00:01:37.740
+Just like in our previous project,
+
+00:01:37.739 --> 00:01:41.289
+there's the data.SQL file that simply adds
+
+00:01:41.290 --> 00:01:45.500
+sample data to our location table in our H2 database.
+
+00:01:45.500 --> 00:01:48.750
+So we're adding five airport locations.
+
+00:01:48.750 --> 00:01:52.590
+On the application properties file, just like before,
+
+00:01:52.590 --> 00:01:54.240
+we can figure H2,
+
+00:01:54.239 --> 00:01:55.319
+we set the path,
+
+00:01:55.319 --> 00:01:57.434
+and we set the database URL.
+
+00:01:57.435 --> 00:02:01.125
+Now, notice here lines five through seven,
+
+00:02:01.125 --> 00:02:03.659
+this is where we can figure graphQL,
+
+00:02:03.659 --> 00:02:06.435
+specifically the mapping for the servlet,
+
+00:02:06.435 --> 00:02:10.574
+and we're enabling the servlet and we're enabling forms.
+
+00:02:10.574 --> 00:02:12.629
+Lines nine through 11,
+
+00:02:12.629 --> 00:02:16.310
+these are the configuration items for graphiQL.
+
+00:02:16.310 --> 00:02:19.175
+So here again, I'm enabling it,
+
+00:02:19.175 --> 00:02:22.385
+setting the endpoint, and setting the mapping.
+
+00:02:22.384 --> 00:02:25.829
+Next, let's look at schema creation.
+

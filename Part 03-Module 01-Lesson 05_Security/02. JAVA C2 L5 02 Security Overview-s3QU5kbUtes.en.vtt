@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.319 --> 00:00:09.525
+When allowing access to data via web services, security is important.
+
+00:00:09.525 --> 00:00:12.839
+We want to limit who can view or even update data.
+
+00:00:12.839 --> 00:00:15.990
+Only trusted individuals should have access.
+
+00:00:15.990 --> 00:00:18.734
+So how does web service security work?
+
+00:00:18.734 --> 00:00:21.719
+Let's use a cell phone as an example.
+
+00:00:21.719 --> 00:00:24.960
+In order to open your cell phone to call your friend,
+
+00:00:24.960 --> 00:00:28.200
+you have to unlock your phone by entering a pass code.
+
+00:00:28.199 --> 00:00:33.754
+The past code is like the key or the token used to secure a web service.
+
+00:00:33.755 --> 00:00:37.730
+Let's say your friend will not answer calls from random numbers,
+
+00:00:37.729 --> 00:00:41.344
+and she only answers your call because she knows it's you.
+
+00:00:41.344 --> 00:00:46.269
+You are able to call her because you had the key or token to unlock your phone.
+
+00:00:46.270 --> 00:00:49.760
+Web services that are secure behave in a similar manner.
+
+00:00:49.759 --> 00:00:53.644
+If an unsecured request is made to a web service to retrieve data.
+
+00:00:53.645 --> 00:00:59.880
+If that requests lacks the proper key or API token that request is rejected.
+

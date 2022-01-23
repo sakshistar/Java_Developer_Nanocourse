@@ -1,0 +1,124 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.149 --> 00:00:05.129
+You're familiar with web services.
+
+00:00:05.129 --> 00:00:09.039
+Well, APIs or application programming interfaces
+
+00:00:09.039 --> 00:00:12.699
+and microservices are evolutions of them.
+
+00:00:12.699 --> 00:00:18.355
+An API allows for data sharing between two different applications or systems,
+
+00:00:18.355 --> 00:00:21.024
+which sounds a lot like a web service.
+
+00:00:21.024 --> 00:00:25.794
+Well, what's the difference as both facilitate information sharing?
+
+00:00:25.795 --> 00:00:28.750
+APIs are more dynamic.
+
+00:00:28.750 --> 00:00:32.005
+Web services begin in the early 90's,
+
+00:00:32.005 --> 00:00:38.060
+but the complexities with SOAP-based web services led to REST-based APIs,
+
+00:00:38.060 --> 00:00:43.804
+which we will dig into more in the developing Restful APIs using Spring Boot section.
+
+00:00:43.804 --> 00:00:47.965
+Now, SOAP stands for Simple Object Access Protocol,
+
+00:00:47.965 --> 00:00:52.085
+and is a messaging protocol that uses XML to allow
+
+00:00:52.085 --> 00:00:56.960
+applications running on different systems or platforms to communicate.
+
+00:00:56.960 --> 00:01:02.005
+Now, API's are more lightweight and streamlined than a web service,
+
+00:01:02.005 --> 00:01:06.484
+as web services typically carry more overhead to work with them.
+
+00:01:06.484 --> 00:01:10.489
+APIs typically have a more lightweight architecture and are
+
+00:01:10.489 --> 00:01:14.989
+good for devices with limited bandwidth like mobile devices.
+
+00:01:14.989 --> 00:01:18.259
+Web services are often dependent on
+
+00:01:18.260 --> 00:01:22.805
+the SOAP protocol to send and receive data over a network,
+
+00:01:22.805 --> 00:01:25.735
+which is not a lightweight architecture.
+
+00:01:25.734 --> 00:01:29.250
+When comparing web services to APIs,
+
+00:01:29.250 --> 00:01:33.260
+the significance lies in the amount of work required by
+
+00:01:33.260 --> 00:01:37.835
+consumers and providers to package and unpackage the data.
+
+00:01:37.834 --> 00:01:39.504
+Think about it like this,
+
+00:01:39.504 --> 00:01:42.084
+all skyscrapers are buildings,
+
+00:01:42.084 --> 00:01:45.544
+but not all buildings are skyscrapers.
+
+00:01:45.545 --> 00:01:47.299
+In a similar way,
+
+00:01:47.299 --> 00:01:49.864
+all web services are APIs,
+
+00:01:49.864 --> 00:01:53.334
+but not all APIs are web services.
+
+00:01:53.334 --> 00:01:57.634
+Now, there's a new kid on the block called a microservice.
+
+00:01:57.635 --> 00:02:00.785
+Microservices are similar to APIs,
+
+00:02:00.784 --> 00:02:05.524
+but are fully contained individual components that communicate with each
+
+00:02:05.525 --> 00:02:10.909
+other in calling clients and are modeled around a specific business domain.
+
+00:02:10.909 --> 00:02:13.799
+For example, a restaurant may have
+
+00:02:13.800 --> 00:02:19.395
+a microservice that serves as the single source of truth for location information.
+
+00:02:19.395 --> 00:02:23.810
+Well, that location information is an individual component,
+
+00:02:23.810 --> 00:02:25.879
+all the way down to the database layer.
+
+00:02:25.879 --> 00:02:29.944
+Meaning the database only contains location data.
+
+00:02:29.944 --> 00:02:36.669
+Services for menu items and orders are separate individual components.
+
+00:02:36.669 --> 00:02:41.169
+Now, let's see a web service in action.
+

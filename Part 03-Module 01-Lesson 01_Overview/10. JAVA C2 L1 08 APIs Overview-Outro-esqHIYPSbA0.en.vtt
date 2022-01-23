@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.535
+Today you learned about web services.
+
+00:00:02.535 --> 00:00:06.855
+Web services are a way to share data between two disparate systems,
+
+00:00:06.855 --> 00:00:10.380
+essentially integrate two totally different systems,
+
+00:00:10.380 --> 00:00:13.395
+so that data can flow seamlessly between the two.
+
+00:00:13.394 --> 00:00:16.094
+You learned about the client and the server.
+
+00:00:16.094 --> 00:00:18.539
+The client makes a request for data,
+
+00:00:18.539 --> 00:00:22.589
+or information, and the server responds to that request.
+
+00:00:22.589 --> 00:00:25.679
+The means of communication between the two systems is
+
+00:00:25.679 --> 00:00:29.265
+via a standard web protocol like HTTP,
+
+00:00:29.265 --> 00:00:32.625
+or HTTPS over the World Wide Web,
+
+00:00:32.625 --> 00:00:36.765
+and it uses a common language like JSON or XML.
+
+00:00:36.765 --> 00:00:41.750
+You learned that web services promote usability and reusability,
+
+00:00:41.750 --> 00:00:45.200
+and we wrapped up with me explaining the differences between
+
+00:00:45.200 --> 00:00:49.135
+web services, APIs and microservices.
+
+00:00:49.134 --> 00:00:52.579
+APIs in microservices are more streamlined,
+
+00:00:52.579 --> 00:00:56.670
+and easier to work with than web services.
+

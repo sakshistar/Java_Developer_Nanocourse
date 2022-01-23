@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.810 --> 00:00:06.195
+There is a concept that you should be aware of
+
+00:00:06.195 --> 00:00:09.195
+when dealing with GraphQL. It's the schema.
+
+00:00:09.195 --> 00:00:14.669
+The GraphQL Schema defines the data points offered via an API.
+
+00:00:14.669 --> 00:00:17.730
+The schema contains the data types and
+
+00:00:17.730 --> 00:00:22.185
+relationships between them and a set of operations available.
+
+00:00:22.184 --> 00:00:27.390
+Things like queries where retrieving data and mutations for creating,
+
+00:00:27.390 --> 00:00:29.580
+updating, and deleting data.
+
+00:00:29.579 --> 00:00:31.829
+This is a sample schema.
+
+00:00:31.829 --> 00:00:36.239
+Notice, we identify the type which is location,
+
+00:00:36.240 --> 00:00:39.615
+we enter the different attributes for the location,
+
+00:00:39.615 --> 00:00:42.240
+ID, name, and address.
+
+00:00:42.240 --> 00:00:44.425
+Notice, in this middle section,
+
+00:00:44.424 --> 00:00:46.204
+we're adding the queries.
+
+00:00:46.204 --> 00:00:49.339
+So one query find all locations.
+
+00:00:49.340 --> 00:00:51.130
+In the last section,
+
+00:00:51.130 --> 00:00:53.270
+we're adding the mutations.
+
+00:00:53.270 --> 00:00:56.690
+So we create a new location or we delete
+
+00:00:56.689 --> 00:01:01.199
+an existing location or we update a location name.
+

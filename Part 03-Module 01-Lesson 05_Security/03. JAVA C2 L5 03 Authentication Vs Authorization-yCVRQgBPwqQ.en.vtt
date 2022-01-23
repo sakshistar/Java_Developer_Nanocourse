@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.530 --> 00:00:04.875
+Let's discuss a few common web service security principles.
+
+00:00:04.875 --> 00:00:07.484
+Authentication and authorization.
+
+00:00:07.485 --> 00:00:11.070
+Authentication is about validating the identity of
+
+00:00:11.070 --> 00:00:15.855
+a client that is attempting to call a web service that access is secure data.
+
+00:00:15.855 --> 00:00:22.005
+Typically, identity is validated with user credentials such as username and password.
+
+00:00:22.004 --> 00:00:26.794
+Authentication is simply like unlocking your phone with your pass code.
+
+00:00:26.795 --> 00:00:28.610
+This step says yes,
+
+00:00:28.609 --> 00:00:31.399
+I have access to what's on this phone.
+
+00:00:31.399 --> 00:00:35.539
+Authorization is the next step after authentication.
+
+00:00:35.539 --> 00:00:37.644
+Once the client is authenticated,
+
+00:00:37.645 --> 00:00:39.355
+they have proven who they are,
+
+00:00:39.354 --> 00:00:41.390
+what do they have access to.
+
+00:00:41.390 --> 00:00:44.130
+For example, what data can they view?
+
+00:00:44.130 --> 00:00:46.155
+Are they allowed to change that data?
+
+00:00:46.155 --> 00:00:51.859
+Etc. This concept is similar to sharing a Google Doc with collaborators.
+
+00:00:51.859 --> 00:00:55.219
+Once you share that document with a person via email and they
+
+00:00:55.219 --> 00:00:58.984
+use that email to access the document, what can they do?
+
+00:00:58.984 --> 00:01:02.969
+Can they just view the data or can they edit it too?
+

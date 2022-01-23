@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.160
+Hello, I'm Keisha Williams.
+
+00:00:02.160 --> 00:00:03.525
+Welcome to my course,
+
+00:00:03.524 --> 00:00:05.775
+web services and APIs.
+
+00:00:05.775 --> 00:00:10.980
+Today I will teach you about GraphQL which is a query language for APIs.
+
+00:00:10.980 --> 00:00:15.330
+We will start with an overview of GraphQL and the GraphQL schema.
+
+00:00:15.330 --> 00:00:21.469
+Then, I will show you how to build a GraphQL server that exposes APIs to create,
+
+00:00:21.469 --> 00:00:23.459
+read, update, and delete.
+
+00:00:23.460 --> 00:00:25.664
+I will teach you about resolvers,
+
+00:00:25.664 --> 00:00:29.519
+queries, mutators, and how to handle errors.
+
+00:00:29.519 --> 00:00:31.905
+We will wrap up with GraphQL,
+
+00:00:31.905 --> 00:00:34.740
+a web application that allows you to execute
+
+00:00:34.740 --> 00:00:38.280
+queries and mutations against a GraphQL server.
+
+00:00:38.280 --> 00:00:40.689
+So let's get started.
+

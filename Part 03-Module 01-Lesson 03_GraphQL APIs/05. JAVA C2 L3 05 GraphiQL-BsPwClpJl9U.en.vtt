@@ -1,0 +1,13 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.940 --> 00:00:05.174
+A tool called GraphiQL is
+
+00:00:05.174 --> 00:00:10.094
+a simple web app that is able to communicate with any GraphQL server,
+
+00:00:10.095 --> 00:00:14.650
+and it executes queries and mutations against it.
+

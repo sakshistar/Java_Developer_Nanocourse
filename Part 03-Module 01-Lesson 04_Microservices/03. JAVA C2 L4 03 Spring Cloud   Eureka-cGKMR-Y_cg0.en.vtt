@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.149 --> 00:00:08.429
+An important part in microservices development is to first have a service registry.
+
+00:00:08.429 --> 00:00:13.769
+We talked about how Netflix migrated from a monolith to a microservices approach.
+
+00:00:13.769 --> 00:00:18.824
+They created a registration server called Eureka which they made open source.
+
+00:00:18.824 --> 00:00:22.219
+Spring has incorporated it into Spring Cloud,
+
+00:00:22.219 --> 00:00:25.954
+making it even easier to stand up a Eureka server.
+
+00:00:25.954 --> 00:00:28.549
+Spring cloud is built on top of
+
+00:00:28.550 --> 00:00:33.350
+Spring Boot and utilizes the typical parent and starter palms.
+
+00:00:33.350 --> 00:00:37.189
+In layman's terms, Netflix Eureka service is responsible
+
+00:00:37.189 --> 00:00:40.969
+for the registration and discovery of microservices.
+
+00:00:40.969 --> 00:00:45.619
+Every micro service will be registered in the server so that Eureka will
+
+00:00:45.619 --> 00:00:50.539
+know all the client applications running on each port and IP address.
+
+00:00:50.539 --> 00:00:55.204
+This way we don't need to know the IP address of each service we create.
+
+00:00:55.204 --> 00:00:59.179
+We just need to know their names and the discovery does the rest.
+
+00:00:59.179 --> 00:01:03.259
+Eureka consists of a server and a client component.
+
+00:01:03.259 --> 00:01:06.155
+The server component will be the registry in which
+
+00:01:06.155 --> 00:01:09.620
+all the microservices register their availability.
+
+00:01:09.620 --> 00:01:14.300
+The microservices use the Eureka client to register.
+
+00:01:14.299 --> 00:01:16.864
+Once the registration is complete,
+
+00:01:16.864 --> 00:01:20.179
+it notifies the server of its existence.
+
+00:01:20.180 --> 00:01:24.155
+In our example we'll implement two microservices;
+
+00:01:24.155 --> 00:01:27.835
+one a service registry that's the Eureka server,
+
+00:01:27.834 --> 00:01:34.618
+and a rest service which registers itself as a Eureka client, the item service
+

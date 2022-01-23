@@ -1,0 +1,319 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.770 --> 00:00:09.300
+Start by cloning the code using the link in the course notes section.
+
+00:00:09.300 --> 00:00:14.250
+I've opened the project in intelli-G and I've navigated to the Maven pom file.
+
+00:00:14.250 --> 00:00:16.649
+Let's take a look at this pom file.
+
+00:00:16.649 --> 00:00:20.129
+We see a few common dependencies that we've used before,
+
+00:00:20.129 --> 00:00:23.324
+Data JPA, starter web,
+
+00:00:23.324 --> 00:00:27.044
+H2 for the in-memory database, starter test.
+
+00:00:27.045 --> 00:00:30.855
+Scroll down and look at lines 41 through 44.
+
+00:00:30.855 --> 00:00:35.250
+Here, we are including the Spring Boot starter security dependency,
+
+00:00:35.250 --> 00:00:38.820
+so that we can use Spring security in this RESTful API.
+
+00:00:38.820 --> 00:00:41.225
+There's also a testing component.
+
+00:00:41.225 --> 00:00:44.530
+You see that here on lines 45 through 49,
+
+00:00:44.530 --> 00:00:46.594
+the Spring Security test.
+
+00:00:46.594 --> 00:00:49.295
+So let's talk about this RESTful API.
+
+00:00:49.295 --> 00:00:53.300
+It's the location example that we've used in previous lessons.
+
+00:00:53.299 --> 00:00:55.894
+So there is a location entity,
+
+00:00:55.895 --> 00:00:58.850
+meaning that there is a location table in
+
+00:00:58.850 --> 00:01:02.285
+the H2 in-memory database that maps to this entity.
+
+00:01:02.284 --> 00:01:04.683
+A location simply has an ID,
+
+00:01:04.683 --> 00:01:06.920
+a name, and an address.
+
+00:01:06.920 --> 00:01:09.680
+There is a location controller.
+
+00:01:09.680 --> 00:01:12.215
+In this controller on line 23,
+
+00:01:12.215 --> 00:01:13.340
+there is a method called,
+
+00:01:13.340 --> 00:01:18.320
+"get all locations", and it's mapped to the slash locations path.
+
+00:01:18.319 --> 00:01:23.944
+This method simply calls out to the location service to get a list of locations.
+
+00:01:23.944 --> 00:01:26.554
+So let's take a look at the location service.
+
+00:01:26.555 --> 00:01:28.340
+Here, the location service,
+
+00:01:28.340 --> 00:01:31.600
+the getLocation's method here on line 16,
+
+00:01:31.599 --> 00:01:33.109
+simply calls out to
+
+00:01:33.109 --> 00:01:36.590
+the location repository findAll method and
+
+00:01:36.590 --> 00:01:40.370
+that simply returns all of the locations found in the data base.
+
+00:01:40.370 --> 00:01:43.265
+Here's the location repository.
+
+00:01:43.265 --> 00:01:45.700
+It extends the crud repository.
+
+00:01:45.700 --> 00:01:48.810
+The application properties file in this file,
+
+00:01:48.810 --> 00:01:50.344
+it's what we've seen before.
+
+00:01:50.344 --> 00:01:53.045
+We are enabling the H2 console,
+
+00:01:53.045 --> 00:01:58.700
+setting the path to slash H2 and using the location tracker,
+
+00:01:58.700 --> 00:02:00.775
+name, and the data source URL.
+
+00:02:00.775 --> 00:02:02.859
+There is a data.frame SQL file,
+
+00:02:02.859 --> 00:02:06.349
+that insert sample records into a location table.
+
+00:02:06.349 --> 00:02:08.659
+Now, let's talk about security.
+
+00:02:08.659 --> 00:02:11.599
+Navigate to Spring Security config,
+
+00:02:11.599 --> 00:02:14.634
+and you can find that under the config folder.
+
+00:02:14.634 --> 00:02:19.219
+We can do security configurations entirely in a Java class,
+
+00:02:19.219 --> 00:02:24.935
+by creating a config class that extends web security configure adapter.
+
+00:02:24.935 --> 00:02:26.689
+So let's take a look at this.
+
+00:02:26.689 --> 00:02:28.319
+So here, on line 14,
+
+00:02:28.319 --> 00:02:33.215
+we have at configuration annotation just indicating that it's a configuration.
+
+00:02:33.215 --> 00:02:37.745
+On line 15, we have at enable web security annotation.
+
+00:02:37.745 --> 00:02:41.944
+This annotation enables Spring Security's web security support,
+
+00:02:41.944 --> 00:02:46.025
+and by extending web security configure adapter,
+
+00:02:46.025 --> 00:02:48.860
+we are able to override a couple of its methods to
+
+00:02:48.860 --> 00:02:52.430
+set some specifics of the web security configuration.
+
+00:02:52.430 --> 00:02:57.545
+So the first method that we override is found here on line 18,
+
+00:02:57.544 --> 00:02:59.449
+it's the configure method.
+
+00:02:59.449 --> 00:03:01.599
+So let's talk about what we're doing.
+
+00:03:01.599 --> 00:03:03.314
+Here on line 20,
+
+00:03:03.314 --> 00:03:06.280
+we are disabling the CSRF feature.
+
+00:03:06.280 --> 00:03:08.960
+So this is the cross-site request forgery,
+
+00:03:08.960 --> 00:03:14.710
+and I've included more information on C SRF in the course notes section.
+
+00:03:14.710 --> 00:03:18.689
+On lines 21 through 23, here,
+
+00:03:18.689 --> 00:03:22.849
+we're authorizing requests, any request authenticated.
+
+00:03:22.849 --> 00:03:24.340
+So simply this means,
+
+00:03:24.340 --> 00:03:29.045
+all requests to the API requires authentication.
+
+00:03:29.044 --> 00:03:32.289
+Then here on lines 24 and 25,
+
+00:03:32.289 --> 00:03:36.530
+we are allowing users to use HTTP basic authentication,
+
+00:03:36.530 --> 00:03:39.604
+so basic off, that's what we talked about before.
+
+00:03:39.604 --> 00:03:43.019
+Let's scroll down to the configure global method,
+
+00:03:43.020 --> 00:03:44.510
+that's the next method.
+
+00:03:44.509 --> 00:03:47.870
+In this method, I'm creating an in-memory user,
+
+00:03:47.870 --> 00:03:50.645
+and that's what we'll use for authentication.
+
+00:03:50.645 --> 00:03:54.390
+Online 32, I'm setting the username as admin,
+
+00:03:54.389 --> 00:03:58.579
+on line 33, I'm setting the username is password,
+
+00:03:58.580 --> 00:04:02.000
+and I'm giving this just a simple role of user.
+
+00:04:02.000 --> 00:04:04.234
+Notice here on line 38,
+
+00:04:04.234 --> 00:04:06.110
+there is an encoder method,
+
+00:04:06.110 --> 00:04:08.855
+that I'm using to encode the password.
+
+00:04:08.854 --> 00:04:11.929
+Remember that whenever you use basic off,
+
+00:04:11.930 --> 00:04:14.969
+the password is base 64 encoded,
+
+00:04:14.969 --> 00:04:16.699
+so the method helps me do that.
+
+00:04:16.699 --> 00:04:19.370
+So I've launched the application, is already running,
+
+00:04:19.370 --> 00:04:23.870
+Tomcat started on port 8080 and it started the security application.
+
+00:04:23.870 --> 00:04:28.129
+So let's test out our REST API using Postman.
+
+00:04:28.129 --> 00:04:30.110
+So let's navigate there.
+
+00:04:30.110 --> 00:04:38.629
+So the URL is simply localhost:8080/locations and let's click send to see what happens.
+
+00:04:38.629 --> 00:04:42.829
+So we're not able to retrieve a list of locations and the error message
+
+00:04:42.829 --> 00:04:47.435
+comes back as unauthorized with a status code of 401.
+
+00:04:47.435 --> 00:04:51.949
+So this is because we've enabled Spring Security and we are expecting
+
+00:04:51.949 --> 00:04:58.474
+all clients sending request to send in the username and password for authentication.
+
+00:04:58.475 --> 00:05:02.945
+So now, let's look at an authorized requests.
+
+00:05:02.944 --> 00:05:04.863
+So here in postman,
+
+00:05:04.863 --> 00:05:11.969
+I'm doing a get to the same URL localhost:8080locations, but now,
+
+00:05:11.970 --> 00:05:14.220
+for the authorization type,
+
+00:05:14.220 --> 00:05:16.230
+I'm using basic auth,
+
+00:05:16.230 --> 00:05:17.775
+and in the header,
+
+00:05:17.774 --> 00:05:21.069
+I'm just putting application.JSON.
+
+00:05:21.069 --> 00:05:24.014
+Notice here on the authorization tab,
+
+00:05:24.014 --> 00:05:30.774
+there's also a username called admin and then the password is password.
+
+00:05:30.774 --> 00:05:35.114
+So now, when we make this request to the API,
+
+00:05:35.115 --> 00:05:38.074
+we're sending in the basic off information.
+
+00:05:38.074 --> 00:05:40.909
+So this request should be approved.
+
+00:05:40.910 --> 00:05:42.380
+So let's click send,
+
+00:05:42.379 --> 00:05:44.689
+and we should see a list of locations.
+
+00:05:44.689 --> 00:05:47.180
+Yes. So there we have it.
+
+00:05:47.180 --> 00:05:52.280
+We've added basic auth using Springs Security to secure our API,
+
+00:05:52.279 --> 00:05:57.989
+to make sure only authorized users can retrieve back a list of locations.
+

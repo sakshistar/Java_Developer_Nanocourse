@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.500 --> 00:00:06.105
+A Web service is a way to share data between two disparate systems,
+
+00:00:06.105 --> 00:00:09.945
+or a way to retrieve data to display in your application.
+
+00:00:09.945 --> 00:00:13.665
+Web services are designed to communicate with other programs
+
+00:00:13.664 --> 00:00:17.280
+or applications rather than directly with users,
+
+00:00:17.280 --> 00:00:23.470
+and are often used to integrate systems allowing data to flow seamlessly between the two.
+

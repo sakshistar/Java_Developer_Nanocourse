@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.055
+Hello, I'm Kesha Williams.
+
+00:00:02.055 --> 00:00:03.285
+Welcome to my course,
+
+00:00:03.285 --> 00:00:05.550
+Web Services and APIs.
+
+00:00:05.549 --> 00:00:10.754
+Today, I'm going to teach you about securing your REST APIs using Spring Security.
+
+00:00:10.755 --> 00:00:13.575
+I will first give you an overview of security,
+
+00:00:13.574 --> 00:00:18.015
+and cover security concepts like authorization and authentication.
+
+00:00:18.015 --> 00:00:21.330
+Next, I will teach you about basic authentication,
+
+00:00:21.329 --> 00:00:23.594
+sometimes simplified as Basic Auth.
+
+00:00:23.594 --> 00:00:26.549
+It is a common way to secure APIs.
+
+00:00:26.550 --> 00:00:29.699
+Lastly, we will integrate Spring Security into
+
+00:00:29.699 --> 00:00:35.085
+a REST API to allow only authorized users to retrieve data from it.
+
+00:00:35.085 --> 00:00:37.750
+So let's get started.
+

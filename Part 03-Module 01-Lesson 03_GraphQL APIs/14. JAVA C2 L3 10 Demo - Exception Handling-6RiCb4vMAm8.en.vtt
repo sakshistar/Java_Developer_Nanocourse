@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.865
+Let's talk more about exception handling.
+
+00:00:02.865 --> 00:00:04.710
+What if a user calls
+
+00:00:04.710 --> 00:00:11.035
+the updateLocationName method and parses in the ID of a location that doesn't exist?
+
+00:00:11.035 --> 00:00:13.455
+Notice here on line 32,
+
+00:00:13.455 --> 00:00:19.245
+the findById method of the location repository returns an optional location.
+
+00:00:19.245 --> 00:00:23.100
+So that means a location may or may not be returned.
+
+00:00:23.100 --> 00:00:27.690
+On line 34, I'm testing to see if a location was returned.
+
+00:00:27.690 --> 00:00:29.940
+If a location wasn't returned,
+
+00:00:29.940 --> 00:00:34.590
+then I'm throwing this custom exception called LocationNotFoundException.
+
+00:00:34.590 --> 00:00:37.710
+So let's talk more about custom exceptions.
+
+00:00:37.710 --> 00:00:41.620
+Navigate to LocationNotFoundException.java.
+
+00:00:41.619 --> 00:00:47.224
+The first step to create a custom exception is to extend RuntimeException,
+
+00:00:47.225 --> 00:00:52.554
+and then to make it specific to GraphQL, implement GraphQLError.
+
+00:00:52.554 --> 00:00:56.585
+GraphQLError provides a field called extensions.
+
+00:00:56.585 --> 00:00:58.939
+This allows you to pass additional data to
+
+00:00:58.939 --> 00:01:01.939
+the error object that is sent back to the client.
+
+00:01:01.939 --> 00:01:08.149
+In this case, I'm parsing the ID here of the invalid location.
+
+00:01:08.150 --> 00:01:10.090
+So notice on line 17,
+
+00:01:10.090 --> 00:01:14.310
+I'm adding to the extensions map, the invalidLocationId.
+
+00:01:14.310 --> 00:01:17.240
+So when the message goes back to the client,
+
+00:01:17.239 --> 00:01:22.879
+it will have a generic error message that's defined here, location not found.
+
+00:01:22.879 --> 00:01:27.049
+It will also have the ID of the specific location not found.
+
+00:01:27.049 --> 00:01:30.420
+Now, let's look at testing everything out.
+

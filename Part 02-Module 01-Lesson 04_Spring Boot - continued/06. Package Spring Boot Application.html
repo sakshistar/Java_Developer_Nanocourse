@@ -1,0 +1,454 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Package Spring Boot Application</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Spring Boot - continued</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Spring Boot Exception.html">01. Spring Boot Exception</a>
+    </li>
+    <li class="">
+      <a href="02. Spring Boot Exception- @ControllerAdvise + @ExceptionHandler.html">02. Spring Boot Exception- @ControllerAdvise + @ExceptionHandler</a>
+    </li>
+    <li class="">
+      <a href="03. Spring Boot Exception - SimpleMappingExceptionResolver.html">03. Spring Boot Exception - SimpleMappingExceptionResolver</a>
+    </li>
+    <li class="">
+      <a href="04. Spring Boot Exception Handling - Summary.html">04. Spring Boot Exception Handling - Summary</a>
+    </li>
+    <li class="">
+      <a href="05. WebSocket.html">05. WebSocket</a>
+    </li>
+    <li class="">
+      <a href="06. Package Spring Boot Application.html">06. Package Spring Boot Application</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Package Spring Boot Application</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>035ND C01 L04 A23 PACKAGE SPRINGBOOT</p></h3>
+  <video controls>
+  <source src="06. 035ND C01 L04 A23 PACKAGE SPRINGBOOT-pZjQGAgKfdY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. 035ND C01 L04 A23 PACKAGE SPRINGBOOT-pZjQGAgKfdY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A24 WHY PACKAGE</p></h3>
+  <video controls>
+  <source src="06. 035ND C01 L04 A24 WHY PACKAGE-a2E7T5UEBVY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. 035ND C01 L04 A24 WHY PACKAGE-a2E7T5UEBVY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="intellij-maven-plugin">IntelliJ Maven Plugin</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A25 INTELLIJ MAVEN PLUGIN</p></h3>
+  <video controls>
+  <source src="06. 035ND C01 L04 A25 INTELLIJ MAVEN PLUGIN-fd1XCpV9EoI.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. 035ND C01 L04 A25 INTELLIJ MAVEN PLUGIN-fd1XCpV9EoI.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="spring-boot-packages-type">Spring boot packages type</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A26 SPRINGBOOT PACKAGE TYPES</p></h3>
+  <video controls>
+  <source src="06. 035ND C01 L04 A26 SPRINGBOOT PACKAGE TYPES-6X-RQ8ryXoc.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. 035ND C01 L04 A26 SPRINGBOOT PACKAGE TYPES-6X-RQ8ryXoc.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>There are two types of packaging options available for a spring boot application. One is to pack it into a jar file, another option is to pack it into a war file.</p>
+<p>.jar files: The .jar files contain libraries, resources and accessories files like property files.</p>
+<p>.war files: The war file contains the web application that can be deployed on any servlet/jsp container. The .war file contains jsp, html, javascript and other files necessary for the development of web applications.</p>
+<p>By default, spring boot application will be packed into jar file. If want to pack as war file. You need to add the following attributes in pom.xml.</p>
+<pre><code>&lt;packaging&gt;war&lt;/packaging&gt;
+&lt;name&gt;packing&lt;/name&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Spring Boot packing Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following is true about a SNAPSHOT build?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899897" id="rbk1">
+        <label for="rbk1"><p>SNAPSHOT is a special version that indicates a current development copy.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899897" id="rbk2">
+        <label for="rbk2"><p>Unlike regular versions, Maven checks for a new SNAPSHOT version in a remote repository for every build.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899897" id="rbk3">
+        <label for="rbk3"><p>All of the above.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="899897" id="rbk4">
+        <label for="rbk4"><p>None of the above.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    All of the above.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="spring-boot-packing">Spring Boot Packing</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A27 SPRINGBOOT PACKAGING</p></h3>
+  <video controls>
+  <source src="06. 035ND C01 L04 A27 SPRINGBOOT PACKAGING-b2BXo3ueifs.mp4" type="video/mp4">
+
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Spring Boot maven package quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following plugin runs the JUnit unit tests and creates test reports?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899903" id="rbk1">
+        <label for="rbk1"><p>surefile</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899903" id="rbk2">
+        <label for="rbk2"><p>jar</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899903" id="rbk3">
+        <label for="rbk3"><p>war</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="899903" id="rbk4">
+        <label for="rbk4"><p>antrun</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    surefile
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="run-artifact">Run artifact</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A28 RUN ARTIFACTS</p></h3>
+  <video controls>
+  <source src="06. 035ND C01 L04 A28 RUN ARTIFACTS-kO3Ia8wkWJA.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. 035ND C01 L04 A28 RUN ARTIFACTS-kO3Ia8wkWJA.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Try packing yourself</p></h3>
+  <div>
+  <p>Please try to package the websocket application yourself, and see if you can run it.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="running-artifact-with-flags">Running artifact with flags</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A29 ARTIFACT WITH FLAGS</p></h3>
+  <video controls>
+  <source src="06. 035ND C01 L04 A29 ARTIFACT WITH FLAGS-omEH8O7nZtM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. 035ND C01 L04 A29 ARTIFACT WITH FLAGS-omEH8O7nZtM.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Maven Command Quiz 1</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following commands can be used to look at the default configuration of the super POM?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899908" id="rbk1">
+        <label for="rbk1"><p>mvn help:effective-pom</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899908" id="rbk2">
+        <label for="rbk2"><p>mvn help</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899908" id="rbk3">
+        <label for="rbk3"><p>mvn help:super-pom</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="899908" id="rbk4">
+        <label for="rbk4"><p>None of the above.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    mvn help:effective-pom
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Maven lifeCycle Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following phase in maven life cycle processes the generated files from the test code file compilation?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="899907" id="rbk1">
+        <label for="rbk1"><p>generate-test-sources</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="899907" id="rbk2">
+        <label for="rbk2"><p>process-test-sources</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="899907" id="rbk3">
+        <label for="rbk3"><p>process-test-classes</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="899907" id="rbk4">
+        <label for="rbk4"><p>None of the above.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    process-test-classes
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A30 LESSON SUMMARY</p></h3>
+  <video controls>
+  <source src="06. 035ND C01 L04 A30 LESSON SUMMARY-jRfMphSig8s.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. 035ND C01 L04 A30 LESSON SUMMARY-jRfMphSig8s.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>035ND C01 L04 A31 COURSE SUMMARY</p></h3>
+  <video controls>
+  <source src="06. 035ND C01 L04 A31 COURSE SUMMARY-Ex-fQ2GxmSU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. 035ND C01 L04 A31 COURSE SUMMARY-Ex-fQ2GxmSU.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Package Spring Boot Application')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

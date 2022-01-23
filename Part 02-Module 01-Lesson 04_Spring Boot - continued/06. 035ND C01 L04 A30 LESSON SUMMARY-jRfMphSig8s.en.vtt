@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.180
+Good job. This is the end of this lesson.
+
+00:00:03.180 --> 00:00:07.095
+We have covered foreign topics in this lesson.
+
+00:00:07.094 --> 00:00:10.695
+We have covered Spring Boot exception handling.
+
+00:00:10.695 --> 00:00:14.550
+We implement a web socket application.
+
+00:00:14.550 --> 00:00:19.875
+We packed the application with Maven, a Maven plugin.
+
+00:00:19.875 --> 00:00:23.789
+With all the knowledge you have acquired so far,
+
+00:00:23.789 --> 00:00:28.739
+you should have no problem putting a Spring Boot application from scratch,
+
+00:00:28.739 --> 00:00:32.085
+funding and adding necessary dependencies,
+
+00:00:32.085 --> 00:00:35.759
+adding a unit test, enable swap,
+
+00:00:35.759 --> 00:00:39.554
+adding validation, handle exceptions,
+
+00:00:39.554 --> 00:00:44.384
+and packing the application to be production ready.
+
+00:00:44.384 --> 00:00:53.459
+We saw that your application should be robust and stable. Good luck.
+

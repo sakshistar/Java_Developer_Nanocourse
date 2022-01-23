@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.379 --> 00:00:07.950
+Let's look at testing an API in real time.
+
+00:00:07.950 --> 00:00:11.775
+So we're going to test a publicly available API.
+
+00:00:11.775 --> 00:00:13.259
+In order to do that,
+
+00:00:13.259 --> 00:00:15.419
+I use a tool called Postman.
+
+00:00:15.419 --> 00:00:19.530
+You can go to www.getPostman.com,
+
+00:00:19.530 --> 00:00:21.750
+click on get started,
+
+00:00:21.750 --> 00:00:26.594
+and then download and install the version for your operating system.
+
+00:00:26.594 --> 00:00:30.089
+I've already downloaded and installed Postman.
+
+00:00:30.089 --> 00:00:36.073
+I have the URL to the publicly available API and it's a joke API,
+
+00:00:36.073 --> 00:00:41.149
+so it returns random jokes related to computer programming.
+
+00:00:41.149 --> 00:00:45.754
+So I'm going to paste that URL here and I'm going to issue
+
+00:00:45.755 --> 00:00:52.585
+a get request and all I need to do to test this API is to click the send button here.
+
+00:00:52.585 --> 00:00:59.465
+Notice the response is a joke and it comes back in JSON.
+
+00:00:59.465 --> 00:01:03.710
+So in this case, this API uses JSON and not XML.
+
+00:01:03.710 --> 00:01:06.879
+So JSON is simply a key value pair.
+
+00:01:06.879 --> 00:01:09.209
+Here, it returns the id,
+
+00:01:09.209 --> 00:01:11.714
+it returns the type of joke,
+
+00:01:11.715 --> 00:01:13.993
+it returns the setup,
+
+00:01:13.993 --> 00:01:16.980
+and it returns the punchline.
+
+00:01:16.980 --> 00:01:19.734
+If you click send again,
+
+00:01:19.734 --> 00:01:25.265
+it invokes that API and it returns another random joke.
+
+00:01:25.265 --> 00:01:27.439
+Again, we see an id,
+
+00:01:27.439 --> 00:01:31.084
+the type, and the setup, and the punchline.
+
+00:01:31.084 --> 00:01:32.269
+So this one says,
+
+00:01:32.269 --> 00:01:35.409
+why did the scarecrow win an award?
+
+00:01:35.409 --> 00:01:41.314
+The punchline is because he was outstanding in his field, very funny.
+
+00:01:41.314 --> 00:01:48.504
+So Postman is a useful tool for testing APIs and we will use it throughout this course.
+
+00:01:48.504 --> 00:01:54.929
+There you have it. You've seen how to test an API using Postman.
+

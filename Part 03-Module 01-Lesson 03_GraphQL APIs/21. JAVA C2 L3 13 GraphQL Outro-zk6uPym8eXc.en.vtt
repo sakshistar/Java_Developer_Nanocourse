@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.490
+Today, you learned about GraphQL,
+
+00:00:02.490 --> 00:00:04.800
+a query language for APIs.
+
+00:00:04.799 --> 00:00:10.634
+We discussed the GraphQL schema which defines the datapoints offered via an API.
+
+00:00:10.634 --> 00:00:15.300
+Don't forget the schema contains the datatypes and relationships between them,
+
+00:00:15.300 --> 00:00:17.685
+and the set of operations available.
+
+00:00:17.684 --> 00:00:22.890
+Next, we saw the importance of using Resolvers for queries and Mutators.
+
+00:00:22.890 --> 00:00:26.670
+Resolvers allow Spring to automatically detect and call
+
+00:00:26.670 --> 00:00:31.635
+the right method in response to one of the GraphQL queries or mutations.
+
+00:00:31.635 --> 00:00:36.079
+We wrapped up with learning about a useful tool called GraphiQL that
+
+00:00:36.079 --> 00:00:40.655
+allows you to execute queries and mutations against a GraphQL server.
+
+00:00:40.655 --> 00:00:46.469
+Next, I will teach you about developing microservices using Spring Boot.
+

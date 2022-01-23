@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.084
+Hello, I'm Kisha Williams.
+
+00:00:02.084 --> 00:00:03.419
+Welcome to my course,
+
+00:00:03.419 --> 00:00:05.669
+web services and APIs.
+
+00:00:05.669 --> 00:00:10.650
+Today, I'm going to teach you about developing microservices using spring boot.
+
+00:00:10.650 --> 00:00:14.054
+When developing microservices, there are several steps.
+
+00:00:14.054 --> 00:00:18.179
+First, I will show you how to create a registry service that will allow
+
+00:00:18.179 --> 00:00:22.995
+your services to be registered and found by clients that need to call them.
+
+00:00:22.995 --> 00:00:28.770
+Next, I will teach you how to create a REST API using spring data REST,
+
+00:00:28.769 --> 00:00:33.015
+which generates REST APIs from a spring data repository.
+
+00:00:33.015 --> 00:00:36.570
+Next, we wrap up with testing the microservice.
+
+00:00:36.570 --> 00:00:38.799
+So let's get started.
+
