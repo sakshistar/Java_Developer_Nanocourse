@@ -1,0 +1,229 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.785
+The next thing that I am going to take you through is your e-commerce application.
+
+00:00:04.785 --> 00:00:09.719
+Let's start with adding some tests or some JUnits to our e-commerce application.
+
+00:00:09.720 --> 00:00:11.189
+For the sake of convenience,
+
+00:00:11.189 --> 00:00:14.115
+I have already downloaded the project on my local,
+
+00:00:14.115 --> 00:00:18.629
+and you can do that by cloning the Git repository,
+
+00:00:18.629 --> 00:00:22.140
+but I'm expecting that you already have that in your local.
+
+00:00:22.140 --> 00:00:26.144
+So the first thing that I would do is I would go to
+
+00:00:26.144 --> 00:00:33.269
+the Maven repository and look for the dependencies that I need.
+
+00:00:33.270 --> 00:00:37.800
+So I'm going to add the JUnit dependency,
+
+00:00:37.799 --> 00:00:42.489
+and this is the first thing that shows up,
+
+00:00:49.579 --> 00:00:54.379
+and I'm going to go and add that to my POM.
+
+00:00:57.509 --> 00:01:02.409
+Now that we have added the JUnit dependency in our POM,
+
+00:01:02.409 --> 00:01:08.469
+I'm going to go ahead and create a test utils under test.
+
+00:01:08.469 --> 00:01:11.644
+So here under this package,
+
+00:01:11.644 --> 00:01:17.944
+I'm going to create another test class called TestUtils.
+
+00:01:17.944 --> 00:01:24.459
+Now, the purpose of this test class is just to be able to help us to inject object.
+
+00:01:24.459 --> 00:01:32.625
+So I'm going to create a static void message,
+
+00:01:32.625 --> 00:01:35.349
+let me call this injectObjects,
+
+00:01:36.469 --> 00:01:41.465
+and what I want to pass here is a target,
+
+00:01:41.465 --> 00:01:45.965
+a fieldName, and an object that I'm going to inject.
+
+00:01:45.965 --> 00:01:49.924
+So here we go.
+
+00:01:49.924 --> 00:01:57.364
+I'm going to add an object called target and a fieldName.
+
+00:01:57.364 --> 00:01:59.659
+Now I'm going to write this method.
+
+00:01:59.659 --> 00:02:02.509
+I'm going to first ask for a flag.
+
+00:02:02.510 --> 00:02:05.675
+I would call it wasPrivate,
+
+00:02:05.674 --> 00:02:09.250
+which I'm going to make it as false,
+
+00:02:09.250 --> 00:02:18.594
+and what I'm going to do next is I'm going to call getClass on the target,
+
+00:02:18.594 --> 00:02:23.784
+and then I'm going to call getDeclaredField.
+
+00:02:23.784 --> 00:02:26.664
+So there are two of these methods,
+
+00:02:26.664 --> 00:02:30.834
+one returns the array of field and the second one returns just the field.
+
+00:02:30.835 --> 00:02:35.960
+I'm going to use this, and I'm going to inject what I'm going to pass fieldName into it.
+
+00:02:35.960 --> 00:02:44.485
+Now, what this will do is this is going to give me an object of field through reflection.
+
+00:02:44.485 --> 00:02:49.235
+So let me introduce a local variable first of all,
+
+00:02:49.235 --> 00:02:52.920
+and I'm going to call it f for now.
+
+00:02:52.919 --> 00:02:56.784
+In real-life situation, you would not really use f,
+
+00:02:56.784 --> 00:02:58.444
+you will use something more meaningful.
+
+00:02:58.444 --> 00:03:04.340
+But let me also look at why IntelliJ is complaining.
+
+00:03:04.340 --> 00:03:06.860
+It says, "Add exception to message signature."
+
+00:03:06.860 --> 00:03:09.390
+Now, IntelliJ again comes in very handy.
+
+00:03:09.389 --> 00:03:10.654
+It gives you two options,
+
+00:03:10.655 --> 00:03:14.944
+either to add exception to method signature or surround it with try/catch.
+
+00:03:14.944 --> 00:03:17.704
+So I'm going to surround it with try/catch here,
+
+00:03:17.705 --> 00:03:23.820
+and the method that it throws is no such field exception, which is fine.
+
+00:03:23.819 --> 00:03:31.069
+Now, the next thing that I'm going to do is I'm going to check if f is accessible or not.
+
+00:03:31.069 --> 00:03:37.479
+So I'm going to call isAccessible method on it.
+
+00:03:37.479 --> 00:03:41.019
+If it is not accessible,
+
+00:03:41.710 --> 00:03:48.620
+I'm going to setAccessible to
+
+00:03:48.620 --> 00:03:58.860
+true and I would change wasPrivate to true.
+
+00:03:59.330 --> 00:04:02.495
+So let me explain what I did over here.
+
+00:04:02.495 --> 00:04:08.330
+What I did here was I checked whether the field that I got was it private,
+
+00:04:08.330 --> 00:04:10.730
+or accessibility is just going to make sure
+
+00:04:10.729 --> 00:04:13.504
+that it's just going to find out if it is private or not.
+
+00:04:13.504 --> 00:04:16.024
+So in terms of the documentation, it says,
+
+00:04:16.024 --> 00:04:19.984
+"Get the value of accessible flag of the object,
+
+00:04:19.985 --> 00:04:23.050
+and return the value of objects flag."
+
+00:04:23.050 --> 00:04:28.000
+So pretty much if it is a private field,
+
+00:04:28.000 --> 00:04:31.910
+it's going to say accessible false.
+
+00:04:31.910 --> 00:04:34.040
+If it is not a private field,
+
+00:04:34.040 --> 00:04:36.905
+then it will say accessible true.
+
+00:04:36.904 --> 00:04:40.099
+So those were the accessibility of
+
+00:04:40.100 --> 00:04:44.090
+variables which you must have learned in the very beginning of the course.
+
+00:04:44.089 --> 00:04:53.009
+So here what I did was I just took the value of isAccessible from f that I just write,
+
+00:04:53.009 --> 00:05:00.949
+and I set it to true if it is not accessible and I changed wasPrivate to true.
+
+00:05:00.949 --> 00:05:07.094
+Now the next thing I'm going to do is I'm going to set target,
+
+00:05:07.095 --> 00:05:15.040
+and I'm going to set a target with the object that I want to inject.
+
+00:05:15.889 --> 00:05:23.365
+I'm going to again use the IntelliJ feature, add catch.
+
+00:05:23.365 --> 00:05:28.590
+So that caught illegal access exception,
+
+00:05:29.149 --> 00:05:34.685
+and the next thing that I'm going to do is I'm going to check if it was private.
+
+00:05:34.685 --> 00:05:39.649
+So the flag would have been set by the time it reaches this piece of the code,
+
+00:05:39.649 --> 00:05:43.919
+and I'm going to set the accessibility on it again.
+
+00:05:46.220 --> 00:05:49.040
+That's pretty much it.
+
+00:05:49.040 --> 00:05:52.745
+So this is my complete test utils,
+
+00:05:52.745 --> 00:05:55.954
+and next thing that I'm going to do is I'm going to write
+
+00:05:55.954 --> 00:05:59.865
+some test for user control class,
+
+00:05:59.865 --> 00:06:07.139
+and we'll learn how to write test class for Spring Boot application.
+

@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.674
+Now, let's talk about the next topic which is code coverage.
+
+00:00:03.674 --> 00:00:08.099
+It is important that your test tests as much of your code as possible.
+
+00:00:08.099 --> 00:00:13.455
+So the amount of code your test tests is known as the code coverage.
+
+00:00:13.455 --> 00:00:18.030
+So let's say that you have 20 lines of code that you have written in
+
+00:00:18.030 --> 00:00:24.030
+a particular class and you have written tests which only touch five lines,
+
+00:00:24.030 --> 00:00:27.210
+what is the percentage of code coverage here?
+
+00:00:27.210 --> 00:00:31.245
+The code coverage in that case is 25 percent.
+
+00:00:31.245 --> 00:00:37.234
+I'm going to use this test class to find the coverage.
+
+00:00:37.234 --> 00:00:40.960
+So this is the option, run with coverage.
+
+00:00:40.960 --> 00:00:48.259
+Okay. Now this white section is the important section here.
+
+00:00:48.259 --> 00:00:54.059
+I'm going to expand this so that you can take a good look at this, all ready.
+
+00:00:54.060 --> 00:00:59.743
+So this tells us that 33 percent of the classes,
+
+00:00:59.743 --> 00:01:01.859
+10 percent in the method,
+
+00:01:01.859 --> 00:01:05.554
+and 2 percent in the lines is the code coverage.
+
+00:01:05.555 --> 00:01:09.260
+So it helps us to identify what is the percentage
+
+00:01:09.260 --> 00:01:13.010
+of code coverage you have at every level.
+
+00:01:13.010 --> 00:01:18.125
+Now in your e-commerce application final test,
+
+00:01:18.125 --> 00:01:22.340
+you would be asked to provide 80 percent of the code coverage,
+
+00:01:22.340 --> 00:01:27.750
+and that will be a very good exercise for you to complete and find the code coverage.
+

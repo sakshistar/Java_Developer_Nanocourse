@@ -1,0 +1,94 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.240
+Now, that you understand JUnit, and mocks,
+
+00:00:03.240 --> 00:00:05.325
+and stubbing more clearly,
+
+00:00:05.325 --> 00:00:09.120
+let's look into a few good practices.
+
+00:00:09.119 --> 00:00:11.924
+So here are the best practices.
+
+00:00:11.925 --> 00:00:16.380
+The first thing that we kept discussing through the tutorial was readability.
+
+00:00:16.379 --> 00:00:17.774
+By readability, I mean,
+
+00:00:17.774 --> 00:00:21.404
+readability of the test case or the test method.
+
+00:00:21.405 --> 00:00:27.539
+The second one that I would like you to focus is on real logic-failure tests.
+
+00:00:27.539 --> 00:00:31.079
+There is no point in writing a lot of tests that don't do anything.
+
+00:00:31.079 --> 00:00:33.809
+A lot of people or developers are
+
+00:00:33.810 --> 00:00:36.765
+seen to write a lot of tests that don't really mean much.
+
+00:00:36.765 --> 00:00:38.355
+A lot of times, they test,
+
+00:00:38.354 --> 00:00:42.599
+they end up writing tests for framework's functionalities,
+
+00:00:42.600 --> 00:00:45.484
+and that is not required because frameworks like spring and
+
+00:00:45.484 --> 00:00:49.100
+others that are developed are thoroughly tested already.
+
+00:00:49.100 --> 00:00:53.570
+So you should try to completely remove the framework or
+
+00:00:53.570 --> 00:01:00.875
+configuration part from the actual test which is the functionality of your tests.
+
+00:01:00.875 --> 00:01:05.750
+One of the great things that you could do is write unit tests
+
+00:01:05.750 --> 00:01:10.625
+for one code at a time and avoid unnecessary assertions.
+
+00:01:10.625 --> 00:01:15.079
+You should always keep them independent and not have
+
+00:01:15.079 --> 00:01:21.655
+one test rely on another or have very much dependency on each other.
+
+00:01:21.655 --> 00:01:23.909
+Another thing that you should do is,
+
+00:01:23.909 --> 00:01:28.265
+you should mock out all external services and states because that helps you
+
+00:01:28.265 --> 00:01:30.650
+reduce the amount of time it takes for test to
+
+00:01:30.650 --> 00:01:33.925
+run and still test the functionality of your code.
+
+00:01:33.924 --> 00:01:35.879
+Like I had already mentioned,
+
+00:01:35.879 --> 00:01:38.060
+don't unit-test configuration settings
+
+00:01:38.060 --> 00:01:40.310
+because they're not really required most of the time.
+
+00:01:40.310 --> 00:01:41.540
+But if they are required,
+
+00:01:41.540 --> 00:01:43.650
+make sure that you add them.
+

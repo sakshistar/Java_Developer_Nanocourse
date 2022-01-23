@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.559
+Let's try to use some logs on the UserController class.
+
+00:00:04.559 --> 00:00:07.889
+Now, the first thing that I would do for that is I would get
+
+00:00:07.889 --> 00:00:12.105
+the Maven dependencies that are needed for SLR 4G.
+
+00:00:12.105 --> 00:00:17.054
+So let me just look for that.
+
+00:00:17.054 --> 00:00:19.980
+Okay. Now I see a lot of
+
+00:00:19.980 --> 00:00:23.490
+these dependencies and the one that I'm going to use is this one which is
+
+00:00:23.489 --> 00:00:29.820
+SLF4G 12 Binding and I'm going to use this one since it has more usages.
+
+00:00:29.820 --> 00:00:35.414
+I just copied it and I'm going to paste that in my pom.
+
+00:00:35.414 --> 00:00:40.740
+So here's my dependency and I'm going to remove the scope from test so that it can be
+
+00:00:40.740 --> 00:00:45.935
+used in the other classes as well and is not confined to just the test class.
+
+00:00:45.935 --> 00:00:50.375
+Now let's try to add some logs into the UserController class.
+
+00:00:50.375 --> 00:00:56.585
+First, we'll start with identifying a place where I can add some logs.
+
+00:00:56.585 --> 00:00:59.195
+So before I do that,
+
+00:00:59.195 --> 00:01:09.319
+let me get the object which is log and I'll check out all the options that are available.
+
+00:01:09.319 --> 00:01:12.679
+So you can see all the different levels of
+
+00:01:12.680 --> 00:01:16.984
+logging available under the object and which is debug,
+
+00:01:16.983 --> 00:01:22.804
+error, info, and trace as well worn.
+
+00:01:22.805 --> 00:01:32.490
+So this info is something that you would use a lot in your application.
+
+00:01:32.489 --> 00:01:37.009
+This is like your eyes and ears for the application.
+
+00:01:37.010 --> 00:01:42.350
+So let's say that I want to print the get username so
+
+00:01:42.349 --> 00:01:48.094
+that every time username is set into the user object I know what is that value.
+
+00:01:48.094 --> 00:01:52.700
+So I'm going to create a log line and let me
+
+00:01:52.700 --> 00:01:58.105
+move it to here so that I can see what's going on here.
+
+00:01:58.105 --> 00:02:01.385
+I would say get user request.
+
+00:02:01.385 --> 00:02:05.795
+Okay. I'm going to say something in simple English,
+
+00:02:05.795 --> 00:02:10.840
+User name set with this value,
+
+00:02:10.840 --> 00:02:13.759
+because that's what happened at line 53.
+
+00:02:13.759 --> 00:02:20.644
+Great. So this is how we added one info logline into the application.
+
+00:02:20.645 --> 00:02:23.555
+So when this application runs,
+
+00:02:23.555 --> 00:02:27.405
+every time this particular piece of code is encountered,
+
+00:02:27.405 --> 00:02:32.074
+this line of code with the value for get username is going to be printed.
+
+00:02:32.074 --> 00:02:39.274
+So you would know what was the username set at every single time, createUser was called.
+
+00:02:39.275 --> 00:02:41.539
+Now that's how you would add logging to
+
+00:02:41.539 --> 00:02:44.389
+the e-commerce application that we created together.
+
+00:02:44.389 --> 00:02:48.319
+Feel free to add as many logs as you think you want to
+
+00:02:48.319 --> 00:02:52.739
+add into the application and start to look at the log files.
+

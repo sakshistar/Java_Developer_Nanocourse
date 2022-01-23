@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.615
+Now, let's look at some other options that are available over here.
+
+00:00:03.615 --> 00:00:05.955
+So here, you have the Settings,
+
+00:00:05.955 --> 00:00:11.280
+and something that I do challenge you to go and
+
+00:00:11.279 --> 00:00:17.669
+explore is the Add Data option using Monitor and Forward.
+
+00:00:17.670 --> 00:00:21.960
+So with Forward, what you would be able to do is you'll be
+
+00:00:21.960 --> 00:00:26.505
+able to create either a universal forwarder or a heavy forwarder.
+
+00:00:26.504 --> 00:00:30.989
+A universal forwarder is something that is going to be good for a single instance.
+
+00:00:30.989 --> 00:00:35.625
+However, heavy forwarder is what you would use in an enterprise application.
+
+00:00:35.625 --> 00:00:38.024
+It will forward the raw data into Splunk.
+
+00:00:38.024 --> 00:00:43.475
+So there are details over here which is just going to be Select Forwarders.
+
+00:00:43.475 --> 00:00:45.950
+You go ahead and select a source.
+
+00:00:45.950 --> 00:00:48.320
+All you have to do is you have to follow
+
+00:00:48.320 --> 00:00:52.730
+the instructions which are very extremely easy to use.
+
+00:00:52.729 --> 00:00:56.269
+I would also link the instructions for how to
+
+00:00:56.270 --> 00:01:01.040
+configure a heavy forwarder and a universal forwarder,
+
+00:01:01.039 --> 00:01:05.614
+and that will help you practice how to forward data into Splunk as well.
+
+00:01:05.614 --> 00:01:12.030
+So that would be extremely good exercise to pursue as well.
+

@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.000
+If you weren't able to write at least one test case so far,
+
+00:00:03.000 --> 00:00:06.330
+by taking an example from the previous test case we covered so far,
+
+00:00:06.330 --> 00:00:08.370
+then you are doing a good job already.
+
+00:00:08.369 --> 00:00:09.839
+If you haven't in more than one,
+
+00:00:09.839 --> 00:00:11.789
+then you're doing an excellent job.
+
+00:00:11.789 --> 00:00:16.140
+I'm going to now discuss a few more advanced features of Junit,
+
+00:00:16.140 --> 00:00:18.330
+that will take you from a beginner's level,
+
+00:00:18.329 --> 00:00:20.039
+to the next intermediary level.
+
+00:00:20.039 --> 00:00:21.910
+Let's take a look at this site.
+
+00:00:21.910 --> 00:00:24.620
+This is the official site for Junits,
+
+00:00:24.620 --> 00:00:26.615
+and I have it open here.
+
+00:00:26.614 --> 00:00:29.989
+So on this side, we get a comprehensive list of
+
+00:00:29.989 --> 00:00:34.100
+all the methods that the Junit assert class contains,
+
+00:00:34.100 --> 00:00:39.410
+and you can go into the details and read what each of these methods do for you.
+
+00:00:39.409 --> 00:00:44.659
+This will help you to find the methods that you can use,
+
+00:00:44.659 --> 00:00:49.099
+or keep these methods in mind so that next time you're trying to write a Junit,
+
+00:00:49.100 --> 00:00:53.579
+you know which methods you're going to call in advance.
+

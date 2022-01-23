@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.769
+Let's also look into the next technology which is Jenkins.
+
+00:00:04.769 --> 00:00:09.379
+I am going to list this official website of Jenkins for you,
+
+00:00:09.380 --> 00:00:12.580
+and make it available for you under the video.
+
+00:00:12.580 --> 00:00:19.905
+Let's look at why Jenkins happens to be the most popular CICD tool.
+
+00:00:19.905 --> 00:00:25.230
+So Jenkins happens to be an extremely popular tool for CICD,
+
+00:00:25.230 --> 00:00:31.710
+and that is because of the fact that a lot of companies use Jenkins.
+
+00:00:31.710 --> 00:00:38.160
+It also has a lot of tutorials and a lot of help available online.
+
+00:00:38.159 --> 00:00:43.699
+Apart from that, it has a lot of plugins available that make it extremely
+
+00:00:43.700 --> 00:00:46.580
+configurable with different types of pipeline that you're
+
+00:00:46.579 --> 00:00:50.059
+trying to create by using different technologies.
+
+00:00:50.060 --> 00:00:52.840
+So for example, for the sake of this lesson,
+
+00:00:52.840 --> 00:00:57.155
+if I am trying to build a pipeline using Docker, Maven,
+
+00:00:57.155 --> 00:01:03.575
+and AWS, you could have a node application with Kubernetes or other technologies,
+
+00:01:03.575 --> 00:01:05.825
+and you'll be able to deploy it in Azure.
+
+00:01:05.825 --> 00:01:11.390
+Jenkins plays very well with any combination that you choose.
+

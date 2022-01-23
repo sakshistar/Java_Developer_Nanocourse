@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.195
+Let's talk about, how do we bring authentication and authorization together?
+
+00:00:06.195 --> 00:00:11.445
+How do we securely store user credentials and allow them to login?
+
+00:00:11.445 --> 00:00:15.780
+Now, authentication and authorization go hand in hand.
+
+00:00:15.779 --> 00:00:19.785
+You can't give authorization to unauthenticated users.
+
+00:00:19.785 --> 00:00:23.870
+Generally, authorization is controlled entirely by the server.
+
+00:00:23.870 --> 00:00:27.320
+Users cannot grant themselves rights.
+
+00:00:27.320 --> 00:00:31.940
+It's easy to talk about an authentication token giving authorization,
+
+00:00:31.940 --> 00:00:35.855
+since authorization follows authentication.
+
+00:00:35.854 --> 00:00:41.314
+By that, authorization is a process by which sensitive piece of software
+
+00:00:41.314 --> 00:00:47.489
+allows access and operations that depend on the identity of the requesting user.
+

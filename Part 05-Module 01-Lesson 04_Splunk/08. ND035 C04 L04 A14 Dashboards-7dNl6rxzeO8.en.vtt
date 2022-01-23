@@ -1,0 +1,184 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.625
+Let's learn how to create a dashboard.
+
+00:00:02.625 --> 00:00:09.990
+Let's say that I want to use the previous query and I want to run this,
+
+00:00:09.990 --> 00:00:16.605
+or maybe I want to get a graph which tells me the top HHID or the count every one hour.
+
+00:00:16.605 --> 00:00:20.135
+So this is how the search query is going to look like.
+
+00:00:20.135 --> 00:00:25.859
+I want to create a panel out of it or I want to create a dashboard out of it.
+
+00:00:25.859 --> 00:00:27.480
+So let's create that.
+
+00:00:27.480 --> 00:00:30.074
+So I clicked on Create new dashboard.
+
+00:00:30.074 --> 00:00:32.310
+The title is optional.
+
+00:00:32.310 --> 00:00:35.260
+I usually would add some meaningful title,
+
+00:00:35.259 --> 00:00:37.799
+but for now, I'm just going to add test.
+
+00:00:37.799 --> 00:00:41.375
+There are certain permissions available private or shared in the app.
+
+00:00:41.375 --> 00:00:42.679
+If you keep it private,
+
+00:00:42.679 --> 00:00:44.149
+this is only available for you.
+
+00:00:44.149 --> 00:00:49.420
+I would usually use this for testing personally or I would just share it in the app.
+
+00:00:49.420 --> 00:00:50.960
+I'm going to keep it private for now,
+
+00:00:50.960 --> 00:00:54.094
+and I'm going to create a test dashboard.
+
+00:00:54.094 --> 00:00:56.119
+It says, this is already available.
+
+00:00:56.119 --> 00:01:02.134
+So I'm going to create a test1 and create a test1 dashboard.
+
+00:01:02.134 --> 00:01:04.625
+So I have the frame for a dashboard.
+
+00:01:04.625 --> 00:01:08.004
+What I need to create now is an panel.
+
+00:01:08.004 --> 00:01:14.449
+Now, let's get used to this particular screen and click on New.
+
+00:01:14.450 --> 00:01:19.250
+So over here, you would see that there are various forms of dat,
+
+00:01:19.250 --> 00:01:21.765
+charts available like, line chart,
+
+00:01:21.765 --> 00:01:25.079
+area, column, bar, pie, scatter.
+
+00:01:25.079 --> 00:01:29.329
+Well, you're free to go ahead and explore each of them.
+
+00:01:29.329 --> 00:01:33.650
+I would recommend that you at least try the line and pie chart,
+
+00:01:33.650 --> 00:01:36.065
+which are used a lot in the industry.
+
+00:01:36.064 --> 00:01:40.504
+For right now, I'm going to just stick to a line chart and I'm going to add
+
+00:01:40.504 --> 00:01:43.069
+the search string which was the string that
+
+00:01:43.069 --> 00:01:45.709
+we had before which we have run the search on.
+
+00:01:45.709 --> 00:01:49.984
+You can also try to implement it or run it from here.
+
+00:01:49.984 --> 00:01:55.039
+Then I'm going to use a bucket on it which will help me
+
+00:01:55.040 --> 00:02:02.140
+to find out the data at every hour.
+
+00:02:02.689 --> 00:02:13.180
+So I'm going to use a default_time which has a time of indexing in it.
+
+00:02:13.240 --> 00:02:17.165
+I'm going to add one hour to it.
+
+00:02:17.164 --> 00:02:19.264
+This is my line chart.
+
+00:02:19.264 --> 00:02:22.269
+Let me see if everything looks good.
+
+00:02:22.270 --> 00:02:27.159
+Line chart with HHID,
+
+00:02:27.590 --> 00:02:31.680
+and I would add this to dashboard.
+
+00:02:31.680 --> 00:02:38.175
+So this graph is what we created by adding that panel.
+
+00:02:38.175 --> 00:02:40.930
+As you see, this as a line chart and these are
+
+00:02:40.930 --> 00:02:44.580
+the HHIDs that are available with the counts.
+
+00:02:44.580 --> 00:02:47.450
+So I did not add anything to the title.
+
+00:02:47.449 --> 00:02:52.459
+You're free to add some title here. That's it.
+
+00:02:52.460 --> 00:02:54.939
+So this is how you would create a dashboard,
+
+00:02:54.939 --> 00:02:57.889
+do not forget to save it for your future use.
+
+00:02:57.889 --> 00:03:00.244
+Otherwise, this is going to not be available.
+
+00:03:00.245 --> 00:03:03.094
+You also get an option to export the PDF,
+
+00:03:03.094 --> 00:03:09.319
+which we'll take the screenshot or the state at this point in time,
+
+00:03:09.319 --> 00:03:12.875
+which you can send to people that required this information.
+
+00:03:12.875 --> 00:03:17.764
+One more thing that might come in handy is being able to share these dashboards.
+
+00:03:17.764 --> 00:03:23.769
+All you do is either share on the app or you can just export it,
+
+00:03:23.770 --> 00:03:28.265
+or you can also change permissions and make it available to them.
+
+00:03:28.264 --> 00:03:30.904
+So that's all about dashboards.
+
+00:03:30.905 --> 00:03:34.115
+But I encourage you to go ahead and create
+
+00:03:34.115 --> 00:03:37.820
+more dashboards and use different charts so that
+
+00:03:37.819 --> 00:03:44.689
+you can see what it will look like when a pie chart or a bar graph or something else,
+
+00:03:44.689 --> 00:03:47.585
+how does it look and does make any sense to you,
+
+00:03:47.585 --> 00:03:51.469
+and you can then put them right next to each other and make
+
+00:03:51.469 --> 00:03:56.859
+some extremely nice analytics dashboard for yourself.
+

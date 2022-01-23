@@ -1,0 +1,139 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.695
+If you've followed along so far,
+
+00:00:01.695 --> 00:00:04.815
+you might remember that I'd mentioned JWT as
+
+00:00:04.815 --> 00:00:08.940
+one of the other ways to authenticate yourself online.
+
+00:00:08.939 --> 00:00:12.089
+We had established that in this course,
+
+00:00:12.089 --> 00:00:18.149
+we will learn how to implement JWT authentication on Spring Boot Applications.
+
+00:00:18.149 --> 00:00:23.429
+So this is where we learn more about what is JWT.
+
+00:00:23.429 --> 00:00:27.600
+If you go online and search for the definition of JWT,
+
+00:00:27.600 --> 00:00:29.923
+you will come across various definitions,
+
+00:00:29.923 --> 00:00:34.725
+including it's a means of representing claims to be transferred between two parties.
+
+00:00:34.725 --> 00:00:37.410
+Is a JSON based open standard for creating
+
+00:00:37.409 --> 00:00:40.329
+access tokens that assert some number of claims,
+
+00:00:40.329 --> 00:00:42.074
+and so on and so forth.
+
+00:00:42.075 --> 00:00:46.125
+What it really means is that JWT,
+
+00:00:46.125 --> 00:00:49.820
+which stands for JSON Web Token is
+
+00:00:49.820 --> 00:00:55.534
+an access token mechanism that assorts some sort of authorization coin.
+
+00:00:55.534 --> 00:01:02.164
+Let's look a little deeper into what the structure of a JSON Web Token looks like.
+
+00:01:02.164 --> 00:01:08.105
+A JSON Web Token structure consists of three parts: A header,
+
+00:01:08.105 --> 00:01:10.549
+a payload, and a signature.
+
+00:01:10.549 --> 00:01:16.099
+So it will be divided with periods and the structure would
+
+00:01:16.099 --> 00:01:22.084
+appear like header period, payload period, signature.
+
+00:01:22.084 --> 00:01:25.059
+You might wonder what the header contains.
+
+00:01:25.060 --> 00:01:27.784
+This is what the header contains.
+
+00:01:27.784 --> 00:01:29.914
+It contains the type of token.
+
+00:01:29.915 --> 00:01:35.275
+In our case, it is JWT and a signing algorithm.
+
+00:01:35.275 --> 00:01:38.780
+An algorithm here that I have written in the example,
+
+00:01:38.780 --> 00:01:40.984
+each is a 256.
+
+00:01:40.984 --> 00:01:45.620
+In the payload, we would add the claims.
+
+00:01:45.620 --> 00:01:50.730
+For example, the sub here is 1234,
+
+00:01:50.730 --> 00:01:52.635
+the name is my name,
+
+00:01:52.635 --> 00:01:55.690
+and the admin is true.
+
+00:01:56.060 --> 00:02:02.010
+The last part that it has is a signature.
+
+00:02:02.010 --> 00:02:09.025
+What the signature contains is the encoded header, the encoded payload,
+
+00:02:09.025 --> 00:02:13.060
+in our case this is base64Url encoding,
+
+00:02:13.060 --> 00:02:20.580
+a secret, the algorithm specified in the header and we signed that.
+
+00:02:20.580 --> 00:02:27.790
+The reason why we choose JWT over SWT which is Simple Web Token or SAML
+
+00:02:27.789 --> 00:02:34.674
+which is Security Assertion Markup Language Tokens is that JWT is more compact than SAML,
+
+00:02:34.675 --> 00:02:37.540
+which makes it a good choice because it's going to be
+
+00:02:37.539 --> 00:02:40.539
+passed in HTML and HTTP environments.
+
+00:02:40.539 --> 00:02:46.525
+JSON parsers are common in programming languages because they have direct object mapping,
+
+00:02:46.525 --> 00:02:50.629
+whereas XML don't have a natural document to object mapping.
+
+00:02:50.629 --> 00:03:01.069
+JWT is also use at Internet scale so it has an ease of client-side processing using JWT,
+
+00:03:01.069 --> 00:03:05.250
+which is use over multiple platforms, like mobile.
+
+00:03:05.250 --> 00:03:07.870
+Which is why for this particular course,
+
+00:03:07.870 --> 00:03:09.469
+we have chosen JWT.
+
+00:03:09.469 --> 00:03:16.979
+We will next look at the implementation of JWT in a real Spring Boot Application.
+

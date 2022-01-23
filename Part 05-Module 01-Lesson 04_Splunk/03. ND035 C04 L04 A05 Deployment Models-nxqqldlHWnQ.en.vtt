@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.794
+So let's look at the deployment model for Splunk.
+
+00:00:03.794 --> 00:00:08.955
+Let's say that these are the sources from where we can gather data.
+
+00:00:08.955 --> 00:00:11.910
+So this is where all the raw data comes from.
+
+00:00:11.910 --> 00:00:14.294
+We have something called a forwarder,
+
+00:00:14.294 --> 00:00:16.214
+which gets a raw data,
+
+00:00:16.214 --> 00:00:21.859
+and then that is used by the indexer to index the data,
+
+00:00:21.859 --> 00:00:27.780
+and that is pulled by the search heads when they are queried from
+
+00:00:27.780 --> 00:00:31.385
+all the different graphical user interfaces
+
+00:00:31.385 --> 00:00:36.170
+or they can be queried even without using graphical user interfaces.
+
+00:00:36.170 --> 00:00:39.469
+I will explain this in the next slide in more detail.
+
+00:00:39.469 --> 00:00:42.405
+So like I mentioned, search head,
+
+00:00:42.405 --> 00:00:45.079
+what it does is it provides you
+
+00:00:45.079 --> 00:00:49.969
+with a response to the request that you're trying to search.
+
+00:00:49.969 --> 00:00:55.225
+The indexer converts a forwarders raw data into something called events.
+
+00:00:55.225 --> 00:00:57.484
+Now, this is a Splunk terminology.
+
+00:00:57.484 --> 00:01:01.174
+Then it indexes into something called a bucket.
+
+00:01:01.174 --> 00:01:05.469
+It's nothing but a space or a bucket.
+
+00:01:05.469 --> 00:01:09.215
+Then we have a forwarder which can go to and fro.
+
+00:01:09.215 --> 00:01:11.495
+There are two types of forwarders,
+
+00:01:11.495 --> 00:01:13.609
+universal as well as heavy.
+
+00:01:13.609 --> 00:01:17.329
+So let's look a little more detailed about this.
+
+00:01:17.329 --> 00:01:23.030
+This is something that is available on the Splunk official website.
+
+00:01:23.030 --> 00:01:26.284
+So this describes the inputs,
+
+00:01:26.284 --> 00:01:29.810
+and then that go into the parsing queue.
+
+00:01:29.810 --> 00:01:32.225
+So this is the process of parsing,
+
+00:01:32.224 --> 00:01:36.799
+which is then indexed from the queue to the pipeline,
+
+00:01:36.799 --> 00:01:38.914
+and then it's searched.
+
+00:01:38.915 --> 00:01:42.390
+So this is where the search actually happens.
+

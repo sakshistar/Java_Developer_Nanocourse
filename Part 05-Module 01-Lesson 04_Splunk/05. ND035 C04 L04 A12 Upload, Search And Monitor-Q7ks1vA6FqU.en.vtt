@@ -1,0 +1,244 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.269
+So I'm going to go back to the console where I can add data and I'll click select file.
+
+00:00:06.269 --> 00:00:11.910
+It's in my downloads I would just add this as a first file.
+
+00:00:11.910 --> 00:00:19.019
+Here I have clicked Next and that gives me some timestamps,
+
+00:00:19.019 --> 00:00:22.350
+some other fields that I chose,
+
+00:00:22.350 --> 00:00:26.410
+and I can now click on Next.
+
+00:00:26.410 --> 00:00:28.539
+In terms of the input settings,
+
+00:00:28.539 --> 00:00:33.365
+I'm going to stick to the default and I would stick to the host field default as well.
+
+00:00:33.365 --> 00:00:35.390
+I'm not going to create a new index,
+
+00:00:35.390 --> 00:00:40.265
+but in enterprise application you might choose to use some new index.
+
+00:00:40.265 --> 00:00:43.250
+I will review this and I will click done.
+
+00:00:43.250 --> 00:00:47.659
+So now, what it does is it uploads the CSV file.
+
+00:00:47.659 --> 00:00:51.949
+So this gives us a detailed explanation
+
+00:00:51.950 --> 00:00:58.540
+of the process being finished and now it will allow me to search,
+
+00:00:58.539 --> 00:01:05.554
+run graphs, and do all reporting or alerting that I want to do here.
+
+00:01:05.555 --> 00:01:09.515
+Let's take a moment here to understand what's happening here.
+
+00:01:09.515 --> 00:01:15.780
+So there is three options available on the right side which is smart mode,
+
+00:01:15.780 --> 00:01:17.375
+fast mode, and verbose mode.
+
+00:01:17.375 --> 00:01:19.340
+If I choose the verbose mode,
+
+00:01:19.340 --> 00:01:22.804
+it will give a very detailed or heavy
+
+00:01:22.804 --> 00:01:28.159
+or completely in-depth details of the data that is available.
+
+00:01:28.159 --> 00:01:32.854
+I'm going to choose to go with smart mode, so here.
+
+00:01:32.855 --> 00:01:36.680
+So let's take a look at one of the records here.
+
+00:01:36.680 --> 00:01:41.910
+So here you have all the selected fields,
+
+00:01:41.909 --> 00:01:44.534
+details, and the event.
+
+00:01:44.534 --> 00:01:50.194
+So this is our event and the event has these fields available to you.
+
+00:01:50.194 --> 00:01:53.159
+The time is in a separate section,
+
+00:01:53.159 --> 00:01:55.829
+and these are the defaults available to us,
+
+00:01:55.829 --> 00:01:58.829
+and you see the index is main.
+
+00:01:58.829 --> 00:02:04.349
+So here by default when I clicked on searching,
+
+00:02:04.349 --> 00:02:08.234
+it created this auto search for me,
+
+00:02:08.235 --> 00:02:14.450
+which provides the source which is available at the very bottom as well.
+
+00:02:14.449 --> 00:02:21.094
+If you look at this this is the source and the source type, the host information.
+
+00:02:21.094 --> 00:02:26.215
+These are the three fields that are available to us here.
+
+00:02:26.215 --> 00:02:30.545
+So let's look a little more at this screen.
+
+00:02:30.544 --> 00:02:33.199
+These fields that you see on the side,
+
+00:02:33.199 --> 00:02:36.454
+these fall under the category of metadata.
+
+00:02:36.455 --> 00:02:40.115
+What metadata means is that it's the data about the data.
+
+00:02:40.115 --> 00:02:43.275
+So what is the host, source,
+
+00:02:43.275 --> 00:02:47.730
+source type, these will be the metadata,
+
+00:02:47.729 --> 00:02:52.474
+and the green bars that you see tell us
+
+00:02:52.474 --> 00:02:57.049
+that these are the places or in time where some data is available.
+
+00:02:57.050 --> 00:03:00.740
+So you can just click on those parts of
+
+00:03:00.740 --> 00:03:05.195
+the graph and be directed to that particular instance of time.
+
+00:03:05.194 --> 00:03:08.734
+So you have reference to that data at this point in time.
+
+00:03:08.735 --> 00:03:11.735
+The other part that you can take a look at is
+
+00:03:11.735 --> 00:03:15.230
+this menu which provides you with presets for time.
+
+00:03:15.229 --> 00:03:21.840
+So you'll be able to see relative options like last 15 minutes,
+
+00:03:21.840 --> 00:03:23.435
+today, week to date.
+
+00:03:23.435 --> 00:03:26.240
+So these are the various options that are available for you,
+
+00:03:26.240 --> 00:03:29.735
+together with real-time options which are self-explanatory,
+
+00:03:29.735 --> 00:03:34.000
+and you might want to check these other options as well.
+
+00:03:34.000 --> 00:03:36.449
+Now, if it says real-time,
+
+00:03:36.449 --> 00:03:38.629
+there's nothing really real time.
+
+00:03:38.629 --> 00:03:43.269
+There is always going to be some amount of buffer when you get the data,
+
+00:03:43.270 --> 00:03:45.094
+but it's still loading.
+
+00:03:45.094 --> 00:03:51.240
+But this is very good Splunk is still very good at showing near real-time data.
+
+00:03:51.240 --> 00:03:54.215
+Now, don't forget to click on
+
+00:03:54.215 --> 00:03:57.289
+Apply button when you go to the relative of section because a lot of
+
+00:03:57.289 --> 00:04:00.139
+time I have seen myself clicking
+
+00:04:00.139 --> 00:04:02.029
+the numbers or adding the numbers on waiting
+
+00:04:02.030 --> 00:04:04.384
+on some results to show without clicking Apply button.
+
+00:04:04.384 --> 00:04:08.750
+So this is all the data that you can see over here.
+
+00:04:08.750 --> 00:04:14.175
+Now, how would you search data in Splunk?
+
+00:04:14.175 --> 00:04:20.370
+So you would use SPL or Splunk Processing Language in order to query over here,
+
+00:04:20.370 --> 00:04:26.435
+and you can have any of these fields that are available to search.
+
+00:04:26.435 --> 00:04:29.735
+Another option to take a look at is extract new fields.
+
+00:04:29.735 --> 00:04:34.100
+I would encourage you to use this and play around with this.
+
+00:04:34.100 --> 00:04:37.160
+What you would do with this is you would click on
+
+00:04:37.160 --> 00:04:41.045
+that extract fields and then check one of the options.
+
+00:04:41.045 --> 00:04:43.790
+I'm going to try to just extract one field.
+
+00:04:43.790 --> 00:04:46.790
+So I'm going to go back and click on extract new fields.
+
+00:04:46.790 --> 00:04:55.840
+Here I have this particular data set and I have chosen regular expression, select fields,
+
+00:04:55.839 --> 00:05:05.759
+and I'm going to extract expression.
+
+00:05:06.050 --> 00:05:17.040
+So here it will point out all of the raw data that had 046612,
+
+00:05:17.040 --> 00:05:22.115
+and I can go ahead and save it for later or not.
+
+00:05:22.115 --> 00:05:27.500
+So here this was one example of extracting additional fields.
+
+00:05:27.500 --> 00:05:30.649
+This would be more meaningful if you have real data where you can
+
+00:05:30.649 --> 00:05:34.654
+run real queries and you can run some field extractions.
+
+00:05:34.654 --> 00:05:38.809
+The next part that I'm going to discuss is how you
+
+00:05:38.810 --> 00:05:44.519
+run SPL and how you're going to fetch data using SPL.
+

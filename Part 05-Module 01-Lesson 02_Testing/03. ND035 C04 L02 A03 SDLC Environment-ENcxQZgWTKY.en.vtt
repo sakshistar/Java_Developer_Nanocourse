@@ -1,0 +1,145 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.379
+The next part that I'm going to talk about is environments.
+
+00:00:04.379 --> 00:00:06.915
+What I mean by this is that,
+
+00:00:06.915 --> 00:00:09.179
+when you develop your project,
+
+00:00:09.179 --> 00:00:12.044
+you would not go ahead and deploy
+
+00:00:12.044 --> 00:00:15.884
+the develop solution into the production environment directly.
+
+00:00:15.884 --> 00:00:19.440
+What the production environment means is,
+
+00:00:19.440 --> 00:00:24.060
+let's say that you go www.udacity.com.
+
+00:00:24.059 --> 00:00:33.000
+This is a site which is available to the public and the accounts that are created under
+
+00:00:33.000 --> 00:00:38.490
+a production environment would usually have the real user
+
+00:00:38.490 --> 00:00:44.285
+accounts and it's a live environment where the actual user traffic is served from.
+
+00:00:44.284 --> 00:00:51.929
+So if you hit google.com or any other sites which are available to you,
+
+00:00:51.929 --> 00:00:53.945
+this is the environment that you'll hit.
+
+00:00:53.945 --> 00:00:57.274
+But this is not the environment where you do all your development.
+
+00:00:57.274 --> 00:00:59.659
+Can you imagine doing the development
+
+00:00:59.659 --> 00:01:02.284
+in the production environment which is the final environment?
+
+00:01:02.284 --> 00:01:06.098
+So that the actual traffic gets impacted,
+
+00:01:06.099 --> 00:01:11.000
+if it's not thoroughly tested there is no guarantee
+
+00:01:11.000 --> 00:01:16.575
+that the users will be affected by this.
+
+00:01:16.575 --> 00:01:20.390
+So there is an alternate environment that developers
+
+00:01:20.390 --> 00:01:24.650
+use in order to test the application or the code.
+
+00:01:24.650 --> 00:01:29.375
+This is not only used by developers but it's also used by testers,
+
+00:01:29.375 --> 00:01:32.584
+the product team, the business team.
+
+00:01:32.584 --> 00:01:38.804
+Usually you're given a requirement against which you run tests in this environment.
+
+00:01:38.805 --> 00:01:41.915
+Your server LB or low balancer could look like
+
+00:01:41.915 --> 00:01:45.050
+test.udacity.com and the accounts
+
+00:01:45.049 --> 00:01:49.539
+associated with this environment would usually be test accounts.
+
+00:01:49.540 --> 00:01:53.790
+A non prod environment,
+
+00:01:53.790 --> 00:01:56.115
+let's call it non-production environment.
+
+00:01:56.114 --> 00:02:00.034
+A non-production environment could be a high availability environment.
+
+00:02:00.034 --> 00:02:03.289
+It could be a dev environment or the development environment,
+
+00:02:03.290 --> 00:02:06.440
+it could be a quality assurance environment.
+
+00:02:06.439 --> 00:02:10.099
+There are some companies that call it stage as well.
+
+00:02:10.099 --> 00:02:14.960
+So these are the terms that you should be familiar with when you are interviewing for
+
+00:02:14.960 --> 00:02:21.515
+a position where they may ask about the environment information if you have any.
+
+00:02:21.514 --> 00:02:22.894
+So yes.
+
+00:02:22.895 --> 00:02:28.390
+So in terms of sequence usually the code is deployed in the dev environment,
+
+00:02:28.389 --> 00:02:31.564
+then it moves to a test environment.
+
+00:02:31.564 --> 00:02:33.710
+It could be HA high availability,
+
+00:02:33.710 --> 00:02:38.555
+QA quality assurance or stage environment where regressions are run,
+
+00:02:38.555 --> 00:02:40.625
+we'll come to that later on.
+
+00:02:40.625 --> 00:02:43.925
+Then if the code is seen to meet
+
+00:02:43.925 --> 00:02:48.755
+all the requirements it's moved to the production environment which is here.
+
+00:02:48.754 --> 00:02:53.269
+Sometimes you could also move it into a prod like environment
+
+00:02:53.270 --> 00:02:57.920
+or a production like environment and then move it to the production environment.
+
+00:02:57.919 --> 00:02:59.644
+So it's a free form,
+
+00:02:59.645 --> 00:03:02.645
+you may have different environments depending on
+
+00:03:02.645 --> 00:03:08.340
+the amount of tests that your company decides to run.
+

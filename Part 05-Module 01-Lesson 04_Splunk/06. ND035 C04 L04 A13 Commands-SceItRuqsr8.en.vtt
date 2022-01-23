@@ -1,0 +1,235 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.875
+So now, let's discuss two more new terminologies.
+
+00:00:04.875 --> 00:00:07.080
+One, search item.
+
+00:00:07.080 --> 00:00:10.259
+So search item is nothing but all the fields that are
+
+00:00:10.259 --> 00:00:14.175
+available to you and another thing is search command.
+
+00:00:14.175 --> 00:00:19.185
+A search command is a command that is available in SPL that can run
+
+00:00:19.184 --> 00:00:24.914
+something on the search items or some logic on the search items.
+
+00:00:24.914 --> 00:00:29.250
+So let me take you on this official Splunk website
+
+00:00:29.250 --> 00:00:34.439
+again which has a list of search commands written for you.
+
+00:00:34.439 --> 00:00:41.369
+A few that are extremely important and I keep using them over and over again is top.
+
+00:00:41.369 --> 00:00:44.164
+Now, I'm going to just search for it
+
+00:00:44.164 --> 00:00:48.200
+because that is going to be easier than scrolling through the entire documentation.
+
+00:00:48.200 --> 00:00:51.770
+But here, you have details of the space
+
+00:00:51.770 --> 00:00:56.685
+the most common values of a field which is the opposite of rare.
+
+00:00:56.685 --> 00:00:58.940
+Rare does just the opposite of that.
+
+00:00:58.939 --> 00:01:02.599
+So you can go and check the documentation for that.
+
+00:01:02.600 --> 00:01:06.724
+It says, displays a least common values of a field.
+
+00:01:06.724 --> 00:01:15.214
+Now, some more commands that I have used a lot from Splunk are Table.
+
+00:01:15.215 --> 00:01:19.230
+Let me just look for that as well.
+
+00:01:20.060 --> 00:01:24.394
+Table. It creates a table using the specified fields,
+
+00:01:24.394 --> 00:01:26.674
+and another one would be stats.
+
+00:01:26.674 --> 00:01:32.989
+Now, stats works on timestamps or timestamps mostly.
+
+00:01:32.989 --> 00:01:34.909
+That was not stats, that was tstats,
+
+00:01:34.909 --> 00:01:37.289
+so I'm looking for stats.
+
+00:01:37.290 --> 00:01:41.550
+Gostats, mstats, okay.
+
+00:01:41.549 --> 00:01:45.604
+Now, this provides statistics grouped optionally by fields.
+
+00:01:45.605 --> 00:01:51.439
+So this is something that you would also use often or at least I have used often.
+
+00:01:51.439 --> 00:01:55.174
+So now, let's try out a few from here.
+
+00:01:55.174 --> 00:01:58.439
+So here I have my dataset.
+
+00:01:59.439 --> 00:02:03.620
+How you would take all the result from
+
+00:02:03.620 --> 00:02:08.914
+the previous query to the next is by using a pipe operator.
+
+00:02:08.914 --> 00:02:10.969
+So I would use a pipe.
+
+00:02:10.969 --> 00:02:16.909
+Pipe is available to you above the backslash button and now you get
+
+00:02:16.909 --> 00:02:19.759
+a list of different kinds of commands that you can
+
+00:02:19.759 --> 00:02:23.090
+run on whatever was a result from here.
+
+00:02:23.090 --> 00:02:25.925
+So again, do not be afraid of the pipe operator.
+
+00:02:25.925 --> 00:02:31.085
+All it does is it takes the value from the left hand side and
+
+00:02:31.085 --> 00:02:36.844
+it makes it available for any of the commands that you run after the pipe operation.
+
+00:02:36.844 --> 00:02:41.319
+So let's try to use top on this,
+
+00:02:41.319 --> 00:02:43.609
+but before that I need a search query.
+
+00:02:43.610 --> 00:02:47.765
+So let me look at this dataset.
+
+00:02:47.764 --> 00:02:51.859
+So I see something called HHDI here.
+
+00:02:51.860 --> 00:02:54.710
+So I'm going to look for that.
+
+00:02:54.710 --> 00:03:04.969
+I would just look for HHID equals 046612,
+
+00:03:04.969 --> 00:03:10.544
+and I'm going to first run this at this point in time, this entire set.
+
+00:03:10.544 --> 00:03:19.849
+Without this particular search query that I added is 337,520 events.
+
+00:03:19.849 --> 00:03:22.854
+Now, that I've added this for all time,
+
+00:03:22.854 --> 00:03:24.629
+it changed to five.
+
+00:03:24.629 --> 00:03:27.259
+So now, you know that the search was successful.
+
+00:03:27.259 --> 00:03:30.215
+Let's try out one command and see how that works.
+
+00:03:30.215 --> 00:03:33.830
+So now, I'm going to use the pipe operator which is
+
+00:03:33.830 --> 00:03:37.750
+going to take all the data or all of the search that was available,
+
+00:03:37.750 --> 00:03:41.270
+search result that was available from here and give
+
+00:03:41.270 --> 00:03:45.350
+that to the next part of the pipe to run a command on.
+
+00:03:45.349 --> 00:03:47.150
+So let's start with top.
+
+00:03:47.150 --> 00:03:55.825
+I'm going to try to run this on HHID value and see what result this is going to give us.
+
+00:03:55.824 --> 00:03:59.804
+So here, it gave us the count,
+
+00:03:59.805 --> 00:04:01.965
+it gave us the percent,
+
+00:04:01.965 --> 00:04:04.875
+it gave us the value of HHID,
+
+00:04:04.875 --> 00:04:06.884
+and it gave us the exact count.
+
+00:04:06.884 --> 00:04:09.299
+Now, you see since this is top,
+
+00:04:09.300 --> 00:04:11.795
+the maximum is on the top.
+
+00:04:11.794 --> 00:04:13.909
+The maximum count is available on the top.
+
+00:04:13.909 --> 00:04:15.875
+If I change this to rare,
+
+00:04:15.875 --> 00:04:18.529
+it should do the opposite of what it did.
+
+00:04:18.529 --> 00:04:23.029
+So here, it is listed in ascending order which is the count is
+
+00:04:23.029 --> 00:04:27.784
+the least to the max and I'm going to go back to top.
+
+00:04:27.785 --> 00:04:35.555
+So it allows me to count or get the maximum count and the percentage for that as well.
+
+00:04:35.555 --> 00:04:37.970
+I hope you'll learn how to use top.
+
+00:04:37.970 --> 00:04:42.815
+I would recommend that you try the other search commands as well.
+
+00:04:42.814 --> 00:04:44.899
+They come in extremely handy and
+
+00:04:44.899 --> 00:04:50.979
+the more analytics questions you come across from in your day-to-day life,
+
+00:04:50.980 --> 00:04:54.110
+the more you'll get to use these commands and the
+
+00:04:54.110 --> 00:04:57.965
+more comfortable you're going to get with them over a period of time.
+
+00:04:57.964 --> 00:04:59.418
+So as a challenge,
+
+00:04:59.418 --> 00:05:04.430
+I need you to try out at least three or four of these commands
+
+00:05:04.430 --> 00:05:07.069
+and see how you can interact with the data
+
+00:05:07.069 --> 00:05:11.099
+or what types of analytics you can draw out of them.
+

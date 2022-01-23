@@ -1,0 +1,241 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Instructions</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Project</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Instructions.html">01. Instructions</a>
+    </li>
+    <li class="">
+      <a href="Project Description - eCommerce Application.html">Project Description - eCommerce Application</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - eCommerce Application.html">Project Rubric - eCommerce Application</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Instructions</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="ecommerce-application">eCommerce Application</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In this final part of the course, you'll complete the eCommerce application. This will give you some additional practice and demonstrate that you've learned the key security and DevOps skills from this course. After successful completion of the project, here are some of the specific things you will have shown you are able to do:</p>
+<ul>
+<li>Demonstrate correct handling of authorization with proper security using JWT.</li>
+<li>Write tests and meet an acceptable code coverage level.</li>
+<li>Identify the correct metrics for logging, in order to monitor a system.</li>
+<li>Index metrics to Splunk.</li>
+<li>Demonstrate configuration and automation of the CI/CD pipeline.</li>
+</ul>
+<p>That's a lot, and we hope that after completing your project you feel proud of having learned so many new skills!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="instructions">Instructions</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <p><strong>Note:</strong> For the sake of thoroughness, these instructions go over all the steps needed for the project—but if you've been following along with the walkthroughs in the course, you will already have been working with this code and implemented some of the necessary changes! If you skipped those walkthroughs, we suggest you go back and do them now, and then come back here to finish the remainder of the project.</p>
+</blockquote>
+<p>You'll start with a template for the complete application, written in Java using Spring Boot, Hibernate ORM, and the H2 database. Your goal will be to take this template and add proper authentication and authorization controls so users can only access their data, and that data can only be accessed in a secure way. You'll do this using a combination of usernames and passwords for authentication, as well as JSON Web Tokens (JWT) to handle the authorization.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>You can find all of the starter code, along with instructions for how to carry out the project, at <a href="https://github.com/udacity/JDND/blob/master/projects/P04-eCommerce%20Application/starter_code/" target="_blank">this GitHub repository</a>.</p>
+<p>Here's how to get started:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="b2daf69a-5647-46e8-a864-7016c39a29dd--0">
+        <label for="b2daf69a-5647-46e8-a864-7016c39a29dd--0"><p>Make a copy of the repository on your own GitHub account, so that you can work on this copy.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="b2daf69a-5647-46e8-a864-7016c39a29dd--1">
+        <label for="b2daf69a-5647-46e8-a864-7016c39a29dd--1"><p>Open the README file contained in the repo and follow the instructions. The first part of the README gives an overview of the project, and the second part describes instructions that you can follow to implement authentication modules in the application.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="b2daf69a-5647-46e8-a864-7016c39a29dd--2">
+        <label for="b2daf69a-5647-46e8-a864-7016c39a29dd--2"><p>Check out the project <a href="https://review.udacity.com/#!/rubrics/2654/view" target="_blank">rubric</a> to see exactly what your reviewer will be looking for when they grade your project.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p><strong>Woohoo!</strong></p>
+<p>Time to submit this thing!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Instructions')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.690
+Now, let's play around a little more with this test that we have written over here.
+
+00:00:03.690 --> 00:00:07.214
+Let's change this to string and try to learn this.
+
+00:00:07.214 --> 00:00:09.300
+I'm going to fix this to three.
+
+00:00:09.300 --> 00:00:12.210
+So earlier when we ran this, if you remember,
+
+00:00:12.210 --> 00:00:15.585
+it gave a green signal which was a test.
+
+00:00:15.585 --> 00:00:19.750
+Now let's try to run it again and see what happens.
+
+00:00:20.539 --> 00:00:25.079
+Okay. First said there is no return statement.
+
+00:00:25.079 --> 00:00:28.599
+Let me just return this and rerun it.
+
+00:00:29.510 --> 00:00:33.135
+Okay. So let's read this.
+
+00:00:33.134 --> 00:00:35.640
+It says method tests must be void.
+
+00:00:35.640 --> 00:00:39.134
+So that's one of the primary conditions that this needs to be void.
+
+00:00:39.134 --> 00:00:40.629
+Let's do one more thing.
+
+00:00:40.630 --> 00:00:45.050
+Let's change it to a private method and see what happens now.
+
+00:00:45.049 --> 00:00:47.509
+As you see it's already turned gray,
+
+00:00:47.509 --> 00:00:48.994
+which means it's never used.
+
+00:00:48.994 --> 00:00:50.929
+Why does it do that?
+
+00:00:50.929 --> 00:00:52.914
+We'll find out right now.
+
+00:00:52.914 --> 00:00:55.289
+Okay. It says it's incompatible types.
+
+00:00:55.289 --> 00:00:59.174
+First of all, let me remove this and rerun this.
+
+00:00:59.174 --> 00:01:04.399
+Okay. The second thing it says is that the test method should be public.
+
+00:01:04.400 --> 00:01:09.365
+So we just learned two primary things that we need to keep in mind why do I need test.
+
+00:01:09.364 --> 00:01:14.099
+First, they need to be void and second they need to be public.
+

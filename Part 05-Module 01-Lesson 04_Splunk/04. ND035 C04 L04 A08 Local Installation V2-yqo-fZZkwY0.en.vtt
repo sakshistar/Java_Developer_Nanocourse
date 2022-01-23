@@ -1,0 +1,160 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.320
+So if you've completed your creation of free accounts successfully,
+
+00:00:04.320 --> 00:00:08.804
+you will get to this screen and you can scroll down to the very bottom,
+
+00:00:08.804 --> 00:00:14.175
+and this is the option that we would choose in order to use Splunk today,
+
+00:00:14.175 --> 00:00:15.540
+which is Splunk Enterprise,
+
+00:00:15.539 --> 00:00:19.004
+which is also something that you would use in an enterprise application.
+
+00:00:19.004 --> 00:00:21.869
+So since my machine is Mac OS,
+
+00:00:21.870 --> 00:00:26.789
+I'm going to choose that option but depending on your operating system,
+
+00:00:26.789 --> 00:00:31.094
+you can either choose Windows or Linux and follow through.
+
+00:00:31.094 --> 00:00:33.390
+The steps are not very different.
+
+00:00:33.390 --> 00:00:36.480
+So I'm not going to repeat all these steps for you.
+
+00:00:36.479 --> 00:00:38.429
+But if you have a Mac OS,
+
+00:00:38.429 --> 00:00:39.585
+you can follow along.
+
+00:00:39.585 --> 00:00:41.564
+If you do not have a Mac OS,
+
+00:00:41.564 --> 00:00:43.214
+if you do not have the Mac OS,
+
+00:00:43.215 --> 00:00:45.905
+click to the correct one and follow along.
+
+00:00:45.905 --> 00:00:48.649
+So I'm just going to get the DMG downloaded.
+
+00:00:48.649 --> 00:00:52.265
+So I've started the download and it's going to take some time
+
+00:00:52.265 --> 00:00:55.490
+while it finishes that and in the meantime,
+
+00:00:55.490 --> 00:01:01.609
+I would show you how to run that same or download it from the Command Line using w get.
+
+00:01:01.609 --> 00:01:04.819
+You just need to run this in your terminal and it would do
+
+00:01:04.819 --> 00:01:08.599
+the same thing that is doing with the actual DMG download.
+
+00:01:08.599 --> 00:01:12.144
+So why don't you go ahead and give one of these a try?
+
+00:01:12.144 --> 00:01:17.824
+Okay. So my Splunk download has just finished and I'm going to open it
+
+00:01:17.825 --> 00:01:20.299
+like any other application that I download
+
+00:01:20.299 --> 00:01:23.939
+and I'm trying to install this right now on my local.
+
+00:01:24.219 --> 00:01:28.685
+I'm going to double-click on install Splunk.
+
+00:01:28.685 --> 00:01:32.105
+Continue continue agree.
+
+00:01:32.105 --> 00:01:34.625
+Installation type is fine.
+
+00:01:34.625 --> 00:01:37.730
+You need to give it permissions for installation.
+
+00:01:37.730 --> 00:01:43.850
+So now it's giving me an information about brief installation initialization.
+
+00:01:43.849 --> 00:01:45.125
+I'm going to allow it.
+
+00:01:45.125 --> 00:01:50.390
+It will run a few initialization steps.
+
+00:01:50.390 --> 00:01:56.359
+Now, this admin name and password is something that you need to remember
+
+00:01:56.359 --> 00:01:59.719
+because this is what you would use in order to log in
+
+00:01:59.719 --> 00:02:03.200
+to your local instance when you start the application.
+
+00:02:03.200 --> 00:02:06.240
+So here it says, confirm the password.
+
+00:02:06.239 --> 00:02:11.030
+So the password did not meet complexity requirements.
+
+00:02:11.030 --> 00:02:18.185
+So I am going to add something that is longer than my password.
+
+00:02:18.185 --> 00:02:23.569
+Okay. So it just finished doing the initialization
+
+00:02:23.569 --> 00:02:29.104
+and I'm going to start and show Splunk. All right.
+
+00:02:29.104 --> 00:02:34.639
+So by default, the application started on port 8,000.
+
+00:02:34.639 --> 00:02:38.644
+So that is what is here I can see here.
+
+00:02:38.645 --> 00:02:44.615
+This is your local instance and this is how you would log into Splunk.
+
+00:02:44.615 --> 00:02:51.665
+Like I'd mentioned that you need to remember the installation password and username.
+
+00:02:51.664 --> 00:02:53.794
+So I'm going to plug in.
+
+00:02:53.794 --> 00:02:57.829
+You can choose to check that out and provide data.
+
+00:02:57.830 --> 00:02:59.510
+But here we go.
+
+00:02:59.509 --> 00:03:02.854
+We have our Splunk instance running locally.
+
+00:03:02.854 --> 00:03:06.109
+Now, you have it running locally,
+
+00:03:06.110 --> 00:03:10.325
+but this is what you would use or a local instance is what you would use
+
+00:03:10.324 --> 00:03:15.364
+when you're trying to test something locally or you're trying to do a POC.
+
+00:03:15.365 --> 00:03:21.180
+But this is not what do you would run in a big enterprise application.
+

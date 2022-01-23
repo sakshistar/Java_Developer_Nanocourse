@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.509
+Look at the definition of testing now.
+
+00:00:03.509 --> 00:00:05.354
+What does testing mean?
+
+00:00:05.355 --> 00:00:10.905
+It's nothing but verification of the functionality of your application.
+
+00:00:10.904 --> 00:00:15.285
+So we just make sure that all the parts that you have developed,
+
+00:00:15.285 --> 00:00:18.750
+they worked together exactly as they should.
+
+00:00:18.750 --> 00:00:26.535
+It also helps us with ensuring that the application is bug-free or defect free.
+
+00:00:26.535 --> 00:00:31.365
+These are the terminologies that you hear used alternatively.
+
+00:00:31.364 --> 00:00:37.484
+So it involves executing a software component or test on a software component,
+
+00:00:37.484 --> 00:00:41.634
+and running the test on software component,
+
+00:00:41.634 --> 00:00:45.274
+and coming up with results of the tests.
+
+00:00:45.274 --> 00:00:49.530
+It could be either a failure or a success.
+

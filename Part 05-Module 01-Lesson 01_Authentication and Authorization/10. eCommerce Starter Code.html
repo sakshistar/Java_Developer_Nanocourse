@@ -1,0 +1,386 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>eCommerce Starter Code</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Authentication and Authorization</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Authentication &amp; Authorization.html">02. Authentication &amp; Authorization</a>
+    </li>
+    <li class="">
+      <a href="03. Authentication Considerations.html">03. Authentication Considerations</a>
+    </li>
+    <li class="">
+      <a href="04. Authentication Protection.html">04. Authentication Protection</a>
+    </li>
+    <li class="">
+      <a href="05. Hashing.html">05. Hashing</a>
+    </li>
+    <li class="">
+      <a href="06. Salting.html">06. Salting</a>
+    </li>
+    <li class="">
+      <a href="07. How to Pick a Good Hash Function.html">07. How to Pick a Good Hash Function</a>
+    </li>
+    <li class="">
+      <a href="08. Authorization.html">08. Authorization</a>
+    </li>
+    <li class="">
+      <a href="09. JWTs.html">09. JWTs</a>
+    </li>
+    <li class="">
+      <a href="10. eCommerce Starter Code.html">10. eCommerce Starter Code</a>
+    </li>
+    <li class="">
+      <a href="11. JWT Internals.html">11. JWT Internals</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">10. eCommerce Starter Code</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>JWT Internals Heading</p></h3>
+  <div>
+  <h1 id="ecommerce-application-starter-code">eCommerce Application Starter Code</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In this next video, we'll walk through implementing JWTs in some starter code. You can find the link to the starter code under the video—be sure to download it and follow along with the video in order to try implementing JWTs for yourself. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND035 C04 L01 A06.1 Code Walkthrough</p></h3>
+  <video controls>
+  <source src="10. ND035 C04 L01 A06.1 Code Walkthrough-Masbxs2NJnQ.mp4" type="video/mp4">
+
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The repository for the eCommerce application starter code can be found at:<br />
+<a href="https://github.com/udacity/JDND" target="_blank">https://github.com/udacity/JDND</a></p>
+<p>After cloning the repo, you can find the README and starter code in <code>projects/P04-eCommerce Application/starter_code</code>.</p>
+<p>We'll be working with the eCommerce application throughout this course, and then—at the end of the course—you'll finish and submit the application as your final project. So the more familiar you get with it now, the easier that final project will be!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Before going any further, be sure you've done the following:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="da7da23b-06f1-419b-b9d6-c7dbb057cdbb--0">
+        <label for="da7da23b-06f1-419b-b9d6-c7dbb057cdbb--0"><p>Cloned the repository</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="da7da23b-06f1-419b-b9d6-c7dbb057cdbb--1">
+        <label for="da7da23b-06f1-419b-b9d6-c7dbb057cdbb--1"><p>Imported the eCommerce application into IntelliJ</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Good! Let's now check out the starter code in detail….</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND035 C04 L01 A06.2 Code Walkthrough</p></h3>
+  <video controls>
+  <source src="10. ND035 C04 L01 A06.2 Code Walkthrough-8RjUWi5BTlc.mp4" type="video/mp4">
+
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Before going further, be sure you've tried the following:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="6042fbc1-c6c9-484e-b821-9f6cee22f15f--0">
+        <label for="6042fbc1-c6c9-484e-b821-9f6cee22f15f--0"><p>Create a collection in Postman</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="6042fbc1-c6c9-484e-b821-9f6cee22f15f--1">
+        <label for="6042fbc1-c6c9-484e-b821-9f6cee22f15f--1"><p>Save your requests for quick use</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="6042fbc1-c6c9-484e-b821-9f6cee22f15f--2">
+        <label for="6042fbc1-c6c9-484e-b821-9f6cee22f15f--2"><p>Try making a <code>CreateUser</code> request</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="6042fbc1-c6c9-484e-b821-9f6cee22f15f--3">
+        <label for="6042fbc1-c6c9-484e-b821-9f6cee22f15f--3"><p>Try making a <code>getUser</code> request</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Good! Next, let's try out the <code>addToCart</code> request.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND035 C04 L01 A06.3 Code Walkthrough</p></h3>
+  <video controls>
+  <source src="10. ND035 C04 L01 A06.3 Code Walkthrough-UXN9DWkNmlE.mp4" type="video/mp4">
+
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="b92ff1a5-8236-4f46-b507-10935029c870--0">
+        <label for="b92ff1a5-8236-4f46-b507-10935029c870--0"><p>Try making an <code>addToCart</code> request</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="b92ff1a5-8236-4f46-b507-10935029c870--1">
+        <label for="b92ff1a5-8236-4f46-b507-10935029c870--1"><p>Try making an <code>submitOrder</code> request</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Nice work!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND035 C04 L01 A06.4 Code Walkthrough</p></h3>
+  <video controls>
+  <source src="10. ND035 C04 L01 A06.4 Code Walkthrough-gp-xtgquzfA.mp4" type="video/mp4">
+
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Before going any further, it would be a good idea to make sure you feel relatively comfortable with the starter code. Here are some things to try:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="5e7f2d2c-40c4-4e59-af6c-5ae5f2ee8e34--0">
+        <label for="5e7f2d2c-40c4-4e59-af6c-5ae5f2ee8e34--0"><p>Look up a user's order history</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="5e7f2d2c-40c4-4e59-af6c-5ae5f2ee8e34--1">
+        <label for="5e7f2d2c-40c4-4e59-af6c-5ae5f2ee8e34--1"><p>View information about the various items in the database</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Good! We'll use this starter code to demonstrate implementation of JWTs <em>and</em> we'll also be coming back to it for our final project in the course.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="11. JWT Internals.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. eCommerce Starter Code')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

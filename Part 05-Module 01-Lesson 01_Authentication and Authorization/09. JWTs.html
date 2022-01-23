@@ -1,0 +1,416 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JWTs</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Authentication and Authorization</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Authentication &amp; Authorization.html">02. Authentication &amp; Authorization</a>
+    </li>
+    <li class="">
+      <a href="03. Authentication Considerations.html">03. Authentication Considerations</a>
+    </li>
+    <li class="">
+      <a href="04. Authentication Protection.html">04. Authentication Protection</a>
+    </li>
+    <li class="">
+      <a href="05. Hashing.html">05. Hashing</a>
+    </li>
+    <li class="">
+      <a href="06. Salting.html">06. Salting</a>
+    </li>
+    <li class="">
+      <a href="07. How to Pick a Good Hash Function.html">07. How to Pick a Good Hash Function</a>
+    </li>
+    <li class="">
+      <a href="08. Authorization.html">08. Authorization</a>
+    </li>
+    <li class="">
+      <a href="09. JWTs.html">09. JWTs</a>
+    </li>
+    <li class="">
+      <a href="10. eCommerce Starter Code.html">10. eCommerce Starter Code</a>
+    </li>
+    <li class="">
+      <a href="11. JWT Internals.html">11. JWT Internals</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. JWTs</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>JWT</p></h3>
+  <div>
+  <h1 id="jwts">JWTs</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND035 C04 L01 A05 What Is JWT V2</p></h3>
+  <video controls>
+  <source src="09. ND035 C04 L01 A05 What Is JWT V2-Ea8T8fXsZlc.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="09. ND035 C04 L01 A05 What Is JWT V2-Ea8T8fXsZlc.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>JWT Uses</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>A <strong>JWT</strong> can be used for which of the following?  <br />
+(Select all answers that apply.)</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1564800030769" name="907185" id="a1564800030769">
+      <label for="a1564800030769"><p>Authorization</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1564800052996" name="907185" id="a1564800052996">
+      <label for="a1564800052996"><p>Hashing</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1564800053893" name="907185" id="a1564800053893">
+      <label for="a1564800053893"><p>Salting</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1564800054638" name="907185" id="a1564800054638">
+      <label for="a1564800054638"><p>Authentication</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Authorization</li>
+      <li>Authentication</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Here are the three parts of an example JWT. Do you remember what each is called?</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><pre><code>{
+  "alg": "HS256",
+  "typ": "JWT"
+}</code></pre></button>
+  <button class="btn btn-primary"><pre><code>{
+  "sub": "1234",
+  "name": "Sareeta Panda",
+  "admin": true
+}</code></pre></button>
+  <button class="btn btn-primary"><pre><code>HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  secret)</code></pre></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Part of the JWT</p>
+      </th>
+      <th>
+        <p>What is it called?</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>Payload</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Header</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Signature</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Part of the JWT</p>
+        </th>
+        <th>
+          <p>What is it called?</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>Payload</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><pre><code>{
+  "sub": "1234",
+  "name": "Sareeta Panda",
+  "admin": true
+}</code></pre></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Header</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><pre><code>{
+  "alg": "HS256",
+  "typ": "JWT"
+}</code></pre></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Signature</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><pre><code>HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  secret)</code></pre></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Can you match each part of the JWT with what it contains?</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>Token type and the algorithm to be used in the signature</p></button>
+  <button class="btn btn-primary"><p>Claims</p></button>
+  <button class="btn btn-primary"><p>Encoded header, encoded payload, a secret, and the signing algorithm</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Part of the JWT</p>
+      </th>
+      <th>
+        <p>What does it contain?</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>Payload</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Header</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Signature</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Part of the JWT</p>
+        </th>
+        <th>
+          <p>What does it contain?</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>Payload</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Claims</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Header</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Token type and the algorithm to be used in the signature</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Signature</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Encoded header, encoded payload, a secret, and the signing algorithm</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="10. eCommerce Starter Code.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. JWTs')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

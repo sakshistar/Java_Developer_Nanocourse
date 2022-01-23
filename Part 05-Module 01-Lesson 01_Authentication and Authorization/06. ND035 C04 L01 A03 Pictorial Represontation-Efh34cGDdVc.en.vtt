@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.030
+In this video I'll show a pictorial representation of the topics we discussed so far.
+
+00:00:06.030 --> 00:00:10.845
+Let's take an example of two users Alice and Bob.
+
+00:00:10.845 --> 00:00:16.155
+They both have the same password p4a$$.
+
+00:00:16.155 --> 00:00:19.830
+Let's think of the situation when we do not have the salt,
+
+00:00:19.829 --> 00:00:24.434
+we run a hashing algorithm which is the same for both Alice and Bob,
+
+00:00:24.434 --> 00:00:27.829
+and that will result in the same hashed value.
+
+00:00:27.829 --> 00:00:31.359
+However, we introduce the salt,
+
+00:00:31.359 --> 00:00:35.435
+which is a random value for Alice and for Bob.
+
+00:00:35.435 --> 00:00:38.810
+We appended it to their password and
+
+00:00:38.810 --> 00:00:43.630
+region weight the hashed value after appending the salt,
+
+00:00:43.630 --> 00:00:47.870
+which results in a completely different hashed value for both of them.
+
+00:00:47.869 --> 00:00:54.859
+Now, what this does is that- let's say that the password of Alice is compromised,
+
+00:00:54.859 --> 00:01:02.164
+which means that a hacker is able to seeks ksje345 in our database.
+
+00:01:02.164 --> 00:01:09.814
+It least save Bob from getting the same password hacked.
+
+00:01:09.814 --> 00:01:14.959
+Because their value hashed value is not the same.
+
+00:01:14.959 --> 00:01:17.269
+So make it a little more difficult.
+
+00:01:17.269 --> 00:01:22.234
+In real-world we cannot stop anybody from hacking the system.
+
+00:01:22.234 --> 00:01:27.784
+What we can do is we make it hard for them to be able to crack the passwords.
+
+00:01:27.784 --> 00:01:31.009
+That's all about the concepts that we discussed so far.
+
+00:01:31.010 --> 00:01:33.329
+I'll see you in the next video
+

@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:07.365
+Now, let's say that we have a password which is password,
+
+00:00:07.365 --> 00:00:09.990
+and the user enters it,
+
+00:00:09.990 --> 00:00:15.810
+and the client generates the hashed form of this password.
+
+00:00:15.810 --> 00:00:21.554
+So the hashed value of the password is going to be stored in the server.
+
+00:00:21.554 --> 00:00:25.109
+So anybody has access to the password,
+
+00:00:25.109 --> 00:00:30.570
+they would still not be able to see the password or authenticate themselves.
+
+00:00:30.570 --> 00:00:35.490
+Now, let's talk about a problem that this raises,
+
+00:00:35.490 --> 00:00:38.900
+which is two users with the same password.
+
+00:00:38.899 --> 00:00:42.679
+You cannot demand unique passwords for every user,
+
+00:00:42.679 --> 00:00:45.799
+which means that if two users,
+
+00:00:45.799 --> 00:00:48.488
+Alice and Bob had the same password,
+
+00:00:48.488 --> 00:00:53.059
+you run your same hashing algorithm that is going to result in
+
+00:00:53.060 --> 00:00:59.344
+the same value for the equal passwords and that gets stored in the database.
+
+00:00:59.344 --> 00:01:02.259
+How do you solve this problem?
+
+00:01:02.259 --> 00:01:05.989
+We would solve this problem with salting.
+
+00:01:05.989 --> 00:01:08.689
+Let's get to the definition of salting.
+
+00:01:08.689 --> 00:01:11.689
+What salting really means is
+
+00:01:11.689 --> 00:01:18.844
+a randomly generated unique data which is called salt for each user.
+
+00:01:18.844 --> 00:01:21.079
+Now, think about this,
+
+00:01:21.079 --> 00:01:25.474
+you have the hashed password and now you have a salt,
+
+00:01:25.474 --> 00:01:31.354
+the hashed password for two users that have the same password might be the same.
+
+00:01:31.355 --> 00:01:37.415
+But adding the salt to their password which are unique.
+
+00:01:37.415 --> 00:01:41.109
+When they're appended to the hashed password,
+
+00:01:41.109 --> 00:01:44.329
+that makes it a pretty unique value
+
+00:01:44.329 --> 00:01:48.049
+that can be stored in the database and difficult to hack.
+
+00:01:48.049 --> 00:01:50.873
+According to the OWASP Guidelines,
+
+00:01:50.873 --> 00:01:56.060
+a salt is a fixed-length cryptographically strong random value
+
+00:01:56.060 --> 00:01:57.680
+that is added to the input of
+
+00:01:57.680 --> 00:02:01.430
+hash functions to create unique hashes for
+
+00:02:01.430 --> 00:02:05.615
+every input regardless of the input not being unique.
+
+00:02:05.614 --> 00:02:11.150
+In minded, you should never tell your users that the password is not unique.
+
+00:02:11.150 --> 00:02:14.599
+Because what that does is that it allows the hacker
+
+00:02:14.599 --> 00:02:18.724
+to break into the passwords even more quickly,
+
+00:02:18.724 --> 00:02:24.840
+because it gives them a hint that this password exists in your system.
+

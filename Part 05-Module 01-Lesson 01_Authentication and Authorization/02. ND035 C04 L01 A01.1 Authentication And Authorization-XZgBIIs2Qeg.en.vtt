@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.160
+In this lesson, we will learn to
+
+00:00:02.160 --> 00:00:06.810
+very important security concepts; authentication and authorization.
+
+00:00:06.809 --> 00:00:12.089
+We are going to primarily focus on two parts regarding authentication authorization,
+
+00:00:12.089 --> 00:00:15.599
+the fundamentals of authentication and authorization and how
+
+00:00:15.599 --> 00:00:19.469
+to implement JWT authentication on springboard APIs.
+
+00:00:19.469 --> 00:00:21.704
+Let's start with the first question.
+
+00:00:21.704 --> 00:00:23.189
+Why bother?
+
+00:00:23.190 --> 00:00:26.835
+Why do we bother about authentication authorization?
+
+00:00:26.835 --> 00:00:31.500
+The first important thing about authentication authorization is a data breaches.
+
+00:00:31.500 --> 00:00:33.015
+They are on the rise.
+
+00:00:33.015 --> 00:00:36.219
+The data stolen will triple in 5-years.
+
+00:00:36.219 --> 00:00:41.734
+Three million people have had their data compromise from 2017 to 2018,
+
+00:00:41.734 --> 00:00:43.265
+that's a very big number.
+
+00:00:43.265 --> 00:00:47.719
+Data breaches are not only expensive but the numbers could be as high
+
+00:00:47.719 --> 00:00:52.604
+as $7.9 million just alone in the United States of America.
+
+00:00:52.604 --> 00:00:55.559
+Worldwide, that number is $3.8
+
+00:00:55.560 --> 00:01:01.280
+million and it is becoming harder to track and locate data breaches.
+
+00:01:01.280 --> 00:01:03.620
+For example in 2018,
+
+00:01:03.619 --> 00:01:09.230
+the average amount of time taken to identify a breach was 196 days.
+
+00:01:09.230 --> 00:01:13.715
+That's really long time taken to find that there was a data breach.
+
+00:01:13.715 --> 00:01:19.150
+The annual global data breaches is about $2.1 trillion.
+
+00:01:19.150 --> 00:01:22.880
+By 2019 that's the number that it's supposed to breach.
+
+00:01:22.879 --> 00:01:29.769
+The average cost data breach by 2020 will exceed over $150 million.
+
+00:01:29.769 --> 00:01:33.039
+Now these are some really big numbers.
+

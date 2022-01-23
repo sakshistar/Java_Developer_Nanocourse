@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.209
+In this lesson, we will discuss Splunk.
+
+00:00:03.209 --> 00:00:06.195
+Now, you must wonder what Splunk means
+
+00:00:06.195 --> 00:00:10.230
+and how do we connect this with what we learned in the past.
+
+00:00:10.230 --> 00:00:15.929
+Now, Splunk is nothing but our search engine for IT data.
+
+00:00:15.929 --> 00:00:18.585
+Now, what is it searching?
+
+00:00:18.585 --> 00:00:21.675
+Is it searching IoT data?
+
+00:00:21.675 --> 00:00:24.195
+Is it searching application data?
+
+00:00:24.195 --> 00:00:25.725
+What exactly does it search,
+
+00:00:25.725 --> 00:00:29.685
+or what does it provide the graphical user interface for?
+
+00:00:29.684 --> 00:00:32.379
+Let's look into that.
+

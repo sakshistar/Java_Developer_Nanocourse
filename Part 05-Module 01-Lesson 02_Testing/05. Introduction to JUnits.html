@@ -1,0 +1,567 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Introduction to JUnits</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Testing</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction to Testing.html">01. Introduction to Testing</a>
+    </li>
+    <li class="">
+      <a href="02. What is Testing and Why Does it Matter.html">02. What is Testing and Why Does it Matter?</a>
+    </li>
+    <li class="">
+      <a href="03. Software Development Life Cycle.html">03. Software Development Life Cycle</a>
+    </li>
+    <li class="">
+      <a href="04. Types of Testing.html">04. Types of Testing</a>
+    </li>
+    <li class="">
+      <a href="05. Introduction to JUnits.html">05. Introduction to JUnits</a>
+    </li>
+    <li class="">
+      <a href="06. More Advanced Features of JUnit.html">06. More Advanced Features of JUnit</a>
+    </li>
+    <li class="">
+      <a href="07. Code Coverage.html">07. Code Coverage</a>
+    </li>
+    <li class="">
+      <a href="08. Mocks.html">08. Mocks</a>
+    </li>
+    <li class="">
+      <a href="09. Mockito.html">09. Mockito</a>
+    </li>
+    <li class="">
+      <a href="10. Best Practices.html">10. Best Practices</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Introduction to JUnits</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Introduction to JUnits</p></h3>
+  <div>
+  <p># Introduction to JUnits<br />
+We'll now go through a hands-on example that will get you some experience testing using JUnits.</p>
+<p>To follow along, you can download the starter code that Sareeta uses from <a href="https://github.com/udacity/JDND/tree/master/exercises/c4%20-%20testing/starter%20code" target="_blank">this GitHub repository</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Getting familiar with the starter code heading</p></h3>
+  <div>
+  <h2 id="getting-familiar-with-the-starter-code">Getting familiar with the starter code</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND035 C04 L02 A08.1 Basics Of Junits-</p></h3>
+  <video controls>
+  <source src="05. ND035 C04 L02 A08.1 Basics Of Junits--6TdPhGKTUmM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. ND035 C04 L02 A08.1 Basics Of Junits--6TdPhGKTUmM.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Before going further, be sure that you've done the following:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="df24adca-adf9-4848-9512-6eb5f0123160--0">
+        <label for="df24adca-adf9-4848-9512-6eb5f0123160--0"><p>Cloned the repo</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="df24adca-adf9-4848-9512-6eb5f0123160--1">
+        <label for="df24adca-adf9-4848-9512-6eb5f0123160--1"><p>Imported the code into IntelliJ</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="df24adca-adf9-4848-9512-6eb5f0123160--2">
+        <label for="df24adca-adf9-4848-9512-6eb5f0123160--2"><p>Looked over the methods in the starter code (we'll be writing tests for them shortly)</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="df24adca-adf9-4848-9512-6eb5f0123160--3">
+        <label for="df24adca-adf9-4848-9512-6eb5f0123160--3"><p>Spend at least a few moments thinking about what types of tests you might want to write</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Good—now we are ready to start writing some tests!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="writing-junits-for-the-helper-methods">Writing JUnits for the helper methods</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND035 C04 L02 A08.2 Basics Of Junits-</p></h3>
+  <video controls>
+  <source src="05. ND035 C04 L02 A08.2 Basics Of Junits--gc58Hm-NK_M.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. ND035 C04 L02 A08.2 Basics Of Junits--gc58Hm-NK_M.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Find the Maven Dependency</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Go ahead and see if you can find the Maven dependency.<br />
+(Google is your friend!)</p>
+<p>If you have any trouble finding it, no worries—Sareeta will show how in the next video.</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="0d4d1384-ffb5-4f58-b426-c6c02b2c6352--0">
+        <label for="0d4d1384-ffb5-4f58-b426-c6c02b2c6352--0"><p>I found the Maven dependency!</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="0d4d1384-ffb5-4f58-b426-c6c02b2c6352--1">
+        <label for="0d4d1384-ffb5-4f58-b426-c6c02b2c6352--1"><p>I've added the dependency to the starter code (if you're not sure how to do this, just check out the video below).</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p><strong>Great!</strong></p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND035 C04 L02 A08.3 Basics Of Junits-</p></h3>
+  <video controls>
+  <source src="05. ND035 C04 L02 A08.3 Basics Of Junits--pzUEW_mJnL8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. ND035 C04 L02 A08.3 Basics Of Junits--pzUEW_mJnL8.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Add the HelperTest class</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Before you move on, be sure that you've tried the following things for yourself:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="d8c4ff8d-71b4-454c-a537-cbb2c985e26c--0">
+        <label for="d8c4ff8d-71b4-454c-a537-cbb2c985e26c--0"><p>Add the <code>HelperTest</code> class like Sareeta showed in the video above</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="d8c4ff8d-71b4-454c-a537-cbb2c985e26c--1">
+        <label for="d8c4ff8d-71b4-454c-a537-cbb2c985e26c--1"><p>Try some of the different <code>assert</code> methods (such as <code>assertEquals</code>)</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p><strong>Nice work!</strong></p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND035 C04 L02 A08.4 Basics Of Junits-</p></h3>
+  <video controls>
+  <source src="05. ND035 C04 L02 A08.4 Basics Of Junits--O6oUEGU1iBM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. ND035 C04 L02 A08.4 Basics Of Junits--O6oUEGU1iBM.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="writing-tests-on-the-helper-class">Writing tests on the <code>Helper</code> class</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND035 C04 L02 A08.5 Basics Of Junits-</p></h3>
+  <video controls>
+  <source src="05. ND035 C04 L02 A08.5 Basics Of Junits--DJ0_RCkECwk.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="05. ND035 C04 L02 A08.5 Basics Of Junits--DJ0_RCkECwk.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Write a test for the <code>getMergedList</code> method</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>See if you can write a JUnit test (in <code>HelperTest</code>) for the <code>getMergedList</code> method. Once you've given it a shot, you can check out our example below to compare.</p>
+<p>(As always, if you run into trouble and don't quite get it working, no worries—the point is simply to practice and to learn!)</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="7804062a-e3be-45ee-83d0-13e9128ffcca--0">
+        <label for="7804062a-e3be-45ee-83d0-13e9128ffcca--0"><p>I wrote a JUnit test (in <code>HelperTest</code>) for the <code>getMergedList</code> method</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p><strong>Awesome!</strong></p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="solution">Solution</h2>
+<p>Below is solution code for all of the tests, including <code>getMergedList</code>. We encourage you to try out as many of these as you like, and compare your code with the examples. (As always, it's possible your code looks a bit different and still accomplishes the end goal!)</p>
+<p>```<br />
+package com.udacity.examples.Testing;</p>
+<p>import static org.junit.Assert.assertArrayEquals;<br />
+import static org.junit.Assert.assertEquals;</p>
+<p>import java.util.Arrays;<br />
+import java.util.List;</p>
+<p>import org.junit.After;<br />
+import org.junit.AfterClass;<br />
+import org.junit.Before;<br />
+import org.junit.BeforeClass;<br />
+import org.junit.Test;</p>
+<p>public class HelperTest {</p>
+<pre><code>@Test
+public void test() {
+    assertEquals("test", "test1");
+}
+
+@Test
+public void test1() {
+    assertEquals("test", "test");
+}
+
+/**
+ * Need to be void and public
+ * @return
+ * 
+ * @Test
+private String test2() {
+    return "";
+}
+ */
+
+@Test
+public void validate_getCount() {
+    List&lt;String&gt; empNames = Arrays.asList("sareeta", "", "john","");
+    assertEquals(2, Helper.getCount(empNames));
+}
+
+@Test
+public void validate_3lengthString() {
+    List&lt;String&gt; empNames = Arrays.asList("sareeta", "", "Jeff","sam");
+    assertEquals(2, Helper.getStringsOfLength3(empNames));
+}
+
+/*
+ * Part 2
+ * why not to use test in the name?
+ * Because annotations s
+ */
+
+@Test
+public void verify_list_is_squared(){
+      List&lt;Integer&gt; yrsOfExperience = Arrays.asList(13,4,15,6,17,8,19,1,2,3);
+      List&lt;Integer&gt; expected = Arrays.asList(169, 16, 225, 36, 289, 64, 361, 1, 4, 9);
+      assertEquals(expected, Helper.getSquareList(yrsOfExperience));
+}
+
+
+/**
+ * assertFail vs asserTrue
+ */
+
+
+@Before
+public void init() {
+     System.out.println("init executed");
+
+}
+
+@After
+public void teardown() {
+     System.out.println("teardown executed");
+}
+
+@Test
+public void verify_merged_list(){
+    List&lt;String&gt; empNames = Arrays.asList("sareeta", "", "john","");
+      assertEquals("sareeta, john", Helper.getMergedList(empNames));
+}
+
+@Test
+public void verify_getMax(){
+      List&lt;Integer&gt; empLevel = Arrays.asList(3,3,3,5,7,2,2,5,7,5);
+      assertEquals(7, Helper.getStats(empLevel).getMax());
+}
+/**
+ * this should be public static
+ */
+
+@BeforeClass
+public static void initClass() {
+     System.out.println("init Class executed");
+
+}
+
+
+@AfterClass
+public static void teardownclass() {
+     System.out.println("teardown Class executed");
+}
+
+
+/**
+ *assertArrayEquals
+ *How should you debug this?
+ */
+
+@Test
+public void verify_ArrayListTest(){
+      int[] yrsOfExperience = {13,4,15,6,17,8,19,1,2,3};
+      int[] expected = {13,4,15,6,17,8,19,1,2,3};
+      assertArrayEquals(expected, yrsOfExperience);
+}
+
+/**
+ * parameterized test next class
+ */</code></pre>
+<p>}```</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What are important features of JUnit?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="901040" id="rbk1">
+        <label for="rbk1"><p>It is an open source framework.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="901040" id="rbk2">
+        <label for="rbk2"><p>Provides Annotation to identify the test methods.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="901040" id="rbk3">
+        <label for="rbk3"><p>Provides Assertions for testing expected results.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="901040" id="rbk4">
+        <label for="rbk4"><p>JUnit shows test progress in a bar that is green if test is going fine and it turns red when a test fails.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk5" name="901040" id="rbk5">
+        <label for="rbk5"><p>All of the above</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    All of the above
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. More Advanced Features of JUnit.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Introduction to JUnits')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

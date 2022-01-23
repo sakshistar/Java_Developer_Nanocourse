@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.224
+So let's look a little more details into logging levels.
+
+00:00:06.224 --> 00:00:08.594
+There are multiple levels.
+
+00:00:08.595 --> 00:00:12.390
+For that, I am discussing here are log.error,
+
+00:00:12.390 --> 00:00:15.210
+warn, info, and debug.
+
+00:00:15.210 --> 00:00:20.539
+Now, in general, all pieces of information that you
+
+00:00:20.539 --> 00:00:23.494
+think are mandatorily supposed to be logged
+
+00:00:23.495 --> 00:00:26.845
+in your log files should be put under info mode.
+
+00:00:26.844 --> 00:00:29.809
+Two things that you might want to consider when you are adding something
+
+00:00:29.809 --> 00:00:34.159
+to the log info is that it should not be a really,
+
+00:00:34.159 --> 00:00:38.074
+really long piece of data that needs to be printed.
+
+00:00:38.075 --> 00:00:41.880
+As always, your log file will get full extremely quickly,
+
+00:00:41.880 --> 00:00:45.950
+and that might result in some time bringing down your application.
+
+00:00:45.950 --> 00:00:51.375
+The second thing that I want to discuss is log.error.
+
+00:00:51.375 --> 00:00:56.189
+Now, log.error is going to provide the stack trace.
+
+00:00:56.189 --> 00:00:57.869
+By stack trace, I mean,
+
+00:00:57.869 --> 00:01:02.269
+the details of any exception that you might be throwing from your application.
+
+00:01:02.270 --> 00:01:07.564
+Log.error always prints your stack trace in your log files.
+
+00:01:07.564 --> 00:01:11.000
+The next thing that I want to discuss is warn,
+
+00:01:11.000 --> 00:01:14.075
+which is going to print the logs in warn.
+
+00:01:14.075 --> 00:01:16.640
+The last part is the debug.
+
+00:01:16.640 --> 00:01:19.834
+Log.debug is going to be used to debug
+
+00:01:19.834 --> 00:01:22.489
+any specific piece of information
+
+00:01:22.489 --> 00:01:25.804
+that you might want to debug in the production environment.
+
+00:01:25.805 --> 00:01:28.979
+Let's look at a live example
+

@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.025
+In this lesson, we will learn a lot about testing and how to write awesome test cases.
+
+00:00:05.025 --> 00:00:06.915
+Let's look through the curriculum.
+
+00:00:06.915 --> 00:00:09.945
+The curriculum includes the basics of testing,
+
+00:00:09.945 --> 00:00:13.544
+where does it fit in with enterprise application creation?
+
+00:00:13.544 --> 00:00:15.585
+What is unit testing?
+
+00:00:15.585 --> 00:00:17.625
+How do we use mocks?
+
+00:00:17.625 --> 00:00:23.070
+How do we write tests using a framework called Mockito?
+

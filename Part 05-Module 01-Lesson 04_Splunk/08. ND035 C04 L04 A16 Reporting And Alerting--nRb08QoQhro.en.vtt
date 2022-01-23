@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.669
+So let's take a look at some reports.
+
+00:00:02.669 --> 00:00:08.609
+Reports are what are going to be generated that I can link to the dashboards as well.
+
+00:00:08.609 --> 00:00:11.774
+I'm going to just check one of these available reports.
+
+00:00:11.775 --> 00:00:17.655
+So here, this gives us the data over here at the very bottom.
+
+00:00:17.655 --> 00:00:19.560
+So your reports will contain that.
+
+00:00:19.559 --> 00:00:27.299
+You have the option to set the time or customize it and when you click this data section,
+
+00:00:27.300 --> 00:00:30.554
+it will take you to the exact search query.
+
+00:00:30.554 --> 00:00:36.990
+This you can also do on the dashboard that you created but you need to enable that.
+
+00:00:36.990 --> 00:00:40.280
+One more part that I wanted to
+
+00:00:40.280 --> 00:00:43.460
+check with or wanted to show to you was this alert section.
+
+00:00:43.460 --> 00:00:45.890
+When you configure an alert,
+
+00:00:45.890 --> 00:00:48.219
+the alert will show over here.
+
+00:00:48.219 --> 00:00:49.759
+Like it says over here,
+
+00:00:49.759 --> 00:00:53.960
+that the alerts set a condition that trigger an action such as sending
+
+00:00:53.960 --> 00:00:59.285
+an email that contains the result of the triggering search to a list of people.
+
+00:00:59.284 --> 00:01:08.179
+So in a lot of companies that I've worked at usually this email is a DL or
+
+00:01:08.180 --> 00:01:13.100
+a distribution list where an alert is sent so that anybody that
+
+00:01:13.099 --> 00:01:18.424
+is on the DL or the distribution lists can take some action out of it.
+
+00:01:18.424 --> 00:01:21.784
+So that's it about Splunk today.
+
+00:01:21.784 --> 00:01:27.469
+I hope you learned something about Splunk and you're able to use it for alerts,
+
+00:01:27.469 --> 00:01:31.760
+for creating dashboards or for doing some business analysis.
+
+00:01:31.760 --> 00:01:35.675
+This provides good information to you for either taking
+
+00:01:35.674 --> 00:01:40.799
+a full course of Splunk or exploring it further at your own pace.
+

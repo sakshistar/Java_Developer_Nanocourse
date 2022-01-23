@@ -1,0 +1,296 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Code Coverage</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Testing</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction to Testing.html">01. Introduction to Testing</a>
+    </li>
+    <li class="">
+      <a href="02. What is Testing and Why Does it Matter.html">02. What is Testing and Why Does it Matter?</a>
+    </li>
+    <li class="">
+      <a href="03. Software Development Life Cycle.html">03. Software Development Life Cycle</a>
+    </li>
+    <li class="">
+      <a href="04. Types of Testing.html">04. Types of Testing</a>
+    </li>
+    <li class="">
+      <a href="05. Introduction to JUnits.html">05. Introduction to JUnits</a>
+    </li>
+    <li class="">
+      <a href="06. More Advanced Features of JUnit.html">06. More Advanced Features of JUnit</a>
+    </li>
+    <li class="">
+      <a href="07. Code Coverage.html">07. Code Coverage</a>
+    </li>
+    <li class="">
+      <a href="08. Mocks.html">08. Mocks</a>
+    </li>
+    <li class="">
+      <a href="09. Mockito.html">09. Mockito</a>
+    </li>
+    <li class="">
+      <a href="10. Best Practices.html">10. Best Practices</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">07. Code Coverage</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Code Coverage</p></h3>
+  <div>
+  <h1 id="code-coverage">Code Coverage</h1>
+<p><strong>Code coverage</strong> is a measure used to find the degree to which the source code of a program is executed when the tests for that program are run. In other words, if running the tests results in 80% of the program's code being executed, then we would say that we have achieved 80% code coverage.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND035 C04 L02 A10 Code Coverage</p></h3>
+  <video controls>
+  <source src="07. ND035 C04 L02 A10 Code Coverage-L6GMayyvBNU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="07. ND035 C04 L02 A10 Code Coverage-L6GMayyvBNU.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz 2</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is <strong>code coverage</strong>?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="901042" id="rbk1">
+        <label for="rbk1"><p>Code coverage is the percentage of code that is run by automated tests.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="901042" id="rbk2">
+        <label for="rbk2"><p>Code coverage is the percentage of code that is not run by automated tests.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="901042" id="rbk3">
+        <label for="rbk3"><p>Code coverage is the percentage of code that is actively used during the running of the program.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Code coverage is the percentage of code that is run by automated tests.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz 3</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is a typical code coverage percentage that a developer should aim for?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="901031" id="rbk1">
+        <label for="rbk1"><p>10%</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="901031" id="rbk2">
+        <label for="rbk2"><p>0%</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="901031" id="rbk3">
+        <label for="rbk3"><p>80%</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="901031" id="rbk4">
+        <label for="rbk4"><p>100%</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    80%
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>It's important to know how to use your IDE to find the code coverage of your tests. So before going further, take a few minutes and see if you can do that.</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="188dae30-cb5e-4480-89fc-278bff663fc0--0">
+        <label for="188dae30-cb5e-4480-89fc-278bff663fc0--0"><p>Run the test methods you've written so far in a particular class (one that has code coverage) and make sure you can identify the % coverage for that code</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Great!</p>
+<p>If your code coverage is above 60-80% by this point, you're doing great! <br />
+If not, you'll want to think about how you can get it higher.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="08. Mocks.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('07. Code Coverage')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

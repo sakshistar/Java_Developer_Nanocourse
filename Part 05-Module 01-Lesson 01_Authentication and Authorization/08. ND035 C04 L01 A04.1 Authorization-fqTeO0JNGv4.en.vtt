@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.625
+At this point in time let's introduce another security concept called authorization.
+
+00:00:05.625 --> 00:00:08.160
+Let's talk with the definition of authorization.
+
+00:00:08.160 --> 00:00:10.199
+What does authorization mean?
+
+00:00:10.199 --> 00:00:14.250
+Authorization concerns itself with permission and rights.
+
+00:00:14.250 --> 00:00:18.254
+It says what authenticated user is allowed to access.
+
+00:00:18.254 --> 00:00:23.160
+Usually, authorization is implemented as role-based access control.
+
+00:00:23.160 --> 00:00:29.250
+So users have roles and access is given to the roles and not the users.
+
+00:00:29.250 --> 00:00:30.704
+What I mean by this is,
+
+00:00:30.704 --> 00:00:35.250
+let's take an application which is your company application.
+
+00:00:35.250 --> 00:00:38.145
+Let's say that there are two different types of roles,
+
+00:00:38.145 --> 00:00:42.330
+an engineering manager and individual contributors.
+
+00:00:42.329 --> 00:00:45.664
+There will be part of the company site
+
+00:00:45.664 --> 00:00:50.344
+which only a manager has access to but not individual contributor.
+
+00:00:50.344 --> 00:00:52.625
+That makes them two different roles.
+
+00:00:52.625 --> 00:00:58.984
+So both of them will have access to only certain parts of your company site.
+
+00:00:58.984 --> 00:01:01.189
+This is called limited access,
+
+00:01:01.189 --> 00:01:05.159
+and that is what authorization allows you to do.
+

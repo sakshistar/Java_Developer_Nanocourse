@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.500
+Now let's talk about good Hash Function.
+
+00:00:04.500 --> 00:00:09.434
+Now, going back to the beginning of time,
+
+00:00:09.433 --> 00:00:12.674
+passwords used to be so stored in plain text,
+
+00:00:12.675 --> 00:00:17.774
+and that's not very safe and we just discussed why.
+
+00:00:17.774 --> 00:00:22.125
+They came up with the algorithm MD5,
+
+00:00:22.125 --> 00:00:24.149
+which is also no good,
+
+00:00:24.149 --> 00:00:32.295
+and SHA-1 which had collision attacks and which is why it is also not good.
+
+00:00:32.295 --> 00:00:36.725
+Then there are common password hashing functions as well.
+
+00:00:36.725 --> 00:00:43.939
+The good algorithm Hash Functions that I would recommend would be bcrypt,
+
+00:00:43.939 --> 00:00:48.229
+and there is also Arden to, scrypt is good.
+
+00:00:48.229 --> 00:00:51.439
+So these will be some good Hash Functions that you could
+
+00:00:51.439 --> 00:00:56.204
+use in your enterprise applications,
+
+00:00:56.204 --> 00:01:02.655
+because the most implementations of bcrypt uses 1,024 rounds by default.
+
+00:01:02.655 --> 00:01:04.409
+What this means is that,
+
+00:01:04.409 --> 00:01:07.204
+the passwords are hashed, rehashed,
+
+00:01:07.204 --> 00:01:14.969
+and rehashed again, and this is done 1,024 times and makes it extremely hard to crack.
+

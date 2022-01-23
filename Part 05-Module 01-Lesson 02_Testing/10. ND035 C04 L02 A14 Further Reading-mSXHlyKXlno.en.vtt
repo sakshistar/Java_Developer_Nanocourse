@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.615
+The next part is just a little bit of further reading.
+
+00:00:03.615 --> 00:00:08.355
+It will be a good idea for you to write or look into the exceptions.
+
+00:00:08.355 --> 00:00:11.220
+There are tons of documentation available on
+
+00:00:11.220 --> 00:00:14.070
+the Internet about how to write great two unit tests,
+
+00:00:14.070 --> 00:00:16.500
+that will be also something that you can take a look at,
+
+00:00:16.500 --> 00:00:18.929
+Advanced Mockito, Power MOCK.
+
+00:00:18.929 --> 00:00:23.910
+These are some very good concepts that might help you write better unit tests.
+
+00:00:23.910 --> 00:00:27.719
+One more thing that you can read about is TestNG.
+
+00:00:27.719 --> 00:00:30.059
+Now, that is another alternative test framework
+
+00:00:30.059 --> 00:00:33.000
+that you can use to write your unit tests.
+
+00:00:33.000 --> 00:00:34.890
+It's similar to JUnit,
+
+00:00:34.890 --> 00:00:40.120
+and I hope that you experiment a little with that as well. That's all for today.
+

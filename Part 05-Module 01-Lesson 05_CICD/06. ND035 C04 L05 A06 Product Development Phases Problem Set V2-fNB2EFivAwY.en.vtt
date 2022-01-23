@@ -1,0 +1,652 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.700
+Now let's go ahead and create the entire CIC,
+
+00:00:02.700 --> 00:00:05.190
+the pipeline and learn how
+
+00:00:05.190 --> 00:00:09.150
+the technologies that we have introduced so far work with each other.
+
+00:00:09.150 --> 00:00:11.400
+So for this part of the lesson,
+
+00:00:11.400 --> 00:00:14.505
+I'm going to spin up an AWS instance.
+
+00:00:14.505 --> 00:00:17.490
+I'm also going to create a Docker image,
+
+00:00:17.489 --> 00:00:23.140
+I'm going to have the jenkins pipeline setup and in order to start the pipeline,
+
+00:00:23.140 --> 00:00:26.339
+we will have a trigger set from a Git commit.
+
+00:00:26.339 --> 00:00:29.429
+Let's see how they work together.
+
+00:00:29.429 --> 00:00:34.575
+Let's start with the first step which is spinning up an AWS Instance.
+
+00:00:34.575 --> 00:00:38.990
+The screen you see right now is my account where I have an Instance running.
+
+00:00:38.990 --> 00:00:42.859
+However, I'm going to start with a brand new Instance.
+
+00:00:42.859 --> 00:00:45.619
+For doing that, all you have to do is login to
+
+00:00:45.619 --> 00:00:51.644
+your AWS account which is nothing but aws.amazon.com,
+
+00:00:51.645 --> 00:00:53.580
+and you go into My Account.
+
+00:00:53.579 --> 00:00:55.774
+You should have a sign-in option.
+
+00:00:55.774 --> 00:00:57.905
+So you can go ahead and sign into it.
+
+00:00:57.905 --> 00:00:59.420
+I'm already logged in.
+
+00:00:59.420 --> 00:01:02.810
+So I would be on the screen.
+
+00:01:02.810 --> 00:01:04.579
+Once you have logged in,
+
+00:01:04.579 --> 00:01:08.269
+you can go to the Launch instance section and click on this drop-down,
+
+00:01:08.269 --> 00:01:15.024
+which gives you the option of Launch instance which is going to spin up an AWS Instance.
+
+00:01:15.025 --> 00:01:18.540
+Now, here, you would have multiple options.
+
+00:01:18.540 --> 00:01:20.984
+So you have Amazon Linux,
+
+00:01:20.984 --> 00:01:28.859
+Linux was at this configuration and Red Hat and several other options.
+
+00:01:28.859 --> 00:01:32.280
+Since I'm trying to keep it in the free tier,
+
+00:01:32.280 --> 00:01:36.599
+I'm going to take a look at the free tier eligible options.
+
+00:01:36.599 --> 00:01:44.859
+My choice amongst the options available here is Amazon Linux AMI 2018.03.0.
+
+00:01:44.859 --> 00:01:47.840
+The reason why I chose this particular configuration is because
+
+00:01:47.840 --> 00:01:51.034
+this repository includes Docker.
+
+00:01:51.034 --> 00:01:53.814
+So let me choose this.
+
+00:01:53.814 --> 00:01:56.039
+I'm going to keep it to the default,
+
+00:01:56.040 --> 00:02:03.605
+which is general purpose T2 micro and I'm going to click ''Configure Instance''.
+
+00:02:03.605 --> 00:02:05.660
+So here I'm going to stick to the default
+
+00:02:05.659 --> 00:02:09.134
+again which is at the Configure Instance Details,
+
+00:02:09.134 --> 00:02:13.449
+I am going to click the next option and I'm going to stick to the default again,
+
+00:02:13.449 --> 00:02:21.375
+and I'm going to collect these options which is our tags.
+
+00:02:21.375 --> 00:02:23.159
+I'm going to keep the default.
+
+00:02:23.159 --> 00:02:28.099
+In this section, I'm going to create a security group.
+
+00:02:28.099 --> 00:02:34.269
+So what I'm going to do is I'm going to add a new rule,
+
+00:02:34.270 --> 00:02:37.530
+and I'm going to keep accustomed TCP.
+
+00:02:37.530 --> 00:02:41.525
+The port that I'm going to add is going to be
+
+00:02:41.525 --> 00:02:48.700
+8080 and I'm going to keep the rest of the options as default.
+
+00:02:48.699 --> 00:02:52.464
+Next, I'm going to click ''Review Launch''.
+
+00:02:52.465 --> 00:02:56.870
+So I have kept everything as default and I'm going to keep
+
+00:02:56.870 --> 00:02:59.870
+the custom TCP rule with the port range of 8080
+
+00:02:59.870 --> 00:03:03.605
+since Jenkins needs that and I'm going to Launch this.
+
+00:03:03.604 --> 00:03:06.694
+On clicking Launch, it gives me an option to choose
+
+00:03:06.694 --> 00:03:10.234
+a key pair and I'm going to create a new key pair.
+
+00:03:10.235 --> 00:03:14.510
+Let me name this as jenkins.
+
+00:03:14.509 --> 00:03:19.655
+So now I have the pem file and then I'm going to launch it.
+
+00:03:19.655 --> 00:03:25.310
+So now it gives me this success message which says your instance is now launching.
+
+00:03:25.310 --> 00:03:27.455
+Once this is up and running,
+
+00:03:27.455 --> 00:03:31.700
+I'll be able to see the launched instance on my admin page.
+
+00:03:31.699 --> 00:03:35.060
+So the next thing that I'm going to do is I'm going to give
+
+00:03:35.060 --> 00:03:39.604
+more permissions to this file that I just downloaded for my key pair.
+
+00:03:39.604 --> 00:03:43.564
+Let me go ahead and do that, and this has downloaded to my downloads.
+
+00:03:43.564 --> 00:03:46.414
+So I'm going to open a new window here.
+
+00:03:46.414 --> 00:03:50.525
+So this is the file that I'm trying to give permissions to.
+
+00:03:50.525 --> 00:03:53.900
+I am going to do that right now.
+
+00:03:53.900 --> 00:04:00.245
+So now I'm going to login to the AWS Instance and that would have started already.
+
+00:04:00.245 --> 00:04:02.015
+Let me go ahead and check that.
+
+00:04:02.014 --> 00:04:04.669
+So on this screen, as you see,
+
+00:04:04.669 --> 00:04:09.284
+it says there's a falling Instance launches had been initiated and that is the Instance.
+
+00:04:09.284 --> 00:04:13.145
+You can take a look at the launched logs as well.
+
+00:04:13.145 --> 00:04:15.230
+I'm going to take a look at all the Instances.
+
+00:04:15.229 --> 00:04:21.139
+Now, I have the Instance that I was trying to run before and it still says initializing.
+
+00:04:21.139 --> 00:04:24.490
+However, I will be able to login to this.
+
+00:04:24.490 --> 00:04:29.680
+So I have this IP and there are various ways I can connect to this.
+
+00:04:29.680 --> 00:04:32.275
+In order to connect to this Instance,
+
+00:04:32.274 --> 00:04:34.699
+I could use any of these options.
+
+00:04:34.699 --> 00:04:38.870
+Since I have already given the permission to
+
+00:04:38.870 --> 00:04:43.449
+this file that I just downloaded and it clearly mentioned it over here,
+
+00:04:43.449 --> 00:04:46.909
+I'm going to have this command run
+
+00:04:46.910 --> 00:04:51.170
+to connect to this particular Instance which I have running.
+
+00:04:51.170 --> 00:04:53.225
+So I just copied it.
+
+00:04:53.225 --> 00:04:58.564
+So now I'm logged into the AWS Instance that I just started.
+
+00:04:58.564 --> 00:05:02.449
+What I'm going to do next is I'm going to install Docker here.
+
+00:05:02.449 --> 00:05:07.539
+So the command to do that is yum install Docker.
+
+00:05:07.540 --> 00:05:11.500
+This just informs me that this is
+
+00:05:11.500 --> 00:05:15.610
+the total download size and the installed size and do I think it's okay.
+
+00:05:15.610 --> 00:05:17.360
+So I'm going to allow it.
+
+00:05:17.360 --> 00:05:21.449
+So now what I'm going to do is I'm going to add a user group to Docker.
+
+00:05:21.449 --> 00:05:26.435
+So this is the command to add a user group to Docker..
+
+00:05:26.435 --> 00:05:28.959
+The next thing that I'm going to do is I'm going
+
+00:05:28.959 --> 00:05:35.724
+to log out of this machine or this Instance and then I'm going to log back in.
+
+00:05:35.725 --> 00:05:44.310
+So let's go to the Instance that is
+
+00:05:44.310 --> 00:05:48.500
+running and I'm going to click ''Connect'' again and I'm going to repeat
+
+00:05:48.500 --> 00:05:53.675
+the same step which is copy this particular command and run that.
+
+00:05:53.675 --> 00:05:57.410
+So now I'm logged into the same Instance again.
+
+00:05:57.410 --> 00:05:59.435
+I'm ready to start Docker here.
+
+00:05:59.435 --> 00:06:05.405
+So the next instruction that I'm going to add here is going to be also available to you.
+
+00:06:05.404 --> 00:06:08.254
+I'm going to add that right now.
+
+00:06:08.254 --> 00:06:12.094
+So what this would do is it would run the Docker image.
+
+00:06:12.095 --> 00:06:17.090
+So what it provided to me right now is the container ID for the Docker image.
+
+00:06:17.089 --> 00:06:21.768
+So next what I'm going to do is I'm going to open a shell into jenkins
+
+00:06:21.769 --> 00:06:27.329
+and to do that I'm going to run this command.
+
+00:06:27.560 --> 00:06:30.495
+Now that I am there,
+
+00:06:30.495 --> 00:06:33.149
+I'm going to install Maven here.
+
+00:06:33.149 --> 00:06:38.054
+So the next thing that I'm going to do is I'm going to generate SSH keys,
+
+00:06:38.055 --> 00:06:40.889
+and I'm not entering any passphrase.
+
+00:06:40.889 --> 00:06:46.904
+So this created my SSH keys at root.
+
+00:06:46.904 --> 00:06:50.909
+This successfully created my public and private key and they are now
+
+00:06:50.910 --> 00:06:55.035
+stored in my SSH folder.
+
+00:06:55.035 --> 00:07:01.665
+Let's go ahead and now go to the running instance of Jenkins.
+
+00:07:01.665 --> 00:07:09.765
+What I would do now is I'm going to go to the AWS instance,
+
+00:07:09.764 --> 00:07:16.334
+and I'm going to 8080 port where I have Jenkins running,
+
+00:07:16.334 --> 00:07:20.685
+and I am going to now add the password,
+
+00:07:20.685 --> 00:07:23.579
+and it gives you instructions of where the password store.
+
+00:07:23.579 --> 00:07:27.995
+So I'm going to copy the path and go to
+
+00:07:27.995 --> 00:07:36.240
+the folder and copy out this password and add it here.
+
+00:07:36.240 --> 00:07:38.970
+This gives me an option to install
+
+00:07:38.970 --> 00:07:42.885
+all the suggested plugins which I'm going to say yes to.
+
+00:07:42.884 --> 00:07:49.409
+So as you see this gives me an option to install Git plug-in as well.
+
+00:07:49.410 --> 00:07:52.920
+There are several other plugins that it installs by default.
+
+00:07:52.920 --> 00:07:56.290
+Let's wait until it finishes installation.
+
+00:07:56.360 --> 00:07:59.460
+I'm now going to create an admin.
+
+00:07:59.459 --> 00:08:03.764
+So it gave me the Jenkins URL and now I'm going to save and finish.
+
+00:08:03.764 --> 00:08:07.769
+Okay. So now this is the screen,
+
+00:08:07.769 --> 00:08:12.049
+the welcome screen for Jenkins and we will go over the configurations over here.
+
+00:08:12.050 --> 00:08:15.590
+But the first thing that I needed to take a look at is the credentials.
+
+00:08:15.589 --> 00:08:19.064
+So what I'm going to do is now I'm going to set a global credentials.
+
+00:08:19.064 --> 00:08:24.105
+So what do you need to do is I clicked on credentials,
+
+00:08:24.105 --> 00:08:28.905
+I'd go to global and adding some credentials.
+
+00:08:28.904 --> 00:08:31.289
+So here what I'm going to do is I'm going to look
+
+00:08:31.290 --> 00:08:33.519
+at the kind and this gives me an option to
+
+00:08:33.519 --> 00:08:38.299
+SSH username with private key which is what I'm going to choose right now.
+
+00:08:38.299 --> 00:08:43.179
+Now what I'm going to do is I'm going to add a private key here.
+
+00:08:43.179 --> 00:08:49.995
+I clicked on enter directly and clicked on add and I picked up the private key from here.
+
+00:08:49.995 --> 00:08:54.299
+So I have copied this.
+
+00:08:54.299 --> 00:08:57.245
+Now I'm going to add this here.
+
+00:08:57.245 --> 00:08:59.629
+So I'm just going to add a username.
+
+00:08:59.629 --> 00:09:03.330
+So this successfully created my global credential.
+
+00:09:03.330 --> 00:09:08.870
+So now what I'm going to do is I'm going to add the public key onto my Git repository.
+
+00:09:08.870 --> 00:09:10.419
+Let me show you how to do that.
+
+00:09:10.419 --> 00:09:12.995
+So here I have my Git repository,
+
+00:09:12.995 --> 00:09:16.685
+and here I would add my public key.
+
+00:09:16.684 --> 00:09:19.579
+What we're going to do next is you're going to
+
+00:09:19.580 --> 00:09:22.770
+choose an application that you're going to deploy to Cloud.
+
+00:09:22.769 --> 00:09:27.509
+So for that you can either take the e-commerce application that we
+
+00:09:27.509 --> 00:09:30.399
+build or you may choose to use any of
+
+00:09:30.399 --> 00:09:33.679
+the applications that you must have built through this entire course.
+
+00:09:33.679 --> 00:09:35.495
+I leave that option up to you.
+
+00:09:35.495 --> 00:09:39.440
+But for this particular lesson I'm going to deploy the e-commerce application.
+
+00:09:39.440 --> 00:09:41.520
+So in order to add the public key,
+
+00:09:41.519 --> 00:09:43.353
+I would go to settings,
+
+00:09:43.354 --> 00:09:47.280
+and I'm going to click Deploy keys option here.
+
+00:09:47.279 --> 00:09:51.404
+As you see I already have two keys deployed.
+
+00:09:51.404 --> 00:09:55.814
+I'm going to add one more key right now and let me just name it
+
+00:09:55.815 --> 00:10:04.860
+Jenkins demo and I will pick up the public key right now.
+
+00:10:04.860 --> 00:10:13.389
+So I'm going to cap the public key and copy the public key out,
+
+00:10:13.399 --> 00:10:17.629
+and I'm going to paste that into the key section.
+
+00:10:17.629 --> 00:10:20.029
+Make sure that you allow write access to it.
+
+00:10:20.029 --> 00:10:22.409
+So I've successfully deployed the key now.
+
+00:10:22.409 --> 00:10:25.339
+So the entire pipeline is set up.
+
+00:10:25.340 --> 00:10:27.735
+So now that the entire pipeline is set up,
+
+00:10:27.735 --> 00:10:31.169
+let me go ahead and configure the project at Jenkins.
+
+00:10:31.169 --> 00:10:34.064
+So now this is the part where I'm going to create a new job
+
+00:10:34.065 --> 00:10:36.940
+for Jenkins and I'm going to click on this option,
+
+00:10:36.940 --> 00:10:41.360
+please create this, and I'm going to choose a Freestyle project option.
+
+00:10:41.360 --> 00:10:50.320
+For this particular project I'm going to name it project demo and I click okay.
+
+00:10:50.320 --> 00:10:54.870
+So this is the configuration for Jenkins,
+
+00:10:54.870 --> 00:10:59.284
+and it has all these options which you
+
+00:10:59.284 --> 00:11:03.860
+could go through in order to understand what different functionalities it offers.
+
+00:11:03.860 --> 00:11:05.455
+Since we used Git,
+
+00:11:05.455 --> 00:11:07.395
+I'm going to choose the Git option,
+
+00:11:07.394 --> 00:11:12.360
+and I'm going to add the repository URL over here and the credentials,
+
+00:11:12.360 --> 00:11:16.250
+and that would set up the Git linking here.
+
+00:11:16.250 --> 00:11:19.860
+The other thing that I need to do after that is choose
+
+00:11:19.860 --> 00:11:23.810
+the branch that I want to run the build on.
+
+00:11:23.809 --> 00:11:25.774
+So let me go ahead and do that.
+
+00:11:25.774 --> 00:11:29.764
+So I'm going to go to the Git repository,
+
+00:11:29.764 --> 00:11:32.600
+and I'm going to copy this,
+
+00:11:32.659 --> 00:11:37.105
+and now I'm going to add the repository URL that I just copied,
+
+00:11:37.105 --> 00:11:40.139
+and I would add the key.
+
+00:11:40.139 --> 00:11:42.990
+So if you had a problem here,
+
+00:11:42.990 --> 00:11:45.450
+it would throw some error in red.
+
+00:11:45.450 --> 00:11:47.520
+However, if it was successful,
+
+00:11:47.519 --> 00:11:49.470
+it will not show any error.
+
+00:11:49.470 --> 00:11:53.009
+Now what I want to do is I do not want to run this from
+
+00:11:53.009 --> 00:11:57.149
+master or what I want to do is I want to run this from a different branch.
+
+00:11:57.149 --> 00:12:00.259
+So I'm going to choose a different branch now.
+
+00:12:00.259 --> 00:12:08.009
+So this is basically going to set up the Jenkins pipeline for that particular branch.
+
+00:12:08.009 --> 00:12:14.700
+So what I'm going to do next is I'm going to add the palm location at the build step.
+
+00:12:14.700 --> 00:12:18.575
+So what I'm going to do is I'm going to choose the palm location
+
+00:12:18.575 --> 00:12:22.695
+now so my palm is a specific project.
+
+00:12:22.695 --> 00:12:28.040
+So now I have chosen the exact path for my palm and I'm going to save this,
+
+00:12:28.039 --> 00:12:31.875
+and this configuration is complete for me.
+
+00:12:31.875 --> 00:12:34.955
+What I would do now is trigger a build
+
+00:12:34.955 --> 00:12:38.810
+and see if it gives me an error or it builds successfully.
+
+00:12:38.809 --> 00:12:40.274
+So to do that,
+
+00:12:40.274 --> 00:12:43.829
+what I have to do is click on this build now option.
+
+00:12:43.830 --> 00:12:45.720
+So this give me an error.
+
+00:12:45.720 --> 00:12:48.629
+Let's go check it out and see what was the error.
+
+00:12:48.629 --> 00:12:55.379
+So it's some part of the build, download from central.
+
+00:12:55.379 --> 00:12:58.799
+So the error here says no goals had been specified
+
+00:12:58.799 --> 00:13:02.299
+for this build and it also gives you an information about that.
+
+00:13:02.299 --> 00:13:03.879
+Let's go ahead and fix that.
+
+00:13:03.879 --> 00:13:05.120
+In order to do that,
+
+00:13:05.120 --> 00:13:07.590
+what I'm going to do is I'm going to set the goals.
+
+00:13:07.590 --> 00:13:12.769
+So for that let's go to configure again and as you see,
+
+00:13:12.769 --> 00:13:14.329
+I've already fixed it,
+
+00:13:14.330 --> 00:13:17.245
+but let me just show you what the fix was.
+
+00:13:17.245 --> 00:13:23.350
+So the goals is available at the pack,
+
+00:13:23.350 --> 00:13:26.725
+the build level, so we finished adding
+
+00:13:26.725 --> 00:13:31.129
+the palm and what I had missed was adding the goals here.
+
+00:13:31.129 --> 00:13:33.945
+So I added that best package over here,
+
+00:13:33.945 --> 00:13:35.710
+and I saved it,
+
+00:13:35.710 --> 00:13:40.470
+and then when I go ahead and trigger another build,
+
+00:13:40.470 --> 00:13:45.620
+it goes through the entire process of building,
+
+00:13:45.620 --> 00:13:48.144
+and let's trace the logs now.
+
+00:13:48.144 --> 00:13:51.284
+So this time the build was successful.
+
+00:13:51.284 --> 00:13:59.799
+Now this means that every time now I make some commits or some changes to my fork,
+
+00:13:59.799 --> 00:14:03.694
+and then I merge it into the master,
+
+00:14:03.695 --> 00:14:12.490
+it will trigger an automatic build that is going to be triggering this Jenkins pipeline.
+
+00:14:12.490 --> 00:14:16.159
+So that's it for Jenkins.
+

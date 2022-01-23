@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.844
+Splunk is an application that can help us
+
+00:00:04.844 --> 00:00:09.750
+to provide search engine type functionalities for the IT data.
+
+00:00:09.750 --> 00:00:15.599
+So, whatever logs you enter or you wrote into the log files,
+
+00:00:15.599 --> 00:00:19.274
+you will now be able to query it in a very meaningful fashion.
+
+00:00:19.274 --> 00:00:23.399
+You'll be able to see it in a graph form or a dashboard form.
+
+00:00:23.399 --> 00:00:25.739
+You will not only be able to do that but you'll be able to
+
+00:00:25.739 --> 00:00:28.994
+build alerts and reports on top of that.
+
+00:00:28.995 --> 00:00:32.759
+Our preferred tool for today is Splunk.
+
+00:00:32.759 --> 00:00:35.174
+Splunk, as I mentioned,
+
+00:00:35.174 --> 00:00:38.504
+as a lot of people say is a business intelligence tool,
+
+00:00:38.505 --> 00:00:39.940
+but it's not just that.
+
+00:00:39.939 --> 00:00:43.059
+But it provides a lot more than that,
+
+00:00:43.060 --> 00:00:47.550
+because it can consume structured as well as unstructured data.
+

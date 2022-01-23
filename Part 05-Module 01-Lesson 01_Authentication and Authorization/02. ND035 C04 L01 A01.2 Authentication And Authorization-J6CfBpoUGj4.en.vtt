@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.350 --> 00:00:03.149
+What is authentication?
+
+00:00:03.149 --> 00:00:08.384
+In simple definition it means confirming your own identity.
+
+00:00:08.384 --> 00:00:12.740
+In real world, you would use a photo ID to authenticate yourself,
+
+00:00:12.740 --> 00:00:14.460
+it could be a driver's license,
+
+00:00:14.460 --> 00:00:17.894
+or your social security card that determines who you are.
+
+00:00:17.894 --> 00:00:23.314
+The form of authentication you can do digitally is usually username and password.
+
+00:00:23.315 --> 00:00:27.815
+There are other ways as well that you could use in order to authenticate yourself,
+
+00:00:27.815 --> 00:00:30.650
+like token-based authentication, where you have
+
+00:00:30.649 --> 00:00:34.265
+an object that controls and proofs who you are.
+
+00:00:34.265 --> 00:00:36.185
+You could use OAuth,
+
+00:00:36.185 --> 00:00:39.500
+which is an external service which provides a token on behalf of
+
+00:00:39.500 --> 00:00:42.950
+you to authenticate you to the external service.
+
+00:00:42.950 --> 00:00:45.230
+You could also use OTP,
+
+00:00:45.229 --> 00:00:47.875
+which stands for One Time Password,
+
+00:00:47.875 --> 00:00:50.414
+which a lot of us have come across.
+
+00:00:50.414 --> 00:00:52.920
+You could have time-based token,
+
+00:00:52.920 --> 00:00:56.450
+which is a token generated with something only you know.
+
+00:00:56.450 --> 00:00:59.935
+This token changes after some period of time,
+
+00:00:59.935 --> 00:01:04.680
+and JWT more on this we will discuss.
+
+00:01:04.680 --> 00:01:08.355
+You could have bio-metric authentication,
+
+00:01:08.355 --> 00:01:12.395
+fingerprints, facial recognition, face ID.
+
+00:01:12.394 --> 00:01:16.924
+These are the common other ways of authentication you use in today's world.
+
+00:01:16.924 --> 00:01:19.414
+We will focus on a few of them,
+
+00:01:19.415 --> 00:01:23.210
+which will be used with respect to rest APIs.
+
+00:01:23.209 --> 00:01:27.244
+I'm going to summarize what this authentication means.
+
+00:01:27.245 --> 00:01:29.719
+In simple words, authentication well,
+
+00:01:29.719 --> 00:01:35.069
+is a process to prove that you are a person who you say you are.
+

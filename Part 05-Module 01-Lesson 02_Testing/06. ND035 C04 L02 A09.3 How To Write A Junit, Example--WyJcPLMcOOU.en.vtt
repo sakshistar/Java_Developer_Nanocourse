@@ -1,0 +1,319 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.294
+Let's look at parameterized tests.
+
+00:00:02.294 --> 00:00:05.654
+Parameterized tests are used when you want to pass
+
+00:00:05.655 --> 00:00:09.839
+certain data value to run in your test method,
+
+00:00:09.839 --> 00:00:13.410
+but you don't want to create data values inside the methods.
+
+00:00:13.410 --> 00:00:18.300
+So you want to pass them in from one location as a collection.
+
+00:00:18.300 --> 00:00:22.065
+So let's dig right into the implementation.
+
+00:00:22.065 --> 00:00:24.855
+I'm going to create one more test class here,
+
+00:00:24.855 --> 00:00:30.750
+and I'm going to call that HelperParameterized.
+
+00:00:30.750 --> 00:00:34.994
+I hope I'm spelling that right, Test.
+
+00:00:34.994 --> 00:00:40.879
+Now, the first thing that you need to keep in mind is that in order to run this test,
+
+00:00:40.880 --> 00:00:44.120
+which is not run like the other classes,
+
+00:00:44.119 --> 00:00:48.104
+you need to add the annotation @RunWith,
+
+00:00:48.104 --> 00:00:56.039
+and the value to pass here is a runner, parameterized class.
+
+00:00:57.170 --> 00:01:01.265
+This is what will make sure that
+
+00:01:01.265 --> 00:01:06.364
+this test class is considered to be a parameterized test class.
+
+00:01:06.364 --> 00:01:10.924
+The next thing that I'm going to do is I'm going to create two variables here.
+
+00:01:10.924 --> 00:01:14.700
+Let's say I call this,
+
+00:01:14.700 --> 00:01:23.469
+I have this String input and I have a String output.
+
+00:01:23.510 --> 00:01:27.525
+So now, I have the String input and the output.
+
+00:01:27.525 --> 00:01:29.385
+So I'm going to create a constructor,
+
+00:01:29.385 --> 00:01:31.710
+which accepts input and output,
+
+00:01:31.709 --> 00:01:35.754
+and constructs an object of the class HelperParameterizedTest.
+
+00:01:35.754 --> 00:01:38.929
+So the best way to do that or the simplest way to do
+
+00:01:38.930 --> 00:01:42.005
+that is using the ID that you have at hand,
+
+00:01:42.004 --> 00:01:44.824
+which could be either Eclipse or Intellij.
+
+00:01:44.825 --> 00:01:46.790
+Just right-click on it.
+
+00:01:46.790 --> 00:01:50.285
+In Eclipse, the command is different or the option is different.
+
+00:01:50.284 --> 00:01:54.689
+But in Intellij, you would use Constructor,
+
+00:01:54.689 --> 00:01:57.859
+and this is what we would use for getters and setters.
+
+00:01:57.859 --> 00:02:00.984
+As you see, it provides you the option to have
+
+00:02:00.984 --> 00:02:05.825
+the default equals and hashCode method as well and toStrings as well.
+
+00:02:05.825 --> 00:02:11.134
+So this is extremely helpful for creating any default methods.
+
+00:02:11.134 --> 00:02:15.500
+So as you see, I got the option to include all the variables,
+
+00:02:15.500 --> 00:02:19.805
+and here I have my constructor.
+
+00:02:19.805 --> 00:02:22.305
+I'm going to call super on this.
+
+00:02:22.305 --> 00:02:26.090
+What I'm going to do now is I'm going to create a method,
+
+00:02:26.090 --> 00:02:32.629
+which is going to be our initialization of the data or the dataset method.
+
+00:02:32.629 --> 00:02:36.519
+So this is going to be a public static method,
+
+00:02:36.520 --> 00:02:39.800
+and I'm going to call the return value for that
+
+00:02:39.800 --> 00:02:43.130
+is Collection because this is going to be collection of dataset.
+
+00:02:43.129 --> 00:02:46.324
+I'm going to call this initData,
+
+00:02:46.324 --> 00:02:50.039
+short-form for initialization of data.
+
+00:02:50.689 --> 00:02:59.284
+The next thing that I would do here is I'm going to create an array of employee names.
+
+00:02:59.284 --> 00:03:05.909
+The reason why I made it a two-dimensional array,
+
+00:03:05.909 --> 00:03:08.174
+this is a two-dimensional array,
+
+00:03:08.175 --> 00:03:13.985
+is because I want to pass two things.
+
+00:03:13.985 --> 00:03:19.810
+I want to pass an expected value and I want to pass an actual value.
+
+00:03:19.810 --> 00:03:24.590
+So this is one record,
+
+00:03:24.590 --> 00:03:27.020
+and I'm going to create one more record,
+
+00:03:27.020 --> 00:03:30.695
+and let's call this Jeff.
+
+00:03:30.694 --> 00:03:34.789
+So this is my dataset.
+
+00:03:34.789 --> 00:03:40.834
+What I'm going to return here is this entire empName.
+
+00:03:40.835 --> 00:03:44.254
+Now, this is an array but I need to pass a collection.
+
+00:03:44.254 --> 00:03:50.539
+So I'm going to call arrays asList on this, and done.
+
+00:03:50.539 --> 00:03:52.609
+So now I have a method,
+
+00:03:52.610 --> 00:03:55.655
+which will serve as a data provider.
+
+00:03:55.655 --> 00:03:57.944
+How does this method get identified?
+
+00:03:57.944 --> 00:04:03.719
+For that, I would use another annotation called Parameters, simple as that.
+
+00:04:04.780 --> 00:04:09.270
+You could just get away with this.
+
+00:04:10.270 --> 00:04:14.580
+It seems like I already have parameters.
+
+00:04:14.580 --> 00:04:19.610
+Well, that's fine. It just means that it goes through the exact path of
+
+00:04:19.610 --> 00:04:24.740
+that particular class instead of just the annotation parameters.
+
+00:04:24.740 --> 00:04:27.689
+So it doesn't really matter but in
+
+00:04:27.689 --> 00:04:30.225
+your Intellij you might just see it like this if
+
+00:04:30.225 --> 00:04:32.754
+you have the imports configured correctly.
+
+00:04:32.754 --> 00:04:40.490
+So yeah, what I can do here is that I will just call to that particular class,
+
+00:04:40.490 --> 00:04:47.240
+and here you go.
+
+00:04:47.240 --> 00:04:53.074
+So you might also see this version or this variety in your Intellij.
+
+00:04:53.074 --> 00:04:56.449
+This is when the imports are correctly imported.
+
+00:04:56.449 --> 00:05:02.819
+So I'm going to write a test method to demo how the initData method that we just created,
+
+00:05:02.819 --> 00:05:06.110
+which is a Parameters method is going to be used.
+
+00:05:06.110 --> 00:05:09.050
+So let me start with a test method.
+
+00:05:09.050 --> 00:05:15.194
+I'm going to call this method verify,
+
+00:05:15.194 --> 00:05:24.219
+this is going to be a negative test, verify names.
+
+00:05:24.500 --> 00:05:29.444
+Let's call this verify input name is
+
+00:05:29.444 --> 00:05:37.300
+not the same as the output name.
+
+00:05:37.300 --> 00:05:43.835
+This might seem like a very long method but this is actually pretty readable.
+
+00:05:43.834 --> 00:05:47.779
+So in case you wanted to remove the article and make it like a shorter,
+
+00:05:47.779 --> 00:05:49.849
+remove the unnecessary words, you could do that.
+
+00:05:49.850 --> 00:05:53.510
+But the more readable your method is,
+
+00:05:53.509 --> 00:05:58.055
+the better it is for anybody who reads or is looking at your test reports.
+
+00:05:58.055 --> 00:05:59.689
+Now, I'm going to use negation,
+
+00:05:59.689 --> 00:06:03.980
+some kind of negative tests for this particular test method.
+
+00:06:03.980 --> 00:06:07.910
+The method that I've chosen is assertNotEquals.
+
+00:06:07.910 --> 00:06:14.120
+So I'm just going to take an input and output, and compare them.
+
+00:06:14.120 --> 00:06:16.800
+So as you may have guessed,
+
+00:06:16.800 --> 00:06:18.389
+so this is my first set,
+
+00:06:18.389 --> 00:06:22.409
+it would run sareeta against sareeta not equals.
+
+00:06:22.410 --> 00:06:25.455
+It is equal, so this is going to fail.
+
+00:06:25.454 --> 00:06:29.399
+The second set is sareeta not equals Jeff,
+
+00:06:29.399 --> 00:06:31.114
+which is true, so it will pass.
+
+00:06:31.115 --> 00:06:33.949
+So let's look at that now.
+
+00:06:33.949 --> 00:06:36.305
+So as you see,
+
+00:06:36.305 --> 00:06:38.165
+there is one test case.
+
+00:06:38.165 --> 00:06:40.585
+However, it ran twice.
+
+00:06:40.584 --> 00:06:42.839
+As you see over here,
+
+00:06:42.839 --> 00:06:44.324
+it passed one time,
+
+00:06:44.324 --> 00:06:47.310
+the second time but it did not pass the first time,
+
+00:06:47.310 --> 00:06:50.100
+just as we had thought it would.
+
+00:06:50.100 --> 00:06:52.814
+So it compared sareeta against sareeta,
+
+00:06:52.814 --> 00:06:56.699
+did not pass, sareeta against Jeff, and it passed.
+
+00:06:56.699 --> 00:07:01.879
+Here, it gives you an AssertionError as we had expected,
+
+00:07:01.879 --> 00:07:04.324
+and it says, "Value should be different.
+
+00:07:04.324 --> 00:07:06.379
+Actual, sareeta."
+
+00:07:06.379 --> 00:07:13.740
+So that sums up the parameterized testing.
+

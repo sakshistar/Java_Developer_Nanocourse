@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.665
+Let's go ahead and write JUnits for all the helper methods that we take a look at.
+
+00:00:04.665 --> 00:00:08.429
+So we looked at the test example,
+
+00:00:08.429 --> 00:00:10.740
+which is what we had,
+
+00:00:10.740 --> 00:00:15.570
+and we now are going to write test for this helper class.
+
+00:00:15.570 --> 00:00:18.030
+So the first and foremost thing that you would do
+
+00:00:18.030 --> 00:00:20.670
+at this point in time is go to your POM.
+
+00:00:20.670 --> 00:00:23.250
+We only have the JUnits.
+
+00:00:23.250 --> 00:00:26.204
+But since we would also be using Mockito,
+
+00:00:26.204 --> 00:00:29.219
+we are going to add one more dependency.
+
+00:00:29.219 --> 00:00:35.259
+So why don't you go ahead and look for the Mockito Maven dependency.
+

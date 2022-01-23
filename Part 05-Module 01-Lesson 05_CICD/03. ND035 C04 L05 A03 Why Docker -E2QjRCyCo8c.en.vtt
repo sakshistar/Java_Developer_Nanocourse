@@ -1,0 +1,136 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.629
+So the next part of this pipeline is a Docker.
+
+00:00:03.629 --> 00:00:06.165
+Now, let's learn a little bit about Docker.
+
+00:00:06.165 --> 00:00:07.689
+What does Docker mean?
+
+00:00:07.690 --> 00:00:09.644
+It's a container software.
+
+00:00:09.644 --> 00:00:14.519
+What it basically does it that when you containerize your application,
+
+00:00:14.519 --> 00:00:20.039
+it adds all your apps and their dependencies into a box,
+
+00:00:20.039 --> 00:00:23.414
+except that the box is infinitely replicable.
+
+00:00:23.414 --> 00:00:26.099
+I have listed this website over here,
+
+00:00:26.100 --> 00:00:28.365
+which is the official Docker website,
+
+00:00:28.364 --> 00:00:31.859
+which is what you can follow in order to understand why
+
+00:00:31.859 --> 00:00:35.700
+you would need Docker since its extremely popular these days,
+
+00:00:35.700 --> 00:00:39.540
+and I can quickly walk you through that.
+
+00:00:39.539 --> 00:00:41.189
+Let me just do that.
+
+00:00:41.189 --> 00:00:45.439
+So the Docker official website talks about
+
+00:00:45.439 --> 00:00:49.969
+Docker being a platform for high velocity innovation.
+
+00:00:49.969 --> 00:00:56.119
+So you could pretty much have your entire change or your template created
+
+00:00:56.119 --> 00:01:03.019
+and then be able to give that to anybody who wants to use your container image.
+
+00:01:03.020 --> 00:01:07.085
+So let's say that you want to use a particular version of Jenkins.
+
+00:01:07.084 --> 00:01:09.329
+You want to use a particular version of Maven,
+
+00:01:09.329 --> 00:01:12.969
+you want to use a particular version of a different set
+
+00:01:12.969 --> 00:01:17.359
+of technologies than other people,
+
+00:01:17.359 --> 00:01:21.469
+then you could create your specific template and then
+
+00:01:21.469 --> 00:01:26.525
+distribute it or keep it in the Docker site.
+
+00:01:26.525 --> 00:01:32.950
+Then whenever you need that specific set of technologies,
+
+00:01:32.950 --> 00:01:37.010
+you could just use the Docker template that you have created,
+
+00:01:37.010 --> 00:01:39.590
+and it is readily available for you.
+
+00:01:39.590 --> 00:01:43.655
+So that is the main concept of containerization.
+
+00:01:43.655 --> 00:01:46.069
+If you are interested,
+
+00:01:46.069 --> 00:01:49.700
+I would highly recommend that you go ahead and have a quick look at
+
+00:01:49.700 --> 00:01:53.630
+why Docker could be very useful for your business.
+
+00:01:53.629 --> 00:01:58.519
+So that in case you were asked about your opinion about Docker,
+
+00:01:58.519 --> 00:02:01.759
+you are able to provide enough information when you're doing
+
+00:02:01.760 --> 00:02:05.585
+your POC or your Proof of Concept for your team.
+
+00:02:05.584 --> 00:02:11.194
+So let's take a look at what Docker really is.
+
+00:02:11.194 --> 00:02:13.489
+So on the right side here,
+
+00:02:13.490 --> 00:02:19.010
+you see Containers, and we're specifically talking about Docker in this example.
+
+00:02:19.009 --> 00:02:23.109
+On the left side, we have Virtual Machines.
+
+00:02:23.110 --> 00:02:30.015
+So now, the typical virtual machine has hardware and their operating system,
+
+00:02:30.014 --> 00:02:35.375
+and then there is the hypervisor that sits on it which spins different VMs.
+
+00:02:35.375 --> 00:02:40.639
+However, in Containers, we do not have the layer of hypervisor.
+
+00:02:40.639 --> 00:02:45.125
+We have the host hardware and the host operating system.
+
+00:02:45.125 --> 00:02:53.194
+We have this client Docker CLI utils which are available for running different commands
+
+00:02:53.194 --> 00:03:01.784
+which can hit the Docker REST APIs and that hits the Docker Daemon Server.
+
+00:03:01.784 --> 00:03:04.810
+This is the concept of a Container.
+

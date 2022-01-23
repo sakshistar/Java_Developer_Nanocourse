@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.669
+So Splunk provides a free license,
+
+00:00:02.669 --> 00:00:04.349
+which is available for trial,
+
+00:00:04.349 --> 00:00:05.835
+and that's for 60 days.
+
+00:00:05.835 --> 00:00:11.940
+I will talk about a forwarder license that we would make use of in the next few slides.
+
+00:00:11.939 --> 00:00:15.570
+So let's get into creating account for ourselves.
+
+00:00:15.570 --> 00:00:17.070
+It's very simple.
+
+00:00:17.070 --> 00:00:19.050
+All you do is go to splunk.com.
+
+00:00:19.050 --> 00:00:21.675
+Click on the Free Splunk option.
+
+00:00:21.675 --> 00:00:25.019
+I already have an account so I'm just going to log into that.
+
+00:00:25.019 --> 00:00:28.605
+However, all you have to do is create a Cloud trial account,
+
+00:00:28.605 --> 00:00:30.480
+accept the terms and conditions,
+
+00:00:30.480 --> 00:00:34.420
+and follow the process in order to create your account.
+

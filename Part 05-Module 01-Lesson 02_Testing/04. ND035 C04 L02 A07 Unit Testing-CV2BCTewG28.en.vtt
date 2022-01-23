@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.714
+Now, let's look into unit tests.
+
+00:00:02.714 --> 00:00:07.410
+As I had mentioned earlier that our unit test splits up your code into
+
+00:00:07.410 --> 00:00:10.169
+functional units and ensures that each of
+
+00:00:10.169 --> 00:00:14.144
+this units does what it's supposed to do in isolation.
+
+00:00:14.144 --> 00:00:16.844
+So you have your code.
+
+00:00:16.844 --> 00:00:18.989
+Your piece of code, now,
+
+00:00:18.989 --> 00:00:20.219
+let's call it unit,
+
+00:00:20.219 --> 00:00:23.414
+has a certain assertion written on it.
+
+00:00:23.414 --> 00:00:27.299
+An assertion has a certain condition.
+
+00:00:27.300 --> 00:00:29.980
+If the condition passes,
+
+00:00:29.980 --> 00:00:34.399
+it results in assertion passing or a success,
+
+00:00:34.399 --> 00:00:36.649
+and moves to the next piece of code.
+
+00:00:36.649 --> 00:00:45.140
+If it fails, then the assertion in general fails and it results in the unit test failure.
+
+00:00:45.140 --> 00:00:50.780
+This generates a report which is extremely intuitive.
+
+00:00:50.780 --> 00:00:54.605
+Usually, the failed cases would appear in red,
+
+00:00:54.604 --> 00:00:58.324
+and the passed cases will appear in green.
+
+00:00:58.325 --> 00:01:04.129
+There are essentially two types of unit tests that you can write, Junits and TestNg.
+
+00:01:04.129 --> 00:01:06.905
+Depending on what your project already follows,
+
+00:01:06.905 --> 00:01:09.320
+I would suggest that you use one of them.
+
+00:01:09.319 --> 00:01:13.159
+Now, Junits and TestNg are not very different from each other,
+
+00:01:13.159 --> 00:01:14.989
+which means that if you learn one,
+
+00:01:14.989 --> 00:01:18.349
+you could totally write it in the other framework,
+
+00:01:18.349 --> 00:01:21.890
+and they can also be used interchangeably or in combination.
+
+00:01:21.890 --> 00:01:26.400
+It's just your preference or your project's preference.
+

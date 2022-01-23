@@ -1,0 +1,175 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.910
+In this lesson, we'll learn about CI/CD.
+
+00:00:02.910 --> 00:00:08.565
+Now, CI/CD stands for Continuous Integration and Continuous Delivery.
+
+00:00:08.564 --> 00:00:11.279
+These terminologies are self explanatory,
+
+00:00:11.279 --> 00:00:13.109
+but let's look into the definition.
+
+00:00:13.109 --> 00:00:14.849
+What is the CI/CD?
+
+00:00:14.849 --> 00:00:17.564
+CI stands for Continuous Integration,
+
+00:00:17.564 --> 00:00:21.719
+and it's a set of practices that drive development teams to implement
+
+00:00:21.719 --> 00:00:26.835
+small changes and checking code to version control repositories frequently.
+
+00:00:26.835 --> 00:00:31.545
+It's a consistent and automated way for DevOps team to build,
+
+00:00:31.545 --> 00:00:34.105
+package, and test applications.
+
+00:00:34.104 --> 00:00:37.774
+Whereas, CD, which stands for Continuous Delivery,
+
+00:00:37.774 --> 00:00:40.369
+picks up where Continuous Integration ends.
+
+00:00:40.369 --> 00:00:45.994
+So CD automates the delivery of applications to selected infrastructure environments.
+
+00:00:45.994 --> 00:00:48.259
+By infrastructure environments, I mean,
+
+00:00:48.259 --> 00:00:51.949
+the environments like pre-prod, or development,
+
+00:00:51.950 --> 00:00:55.130
+or stage, or quality assurance environment,
+
+00:00:55.130 --> 00:00:58.385
+and prod environment like production environment.
+
+00:00:58.384 --> 00:01:02.314
+Let's look at where this fits in in the product development phases.
+
+00:01:02.314 --> 00:01:07.789
+We had spoken about this in the past where the first phase is planning,
+
+00:01:07.790 --> 00:01:10.965
+then code, then implementation,
+
+00:01:10.965 --> 00:01:13.784
+we then build the application,
+
+00:01:13.784 --> 00:01:16.454
+test it, and then release,
+
+00:01:16.454 --> 00:01:19.799
+and deploy it to the infrastructure environment,
+
+00:01:19.799 --> 00:01:21.039
+like I spoke about,
+
+00:01:21.040 --> 00:01:23.345
+and that becomes operational.
+
+00:01:23.344 --> 00:01:28.980
+Now, CI/CD start from the process, from here,
+
+00:01:28.980 --> 00:01:31.365
+where the building, testing,
+
+00:01:31.364 --> 00:01:34.594
+release, and deployment phase comes into picture.
+
+00:01:34.594 --> 00:01:38.400
+In this lesson, we will try to implement
+
+00:01:38.400 --> 00:01:43.969
+the whole CI/CD pipeline using a certain set of technologies.
+
+00:01:43.969 --> 00:01:46.385
+We will showcase building,
+
+00:01:46.385 --> 00:01:47.825
+and then how to ship,
+
+00:01:47.825 --> 00:01:51.109
+and then run the application in Cloud.
+
+00:01:51.109 --> 00:01:55.784
+The choice of technologies we have for today, for this lesson,
+
+00:01:55.784 --> 00:02:00.765
+is using Jenkins, Docker for containerization,
+
+00:02:00.765 --> 00:02:03.670
+and we will deploy it in AWS.
+
+00:02:03.670 --> 00:02:06.094
+Now, let's go over this example.
+
+00:02:06.094 --> 00:02:09.710
+Let's say that we have a distributed application and we
+
+00:02:09.710 --> 00:02:13.435
+want to make continuous changes to our application,
+
+00:02:13.435 --> 00:02:20.090
+this is going to be done by multiple developers that are working on this application.
+
+00:02:20.090 --> 00:02:22.219
+They could be using different tools,
+
+00:02:22.219 --> 00:02:24.365
+they could be using different technologies,
+
+00:02:24.365 --> 00:02:26.645
+but they are building one application,
+
+00:02:26.645 --> 00:02:28.820
+and that is in distributed fashion.
+
+00:02:28.819 --> 00:02:30.454
+How do we achieve this?
+
+00:02:30.455 --> 00:02:36.300
+What we do here is we choose a code-base repository,
+
+00:02:36.300 --> 00:02:39.225
+and our choice here is GitHub.
+
+00:02:39.224 --> 00:02:47.194
+What do we do then is we have chosen Jenkins as a CI tool.
+
+00:02:47.194 --> 00:02:50.245
+We get that deployed on Docker,
+
+00:02:50.245 --> 00:02:55.610
+a container, and that gets finally deployed onto Cloud.
+
+00:02:55.610 --> 00:02:59.840
+Our choice here for that is AWS.
+
+00:02:59.840 --> 00:03:05.585
+So this application can be used by our end-users like desktop,
+
+00:03:05.585 --> 00:03:07.955
+or mobile, or iPad.
+
+00:03:07.955 --> 00:03:13.059
+This can still be developed in a distributed environment by multiple developers,
+
+00:03:13.058 --> 00:03:19.775
+and this is achieved through the usage of various CI/CD tools like we just mentioned.
+
+00:03:19.775 --> 00:03:27.430
+So let's look at the next segment and see how we achieve this in our local setup,
+
+00:03:27.430 --> 00:03:31.480
+or how we achieve this in Cloud setup.
+

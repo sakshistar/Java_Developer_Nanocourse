@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.169
+Now, working with Splunk can be of various types.
+
+00:00:04.169 --> 00:00:08.115
+You could either be using a small enterprise deployment
+
+00:00:08.115 --> 00:00:13.289
+or large enterprise deployment or it could be your personal use as well.
+
+00:00:13.289 --> 00:00:18.134
+When we look into small enterprise deployment,
+
+00:00:18.135 --> 00:00:21.300
+we are typically talking about one search head with
+
+00:00:21.300 --> 00:00:25.410
+2-3 indexers and about 100-200 forwarders.
+
+00:00:25.410 --> 00:00:27.660
+In terms of large enterprise deployment,
+
+00:00:27.660 --> 00:00:35.340
+it could be multiple search heads and 10-20 indexers and thousands of forwarders.
+
+00:00:35.340 --> 00:00:38.870
+Let's also get ourselves familiarized with
+
+00:00:38.869 --> 00:00:42.214
+this particular document which I found extremely useful,
+
+00:00:42.215 --> 00:00:45.050
+which is available on the Splunk website.
+
+00:00:45.049 --> 00:00:46.924
+Let's take a look at that.
+
+00:00:46.924 --> 00:00:50.824
+I'm going to provide the link to this documentation below the video.
+
+00:00:50.825 --> 00:00:54.620
+Let me take you through this document real quickly
+
+00:00:54.619 --> 00:00:59.189
+and then you can read through them in your free time.
+
+00:00:59.189 --> 00:01:05.105
+So here, there is a bit of information about the architecture that they use,
+
+00:01:05.105 --> 00:01:08.359
+and this is pretty much the Splunk architecture.
+
+00:01:08.359 --> 00:01:10.700
+It talks about the Splunk servers,
+
+00:01:10.700 --> 00:01:12.850
+the different kinds of alerts that are available,
+
+00:01:12.849 --> 00:01:15.849
+the modules that they offer, the data stores,
+
+00:01:15.849 --> 00:01:20.854
+and different combination of that is available for different types of environment.
+
+00:01:20.855 --> 00:01:23.480
+Then it also talks about single host deployment,
+
+00:01:23.480 --> 00:01:27.545
+which pretty much means that you have a single machine.
+
+00:01:27.545 --> 00:01:29.840
+You can also have distributed access which
+
+00:01:29.840 --> 00:01:32.780
+is multiple machines in a distributed fashion that
+
+00:01:32.780 --> 00:01:38.534
+can be used for forwarding data and for accessing as well.
+
+00:01:38.534 --> 00:01:42.634
+There is more information that talks about high availability.
+
+00:01:42.635 --> 00:01:47.975
+So this is one document that you can probably read through very quickly to get an idea
+
+00:01:47.974 --> 00:01:54.329
+of what they really mean and what they really talk about in the deployment process.
+

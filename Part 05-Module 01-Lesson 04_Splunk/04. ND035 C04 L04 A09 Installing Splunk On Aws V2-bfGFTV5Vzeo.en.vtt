@@ -1,0 +1,256 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.919
+What you would do in an enterprise application is you would
+
+00:00:02.919 --> 00:00:06.599
+run an instance of Splunk in one of the machines.
+
+00:00:06.599 --> 00:00:10.695
+So it could be either AWS or it could be either Azure.
+
+00:00:10.695 --> 00:00:15.060
+I'm going to show the flavors of both of them to you so that you understand
+
+00:00:15.060 --> 00:00:19.350
+how to get an instance of Splunk in AWS.
+
+00:00:19.350 --> 00:00:20.865
+Let's get that going.
+
+00:00:20.864 --> 00:00:22.604
+So for doing that,
+
+00:00:22.605 --> 00:00:31.589
+I would need to go to AWS site which is the aws.amazon.com.
+
+00:00:31.589 --> 00:00:32.939
+Now below the video,
+
+00:00:32.939 --> 00:00:35.579
+I'm going to provide detailed steps of
+
+00:00:35.579 --> 00:00:39.359
+instructions that will help you install Splunk on AWS.
+
+00:00:39.359 --> 00:00:45.700
+But for now, let's go ahead and start with AWS.
+
+00:00:45.799 --> 00:00:54.019
+Okay. So you will be then routed to this page which has the option to sign up.
+
+00:00:54.020 --> 00:00:56.120
+Now when you click sign up,
+
+00:00:56.119 --> 00:00:58.820
+it asks you to create an AWS account.
+
+00:00:58.820 --> 00:01:00.429
+I already have one,
+
+00:01:00.429 --> 00:01:04.819
+but if you want to explore the AWS option,
+
+00:01:04.819 --> 00:01:08.449
+you will need to create an account for yourself.
+
+00:01:08.450 --> 00:01:10.790
+So you need to pass your email,
+
+00:01:10.790 --> 00:01:14.765
+password, and account name that's going to be used by AWS.
+
+00:01:14.765 --> 00:01:19.069
+The next step it will ask you to enter your credit card information,
+
+00:01:19.069 --> 00:01:22.459
+but they also mentioned that the credit card does not
+
+00:01:22.459 --> 00:01:26.219
+get charged if you are using the free tier.
+
+00:01:26.219 --> 00:01:29.689
+So before you sign up or when you're
+
+00:01:29.689 --> 00:01:33.079
+on the sign-up screen where you're providing your credit card information,
+
+00:01:33.079 --> 00:01:37.849
+I need to carefully read the instructions so you are not incorrectly charged.
+
+00:01:37.849 --> 00:01:40.049
+So I'm going to go ahead and log in to
+
+00:01:40.049 --> 00:01:46.834
+my existing AWS account while you go ahead and create an account on AWS.
+
+00:01:46.834 --> 00:01:51.474
+So if you have logged in to AWS correctly,
+
+00:01:51.474 --> 00:01:53.849
+you would land on this page.
+
+00:01:53.849 --> 00:02:01.714
+Here, what I need you to do is look for Amazon Marketplace which is here AWS Marketplace.
+
+00:02:01.715 --> 00:02:06.070
+Here, I'm going to look for Splunk Enterprise,
+
+00:02:06.069 --> 00:02:09.469
+which was also something that was there in
+
+00:02:09.469 --> 00:02:14.525
+our local installation and this is the first one that I have.
+
+00:02:14.525 --> 00:02:22.930
+Now here, I need to click to subscribe and I'm going to continue to configuration.
+
+00:02:22.930 --> 00:02:26.750
+So here, it gives me a few options, fulfillment option.
+
+00:02:26.750 --> 00:02:31.055
+I'm going to stick to the default which is a 64-bit machine,
+
+00:02:31.055 --> 00:02:33.004
+and this is software version.
+
+00:02:33.004 --> 00:02:38.269
+I am going to choose the region that is closest to me which is
+
+00:02:38.270 --> 00:02:44.480
+going to be California and I will click to launch.
+
+00:02:44.479 --> 00:02:48.694
+So here, it gives me some options to review
+
+00:02:48.694 --> 00:02:53.074
+my configuration and see how I want to launch the software.
+
+00:02:53.074 --> 00:02:57.589
+Go ahead and take a look at the configuration details and see
+
+00:02:57.590 --> 00:03:02.435
+if you wanted to play around with or get an idea of other fulfillment options.
+
+00:03:02.435 --> 00:03:05.254
+Here, there are several options available
+
+00:03:05.254 --> 00:03:08.639
+launched through EC2, websites, service catalog.
+
+00:03:08.639 --> 00:03:11.644
+I'm going to stick to the default which is launched from website.
+
+00:03:11.645 --> 00:03:15.530
+The default these days available is c5.large.
+
+00:03:15.530 --> 00:03:18.090
+A few days ago, it used to be C3,
+
+00:03:18.090 --> 00:03:20.405
+but I'm going to stick to the default again.
+
+00:03:20.405 --> 00:03:22.965
+This is the VPC settings,
+
+00:03:22.965 --> 00:03:25.594
+and I'm going to stick to the default again over here,
+
+00:03:25.594 --> 00:03:27.965
+this is nothing but your subnet settings,
+
+00:03:27.965 --> 00:03:33.700
+and it allows me to provide a security group which is by default.
+
+00:03:33.699 --> 00:03:38.389
+I already have a key pair setting available which is sareeta.
+
+00:03:38.389 --> 00:03:41.389
+But what you can do if you do not have this available
+
+00:03:41.389 --> 00:03:44.478
+is click on create a key pair in EC2,
+
+00:03:44.479 --> 00:03:51.080
+and what that will give you is this page where you can create a pair.
+
+00:03:51.080 --> 00:03:57.010
+So you click on create key pair and that will create a pair here with a fingerprint,
+
+00:03:57.009 --> 00:04:00.724
+and that's what would be available here once you refresh this option.
+
+00:04:00.724 --> 00:04:03.905
+So I already have one so I'm going to use that,
+
+00:04:03.905 --> 00:04:06.235
+and I'm going to click launch.
+
+00:04:06.235 --> 00:04:09.180
+Great. So it says congratulations,
+
+00:04:09.180 --> 00:04:12.870
+an instance of the software successfully deployed on EC2.
+
+00:04:12.870 --> 00:04:17.014
+There, we successfully deployed our Splunk instance.
+
+00:04:17.014 --> 00:04:20.240
+So now that my instance is successfully started,
+
+00:04:20.240 --> 00:04:23.689
+I had to go back and change it from Ohio to
+
+00:04:23.689 --> 00:04:27.819
+North California because that's where my deployment was successful.
+
+00:04:27.819 --> 00:04:30.074
+So I have this one,
+
+00:04:30.074 --> 00:04:32.569
+this particular instance running.
+
+00:04:32.569 --> 00:04:36.920
+So I would take the public IP information and
+
+00:04:36.920 --> 00:04:44.500
+the default port at which Splunk gets deployed at is 8,000.
+
+00:04:44.500 --> 00:04:50.074
+So that is what I would use in order to check my Splunk instance.
+
+00:04:50.074 --> 00:04:54.435
+When you get to the console of Splunk,
+
+00:04:54.435 --> 00:04:57.680
+it would ask you for a username and password,
+
+00:04:57.680 --> 00:05:05.805
+and that information is going to be something that you would pick up from here again,
+
+00:05:05.805 --> 00:05:10.655
+which happens to be the pair of your instance ID,
+
+00:05:10.654 --> 00:05:13.549
+and then it will ask you to change the password.
+
+00:05:13.550 --> 00:05:16.850
+So here the instance ID is here.
+
+00:05:16.850 --> 00:05:19.700
+So you would use this as a user to login,
+
+00:05:19.699 --> 00:05:24.409
+and then it will prompt you to enter the password and change it.
+
+00:05:24.410 --> 00:05:26.765
+Actually to prompt you to change the password.
+
+00:05:26.764 --> 00:05:29.990
+So that will show you how
+
+00:05:29.990 --> 00:05:37.650
+AWS instance will have Splunk or Splunk gets deployed on an AWS instance.
+

@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.549
+This is a picture of
+
+00:00:02.549 --> 00:00:05.910
+the systems development life cycle or a software development life cycle.
+
+00:00:05.910 --> 00:00:09.794
+The first part includes analysis.
+
+00:00:09.794 --> 00:00:11.789
+What I mean by this is,
+
+00:00:11.789 --> 00:00:13.879
+in an engineering setup,
+
+00:00:13.880 --> 00:00:15.795
+you have your product team,
+
+00:00:15.794 --> 00:00:17.730
+or you may not have a product team,
+
+00:00:17.730 --> 00:00:20.385
+you may have an engineering project manager
+
+00:00:20.385 --> 00:00:22.695
+who might be able to give you the requirements.
+
+00:00:22.695 --> 00:00:25.785
+What they do is they want an analysis.
+
+00:00:25.785 --> 00:00:30.574
+They want some statistics to see what is the shortcoming in your project,
+
+00:00:30.574 --> 00:00:34.429
+and that is what comes as a requirement to you,
+
+00:00:34.429 --> 00:00:36.784
+which is what analysis does.
+
+00:00:36.784 --> 00:00:38.869
+The second phase is the design.
+
+00:00:38.869 --> 00:00:40.934
+Once you are given the requirement,
+
+00:00:40.935 --> 00:00:50.195
+you as a developer come with a solution of designing the solution for the requirement.
+
+00:00:50.195 --> 00:00:53.494
+That is what we do in the design phase.
+
+00:00:53.494 --> 00:00:57.530
+You might take help from the other engineers or
+
+00:00:57.530 --> 00:01:03.575
+your leads to find out how to design the solution for this requirement.
+
+00:01:03.575 --> 00:01:07.219
+Then you get into the development phase,
+
+00:01:07.219 --> 00:01:11.510
+which is what you have learned so far in this course.
+
+00:01:11.510 --> 00:01:13.430
+In the development phase,
+
+00:01:13.430 --> 00:01:15.365
+you would write the code,
+
+00:01:15.364 --> 00:01:21.280
+and you would manually probably test out the requirements solution,
+
+00:01:21.280 --> 00:01:25.835
+but that is where testing comes into picture.
+
+00:01:25.834 --> 00:01:30.019
+This is where you would write tests to ensure that you don't have to
+
+00:01:30.019 --> 00:01:34.295
+manually test the developed code again.
+
+00:01:34.295 --> 00:01:36.795
+The next part is the implementation,
+
+00:01:36.795 --> 00:01:41.000
+then you go with documentation, and evaluation.
+
+00:01:41.000 --> 00:01:43.609
+The cycle for software development
+
+00:01:43.609 --> 00:01:48.159
+continues so that the product develops into a very mature product,
+
+00:01:48.159 --> 00:01:50.414
+and eventually goes to production,
+
+00:01:50.415 --> 00:01:53.984
+or however, you use an application.
+
+00:01:53.984 --> 00:01:56.108
+With this in mind,
+
+00:01:56.108 --> 00:01:58.699
+there are certain other documents or
+
+00:01:58.700 --> 00:02:01.579
+resources that are going to be linked to the video which
+
+00:02:01.579 --> 00:02:07.859
+you can go through if you have more interest in learning more about the SDLC life cycle.
+

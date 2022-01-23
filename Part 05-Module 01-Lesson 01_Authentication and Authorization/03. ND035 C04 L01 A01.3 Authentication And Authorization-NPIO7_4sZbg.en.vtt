@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.530
+Let's move into different authentication considerations.
+
+00:00:04.530 --> 00:00:08.699
+So the first authentication consideration we would keep in
+
+00:00:08.699 --> 00:00:13.349
+mind is that the data use for authentication must be protected.
+
+00:00:13.349 --> 00:00:17.564
+It's as simple as you wouldn't tell people your password.
+
+00:00:17.565 --> 00:00:20.990
+The data must be sufficiently random.
+
+00:00:20.989 --> 00:00:25.279
+So two things to keep in mind that will help us make
+
+00:00:25.280 --> 00:00:29.585
+data random is the password length and complexity.
+
+00:00:29.585 --> 00:00:33.245
+Another point is the data must not be easily forged,
+
+00:00:33.244 --> 00:00:37.299
+which means that it needs to be deterministically generated.
+
+00:00:37.299 --> 00:00:40.759
+The other point would be the same data should be able to
+
+00:00:40.759 --> 00:00:44.019
+authenticate someone no matter the conditions.
+
+00:00:44.020 --> 00:00:48.859
+This is very obvious because you would want to login
+
+00:00:48.859 --> 00:00:54.480
+to the same system with one password and not have to regenerate your password.
+

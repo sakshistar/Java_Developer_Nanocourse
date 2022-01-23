@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.140 --> 00:00:04.139
+In the previous video, we introduced the concept of hashing.
+
+00:00:04.139 --> 00:00:07.320
+Now, let's get into what hashing really means.
+
+00:00:07.320 --> 00:00:11.879
+In simple terms, a hash is a one-way function that is used to generate a string,
+
+00:00:11.880 --> 00:00:13.875
+or hash, from a given message.
+
+00:00:13.875 --> 00:00:19.390
+It simply means that it is something that is impossible to construct from the input.
+
+00:00:19.390 --> 00:00:23.819
+Now, for example, multiplication of two large prime numbers,
+
+00:00:23.818 --> 00:00:27.629
+it is a one-way function because it is easy to compute,
+
+00:00:27.629 --> 00:00:29.024
+but hard to invert,
+
+00:00:29.024 --> 00:00:31.709
+as the inverse involves factoring.
+
+00:00:31.710 --> 00:00:37.905
+Now, let's say that you store the hashed value off the password.
+
+00:00:37.905 --> 00:00:41.865
+So even if somebody has access to your database,
+
+00:00:41.865 --> 00:00:44.560
+what they can only see is the hash value,
+
+00:00:44.560 --> 00:00:46.265
+but not the actual password.
+
+00:00:46.265 --> 00:00:49.869
+So they do not have enough to authenticate.
+

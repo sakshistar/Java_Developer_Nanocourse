@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.094
+The next thing that we would discuss is the authentication protection.
+
+00:00:04.094 --> 00:00:05.699
+What I mean by this is,
+
+00:00:05.700 --> 00:00:08.175
+how do you protect the authentication?
+
+00:00:08.175 --> 00:00:11.655
+Let's think about a topic,
+
+00:00:11.654 --> 00:00:16.019
+let's think about an application that stores passwords.
+
+00:00:16.019 --> 00:00:21.134
+Let's imagine and that the passwords are stored in simple text or plain text.
+
+00:00:21.135 --> 00:00:24.060
+Anybody who has access to your database
+
+00:00:24.059 --> 00:00:27.839
+will then have access to all the passwords because they're in plain text.
+
+00:00:27.839 --> 00:00:33.585
+Now, how do we solve this problem so that even when someone has access to a database,
+
+00:00:33.585 --> 00:00:37.230
+they cannot easily determined the passwords?
+
+00:00:37.229 --> 00:00:39.659
+We will solve this with hashing.
+
+00:00:39.659 --> 00:00:42.789
+More on this on the next video.
+

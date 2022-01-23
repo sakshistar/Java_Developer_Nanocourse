@@ -1,0 +1,217 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.339
+Let's look into the basics of Junits,
+
+00:00:02.339 --> 00:00:06.150
+and we will learn the basics of Junits using practical examples.
+
+00:00:06.150 --> 00:00:08.490
+Let's start with cloning the starter code.
+
+00:00:08.490 --> 00:00:13.410
+I'm going to provide the link to the Git repo below the video so that you can clone
+
+00:00:13.410 --> 00:00:19.625
+the repository and have access to the starter code on which we will write the Junits.
+
+00:00:19.625 --> 00:00:23.280
+The second step would be importing it to IntelliJ.
+
+00:00:23.280 --> 00:00:29.550
+If you already know how to import a project or an existing Maven project into IntelliJ,
+
+00:00:29.550 --> 00:00:34.200
+please feel free to import the project as an existing Maven application,
+
+00:00:34.200 --> 00:00:37.755
+or it's going to be available online,
+
+00:00:37.755 --> 00:00:40.560
+or in under Read me as well for you to
+
+00:00:40.560 --> 00:00:44.295
+understand how to import an application in IntelliJ.
+
+00:00:44.295 --> 00:00:46.810
+Now, for the sake of convenience,
+
+00:00:46.810 --> 00:00:51.719
+I have already cloned the repo on my local.
+
+00:00:51.890 --> 00:00:57.859
+Here, I am going to start with looking at the project structure.
+
+00:00:57.859 --> 00:00:59.509
+So as you see,
+
+00:00:59.509 --> 00:01:02.914
+I have included the Junit dependency.
+
+00:01:02.914 --> 00:01:07.129
+If you understand how Maven dependencies are added,
+
+00:01:07.129 --> 00:01:09.854
+you would know where to find it.
+
+00:01:09.855 --> 00:01:12.365
+The second thing that I've added over here,
+
+00:01:12.364 --> 00:01:15.474
+because it's IntelliJ, is a Maven Compiler plug in.
+
+00:01:15.474 --> 00:01:19.064
+Our source is 1.8 Java,
+
+00:01:19.064 --> 00:01:21.114
+and so it's a target.
+
+00:01:21.114 --> 00:01:26.119
+I'm going to show a few applications that I've written for this,
+
+00:01:26.120 --> 00:01:29.270
+a few examples that I've written here.
+
+00:01:29.269 --> 00:01:36.000
+So here's my test class or the class that I am going to test,
+
+00:01:36.000 --> 00:01:40.819
+and there are some very basic functions that I have
+
+00:01:40.819 --> 00:01:45.924
+written over here using Java 8 that we will be testing.
+
+00:01:45.924 --> 00:01:48.394
+It's just some number functions.
+
+00:01:48.394 --> 00:01:51.469
+So if you click Test1Example,
+
+00:01:51.469 --> 00:01:58.155
+you'll see how or what I intend to do with this application,
+
+00:01:58.155 --> 00:02:02.704
+like we have employee names.
+
+00:02:02.704 --> 00:02:06.969
+There are some examples here with a few strings that are empty,
+
+00:02:06.969 --> 00:02:08.580
+there is an employee level,
+
+00:02:08.580 --> 00:02:12.250
+and there is some years of experience.
+
+00:02:12.439 --> 00:02:17.004
+Here, I get the count of the employee names, and how I get it,
+
+00:02:17.004 --> 00:02:21.870
+is by using this helper method called getCount,
+
+00:02:21.870 --> 00:02:25.514
+which accepts a string of names,
+
+00:02:25.514 --> 00:02:29.085
+and then, it's streams it,
+
+00:02:29.085 --> 00:02:32.820
+filters out the empty ones, and finds the count.
+
+00:02:32.819 --> 00:02:38.579
+Because Sareeta, nothing, John,
+
+00:02:38.580 --> 00:02:42.130
+nothing, should count as two and not four.
+
+00:02:42.129 --> 00:02:44.389
+What I'd like you to do is get yourself
+
+00:02:44.389 --> 00:02:48.125
+familiarized with the methods that I have written over here.
+
+00:02:48.125 --> 00:02:52.835
+These are some very basic methods that I'd written.
+
+00:02:52.835 --> 00:02:56.284
+For example, let's look into getSquaredList.
+
+00:02:56.284 --> 00:02:58.579
+It's takes a list of integers.
+
+00:02:58.580 --> 00:03:02.300
+So for example, here is the years of experience,
+
+00:03:02.300 --> 00:03:03.740
+which is 13, 4,
+
+00:03:03.740 --> 00:03:05.594
+15, and all of these,
+
+00:03:05.594 --> 00:03:09.525
+it takes all those years of experience, streams it,
+
+00:03:09.525 --> 00:03:15.980
+and maps it and then what it does is that it finds the square of that value,
+
+00:03:15.979 --> 00:03:18.469
+and then it puts it into another list.
+
+00:03:18.469 --> 00:03:21.469
+So as you must have guessed,
+
+00:03:21.469 --> 00:03:26.330
+the number of years of experience are going to be squared if you
+
+00:03:26.330 --> 00:03:33.015
+call this getSquaredList method on this data set.
+
+00:03:33.014 --> 00:03:35.759
+There is also a merged list,
+
+00:03:35.759 --> 00:03:37.439
+there's a filtered list,
+
+00:03:37.439 --> 00:03:43.449
+and this basically just removes all the empty strings out of the employee names.
+
+00:03:43.449 --> 00:03:45.894
+For example, if this is our input,
+
+00:03:45.895 --> 00:03:52.115
+this method is going to remove all of the empty strings out of it.
+
+00:03:52.115 --> 00:03:58.058
+So a good use of time right now would be going over all these methods
+
+00:03:58.058 --> 00:04:01.159
+and getting yourself a little more familiarized with it
+
+00:04:01.159 --> 00:04:04.324
+so you know what tests you're going to write on them,
+
+00:04:04.324 --> 00:04:08.389
+or you can actually think about what are the types of tests you will write.
+
+00:04:08.389 --> 00:04:15.229
+Now, one of the basic things that everybody struggles with is what tests to write.
+
+00:04:15.229 --> 00:04:18.724
+A good idea will be to write
+
+00:04:18.725 --> 00:04:23.700
+tests as many tests as he possibly can provided you have time,
+
+00:04:23.699 --> 00:04:26.464
+and the industry standard right now would be
+
+00:04:26.464 --> 00:04:30.829
+anything over 80 percent test coverage is good.
+
+00:04:30.829 --> 00:04:34.745
+Or actually it's something that we should all follow.
+
+00:04:34.745 --> 00:04:41.280
+So that's it for getting yourself familiarized with the startup code.
+

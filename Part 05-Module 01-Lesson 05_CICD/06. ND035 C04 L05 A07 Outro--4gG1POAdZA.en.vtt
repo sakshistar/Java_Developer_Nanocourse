@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.345
+With that, we were able to set up the Jenkins pipeline.
+
+00:00:03.345 --> 00:00:09.060
+We already linked our Git repository to Jenkins to build our application.
+
+00:00:09.060 --> 00:00:12.060
+The next step ideally would be to go ahead
+
+00:00:12.060 --> 00:00:15.540
+and deploy the build to a particular environment.
+
+00:00:15.539 --> 00:00:17.655
+In an enterprise setup,
+
+00:00:17.655 --> 00:00:21.510
+you would have or you would be given an infrastructure environment,
+
+00:00:21.510 --> 00:00:27.060
+like Dev or Stage or production environment where the build gets deployed.
+
+00:00:27.059 --> 00:00:31.589
+If you're interested I'm going to provide the steps to have your build
+
+00:00:31.589 --> 00:00:36.094
+deployed to an environment so that you can go ahead and explore that option, too.
+
+00:00:36.094 --> 00:00:37.839
+For this particular course,
+
+00:00:37.840 --> 00:00:42.090
+we have been able to successfully build the application on Jenkins.
+
+00:00:42.090 --> 00:00:46.400
+So I hope you learned a lot from this example and you're able to set
+
+00:00:46.399 --> 00:00:52.060
+up your application and get that build on your system as well.
+

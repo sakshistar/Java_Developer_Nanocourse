@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.424
+Let's look at the next part of this video which is Mocks.
+
+00:00:04.424 --> 00:00:07.814
+Now in order to effectively isolate the code we want to test,
+
+00:00:07.815 --> 00:00:12.839
+sometimes it's necessary to pre-set up or entirely remove some parts of
+
+00:00:12.839 --> 00:00:18.509
+the code to create the right conditions and not to let other bugs affect tests.
+
+00:00:18.510 --> 00:00:24.825
+Now what I'm going to do is I am going to give you a short example of what this means.
+
+00:00:24.824 --> 00:00:27.599
+So if you remember that e-commerce application,
+
+00:00:27.600 --> 00:00:30.210
+we had a method called getUsers.
+
+00:00:30.210 --> 00:00:34.005
+Now the getUsers fetches the User deal,
+
+00:00:34.005 --> 00:00:38.370
+and that is fetched from the UserRepository, from the database.
+
+00:00:38.369 --> 00:00:41.989
+Now, it might be unnecessary to
+
+00:00:41.990 --> 00:00:46.234
+really make a connection to the database in order to fetch the user.
+
+00:00:46.234 --> 00:00:52.070
+In that case, what we do is we stub or substitute
+
+00:00:52.070 --> 00:00:58.545
+the user repository with the mock object or something that is alike,
+
+00:00:58.545 --> 00:01:04.689
+the UseRepository object and that is Mocks, that is stubbing.
+

@@ -1,0 +1,178 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.810
+Now, let's look at our local installation of Splunk.
+
+00:00:03.810 --> 00:00:09.105
+As we had seen earlier that is available to us at local-host 8,000 port,
+
+00:00:09.105 --> 00:00:14.039
+and on the left-hand side you have search and reporting options.
+
+00:00:14.039 --> 00:00:16.785
+The moment you click that it offers you a tour.
+
+00:00:16.785 --> 00:00:18.945
+You can choose take it or skip it,
+
+00:00:18.945 --> 00:00:21.975
+and then you will come across this,
+
+00:00:21.975 --> 00:00:24.525
+this screen which is a search screen.
+
+00:00:24.524 --> 00:00:28.049
+I do not have any datasets added yet,
+
+00:00:28.050 --> 00:00:34.215
+but I'm going to teach you how you can add data to your Splunk index.
+
+00:00:34.215 --> 00:00:37.320
+So if you are interested you can go
+
+00:00:37.320 --> 00:00:41.405
+over certain tutorials that are available to you on Splunk,
+
+00:00:41.405 --> 00:00:47.780
+and here I am going to talk to you about how you can add data to Splunk.
+
+00:00:47.780 --> 00:00:50.225
+So let's get into that.
+
+00:00:50.225 --> 00:00:53.630
+So now let's look at the local Splunk instance that you have
+
+00:00:53.630 --> 00:00:57.905
+running which is available at local host 8,000,
+
+00:00:57.905 --> 00:01:01.490
+and let's try to add some data.
+
+00:01:01.490 --> 00:01:05.359
+So the option to add data is available under settings.
+
+00:01:05.359 --> 00:01:08.030
+All you have to do is click on Add Data,
+
+00:01:08.030 --> 00:01:12.890
+and that provides you the option of adding data.
+
+00:01:12.890 --> 00:01:18.844
+There was also the prompt that asks me if I wanted to go through the tutorial,
+
+00:01:18.844 --> 00:01:22.204
+feel free to take as many tutorials as you want from here as well.
+
+00:01:22.204 --> 00:01:28.504
+But here are the three options or the three ways you can get data into Splunk.
+
+00:01:28.504 --> 00:01:30.994
+We will start with upload.
+
+00:01:30.995 --> 00:01:34.430
+What upload basically does is that here you can have
+
+00:01:34.430 --> 00:01:37.970
+your local log files or any structure files like
+
+00:01:37.969 --> 00:01:44.750
+CSV and you can upload that by clicking on Upload here and just selecting the file,
+
+00:01:44.750 --> 00:01:48.109
+and from local you can upload that.
+
+00:01:48.109 --> 00:01:51.769
+The second option that you can have is monitor.
+
+00:01:51.769 --> 00:01:56.224
+What monitor does is that it allows you to configure the system
+
+00:01:56.224 --> 00:02:00.919
+or Splunk to get data from one of the files from your local system.
+
+00:02:00.920 --> 00:02:03.650
+So let's say that I have TCP/UDP,
+
+00:02:03.650 --> 00:02:06.890
+and I can put the port number
+
+00:02:06.890 --> 00:02:11.944
+here from where I would be listening and any overrides that I wanted to do,
+
+00:02:11.944 --> 00:02:16.954
+and I'll be able to click on Next and review the Input Settings,
+
+00:02:16.954 --> 00:02:19.355
+and then perform that as well.
+
+00:02:19.354 --> 00:02:23.929
+You can do the same for HTTP collector and other files and directories as well,
+
+00:02:23.930 --> 00:02:26.450
+and so can you from scripts.
+
+00:02:26.449 --> 00:02:30.530
+The last option would be using a forwarder.
+
+00:02:30.530 --> 00:02:34.550
+That is something that we will cover as well.
+
+00:02:34.550 --> 00:02:36.575
+So I'm going to start with uploading data.
+
+00:02:36.574 --> 00:02:42.034
+Now, for performing this what I need to do is I need to have a dataset.
+
+00:02:42.034 --> 00:02:49.155
+For the dataset what I'm going to do is I'm going to refer to these two open datasets,
+
+00:02:49.155 --> 00:02:53.044
+and this is something that I'm going to use for this.
+
+00:02:53.044 --> 00:02:57.634
+It's the transstats.bts.gov data,
+
+00:02:57.634 --> 00:03:00.679
+so I have that open here already.
+
+00:03:00.680 --> 00:03:04.849
+So here I have some statistical product.
+
+00:03:04.849 --> 00:03:11.889
+I have some database directory, aviation.
+
+00:03:11.889 --> 00:03:14.889
+So I'm taking American travel survey,
+
+00:03:14.889 --> 00:03:17.659
+you can choose to download from anywhere.
+
+00:03:17.659 --> 00:03:20.569
+For ease I'm just taking household characteristics.
+
+00:03:20.569 --> 00:03:22.204
+This is all open datasets,
+
+00:03:22.205 --> 00:03:27.070
+and I'm going to add a series of data that I want,
+
+00:03:27.069 --> 00:03:30.629
+a series of fields from this particular table.
+
+00:03:30.759 --> 00:03:37.704
+Let me just add all of them or as many as I can add right now,
+
+00:03:37.705 --> 00:03:43.760
+and I am going to download this.
+
+00:03:43.759 --> 00:03:45.709
+Once this data is downloaded,
+
+00:03:45.710 --> 00:03:48.830
+the ZIP convert into a CSV which is what
+
+00:03:48.830 --> 00:03:53.340
+I'm going to use in order to upload in the upload section.
+
